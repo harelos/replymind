@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — ReplyMind</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #080D1A; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    nav { padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 8px; }
+    .nav-icon { width: 28px; height: 28px; background: #4F8EF7; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+    .nav-text { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; }
+    .container { max-width: 720px; margin: 0 auto; padding: 60px 24px 100px; }
+    h1 { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .sub { font-size: 16px; color: rgba(255,255,255,0.6); margin-bottom: 48px; }
+    .contact-box { background: rgba(79,142,247,0.08); border: 1px solid rgba(79,142,247,0.2); border-radius: 16px; padding: 28px 32px; margin-bottom: 48px; }
+    .contact-box h2 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .contact-box p { color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+    .contact-email { display: inline-block; font-size: 16px; font-weight: 600; color: #6BA3FF; text-decoration: none; }
+    .response-time { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 8px; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 18px 0; }
+    .faq-q { font-size: 15px; font-weight: 600; color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; }
+    .faq-q::after { content: '+'; font-size: 20px; color: rgba(255,255,255,0.3); flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+    .faq-item.open .faq-a { max-height: 300px; padding-top: 12px; }
+    a { color: #6BA3FF; }
+    footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 24px; text-align: center; font-size: 12px; color: rgba(255,255,255,0.2); }
+    footer a { color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 12px; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-icon">⚡</div>
+  <span class="nav-text">ReplyMind</span>
+</nav>
+
+<div class="container">
+  <h1>Support</h1>
+  <p class="sub">We're here to help. Usually respond within 24 hours.</p>
+
+  <div class="contact-box">
+    <h2>📧 Email support</h2>
+    <p>For any question — activation, billing, bugs, or feedback.</p>
+    <a class="contact-email" href="mailto:help@yourdomain.com">help@yourdomain.com</a>
+    <p class="response-time">⏱ We respond within 24–48 hours on business days</p>
+  </div>
+
+  <h2>Common questions</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">How do I activate my Pro account after paying?</div>
+    <div class="faq-a">Email help@yourdomain.com with your PayPal receipt attached and the subject line "Pro Activation". We'll upgrade your account and send confirmation within 1 hour during business hours.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">The ⚡ button isn't appearing in Gmail</div>
+    <div class="faq-a">Try these steps: 1) Go to chrome://extensions and click the refresh icon on ReplyMind. 2) Refresh your Gmail tab (F5). 3) Open an email and click the Reply button — the Generate Reply button appears in the reply toolbar. If the toolbar injection fails, a floating ⚡ ReplyMind button appears at the bottom-right of the page instead.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Clicking the reply card doesn't insert into Gmail</div>
+    <div class="faq-a">Make sure you click the Reply button in Gmail first to open the compose box, then click Generate Reply. The insert feature requires an open compose box to work. If it still doesn't insert, it will copy to your clipboard as a fallback — just paste manually.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">I'm getting a "Connection failed" error</div>
+    <div class="faq-a">This means the extension can't reach the backend server. Check your internet connection and try again. If the problem persists, email us and we'll check the server status.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">How do I cancel my subscription?</div>
+    <div class="faq-a">Log into PayPal → click your profile → Account Settings → Payments → Manage automatic payments → find ReplyMind Pro → click Cancel. Your Pro access continues until the end of the current billing period.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">How do I set my tone profile?</div>
+    <div class="faq-a">Click the ⚡ ReplyMind icon in your Chrome toolbar → sign in to your account → you'll see a "Your Communication Style" text area. Write 1-3 sentences describing how you like to write emails (e.g. "Direct and professional, I keep emails short and always end with a clear next step."). Click Save. ReplyMind will use this for all future replies.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">How do I delete my account?</div>
+    <div class="faq-a">Email help@yourdomain.com with the subject "Delete my account". We'll remove all your data within 7 days and confirm by email.</div>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html">Home</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="mailto:help@yourdomain.com">Contact</a>
+  <p style="margin-top: 12px;">© 2025 ReplyMind</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
