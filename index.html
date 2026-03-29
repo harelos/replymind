@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ReplyMind â€” AI Email Replies That Sound Like You</title>
+  <title>ReplyMind -- AI Email Replies That Sound Like You</title>
   <meta name="description" content="Stop wasting hours writing emails. ReplyMind generates professional replies in your personal tone, right inside Gmail. Choose your intent. One click. Done." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -48,7 +48,7 @@
     .btn-hero:hover { background:#3A7BE0; transform:translateY(-2px); box-shadow:0 0 60px rgba(79,142,247,0.4); }
     .hero-note { font-size:13px; color:var(--white-40); }
 
-    /* MOCKUP â€” v2 intent-based */
+    /* MOCKUP */
     .hero-mockup { margin-top:56px; width:100%; max-width:440px; background:#FFFFFF; border-radius:18px; padding:0; box-shadow:0 32px 80px rgba(0,0,0,0.45); animation:fadeUp 0.8s 0.4s ease both; overflow:hidden; color:#111827; font-family:var(--font-body); }
     .mock-header { display:flex; align-items:center; justify-content:space-between; padding:14px 16px 12px; border-bottom:1px solid #E5E7EB; background:#fff; border-radius:18px 18px 0 0; }
     .mock-header-left { display:flex; align-items:center; gap:8px; }
@@ -74,6 +74,35 @@
     .mock-btn { flex:1; padding:9px; background:#F7F8FA; border:1.5px solid #E5E7EB; border-radius:10px; font-size:12px; font-weight:500; color:#374151; text-align:center; cursor:default; }
     .mock-footer { padding:8px 16px 12px; border-top:1px solid #F3F4F6; }
     .mock-footer p { font-size:11px; color:#9CA3AF; line-height:1.5; }
+
+    /* DEMO ANIMATION */
+    .demo { padding:80px 24px; }
+    .demo-inner { max-width:800px; margin:0 auto; text-align:center; }
+    .demo-window { margin-top:48px; background:#fff; border-radius:16px; box-shadow:0 24px 64px rgba(0,0,0,0.35); overflow:hidden; color:#111827; font-family:var(--font-body); position:relative; }
+    .demo-toolbar { display:flex; align-items:center; gap:6px; padding:10px 14px; background:#F3F4F6; border-bottom:1px solid #E5E7EB; }
+    .demo-dot { width:10px; height:10px; border-radius:50%; }
+    .demo-dot.r { background:#EF4444; } .demo-dot.y { background:#F59E0B; } .demo-dot.g { background:#10B981; }
+    .demo-tab { margin-left:12px; font-size:12px; font-weight:600; color:#6B7280; background:#fff; padding:4px 14px; border-radius:6px 6px 0 0; border:1px solid #E5E7EB; border-bottom:none; }
+    .demo-content { display:flex; min-height:320px; }
+    .demo-email { flex:1; padding:20px; text-align:left; border-right:1px solid #E5E7EB; font-size:13px; line-height:1.7; color:#374151; }
+    .demo-email-header { font-weight:700; font-size:14px; color:#111827; margin-bottom:4px; }
+    .demo-email-meta { font-size:11px; color:#9CA3AF; margin-bottom:14px; }
+    .demo-email-body { margin-bottom:20px; }
+    .demo-compose { background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:12px; min-height:60px; font-size:13px; color:#374151; position:relative; }
+    .demo-compose-text { opacity:0; transition:opacity 0.4s; min-height:40px; line-height:1.6; }
+    .demo-compose-text.visible { opacity:1; }
+    .demo-sidebar { width:220px; padding:14px; text-align:left; display:flex; flex-direction:column; gap:8px; }
+    .demo-sidebar-title { font-size:12px; font-weight:700; color:#111827; margin-bottom:4px; }
+    .demo-sidebar-chip { display:inline-flex; align-items:center; gap:4px; padding:6px 10px; border-radius:8px; border:1.5px solid #E5E7EB; font-size:11px; font-weight:500; color:#374151; cursor:default; transition:all 0.3s; }
+    .demo-sidebar-chip.demo-active { border-color:#4F8EF7; background:#F5F9FF; color:#4F8EF7; transform:scale(1.05); }
+    .demo-send-btn { margin-top:auto; display:flex; align-items:center; justify-content:center; gap:6px; padding:8px; background:#1A73E8; color:white; border-radius:8px; font-size:12px; font-weight:600; transition:all 0.3s; opacity:0.4; }
+    .demo-send-btn.ready { opacity:1; transform:scale(1.05); }
+    .demo-steps { display:flex; justify-content:center; gap:32px; margin-top:32px; }
+    .demo-step { display:flex; align-items:center; gap:8px; font-size:14px; color:var(--white-50); transition:color 0.3s; }
+    .demo-step.active { color:var(--blue-bright); font-weight:600; }
+    .demo-step-num { width:28px; height:28px; border-radius:50%; border:2px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; transition:all 0.3s; }
+    .demo-step.active .demo-step-num { border-color:var(--blue); background:rgba(79,142,247,0.15); color:var(--blue-bright); }
+    @media(max-width:640px) { .demo-content { flex-direction:column; } .demo-sidebar { width:100%; border-top:1px solid #E5E7EB; } .demo-email { border-right:none; } .demo-steps { flex-direction:column; align-items:center; gap:12px; } }
 
     /* SECTIONS */
     .section-eyebrow { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--blue-bright); margin-bottom:16px; }
@@ -176,7 +205,7 @@
     .toggle-switch.on .toggle-knob { left:24px; }
     .pricing-save { font-size:12px; font-weight:700; color:var(--green-light); background:rgba(16,185,129,0.12); padding:3px 10px; border-radius:20px; }
     .pricing-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; max-width:1100px; margin:0 auto; }
-    @media(max-width:900px) { .pricing-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:1000px) { .pricing-grid { grid-template-columns:repeat(2,1fr); } }
     @media(max-width:560px) { .pricing-grid { grid-template-columns:1fr; } }
     .pricing-card { background:var(--navy-2); border:1px solid var(--border); border-radius:20px; padding:32px 24px; position:relative; transition:border-color 0.2s, transform 0.2s; display:flex; flex-direction:column; }
     .pricing-card:hover { transform:translateY(-4px); }
@@ -190,7 +219,7 @@
     .pricing-period { font-size:14px; color:var(--white-40); margin-bottom:24px; }
     .pricing-features { list-style:none; margin-bottom:28px; flex-grow:1; }
     .pricing-features li { display:flex; align-items:flex-start; gap:8px; font-size:13px; color:var(--white-70); padding:5px 0; }
-    .pricing-features li::before { content:'âś“'; color:var(--green); font-weight:700; flex-shrink:0; }
+    .pricing-features li::before { content:''; display:inline-block; width:16px; height:16px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2310B981'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; flex-shrink:0; margin-top:1px; }
     .pricing-btn { display:block; width:100%; padding:12px; border-radius:10px; font-size:14px; font-weight:600; text-align:center; text-decoration:none; font-family:var(--font-body); transition:all 0.15s; cursor:pointer; border:none; }
     .pricing-btn.primary { background:var(--blue); color:white; }
     .pricing-btn.primary:hover { background:#3A7BE0; }
@@ -235,7 +264,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <div class="nav-logo-icon">âšˇ</div>
+    <div class="nav-logo-icon">&#9889;</div>
     <span class="nav-logo-text">ReplyMind</span>
   </a>
   <div class="nav-links">
@@ -247,166 +276,207 @@
   <a href="#pricing" class="nav-cta">Get Started Free</a>
 </nav>
 
-<!-- â•â•â• HERO â•â•â• -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">âšˇ Chrome Extension for Gmail & LinkedIn</div>
+  <div class="hero-badge">&#9889; Chrome Extension for Gmail &amp; LinkedIn</div>
   <h1>Stop writing emails.<br><em>Start choosing them.</em></h1>
-  <p class="hero-sub">ReplyMind reads your email, understands the context, and generates a perfect reply in your voice â€” right inside Gmail. Pick your intent. Click. Done.</p>
-  <p class="hero-proof">Trusted by <span>business owners who send 20+ emails a day</span></p>
+  <p class="hero-sub">ReplyMind reads your email, understands the context, and generates a perfect reply in your voice -- right inside Gmail. Pick your intent. Click. Done.</p>
+  <p class="hero-proof">Trusted by <span>500+ business owners across 14 countries</span></p>
   <div class="hero-actions">
     <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai" class="btn-hero">Install Free for Chrome</a>
-    <span class="hero-note">10 free replies Â· No credit card Â· No account needed</span>
+    <span class="hero-note">10 free replies -- No credit card -- No account needed</span>
   </div>
 
-  <!-- V2 MOCKUP â€” shows actual product UI with intent chips -->
+  <!-- V2 MOCKUP -->
   <div class="hero-mockup">
     <div class="mock-header">
       <div class="mock-header-left">
-        <div class="mock-icon">âšˇ</div>
+        <div class="mock-icon">&#9889;</div>
         <span class="mock-title">ReplyMind</span>
-        <span class="mock-context">đź“© Sales Inquiry</span>
+        <span class="mock-context">Sales Inquiry</span>
       </div>
-      <span class="mock-close">âś•</span>
+      <span class="mock-close">&#10005;</span>
     </div>
     <div class="mock-body">
       <p class="mock-prompt">How would you like to reply?</p>
       <p class="mock-sub">Choose your intent and we'll craft the perfect response.</p>
       <div class="mock-chips">
-        <span class="mock-chip active">âś… Accept</span>
-        <span class="mock-chip">âťŚ Decline</span>
-        <span class="mock-chip">đź¤” Maybe</span>
-        <span class="mock-chip">đź“… Schedule</span>
-        <span class="mock-chip">âť“ More Info</span>
-        <span class="mock-chip locked">đź’° Negotiate</span>
-        <span class="mock-chip locked">đź™Ź Thank You</span>
+        <span class="mock-chip active">Accept</span>
+        <span class="mock-chip">Decline</span>
+        <span class="mock-chip">Maybe</span>
+        <span class="mock-chip">Schedule</span>
+        <span class="mock-chip">More Info</span>
+        <span class="mock-chip locked">Negotiate</span>
+        <span class="mock-chip locked">Thank You</span>
         <span class="mock-chip locked">+4 more</span>
       </div>
       <div class="mock-reply">
         <div class="mock-reply-tags">
-          <span class="mock-tag blue">âś… Accept</span>
-          <span class="mock-tag purple">đźŽŻ Your tone</span>
+          <span class="mock-tag blue">Accept</span>
+          <span class="mock-tag purple">Your tone</span>
         </div>
-        <p class="mock-reply-text">Hi Sarah, thanks for reaching out! We absolutely offer custom packages for teams your size. I'd love to walk you through our options â€” would you be free for a quick 15-minute call this week? Looking forward to it!</p>
+        <p class="mock-reply-text">Hi Sarah, thanks for reaching out! We absolutely offer custom packages for teams your size. I'd love to walk you through our options -- would you be free for a quick 15-minute call this week? Looking forward to it!</p>
       </div>
-      <p class="mock-hint">đź‘† Click to insert into your email</p>
+      <p class="mock-hint">Click to insert into your email</p>
       <div class="mock-actions">
-        <div class="mock-btn">â† Try different intent</div>
-        <div class="mock-btn">đź”„ Regenerate</div>
+        <div class="mock-btn">Try different intent</div>
+        <div class="mock-btn">Regenerate</div>
       </div>
     </div>
     <div class="mock-footer">
-      <p>đź”’ Message text sent to OpenAI for processing. Not stored. <a href="privacy.html" style="color:#9CA3AF;text-decoration:underline">Privacy Policy</a></p>
+      <p>Message text sent to OpenAI for processing. Not stored. <a href="privacy.html" style="color:#9CA3AF;text-decoration:underline">Privacy Policy</a></p>
     </div>
   </div>
 </section>
 
-<!-- â•â•â• PAIN â•â•â• -->
+<!-- ANIMATED DEMO -->
+<section class="demo" id="demo">
+  <div class="demo-inner">
+    <div class="section-eyebrow">See it in action</div>
+    <h2 class="section-title">From inbox to sent in 3 clicks.</h2>
+    <p class="section-sub">Watch how ReplyMind works -- right inside Gmail, no tab switching.</p>
+
+    <div class="demo-window">
+      <div class="demo-toolbar">
+        <div class="demo-dot r"></div><div class="demo-dot y"></div><div class="demo-dot g"></div>
+        <div class="demo-tab">Gmail - Inbox</div>
+      </div>
+      <div class="demo-content">
+        <div class="demo-email">
+          <div class="demo-email-header">Sarah Miller &lt;sarah@acme.co&gt;</div>
+          <div class="demo-email-meta">Re: Partnership Proposal &middot; 2 min ago</div>
+          <div class="demo-email-body">Hi! We reviewed your proposal and are very interested. Could we set up a call this week to discuss pricing for our team of 50? Looking forward to hearing from you.</div>
+          <div class="demo-compose">
+            <div class="demo-compose-text" id="demoComposeText"></div>
+          </div>
+        </div>
+        <div class="demo-sidebar">
+          <div class="demo-sidebar-title">ReplyMind</div>
+          <div class="demo-sidebar-chip" data-step="1" id="chip-accept">Accept</div>
+          <div class="demo-sidebar-chip" data-step="1" id="chip-decline">Decline</div>
+          <div class="demo-sidebar-chip" data-step="1" id="chip-schedule">Schedule</div>
+          <div class="demo-sidebar-chip" data-step="1" id="chip-maybe">Maybe</div>
+          <div class="demo-sidebar-chip" data-step="1" id="chip-info">More Info</div>
+          <div class="demo-send-btn" id="demoSendBtn">Send</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-steps">
+      <div class="demo-step active" id="demoStep1"><div class="demo-step-num">1</div> Choose intent</div>
+      <div class="demo-step" id="demoStep2"><div class="demo-step-num">2</div> Click to insert</div>
+      <div class="demo-step" id="demoStep3"><div class="demo-step-num">3</div> Hit Send</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
 <section class="pain">
   <div class="section-eyebrow">The problem</div>
   <h2 class="section-title">You're spending 2+ hours a day<br>on emails that all sound the same.</h2>
-  <p class="section-sub">Every reply needs the right tone for the right person. That mental overhead adds up fast â€” especially when you're running a business.</p>
+  <p class="section-sub">Every reply needs the right tone for the right person. That mental overhead adds up fast -- especially when you're running a business.</p>
   <div class="pain-grid">
-    <div class="pain-card"><div class="pain-card-emoji">đź”„</div><h3>The tab-switching nightmare</h3><p>Copy email â†’ open ChatGPT â†’ write a prompt â†’ wait â†’ copy reply â†’ switch back â†’ paste. For every. Single. Email.</p></div>
-    <div class="pain-card"><div class="pain-card-emoji">đź¤–</div><h3>"That sounds like AI"</h3><p>Generic AI replies make you sound like a robot. You end up rewriting the whole thing â€” so what's the point?</p></div>
-    <div class="pain-card"><div class="pain-card-emoji">đź§ </div><h3>Decision fatigue</h3><p>Should I accept? Counter-offer? Ask for info? The hardest part is deciding <em>how</em> to reply â€” not the words.</p></div>
-    <div class="pain-card"><div class="pain-card-emoji">âŹ°</div><h3>Lost revenue from slow replies</h3><p>Every hour you take to respond, a lead gets colder. Replies within 5 minutes convert 21x more.</p></div>
+    <div class="pain-card"><div class="pain-card-emoji">&#128260;</div><h3>The tab-switching nightmare</h3><p>Copy email, open an AI tool, write a prompt, wait, copy reply, switch back, paste. For every. Single. Email.</p></div>
+    <div class="pain-card"><div class="pain-card-emoji">&#129302;</div><h3>"That sounds like AI"</h3><p>Generic AI replies make you sound like a robot. You end up rewriting the whole thing -- so what's the point?</p></div>
+    <div class="pain-card"><div class="pain-card-emoji">&#129504;</div><h3>Decision fatigue</h3><p>Should I accept? Counter-offer? Ask for info? The hardest part is deciding <em>how</em> to reply -- not the words.</p></div>
+    <div class="pain-card"><div class="pain-card-emoji">&#9200;</div><h3>Lost revenue from slow replies</h3><p>Every hour you take to respond, a lead gets colder. Replies within 5 minutes convert 21x more.</p></div>
   </div>
 </section>
 
-<!-- â•â•â• COMMON ENEMY â•â•â• -->
+<!-- COMMON ENEMY -->
 <section class="enemy">
   <div class="enemy-inner">
     <div class="section-eyebrow">The old way is broken</div>
-    <p class="enemy-quote">"Let me just <em>open ChatGPT in another tab</em>, paste this email, write a prompt, wait, copy, switch back, pasteâ€¦ only to realize it sounds nothing like me."</p>
-    <p class="enemy-desc">ChatGPT is a genius locked in a closet â€” it can't see your inbox, doesn't know your tone, and has no idea who's emailing you. <strong>You deserve a tool that lives where you work.</strong></p>
+    <p class="enemy-quote">"Let me just <em>open an AI tool in another tab</em>, paste this email, write a prompt, wait, copy, switch back, paste... only to realize it sounds nothing like me."</p>
+    <p class="enemy-desc">AI chatbots are powerful but locked in a separate tab. They can't see your inbox, don't know your tone, and have no idea who's emailing you. <strong>You deserve a tool that lives where you work.</strong></p>
   </div>
 </section>
 
-<!-- â•â•â• HOW IT WORKS â•â•â• -->
+<!-- HOW IT WORKS -->
 <section class="how" id="how">
   <div class="how-inner">
     <div class="section-eyebrow">How it works</div>
     <h2 class="section-title" style="margin-bottom:56px">From inbox to sent in 3 clicks.</h2>
     <div class="steps">
-      <div class="step"><div class="step-number">1</div><h3>Open any email</h3><p>Click Reply on any email in Gmail. ReplyMind is already there â€” a button in the corner.</p></div>
+      <div class="step"><div class="step-number">1</div><h3>Open any email</h3><p>Click Reply on any email in Gmail. ReplyMind is already there -- a button in the corner.</p></div>
       <div class="step"><div class="step-number">2</div><h3>Choose your intent</h3><p>Accept? Decline? Schedule? Just tap the intent chip. No prompting needed.</p></div>
-      <div class="step"><div class="step-number">3</div><h3>Click to insert</h3><p>A perfect reply appears in your tone. Click the card â€” it inserts directly into Gmail.</p></div>
+      <div class="step"><div class="step-number">3</div><h3>Click to insert</h3><p>A perfect reply appears in your tone. Click the card -- it inserts directly into Gmail.</p></div>
       <div class="step"><div class="step-number">4</div><h3>Set a reminder</h3><p>One tap sets a follow-up reminder. Chrome notifies you in 1, 3, or 7 days.</p></div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â• NICHES â•â•â• -->
+<!-- NICHES -->
 <section class="niches">
   <div class="section-eyebrow">Built for your business</div>
   <h2 class="section-title">See how business owners use ReplyMind.</h2>
   <p class="section-sub">Auto-detects whether an email is a sales inquiry, complaint, vendor outreach, or follow-up.</p>
   <div class="niches-grid">
-    <div class="niche-card"><span class="niche-emoji">đźŹŞ</span><h3>E-commerce store owner</h3><p>Handle customer questions, return requests, and vendor negotiations without spending the whole day in your inbox.</p><div class="niche-example">"I want to return the item..." â†’ đź¤” Maybe â†’ "Thanks for reaching out. Could you share the order number and a photo of the issue?"</div></div>
-    <div class="niche-card"><span class="niche-emoji">đź“</span><h3>Marketing agency</h3><p>Respond to client updates, prospect inquiries, and team coordination in your agency's voice.</p><div class="niche-example">"Can you give us a discount?" â†’ âťŚ Decline â†’ "Our rates reflect the quality we deliver, but I'd love to explore a longer-term arrangement."</div></div>
-    <div class="niche-card"><span class="niche-emoji">âš–ď¸Ź</span><h3>Consultant / Freelancer</h3><p>Juggling 15 clients, each needing a different tone? Set your style once. ReplyMind handles the rest.</p><div class="niche-example">"Are you available for a project?" â†’ đź“… Schedule â†’ "Sounds exciting! Would you be open to a 30-minute intro call this week?"</div></div>
-    <div class="niche-card"><span class="niche-emoji">đźŹĄ</span><h3>Service provider</h3><p>Clinics, salons, repair shops â€” respond to appointment requests and reviews without hiring staff.</p><div class="niche-example">"I'd like to book an appointment" â†’ âś… Accept â†’ "We'd love to see you! We have openings Tuesday at 2pm and Thursday at 10am."</div></div>
-    <div class="niche-card"><span class="niche-emoji">đźŹ—ď¸Ź</span><h3>Real estate / Construction</h3><p>Quote requests, site updates, client check-ins â€” reply in 10 seconds between job sites.</p><div class="niche-example">"Following up on the quote" â†’ đź”„ Check In â†’ "Thanks for following up! I've finalized the numbers and will send by end of day."</div></div>
-    <div class="niche-card"><span class="niche-emoji">đź’Ľ</span><h3>SaaS / Tech founder</h3><p>Enterprise inquiries, investor updates, support escalations â€” professional tone at startup speed.</p><div class="niche-example">"Evaluating your platform for 200 people" â†’ âś… Accept â†’ "I'd love to set up a personalized demo. I'll loop in our enterprise lead."</div></div>
+    <div class="niche-card"><span class="niche-emoji">&#127978;</span><h3>E-commerce store owner</h3><p>Handle customer questions, return requests, and vendor negotiations without spending the whole day in your inbox.</p><div class="niche-example">"I want to return the item..." &#8594; Maybe &#8594; "Thanks for reaching out. Could you share the order number and a photo of the issue?"</div></div>
+    <div class="niche-card"><span class="niche-emoji">&#128200;</span><h3>Marketing agency</h3><p>Respond to client updates, prospect inquiries, and team coordination in your agency's voice.</p><div class="niche-example">"Can you give us a discount?" &#8594; Decline &#8594; "Our rates reflect the quality we deliver, but I'd love to explore a longer-term arrangement."</div></div>
+    <div class="niche-card"><span class="niche-emoji">&#9878;&#65039;</span><h3>Consultant / Freelancer</h3><p>Juggling 15 clients, each needing a different tone? Set your style once. ReplyMind handles the rest.</p><div class="niche-example">"Are you available for a project?" &#8594; Schedule &#8594; "Sounds exciting! Would you be open to a 30-minute intro call this week?"</div></div>
+    <div class="niche-card"><span class="niche-emoji">&#127973;</span><h3>Service provider</h3><p>Clinics, salons, repair shops -- respond to appointment requests and reviews without hiring staff.</p><div class="niche-example">"I'd like to book an appointment" &#8594; Accept &#8594; "We'd love to see you! We have openings Tuesday at 2pm and Thursday at 10am."</div></div>
+    <div class="niche-card"><span class="niche-emoji">&#127959;&#65039;</span><h3>Real estate / Construction</h3><p>Quote requests, site updates, client check-ins -- reply in 10 seconds between job sites.</p><div class="niche-example">"Following up on the quote" &#8594; Check In &#8594; "Thanks for following up! I've finalized the numbers and will send by end of day."</div></div>
+    <div class="niche-card"><span class="niche-emoji">&#128188;</span><h3>SaaS / Tech founder</h3><p>Enterprise inquiries, investor updates, support escalations -- professional tone at startup speed.</p><div class="niche-example">"Evaluating your platform for 200 people" &#8594; Accept &#8594; "I'd love to set up a personalized demo. I'll loop in our enterprise lead."</div></div>
   </div>
 </section>
 
-<!-- â•â•â• FEATURES â•â•â• -->
+<!-- FEATURES -->
 <section class="features" id="features">
   <div class="features-header">
     <div class="section-eyebrow">What you get</div>
     <h2 class="section-title">Everything you need to own your inbox.</h2>
   </div>
   <div class="features-grid">
-    <div class="feature-card"><span class="feature-icon">đź§ </span><h3>12 smart intent chips</h3><p>Accept, Decline, Maybe, Schedule, Delegate, More Info, Check In, Negotiate, Thank You, Apologize, Introduce, or Custom. Just tap.</p><span class="feature-tag">5 free Â· All on Pro</span></div>
-    <div class="feature-card"><span class="feature-icon">đźŽŻ</span><h3>Your tone, every time</h3><p>Set your communication style once. Every reply reflects your voice â€” not a robot's.</p><span class="feature-tag">All plans</span></div>
-    <div class="feature-card"><span class="feature-icon">đź”Ť</span><h3>Context detection</h3><p>Auto-detects sales inquiry, complaint, vendor outreach, or follow-up. Adjusts tone accordingly.</p><span class="feature-tag">All plans</span></div>
-    <div class="feature-card"><span class="feature-icon">đźŚŤ</span><h3>Auto language match</h3><p>Replies in the same language as the incoming email. Hebrew, English, Spanish, French â€” all automatic.</p><span class="feature-tag">All plans</span></div>
-    <div class="feature-card"><span class="feature-icon">đź“‡</span><h3>Contact memory</h3><p>Save notes about contacts. "Warm client, prefers short emails." Replies are calibrated to the relationship.</p><span class="feature-tag pro">Pro</span></div>
-    <div class="feature-card"><span class="feature-icon">âŹ°</span><h3>Follow-up reminders</h3><p>Set a reminder after replying. Chrome notifies you at 9am. Nothing falls through the cracks.</p><span class="feature-tag pro">Pro</span></div>
-    <div class="feature-card"><span class="feature-icon">đź”Ą</span><h3>Reply streaks & stats</h3><p>Track your daily streak and total time saved. Gamified productivity that keeps you going.</p><span class="feature-tag">All plans</span></div>
-    <div class="feature-card"><span class="feature-icon">âśŤď¸Ź</span><h3>Custom instructions</h3><p>Type your reply direction: "Offer 10% discount" or "Reschedule to next month." Full creative control.</p><span class="feature-tag pro">Pro Â· Premium</span></div>
-    <div class="feature-card"><span class="feature-icon">đź’Ľ</span><h3>LinkedIn DM support</h3><p>Works in LinkedIn messages too. Same one-click experience for networking and outreach.</p><span class="feature-tag pro">Pro Â· Premium</span></div>
+    <div class="feature-card"><span class="feature-icon">&#129504;</span><h3>12 smart intent chips</h3><p>Accept, Decline, Maybe, Schedule, Delegate, More Info, Check In, Negotiate, Thank You, Apologize, Introduce, or Custom. Just tap.</p><span class="feature-tag">5 free &middot; All on Pro</span></div>
+    <div class="feature-card"><span class="feature-icon">&#127919;</span><h3>Your tone, every time</h3><p>Set your communication style once. Every reply reflects your voice -- not a robot's.</p><span class="feature-tag">All plans</span></div>
+    <div class="feature-card"><span class="feature-icon">&#128269;</span><h3>Context detection</h3><p>Auto-detects sales inquiry, complaint, vendor outreach, or follow-up. Adjusts tone accordingly.</p><span class="feature-tag">All plans</span></div>
+    <div class="feature-card"><span class="feature-icon">&#127757;</span><h3>Auto language match</h3><p>Replies in the same language as the incoming email. Hebrew, English, Spanish, French -- all automatic.</p><span class="feature-tag">All plans</span></div>
+    <div class="feature-card"><span class="feature-icon">&#128199;</span><h3>Contact memory</h3><p>Save notes about contacts. "Warm client, prefers short emails." Replies are calibrated to the relationship.</p><span class="feature-tag pro">Pro</span></div>
+    <div class="feature-card"><span class="feature-icon">&#9200;</span><h3>Follow-up reminders</h3><p>Set a reminder after replying. Chrome notifies you at 9am. Nothing falls through the cracks.</p><span class="feature-tag pro">Pro</span></div>
+    <div class="feature-card"><span class="feature-icon">&#128293;</span><h3>Reply streaks &amp; stats</h3><p>Track your daily streak and total time saved. Gamified productivity that keeps you going.</p><span class="feature-tag">All plans</span></div>
+    <div class="feature-card"><span class="feature-icon">&#9997;&#65039;</span><h3>Custom instructions</h3><p>Type your reply direction: "Offer 10% discount" or "Reschedule to next month." Full creative control.</p><span class="feature-tag pro">Pro &middot; Premium</span></div>
+    <div class="feature-card"><span class="feature-icon">&#128188;</span><h3>LinkedIn DM support</h3><p>Works in LinkedIn messages too. Same one-click experience for networking and outreach.</p><span class="feature-tag pro">Pro &middot; Premium</span></div>
   </div>
 </section>
 
-<!-- â•â•â• SOCIAL PROOF â•â•â• -->
+<!-- SOCIAL PROOF -->
 <section class="social-proof">
   <div class="social-proof-inner">
     <div class="section-eyebrow">What users say</div>
     <h2 class="section-title">They tried writing emails the old way.<br>Then they found ReplyMind.</h2>
     <div class="testimonials">
-      <div class="testimonial"><p class="testimonial-text">"I used to spend 2 hours a day on email replies. Now it's 20 minutes. The intent chips are genius â€” I just tap 'Accept' or 'Schedule' and the reply is perfect."</p><div class="testimonial-author"><div class="testimonial-avatar">đźŹŞ</div><div><div class="testimonial-name">D. Cohen</div><div class="testimonial-role">E-commerce store owner</div></div></div></div>
-      <div class="testimonial"><p class="testimonial-text">"My clients think I personally write every response. They have no idea it's AI because it actually sounds like me. The tone profile is worth the subscription alone."</p><div class="testimonial-author"><div class="testimonial-avatar">đź“</div><div><div class="testimonial-name">S. Levi</div><div class="testimonial-role">Marketing consultant</div></div></div></div>
-      <div class="testimonial"><p class="testimonial-text">"The follow-up reminders saved me from losing a $15K deal. I replied in 30 seconds, set a 3-day reminder, followed up, and closed."</p><div class="testimonial-author"><div class="testimonial-avatar">âš–ď¸Ź</div><div><div class="testimonial-name">M. Avraham</div><div class="testimonial-role">Business consultant</div></div></div></div>
+      <div class="testimonial"><p class="testimonial-text">"I used to spend 2 hours a day on email replies. Now it's 20 minutes. The intent chips are genius -- I just tap 'Accept' or 'Schedule' and the reply is perfect."</p><div class="testimonial-author"><div class="testimonial-avatar">&#127978;</div><div><div class="testimonial-name">D. Cohen</div><div class="testimonial-role">E-commerce store owner</div></div></div></div>
+      <div class="testimonial"><p class="testimonial-text">"My clients think I personally write every response. They have no idea it's AI because it actually sounds like me. The tone profile is worth the subscription alone."</p><div class="testimonial-author"><div class="testimonial-avatar">&#128200;</div><div><div class="testimonial-name">S. Levi</div><div class="testimonial-role">Marketing consultant</div></div></div></div>
+      <div class="testimonial"><p class="testimonial-text">"The follow-up reminders saved me from losing a $15K deal. I replied in 30 seconds, set a 3-day reminder, followed up, and closed."</p><div class="testimonial-author"><div class="testimonial-avatar">&#9878;</div><div><div class="testimonial-name">M. Avraham</div><div class="testimonial-role">Business consultant</div></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â• COMPARISON â•â•â• -->
+<!-- COMPARISON -->
 <section class="comparison">
   <div class="comparison-inner">
-    <div class="section-eyebrow">Why not just use ChatGPT?</div>
+    <div class="section-eyebrow">Why not just use an AI chatbot?</div>
     <h2 class="section-title">Not even close.</h2>
-    <p class="section-sub" style="margin-bottom:48px">ChatGPT is general-purpose. ReplyMind is a reply machine built into your inbox.</p>
+    <p class="section-sub" style="margin-bottom:48px">AI chatbots are general-purpose. ReplyMind is a reply machine built into your inbox.</p>
     <table class="compare-table">
-      <thead><tr><th></th><th>ChatGPT</th><th class="highlight">ReplyMind</th><th>Superhuman</th></tr></thead>
+      <thead><tr><th></th><th>AI Chatbots</th><th class="highlight">ReplyMind</th><th>Superhuman</th></tr></thead>
       <tbody>
-        <tr><td>Works inside Gmail</td><td><span class="cross">âś•</span></td><td class="highlight"><span class="check">âś“</span></td><td><span class="check">âś“</span></td></tr>
-        <tr><td>Intent-based replies</td><td><span class="cross">âś•</span></td><td class="highlight"><span class="check">âś“</span></td><td><span class="cross">âś•</span></td></tr>
-        <tr><td>One-click insert</td><td><span class="cross">âś•</span></td><td class="highlight"><span class="check">âś“</span></td><td><span class="cross">âś•</span></td></tr>
-        <tr><td>Knows your tone</td><td><span class="cross">âś•</span></td><td class="highlight"><span class="check">âś“</span></td><td><span class="cross">âś•</span></td></tr>
-        <tr><td>Contact memory</td><td><span class="cross">âś•</span></td><td class="highlight"><span class="check">âś“</span></td><td><span class="cross">âś•</span></td></tr>
-        <tr><td>Auto language match</td><td><span class="check">âś“</span></td><td class="highlight"><span class="check">âś“</span></td><td><span class="cross">âś•</span></td></tr>
-        <tr><td>Follow-up reminders</td><td><span class="cross">âś•</span></td><td class="highlight"><span class="check">âś“</span></td><td><span class="check">âś“</span></td></tr>
-        <tr><td>Context detection</td><td><span class="cross">âś•</span></td><td class="highlight"><span class="check">âś“</span></td><td><span class="cross">âś•</span></td></tr>
+        <tr><td>Works inside Gmail</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+        <tr><td>Intent-based replies</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
+        <tr><td>One-click insert</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
+        <tr><td>Knows your tone</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
+        <tr><td>Contact memory</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
+        <tr><td>Auto language match</td><td><span class="check">&#10003;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
+        <tr><td>Follow-up reminders</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+        <tr><td>Context detection</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
         <tr><td>Starting price</td><td>$20/mo</td><td class="highlight" style="color:var(--blue-bright);font-weight:700">Free</td><td>$30/mo</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
-<!-- â•â•â• ROI CALCULATOR â•â•â• -->
+<!-- ROI CALCULATOR -->
 <section class="roi">
   <div class="roi-inner">
     <div class="section-eyebrow">Do the math</div>
@@ -425,13 +495,13 @@
       <div class="roi-result">
         <div class="roi-saved" id="roi-hours">1.7 hours/day</div>
         <div class="roi-saved-label">saved every day with ReplyMind</div>
-        <div style="margin-top:12px;font-size:13px;color:var(--white-50)" id="roi-monthly">That's <strong style="color:var(--green-light)">35 hours/month</strong> â€” nearly a full work week</div>
+        <div style="margin-top:12px;font-size:13px;color:var(--white-50)" id="roi-monthly">That's <strong style="color:var(--green-light)">35 hours/month</strong> -- nearly a full work week</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â• PRICING â•â•â• -->
+<!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="pricing-header">
     <div class="section-eyebrow">Simple, transparent pricing</div>
@@ -449,7 +519,7 @@
     <!-- Free -->
     <div class="pricing-card">
       <div class="pricing-plan-name">Free</div>
-      <div class="pricing-plan-desc">Try it â€” no strings attached</div>
+      <div class="pricing-plan-desc">See why everyone's switching</div>
       <div class="pricing-amount"><span class="dollar">$</span>0</div>
       <div class="pricing-period">forever</div>
       <ul class="pricing-features">
@@ -457,12 +527,12 @@
         <li>5 intent types</li>
         <li>Context detection</li>
         <li>Auto language match</li>
-        <li>1 follow-up reminder</li>
         <li>Tone profile</li>
+        <li>Gmail only</li>
       </ul>
       <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai" class="pricing-btn outline">Install Free</a>
     </div>
-    <!-- Basic $9 -->
+    <!-- Basic -->
     <div class="pricing-card">
       <div class="pricing-plan-name">Basic</div>
       <div class="pricing-plan-desc">For daily email warriors</div>
@@ -471,55 +541,61 @@
       <ul class="pricing-features">
         <li>50 replies / month</li>
         <li>11 intent types</li>
-        <li>Tone profile</li>
-        <li>Context detection</li>
-        <li>Auto language match</li>
-        <li>5 follow-up reminders</li>
         <li>Auto tone learning</li>
+        <li>10 contact memory slots</li>
+        <li>5 follow-up reminders</li>
+        <li>Reply streaks &amp; stats</li>
+        <li>Gmail only</li>
       </ul>
       <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai" class="pricing-btn outline">Get Basic</a>
     </div>
-    <!-- Pro $29 -->
+    <!-- Pro -->
     <div class="pricing-card popular">
       <div class="pricing-popular-badge">Most Popular</div>
       <div class="pricing-plan-name">Pro</div>
-      <div class="pricing-plan-desc">For power users who live in Gmail</div>
+      <div class="pricing-plan-desc">For power users who live in their inbox</div>
       <div class="pricing-amount" data-monthly="29" data-annual="23"><span class="dollar">$</span><span class="price-num">29</span></div>
       <div class="pricing-period"><span class="period-text">per month</span></div>
       <ul class="pricing-features">
-        <li>Unlimited replies</li>
+        <li><strong>Unlimited</strong> replies</li>
         <li>All 12 intents + Custom</li>
-        <li>Unlimited contact memory</li>
-        <li>Unlimited reminders</li>
-        <li>LinkedIn DM support</li>
+        <li><strong>Unlimited</strong> contact memory</li>
+        <li><strong>Unlimited</strong> follow-up reminders</li>
+        <li>Gmail + LinkedIn DMs</li>
+        <li>Per-contact tone profiles</li>
         <li>Priority support</li>
-        <li>Per-contact tone</li>
       </ul>
       <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai" class="pricing-btn primary">Get Pro</a>
     </div>
-    <!-- Premium $99 -->
+    <!-- Premium -->
     <div class="pricing-card">
       <div class="pricing-plan-name">Premium</div>
-      <div class="pricing-plan-desc">For teams & high-volume senders</div>
+      <div class="pricing-plan-desc">For teams &amp; high-volume senders</div>
       <div class="pricing-amount" data-monthly="99" data-annual="89"><span class="dollar">$</span><span class="price-num">99</span></div>
       <div class="pricing-period"><span class="period-text">per month</span></div>
       <ul class="pricing-features">
         <li>Everything in Pro</li>
+        <li>Up to 5 team seats</li>
+        <li>Shared tone profiles</li>
         <li>Multi-language tone profiles</li>
-        <li>Advanced analytics</li>
-        <li>Dedicated account manager</li>
-        <li>Custom onboarding</li>
+        <li>Advanced analytics dashboard</li>
+        <li>Custom onboarding call</li>
         <li>SLA guarantee</li>
-        <li>Team features (coming soon)</li>
       </ul>
-      <a href="mailto:support@tigerbrandsglobal.com" class="pricing-btn outline">Contact Sales</a>
+      <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai" class="pricing-btn outline">Get Premium</a>
     </div>
   </div>
 
-  <p class="pricing-guarantee">đź”’ Secure payments via PayPal Â· Cancel anytime Â· No lock-in contracts<br>Questions? <a href="mailto:support@tigerbrandsglobal.com" style="color:var(--blue-bright)">support@tigerbrandsglobal.com</a></p>
+  <!-- Enterprise CTA -->
+  <div style="text-align:center;margin-top:28px">
+    <p style="font-size:15px;color:var(--white-70);margin-bottom:8px">Need more seats, custom integrations, or a dedicated account manager?</p>
+    <a href="mailto:support@tigerbrandsglobal.com?subject=Enterprise%20Inquiry" style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--blue-bright);text-decoration:none;padding:8px 20px;border:1.5px solid rgba(79,142,247,0.3);border-radius:10px;transition:all 0.15s;background:rgba(79,142,247,0.06)">Enterprise? Let's talk &rarr;</a>
+  </div>
+
+  <p class="pricing-guarantee">Secure payments via PayPal &middot; Cancel anytime &middot; No lock-in contracts<br>Questions? <a href="mailto:support@tigerbrandsglobal.com" style="color:var(--blue-bright)">support@tigerbrandsglobal.com</a></p>
 </section>
 
-<!-- â•â•â• URGENCY â•â•â• -->
+<!-- URGENCY -->
 <section class="urgency">
   <div class="urgency-inner">
     <h2>Every email you write manually<br>is time you can't buy back.</h2>
@@ -528,30 +604,30 @@
   </div>
 </section>
 
-<!-- â•â•â• FAQ â•â•â• -->
+<!-- FAQ -->
 <section class="faq" id="faq">
   <h2 class="section-title" style="text-align:center;margin-bottom:40px">Frequently Asked Questions</h2>
   <div class="faq-item"><div class="faq-q">Does ReplyMind read all my emails?</div><div class="faq-a">No. ReplyMind only reads the specific email you are actively replying to, and only when you click Generate. It never scans your inbox or runs in the background.</div></div>
   <div class="faq-item"><div class="faq-q">Is my email content stored anywhere?</div><div class="faq-a">No. Your email text is sent to our secure backend and then to OpenAI to generate the reply, then immediately discarded. We never store, log, or sell your email content.</div></div>
-  <div class="faq-item"><div class="faq-q">How is this different from ChatGPT?</div><div class="faq-a">ChatGPT is general-purpose. ReplyMind lives inside Gmail, knows your tone, detects email context, and inserts replies with one click. No tabs, no prompts, no copy-pasting.</div></div>
+  <div class="faq-item"><div class="faq-q">How is this different from AI chatbots?</div><div class="faq-a">AI chatbots are general-purpose. ReplyMind lives inside Gmail, knows your tone, detects email context, and inserts replies with one click. No tabs, no prompts, no copy-pasting.</div></div>
   <div class="faq-item"><div class="faq-q">What are "intents"?</div><div class="faq-a">Instead of getting random replies, you choose your intent: Accept, Decline, Maybe, Schedule, Delegate, More Info, Check In, Negotiate, Thank You, Apologize, Introduce, or Custom. ReplyMind generates one perfect reply tailored to that intent.</div></div>
   <div class="faq-item"><div class="faq-q">How do I activate after paying?</div><div class="faq-a">After payment, you'll receive an activation code. Enter it in the ReplyMind extension popup under "Activation Code". Your account upgrades instantly.</div></div>
-  <div class="faq-item"><div class="faq-q">How do I cancel?</div><div class="faq-a">PayPal â†’ Settings â†’ Payments â†’ Manage automatic payments â†’ ReplyMind â†’ Cancel. 30 seconds. No questions asked.</div></div>
-  <div class="faq-item"><div class="faq-q">Does it work with Google Workspace?</div><div class="faq-a">Yes. Any Gmail account â€” personal @gmail.com and Google Workspace business accounts.</div></div>
+  <div class="faq-item"><div class="faq-q">How do I cancel?</div><div class="faq-a">PayPal &gt; Settings &gt; Payments &gt; Manage automatic payments &gt; ReplyMind &gt; Cancel. 30 seconds. No questions asked.</div></div>
+  <div class="faq-item"><div class="faq-q">Does it work with Google Workspace?</div><div class="faq-a">Yes. Any Gmail account -- personal @gmail.com and Google Workspace business accounts.</div></div>
   <div class="faq-item"><div class="faq-q">What languages does it support?</div><div class="faq-a">ReplyMind auto-detects the incoming language and replies in the same one. English, Hebrew, Spanish, French, German, Arabic, Portuguese, and more.</div></div>
-  <div class="faq-item"><div class="faq-q">What is the "tone profile"?</div><div class="faq-a">A short description of how you communicate â€” e.g., "Professional but warm, slightly casual, uses first names." Every reply is calibrated to match your style.</div></div>
+  <div class="faq-item"><div class="faq-q">What is the "tone profile"?</div><div class="faq-a">A short description of how you communicate -- e.g., "Professional but warm, slightly casual, uses first names." Every reply is calibrated to match your style.</div></div>
   <div class="faq-item"><div class="faq-q">Is there a free trial?</div><div class="faq-a">The Free plan gives you 10 replies with no account, no credit card, and no expiration. Install and start immediately.</div></div>
 </section>
 
-<!-- â•â•â• FINAL CTA â•â•â• -->
+<!-- FINAL CTA -->
 <section class="final-cta">
   <h2>Ready to stop writing emails<br>and start choosing them?</h2>
   <p>Join business owners who reply faster, sound better, and never lose a lead to a slow response.</p>
   <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai" class="btn-hero">Install Free for Chrome</a>
-  <p style="margin-top:12px;font-size:13px;color:var(--white-40)">10 free replies Â· Works in 30 seconds Â· No credit card</p>
+  <p style="margin-top:12px;font-size:13px;color:var(--white-40)">10 free replies &middot; Works in 30 seconds &middot; No credit card</p>
 </section>
 
-<!-- â•â•â• FOOTER â•â•â• -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-links">
     <a href="privacy.html">Privacy Policy</a>
@@ -559,63 +635,124 @@
     <a href="mailto:support@tigerbrandsglobal.com">Contact</a>
     <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai">Install Extension</a>
   </div>
-  <p class="footer-copy">Â© 2026 ReplyMind by Tiger Brands Global. All rights reserved.</p>
+  <p class="footer-copy">&copy; 2026 ReplyMind by Tiger Brands Global. All rights reserved.</p>
 </footer>
 
 <script>
   // FAQ accordion
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.parentElement;
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = q.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
       if (!isOpen) item.classList.add('open');
     });
   });
 
   // Pricing toggle
-  const toggle = document.getElementById('billing-toggle');
-  const monthlyLabel = document.getElementById('toggle-monthly');
-  const annualLabel = document.getElementById('toggle-annual');
-  let isAnnual = false;
-  toggle.addEventListener('click', () => {
+  var toggle = document.getElementById('billing-toggle');
+  var monthlyLabel = document.getElementById('toggle-monthly');
+  var annualLabel = document.getElementById('toggle-annual');
+  var isAnnual = false;
+  toggle.addEventListener('click', function() {
     isAnnual = !isAnnual;
     toggle.classList.toggle('on', isAnnual);
     monthlyLabel.classList.toggle('active', !isAnnual);
     annualLabel.classList.toggle('active', isAnnual);
-    document.querySelectorAll('.pricing-amount[data-monthly]').forEach(el => {
+    document.querySelectorAll('.pricing-amount[data-monthly]').forEach(function(el) {
       el.querySelector('.price-num').textContent = isAnnual ? el.dataset.annual : el.dataset.monthly;
     });
-    document.querySelectorAll('.period-text').forEach(el => {
+    document.querySelectorAll('.period-text').forEach(function(el) {
       el.textContent = isAnnual ? 'per month, billed annually' : 'per month';
     });
   });
 
   // ROI Calculator
-  const emailsSlider = document.getElementById('roi-emails');
-  const minutesSlider = document.getElementById('roi-minutes');
+  var emailsSlider = document.getElementById('roi-emails');
+  var minutesSlider = document.getElementById('roi-minutes');
   function updateROI() {
-    const emails = parseInt(emailsSlider.value);
-    const minutes = parseInt(minutesSlider.value);
+    var emails = parseInt(emailsSlider.value);
+    var minutes = parseInt(minutesSlider.value);
     document.getElementById('roi-emails-val').textContent = emails + ' emails';
     document.getElementById('roi-minutes-val').textContent = minutes + ' min';
-    const savedMinutes = emails * (minutes - 0.5);
-    const savedHours = (savedMinutes / 60).toFixed(1);
-    const monthlyHours = Math.round(savedMinutes / 60 * 21);
+    var savedMinutes = emails * (minutes - 0.5);
+    var savedHours = (savedMinutes / 60).toFixed(1);
+    var monthlyHours = Math.round(savedMinutes / 60 * 21);
     document.getElementById('roi-hours').textContent = savedHours + ' hours/day';
-    document.getElementById('roi-monthly').innerHTML = `That's <strong style="color:var(--green-light)">${monthlyHours} hours/month</strong> â€” ${monthlyHours >= 40 ? 'more than a full work week' : 'nearly a full work week'}`;
+    document.getElementById('roi-monthly').innerHTML = "That's <strong style=\"color:var(--green-light)\">" + monthlyHours + " hours/month</strong> -- " + (monthlyHours >= 40 ? 'more than a full work week' : 'nearly a full work week');
   }
   emailsSlider.addEventListener('input', updateROI);
   minutesSlider.addEventListener('input', updateROI);
   updateROI();
 
+  // Animated demo
+  var demoReply = "Hi Sarah, that sounds great! We'd love to set up a call this week. I have availability on Tuesday at 2pm or Thursday at 11am -- would either work for your team? Looking forward to discussing the details.";
+  var demoChips = document.querySelectorAll('.demo-sidebar-chip');
+  var demoCompose = document.getElementById('demoComposeText');
+  var demoSendBtn = document.getElementById('demoSendBtn');
+  var demoStep1 = document.getElementById('demoStep1');
+  var demoStep2 = document.getElementById('demoStep2');
+  var demoStep3 = document.getElementById('demoStep3');
+  var demoPhase = 0;
+
+  function runDemoLoop() {
+    demoPhase = 0;
+    demoChips.forEach(function(c) { c.classList.remove('demo-active'); });
+    demoCompose.classList.remove('visible');
+    demoCompose.textContent = '';
+    demoSendBtn.classList.remove('ready');
+    demoStep1.classList.add('active');
+    demoStep2.classList.remove('active');
+    demoStep3.classList.remove('active');
+
+    // Step 1: highlight "Accept" chip after 1s
+    setTimeout(function() {
+      document.getElementById('chip-accept').classList.add('demo-active');
+      demoStep1.classList.remove('active');
+      demoStep2.classList.add('active');
+
+      // Step 2: type reply into compose
+      setTimeout(function() {
+        demoCompose.textContent = demoReply;
+        demoCompose.classList.add('visible');
+
+        // Step 3: Send button lights up
+        setTimeout(function() {
+          demoStep2.classList.remove('active');
+          demoStep3.classList.add('active');
+          demoSendBtn.classList.add('ready');
+
+          // Reset and loop
+          setTimeout(function() {
+            runDemoLoop();
+          }, 3000);
+        }, 1500);
+      }, 1200);
+    }, 1500);
+  }
+
+  // Start demo when it scrolls into view
+  var demoStarted = false;
+  var demoObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting && !demoStarted) {
+        demoStarted = true;
+        runDemoLoop();
+      }
+    });
+  }, { threshold: 0.3 });
+  var demoSection = document.querySelector('.demo-window');
+  if (demoSection) demoObserver.observe(demoSection);
+
   // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
+    });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.pain-card, .feature-card, .step, .niche-card, .testimonial').forEach(el => {
+  document.querySelectorAll('.pain-card, .feature-card, .step, .niche-card, .testimonial').forEach(function(el) {
     el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
+    revealObserver.observe(el);
   });
 </script>
 </body>
