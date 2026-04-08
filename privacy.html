@@ -39,7 +39,7 @@
     <p><strong>Chrome Web Store Limited Use Statement:</strong> ReplyMind's use and transfer to any other app of information received from Google APIs will adhere to <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use/" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements. Specifically: (1) ReplyMind only uses data to provide and improve the user-facing reply generation feature; (2) ReplyMind does not transfer data to third parties except as necessary to provide the service (OpenAI for reply generation), as required by law, or in aggregated and anonymized form for security purposes; (3) ReplyMind does not use data for advertising or marketing purposes; (4) no human reads user data except with explicit user consent (support requests), for security investigation (anonymized only), or to comply with applicable law.</p>
   </div>
 
-  <h2>What we collect</h2>
+  <h2>1. User Data Collection</h2>
   <p>ReplyMind collects minimal data strictly necessary to provide its service:</p>
   <ul>
     <li><strong>Email message text (Gmail)</strong> — the text of the specific email you are actively replying to, read only when you click "Generate Reply". This is transmitted to our server for AI processing and immediately discarded. It is never stored, logged, or cached on our servers.</li>
@@ -64,29 +64,30 @@
     <li>We do not sell, rent, or transfer your personal data to any third party for advertising or marketing purposes</li>
   </ul>
 
-  <h2>How we use your data</h2>
-  <p>Email and LinkedIn message text is used solely to generate reply suggestions. When you click "Generate Reply", the message text and your selected intent are transmitted securely via HTTPS to our backend server (hosted on Railway), which then forwards them to an AI language model API to produce a reply suggestion. The message text is used for this single purpose only and is never stored, logged, or used for any other purpose.</p>
+  <h2>2. User Data Handling</h2>
+  <p><strong>How we use your data:</strong> Email and LinkedIn message text is used solely to generate reply suggestions. When you click "Generate Reply", the message text and your selected intent are transmitted securely via HTTPS to our backend server (hosted on Railway), which then forwards them to an AI language model API to produce a reply suggestion. The message text is used for this single purpose only and is never stored, logged, or used for any other purpose.</p>
   <p>Reply choices and feedback are used to improve your experience over time. After 15 reply choices, ReplyMind can auto-detect your preferred communication tone based on your intent patterns. Feedback helps us understand which reply styles work best. Only intent labels, ratings, and timestamps are stored — never message content.</p>
   <p>Your industry is used to provide more relevant reply suggestions tailored to your professional context.</p>
   <p>Usage statistics (reply count, streak, last active date) are used to enforce plan-based limits and provide you with productivity insights within the extension.</p>
   <p>Contact notes and follow-up reminders are stored exclusively on your local device. They are used to personalize generated replies (e.g. adapting the tone for a specific contact) and to trigger browser notifications reminding you to follow up. This data never leaves your device.</p>
   <p>Your session token is used solely to authenticate your account and enforce plan-based limits (Free, Basic, Pro, and Premium tiers). We do not use it for tracking or analytics.</p>
 
-  <h2>Background activity</h2>
-  <p>ReplyMind's background service worker runs to support two features: (1) scheduling follow-up reminder alarms you have set, and (2) displaying browser notifications when those reminders are due. No message content is read or transmitted in the background. The service worker does not run any tracking or analytics processes.</p>
+  <p><strong>Background activity:</strong> ReplyMind's background service worker runs to support two features: (1) scheduling follow-up reminder alarms you have set, and (2) displaying browser notifications when those reminders are due. No message content is read or transmitted in the background. The service worker does not run any tracking or analytics processes.</p>
 
-  <h2>Third parties we share data with</h2>
-  <p>We share email and LinkedIn message text with the following party solely for the purpose of generating reply suggestions:</p>
+  <p><strong>No human access:</strong> No ReplyMind employee, contractor, or affiliate reads your email content, LinkedIn messages, or generated replies. User data is processed exclusively by automated systems. The only exceptions are: (1) if you explicitly contact support and share message content for troubleshooting, (2) if required by applicable law, or (3) for investigating security abuse, in which case only aggregated and anonymized data is used.</p>
+
+  <h2>3. User Data Storage</h2>
+
+  <h2>4. User Data Sharing</h2>
+  <p>We share email and LinkedIn message text with the following third parties solely for the purpose of generating reply suggestions and processing payments:</p>
   <ul>
     <li><strong>OpenAI</strong> — our backend sends message text to OpenAI's API to generate reply suggestions. OpenAI processes this data under their own privacy policy at <a href="https://openai.com/policies/privacy-policy" target="_blank">openai.com/policies/privacy-policy</a>. OpenAI does not use API-submitted data to train their models by default.</li>
     <li><strong>PayPal</strong> — if you subscribe to a paid plan, payment is processed by PayPal. We never see, collect, or store your financial or payment information. PayPal’s privacy policy applies to all payment transactions at <a href="https://www.paypal.com/webapps/mpp/ua/privacy-full" target="_blank">paypal.com/privacy</a>.</li>
   </ul>
+  </ul>
   <p>We do not sell, transfer, or share your data with any other third parties, including advertising platforms, data brokers, or analytics providers.</p>
 
-  <h2>No human access to user data</h2>
-  <p>No ReplyMind employee, contractor, or affiliate reads your email content, LinkedIn messages, or generated replies. User data is processed exclusively by automated systems. The only exceptions are: (1) if you explicitly contact support and share message content for troubleshooting, (2) if required by applicable law, or (3) for investigating security abuse, in which case only aggregated and anonymized data is used.</p>
-
-  <h2>Data storage and security</h2>
+  <h2>Data Access and Deletion Rights</h2>
   <p><strong>Stored on our server (PostgreSQL database):</strong> your account credentials (email, hashed password), tone profile, industry, plan and activation status, reply choice history (intent labels and timestamps only), feedback ratings, usage statistics (reply count, streak days, last active date), and monthly usage counts.</p>
   <p><strong>Stored locally in your browser:</strong> contact notes, follow-up reminders, dismissed tips, and session tokens are stored using Chrome's built-in storage APIs (<code>chrome.storage.local</code> and <code>chrome.storage.sync</code>). This data is never uploaded to our servers.</p>
   <p><strong>Never stored anywhere:</strong> email message text, LinkedIn message text, and generated reply text are never stored, logged, or cached on our servers or in local storage. They exist only in memory during the generation request and are discarded immediately after.</p>
@@ -103,6 +104,7 @@
   <p>We may update this policy from time to time. We will notify users of material changes via the Chrome Web Store listing or by email. The "Last updated" date at the top of this page reflects the most recent revision. Continued use of ReplyMind after changes constitutes acceptance of the updated policy.</p>
 
   <h2>Contact</h2>
+  <p><strong>TIGERBESTBRANDS LLC</strong><br>5830 EAST 2ND ST. PMB 90171<br>CASPER, WY 82609</p>
   <p>Privacy questions: <a href="mailto:support@tigerbrandsglobal.com">support@tigerbrandsglobal.com</a></p>
 </div>
 
@@ -110,7 +112,8 @@
   <a href="index.html">Home</a>
   <a href="support.html">Support</a>
   <a href="mailto:support@tigerbrandsglobal.com">Contact</a>
-  <p style="margin-top: 12px;">© 2026 ReplyMind</p>
+  <p style="margin-top: 12px;">© 2026 ReplyMind by TIGERBESTBRANDS LLC. All rights reserved.</p>
+  <p style="margin-top: 4px; font-size: 11px; color: rgba(255,255,255,0.15);">5830 EAST 2ND ST. PMB 90171, CASPER, WY 82609</p>
 </footer>
 </body>
 </html>
