@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upgrade — ReplyMind</title>
+  <meta name="description" content="Upgrade your ReplyMind plan to unlock unlimited AI-powered email replies, custom intents, contact memory, and LinkedIn support." />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #080D1A; --navy-2: #0D1526; --navy-3: #111E35;
+      --blue: #4F8EF7; --blue-bright: #6BA3FF;
+      --white: #FFFFFF; --white-70: rgba(255,255,255,0.7); --white-50: rgba(255,255,255,0.5);
+      --white-40: rgba(255,255,255,0.4); --white-10: rgba(255,255,255,0.06);
+      --green: #10B981; --green-light: #34D399;
+      --border: rgba(255,255,255,0.08);
+      --font-display: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif;
+    }
+    body { background: var(--navy); color: var(--white); font-family: var(--font-body); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    nav { padding: 16px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    nav a.nav-logo { text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .nav-icon { width: 28px; height: 28px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+    .nav-text { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--white); }
+    .nav-back { font-size: 13px; color: var(--white-50); text-decoration: none; transition: color 0.15s; }
+    .nav-back:hover { color: var(--white); }
+
+    .container { max-width: 560px; margin: 0 auto; padding: 60px 24px 100px; text-align: center; }
+
+    .plan-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px; background: rgba(79,142,247,0.12); border: 1px solid rgba(79,142,247,0.3); border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--blue-bright); margin-bottom: 24px; }
+
+    h1 { font-family: var(--font-display); font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
+    .subtitle { font-size: 16px; color: var(--white-70); margin-bottom: 40px; line-height: 1.6; }
+
+    /* Plan Summary Card */
+    .plan-card { background: var(--navy-2); border: 1.5px solid rgba(79,142,247,0.3); border-radius: 20px; padding: 32px; margin-bottom: 32px; text-align: left; position: relative; overflow: hidden; }
+    .plan-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--blue), transparent); }
+    .plan-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .plan-price { font-family: var(--font-display); font-size: 42px; font-weight: 800; letter-spacing: -2px; margin-bottom: 4px; }
+    .plan-price .dollar { font-size: 20px; vertical-align: top; margin-top: 6px; display: inline-block; }
+    .plan-price .period { font-size: 16px; font-weight: 400; color: var(--white-50); letter-spacing: 0; }
+    .plan-features { list-style: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .plan-features li { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--white-70); padding: 5px 0; }
+    .plan-features li::before { content: '✓'; color: var(--green-light); font-weight: 700; font-size: 14px; }
+
+    /* Setup Notice */
+    .setup-notice { background: rgba(16,185,129,0.06); border: 1.5px solid rgba(16,185,129,0.2); border-radius: 16px; padding: 28px 24px; margin-bottom: 32px; }
+    .setup-icon { font-size: 36px; margin-bottom: 12px; }
+    .setup-notice h3 { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--green-light); }
+    .setup-notice p { font-size: 14px; color: var(--white-70); margin: 0; line-height: 1.6; }
+
+    /* Email Form */
+    .notify-form { margin-top: 24px; }
+    .form-group { display: flex; gap: 8px; margin-bottom: 12px; }
+    .form-input { flex: 1; padding: 14px 18px; background: var(--navy-3); border: 1.5px solid var(--border); border-radius: 12px; font-size: 15px; color: var(--white); font-family: var(--font-body); outline: none; transition: border-color 0.2s; }
+    .form-input::placeholder { color: var(--white-40); }
+    .form-input:focus { border-color: rgba(79,142,247,0.5); }
+    .form-btn { padding: 14px 24px; background: var(--blue); color: white; border: none; border-radius: 12px; font-size: 15px; font-weight: 700; font-family: var(--font-body); cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .form-btn:hover { background: #3A7BE0; transform: translateY(-1px); }
+    .form-note { font-size: 12px; color: var(--white-40); }
+
+    /* Success state */
+    .notify-success { display: none; padding: 20px; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); border-radius: 12px; margin-top: 16px; }
+    .notify-success.show { display: block; }
+    .notify-success p { color: var(--green-light); font-weight: 600; font-size: 15px; margin: 0; }
+
+    /* Trust Signals */
+    .trust { display: flex; justify-content: center; gap: 32px; margin-top: 36px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--white-40); }
+    .trust-item span { font-size: 16px; }
+
+    /* Alternative CTA */
+    .alt-cta { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .alt-cta p { font-size: 14px; color: var(--white-50); margin-bottom: 12px; }
+    .alt-cta a { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--blue-bright); text-decoration: none; padding: 10px 20px; border: 1.5px solid rgba(79,142,247,0.3); border-radius: 10px; transition: all 0.15s; }
+    .alt-cta a:hover { background: rgba(79,142,247,0.08); border-color: var(--blue); }
+
+    footer { border-top: 1px solid var(--border); padding: 24px; text-align: center; font-size: 12px; color: rgba(255,255,255,0.2); }
+    footer a { color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 12px; }
+
+    @media(max-width: 560px) {
+      .form-group { flex-direction: column; }
+      .trust { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-icon">⚡</div>
+    <span class="nav-text">ReplyMind</span>
+  </a>
+  <a href="index.html#pricing" class="nav-back">← Back to pricing</a>
+</nav>
+
+<div class="container">
+  <div class="plan-badge" id="planBadge">⚡ Upgrading to Pro</div>
+
+  <h1 id="pageTitle">You're almost there!</h1>
+  <p class="subtitle">Secure checkout is launching very soon. Get notified the moment it's live — plus lock in early-adopter pricing.</p>
+
+  <!-- Plan Summary -->
+  <div class="plan-card" id="planCard">
+    <div class="plan-name" id="planName">Pro Plan</div>
+    <div class="plan-price"><span class="dollar">$</span><span id="planPrice">29</span><span class="period">/month</span></div>
+    <ul class="plan-features" id="planFeatures">
+      <li>200 replies per month</li>
+      <li>All 12 intents + Custom</li>
+      <li>50 contact memory slots</li>
+      <li>25 follow-up reminders</li>
+      <li>Gmail + LinkedIn DMs</li>
+      <li>Auto tone learning</li>
+    </ul>
+  </div>
+
+  <!-- Setup Notice -->
+  <div class="setup-notice">
+    <div class="setup-icon">🔒</div>
+    <h3>Secure Payment Coming Soon</h3>
+    <p>We're integrating a premium payment processor to ensure the highest level of security for your transactions. Leave your email below and we'll notify you the moment checkout is live.</p>
+
+    <div class="notify-form">
+      <div class="form-group">
+        <input type="email" class="form-input" id="notifyEmail" placeholder="Enter your email address" />
+        <button class="form-btn" id="notifyBtn" onclick="handleNotify()">Notify Me</button>
+      </div>
+      <p class="form-note">No spam. One email when checkout launches. That's it.</p>
+    </div>
+
+    <div class="notify-success" id="notifySuccess">
+      <p>✓ You're on the list! We'll email you the moment checkout goes live.</p>
+    </div>
+  </div>
+
+  <!-- Trust Signals -->
+  <div class="trust">
+    <div class="trust-item"><span>🔒</span> SSL Encrypted</div>
+    <div class="trust-item"><span>🛡️</span> 7-Day Refund</div>
+    <div class="trust-item"><span>⚡</span> Instant Activation</div>
+  </div>
+
+  <!-- Alternative Actions -->
+  <div class="alt-cta">
+    <p>Don't want to wait? Start with our free plan today — 10 replies included.</p>
+    <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai">Install Free for Chrome →</a>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html">Home</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Service</a>
+  <a href="refund.html">Refund Policy</a>
+  <a href="support.html">Support</a>
+  <a href="mailto:hello@replymind.xyz">Contact</a>
+  <p style="margin-top: 12px;">© 2026 ReplyMind by TIGERBESTBRANDS LLC. All rights reserved.</p>
+  <p style="margin-top: 4px; font-size: 11px; color: rgba(255,255,255,0.15);">5830 EAST 2ND ST. PMB 90171, CASPER, WY 82609</p>
+</footer>
+
+<script>
+  // Plan data
+  var plans = {
+    basic: { name: 'Basic Plan', badge: 'Upgrading to Basic', price: '9', features: ['50 replies per month', '11 intent types', 'Auto tone learning', '10 contact memory slots', '5 follow-up reminders', 'Reply streaks & stats', 'Gmail only'] },
+    pro:   { name: 'Pro Plan', badge: 'Upgrading to Pro', price: '29', features: ['200 replies per month', 'All 12 intents + Custom', '50 contact memory slots', '25 follow-up reminders', 'Gmail + LinkedIn DMs', 'Auto tone learning', 'Reply streaks & stats'] },
+    premium: { name: 'Premium Plan', badge: 'Upgrading to Premium', price: '99', features: ['Unlimited replies', 'All 12 intents + Custom', 'Unlimited contact memory', 'Unlimited reminders', 'Gmail + LinkedIn DMs', 'Per-contact tone profiles', 'Priority support', 'Advanced analytics'] }
+  };
+
+  // Read plan from URL
+  var params = new URLSearchParams(window.location.search);
+  var planKey = params.get('plan') || 'pro';
+  var plan = plans[planKey] || plans.pro;
+
+  document.getElementById('planBadge').textContent = '⚡ ' + plan.badge;
+  document.getElementById('planName').textContent = plan.name;
+  document.getElementById('planPrice').textContent = plan.price;
+  document.title = plan.name + ' — ReplyMind Upgrade';
+
+  var featuresList = document.getElementById('planFeatures');
+  featuresList.innerHTML = '';
+  plan.features.forEach(function(f) {
+    var li = document.createElement('li');
+    li.textContent = f;
+    featuresList.appendChild(li);
+  });
+
+  // Notify handler
+  function handleNotify() {
+    var email = document.getElementById('notifyEmail').value.trim();
+    if (!email || !email.includes('@')) {
+      document.getElementById('notifyEmail').style.borderColor = '#EF4444';
+      return;
+    }
+    document.getElementById('notifyEmail').style.borderColor = 'rgba(16,185,129,0.5)';
+    document.getElementById('notifyBtn').textContent = '✓ Done';
+    document.getElementById('notifyBtn').style.background = '#10B981';
+    document.getElementById('notifyBtn').disabled = true;
+    document.getElementById('notifySuccess').classList.add('show');
+
+    // In production, you'd POST this email to your backend
+    console.log('Notify email:', email, 'Plan:', planKey);
+  }
+
+  document.getElementById('notifyEmail').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') handleNotify();
+  });
+</script>
+</body>
+</html>
