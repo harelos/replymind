@@ -6,6 +6,7 @@
   <title>Upgrade — ReplyMind</title>
   <meta name="description" content="Upgrade your ReplyMind plan to unlock unlimited AI-powered email replies, custom intents, contact memory, and LinkedIn support." />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -96,53 +97,33 @@
 <div class="container">
   <div class="plan-badge" id="planBadge">⚡ Upgrading to Pro</div>
 
-  <h1 id="pageTitle">You're almost there!</h1>
-  <p class="subtitle">Secure checkout is launching very soon. Get notified the moment it's live — plus lock in early-adopter pricing.</p>
+  <h1 id="pageTitle">Complete your upgrade</h1>
+  <p class="subtitle">Secure checkout via Paddle. Instant activation upon payment.</p>
 
-  <!-- Plan Summary -->
-  <div class="plan-card" id="planCard">
-    <div class="plan-name" id="planName">Pro Plan</div>
-    <div class="plan-price"><span class="dollar">$</span><span id="planPrice">29</span><span class="period">/month</span></div>
-    <ul class="plan-features" id="planFeatures">
-      <li>200 replies per month</li>
-      <li>All 12 intents + Custom</li>
-      <li>50 contact memory slots</li>
-      <li>25 follow-up reminders</li>
-      <li>Gmail + LinkedIn DMs</li>
-      <li>Auto tone learning</li>
-    </ul>
-  </div>
-
-  <!-- Setup Notice -->
-  <div class="setup-notice">
-    <div class="setup-icon">🔒</div>
-    <h3>Secure Payment Coming Soon</h3>
-    <p>We're integrating a premium payment processor to ensure the highest level of security for your transactions. Leave your email below and we'll notify you the moment checkout is live.</p>
-
-    <div class="notify-form">
-      <div class="form-group">
-        <input type="email" class="form-input" id="notifyEmail" placeholder="Enter your email address" />
-        <button class="form-btn" id="notifyBtn" onclick="handleNotify()">Notify Me</button>
-      </div>
-      <p class="form-note">No spam. One email when checkout launches. That's it.</p>
+  <div style="display: flex; flex-direction: column; gap: 32px; max-width: 1000px; margin: 0 auto;">
+    <!-- Plan Summary -->
+    <div class="plan-card" id="planCard" style="margin-bottom: 0;">
+      <div class="plan-name" id="planName">Pro Plan</div>
+      <div class="plan-price"><span class="dollar">$</span><span id="planPrice">29</span><span class="period">/month</span></div>
+      <ul class="plan-features" id="planFeatures">
+        <li>200 replies per month</li>
+        <li>All 12 intents + Custom</li>
+        <li>50 contact memory slots</li>
+        <li>25 follow-up reminders</li>
+        <li>Gmail + LinkedIn DMs</li>
+        <li>Auto tone learning</li>
+      </ul>
     </div>
 
-    <div class="notify-success" id="notifySuccess">
-      <p>✓ You're on the list! We'll email you the moment checkout goes live.</p>
-    </div>
+    <!-- Paddle Checkout Container -->
+    <div class="paddle-checkout-container" style="width: 100%; min-width: 312px; background-color: transparent;"></div>
   </div>
 
   <!-- Trust Signals -->
   <div class="trust">
-    <div class="trust-item"><span>🔒</span> SSL Encrypted</div>
+    <div class="trust-item"><span>🔒</span> SSL Encrypted via Paddle</div>
     <div class="trust-item"><span>🛡️</span> 7-Day Refund</div>
     <div class="trust-item"><span>⚡</span> Instant Activation</div>
-  </div>
-
-  <!-- Alternative Actions -->
-  <div class="alt-cta">
-    <p>Don't want to wait? Start with our free plan today — 10 replies included.</p>
-    <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai">Install Free for Chrome →</a>
   </div>
 </div>
 
@@ -160,9 +141,9 @@
 <script>
   // Plan data
   var plans = {
-    basic: { name: 'Basic Plan', badge: 'Upgrading to Basic', price: '9', features: ['50 replies per month', '11 intent types', 'Auto tone learning', '10 contact memory slots', '5 follow-up reminders', 'Reply streaks & stats', 'Gmail only'] },
-    pro:   { name: 'Pro Plan', badge: 'Upgrading to Pro', price: '29', features: ['200 replies per month', 'All 12 intents + Custom', '50 contact memory slots', '25 follow-up reminders', 'Gmail + LinkedIn DMs', 'Auto tone learning', 'Reply streaks & stats'] },
-    premium: { name: 'Premium Plan', badge: 'Upgrading to Premium', price: '99', features: ['Unlimited replies', 'All 12 intents + Custom', 'Unlimited contact memory', 'Unlimited reminders', 'Gmail + LinkedIn DMs', 'Per-contact tone profiles', 'Priority support', 'Advanced analytics'] }
+    basic: { name: 'Basic Plan', badge: 'Upgrading to Basic', price: '9', priceId: 'pri_01kpnydyt2tcgbcv0cnwytqv4t', features: ['50 replies per month', '11 intent types', 'Auto tone learning', '10 contact memory slots', '5 follow-up reminders', 'Reply streaks & stats', 'Gmail only'] },
+    pro:   { name: 'Pro Plan', badge: 'Upgrading to Pro', price: '29', priceId: 'pri_01kpnz9bvwq834wcsp4zfgjm9e', features: ['200 replies per month', 'All 12 intents + Custom', '50 contact memory slots', '25 follow-up reminders', 'Gmail + LinkedIn DMs', 'Auto tone learning', 'Reply streaks & stats'] },
+    premium: { name: 'Premium Plan', badge: 'Upgrading to Premium', price: '99', priceId: 'pri_01kpnza9qe17p8y271g9605n2q', features: ['Unlimited replies', 'All 12 intents + Custom', 'Unlimited contact memory', 'Unlimited reminders', 'Gmail + LinkedIn DMs', 'Per-contact tone profiles', 'Priority support', 'Advanced analytics'] }
   };
 
   // Read plan from URL
@@ -183,25 +164,20 @@
     featuresList.appendChild(li);
   });
 
-  // Notify handler
-  function handleNotify() {
-    var email = document.getElementById('notifyEmail').value.trim();
-    if (!email || !email.includes('@')) {
-      document.getElementById('notifyEmail').style.borderColor = '#EF4444';
-      return;
-    }
-    document.getElementById('notifyEmail').style.borderColor = 'rgba(16,185,129,0.5)';
-    document.getElementById('notifyBtn').textContent = '✓ Done';
-    document.getElementById('notifyBtn').style.background = '#10B981';
-    document.getElementById('notifyBtn').disabled = true;
-    document.getElementById('notifySuccess').classList.add('show');
+  // Initialize Paddle using the provided Client-side Token
+  Paddle.Initialize({ 
+    token: 'live_fdc940732c5e24247a4132b2e80' // Starts with 'test_' for sandbox
+  });
 
-    // In production, you'd POST this email to your backend
-    console.log('Notify email:', email, 'Plan:', planKey);
-  }
-
-  document.getElementById('notifyEmail').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') handleNotify();
+  // Open the inline checkout
+  Paddle.Checkout.open({
+    settings: {
+      displayMode: "inline",
+      frameTarget: "paddle-checkout-container",
+      frameInitialHeight: 450,
+      frameStyle: "width: 100%; min-width: 312px; background-color: transparent;"
+    },
+    items: [{ priceId: plan.priceId, quantity: 1 }]
   });
 </script>
 </body>
