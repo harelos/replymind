@@ -714,7 +714,7 @@
         <li>Reply streaks &amp; stats</li>
         <li>Gmail only</li>
       </ul>
-      <a href="checkout.html?plan=basic" class="pricing-btn outline">Get Basic</a>
+      <a href="checkout.html?plan=basic&billing=monthly" data-plan="basic" class="pricing-btn outline">Get Basic</a>
     </div>
     <!-- Pro -->
     <div class="pricing-card popular">
@@ -732,7 +732,7 @@
         <li>Auto tone learning</li>
         <li>Reply streaks &amp; stats</li>
       </ul>
-      <a href="checkout.html?plan=pro" class="pricing-btn primary">Get Pro</a>
+      <a href="checkout.html?plan=pro&billing=monthly" data-plan="pro" class="pricing-btn primary">Get Pro</a>
     </div>
     <!-- Premium -->
     <div class="pricing-card">
@@ -750,7 +750,7 @@
         <li>Priority support</li>
         <li>Advanced analytics</li>
       </ul>
-      <a href="checkout.html?plan=premium" class="pricing-btn outline">Get Premium</a>
+      <a href="checkout.html?plan=premium&billing=monthly" data-plan="premium" class="pricing-btn outline">Get Premium</a>
     </div>
   </div>
 
@@ -835,6 +835,9 @@
     });
     document.querySelectorAll('.period-text').forEach(function(el) {
       el.textContent = isAnnual ? 'per month, billed annually' : 'per month';
+    });
+    document.querySelectorAll('a[data-plan]').forEach(function(a) {
+      a.setAttribute('href', 'checkout.html?plan=' + a.dataset.plan + '&billing=' + (isAnnual ? 'annual' : 'monthly'));
     });
   });
 

@@ -139,21 +139,39 @@
 </footer>
 
 <script>
-  // Plan data
+  // Plan data — each plan has monthly + annual pricing/priceIds
   var plans = {
-    basic: { name: 'Basic Plan', badge: 'Upgrading to Basic', price: '9', priceId: 'pri_01kpnydyt2tcgbcv0cnwytqv4t', features: ['50 replies per month', '11 intent types', 'Auto tone learning', '10 contact memory slots', '5 follow-up reminders', 'Reply streaks & stats', 'Gmail only'] },
-    pro:   { name: 'Pro Plan', badge: 'Upgrading to Pro', price: '29', priceId: 'pri_01kpnz9bvwq834wcsp4zfgjm9e', features: ['200 replies per month', 'All 12 intents + Custom', '50 contact memory slots', '25 follow-up reminders', 'Gmail + LinkedIn DMs', 'Auto tone learning', 'Reply streaks & stats'] },
-    premium: { name: 'Premium Plan', badge: 'Upgrading to Premium', price: '99', priceId: 'pri_01kpnza9qe17p8y271g9605n2q', features: ['Unlimited replies', 'All 12 intents + Custom', 'Unlimited contact memory', 'Unlimited reminders', 'Gmail + LinkedIn DMs', 'Per-contact tone profiles', 'Priority support', 'Advanced analytics'] }
+    basic: {
+      name: 'Basic Plan', badge: 'Upgrading to Basic',
+      monthly: { price: '9',  period: '/month', priceId: 'pri_01kpnydyt2tcgbcv0cnwytqv4t' },
+      annual:  { price: '84', period: '/year',  priceId: 'pri_01kx148b91n3kc71e0j7m15zmd', note: 'Just $7/mo, billed annually — save 22%' },
+      features: ['50 replies per month', '11 intent types', 'Auto tone learning', '10 contact memory slots', '5 follow-up reminders', 'Reply streaks & stats', 'Gmail only']
+    },
+    pro: {
+      name: 'Pro Plan', badge: 'Upgrading to Pro',
+      monthly: { price: '29',  period: '/month', priceId: 'pri_01kpnz9bvwq834wcsp4zfgjm9e' },
+      annual:  { price: '276', period: '/year',  priceId: 'pri_01kx148bm7kty2pw7hyf85810p', note: 'Just $23/mo, billed annually — save 21%' },
+      features: ['200 replies per month', 'All 12 intents + Custom', '50 contact memory slots', '25 follow-up reminders', 'Gmail + LinkedIn DMs', 'Auto tone learning', 'Reply streaks & stats']
+    },
+    premium: {
+      name: 'Premium Plan', badge: 'Upgrading to Premium',
+      monthly: { price: '99',   period: '/month', priceId: 'pri_01kpnza9qe17p8y271g9605n2q' },
+      annual:  { price: '1068', period: '/year',  priceId: 'pri_01kx148bz875cy7gkkvdaavdn7', note: 'Just $89/mo, billed annually — save 10%' },
+      features: ['Unlimited replies', 'All 12 intents + Custom', 'Unlimited contact memory', 'Unlimited reminders', 'Gmail + LinkedIn DMs', 'Per-contact tone profiles', 'Priority support', 'Advanced analytics']
+    }
   };
 
-  // Read plan from URL
+  // Read plan + billing cycle from URL
   var params = new URLSearchParams(window.location.search);
   var planKey = params.get('plan') || 'pro';
+  var billing = (params.get('billing') === 'annual') ? 'annual' : 'monthly';
   var plan = plans[planKey] || plans.pro;
+  var cycle = plan[billing];
 
   document.getElementById('planBadge').textContent = '⚡ ' + plan.badge;
   document.getElementById('planName').textContent = plan.name;
-  document.getElementById('planPrice').textContent = plan.price;
+  document.getElementById('planPrice').textContent = cycle.price;
+  document.querySelector('.plan-price .period').textContent = cycle.period;
   document.title = plan.name + ' — ReplyMind Upgrade';
 
   var featuresList = document.getElementById('planFeatures');
@@ -163,6 +181,13 @@
     li.textContent = f;
     featuresList.appendChild(li);
   });
+  // Annual savings note
+  if (cycle.note) {
+    var noteEl = document.createElement('div');
+    noteEl.style.cssText = 'margin-top:14px;font-size:13px;font-weight:600;color:var(--green-light)';
+    noteEl.textContent = cycle.note;
+    document.getElementById('planCard').appendChild(noteEl);
+  }
 
   // Initialize Paddle using the provided Client-side Token
   Paddle.Initialize({ 
@@ -177,7 +202,7 @@
       frameInitialHeight: 450,
       frameStyle: "width: 100%; min-width: 312px; background-color: transparent;"
     },
-    items: [{ priceId: plan.priceId, quantity: 1 }]
+    items: [{ priceId: cycle.priceId, quantity: 1 }]
   });
 </script>
 </body>
