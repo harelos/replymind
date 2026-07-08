@@ -44,6 +44,11 @@
     .plan-meta { font-size: 12.5px; color: var(--white-50); margin-top: 6px; line-height: 1.5; }
     .plan-features { display: none; }
 
+    /* Billing descriptor note (chargeback prevention) */
+    .pay-note { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 13px; color: var(--white-70); background: rgba(79,142,247,0.08); border: 1px solid rgba(79,142,247,0.25); border-radius: 10px; padding: 11px 16px; text-align: center; line-height: 1.45; }
+    .pay-note strong { color: var(--white); font-weight: 700; letter-spacing: 0.3px; }
+    .pay-note .pay-note-icon { font-size: 15px; flex-shrink: 0; }
+
     /* Setup Notice */
     .setup-notice { background: rgba(16,185,129,0.06); border: 1.5px solid rgba(16,185,129,0.2); border-radius: 16px; padding: 28px 24px; margin-bottom: 32px; }
     .setup-icon { font-size: 36px; margin-bottom: 12px; }
@@ -100,7 +105,7 @@
   <h1 id="pageTitle">Complete your upgrade</h1>
   <p class="subtitle">Secure checkout via Paddle. Instant activation upon payment.</p>
 
-  <div style="display: flex; flex-direction: column; gap: 32px; max-width: 1000px; margin: 0 auto;">
+  <div style="display: flex; flex-direction: column; gap: 16px; max-width: 1000px; margin: 0 auto;">
     <!-- Plan Summary (compact) -->
     <div class="plan-card" id="planCard" style="margin-bottom: 0;">
       <div class="plan-head">
@@ -109,6 +114,12 @@
       </div>
       <div class="plan-meta" id="planMeta"></div>
       <ul class="plan-features" id="planFeatures"></ul>
+    </div>
+
+    <!-- Billing descriptor (helps buyers recognize the charge) -->
+    <div class="pay-note">
+      <span class="pay-note-icon">🔒</span>
+      <span>Billed securely by <strong>Paddle</strong>. Your card statement will show <strong>PADDLE&#42;&nbsp;TIGERBESTB</strong></span>
     </div>
 
     <!-- Paddle Checkout Container -->
