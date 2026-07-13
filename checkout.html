@@ -146,21 +146,40 @@
 </footer>
 
 <script>
-  // Plan data — each plan has monthly + annual pricing/priceIds
-  // NOTE: create these two prices in Paddle ($19/mo + $180/yr Pro, $49/mo + $468/yr
-  // Business), then paste their price ids over the PASTE_ placeholders below.
+  // Plan data — each plan has monthly + annual pricing/priceIds.
+  // This page sells BOTH products. `product` matters: the webhook grants the
+  // entitlement per product, and without it a ConvertIQ buyer would have been
+  // silently charged for ReplyMind Pro (unknown plan keys fell back to `pro`).
   var plans = {
+    // ── ReplyMind ──
     pro: {
+      product: 'replymind',
       name: 'Pro Plan', badge: 'Upgrading to Pro',
       monthly: { price: '19',  period: '/month', priceId: 'pri_01kxcm80r76x68s6j9ca9sxezh' },
       annual:  { price: '180', period: '/year',  priceId: 'pri_01kxcm80zff1am9sb9yw0c7hfq', note: 'Just $15/mo, billed annually. Save 21%.' },
       features: ['Unlimited replies', 'All 12 intents + Custom', 'Gmail + LinkedIn DMs', 'Auto tone learning', 'Contact memory', 'Follow-up reminders']
     },
     business: {
+      product: 'replymind',
       name: 'Business Plan', badge: 'Upgrading to Business',
       monthly: { price: '49',  period: '/month', priceId: 'pri_01kxcm816skn0hxmh5m462rmc3' },
       annual:  { price: '468', period: '/year',  priceId: 'pri_01kxcm81e427764yr1jm810xw3', note: 'Just $39/mo, billed annually. Save 20%.' },
       features: ['Everything in Pro', 'Unlimited contact memory', 'Per-contact tone profiles', 'Shared team brand voice', 'Priority support', 'Advanced analytics']
+    },
+    // ── ConvertIQ ──
+    operator: {
+      product: 'convertiq',
+      name: 'Operator', badge: 'Upgrading ConvertIQ to Operator',
+      monthly: { price: '99',  period: '/month', priceId: 'pri_01kxcn55d65maasr0keyypbczf' },
+      annual:  { price: '948', period: '/year',  priceId: 'pri_01kxcn55mhmpz5b6120015h01k', note: 'Just $79/mo, billed annually. Save 20%.' },
+      features: ['Unlimited audits', 'Every leak, with the exact copy to fix it', 'Ad-to-page congruence', 'Scored against creative that actually converted', 'Audit any competitor page']
+    },
+    studio: {
+      product: 'convertiq',
+      name: 'Studio', badge: 'Upgrading ConvertIQ to Studio',
+      monthly: { price: '299',  period: '/month', priceId: 'pri_01kxcn55w6srn0df6h1894xpy8' },
+      annual:  { price: '2868', period: '/year',  priceId: 'pri_01kxcn5637qsqer3pf7vptrrxd', note: 'Just $239/mo, billed annually. Save 20%.' },
+      features: ['Everything in Operator', 'Multi-brand and multi-client workspaces', 'White-label PDF reports with your logo', 'Team seats', 'Priority support']
     }
   };
 
@@ -170,6 +189,7 @@
   var billing = (params.get('billing') === 'annual') ? 'annual' : 'monthly';
   var plan = plans[planKey];
   var cycle = plan[billing];
+  var productKey = plan.product || 'replymind';
   // The extension passes the logged-in account email so the webhook can upgrade
   // the right account automatically. Falls back to whatever the buyer types in Paddle.
   var accountEmail = (params.get('email') || '').trim();
@@ -218,7 +238,7 @@
         frameStyle: "width: 100%; min-width: 312px; background-color: transparent;"
       },
       customer: accountEmail ? { email: accountEmail } : undefined,
-      customData: { account_email: accountEmail, plan: planKey },
+      customData: { account_email: accountEmail, plan: planKey, product: productKey },
       items: [{ priceId: cycle.priceId, quantity: 1 }]
     });
   }
