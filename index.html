@@ -219,8 +219,8 @@
     .toggle-knob { width:20px; height:20px; background:var(--white); border-radius:50%; position:absolute; top:2px; left:2px; transition:left 0.2s; }
     .toggle-switch.on .toggle-knob { left:24px; }
     .pricing-save { font-size:12px; font-weight:700; color:var(--green-light); background:rgba(16,185,129,0.12); padding:3px 10px; border-radius:20px; }
-    .pricing-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; max-width:1100px; margin:0 auto; }
-    @media(max-width:1000px) { .pricing-grid { grid-template-columns:repeat(2,1fr); } }
+    .pricing-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; max-width:920px; margin:0 auto; }
+    @media(max-width:900px) { .pricing-grid { grid-template-columns:1fr; max-width:420px; } }
     @media(max-width:560px) { .pricing-grid { grid-template-columns:1fr; } }
     .pricing-card { background:var(--navy-2); border:1px solid var(--border); border-radius:20px; padding:32px 24px; position:relative; transition:border-color 0.2s, transform 0.2s; display:flex; flex-direction:column; }
     .pricing-card:hover { transform:translateY(-4px); }
@@ -393,13 +393,13 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">&#9889; Chrome Extension for Gmail &amp; LinkedIn</div>
+  <div class="hero-badge">&#9889; Replies in your voice. Gmail, LinkedIn, and beyond.</div>
   <h1>Stop writing emails.<br><em>Start choosing them.</em></h1>
-  <p class="hero-sub">ReplyMind reads your email, understands the context, and generates a perfect reply in your voice -- right inside Gmail. Pick your intent. Click. Done.</p>
-  <p class="hero-proof">Trusted by <span>500+ business owners across 14 countries</span></p>
+  <p class="hero-sub">Generic AI hands you a stiff draft you still have to fix. ReplyMind reads the message and replies in <em style="font-style:normal;color:var(--blue-bright)">your</em> voice, in one tap, right inside Gmail and LinkedIn. No prompts. No tab-switching.</p>
+  <p class="hero-proof"><span>15 free replies</span> · No credit card · You review every draft</p>
   <div class="hero-actions">
     <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai" class="btn-hero">Install Free for Chrome</a>
-    <span class="hero-note">10 free replies -- No credit card -- No account needed</span>
+    <span class="hero-note">15 free replies -- No credit card -- Remembers one person</span>
   </div>
 
   <!-- V2 MOCKUP -->
@@ -574,37 +574,34 @@
   </div>
 </section>
 
-<!-- SOCIAL PROOF -->
+<!-- USE CASES -->
 <section class="social-proof">
   <div class="social-proof-inner">
-    <div class="section-eyebrow">What users say</div>
-    <h2 class="section-title">They tried writing emails the old way.<br>Then they found ReplyMind.</h2>
+    <div class="section-eyebrow">Built for replies that matter</div>
+    <h2 class="section-title">Three jobs, one focused<br>reply workflow.</h2>
     <div class="testimonials">
-      <div class="testimonial"><p class="testimonial-text">"I used to spend 2 hours a day on email replies. Now it's 20 minutes. The intent chips are genius -- I just tap 'Accept' or 'Schedule' and the reply is perfect."</p><div class="testimonial-author"><div class="testimonial-avatar">&#127978;</div><div><div class="testimonial-name">D. Cohen</div><div class="testimonial-role">E-commerce store owner</div></div></div></div>
-      <div class="testimonial"><p class="testimonial-text">"My clients think I personally write every response. They have no idea it's AI because it actually sounds like me. The tone profile is worth the subscription alone."</p><div class="testimonial-author"><div class="testimonial-avatar">&#128200;</div><div><div class="testimonial-name">S. Levi</div><div class="testimonial-role">Marketing consultant</div></div></div></div>
-      <div class="testimonial"><p class="testimonial-text">"The follow-up reminders saved me from losing a $15K deal. I replied in 30 seconds, set a 3-day reminder, followed up, and closed."</p><div class="testimonial-author"><div class="testimonial-avatar">&#9878;</div><div><div class="testimonial-name">M. Avraham</div><div class="testimonial-role">Business consultant</div></div></div></div>
+      <div class="testimonial"><p class="testimonial-text"><strong>Difficult replies</strong><br>Choose Decline, Negotiate, Ask for More Information, or a custom instruction instead of starting from a blank compose box.</p></div>
+      <div class="testimonial"><p class="testimonial-text"><strong>Contact context</strong><br>Save a private note for a Gmail contact and use that context when you deliberately generate their next reply.</p></div>
+      <div class="testimonial"><p class="testimonial-text"><strong>Follow-through</strong><br>Create a local browser reminder after replying so an important conversation does not disappear into your inbox.</p></div>
     </div>
   </div>
 </section>
 
-<!-- COMPARISON -->
+<!-- DIFFERENTIATION -->
 <section class="comparison">
   <div class="comparison-inner">
-    <div class="section-eyebrow">Why not just use an AI chatbot?</div>
-    <h2 class="section-title">Not even close.</h2>
-    <p class="section-sub" style="margin-bottom:48px">AI chatbots are general-purpose. ReplyMind is a reply machine built into your inbox.</p>
+    <div class="section-eyebrow">What makes ReplyMind different</div>
+    <h2 class="section-title">A reply assistant built around<br><em>your voice and your context.</em></h2>
+    <p class="section-sub" style="margin-bottom:48px">ReplyMind combines a locally derived writing-style profile with user-controlled Gmail contact notes and follow-up reminders.</p>
     <table class="compare-table">
-      <thead><tr><th></th><th>AI Chatbots</th><th class="highlight">ReplyMind</th><th>Superhuman</th></tr></thead>
+      <thead><tr><th>Feature</th><th class="highlight">How ReplyMind handles it</th></tr></thead>
       <tbody>
-        <tr><td>Works inside Gmail</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
-        <tr><td>Intent-based replies</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
-        <tr><td>One-click insert</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
-        <tr><td>Knows your tone</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
-        <tr><td>Contact memory</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
-        <tr><td>Auto language match</td><td><span class="check">&#10003;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
-        <tr><td>Follow-up reminders</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
-        <tr><td>Context detection</td><td><span class="cross">&#10005;</span></td><td class="highlight"><span class="check">&#10003;</span></td><td><span class="cross">&#10005;</span></td></tr>
-        <tr><td>Starting price</td><td>$20/mo</td><td class="highlight" style="color:var(--blue-bright);font-weight:700">Free</td><td>$30/mo</td></tr>
+        <tr><td>Writing style</td><td class="highlight">Derived from samples you deliberately provide during setup</td></tr>
+        <tr><td>Gmail contact context</td><td class="highlight">Saved locally and used only when you request that contact's reply</td></tr>
+        <tr><td>Reply control</td><td class="highlight">Choose one of 12 intents, review the result, and decide whether to insert it</td></tr>
+        <tr><td>LinkedIn messages</td><td class="highlight">Available on Pro without opening a separate writing tool</td></tr>
+        <tr><td>Follow-up reminders</td><td class="highlight">Scheduled locally through Chrome when you create one</td></tr>
+        <tr><td>Automatic sending</td><td class="highlight">Never—ReplyMind only inserts a draft for your review</td></tr>
       </tbody>
     </table>
   </div>
@@ -647,7 +644,7 @@
 <section class="roi">
   <div class="roi-inner">
     <div class="section-eyebrow">Do the math</div>
-    <h2 class="section-title">How much time are you burning on email?</h2>
+    <h2 class="section-title">How much time do replies take today?</h2>
     <div class="roi-card">
       <div class="roi-input-group">
         <label class="roi-label">Emails you write per day</label>
@@ -660,9 +657,9 @@
         <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--white-40);margin-top:4px"><span>2 min</span><span id="roi-minutes-val" style="color:var(--blue-bright);font-weight:700;font-size:14px">5 min</span><span>15 min</span></div>
       </div>
       <div class="roi-result">
-        <div class="roi-saved" id="roi-hours">1.7 hours/day</div>
-        <div class="roi-saved-label">saved every day with ReplyMind</div>
-        <div style="margin-top:12px;font-size:13px;color:var(--white-50)" id="roi-monthly">That's <strong style="color:var(--green-light)">35 hours/month</strong> -- nearly a full work week</div>
+        <div class="roi-saved" id="roi-hours">2.1 hours/day</div>
+        <div class="roi-saved-label">currently spent drafting at your inputs</div>
+        <div style="margin-top:12px;font-size:13px;color:var(--white-50)" id="roi-monthly">That's <strong style="color:var(--green-light)">44 hours/month</strong> before any workflow change</div>
       </div>
     </div>
   </div>
@@ -673,7 +670,7 @@
   <div class="pricing-header">
     <div class="section-eyebrow">Simple, transparent pricing</div>
     <h2 class="section-title">Start free. Upgrade when you're hooked.</h2>
-    <p class="section-sub" style="margin-bottom:24px">No hidden fees. Cancel anytime. <a href="refund.html" style="color:var(--blue-bright)">7-day money-back guarantee</a>.</p>
+    <p class="section-sub" style="margin-bottom:24px">No hidden fees. Cancel anytime. <a href="refund.html" style="color:var(--blue-bright)">14-day money-back guarantee</a>.</p>
   </div>
   <div class="pricing-toggle">
     <span class="active" id="toggle-monthly">Monthly</span>
@@ -690,84 +687,43 @@
       <div class="pricing-amount"><span class="dollar">$</span>0</div>
       <div class="pricing-period">forever</div>
       <ul class="pricing-features">
-        <li>10 lifetime replies</li>
+        <li>15 free replies</li>
         <li>5 intent types</li>
         <li>Context detection</li>
         <li>Auto language match</li>
         <li>Tone profile</li>
-        <li>Gmail only</li>
+        <li>Gmail</li>
       </ul>
       <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai" class="pricing-btn outline">Install Free</a>
-    </div>
-    <!-- Basic -->
-    <div class="pricing-card">
-      <div class="pricing-plan-name">Basic</div>
-      <div class="pricing-plan-desc">For daily email warriors</div>
-      <div class="pricing-amount" data-monthly="9" data-annual="7"><span class="dollar">$</span><span class="price-num">9</span></div>
-      <div class="pricing-period"><span class="period-text">per month</span></div>
-      <ul class="pricing-features">
-        <li>50 replies / month</li>
-        <li>11 intent types</li>
-        <li>Auto tone learning</li>
-        <li>10 contact memory slots</li>
-        <li>5 follow-up reminders</li>
-        <li>Reply streaks &amp; stats</li>
-        <li>Gmail only</li>
-      </ul>
-      <a href="checkout.html?plan=basic&billing=monthly" data-plan="basic" class="pricing-btn outline">Get Basic</a>
     </div>
     <!-- Pro -->
     <div class="pricing-card popular">
       <div class="pricing-popular-badge">Most Popular</div>
       <div class="pricing-plan-name">Pro</div>
-      <div class="pricing-plan-desc">For power users who live in their inbox</div>
-      <div class="pricing-amount" data-monthly="29" data-annual="23"><span class="dollar">$</span><span class="price-num">29</span></div>
-      <div class="pricing-period"><span class="period-text">per month</span></div>
-      <ul class="pricing-features">
-        <li>200 replies / month</li>
-        <li>All 12 intents + Custom</li>
-        <li>50 contact memory slots</li>
-        <li>25 follow-up reminders</li>
-        <li>Gmail + LinkedIn DMs</li>
-        <li>Auto tone learning</li>
-        <li>Reply streaks &amp; stats</li>
-      </ul>
-      <a href="checkout.html?plan=pro&billing=monthly" data-plan="pro" class="pricing-btn primary">Get Pro</a>
-    </div>
-    <!-- Premium -->
-    <div class="pricing-card">
-      <div class="pricing-plan-name">Premium</div>
-      <div class="pricing-plan-desc">For high-volume senders who want it all</div>
-      <div class="pricing-amount" data-monthly="99" data-annual="89"><span class="dollar">$</span><span class="price-num">99</span></div>
+      <div class="pricing-plan-desc">Your voice, every inbox, no limits</div>
+      <div class="pricing-amount" data-monthly="19" data-annual="15"><span class="dollar">$</span><span class="price-num">19</span></div>
       <div class="pricing-period"><span class="period-text">per month</span></div>
       <ul class="pricing-features">
         <li><strong>Unlimited</strong> replies</li>
         <li>All 12 intents + Custom</li>
-        <li><strong>Unlimited</strong> contact memory</li>
-        <li><strong>Unlimited</strong> reminders</li>
         <li>Gmail + LinkedIn DMs</li>
-        <li>Per-contact tone profiles</li>
-        <li>Priority support</li>
-        <li>Advanced analytics</li>
+        <li>Auto tone learning</li>
+        <li><strong>Unlimited</strong> contact memory</li>
+        <li><strong>Unlimited</strong> follow-up reminders</li>
+        <li>Reply streaks &amp; stats</li>
       </ul>
-      <a href="checkout.html?plan=premium&billing=monthly" data-plan="premium" class="pricing-btn outline">Get Premium</a>
+      <a href="checkout.html?plan=pro&billing=monthly" data-plan="pro" class="pricing-btn primary">Get Pro</a>
     </div>
   </div>
 
-  <!-- Enterprise CTA -->
-  <div style="text-align:center;margin-top:28px">
-    <p style="font-size:15px;color:var(--white-70);margin-bottom:8px">Need more seats, custom integrations, or a dedicated account manager?</p>
-    <a href="mailto:hello@replymind.xyz?subject=Enterprise%20Inquiry" style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--blue-bright);text-decoration:none;padding:8px 20px;border:1.5px solid rgba(79,142,247,0.3);border-radius:10px;transition:all 0.15s;background:rgba(79,142,247,0.06)">Enterprise? Let's talk &rarr;</a>
-  </div>
-
-  <p class="pricing-guarantee">Secure payments &middot; <a href="refund.html" style="color:var(--blue-bright)">7-day money-back guarantee</a> &middot; Cancel anytime &middot; No lock-in contracts<br>Questions? <a href="mailto:hello@replymind.xyz" style="color:var(--blue-bright)">hello@replymind.xyz</a> &middot; <a href="terms.html" style="color:var(--blue-bright)">Terms of Service</a></p>
+  <p class="pricing-guarantee">Secure checkout by Paddle &middot; <a href="refund.html" style="color:var(--blue-bright)">14-day money-back guarantee</a> &middot; Cancel anytime &middot; No lock-in contracts<br>Questions? <a href="mailto:hello@replymind.xyz" style="color:var(--blue-bright)">hello@replymind.xyz</a> &middot; <a href="terms.html" style="color:var(--blue-bright)">Terms of Service</a></p>
 </section>
 
 <!-- URGENCY -->
 <section class="urgency">
   <div class="urgency-inner">
     <h2>Every email you write manually<br>is time you can't buy back.</h2>
-    <p>Your competitors are already using AI to respond faster. The average business owner who installs ReplyMind saves <strong>35+ hours per month</strong>. How many deals are you losing?</p>
+    <p>Reply faster without flattening your voice, losing important context, or forgetting the next follow-up.</p>
     <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai" class="btn-hero">Install Free Now</a>
   </div>
 </section>
@@ -779,12 +735,12 @@
   <div class="faq-item"><div class="faq-q">Is my email content stored anywhere?</div><div class="faq-a">No. Your email text is sent to our secure backend and then to OpenAI to generate the reply, then immediately discarded. We never store, log, or sell your email content.</div></div>
   <div class="faq-item"><div class="faq-q">How is this different from AI chatbots?</div><div class="faq-a">AI chatbots are general-purpose. ReplyMind lives inside Gmail, knows your tone, detects email context, and inserts replies with one click. No tabs, no prompts, no copy-pasting.</div></div>
   <div class="faq-item"><div class="faq-q">What are "intents"?</div><div class="faq-a">Instead of getting random replies, you choose your intent: Accept, Decline, Maybe, Schedule, Delegate, More Info, Check In, Negotiate, Thank You, Apologize, Introduce, or Custom. ReplyMind generates one perfect reply tailored to that intent.</div></div>
-  <div class="faq-item"><div class="faq-q">How do I activate after paying?</div><div class="faq-a">After payment, you'll receive an activation code. Enter it in the ReplyMind extension popup under "Activation Code". Your account upgrades instantly.</div></div>
-  <div class="faq-item"><div class="faq-q">How do I cancel?</div><div class="faq-a">PayPal &gt; Settings &gt; Payments &gt; Manage automatic payments &gt; ReplyMind &gt; Cancel. 30 seconds. No questions asked.</div></div>
+  <div class="faq-item"><div class="faq-q">How do I activate after paying?</div><div class="faq-a">Use the same email at checkout that you use for ReplyMind. Paddle links the purchase automatically. If the popup still shows Free, sign out and sign back in once.</div></div>
+  <div class="faq-item"><div class="faq-q">How do I cancel?</div><div class="faq-a">Open the Paddle billing portal from your purchase confirmation email, or contact hello@replymind.xyz. Your paid access continues until the end of the billing period.</div></div>
   <div class="faq-item"><div class="faq-q">Does it work with Google Workspace?</div><div class="faq-a">Yes. Any Gmail account -- personal @gmail.com and Google Workspace business accounts.</div></div>
   <div class="faq-item"><div class="faq-q">What languages does it support?</div><div class="faq-a">ReplyMind auto-detects the incoming language and replies in the same one. English, Hebrew, Spanish, French, German, Arabic, Portuguese, and more.</div></div>
   <div class="faq-item"><div class="faq-q">What is the "tone profile"?</div><div class="faq-a">A short description of how you communicate -- e.g., "Professional but warm, slightly casual, uses first names." Every reply is calibrated to match your style.</div></div>
-  <div class="faq-item"><div class="faq-q">Is there a free trial?</div><div class="faq-a">The Free plan gives you 10 replies with no account, no credit card, and no expiration. Install and start immediately.</div></div>
+  <div class="faq-item"><div class="faq-q">Is there a free trial?</div><div class="faq-a">The Free plan gives you 15 replies and remembers one person. No credit card is required.</div></div>
 </section>
 
 <!-- FINAL CTA -->
@@ -792,7 +748,7 @@
   <h2>Ready to stop writing emails<br>and start choosing them?</h2>
   <p>Join business owners who reply faster, sound better, and never lose a lead to a slow response.</p>
   <a href="https://chromewebstore.google.com/detail/replymind-%E2%80%93-ai-reply-assi/pjoibapolglmhhkgfilpgailpjmiekai" class="btn-hero">Install Free for Chrome</a>
-  <p style="margin-top:12px;font-size:13px;color:var(--white-40)">10 free replies &middot; Works in 30 seconds &middot; No credit card</p>
+  <p style="margin-top:12px;font-size:13px;color:var(--white-40)">15 free replies &middot; Remembers one person &middot; No credit card</p>
 </section>
 
 <!-- FOOTER -->
@@ -825,6 +781,18 @@
   var monthlyLabel = document.getElementById('toggle-monthly');
   var annualLabel = document.getElementById('toggle-annual');
   var isAnnual = false;
+
+  // The extension sends the logged-in account email here (…/?email=…#pricing) so
+  // the plan buttons can carry it into checkout for automatic account linking.
+  var acctEmail = new URLSearchParams(window.location.search).get('email');
+  var emailParam = acctEmail ? ('&email=' + encodeURIComponent(acctEmail)) : '';
+  function setPlanHrefs() {
+    document.querySelectorAll('a[data-plan]').forEach(function(a) {
+      a.setAttribute('href', 'checkout.html?plan=' + a.dataset.plan + '&billing=' + (isAnnual ? 'annual' : 'monthly') + emailParam);
+    });
+  }
+  setPlanHrefs();
+
   toggle.addEventListener('click', function() {
     isAnnual = !isAnnual;
     toggle.classList.toggle('on', isAnnual);
@@ -836,9 +804,7 @@
     document.querySelectorAll('.period-text').forEach(function(el) {
       el.textContent = isAnnual ? 'per month, billed annually' : 'per month';
     });
-    document.querySelectorAll('a[data-plan]').forEach(function(a) {
-      a.setAttribute('href', 'checkout.html?plan=' + a.dataset.plan + '&billing=' + (isAnnual ? 'annual' : 'monthly'));
-    });
+    setPlanHrefs();
   });
 
   // ROI Calculator
@@ -849,11 +815,11 @@
     var minutes = parseInt(minutesSlider.value);
     document.getElementById('roi-emails-val').textContent = emails + ' emails';
     document.getElementById('roi-minutes-val').textContent = minutes + ' min';
-    var savedMinutes = emails * (minutes - 0.5);
-    var savedHours = (savedMinutes / 60).toFixed(1);
-    var monthlyHours = Math.round(savedMinutes / 60 * 21);
-    document.getElementById('roi-hours').textContent = savedHours + ' hours/day';
-    document.getElementById('roi-monthly').innerHTML = "That's <strong style=\"color:var(--green-light)\">" + monthlyHours + " hours/month</strong> -- " + (monthlyHours >= 40 ? 'more than a full work week' : 'nearly a full work week');
+    var draftingMinutes = emails * minutes;
+    var draftingHours = (draftingMinutes / 60).toFixed(1);
+    var monthlyHours = Math.round(draftingMinutes / 60 * 21);
+    document.getElementById('roi-hours').textContent = draftingHours + ' hours/day';
+    document.getElementById('roi-monthly').innerHTML = "That's <strong style=\"color:var(--green-light)\">" + monthlyHours + " hours/month</strong> before any workflow change";
   }
   emailsSlider.addEventListener('input', updateROI);
   minutesSlider.addEventListener('input', updateROI);
