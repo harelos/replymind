@@ -88,6 +88,14 @@
       .form-group { flex-direction: column; }
       .trust { gap: 16px; }
     }
+    .account-gate { padding:24px; border:1px solid var(--border); border-radius:14px; background:var(--navy-2); text-align:left; }
+    .account-gate h2 { font-family:var(--font-display); font-size:18px; margin-bottom:6px; }
+    .account-gate p { color:var(--white-70); font-size:13.5px; margin-bottom:14px; }
+    .account-gate-row { display:flex; gap:10px; }
+    .account-gate input { flex:1; min-width:0; padding:12px 14px; border:1px solid var(--border); border-radius:9px; background:var(--navy); color:var(--white); font:inherit; }
+    .account-gate button { padding:12px 18px; border:0; border-radius:9px; background:var(--blue); color:var(--white); font:600 14px var(--font-body); cursor:pointer; }
+    .account-gate-error { min-height:18px; color:#FCA5A5; font-size:12px; margin-top:7px; }
+    @media(max-width:560px) { .account-gate-row { flex-direction:column; } }
   </style>
 </head>
 <body>
@@ -129,7 +137,7 @@
   <!-- Trust Signals -->
   <div class="trust">
     <div class="trust-item"><span>🔒</span> SSL Encrypted via Paddle</div>
-    <div class="trust-item"><span>🛡️</span> 7-Day Refund</div>
+    <div class="trust-item"><span>🛡️</span> 14-Day Refund</div>
     <div class="trust-item"><span>⚡</span> Instant Activation</div>
   </div>
 </div>
@@ -157,14 +165,7 @@
       name: 'Pro Plan', badge: 'Upgrading to Pro',
       monthly: { price: '19',  period: '/month', priceId: 'pri_01kxcm80r76x68s6j9ca9sxezh' },
       annual:  { price: '180', period: '/year',  priceId: 'pri_01kxcm80zff1am9sb9yw0c7hfq', note: 'Just $15/mo, billed annually. Save 21%.' },
-      features: ['Unlimited replies', 'All 12 intents + Custom', 'Gmail + LinkedIn DMs', 'Auto tone learning', 'Contact memory', 'Follow-up reminders']
-    },
-    business: {
-      product: 'replymind',
-      name: 'Business Plan', badge: 'Upgrading to Business',
-      monthly: { price: '49',  period: '/month', priceId: 'pri_01kxcm816skn0hxmh5m462rmc3' },
-      annual:  { price: '468', period: '/year',  priceId: 'pri_01kxcm81e427764yr1jm810xw3', note: 'Just $39/mo, billed annually. Save 20%.' },
-      features: ['Everything in Pro', 'Unlimited contact memory', 'Per-contact tone profiles', 'Shared team brand voice', 'Priority support', 'Advanced analytics']
+      features: ['Unlimited replies', 'All 12 intents + Custom', 'Gmail + LinkedIn DMs', 'Auto tone learning', 'Unlimited contact memory', 'Unlimited follow-up reminders']
     },
     // ── ConvertIQ ──
     operator: {
@@ -192,7 +193,7 @@
   var productKey = plan.product || 'replymind';
   // The extension passes the logged-in account email so the webhook can upgrade
   // the right account automatically. Falls back to whatever the buyer types in Paddle.
-  var accountEmail = (params.get('email') || '').trim();
+  var accountEmail = (params.get('email') || '').trim().toLowerCase();
 
   document.getElementById('planBadge').textContent = '⚡ ' + plan.badge;
   document.getElementById('planName').textContent = plan.name;
@@ -216,7 +217,7 @@
     token: 'live_fdc940732c5e24247a4132b2e80', // Starts with 'test_' for sandbox
     eventCallback: function (event) {
       // When payment completes, hand off to the success page with the transaction id.
-      // success.html polls the licensing Worker and shows the activation code.
+      // The backend webhook links the paid plan to the checkout email.
       if (event && event.name === 'checkout.completed') {
         // Fulfillment is by account email via the Paddle webhook, so no code to carry.
         window.location.href = 'success.html';
@@ -224,12 +225,9 @@
     }
   });
 
-  // Guard: if the new prices haven't been created in Paddle yet, don't open a
-  // broken checkout. Show a friendly note instead.
-  if (/PASTE_/.test(cycle.priceId)) {
-    document.querySelector('.paddle-checkout-container').innerHTML =
-      '<div style="padding:24px;border:1px solid var(--border);border-radius:12px;color:var(--white-70);font-size:14px;line-height:1.6">Checkout for this plan is being finalized. Please email <a href="mailto:hello@replymind.xyz" style="color:var(--blue-bright)">hello@replymind.xyz</a> and we will get you set up right away.</div>';
-  } else {
+  function openPaddleCheckout() {
+    var target = document.querySelector('.paddle-checkout-container');
+    target.innerHTML = '';
     Paddle.Checkout.open({
       settings: {
         displayMode: "inline",
@@ -241,6 +239,37 @@
       customData: { account_email: accountEmail, plan: planKey, product: productKey },
       items: [{ priceId: cycle.priceId, quantity: 1 }]
     });
+  }
+
+  function showAccountGate() {
+    var target = document.querySelector('.paddle-checkout-container');
+    target.innerHTML = '<div class="account-gate"><h2>Which account should we upgrade?</h2><p>Enter the email you use—or will use—for your account. Paddle will prefill the same email and the paid plan will link automatically.</p><div class="account-gate-row"><input id="accountEmailInput" type="email" autocomplete="email" placeholder="you@example.com"><button id="continueCheckoutBtn">Continue securely</button></div><div class="account-gate-error" id="accountEmailError"></div></div>';
+    var input = document.getElementById('accountEmailInput');
+    var button = document.getElementById('continueCheckoutBtn');
+    function continueCheckout() {
+      var value = input.value.trim().toLowerCase();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        document.getElementById('accountEmailError').textContent = 'Enter a valid account email.';
+        input.focus();
+        return;
+      }
+      accountEmail = value;
+      openPaddleCheckout();
+    }
+    button.addEventListener('click', continueCheckout);
+    input.addEventListener('keydown', function (event) { if (event.key === 'Enter') continueCheckout(); });
+    input.focus();
+  }
+
+  // Guard against an incomplete catalog, then require an account email before
+  // opening Paddle so every successful payment can be fulfilled automatically.
+  if (/PASTE_/.test(cycle.priceId)) {
+    document.querySelector('.paddle-checkout-container').innerHTML =
+      '<div style="padding:24px;border:1px solid var(--border);border-radius:12px;color:var(--white-70);font-size:14px;line-height:1.6">Checkout for this plan is being finalized. Please email <a href="mailto:hello@replymind.xyz" style="color:var(--blue-bright)">hello@replymind.xyz</a> and we will get you set up right away.</div>';
+  } else if (accountEmail) {
+    openPaddleCheckout();
+  } else {
+    showAccountGate();
   }
 </script>
 </body>
