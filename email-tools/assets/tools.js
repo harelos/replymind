@@ -57,19 +57,21 @@
 
     // Typing effect for premium draft
     if(typingInterval) clearInterval(typingInterval);
-    if(premiumResult && premiumText){
-      premiumResult.innerHTML='';
+    const finalPremiumText = premiumText || basicResult.textContent;
+    if(premiumResult && finalPremiumText){
+      premiumResult.textContent='';
       let i=0;
+      const speed = Math.max(4, Math.floor(600 / finalPremiumText.length)); // Fast render under 1 second
       typingInterval=setInterval(()=>{
-        if(i<premiumText.length){
-          premiumResult.innerHTML=premiumText.substring(0,i+1)+'<span class="cursor"></span>';
-          i++;
+        if(i<finalPremiumText.length){
+          i += 2; // Type 2 chars per tick for snappy speed
+          premiumResult.textContent=finalPremiumText.substring(0, Math.min(i, finalPremiumText.length));
         }else{
-          premiumResult.innerHTML=premiumText;
+          premiumResult.textContent=finalPremiumText;
           clearInterval(typingInterval);
           typingInterval=null;
         }
-      },14);
+      }, speed);
     }
 
     if(copy) copy.hidden=false;

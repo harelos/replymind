@@ -14,7 +14,7 @@ function fail(message){failures.push(message);}
 function match(html,re){return (html.match(re)||[])[1]||'';}
 function decodeAttribute(value){return value.replace(/&#10;/g,'\n').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}
 
-if(directories.length!==25)fail(`Expected 25 tool directories, found ${directories.length}`);
+if(directories.length!==50)fail(`Expected 50 tool directories, found ${directories.length}`);
 
 for(const directory of directories){
   const file=path.join(toolsRoot,directory.name,'index.html');
