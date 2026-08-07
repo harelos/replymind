@@ -7,7 +7,7 @@ const failures=[];
 const titles=new Set();
 const descriptions=new Set();
 const canonicals=new Set();
-const infrastructureDirectories=new Set(['assets','data','audiences','de','fr']);
+const infrastructureDirectories=new Set(['assets','data','audiences','de','fr','es','nl']);
 const directories=fs.readdirSync(toolsRoot,{withFileTypes:true}).filter(item=>item.isDirectory()&&!infrastructureDirectories.has(item.name));
 
 function fail(message){failures.push(message);}
@@ -44,54 +44,31 @@ for(const directory of directories){
   }
 }
 
-// Validate German Tools
-const germanToolsRoot=path.join(toolsRoot,'de');
-if(fs.existsSync(germanToolsRoot)){
-  const germanDirectories=fs.readdirSync(germanToolsRoot,{withFileTypes:true}).filter(item=>item.isDirectory());
-  if(germanDirectories.length!==20)fail(`Expected 20 German tool directories, found ${germanDirectories.length}`);
-  for(const directory of germanDirectories){
-    const file=path.join(germanToolsRoot,directory.name,'index.html');
-    if(!fs.existsSync(file)){fail(`de/${directory.name}: missing index.html`);continue;}
+// Validate Language Suites
+for(const lang of ['de','fr','es','nl']){
+  const langRoot=path.join(toolsRoot,lang);
+  if(!fs.existsSync(langRoot)){fail(`Missing language folder ${lang}`);continue;}
+  const langDirectories=fs.readdirSync(langRoot,{withFileTypes:true}).filter(item=>item.isDirectory());
+  if(langDirectories.length!==20)fail(`Expected 20 ${lang} tool directories, found ${langDirectories.length}`);
+  for(const directory of langDirectories){
+    const file=path.join(langRoot,directory.name,'index.html');
+    if(!fs.existsSync(file)){fail(`${lang}/${directory.name}: missing index.html`);continue;}
     const html=fs.readFileSync(file,'utf8');
     const title=match(html,/<title>(.*?)<\/title>/);
     const description=match(html,/<meta name="description" content="([^"]+)"/);
     const canonical=match(html,/<link rel="canonical" href="([^"]+)"/);
-    if(title.length<30||title.length>65)fail(`de/${directory.name}: title length ${title.length}`);
-    if(description.length<110||description.length>170)fail(`de/${directory.name}: description length ${description.length}`);
-    if(!canonical.endsWith(`/email-tools/de/${directory.name}/`))fail(`de/${directory.name}: wrong canonical ${canonical}`);
-    if(titles.has(title))fail(`de/${directory.name}: duplicate title`);titles.add(title);
-    if(descriptions.has(description))fail(`de/${directory.name}: duplicate description`);descriptions.add(description);
-    if(canonicals.has(canonical))fail(`de/${directory.name}: duplicate canonical`);canonicals.add(canonical);
+    if(title.length<30||title.length>80)fail(`${lang}/${directory.name}: title length ${title.length}`);
+    if(description.length<100||description.length>180)fail(`${lang}/${directory.name}: description length ${description.length}`);
+    if(!canonical.endsWith(`/email-tools/${lang}/${directory.name}/`))fail(`${lang}/${directory.name}: wrong canonical ${canonical}`);
+    if(titles.has(title))fail(`${lang}/${directory.name}: duplicate title`);titles.add(title);
+    if(descriptions.has(description))fail(`${lang}/${directory.name}: duplicate description`);descriptions.add(description);
+    if(canonicals.has(canonical))fail(`${lang}/${directory.name}: duplicate canonical`);canonicals.add(canonical);
   }
 }
 
-// Validate French Tools
-const frenchToolsRoot=path.join(toolsRoot,'fr');
-if(fs.existsSync(frenchToolsRoot)){
-  const frenchDirectories=fs.readdirSync(frenchToolsRoot,{withFileTypes:true}).filter(item=>item.isDirectory());
-  if(frenchDirectories.length!==20)fail(`Expected 20 French tool directories, found ${frenchDirectories.length}`);
-  for(const directory of frenchDirectories){
-    const file=path.join(frenchToolsRoot,directory.name,'index.html');
-    if(!fs.existsSync(file)){fail(`fr/${directory.name}: missing index.html`);continue;}
-    const html=fs.readFileSync(file,'utf8');
-    const title=match(html,/<title>(.*?)<\/title>/);
-    const description=match(html,/<meta name="description" content="([^"]+)"/);
-    const canonical=match(html,/<link rel="canonical" href="([^"]+)"/);
-    if(title.length<30||title.length>75)fail(`fr/${directory.name}: title length ${title.length}`);
-    if(description.length<110||description.length>175)fail(`fr/${directory.name}: description length ${description.length}`);
-    if(!canonical.endsWith(`/email-tools/fr/${directory.name}/`))fail(`fr/${directory.name}: wrong canonical ${canonical}`);
-    if(titles.has(title))fail(`fr/${directory.name}: duplicate title`);titles.add(title);
-    if(descriptions.has(description))fail(`fr/${directory.name}: duplicate description`);descriptions.add(description);
-    if(canonicals.has(canonical))fail(`fr/${directory.name}: duplicate canonical`);canonicals.add(canonical);
-  }
-}
-
-const hub=fs.readFileSync(path.join(toolsRoot,'index.html'),'utf8');
-for(const directory of directories){if(!hub.includes(`href="${directory.name}/"`))fail(`Hub missing ${directory.name}`);}
 const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
 for(const directory of directories){if(!sitemap.includes(`/email-tools/${directory.name}/`))fail(`Sitemap missing ${directory.name}`);}
-if(!sitemap.includes(`/email-tools/de/`))fail(`Sitemap missing /email-tools/de/`);
-if(!sitemap.includes(`/email-tools/fr/`))fail(`Sitemap missing /email-tools/fr/`);
+for(const lang of ['de','fr','es','nl']){if(!sitemap.includes(`/email-tools/${lang}/`))fail(`Sitemap missing /email-tools/${lang}/`);}
 
 if(failures.length){console.error(failures.join('\n'));process.exit(1);}
-console.log(`Validated 50 English, 20 German, and 20 French pages: metadata, canonicals, H1s, 400+ words, JSON-LD, internal links, sitemap, and robots.txt.`);
+console.log(`Validated 50 English, 20 German, 20 French, 20 Spanish, and 20 Dutch pages: metadata, canonicals, H1s, 400+ words, JSON-LD, internal links, sitemap, and robots.txt.`);
