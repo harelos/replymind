@@ -5,41 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Service — ReplyMind</title>
   <meta name="description" content="Terms of Service for ReplyMind, the AI email reply assistant Chrome extension. Read our terms covering usage, subscriptions, refunds, and more." />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #080D1A; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    nav { padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 8px; }
-    nav a { text-decoration: none; display: flex; align-items: center; gap: 8px; }
-    .nav-icon { width: 28px; height: 28px; background: #4F8EF7; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; }
-    .nav-text { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; color: #fff; }
-    .container { max-width: 720px; margin: 0 auto; padding: 60px 24px 100px; }
-    h1 { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .updated { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 40px; }
-    h2 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; margin: 36px 0 12px; color: #fff; }
-    h3 { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 700; margin: 24px 0 8px; color: rgba(255,255,255,0.9); }
-    p { color: rgba(255,255,255,0.7); margin-bottom: 14px; }
-    ul, ol { color: rgba(255,255,255,0.7); padding-left: 20px; margin-bottom: 14px; }
-    ul li, ol li { margin-bottom: 6px; }
-    a { color: #6BA3FF; }
-    .highlight-box { background: rgba(79,142,247,0.08); border: 1px solid rgba(79,142,247,0.2); border-radius: 12px; padding: 20px 24px; margin: 24px 0; }
-    .highlight-box p { color: rgba(255,255,255,0.85); margin: 0; font-size: 14px; line-height: 1.6; }
-    strong { color: rgba(255,255,255,0.9); }
-    footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 24px; text-align: center; font-size: 12px; color: rgba(255,255,255,0.2); }
-    footer a { color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 12px; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/shared.css">
 </head>
 <body>
-<nav>
-  <a href="index.html">
-    <div class="nav-icon">⚡</div>
-    <span class="nav-text">ReplyMind</span>
-  </a>
-</nav>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="wordmark" href="/">Reply<em>Mind</em></a>
+    <nav class="nav-links">
+      <a href="/#pricing">Pricing</a>
+      <a class="button" href="https://chromewebstore.google.com/detail/pjoibapolglmhhkgfilpgailpjmiekai">Install free</a>
+    </nav>
+  </div>
+</header>
 
-<div class="container">
-  <h1>Terms of Service</h1>
-  <p class="updated">Last updated: April 14, 2026</p>
+<div class="page-container">
+  <h1 class="page-title">Terms of Service</h1>
+  <p class="page-updated">Last updated: April 14, 2026</p>
 
   <div class="highlight-box">
     <p>By installing, accessing, or using the ReplyMind Chrome extension or visiting our website (www.replymind.xyz), you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.</p>
@@ -198,19 +180,25 @@
 
   <h2>22. Contact Us</h2>
   <p><strong>TIGERBESTBRANDS LLC</strong><br>5830 EAST 2ND ST. PMB 90171<br>CASPER, WY 82609</p>
-  <p style="font-size:13px;color:rgba(255,255,255,0.5)">Registered Agent: 30 N Gould St, Ste R, Sheridan, WY 82801</p>
+  <p>Registered Agent: 30 N Gould St, Ste R, Sheridan, WY 82801</p>
   <p>Email: <a href="mailto:hello@replymind.xyz">hello@replymind.xyz</a><br>
   Website: <a href="https://www.replymind.xyz">www.replymind.xyz</a></p>
 </div>
 
-<footer>
-  <a href="index.html">Home</a>
-  <a href="privacy.html">Privacy Policy</a>
-  <a href="refund.html">Refund Policy</a>
-  <a href="support.html">Support</a>
-  <a href="mailto:hello@replymind.xyz">Contact</a>
-  <p style="margin-top: 12px;">© 2026 ReplyMind by TIGERBESTBRANDS LLC. All rights reserved.</p>
-  <p style="margin-top: 4px; font-size: 11px; color: rgba(255,255,255,0.15);">5830 EAST 2ND ST. PMB 90171, CASPER, WY 82609</p>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 ReplyMind by TIGERBESTBRANDS LLC</span>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/refund.html">Refund</a>
+      <a href="/support.html">Support</a>
+      <a href="mailto:hello@replymind.xyz">Contact</a>
+    </div>
+  </div>
+  <div class="footer-inner">
+    <span class="footer-address">5830 EAST 2ND ST. PMB 90171, CASPER, WY 82609</span>
+  </div>
 </footer>
 </body>
 </html>

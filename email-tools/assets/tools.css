@@ -1,8 +1,8 @@
 :root{
-  --paper:#f7f4ed;--raised:#fdfbf6;--ink:#1a1815;--ink-2:#4a443b;
-  --muted:#6b6459;--hair:#e2dcd0;--hair-2:#d3caba;--accent:#7c2d12;
+  --paper:#f4eee3;--raised:#fffaf1;--ink:#1b1916;--ink-2:#4d463d;
+  --muted:#776e63;--hair:#d4c7b5;--hair-2:#c9bca8;--accent:#99351f;
   --wash:#f3e7e0;--sage:#4f5d4a;--sage-wash:#edf0ea;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --serif:Georgia,"Times New Roman",serif;
   --mono:ui-monospace,"Cascadia Mono",Consolas,Menlo,monospace;
 }
 *{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}body{margin:0;max-width:100%;overflow-x:hidden;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}

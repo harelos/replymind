@@ -1,0 +1,365 @@
+/* ReplyMind — Shared Design System
+   Warm editorial theme matching the homepage redesign.
+   All subpages import this file for consistent branding. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ── Design Tokens ─────────────────────────────────────── */
+:root {
+  --paper:  #f4eee3;
+  --paper-2:#ebe1d2;
+  --ink:    #1b1916;
+  --ink-2:  #4d463d;
+  --muted:  #776e63;
+  --line:   #d4c7b5;
+  --rust:   #99351f;
+  --rust-2: #752715;
+  --sage:   #4f5d4a;
+  --cream:  #fffaf1;
+  --green:  #3d7a4a;
+  --green-light: #5a9e68;
+  --shadow: 0 20px 60px rgba(45,31,19,.12);
+  --serif:  Georgia, "Times New Roman", serif;
+  --sans:   Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ── Reset ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.6 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--rust); }
+
+/* ── Navigation ────────────────────────────────────────── */
+.site-nav {
+  height: 76px;
+  border-bottom: 1px solid rgba(117,91,65,.18);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: rgba(244,238,227,.92);
+  backdrop-filter: blur(14px);
+  z-index: 20;
+}
+.nav-inner {
+  width: min(1160px, calc(100% - 40px));
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.wordmark {
+  font: 700 24px/1 var(--serif);
+  letter-spacing: -.8px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.wordmark em {
+  color: var(--rust);
+  font-style: italic;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--ink-2);
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--ink-2);
+  transition: color .15s;
+}
+.nav-links a:hover { color: var(--ink); }
+
+/* ── Buttons ───────────────────────────────────────────── */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: var(--rust);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 750;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(117,39,21,.16);
+  transition: .18s ease;
+  cursor: pointer;
+}
+.button:hover {
+  background: var(--rust-2);
+  transform: translateY(-1px);
+  color: #fff;
+}
+.button.secondary {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+  box-shadow: none;
+}
+.button.secondary:hover {
+  background: rgba(255,255,255,.35);
+  color: var(--ink);
+}
+
+/* ── Shell ─────────────────────────────────────────────── */
+.shell {
+  width: min(1160px, calc(100% - 40px));
+  margin: auto;
+}
+
+/* ── Page Container (for text-heavy pages) ─────────────── */
+.page-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+/* ── Typography ────────────────────────────────────────── */
+.page-title {
+  font: 800 clamp(30px,5vw,42px)/1.1 var(--serif);
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+.page-updated {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+.page-container h2 {
+  font: 700 22px/1.2 var(--serif);
+  margin: 36px 0 12px;
+  color: var(--ink);
+}
+.page-container h3 {
+  font: 700 18px/1.3 var(--serif);
+  margin: 24px 0 8px;
+  color: var(--ink);
+}
+.page-container p {
+  color: var(--ink-2);
+  margin-bottom: 14px;
+}
+.page-container ul,
+.page-container ol {
+  color: var(--ink-2);
+  padding-left: 20px;
+  margin-bottom: 14px;
+}
+.page-container ul li,
+.page-container ol li {
+  margin-bottom: 6px;
+}
+.page-container strong {
+  color: var(--ink);
+}
+
+/* ── Highlight Box ─────────────────────────────────────── */
+.highlight-box {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.highlight-box p {
+  color: var(--ink-2);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── Limited-Use / Policy Box ──────────────────────────── */
+.limited-use {
+  background: rgba(79,93,74,.06);
+  border: 1px solid rgba(79,93,74,.2);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.limited-use p {
+  color: var(--ink-2);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── Guarantee Box ─────────────────────────────────────── */
+.guarantee-box {
+  background: rgba(79,93,74,.06);
+  border: 1px solid rgba(79,93,74,.22);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin: 24px 0;
+  text-align: center;
+}
+.guarantee-box .guarantee-badge {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+.guarantee-box h3 {
+  font: 800 22px var(--serif);
+  color: var(--sage);
+  margin: 0 0 8px;
+}
+.guarantee-box p {
+  color: var(--ink-2);
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── Paddle Notice ─────────────────────────────────────── */
+.paddle-notice {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.paddle-notice p {
+  color: var(--ink-2);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── Contact Box ───────────────────────────────────────── */
+.contact-box {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 48px;
+}
+.contact-box h2 {
+  font: 700 22px var(--serif);
+  margin-bottom: 8px;
+}
+.contact-box p {
+  color: var(--ink-2);
+  margin-bottom: 16px;
+}
+.contact-email {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--rust);
+  text-decoration: none;
+}
+.contact-email:hover { color: var(--rust-2); }
+.response-time {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* ── FAQ Accordion ─────────────────────────────────────── */
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+}
+.faq-q {
+  font: 600 16px var(--serif);
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+.faq-q::after {
+  content: '+';
+  font-size: 20px;
+  color: var(--rust);
+  flex-shrink: 0;
+  transition: transform .2s;
+}
+.faq-item.open .faq-q::after {
+  content: '–';
+}
+.faq-a {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease, padding .3s ease;
+}
+.faq-item.open .faq-a {
+  max-height: 400px;
+  padding-top: 12px;
+}
+
+/* ── Footer ────────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+.footer-inner {
+  width: min(1160px, calc(100% - 40px));
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-inner a {
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.footer-inner a:hover { color: var(--ink); }
+.footer-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.footer-address {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ── Success Badge ─────────────────────────────────────── */
+.check-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(79,93,74,.1);
+  border: 1.5px solid rgba(79,93,74,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin: 0 auto 20px;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .site-nav { height: 66px; }
+  .nav-links a:not(.button) { display: none; }
+}
+@media (max-width: 520px) {
+  .nav-inner, .shell, .footer-inner {
+    width: min(100% - 26px, 1160px);
+  }
+  .nav-links { gap: 8px; }
+  .nav-links .button { padding: 0 13px; min-height: 39px; }
+  .page-container { padding: 40px 20px 80px; }
+  .page-title { font-size: 28px; }
+}

@@ -5,112 +5,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Upgrade — ReplyMind</title>
   <meta name="description" content="Upgrade your ReplyMind plan to unlock unlimited AI-powered email replies, custom intents, contact memory, and LinkedIn support." />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/shared.css">
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy: #080D1A; --navy-2: #0D1526; --navy-3: #111E35;
-      --blue: #4F8EF7; --blue-bright: #6BA3FF;
-      --white: #FFFFFF; --white-70: rgba(255,255,255,0.7); --white-50: rgba(255,255,255,0.5);
-      --white-40: rgba(255,255,255,0.4); --white-10: rgba(255,255,255,0.06);
-      --green: #10B981; --green-light: #34D399;
-      --border: rgba(255,255,255,0.08);
-      --font-display: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif;
+      --green-light: var(--sage);
+      --border: var(--line);
+      --white-70: var(--ink-2);
+      --blue-bright: var(--rust);
     }
-    body { background: var(--navy); color: var(--white); font-family: var(--font-body); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    nav { padding: 16px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
-    nav a.nav-logo { text-decoration: none; display: flex; align-items: center; gap: 8px; }
-    .nav-icon { width: 28px; height: 28px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; }
-    .nav-text { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--white); }
-    .nav-back { font-size: 13px; color: var(--white-50); text-decoration: none; transition: color 0.15s; }
-    .nav-back:hover { color: var(--white); }
+    
+    .page-container { max-width: 560px; margin: 0 auto; padding: 28px 24px 60px; text-align: center; }
 
-    .container { max-width: 560px; margin: 0 auto; padding: 28px 24px 60px; text-align: center; }
+    .plan-badge { 
+      display: inline-flex; align-items: center; gap: 6px; 
+      padding: 5px 14px; 
+      background: var(--cream); 
+      border: 1px solid var(--line); 
+      border-radius: 20px; 
+      font-size: 12px; font-weight: 600; 
+      color: var(--rust); 
+      margin-bottom: 14px; 
+    }
 
-    .plan-badge { display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px; background: rgba(79,142,247,0.12); border: 1px solid rgba(79,142,247,0.3); border-radius: 20px; font-size: 12px; font-weight: 600; color: var(--blue-bright); margin-bottom: 14px; }
+    .page-title { margin-bottom: 4px; }
+    .subtitle { font-size: 13px; color: var(--ink-2); margin-bottom: 20px; line-height: 1.5; }
 
-    h1 { font-family: var(--font-display); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 4px; }
-    .subtitle { font-size: 13px; color: var(--white-50); margin-bottom: 20px; line-height: 1.5; }
-
-    /* Compact Plan Summary Card */
-    .plan-card { background: var(--navy-2); border: 1.5px solid rgba(79,142,247,0.3); border-radius: 14px; padding: 16px 20px; margin-bottom: 18px; text-align: left; position: relative; overflow: hidden; }
-    .plan-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--blue), transparent); }
+    /* Compact Plan Summary Card (Pro style) */
+    .plan-card { 
+      background: var(--ink); 
+      color: #fff;
+      border: 1px solid var(--ink); 
+      border-radius: 14px; 
+      padding: 16px 20px; 
+      margin-bottom: 18px; 
+      text-align: left; 
+      position: relative; 
+      overflow: hidden; 
+    }
     .plan-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .plan-name { font-family: var(--font-display); font-size: 17px; font-weight: 700; }
-    .plan-price { font-family: var(--font-display); font-size: 26px; font-weight: 800; letter-spacing: -1px; white-space: nowrap; }
-    .plan-price .dollar { font-size: 15px; vertical-align: top; margin-top: 3px; display: inline-block; }
-    .plan-price .period { font-size: 13px; font-weight: 400; color: var(--white-50); letter-spacing: 0; }
-    .plan-meta { font-size: 12.5px; color: var(--white-50); margin-top: 6px; line-height: 1.5; }
+    .plan-name { font-family: 'Georgia', serif; font-size: 17px; font-weight: 700; color: #fff; }
+    .plan-price { font-family: 'Georgia', serif; font-size: 26px; font-weight: 800; letter-spacing: -1px; white-space: nowrap; color: #fff; }
+    .plan-price .dollar { font-size: 15px; vertical-align: top; margin-top: 3px; display: inline-block; color: #fff; }
+    .plan-price .period { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.7); letter-spacing: 0; }
+    .plan-meta { font-size: 12.5px; color: rgba(255,255,255,0.9); margin-top: 6px; line-height: 1.5; }
     .plan-features { display: none; }
 
-    /* Billing descriptor note (chargeback prevention) */
-    .pay-note { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 13px; color: var(--white-70); background: rgba(79,142,247,0.08); border: 1px solid rgba(79,142,247,0.25); border-radius: 10px; padding: 11px 16px; text-align: center; line-height: 1.45; }
-    .pay-note strong { color: var(--white); font-weight: 700; letter-spacing: 0.3px; }
+    /* Billing descriptor note */
+    .pay-note { 
+      display: flex; align-items: center; justify-content: center; gap: 8px; 
+      font-size: 13px; color: var(--ink-2); 
+      background: var(--cream); 
+      border: 1px solid var(--line); 
+      border-radius: 10px; 
+      padding: 11px 16px; 
+      text-align: center; 
+      line-height: 1.45; 
+    }
+    .pay-note strong { color: var(--ink); font-weight: 700; }
     .pay-note .pay-note-icon { font-size: 15px; flex-shrink: 0; }
-
-    /* Setup Notice */
-    .setup-notice { background: rgba(16,185,129,0.06); border: 1.5px solid rgba(16,185,129,0.2); border-radius: 16px; padding: 28px 24px; margin-bottom: 32px; }
-    .setup-icon { font-size: 36px; margin-bottom: 12px; }
-    .setup-notice h3 { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--green-light); }
-    .setup-notice p { font-size: 14px; color: var(--white-70); margin: 0; line-height: 1.6; }
-
-    /* Email Form */
-    .notify-form { margin-top: 24px; }
-    .form-group { display: flex; gap: 8px; margin-bottom: 12px; }
-    .form-input { flex: 1; padding: 14px 18px; background: var(--navy-3); border: 1.5px solid var(--border); border-radius: 12px; font-size: 15px; color: var(--white); font-family: var(--font-body); outline: none; transition: border-color 0.2s; }
-    .form-input::placeholder { color: var(--white-40); }
-    .form-input:focus { border-color: rgba(79,142,247,0.5); }
-    .form-btn { padding: 14px 24px; background: var(--blue); color: white; border: none; border-radius: 12px; font-size: 15px; font-weight: 700; font-family: var(--font-body); cursor: pointer; transition: all 0.2s; white-space: nowrap; }
-    .form-btn:hover { background: #3A7BE0; transform: translateY(-1px); }
-    .form-note { font-size: 12px; color: var(--white-40); }
-
-    /* Success state */
-    .notify-success { display: none; padding: 20px; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); border-radius: 12px; margin-top: 16px; }
-    .notify-success.show { display: block; }
-    .notify-success p { color: var(--green-light); font-weight: 600; font-size: 15px; margin: 0; }
 
     /* Trust Signals */
     .trust { display: flex; justify-content: center; gap: 32px; margin-top: 36px; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--white-40); }
+    .trust-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--sage); font-weight: 500; }
     .trust-item span { font-size: 16px; }
 
-    /* Alternative CTA */
-    .alt-cta { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
-    .alt-cta p { font-size: 14px; color: var(--white-50); margin-bottom: 12px; }
-    .alt-cta a { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--blue-bright); text-decoration: none; padding: 10px 20px; border: 1.5px solid rgba(79,142,247,0.3); border-radius: 10px; transition: all 0.15s; }
-    .alt-cta a:hover { background: rgba(79,142,247,0.08); border-color: var(--blue); }
-
-    footer { border-top: 1px solid var(--border); padding: 24px; text-align: center; font-size: 12px; color: rgba(255,255,255,0.2); }
-    footer a { color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 12px; }
-
-    @media(max-width: 560px) {
-      .form-group { flex-direction: column; }
+    /* Account Gate */
+    .account-gate { 
+      padding: 24px; 
+      border: 1px solid var(--line); 
+      border-radius: 14px; 
+      background: var(--paper); 
+      text-align: left; 
+    }
+    .account-gate h2 { 
+      font-family: 'Georgia', serif; 
+      font-size: 18px; 
+      margin-bottom: 6px; 
+      color: var(--ink);
+    }
+    .account-gate p { 
+      color: var(--ink-2); 
+      font-size: 13.5px; 
+      margin-bottom: 14px; 
+    }
+    .account-gate-row { display: flex; gap: 10px; }
+    .account-gate input { 
+      flex: 1; min-width: 0; padding: 12px 14px; 
+      border: 1px solid var(--line); 
+      border-radius: 9px; 
+      background: var(--paper); 
+      color: var(--ink); 
+      font: inherit; 
+    }
+    .account-gate input:focus {
+      outline: none;
+      border-color: var(--rust);
+    }
+    .account-gate button { 
+      padding: 12px 18px; 
+      border: 0; 
+      border-radius: 9px; 
+      background: var(--rust); 
+      color: #fff; 
+      font: 600 14px 'Inter', sans-serif; 
+      cursor: pointer; 
+    }
+    .account-gate-error { min-height: 18px; color: var(--rust); font-size: 12px; margin-top: 7px; }
+    
+    @media(max-width: 560px) { 
+      .account-gate-row { flex-direction: column; } 
       .trust { gap: 16px; }
     }
-    .account-gate { padding:24px; border:1px solid var(--border); border-radius:14px; background:var(--navy-2); text-align:left; }
-    .account-gate h2 { font-family:var(--font-display); font-size:18px; margin-bottom:6px; }
-    .account-gate p { color:var(--white-70); font-size:13.5px; margin-bottom:14px; }
-    .account-gate-row { display:flex; gap:10px; }
-    .account-gate input { flex:1; min-width:0; padding:12px 14px; border:1px solid var(--border); border-radius:9px; background:var(--navy); color:var(--white); font:inherit; }
-    .account-gate button { padding:12px 18px; border:0; border-radius:9px; background:var(--blue); color:var(--white); font:600 14px var(--font-body); cursor:pointer; }
-    .account-gate-error { min-height:18px; color:#FCA5A5; font-size:12px; margin-top:7px; }
-    @media(max-width:560px) { .account-gate-row { flex-direction:column; } }
   </style>
 </head>
 <body>
-<nav>
-  <a href="index.html" class="nav-logo">
-    <div class="nav-icon">⚡</div>
-    <span class="nav-text">ReplyMind</span>
-  </a>
-  <a href="index.html#pricing" class="nav-back">← Back to pricing</a>
-</nav>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="wordmark" href="/">Reply<em>Mind</em></a>
+    <nav class="nav-links">
+      <a href="/#pricing">Pricing</a>
+      <a class="button" href="https://chromewebstore.google.com/detail/pjoibapolglmhhkgfilpgailpjmiekai">Install free</a>
+    </nav>
+  </div>
+</header>
 
-<div class="container">
+<div class="page-container">
   <div class="plan-badge" id="planBadge">⚡ Upgrading to Pro</div>
 
-  <h1 id="pageTitle">Complete your upgrade</h1>
+  <h1 class="page-title" id="pageTitle">Complete your upgrade</h1>
   <p class="subtitle">Secure checkout via Paddle. Instant activation upon payment.</p>
 
   <div style="display: flex; flex-direction: column; gap: 16px; max-width: 1000px; margin: 0 auto;">
@@ -142,15 +166,20 @@
   </div>
 </div>
 
-<footer>
-  <a href="index.html">Home</a>
-  <a href="privacy.html">Privacy Policy</a>
-  <a href="terms.html">Terms of Service</a>
-  <a href="refund.html">Refund Policy</a>
-  <a href="support.html">Support</a>
-  <a href="mailto:hello@replymind.xyz">Contact</a>
-  <p style="margin-top: 12px;">© 2026 ReplyMind by TIGERBESTBRANDS LLC. All rights reserved.</p>
-  <p style="margin-top: 4px; font-size: 11px; color: rgba(255,255,255,0.15);">5830 EAST 2ND ST. PMB 90171, CASPER, WY 82609</p>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 ReplyMind by TIGERBESTBRANDS LLC</span>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/refund.html">Refund</a>
+      <a href="/support.html">Support</a>
+      <a href="mailto:hello@replymind.xyz">Contact</a>
+    </div>
+  </div>
+  <div class="footer-inner">
+    <span class="footer-address">5830 EAST 2ND ST. PMB 90171, CASPER, WY 82609</span>
+  </div>
 </footer>
 
 <script>
