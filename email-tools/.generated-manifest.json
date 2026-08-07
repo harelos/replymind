@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-08-07T00:00:00.000Z",
+  "batches": [
+    {
+      "batch": "executives-and-founders",
+      "avatar": "Executive leaders, founders, and department heads",
+      "toolCount": 5
+    }
+  ],
+  "tools": [
+    "executive-board-update-email-builder",
+    "investor-monthly-update-email-builder",
+    "client-contract-renewal-notice-builder",
+    "cross-functional-project-kickoff-builder",
+    "key-hire-announcement-email-builder"
+  ],
+  "urls": [
+    "https://www.replymind.xyz/email-tools/audiences/",
+    "https://www.replymind.xyz/email-tools/audiences/executives-and-founders/",
+    "https://www.replymind.xyz/email-tools/executive-board-update-email-builder/",
+    "https://www.replymind.xyz/email-tools/investor-monthly-update-email-builder/",
+    "https://www.replymind.xyz/email-tools/client-contract-renewal-notice-builder/",
+    "https://www.replymind.xyz/email-tools/cross-functional-project-kickoff-builder/",
+    "https://www.replymind.xyz/email-tools/key-hire-announcement-email-builder/"
+  ],
+  "paths": [
+    "email-tools/assets/batch-tools.js",
+    "email-tools/assets/batch-tools.css",
+    "email-tools/executive-board-update-email-builder/index.html",
+    "email-tools/investor-monthly-update-email-builder/index.html",
+    "email-tools/client-contract-renewal-notice-builder/index.html",
+    "email-tools/cross-functional-project-kickoff-builder/index.html",
+    "email-tools/key-hire-announcement-email-builder/index.html",
+    "email-tools/audiences/executives-and-founders/index.html",
+    "email-tools/audiences/index.html",
+    "sitemap.xml"
+  ]
+}

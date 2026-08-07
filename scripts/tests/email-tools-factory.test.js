@@ -34,7 +34,7 @@ test('tiny valid fixture generates functional tools, an audience hub, assets, an
   assert.deepEqual(report.acceptedBatches, ['tiny-operations']);
   assert.equal(report.generatedToolPages, 2);
   assert.equal(report.generatedAudienceHubs, 1);
-  assert.equal(report.existingToolPagesPreserved, 20);
+  assert.equal(report.existingToolPagesPreserved, 25);
 
   const generatedTool = path.join(outputRoot, 'email-tools', 'stakeholder-decision-summary-email-builder', 'index.html');
   const audienceHub = path.join(outputRoot, 'email-tools', 'audiences', 'tiny-operations', 'index.html');
