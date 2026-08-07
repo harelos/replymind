@@ -230,7 +230,7 @@ function validateTool(tool, context) {
 function readExistingCatalog(siteRoot) {
   const toolsRoot = path.join(siteRoot, 'email-tools');
   if (!fs.existsSync(toolsRoot)) return [];
-  const ignored = new Set(['assets', 'data', 'audiences', 'de', 'fr', 'es', 'nl']);
+  const ignored = new Set(['assets', 'data', 'audiences', 'de', 'fr', 'es', 'nl', 'it', 'pt']);
   const catalog = [];
   for (const entry of fs.readdirSync(toolsRoot, { withFileTypes: true })) {
     if (!entry.isDirectory() || ignored.has(entry.name)) continue;

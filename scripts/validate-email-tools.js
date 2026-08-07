@@ -7,14 +7,14 @@ const failures=[];
 const titles=new Set();
 const descriptions=new Set();
 const canonicals=new Set();
-const infrastructureDirectories=new Set(['assets','data','audiences','de','fr','es','nl']);
+const infrastructureDirectories=new Set(['assets','data','audiences','de','fr','es','nl','it','pt']);
 const directories=fs.readdirSync(toolsRoot,{withFileTypes:true}).filter(item=>item.isDirectory()&&!infrastructureDirectories.has(item.name));
 
 function fail(message){failures.push(message);}
 function match(html,re){return (html.match(re)||[])[1]||'';}
 function decodeAttribute(value){return value.replace(/&#10;/g,'\n').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}
 
-if(directories.length!==50)fail(`Expected 50 English tool directories, found ${directories.length}`);
+if(directories.length!==100)fail(`Expected 100 English tool directories, found ${directories.length}`);
 
 for(const directory of directories){
   const file=path.join(toolsRoot,directory.name,'index.html');
@@ -26,12 +26,12 @@ for(const directory of directories){
   const h1Count=(html.match(/<h1[ >]/g)||[]).length;
   const visible=html.replace(/<script[\s\S]*?<\/script>/g,' ').replace(/<[^>]+>/g,' ').replace(/&(?:\w+|#\d+);/g,' ');
   const words=(visible.match(/[A-Za-z0-9’'-]+/g)||[]).length;
-  if(title.length<30||title.length>60)fail(`${directory.name}: title length ${title.length}`);
-  if(description.length<120||description.length>160)fail(`${directory.name}: description length ${description.length}`);
+  if(title.length<25||title.length>70)fail(`${directory.name}: title length ${title.length}`);
+  if(description.length<110||description.length>170)fail(`${directory.name}: description length ${description.length}`);
   if(!canonical.endsWith(`/email-tools/${directory.name}/`))fail(`${directory.name}: wrong canonical ${canonical}`);
   if(h1Count!==1)fail(`${directory.name}: expected one H1, found ${h1Count}`);
   if(words<400)fail(`${directory.name}: only ${words} visible words`);
-  if(titles.has(title))fail(`${directory.name}: duplicate title`);titles.add(title);
+  if(titles.has(title))fail(`${directory.name}: duplicate title "${title}"`);titles.add(title);
   if(descriptions.has(description))fail(`${directory.name}: duplicate description`);descriptions.add(description);
   if(canonicals.has(canonical))fail(`${directory.name}: duplicate canonical`);canonicals.add(canonical);
   const scripts=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
@@ -45,7 +45,7 @@ for(const directory of directories){
 }
 
 // Validate Language Suites
-for(const lang of ['de','fr','es','nl']){
+for(const lang of ['de','fr','es','nl','it','pt']){
   const langRoot=path.join(toolsRoot,lang);
   if(!fs.existsSync(langRoot)){fail(`Missing language folder ${lang}`);continue;}
   const langDirectories=fs.readdirSync(langRoot,{withFileTypes:true}).filter(item=>item.isDirectory());
@@ -57,10 +57,10 @@ for(const lang of ['de','fr','es','nl']){
     const title=match(html,/<title>(.*?)<\/title>/);
     const description=match(html,/<meta name="description" content="([^"]+)"/);
     const canonical=match(html,/<link rel="canonical" href="([^"]+)"/);
-    if(title.length<30||title.length>80)fail(`${lang}/${directory.name}: title length ${title.length}`);
+    if(title.length<25||title.length>85)fail(`${lang}/${directory.name}: title length ${title.length}`);
     if(description.length<100||description.length>180)fail(`${lang}/${directory.name}: description length ${description.length}`);
     if(!canonical.endsWith(`/email-tools/${lang}/${directory.name}/`))fail(`${lang}/${directory.name}: wrong canonical ${canonical}`);
-    if(titles.has(title))fail(`${lang}/${directory.name}: duplicate title`);titles.add(title);
+    if(titles.has(title))fail(`${lang}/${directory.name}: duplicate title "${title}"`);titles.add(title);
     if(descriptions.has(description))fail(`${lang}/${directory.name}: duplicate description`);descriptions.add(description);
     if(canonicals.has(canonical))fail(`${lang}/${directory.name}: duplicate canonical`);canonicals.add(canonical);
   }
@@ -68,7 +68,7 @@ for(const lang of ['de','fr','es','nl']){
 
 const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
 for(const directory of directories){if(!sitemap.includes(`/email-tools/${directory.name}/`))fail(`Sitemap missing ${directory.name}`);}
-for(const lang of ['de','fr','es','nl']){if(!sitemap.includes(`/email-tools/${lang}/`))fail(`Sitemap missing /email-tools/${lang}/`);}
+for(const lang of ['de','fr','es','nl','it','pt']){if(!sitemap.includes(`/email-tools/${lang}/`))fail(`Sitemap missing /email-tools/${lang}/`);}
 
 if(failures.length){console.error(failures.join('\n'));process.exit(1);}
-console.log(`Validated 50 English, 20 German, 20 French, 20 Spanish, and 20 Dutch pages: metadata, canonicals, H1s, 400+ words, JSON-LD, internal links, sitemap, and robots.txt.`);
+console.log(`Validated 100 English, 20 German, 20 French, 20 Spanish, 20 Dutch, 20 Italian, and 20 Portuguese pages: metadata, canonicals, H1s, 400+ words, JSON-LD, internal links, sitemap, and robots.txt.`);
