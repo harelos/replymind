@@ -1,0 +1,1223 @@
+{
+  "batch": "creators-education-communities-nonprofits",
+  "avatar": "Creators, educators, community managers, nonprofits, associations, and membership organizations",
+  "tools": [
+    {
+      "slug": "sponsorship-outreach-for-newsletter-partnerships",
+      "name": "Sponsorship Outreach for Newsletter Partnerships",
+      "keyword": "newsletter sponsorship outreach",
+      "intent": "outreach",
+      "audience": "Creators with newsletters",
+      "outcome": "Ask brands to sponsor an issue with a clear fit, audience value, and next step.",
+      "metaDescription": "Write a sponsorship outreach email for newsletter partnerships with audience fit, placement ideas, and a simple call to action. Free private email tool by ReplyMind.",
+      "h1": "Pitch a sponsorship without sounding like an ad broker.",
+      "intro": "Use this when you want to invite a brand into a newsletter or content series without overselling the audience. The tool helps you explain fit, show a useful placement, and end with one simple next step.",
+      "fields": [
+        {"key":"recipient","label":"Recipient name","type":"text","placeholder":"Avery","required":false},
+        {"key":"brandFit","label":"Why this brand fits","type":"textarea","placeholder":"Their product matches our audience's workflow and values","required":true},
+        {"key":"audienceValue","label":"What readers gain","type":"textarea","placeholder":"A practical recommendation that helps readers save time","required":true},
+        {"key":"placementIdea","label":"Suggested placement","type":"textarea","placeholder":"A featured mention in the weekly issue and one social post","required":true},
+        {"key":"nextStep","label":"Next step request","type":"textarea","placeholder":"Ask for a quick reply if they want the media kit","required":true}
+      ],
+      "subjectTemplate": "A sponsorship idea for {{recipient}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI reached out because {{brandFit}}. For our readers, the value is {{audienceValue}}. A simple way to test the fit would be {{placementIdea}}.\n\nIf that is interesting, {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Explain the audience fit before you mention placement options.",
+        "Keep the sponsorship idea concrete so the brand can picture the collaboration.",
+        "Offer one low-friction next step instead of a long media-kit tour."
+      ],
+      "pitfalls": [
+        "Do not frame the message like generic ad inventory.",
+        "Do not list placements that do not relate to the audience."
+      ],
+      "examples": [
+        {"label":"Newsletter sponsor for a productivity app","input":"The newsletter covers creator workflows and the app helps readers manage approvals.","output":"Hi Avery,\n\nI reached out because the app fits a workflow-focused audience. For our readers, the value is a practical recommendation that helps them save time. A simple way to test the fit would be a featured mention in the weekly issue and one social post.\n\nIf that is interesting, ask for a quick reply if they want the media kit.\n\nBest,"},
+        {"label":"Course creator partnership","input":"A teaching platform wants reach among independent educators.","output":"Hi Avery,\n\nI reached out because the platform fits an educator audience. For our readers, the value is a practical recommendation that helps them run better classes. A simple way to test the fit would be a sponsored lesson roundup and a short email feature.\n\nIf that is interesting, ask for a quick reply if they want the media kit.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should I mention price in the first email?","a":"Only if you already know the sponsor is shopping. Otherwise lead with fit and placement value first."},
+        {"q":"How much detail is enough?","a":"Enough for the recipient to understand the audience, the placement, and why the partnership makes sense."}
+      ],
+      "relatedTags": ["sponsorship", "newsletter", "partnership"]
+    },
+    {
+      "slug": "creator-brand-collaboration-invite",
+      "name": "Creator Brand Collaboration Invite",
+      "keyword": "creator brand collaboration email",
+      "intent": "collaboration",
+      "audience": "Creators and content partners",
+      "outcome": "Invite a brand to collaborate on content that feels relevant, not promotional.",
+      "metaDescription": "Draft a creator collaboration email with the content angle, audience benefit, and a practical ask. Free private email tool by ReplyMind.",
+      "h1": "Pitch the collaboration people actually want to join.",
+      "intro": "Some partnership ideas fail because they start with deliverables instead of audience value. This tool helps you frame a collaboration around a useful story, format, and ask.",
+      "fields": [
+        {"key":"recipient","label":"Brand or partner name","type":"text","placeholder":"Mara","required":false},
+        {"key":"contentAngle","label":"Collaboration angle","type":"textarea","placeholder":"A how-to piece, interview, or live session","required":true},
+        {"key":"audienceBenefit","label":"Audience benefit","type":"textarea","placeholder":"Readers get a practical lesson they can use immediately","required":true},
+        {"key":"sharedFormat","label":"Suggested format","type":"textarea","placeholder":"Joint webinar, co-written guide, or short video series","required":true},
+        {"key":"ask","label":"What you want them to do","type":"textarea","placeholder":"Reply if they'd like to discuss a pilot idea","required":true}
+      ],
+      "subjectTemplate": "A collaboration idea for {{recipient}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI have an idea for a collaboration built around {{contentAngle}}. The reason I think it works is that {{audienceBenefit}}. A good format would be {{sharedFormat}}.\n\nIf that sounds worth exploring, {{ask}}.\n\nBest,",
+      "guidance": [
+        "Lead with the content idea, not with your follower count.",
+        "Name the audience benefit in plain language.",
+        "Keep the ask small enough to start a conversation."
+      ],
+      "pitfalls": [
+        "Do not make the pitch sound like a generic influencer blast.",
+        "Do not offer a format without explaining why it suits both sides."
+      ],
+      "examples": [
+        {"label":"Live workshop collaboration","input":"A design tool wants a practical workshop for beginners.","output":"Hi Mara,\n\nI have an idea for a collaboration built around a beginner-friendly workshop. The reason I think it works is that readers get a practical lesson they can use immediately. A good format would be a joint webinar and a follow-up resource.\n\nIf that sounds worth exploring, reply if you'd like to discuss a pilot idea.\n\nBest,"},
+        {"label":"Co-written guide","input":"A software company wants educational content for small creators.","output":"Hi Mara,\n\nI have an idea for a collaboration built around a co-written guide. The reason I think it works is that readers get a practical lesson they can use immediately. A good format would be a short article series and a downloadable checklist.\n\nIf that sounds worth exploring, reply if you'd like to discuss a pilot idea.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should I propose a full plan or just the idea?","a":"Start with the idea and enough structure to make it tangible. Save the full plan for the follow-up."},
+        {"q":"What makes a collaboration message persuasive?","a":"A clear audience benefit and a format that feels natural for both sides."}
+      ],
+      "relatedTags": ["collaboration", "creator-partnership", "content"]
+    },
+    {
+      "slug": "student-enrollment-reminder-email",
+      "name": "Student Enrollment Reminder Email",
+      "keyword": "student enrollment reminder",
+      "intent": "reminder",
+      "audience": "Educators and course teams",
+      "outcome": "Remind prospective students about enrollment without sounding pushy or automated.",
+      "metaDescription": "Create a student enrollment reminder with timeline, course value, and a simple action. Free private email tool by ReplyMind.",
+      "h1": "Send a reminder that feels helpful, not urgent noise.",
+      "intro": "When enrollment is open, students often need one clear nudge rather than another sales pitch. This tool helps you remind them what they get, when the window closes, and what to do next.",
+      "fields": [
+        {"key":"recipient","label":"Recipient name or group","type":"text","placeholder":"Alex or enrolled students","required":false},
+        {"key":"courseValue","label":"What the course offers","type":"textarea","placeholder":"A step-by-step path to build the skill from scratch","required":true},
+        {"key":"deadline","label":"Enrollment deadline","type":"text","placeholder":"Friday at 5 p.m.","required":true},
+        {"key":"objection","label":"Likely hesitation","type":"textarea","placeholder":"They may be unsure about time commitment","required":true},
+        {"key":"action","label":"Next action","type":"textarea","placeholder":"Enroll or reply with a question","required":true}
+      ],
+      "subjectTemplate": "Enrollment closes {{deadline}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nA quick reminder that enrollment closes {{deadline}}. The course gives you {{courseValue}}. I know the most common hesitation is {{objection}}, so I wanted to leave the decision simple.\n\nIf you want in, {{action}}.\n\nBest,",
+      "guidance": [
+        "Make the deadline specific so the reminder is useful.",
+        "Address the likely hesitation instead of pretending it does not exist.",
+        "Keep the call to action short and easy to complete."
+      ],
+      "pitfalls": [
+        "Do not repeat the reminder in three different ways.",
+        "Do not pressure people with false scarcity."
+      ],
+      "examples": [
+        {"label":"Live cohort enrollment","input":"The class teaches portfolio skills and closes Friday evening.","output":"Hi Alex,\n\nA quick reminder that enrollment closes Friday at 5 p.m. The course gives you a step-by-step path to build the skill from scratch. I know the most common hesitation is time commitment, so I wanted to leave the decision simple.\n\nIf you want in, enroll or reply with a question.\n\nBest,"},
+        {"label":"Self-paced course","input":"The course covers grant writing and has a limited enrollment bonus.","output":"Hi Alex,\n\nA quick reminder that enrollment closes Friday at 5 p.m. The course gives you a clear framework for writing better grant applications. I know the most common hesitation is whether the lessons fit a busy schedule, so I wanted to leave the decision simple.\n\nIf you want in, enroll or reply with a question.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"How often should I send reminders?","a":"Only as often as the enrollment decision still needs a useful nudge. Keep each reminder distinct."},
+        {"q":"Should I restate every benefit?","a":"No. Use the one benefit that matters most to the student at that moment."}
+      ],
+      "relatedTags": ["students", "enrollment", "course-launch"]
+    },
+    {
+      "slug": "parent-or-guardian-course-update",
+      "name": "Parent or Guardian Course Update",
+      "keyword": "parent course update email",
+      "intent": "update",
+      "audience": "Teachers and program coordinators",
+      "outcome": "Keep parents informed about progress, expectations, and support needs in a calm way.",
+      "metaDescription": "Write a parent or guardian update that shares progress, what students are working on, and how families can help. Free private email tool by ReplyMind.",
+      "h1": "Update families without creating extra confusion.",
+      "intro": "Family communication works best when it is simple and specific. This tool helps you explain what students are learning, what to expect next, and how families can support the process.",
+      "fields": [
+        {"key":"recipient","label":"Parent or guardian group","type":"text","placeholder":"Families in Cohort 3","required":false},
+        {"key":"progress","label":"Current progress","type":"textarea","placeholder":"Students are finishing project drafts and peer reviews","required":true},
+        {"key":"upcoming","label":"What comes next","type":"textarea","placeholder":"Next week we move into presentations and reflection","required":true},
+        {"key":"support","label":"How families can help","type":"textarea","placeholder":"Ask students to set aside 20 minutes for review","required":true},
+        {"key":"contact","label":"Contact instruction","type":"textarea","placeholder":"Reply here with any questions or concerns","required":true}
+      ],
+      "subjectTemplate": "Class update for {{recipient}}",
+      "bodyTemplate": "Hello {{recipient}},\n\nA quick update on where students are now: {{progress}}. Next, {{upcoming}}. Families can help by {{support}}.\n\nIf you have any questions, {{contact}}.\n\nBest,",
+      "guidance": [
+        "Use calm, concrete language that families can scan quickly.",
+        "Explain how support should look in practice.",
+        "End with a clear way for parents to respond."
+      ],
+      "pitfalls": [
+        "Do not use school jargon that parents may not follow.",
+        "Do not overstate student progress if the class is still mid-process."
+      ],
+      "examples": [
+        {"label":"Middle school project cycle","input":"Students are drafting essays and need home review time.","output":"Hello Families in Cohort 3,\n\nA quick update on where students are now: students are finishing project drafts and peer reviews. Next, we move into presentations and reflection. Families can help by asking students to set aside 20 minutes for review.\n\nIf you have any questions, reply here with any questions or concerns.\n\nBest,"},
+        {"label":"After-school coding program","input":"Learners are building apps and preparing to demo them.","output":"Hello Families in Cohort 3,\n\nA quick update on where students are now: students are polishing app prototypes and testing features. Next, we move into presentations and reflection. Families can help by asking students to practice their demo once at home.\n\nIf you have any questions, reply here with any questions or concerns.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should I include grades in this kind of update?","a":"Only if that is the purpose of the message. Otherwise focus on progress, expectations, and support."},
+        {"q":"How formal should this sound?","a":"Professional but plain. Parents usually need clarity more than formality."}
+      ],
+      "relatedTags": ["parents", "family-comms", "education"]
+    },
+    {
+      "slug": "cohort-onboarding-welcome-email",
+      "name": "Cohort Onboarding Welcome Email",
+      "keyword": "cohort onboarding welcome email",
+      "intent": "welcome",
+      "audience": "Course builders and program managers",
+      "outcome": "Welcome new members into a cohort with expectations, next steps, and a confident tone.",
+      "metaDescription": "Create a cohort onboarding welcome email with schedule, expectations, access instructions, and support links. Free private email tool by ReplyMind.",
+      "h1": "Set the tone for a strong cohort from day one.",
+      "intro": "The first email shapes how people show up. This tool helps you welcome the group, explain how the cohort works, and point them to the next action without making the message feel heavy.",
+      "fields": [
+        {"key":"recipient","label":"Cohort name","type":"text","placeholder":"Cohort 7","required":false},
+        {"key":"schedule","label":"Key schedule details","type":"textarea","placeholder":"Orientation on Monday, live sessions on Thursdays","required":true},
+        {"key":"expectations","label":"Participation expectations","type":"textarea","placeholder":"Come prepared, post one update per week, and attend live calls","required":true},
+        {"key":"access","label":"How to get started","type":"textarea","placeholder":"Log in to the portal and complete the first lesson","required":true},
+        {"key":"support","label":"Where to ask for help","type":"textarea","placeholder":"Reply to this email or use the community channel","required":true}
+      ],
+      "subjectTemplate": "Welcome to {{recipient}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nWelcome. Here is how the cohort will work: {{schedule}}. We ask everyone to follow these expectations: {{expectations}}. To get started, {{access}}.\n\nIf anything is unclear, {{support}}.\n\nBest,",
+      "guidance": [
+        "Use the welcome message to reduce uncertainty, not to add more rules.",
+        "Make the first action obvious and easy to complete.",
+        "Name the support channel so people know where to go."
+      ],
+      "pitfalls": [
+        "Do not cram the full program guide into the welcome email.",
+        "Do not make expectations sound punitive."
+      ],
+      "examples": [
+        {"label":"Live professional development cohort","input":"Orientation is Monday and learners need to finish the first module before the first call.","output":"Hi Cohort 7,\n\nWelcome. Here is how the cohort will work: orientation on Monday, live sessions on Thursdays. We ask everyone to follow these expectations: come prepared, post one update per week, and attend live calls. To get started, log in to the portal and complete the first lesson.\n\nIf anything is unclear, reply to this email or use the community channel.\n\nBest,"},
+        {"label":"Creator mastermind cohort","input":"The group meets weekly and uses a shared workspace for assignments.","output":"Hi Cohort 7,\n\nWelcome. Here is how the cohort will work: weekly meetings with a shared workspace for assignments. We ask everyone to follow these expectations: show up on time, share drafts, and give constructive feedback. To get started, log in to the portal and complete the first lesson.\n\nIf anything is unclear, reply to this email or use the community channel.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should I include every policy in the welcome email?","a":"No. Include the essentials and link to the rest of the handbook."},
+        {"q":"What is the main goal of onboarding?","a":"Reduce confusion and make the first step obvious."}
+      ],
+      "relatedTags": ["cohort", "onboarding", "welcome"]
+    },
+    {
+      "slug": "event-registration-confirmation-for-attendees",
+      "name": "Event Registration Confirmation for Attendees",
+      "keyword": "event registration confirmation email",
+      "intent": "confirmation",
+      "audience": "Event organizers and community teams",
+      "outcome": "Confirm attendance with practical details that reduce no-shows and confusion.",
+      "metaDescription": "Write an event registration confirmation with date, access details, expectations, and support contact. Free private email tool by ReplyMind.",
+      "h1": "Confirm the event in a way people can actually use.",
+      "intro": "People save confirmation emails when they answer the basic questions: when, where, how, and what to expect. This tool helps you cover those answers cleanly.",
+      "fields": [
+        {"key":"recipient","label":"Attendee name or group","type":"text","placeholder":"Jordan","required":false},
+        {"key":"eventDetails","label":"Event details","type":"textarea","placeholder":"Date, time, format, and location","required":true},
+        {"key":"accessInfo","label":"Access or check-in info","type":"textarea","placeholder":"Zoom link, ticket QR code, or arrival instructions","required":true},
+        {"key":"whatToBring","label":"What to bring or prepare","type":"textarea","placeholder":"Notebook, login, or completed worksheet","required":true},
+        {"key":"support","label":"Help contact","type":"textarea","placeholder":"Reply to this email for assistance","required":true}
+      ],
+      "subjectTemplate": "You're confirmed for {{recipient}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nYou're confirmed for the event. Here are the details: {{eventDetails}}. To join or check in, {{accessInfo}}. Please bring or prepare {{whatToBring}}.\n\nIf you need help before the event, {{support}}.\n\nBest,",
+      "guidance": [
+        "Put the most actionable details early in the message.",
+        "Include the preparation step if it affects attendance quality.",
+        "Keep the tone straightforward and warm."
+      ],
+      "pitfalls": [
+        "Do not hide the link or location in a long paragraph.",
+        "Do not overload the confirmation with promotional content."
+      ],
+      "examples": [
+        {"label":"Virtual webinar confirmation","input":"The webinar is on Tuesday at noon with a Zoom link and a prep sheet.","output":"Hi Jordan,\n\nYou're confirmed for the event. Here are the details: Tuesday at noon on Zoom. To join or check in, use the Zoom link in your registration receipt. Please bring or prepare the prep sheet.\n\nIf you need help before the event, reply to this email for assistance.\n\nBest,"},
+        {"label":"In-person meetup confirmation","input":"The meetup is downtown, check-in starts at 6:30, and guests should bring a name tag.","output":"Hi Jordan,\n\nYou're confirmed for the event. Here are the details: Thursday at 7 p.m. at the downtown community center. To join or check in, use the front desk check-in list. Please bring or prepare a name tag.\n\nIf you need help before the event, reply to this email for assistance.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should confirmations include a full agenda?","a":"Only if the schedule helps people prepare. Otherwise keep it short and link to the agenda separately."},
+        {"q":"What causes the most confusion?","a":"Missing access details and unclear arrival instructions."}
+      ],
+      "relatedTags": ["events", "confirmation", "attendance"]
+    },
+    {
+      "slug": "donor-thank-you-acknowledgment-email",
+      "name": "Donor Thank-You Acknowledgment Email",
+      "keyword": "donor thank you email",
+      "intent": "thank-you",
+      "audience": "Nonprofits and fundraising teams",
+      "outcome": "Thank a donor in a genuine way while reinforcing the impact of their support.",
+      "metaDescription": "Draft a donor thank-you acknowledgment that names the gift, thanks the donor, and explains the impact. Free private email tool by ReplyMind.",
+      "h1": "Thank supporters like their gift mattered, because it did.",
+      "intro": "A good thank-you message is specific, warm, and brief. This tool helps you acknowledge the gift, connect it to mission impact, and invite future connection without asking too much too soon.",
+      "fields": [
+        {"key":"recipient","label":"Donor name","type":"text","placeholder":"Patricia","required":false},
+        {"key":"gift","label":"Gift details","type":"textarea","placeholder":"A recurring gift or one-time donation","required":true},
+        {"key":"impact","label":"Impact of the gift","type":"textarea","placeholder":"It helps fund school supplies for one classroom","required":true},
+        {"key":"appreciation","label":"Personal appreciation note","type":"textarea","placeholder":"We appreciate your continued belief in the mission","required":true},
+        {"key":"nextTouch","label":"Next connection","type":"textarea","placeholder":"We will share a project update next month","required":true}
+      ],
+      "subjectTemplate": "Thank you for your support, {{recipient}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nThank you for {{gift}}. Your support helps {{impact}}. We deeply appreciate {{appreciation}}.\n\nWe will share {{nextTouch}} so you can see what your support makes possible.\n\nWarmly,",
+      "guidance": [
+        "Name the gift directly so the thank-you feels real.",
+        "Tie the gift to mission impact in one clear sentence.",
+        "Set a follow-up rhythm that is informative rather than transactional."
+      ],
+      "pitfalls": [
+        "Do not immediately pivot into a new ask.",
+        "Do not use vague language like 'supporting our work' without saying how."
+      ],
+      "examples": [
+        {"label":"Monthly donor acknowledgment","input":"The donor gave recurring support for after-school meals.","output":"Hi Patricia,\n\nThank you for a recurring gift. Your support helps fund school supplies for one classroom. We deeply appreciate your continued belief in the mission.\n\nWe will share a project update next month so you can see what your support makes possible.\n\nWarmly,"},
+        {"label":"First-time major gift acknowledgment","input":"The donor funded scholarships for two students.","output":"Hi Patricia,\n\nThank you for a one-time donation. Your support helps fund scholarships for two students. We deeply appreciate your generosity and trust in the mission.\n\nWe will share a project update next month so you can see what your support makes possible.\n\nWarmly,"}
+      ],
+      "faqs": [
+        {"q":"How soon should I send a thank-you?","a":"As soon as possible after the gift is received so the acknowledgment feels timely."},
+        {"q":"Should the message mention tax language?","a":"Only if your organization needs to include it. Keep the thank-you itself focused on gratitude and impact."}
+      ],
+      "relatedTags": ["donors", "fundraising", "gratitude"]
+    },
+    {
+      "slug": "volunteer-recruitment-call-to-action",
+      "name": "Volunteer Recruitment Call to Action",
+      "keyword": "volunteer recruitment email",
+      "intent": "recruitment",
+      "audience": "Nonprofits and community groups",
+      "outcome": "Invite volunteers with a concrete role, time commitment, and simple way to respond.",
+      "metaDescription": "Create a volunteer recruitment email that explains the role, time commitment, and next step. Free private email tool by ReplyMind.",
+      "h1": "Ask for volunteers in a way that feels doable.",
+      "intro": "People are more likely to help when the role sounds real and manageable. This tool helps you describe the task, explain the time commitment, and ask for a response that is easy to make.",
+      "fields": [
+        {"key":"recipient","label":"Audience or volunteer group","type":"text","placeholder":"Community members","required":false},
+        {"key":"role","label":"Volunteer role","type":"textarea","placeholder":"Greet guests, pack supplies, or mentor students","required":true},
+        {"key":"timeCommitment","label":"Time commitment","type":"textarea","placeholder":"Two hours on Saturday mornings for three weeks","required":true},
+        {"key":"impact","label":"Why it matters","type":"textarea","placeholder":"It helps us run the food pantry smoothly","required":true},
+        {"key":"replyStep","label":"How to sign up","type":"textarea","placeholder":"Reply with your availability or complete the signup form","required":true}
+      ],
+      "subjectTemplate": "We need help with {{role}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe are looking for help with {{role}}. The commitment is {{timeCommitment}}, and it matters because {{impact}}. If you can help, {{replyStep}}.\n\nThank you,\n",
+      "guidance": [
+        "Make the volunteer role specific enough to picture.",
+        "State the time commitment plainly so people can self-select.",
+        "Keep the sign-up step simple and visible."
+      ],
+      "pitfalls": [
+        "Do not describe the role as 'general help.'",
+        "Do not make volunteers hunt for the actual signup step."
+      ],
+      "examples": [
+        {"label":"School event volunteer ask","input":"The team needs help checking in families at a reading night.","output":"Hi Community members,\n\nWe are looking for help with greet guests and check in families at our reading night. The commitment is two hours on Thursday evening, and it matters because it helps us run the event smoothly. If you can help, reply with your availability or complete the signup form.\n\nThank you,"},
+        {"label":"Food pantry support ask","input":"The pantry needs packers and shelf restocking help once a week.","output":"Hi Community members,\n\nWe are looking for help with packing supplies and restocking shelves. The commitment is two hours on Saturday mornings for three weeks, and it matters because it helps us run the food pantry smoothly. If you can help, reply with your availability or complete the signup form.\n\nThank you,"}
+      ],
+      "faqs": [
+        {"q":"Should I ask for a specific number of volunteers?","a":"Yes, if you know the need. Specific numbers help people understand the scale of the ask."},
+        {"q":"What makes a volunteer ask effective?","a":"A clear role, a clear commitment, and an easy reply path."}
+      ],
+      "relatedTags": ["volunteers", "community", "service"]
+    },
+    {
+      "slug": "grant-request-for-information-email",
+      "name": "Grant Request for Information Email",
+      "keyword": "grant information request email",
+      "intent": "inquiry",
+      "audience": "Nonprofits and grant seekers",
+      "outcome": "Ask a funder or program officer for the details you need without sounding unfocused.",
+      "metaDescription": "Write a grant information request email that is polite, specific, and easy to answer. Free private email tool by ReplyMind.",
+      "h1": "Ask grant questions with enough structure to get a useful reply.",
+      "intro": "When you need application details, a focused email works better than a long intro. This tool helps you say who you are, what you need, and why the answer matters.",
+      "fields": [
+        {"key":"recipient","label":"Program officer or funder name","type":"text","placeholder":"Ms. Chen","required":false},
+        {"key":"organization","label":"Your organization","type":"text","placeholder":"River City Youth Arts","required":true},
+        {"key":"grantFocus","label":"Grant or program of interest","type":"textarea","placeholder":"Youth arts capacity-building grant","required":true},
+        {"key":"questions","label":"Specific questions","type":"textarea","placeholder":"Eligibility, deadline, and whether indirect costs are allowed","required":true},
+        {"key":"deadlineNeed","label":"Why you need the answer now","type":"textarea","placeholder":"We are finalizing our application this week","required":true}
+      ],
+      "subjectTemplate": "Questions about the {{grantFocus}}",
+      "bodyTemplate": "Hello {{recipient}},\n\nI’m writing from {{organization}} about the {{grantFocus}}. I have a few specific questions: {{questions}}. The reason I’m reaching out now is {{deadlineNeed}}.\n\nIf you are the right contact, I would appreciate any guidance you can share.\n\nBest,",
+      "guidance": [
+        "Keep the request limited to the questions that unblock the application.",
+        "Show enough context for the recipient to route or answer the email quickly.",
+        "Avoid asking for a full consultation in the first note."
+      ],
+      "pitfalls": [
+        "Do not bury the actual questions in background information.",
+        "Do not ask for general advice when you need a specific answer."
+      ],
+      "examples": [
+        {"label":"Foundation inquiry","input":"A small nonprofit needs to confirm eligibility and deadline rules.","output":"Hello Ms. Chen,\n\nI’m writing from River City Youth Arts about the youth arts capacity-building grant. I have a few specific questions: eligibility, deadline, and whether indirect costs are allowed. The reason I’m reaching out now is we are finalizing our application this week.\n\nIf you are the right contact, I would appreciate any guidance you can share.\n\nBest,"},
+        {"label":"Government program inquiry","input":"An association needs to check whether a program supports training materials.","output":"Hello Ms. Chen,\n\nI’m writing from River City Youth Arts about the community education grant. I have a few specific questions: whether training materials are eligible, whether partnerships are allowed, and the expected decision timeline. The reason I’m reaching out now is we are finalizing our application this week.\n\nIf you are the right contact, I would appreciate any guidance you can share.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"How much background should I include?","a":"Just enough to show you are a real applicant and to explain why the question matters."},
+        {"q":"Should I attach documents in the first email?","a":"Only if the funder asks for them. Otherwise keep the first message focused on the question."}
+      ],
+      "relatedTags": ["grants", "fundraising", "inquiry"]
+    },
+    {
+      "slug": "membership-renewal-reminder-email",
+      "name": "Membership Renewal Reminder Email",
+      "keyword": "membership renewal reminder",
+      "intent": "reminder",
+      "audience": "Associations and membership organizations",
+      "outcome": "Encourage renewal by reminding members what they gain and what happens next.",
+      "metaDescription": "Draft a membership renewal reminder with value, renewal timing, and a simple renewal path. Free private email tool by ReplyMind.",
+      "h1": "Remind members why staying matters.",
+      "intro": "Renewal emails work best when they explain the value of membership and the exact next step. This tool helps you avoid sounding like a billing notice and keep the message member-centered.",
+      "fields": [
+        {"key":"recipient","label":"Member name or segment","type":"text","placeholder":"Jordan or active members","required":false},
+        {"key":"memberValue","label":"Membership value","type":"textarea","placeholder":"Access to events, resources, and the member directory","required":true},
+        {"key":"renewalDate","label":"Renewal date","type":"text","placeholder":"August 31","required":true},
+        {"key":"renewalStep","label":"How to renew","type":"textarea","placeholder":"Use the member portal or reply for an invoice","required":true},
+        {"key":"support","label":"Help contact","type":"textarea","placeholder":"Reply with questions about membership status","required":true}
+      ],
+      "subjectTemplate": "Your membership renewal is coming up",
+      "bodyTemplate": "Hi {{recipient}},\n\nYour membership renews on {{renewalDate}}. We hope you will stay connected because {{memberValue}}. To renew, {{renewalStep}}.\n\nIf you need help before renewing, {{support}}.\n\nBest,",
+      "guidance": [
+        "Lead with the member value, not the due date.",
+        "Make the renewal path simple and familiar.",
+        "Keep the support line visible for members who need help."
+      ],
+      "pitfalls": [
+        "Do not make the message sound like a collection notice.",
+        "Do not assume members remember all the benefits on their own."
+      ],
+      "examples": [
+        {"label":"Professional association renewal","input":"The member gets events, job board access, and a directory listing.","output":"Hi Jordan,\n\nYour membership renews on August 31. We hope you will stay connected because access to events, resources, and the member directory makes it easier to stay informed and connected. To renew, use the member portal or reply for an invoice.\n\nIf you need help before renewing, reply with questions about membership status.\n\nBest,"},
+        {"label":"Community nonprofit membership","input":"The member gets program updates and early access to workshops.","output":"Hi Jordan,\n\nYour membership renews on August 31. We hope you will stay connected because access to program updates and early access to workshops keeps you close to the work. To renew, use the member portal or reply for an invoice.\n\nIf you need help before renewing, reply with questions about membership status.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should renewal reminders include a deadline?","a":"Yes, if there is one. A specific date makes the reminder actionable."},
+        {"q":"What tone works best?","a":"Helpful and respectful. Members should feel invited to continue, not pressured."}
+      ],
+      "relatedTags": ["memberships", "renewal", "associations"]
+    },
+    {
+      "slug": "community-moderation-warning-message",
+      "name": "Community Moderation Warning Message",
+      "keyword": "community moderation warning email",
+      "intent": "moderation",
+      "audience": "Community managers",
+      "outcome": "Address a rule issue clearly while keeping the relationship intact when possible.",
+      "metaDescription": "Write a moderation warning message that names the issue, cites the expectation, and explains the next step. Free private email tool by ReplyMind.",
+      "h1": "Set the boundary without escalating unnecessarily.",
+      "intro": "Moderation messages work best when they are specific, calm, and action-oriented. This tool helps you explain what happened, what rule applies, and what needs to change next.",
+      "fields": [
+        {"key":"recipient","label":"Member or user name","type":"text","placeholder":"Taylor","required":false},
+        {"key":"issue","label":"What happened","type":"textarea","placeholder":"They posted promotional links in the discussion channel","required":true},
+        {"key":"rule","label":"Relevant rule or expectation","type":"textarea","placeholder":"No unsolicited promotions in member discussions","required":true},
+        {"key":"nextStep","label":"What must happen next","type":"textarea","placeholder":"Remove the post and keep promotions in the partner thread","required":true},
+        {"key":"tone","label":"Tone note","type":"textarea","placeholder":"Keep the message firm but respectful","required":true}
+      ],
+      "subjectTemplate": "A quick note about your recent post",
+      "bodyTemplate": "Hi {{recipient}},\n\nI want to follow up on your recent post. The issue is {{issue}}. Our expectation is {{rule}}. Going forward, {{nextStep}}.\n\n{{tone}}.\n\nBest,",
+      "guidance": [
+        "Stay factual and avoid debating the rule in the first message.",
+        "Give a clear correction path instead of only pointing out the problem.",
+        "Do not over-apologize when you are enforcing a community norm."
+      ],
+      "pitfalls": [
+        "Do not use ambiguous language that hides the behavior.",
+        "Do not turn the warning into a public shaming note."
+      ],
+      "examples": [
+        {"label":"Forum promotion warning","input":"A member posted affiliate links in the wrong channel.","output":"Hi Taylor,\n\nI want to follow up on your recent post. The issue is they posted promotional links in the discussion channel. Our expectation is no unsolicited promotions in member discussions. Going forward, remove the post and keep promotions in the partner thread.\n\nKeep the message firm but respectful.\n\nBest,"},
+        {"label":"Event chat warning","input":"A participant repeatedly interrupted other speakers in chat.","output":"Hi Taylor,\n\nI want to follow up on your recent post. The issue is repeated interruptions during the live chat. Our expectation is speakers and attendees should let each person finish. Going forward, use the Q&A queue and wait for your turn.\n\nKeep the message firm but respectful.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should a moderation warning include a long explanation?","a":"No. It should be clear enough to correct the behavior without turning into a debate."},
+        {"q":"When do I escalate?","a":"When the behavior continues after a direct warning or when the issue is severe enough to require immediate action."}
+      ],
+      "relatedTags": ["moderation", "community-rules", "warning"]
+    },
+    {
+      "slug": "course-launch-announcement-email",
+      "name": "Course Launch Announcement Email",
+      "keyword": "course launch announcement",
+      "intent": "announcement",
+      "audience": "Course creators and educators",
+      "outcome": "Announce a course launch with a clear value proposition and enrollment path.",
+      "metaDescription": "Write a course launch announcement that explains the promise, who it is for, and how to join. Free private email tool by ReplyMind.",
+      "h1": "Announce the course in a way people can understand fast.",
+      "intro": "Launch emails should tell people exactly what the course helps them do and why they should care now. This tool keeps the announcement focused on the problem, the promise, and the next step.",
+      "fields": [
+        {"key":"recipient","label":"Audience name","type":"text","placeholder":"Readers, students, or subscribers","required":false},
+        {"key":"coursePromise","label":"What the course helps them do","type":"textarea","placeholder":"Build a simple launch plan in two weeks","required":true},
+        {"key":"whoItsFor","label":"Who it is for","type":"textarea","placeholder":"New creators who want structure and accountability","required":true},
+        {"key":"launchHook","label":"Launch detail or hook","type":"textarea","placeholder":"Bonus lesson, live Q&A, or early-bird access","required":true},
+        {"key":"enrollStep","label":"How to enroll","type":"textarea","placeholder":"Click the enrollment link or reply for details","required":true}
+      ],
+      "subjectTemplate": "New course: {{coursePromise}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m excited to share a new course that helps you {{coursePromise}}. It is designed for {{whoItsFor}}, and the launch includes {{launchHook}}.\n\nIf you want to join, {{enrollStep}}.\n\nBest,",
+      "guidance": [
+        "Lead with the transformation, not the module list.",
+        "Make the audience fit obvious.",
+        "Give one launch reason that makes the email feel timely."
+      ],
+      "pitfalls": [
+        "Do not bury the actual course promise under launch hype.",
+        "Do not assume every reader already knows the course is relevant."
+      ],
+      "examples": [
+        {"label":"Teacher course launch","input":"The course helps teachers build parent communication systems and includes early-bird pricing.","output":"Hi Readers,\n\nI’m excited to share a new course that helps you build a simple launch plan in two weeks. It is designed for new creators who want structure and accountability, and the launch includes early-bird pricing.\n\nIf you want to join, click the enrollment link or reply for details.\n\nBest,"},
+        {"label":"Community manager workshop launch","input":"The workshop teaches engagement planning and includes a live Q&A.","output":"Hi Readers,\n\nI’m excited to share a new course that helps you build a stronger engagement plan in four weeks. It is designed for community managers who need a practical system, and the launch includes a live Q&A.\n\nIf you want to join, click the enrollment link or reply for details.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should launch emails list every module?","a":"Not in the first announcement. Focus on the result and the right audience."},
+        {"q":"How promotional can the tone be?","a":"Clear and enthusiastic, but still grounded in a real learning outcome."}
+      ],
+      "relatedTags": ["launch", "course", "announcement"]
+    },
+    {
+      "slug": "feedback-request-after-workshop",
+      "name": "Feedback Request After Workshop",
+      "keyword": "workshop feedback request email",
+      "intent": "feedback",
+      "audience": "Educators, facilitators, and event hosts",
+      "outcome": "Ask for useful feedback after a workshop with questions people can answer quickly.",
+      "metaDescription": "Create a feedback request email for workshops with targeted questions and a clear response path. Free private email tool by ReplyMind.",
+      "h1": "Ask for feedback people can actually give.",
+      "intro": "The best feedback requests are short and targeted. This tool helps you ask about the right parts of a workshop so people can respond without writing an essay.",
+      "fields": [
+        {"key":"recipient","label":"Audience or attendees","type":"text","placeholder":"Workshop attendees","required":false},
+        {"key":"sessionTopic","label":"Workshop topic","type":"textarea","placeholder":"Storytelling for social impact","required":true},
+        {"key":"feedbackFocus","label":"What feedback you want","type":"textarea","placeholder":"Clarity, pace, examples, and next topics","required":true},
+        {"key":"surveyLink","label":"Survey or reply path","type":"textarea","placeholder":"Complete the quick form or reply with two notes","required":true},
+        {"key":"thanksNote","label":"Thank-you note","type":"textarea","placeholder":"We appreciate your help improving future sessions","required":true}
+      ],
+      "subjectTemplate": "Quick feedback on {{sessionTopic}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for joining the {{sessionTopic}} workshop. I’d love your feedback on {{feedbackFocus}}. You can {{surveyLink}}.\n\n{{thanksNote}}.\n\nBest,",
+      "guidance": [
+        "Ask about specific aspects of the session, not generic satisfaction.",
+        "Keep the response path short enough that people will finish it.",
+        "Thank participants for their time and attention."
+      ],
+      "pitfalls": [
+        "Do not send a giant survey link with no context.",
+        "Do not ask questions you will not use."
+      ],
+      "examples": [
+        {"label":"Live class feedback","input":"The workshop covered social media stories and the host wants pacing feedback.","output":"Hi Workshop attendees,\n\nThanks for joining the Storytelling for social impact workshop. I’d love your feedback on clarity, pace, examples, and next topics. You can complete the quick form or reply with two notes.\n\nWe appreciate your help improving future sessions.\n\nBest,"},
+        {"label":"Volunteer training feedback","input":"The training introduced intake procedures and needs feedback on examples used.","output":"Hi Workshop attendees,\n\nThanks for joining the Storytelling for social impact workshop. I’d love your feedback on clarity, pace, examples, and next topics. You can complete the quick form or reply with two notes.\n\nWe appreciate your help improving future sessions.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Why is feedback hard to collect?","a":"Because the ask is often too broad or too long. Specific questions improve response rates."},
+        {"q":"Should I include an incentive?","a":"Only if it fits your program. A clear ask is usually more important than a reward."}
+      ],
+      "relatedTags": ["feedback", "workshop", "improvement"]
+    },
+    {
+      "slug": "webinar-reminder-for-registrants",
+      "name": "Webinar Reminder for Registrants",
+      "keyword": "webinar reminder email",
+      "intent": "reminder",
+      "audience": "Educators and event hosts",
+      "outcome": "Reduce no-shows by reminding registrants what the session is about and how to join.",
+      "metaDescription": "Write a webinar reminder email with the topic, join details, preparation steps, and support contact. Free private email tool by ReplyMind.",
+      "h1": "Remind people without making them scroll for the basics.",
+      "intro": "A reminder should answer the obvious questions quickly: what is it, when is it, and how do I join? This tool keeps those details up front and gives registrants one thing to prepare.",
+      "fields": [
+        {"key":"recipient","label":"Registrant name or list","type":"text","placeholder":"Jordan or all registrants","required":false},
+        {"key":"topic","label":"Webinar topic","type":"textarea","placeholder":"How to build a sustainable volunteer pipeline","required":true},
+        {"key":"joinInfo","label":"Join information","type":"textarea","placeholder":"Zoom link and start time","required":true},
+        {"key":"prep","label":"What to prepare","type":"textarea","placeholder":"Bring a question or open the resource sheet","required":true},
+        {"key":"support","label":"Support contact","type":"textarea","placeholder":"Reply if you need help joining","required":true}
+      ],
+      "subjectTemplate": "Reminder: {{topic}} is coming up",
+      "bodyTemplate": "Hi {{recipient}},\n\nA reminder that {{topic}} is coming up soon. To join, {{joinInfo}}. Before we start, please {{prep}}.\n\nIf you need help, {{support}}.\n\nBest,",
+      "guidance": [
+        "Put the join details before the preparation note.",
+        "Keep the reminder short enough to be useful on mobile.",
+        "Use one preparation action, not several."
+      ],
+      "pitfalls": [
+        "Do not bury the link under promotional copy.",
+        "Do not add new topics that were not in the registration."
+      ],
+      "examples": [
+        {"label":"Nonprofit webinar reminder","input":"The webinar is on Tuesday at 1 p.m. and attendees should bring one question.","output":"Hi Jordan,\n\nA reminder that How to build a sustainable volunteer pipeline is coming up soon. To join, use the Zoom link and start time in your registration email. Before we start, please bring a question or open the resource sheet.\n\nIf you need help, reply if you need help joining.\n\nBest,"},
+        {"label":"Educator webinar reminder","input":"The session is about classroom engagement and attendees should review a handout.","output":"Hi Jordan,\n\nA reminder that classroom engagement strategies is coming up soon. To join, use the Zoom link and start time in your registration email. Before we start, please bring a question or open the resource sheet.\n\nIf you need help, reply if you need help joining.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should I send more than one reminder?","a":"Only if the event needs it. Keep each reminder distinct and useful."},
+        {"q":"What is the best reminder detail to include?","a":"The one detail that makes joining or preparing easier."}
+      ],
+      "relatedTags": ["webinar", "reminder", "attendance"]
+    },
+    {
+      "slug": "community-guidelines-explanation-email",
+      "name": "Community Guidelines Explanation Email",
+      "keyword": "community guidelines email",
+      "intent": "policy",
+      "audience": "Community managers and moderators",
+      "outcome": "Explain community expectations in a friendly, usable way that helps people participate well.",
+      "metaDescription": "Draft a community guidelines explanation email with the most important rules, why they matter, and where to read more. Free private email tool by ReplyMind.",
+      "h1": "Explain the rules before they become problems.",
+      "intro": "Good guidelines emails prevent confusion by making the most important expectations easy to understand. This tool helps you summarize the rules and point members to the full version when needed.",
+      "fields": [
+        {"key":"recipient","label":"Community name or members","type":"text","placeholder":"New members","required":false},
+        {"key":"topRules","label":"Top rules","type":"textarea","placeholder":"Be respectful, stay on topic, and avoid spam","required":true},
+        {"key":"whyRulesMatter","label":"Why the rules exist","type":"textarea","placeholder":"They keep discussions useful and welcoming","required":true},
+        {"key":"fullGuidelines","label":"Where to read more","type":"textarea","placeholder":"Link to the full code of conduct or handbook","required":true},
+        {"key":"helpPoint","label":"Where to ask questions","type":"textarea","placeholder":"Reply here or contact the moderation team","required":true}
+      ],
+      "subjectTemplate": "A quick guide to how our community works",
+      "bodyTemplate": "Hi {{recipient}},\n\nTo help everyone have a good experience, here are the main expectations: {{topRules}}. These rules matter because {{whyRulesMatter}}. You can read the full guidelines here: {{fullGuidelines}}.\n\nIf anything is unclear, {{helpPoint}}.\n\nBest,",
+      "guidance": [
+        "Summarize the rules people actually need first.",
+        "Explain the reason behind the rules in one sentence.",
+        "Give a clear path for questions so people do not guess."
+      ],
+      "pitfalls": [
+        "Do not overwhelm new members with the entire handbook.",
+        "Do not sound punitive or suspicious."
+      ],
+      "examples": [
+        {"label":"New member guide","input":"The group wants to prevent self-promotion and off-topic posts.","output":"Hi New members,\n\nTo help everyone have a good experience, here are the main expectations: be respectful, stay on topic, and avoid spam. These rules matter because they keep discussions useful and welcoming. You can read the full guidelines here: link to the full code of conduct or handbook.\n\nIf anything is unclear, reply here or contact the moderation team.\n\nBest,"},
+        {"label":"Volunteer network guide","input":"The network needs clarity on event etiquette and channel use.","output":"Hi New members,\n\nTo help everyone have a good experience, here are the main expectations: be respectful, stay on topic, and avoid spam. These rules matter because they keep discussions useful and welcoming. You can read the full guidelines here: link to the full code of conduct or handbook.\n\nIf anything is unclear, reply here or contact the moderation team.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should guidelines emails be long?","a":"No. Give the essentials and point people to the detailed version."},
+        {"q":"When should I send this email?","a":"As early as possible, ideally before people start posting."}
+      ],
+      "relatedTags": ["guidelines", "onboarding", "moderation"]
+    },
+    {
+      "slug": "peer-mentor-introduction-email",
+      "name": "Peer Mentor Introduction Email",
+      "keyword": "peer mentor introduction email",
+      "intent": "introduction",
+      "audience": "Programs, mentors, and coordinators",
+      "outcome": "Introduce mentors and mentees in a way that makes the first connection easier.",
+      "metaDescription": "Create a mentor introduction email with context, common ground, and a simple first question. Free private email tool by ReplyMind.",
+      "h1": "Make the first mentor connection easy to start.",
+      "intro": "A useful intro gives both people enough context to begin a real conversation. This tool helps you introduce the pair, explain why they were matched, and suggest a first move.",
+      "fields": [
+        {"key":"recipient","label":"Pair or group name","type":"text","placeholder":"Mentor pair", "required":false},
+        {"key":"mentorContext","label":"Mentor background","type":"textarea","placeholder":"They have experience in nonprofit fundraising","required":true},
+        {"key":"menteeContext","label":"Mentee background","type":"textarea","placeholder":"They are building their first community program","required":true},
+        {"key":"commonGround","label":"Shared connection","type":"textarea","placeholder":"Both want practical advice on leadership","required":true},
+        {"key":"firstQuestion","label":"First question to ask","type":"textarea","placeholder":"What should the mentee focus on first?","required":true}
+      ],
+      "subjectTemplate": "Introducing your mentor match",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to introduce you because {{mentorContext}} and {{menteeContext}}. You also share a common interest in {{commonGround}}. A good first question to start with is {{firstQuestion}}.\n\nBest,",
+      "guidance": [
+        "Give enough context to make the intro feel intentional.",
+        "Point the pair toward one easy opening question.",
+        "Keep the intro short so both people can reply quickly."
+      ],
+      "pitfalls": [
+        "Do not over-explain the matching logic.",
+        "Do not make the first message feel like a formal interview."
+      ],
+      "examples": [
+        {"label":"Career mentor match","input":"The mentor has fundraising experience and the mentee is launching a nonprofit.","output":"Hi Mentor pair,\n\nI wanted to introduce you because they have experience in nonprofit fundraising and they are building their first community program. You also share a common interest in practical advice on leadership. A good first question to start with is what should the mentee focus on first?\n\nBest,"},
+        {"label":"Student peer mentor match","input":"One student is strong in research and the other needs help organizing their project.","output":"Hi Mentor pair,\n\nI wanted to introduce you because they have experience in research methods and they are planning a student project. You also share a common interest in practical advice on leadership. A good first question to start with is how should the mentee organize the first week?\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should mentors and mentees get separate emails?","a":"Sometimes yes, but an introduction email can work well when both sides need the same context."},
+        {"q":"What makes the first message useful?","a":"A clear reason for the match and one good conversation starter."}
+      ],
+      "relatedTags": ["mentorship", "introduction", "programs"]
+    },
+    {
+      "slug": "advocacy-update-to-members",
+      "name": "Advocacy Update to Members",
+      "keyword": "advocacy update email",
+      "intent": "update",
+      "audience": "Associations and advocacy groups",
+      "outcome": "Share policy or advocacy progress with members in a clear, grounded way.",
+      "metaDescription": "Write an advocacy update email that explains progress, current position, and how members can help. Free private email tool by ReplyMind.",
+      "h1": "Report progress without turning it into a speech.",
+      "intro": "Members want to know what changed, why it matters, and whether action is needed. This tool helps you summarize the advocacy situation in plain language and point to one useful next step.",
+      "fields": [
+        {"key":"recipient","label":"Member group","type":"text","placeholder":"Association members","required":false},
+        {"key":"progress","label":"Recent progress","type":"textarea","placeholder":"A committee advanced the bill to the next stage","required":true},
+        {"key":"currentState","label":"Where things stand now","type":"textarea","placeholder":"The proposal is still under review and open for comment","required":true},
+        {"key":"memberAction","label":"How members can help","type":"textarea","placeholder":"Submit comments or contact a local representative","required":true},
+        {"key":"thanks","label":"Thank-you note","type":"textarea","placeholder":"Thank members for staying engaged","required":true}
+      ],
+      "subjectTemplate": "Advocacy update: what changed and what comes next",
+      "bodyTemplate": "Hi {{recipient}},\n\nHere is the latest update: {{progress}}. Right now, {{currentState}}. If you want to help, {{memberAction}}.\n\n{{thanks}}.\n\nBest,",
+      "guidance": [
+        "State the progress and status separately so members can follow along.",
+        "Make any action item concrete and realistic.",
+        "Avoid jargon that only insiders understand."
+      ],
+      "pitfalls": [
+        "Do not treat the update like a campaign memo.",
+        "Do not ask members to do something vague like 'spread the word.'"
+      ],
+      "examples": [
+        {"label":"Legislative update","input":"The bill moved forward and members can submit comments this week.","output":"Hi Association members,\n\nHere is the latest update: a committee advanced the bill to the next stage. Right now, the proposal is still under review and open for comment. If you want to help, submit comments or contact a local representative.\n\nThank you for staying engaged.\n\nBest,"},
+        {"label":"Policy response update","input":"The organization drafted a response and needs member testimony support.","output":"Hi Association members,\n\nHere is the latest update: we submitted our draft response. Right now, the policy is still under review. If you want to help, share a short member story or contact the policy team.\n\nThank you for staying engaged.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should advocacy updates be political?","a":"They should be factual, relevant to the mission, and focused on the action the member can take."},
+        {"q":"How often should I send updates?","a":"When there is meaningful progress or a clear action item, not just to fill a calendar."}
+      ],
+      "relatedTags": ["advocacy", "members", "policy"]
+    },
+    {
+      "slug": "sponsor-thank-you-after-event",
+      "name": "Sponsor Thank-You After Event",
+      "keyword": "sponsor thank you email",
+      "intent": "thank-you",
+      "audience": "Event and partnership teams",
+      "outcome": "Thank sponsors after an event while reinforcing the value of the partnership.",
+      "metaDescription": "Write a sponsor thank-you email that acknowledges support, references the event, and opens the door to future collaboration. Free private email tool by ReplyMind.",
+      "h1": "Close the loop with sponsors in a human way.",
+      "intro": "Sponsors notice when the follow-up is specific and timely. This tool helps you thank them for their support, mention the event outcome, and suggest a next connection if appropriate.",
+      "fields": [
+        {"key":"recipient","label":"Sponsor name","type":"text","placeholder":"Dana","required":false},
+        {"key":"event","label":"Event name","type":"textarea","placeholder":"Annual learning summit","required":true},
+        {"key":"support","label":"What they supported","type":"textarea","placeholder":"Stage sponsorship, refreshments, or scholarships","required":true},
+        {"key":"eventOutcome","label":"Event outcome","type":"textarea","placeholder":"Strong attendance and helpful audience engagement","required":true},
+        {"key":"futureStep","label":"Possible next step","type":"textarea","placeholder":"Share a recap or discuss next year's event","required":true}
+      ],
+      "subjectTemplate": "Thank you for supporting {{event}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nThank you again for supporting {{event}} through {{support}}. Your help made a difference and contributed to {{eventOutcome}}. We appreciated the chance to work together.\n\nIf helpful, {{futureStep}}.\n\nBest,",
+      "guidance": [
+        "Name the specific support so the thank-you feels real.",
+        "Reference the event outcome in neutral, factual language.",
+        "Only suggest a next step if it genuinely fits the relationship."
+      ],
+      "pitfalls": [
+        "Do not write a generic sponsorship acknowledgment.",
+        "Do not launch into a new pitch before thanking them."
+      ],
+      "examples": [
+        {"label":"Conference sponsor","input":"They sponsored the keynote and the event had strong attendance.","output":"Hi Dana,\n\nThank you again for supporting annual learning summit through stage sponsorship. Your help made a difference and contributed to strong attendance and helpful audience engagement. We appreciated the chance to work together.\n\nIf helpful, share a recap or discuss next year's event.\n\nBest,"},
+        {"label":"Community fair sponsor","input":"They covered scholarships for attendees and helped with refreshments.","output":"Hi Dana,\n\nThank you again for supporting annual learning summit through scholarships and refreshments. Your help made a difference and contributed to a welcoming event experience. We appreciated the chance to work together.\n\nIf helpful, share a recap or discuss next year's event.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should sponsors get a thank-you even if they already received a report?","a":"Yes. A thank-you and a report serve different purposes."},
+        {"q":"How long should it be?","a":"Short. The goal is appreciation, not another presentation."}
+      ],
+      "relatedTags": ["sponsors", "events", "gratitude"]
+    },
+    {
+      "slug": "member-survey-participation-request",
+      "name": "Member Survey Participation Request",
+      "keyword": "member survey email",
+      "intent": "feedback",
+      "audience": "Membership and community teams",
+      "outcome": "Ask members to complete a survey by explaining why their input matters and what will improve.",
+      "metaDescription": "Create a member survey request email that explains the purpose, time required, and how the feedback will be used. Free private email tool by ReplyMind.",
+      "h1": "Ask for input that members will actually want to give.",
+      "intro": "People respond when they know the survey is short and will lead to action. This tool helps you explain the purpose, the time commitment, and the benefit to members.",
+      "fields": [
+        {"key":"recipient","label":"Member group","type":"text","placeholder":"Active members","required":false},
+        {"key":"surveyPurpose","label":"Why you are asking","type":"textarea","placeholder":"To improve programs and event scheduling","required":true},
+        {"key":"timeNeeded","label":"How long it takes","type":"textarea","placeholder":"About three minutes","required":true},
+        {"key":"useOfFeedback","label":"How feedback will be used","type":"textarea","placeholder":"We will use it to plan next quarter's calendar","required":true},
+        {"key":"surveyLink","label":"Survey link or reply path","type":"textarea","placeholder":"Complete the survey here or reply with one thought","required":true}
+      ],
+      "subjectTemplate": "We would value your input",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe are asking for your input because {{surveyPurpose}}. It should take {{timeNeeded}}, and we will use your feedback to {{useOfFeedback}}. You can {{surveyLink}}.\n\nThank you for helping us improve.\n\nBest,",
+      "guidance": [
+        "Be clear about the time needed before asking for action.",
+        "Explain how the feedback will change something concrete.",
+        "Offer an easy reply path for people who will not click a survey."
+      ],
+      "pitfalls": [
+        "Do not ask for feedback without saying how it will be used.",
+        "Do not hide the survey behind unnecessary context."
+      ],
+      "examples": [
+        {"label":"Program improvement survey","input":"Members should review programming and scheduling, and the survey takes three minutes.","output":"Hi Active members,\n\nWe are asking for your input because we want to improve programs and event scheduling. It should take about three minutes, and we will use your feedback to plan next quarter's calendar. You can complete the survey here or reply with one thought.\n\nThank you for helping us improve.\n\nBest,"},
+        {"label":"Conference planning survey","input":"Members can help choose workshop topics and formats.","output":"Hi Active members,\n\nWe are asking for your input because we want to improve programs and event scheduling. It should take about three minutes, and we will use your feedback to choose workshop topics and formats for next quarter. You can complete the survey here or reply with one thought.\n\nThank you for helping us improve.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"What if members ignore the survey?","a":"Shorten the ask and make the benefit clearer. Many people respond when they know the result matters."},
+        {"q":"Should I promise changes?","a":"Only promise that feedback will inform decisions, not that every suggestion will be adopted."}
+      ],
+      "relatedTags": ["survey", "members", "feedback"]
+    },
+    {
+      "slug": "event-speaker-invitation-email",
+      "name": "Event Speaker Invitation Email",
+      "keyword": "speaker invitation email",
+      "intent": "invitation",
+      "audience": "Event producers and community organizers",
+      "outcome": "Invite a speaker with enough context to make acceptance easy and respectful.",
+      "metaDescription": "Draft a speaker invitation email with event context, audience, topic, and a simple response request. Free private email tool by ReplyMind.",
+      "h1": "Invite a speaker with a reason worth saying yes to.",
+      "intro": "Good speaker invitations explain the audience, the topic, and why the speaker is a fit. This tool helps you make a focused invitation that respects the recipient's time.",
+      "fields": [
+        {"key":"recipient","label":"Speaker name","type":"text","placeholder":"Dr. Lee","required":false},
+        {"key":"eventContext","label":"Event context","type":"textarea","placeholder":"Annual community learning day for educators","required":true},
+        {"key":"topicFit","label":"Why they fit","type":"textarea","placeholder":"Their expertise matches the session theme","required":true},
+        {"key":"audience","label":"Who will attend","type":"textarea","placeholder":"Teachers, coaches, and program leaders","required":true},
+        {"key":"replyRequest","label":"Response request","type":"textarea","placeholder":"Reply if you would like to discuss the invitation","required":true}
+      ],
+      "subjectTemplate": "Invitation to speak at {{eventContext}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m reaching out because we are planning {{eventContext}}, and your work feels like a strong fit. The reason is {{topicFit}}. The audience will include {{audience}}.\n\nIf you are open to it, {{replyRequest}}.\n\nBest,",
+      "guidance": [
+        "Explain the fit before asking for a commitment.",
+        "Describe the audience so the speaker can judge relevance quickly.",
+        "Keep the response ask low-friction."
+      ],
+      "pitfalls": [
+        "Do not make the invitation sound mass-produced.",
+        "Do not omit the audience context, which is often the deciding factor."
+      ],
+      "examples": [
+        {"label":"Conference keynote invite","input":"The event is a community learning day for educators and the speaker works on inclusion.","output":"Hi Dr. Lee,\n\nI’m reaching out because we are planning annual community learning day for educators, and your work feels like a strong fit. The reason is your expertise matches the session theme. The audience will include teachers, coaches, and program leaders.\n\nIf you are open to it, reply if you would like to discuss the invitation.\n\nBest,"},
+        {"label":"Panel speaker invite","input":"The event needs a panelist with nonprofit operations experience.","output":"Hi Dr. Lee,\n\nI’m reaching out because we are planning a nonprofit operations panel, and your work feels like a strong fit. The reason is your expertise matches the session theme. The audience will include nonprofit staff and board members.\n\nIf you are open to it, reply if you would like to discuss the invitation.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should I include honorarium details in the first note?","a":"If it helps set expectations, yes. Otherwise keep the first email focused on fit and interest."},
+        {"q":"What is the main goal of the invitation?","a":"To make the speaker confident that the event and audience are worth their time."}
+      ],
+      "relatedTags": ["speakers", "events", "invitation"]
+    },
+    {
+      "slug": "lesson-extension-for-students",
+      "name": "Lesson Extension for Students",
+      "keyword": "lesson extension email",
+      "intent": "instruction",
+      "audience": "Teachers and tutors",
+      "outcome": "Send an extra practice or reflection task that reinforces the lesson without overwhelming students.",
+      "metaDescription": "Create a lesson extension email with the skill, the extra task, and what to submit. Free private email tool by ReplyMind.",
+      "h1": "Give students one more step that actually helps them learn.",
+      "intro": "Extensions work when they are focused and manageable. This tool helps you explain the skill, assign a follow-up activity, and tell students exactly what to turn in.",
+      "fields": [
+        {"key":"recipient","label":"Student group","type":"text","placeholder":"Class 6B","required":false},
+        {"key":"skill","label":"Skill being reinforced","type":"textarea","placeholder":"Summarizing a source in your own words","required":true},
+        {"key":"extensionTask","label":"Extra practice task","type":"textarea","placeholder":"Write a short response using today's article","required":true},
+        {"key":"submission","label":"What to submit","type":"textarea","placeholder":"Upload a paragraph or bring notes to class","required":true},
+        {"key":"support","label":"Help instruction","type":"textarea","placeholder":"Reply if you need a simpler version","required":true}
+      ],
+      "subjectTemplate": "One more practice task for {{skill}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nToday’s lesson focused on {{skill}}. For extra practice, please {{extensionTask}}. When you are done, {{submission}}.\n\nIf you need help, {{support}}.\n\nBest,",
+      "guidance": [
+        "Keep the extension narrow so students know what matters.",
+        "Make the submission step obvious.",
+        "Offer support without making the task feel optional if it is required."
+      ],
+      "pitfalls": [
+        "Do not assign a second lesson disguised as an extension.",
+        "Do not leave students guessing about the deliverable."
+      ],
+      "examples": [
+        {"label":"Reading response","input":"Students practiced summarizing and need a short paragraph assignment.","output":"Hi Class 6B,\n\nToday’s lesson focused on summarizing a source in your own words. For extra practice, please write a short response using today's article. When you are done, upload a paragraph or bring notes to class.\n\nIf you need help, reply if you need a simpler version.\n\nBest,"},
+        {"label":"Math reflection","input":"Students worked on showing steps and need a reflection prompt.","output":"Hi Class 6B,\n\nToday’s lesson focused on showing your work clearly. For extra practice, please explain one problem step by step in your notebook. When you are done, upload a paragraph or bring notes to class.\n\nIf you need help, reply if you need a simpler version.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should extensions be graded?","a":"Only if you intend them to be. Make that expectation clear."},
+        {"q":"How much detail should I include?","a":"Enough for a student to complete the task without asking what to do next."}
+      ],
+      "relatedTags": ["students", "lesson", "assignment"]
+    },
+    {
+      "slug": "alumni-reengagement-email",
+      "name": "Alumni Reengagement Email",
+      "keyword": "alumni reengagement email",
+      "intent": "reengagement",
+      "audience": "Schools, programs, and membership communities",
+      "outcome": "Reconnect with alumni by offering a useful update, not just another ask.",
+      "metaDescription": "Write an alumni reengagement email that shares a relevant update and invites continued connection. Free private email tool by ReplyMind.",
+      "h1": "Reach out to alumni with a reason to reply.",
+      "intro": "Alumni respond when the message feels relevant to their past connection and current interests. This tool helps you offer a meaningful update and one easy way back in.",
+      "fields": [
+        {"key":"recipient","label":"Alumni group or name","type":"text","placeholder":"Class of 2020","required":false},
+        {"key":"update","label":"Relevant update","type":"textarea","placeholder":"A new program, milestone, or community resource","required":true},
+        {"key":"sharedMemory","label":"Shared connection","type":"textarea","placeholder":"A past event, project, or tradition","required":true},
+        {"key":"stayConnected","label":"How to stay connected","type":"textarea","placeholder":"Join the alumni list or follow the community page","required":true},
+        {"key":"replyPrompt","label":"Optional reply prompt","type":"textarea","placeholder":"Reply with what you are working on now","required":true}
+      ],
+      "subjectTemplate": "A quick update from your community",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to share a quick update: {{update}}. It made me think of {{sharedMemory}} and the people who helped build this community.\n\nIf you’d like to stay connected, {{stayConnected}}. If you feel like replying, {{replyPrompt}}.\n\nBest,",
+      "guidance": [
+        "Use the shared memory to make the message feel personal.",
+        "Offer a low-effort way to reconnect.",
+        "Avoid making the email read like a fundraising blast."
+      ],
+      "pitfalls": [
+        "Do not lead with a donation ask.",
+        "Do not mention an irrelevant update just to fill space."
+      ],
+      "examples": [
+        {"label":"School alumni note","input":"The school launched a mentorship network and wants alumni to join.","output":"Hi Class of 2020,\n\nI wanted to share a quick update: we launched a new mentorship network for current students. It made me think of your senior project presentations and the people who helped build this community.\n\nIf you’d like to stay connected, join the alumni list or follow the community page. If you feel like replying, reply with what you are working on now.\n\nBest,"},
+        {"label":"Program alumni note","input":"The program is celebrating a milestone and inviting alumni back for a panel.","output":"Hi Class of 2020,\n\nI wanted to share a quick update: the program is celebrating its tenth year with a new alumni panel. It made me think of the first cohort and the people who helped build this community.\n\nIf you’d like to stay connected, join the alumni list or follow the community page. If you feel like replying, reply with what you are working on now.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"How often should alumni be emailed?","a":"Only when you have a relevant reason to reach out.",
+        "a":"Only when you have a relevant reason to reach out."},
+        {"q":"What keeps alumni emails from feeling generic?","a":"A specific shared memory and a useful update."}
+      ],
+      "relatedTags": ["alumni", "reengagement", "community"]
+    },
+    {
+      "slug": "board-or-advisory-group-update",
+      "name": "Board or Advisory Group Update",
+      "keyword": "board update email",
+      "intent": "update",
+      "audience": "Nonprofit leaders and program directors",
+      "outcome": "Share the current state, key decisions, and what guidance you need from the board or advisory group.",
+      "metaDescription": "Draft a board or advisory update with progress, decisions needed, and questions for guidance. Free private email tool by ReplyMind.",
+      "h1": "Send the board a useful update instead of a long recap.",
+      "intro": "A board update should orient people quickly and tell them what decisions or insight you need. This tool helps you structure the message around progress, risks, and the question that matters most.",
+      "fields": [
+        {"key":"recipient","label":"Board or advisory group","type":"text","placeholder":"Board members","required":false},
+        {"key":"progress","label":"Recent progress","type":"textarea","placeholder":"Program enrollment increased and the pilot launched on time","required":true},
+        {"key":"challenge","label":"Main challenge","type":"textarea","placeholder":"Staff capacity is tight during the expansion","required":true},
+        {"key":"decisionNeeded","label":"Decision needed","type":"textarea","placeholder":"Approve an extra contractor budget","required":true},
+        {"key":"question","label":"Question for the group","type":"textarea","placeholder":"Which priority should we protect first?","required":true}
+      ],
+      "subjectTemplate": "Board update and one decision point",
+      "bodyTemplate": "Hi {{recipient}},\n\nHere is the current update: {{progress}}. The main challenge is {{challenge}}. We need a decision on {{decisionNeeded}}.\n\nMy question for the group is {{question}}.\n\nBest,",
+      "guidance": [
+        "Keep the update concise enough for board prep.",
+        "Separate progress from the challenge so the message is easy to scan.",
+        "Ask one precise question if you want useful guidance."
+      ],
+      "pitfalls": [
+        "Do not use the update as a full operational report.",
+        "Do not ask for broad feedback if you need a specific decision."
+      ],
+      "examples": [
+        {"label":"Nonprofit advisory update","input":"Enrollment grew, but staffing is tight and an extra contractor may be needed.","output":"Hi Board members,\n\nHere is the current update: program enrollment increased and the pilot launched on time. The main challenge is staff capacity is tight during the expansion. We need a decision on approve an extra contractor budget.\n\nMy question for the group is which priority should we protect first?\n\nBest,"},
+        {"label":"Education board update","input":"A new program launched and the team wants input on scaling.","output":"Hi Board members,\n\nHere is the current update: the new program launched and attendance was strong. The main challenge is staff capacity is tight during the expansion. We need a decision on approve the next hiring step.\n\nMy question for the group is which priority should we protect first?\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"What makes a board update effective?","a":"Clarity about progress, issues, and what guidance is needed."},
+        {"q":"Should I include every department update?","a":"No. Include only the items the group needs to understand or decide on."}
+      ],
+      "relatedTags": ["board", "advisory", "governance"]
+    },
+    {
+      "slug": "donor-receipt-with-impact-note",
+      "name": "Donor Receipt With Impact Note",
+      "keyword": "donor receipt email",
+      "intent": "receipt",
+      "audience": "Nonprofits and fundraising operations",
+      "outcome": "Combine a receipt acknowledgment with a brief impact note that feels human.",
+      "metaDescription": "Create a donor receipt email with the donation details, acknowledgment, and impact statement. Free private email tool by ReplyMind.",
+      "h1": "Turn a receipt into a meaningful acknowledgment.",
+      "intro": "A receipt email can be more than a transaction notice. This tool helps you include the donation details, the acknowledgment language, and a short note about what the gift supports.",
+      "fields": [
+        {"key":"recipient","label":"Donor name","type":"text","placeholder":"Morgan","required":false},
+        {"key":"giftDetails","label":"Gift details","type":"textarea","placeholder":"Donation amount and date","required":true},
+        {"key":"acknowledgment","label":"Acknowledgment line","type":"textarea","placeholder":"Thank you for your generous support","required":true},
+        {"key":"impactNote","label":"Impact note","type":"textarea","placeholder":"Your gift helps fund our tutoring program","required":true},
+        {"key":"recordsNote","label":"Records note","type":"textarea","placeholder":"Keep this email for your records","required":true}
+      ],
+      "subjectTemplate": "Your donation receipt from our team",
+      "bodyTemplate": "Hi {{recipient}},\n\nThis email confirms {{giftDetails}}. {{acknowledgment}}. {{impactNote}}.\n\n{{recordsNote}}.\n\nBest,",
+      "guidance": [
+        "Keep the receipt part accurate and clear.",
+        "Use the impact note to reinforce mission value without sounding salesy.",
+        "Do not crowd the email with extra fundraising language."
+      ],
+      "pitfalls": [
+        "Do not make the receipt hard to find or read.",
+        "Do not replace required acknowledgment language with a vague thank-you."
+      ],
+      "examples": [
+        {"label":"Recurring donor receipt","input":"A recurring monthly gift supports tutoring and the donor needs a record copy.","output":"Hi Morgan,\n\nThis email confirms a recurring donation made on the first of the month. Thank you for your generous support. Your gift helps fund our tutoring program.\n\nKeep this email for your records.\n\nBest,"},
+        {"label":"Event fundraiser donation receipt","input":"A one-time gift supported a student scholarship fund.","output":"Hi Morgan,\n\nThis email confirms a one-time donation made this week. Thank you for your generous support. Your gift helps fund our scholarship program.\n\nKeep this email for your records.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Can a receipt email also be warm?","a":"Yes. It should still be accurate and clear, but it does not need to feel cold."},
+        {"q":"Should I include tax advice?","a":"Only the standard acknowledgment or receipt language your organization uses."}
+      ],
+      "relatedTags": ["donors", "receipt", "fundraising"]
+    },
+    {
+      "slug": "volunteer-shift-confirmation-email",
+      "name": "Volunteer Shift Confirmation Email",
+      "keyword": "volunteer shift confirmation",
+      "intent": "confirmation",
+      "audience": "Volunteer coordinators",
+      "outcome": "Confirm a volunteer shift with timing, location, and expectations so no one is surprised.",
+      "metaDescription": "Write a volunteer shift confirmation with schedule, location, tasks, and contact details. Free private email tool by ReplyMind.",
+      "h1": "Confirm the shift before the volunteers show up.",
+      "intro": "Volunteers need a message they can act on. This tool helps you confirm the schedule, location, job to be done, and who to contact if plans change.",
+      "fields": [
+        {"key":"recipient","label":"Volunteer name","type":"text","placeholder":"Sam","required":false},
+        {"key":"shiftTime","label":"Shift time","type":"textarea","placeholder":"Saturday from 9 a.m. to 12 p.m.","required":true},
+        {"key":"location","label":"Location or link","type":"textarea","placeholder":"Community center front desk","required":true},
+        {"key":"task","label":"Main task","type":"textarea","placeholder":"Check in guests and hand out name badges","required":true},
+        {"key":"contact","label":"Contact person","type":"textarea","placeholder":"Reply to this email or text the coordinator","required":true}
+      ],
+      "subjectTemplate": "Your volunteer shift is confirmed",
+      "bodyTemplate": "Hi {{recipient}},\n\nYour shift is confirmed for {{shiftTime}} at {{location}}. Your main task will be {{task}}. If anything changes or you have a question, {{contact}}.\n\nBest,",
+      "guidance": [
+        "Put time and location together so the message is easy to scan.",
+        "Name the task clearly so volunteers know how to prepare.",
+        "Include the contact path for last-minute changes."
+      ],
+      "pitfalls": [
+        "Do not make volunteers hunt for the basics in attachments.",
+        "Do not leave the task description too vague."
+      ],
+      "examples": [
+        {"label":"Event check-in shift","input":"Sam is confirmed for a morning check-in role at the community center.","output":"Hi Sam,\n\nYour shift is confirmed for Saturday from 9 a.m. to 12 p.m. at the community center front desk. Your main task will be check in guests and hand out name badges. If anything changes or you have a question, reply to this email or text the coordinator.\n\nBest,"},
+        {"label":"Food pantry shift","input":"Sam will help with shelf restocking at the pantry on Tuesday evening.","output":"Hi Sam,\n\nYour shift is confirmed for Tuesday from 5 p.m. to 7 p.m. at the pantry intake room. Your main task will be restock shelves and organize donation bins. If anything changes or you have a question, reply to this email or text the coordinator.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should I include parking or dress code?","a":"If those details help volunteers arrive prepared, yes."},
+        {"q":"What is the most important confirmation detail?","a":"The exact shift time and where to go."}
+      ],
+      "relatedTags": ["volunteers", "confirmation", "operations"]
+    },
+    {
+      "slug": "student-absence-follow-up-email",
+      "name": "Student Absence Follow-Up Email",
+      "keyword": "student absence follow up email",
+      "intent": "follow-up",
+      "audience": "Teachers and school staff",
+      "outcome": "Follow up after a missed class with a neutral update and what the student should do next.",
+      "metaDescription": "Draft a student absence follow-up that covers missed work, next steps, and support options. Free private email tool by ReplyMind.",
+      "h1": "Follow up on an absence without sounding disciplinary.",
+      "intro": "Students and families need a simple explanation of what was missed and how to catch up. This tool helps you keep the tone supportive while still being clear about the work.",
+      "fields": [
+        {"key":"recipient","label":"Student or parent name","type":"text","placeholder":"Jordan or Jordan's family","required":false},
+        {"key":"absenceNote","label":"Absence context","type":"textarea","placeholder":"The student missed class on Wednesday","required":true},
+        {"key":"missedWork","label":"Missed work","type":"textarea","placeholder":"Read chapter 4 and complete the quiz","required":true},
+        {"key":"catchUpPlan","label":"Catch-up plan","type":"textarea","placeholder":"Complete the work by Friday or ask for help after class","required":true},
+        {"key":"support","label":"Support contact","type":"textarea","placeholder":"Reply if you need the materials resent","required":true}
+      ],
+      "subjectTemplate": "Follow-up on the missed class",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m following up because {{absenceNote}}. The main work to catch up on is {{missedWork}}. To get back on track, {{catchUpPlan}}.\n\nIf you need anything, {{support}}.\n\nBest,",
+      "guidance": [
+        "Focus on the learning recovery, not the absence itself.",
+        "State the next step plainly so the family knows what to do.",
+        "Offer help without creating a second task for the student."
+      ],
+      "pitfalls": [
+        "Do not sound accusatory.",
+        "Do not leave the work list incomplete if the student is expected to catch up."
+      ],
+      "examples": [
+        {"label":"One-day absence","input":"Jordan missed class on Wednesday and needs the reading and quiz.","output":"Hi Jordan,\n\nI’m following up because the student missed class on Wednesday. The main work to catch up on is read chapter 4 and complete the quiz. To get back on track, complete the work by Friday or ask for help after class.\n\nIf you need anything, reply if you need the materials resent.\n\nBest,"},
+        {"label":"Program absence","input":"Jordan missed a workshop and needs the practice exercise.","output":"Hi Jordan,\n\nI’m following up because the student missed class on Wednesday. The main work to catch up on is complete the practice exercise and review the slides. To get back on track, complete the work by Friday or ask for help after class.\n\nIf you need anything, reply if you need the materials resent.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should this go to the student or the parent?","a":"Use the channel that fits your program norms and the student's age."},
+        {"q":"How strict should the tone be?","a":"Calm and clear. The goal is catch-up, not reprimand."}
+      ],
+      "relatedTags": ["students", "absence", "follow-up"]
+    },
+    {
+      "slug": "podcast-or-content-cross-promotion-invite",
+      "name": "Podcast or Content Cross-Promotion Invite",
+      "keyword": "cross promotion invite email",
+      "intent": "collaboration",
+      "audience": "Creators and content teams",
+      "outcome": "Invite another creator or publication to share audiences in a relevant, balanced way.",
+      "metaDescription": "Write a cross-promotion invite for podcasts, newsletters, or content exchanges with a clear audience match. Free private email tool by ReplyMind.",
+      "h1": "Propose a cross-promotion that feels fair to both sides.",
+      "intro": "Cross-promotion works when the audiences overlap and the exchange is balanced. This tool helps you explain the audience match, the format, and the benefit to both parties.",
+      "fields": [
+        {"key":"recipient","label":"Partner name","type":"text","placeholder":"Nina","required":false},
+        {"key":"audienceMatch","label":"Audience match","type":"textarea","placeholder":"Both audiences care about practical creator education","required":true},
+        {"key":"format","label":"Cross-promo format","type":"textarea","placeholder":"Newsletter mention, podcast swap, or social shoutout","required":true},
+        {"key":"mutualBenefit","label":"Mutual benefit","type":"textarea","placeholder":"Each side reaches new readers without creating new content from scratch","required":true},
+        {"key":"replyAsk","label":"Reply request","type":"textarea","placeholder":"Reply if you'd like to test a swap","required":true}
+      ],
+      "subjectTemplate": "A cross-promo idea for {{recipient}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to suggest a cross-promo because {{audienceMatch}}. A simple format could be {{format}}. The benefit is that {{mutualBenefit}}.\n\nIf you’re open to it, {{replyAsk}}.\n\nBest,",
+      "guidance": [
+        "Show the audience overlap so the idea feels relevant.",
+        "Suggest a format that is easy to test.",
+        "Keep the exchange balanced and low-effort."
+      ],
+      "pitfalls": [
+        "Do not make the ask feel one-sided.",
+        "Do not pitch a swap that requires heavy production."
+      ],
+      "examples": [
+        {"label":"Newsletter swap","input":"A learning newsletter wants to trade mentions with a creator newsletter.","output":"Hi Nina,\n\nI wanted to suggest a cross-promo because both audiences care about practical creator education. A simple format could be a newsletter mention swap. The benefit is that each side reaches new readers without creating new content from scratch.\n\nIf you’re open to it, reply if you'd like to test a swap.\n\nBest,"},
+        {"label":"Podcast promo swap","input":"A nonprofit podcast wants to swap trailers with another mission-focused show.","output":"Hi Nina,\n\nI wanted to suggest a cross-promo because both audiences care about mission-driven work. A simple format could be a podcast trailer swap. The benefit is that each side reaches new listeners without creating new content from scratch.\n\nIf you’re open to it, reply if you'd like to test a swap.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"What makes a swap attractive?","a":"Similar audience interest and an exchange that is easy to execute."},
+        {"q":"Should I include audience numbers?","a":"Only if they are accurate and helpful. Relevance matters more than bragging."}
+      ],
+      "relatedTags": ["cross-promotion", "creators", "partnership"]
+    },
+    {
+      "slug": "sensitive-parent-or-student-issue-email",
+      "name": "Sensitive Parent or Student Issue Email",
+      "keyword": "sensitive parent email",
+      "intent": "sensitive",
+      "audience": "Educators and student support staff",
+      "outcome": "Raise a sensitive issue respectfully, with context and a clear request for conversation.",
+      "metaDescription": "Draft a sensitive parent or student email that stays respectful, specific, and focused on next steps. Free private email tool by ReplyMind.",
+      "h1": "Handle a sensitive message with clarity and care.",
+      "intro": "Sensitive conversations are easier when the message stays factual and grounded in the student's support. This tool helps you state the concern, explain the context, and request a conversation.",
+      "fields": [
+        {"key":"recipient","label":"Parent or student name","type":"text","placeholder":"Jordan","required":false},
+        {"key":"concern","label":"Main concern","type":"textarea","placeholder":"The student has missed several assignments","required":true},
+        {"key":"context","label":"Context or background","type":"textarea","placeholder":"There may be scheduling or support challenges","required":true},
+        {"key":"request","label":"Request for conversation","type":"textarea","placeholder":"Let's set up a brief call this week","required":true},
+        {"key":"support","label":"Supportive note","type":"textarea","placeholder":"We want to help the student get back on track","required":true}
+      ],
+      "subjectTemplate": "A note about {{recipient}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to reach out about {{concern}}. I understand there may be {{context}}. I’d like to ask whether we can {{request}}.\n\nOur goal is to help, and {{support}}.\n\nBest,",
+      "guidance": [
+        "Keep the language factual and non-accusatory.",
+        "Focus on support and next steps rather than blame.",
+        "Ask for a conversation if the issue is complex."
+      ],
+      "pitfalls": [
+        "Do not speculate about motives.",
+        "Do not overload the message with every detail at once."
+      ],
+      "examples": [
+        {"label":"Attendance concern","input":"A student has several missed assignments and may need support.","output":"Hi Jordan,\n\nI wanted to reach out about the student has missed several assignments. I understand there may be scheduling or support challenges. I’d like to ask whether we can set up a brief call this week.\n\nOur goal is to help, and we want to help the student get back on track.\n\nBest,"},
+        {"label":"Behavior concern","input":"A student has been struggling in group work and needs a respectful check-in.","output":"Hi Jordan,\n\nI wanted to reach out about the student has been struggling in group work. I understand there may be classroom or social challenges. I’d like to ask whether we can set up a brief call this week.\n\nOur goal is to help, and we want to help the student get back on track.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"How direct should sensitive emails be?","a":"Direct enough to be understood, but not so blunt that they feel accusatory."},
+        {"q":"Is it better to email or call?","a":"Email is useful to document the concern and request a conversation."}
+      ],
+      "relatedTags": ["sensitive", "parents", "student-support"]
+    },
+    {
+      "slug": "board-seat-or-advisory-recruitment-email",
+      "name": "Board Seat or Advisory Recruitment Email",
+      "keyword": "board recruitment email",
+      "intent": "recruitment",
+      "audience": "Nonprofits, associations, and startups with advisory boards",
+      "outcome": "Invite someone to join a board or advisory group with clear expectations and purpose.",
+      "metaDescription": "Draft a board or advisory recruitment email that explains the role, why the person fits, and what commitment is involved. Free private email tool by ReplyMind.",
+      "h1": "Invite the right person to join the table.",
+      "intro": "A strong board invitation explains the role without overselling it. This tool helps you describe why the person is a fit, what the commitment looks like, and how to respond.",
+      "fields": [
+        {"key":"recipient","label":"Candidate name","type":"text","placeholder":"Casey","required":false},
+        {"key":"fitReason","label":"Why they fit","type":"textarea","placeholder":"They bring relevant experience and a trusted perspective","required":true},
+        {"key":"roleScope","label":"What the role involves","type":"textarea","placeholder":"Quarterly meetings, strategic advice, and occasional review","required":true},
+        {"key":"commitment","label":"Time commitment","type":"textarea","placeholder":"About four meetings per year plus email feedback","required":true},
+        {"key":"responseAsk","label":"Response request","type":"textarea","placeholder":"Reply if you'd be open to a conversation","required":true}
+      ],
+      "subjectTemplate": "A board invitation for {{recipient}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m reaching out because {{fitReason}}. We are looking for someone to help with a role that involves {{roleScope}}. The commitment is {{commitment}}.\n\nIf you’d be open to it, {{responseAsk}}.\n\nBest,",
+      "guidance": [
+        "Make the fit reason specific to the person.",
+        "State the commitment plainly so there is no ambiguity.",
+        "Ask for a conversation, not an immediate yes."
+      ],
+      "pitfalls": [
+        "Do not make the role sound bigger than it is.",
+        "Do not hide the time commitment until later."
+      ],
+      "examples": [
+        {"label":"Nonprofit board invite","input":"Casey has finance experience and could help with strategy.","output":"Hi Casey,\n\nI’m reaching out because they bring relevant experience and a trusted perspective. We are looking for someone to help with a role that involves quarterly meetings, strategic advice, and occasional review. The commitment is about four meetings per year plus email feedback.\n\nIf you’d be open to it, reply if you'd be open to a conversation.\n\nBest,"},
+        {"label":"Advisory council invite","input":"Casey has community operations experience and is respected by members.","output":"Hi Casey,\n\nI’m reaching out because they bring relevant experience and a trusted perspective. We are looking for someone to help with a role that involves quarterly meetings and occasional review of community plans. The commitment is about four meetings per year plus email feedback.\n\nIf you’d be open to it, reply if you'd be open to a conversation.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should I describe the full mission in the invite?","a":"Only briefly. The role and commitment matter more in the first email."},
+        {"q":"What should the reply ask be?","a":"A conversation. Most people need more context before accepting."}
+      ],
+      "relatedTags": ["board", "advisory", "recruitment"]
+    },
+    {
+      "slug": "course-feedback-from-completers",
+      "name": "Course Feedback From Completers",
+      "keyword": "course feedback email",
+      "intent": "feedback",
+      "audience": "Course creators and educators",
+      "outcome": "Ask course completers for feedback that improves the curriculum and testimonials ethically.",
+      "metaDescription": "Create a course feedback email for completers with targeted questions and a simple response path. Free private email tool by ReplyMind.",
+      "h1": "Get feedback that can improve the next cohort.",
+      "intro": "When students finish a course, they can tell you what actually helped and what was missing. This tool helps you ask for that feedback clearly and respectfully.",
+      "fields": [
+        {"key":"recipient","label":"Student name or cohort","type":"text","placeholder":"Course 2 completers","required":false},
+        {"key":"whatWorked","label":"What worked well","type":"textarea","placeholder":"The weekly exercises or live coaching","required":true},
+        {"key":"whatDidNot","label":"What did not work","type":"textarea","placeholder":"The pacing felt fast in module 3","required":true},
+        {"key":"improvementUse","label":"How feedback will be used","type":"textarea","placeholder":"We will adjust next quarter's lessons","required":true},
+        {"key":"replyOption","label":"How to respond","type":"textarea","placeholder":"Reply with a few bullets or use the form","required":true}
+      ],
+      "subjectTemplate": "Could you share feedback on the course?",
+      "bodyTemplate": "Hi {{recipient}},\n\nNow that you have completed the course, I would love your feedback on {{whatWorked}} and {{whatDidNot}}. We will use your input to {{improvementUse}}.\n\nIf it is easier, {{replyOption}}.\n\nBest,",
+      "guidance": [
+        "Ask about both strengths and friction points.",
+        "Explain how the feedback will influence future cohorts.",
+        "Make the response path easy for busy learners."
+      ],
+      "pitfalls": [
+        "Do not ask for feedback without a clear use for it.",
+        "Do not assume testimonials and critique are the same thing."
+      ],
+      "examples": [
+        {"label":"Cohort completion survey","input":"Students finished a live course and can reply with bullets or a form.","output":"Hi Course 2 completers,\n\nNow that you have completed the course, I would love your feedback on the weekly exercises or live coaching and the pacing felt fast in module 3. We will use your input to adjust next quarter's lessons.\n\nIf it is easier, reply with a few bullets or use the form.\n\nBest,"},
+        {"label":"Workshop series feedback","input":"Participants completed a short series and should review the examples used.","output":"Hi Course 2 completers,\n\nNow that you have completed the course, I would love your feedback on the examples used and the pacing felt fast in module 3. We will use your input to improve the next cohort.\n\nIf it is easier, reply with a few bullets or use the form.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Can I ask for a testimonial in the same message?","a":"Yes, but only if the request is optional and clearly separated from the feedback ask."},
+        {"q":"How soon after completion should I ask?","a":"Soon enough that the experience is fresh."}
+      ],
+      "relatedTags": ["course", "feedback", "students"]
+    },
+    {
+      "slug": "community-event-save-the-date-email",
+      "name": "Community Event Save the Date Email",
+      "keyword": "save the date email",
+      "intent": "announcement",
+      "audience": "Community managers and event organizers",
+      "outcome": "Announce an upcoming event early enough for people to plan ahead.",
+      "metaDescription": "Draft a save the date email for community events with date, purpose, and what to expect later. Free private email tool by ReplyMind.",
+      "h1": "Give people enough notice to show up.",
+      "intro": "A save-the-date note should be short and useful. This tool helps you share the date, the reason to care, and what people should expect in the full invite.",
+      "fields": [
+        {"key":"recipient","label":"Audience name","type":"text","placeholder":"Members and friends","required":false},
+        {"key":"eventDate","label":"Event date","type":"text","placeholder":"October 14","required":true},
+        {"key":"eventPurpose","label":"Why the event matters","type":"textarea","placeholder":"A community gathering to share updates and connections","required":true},
+        {"key":"teaser","label":"Short teaser","type":"textarea","placeholder":"More details and RSVP info will follow soon","required":true},
+        {"key":"nextUpdate","label":"Next update promise","type":"textarea","placeholder":"We will send the full invitation next month","required":true}
+      ],
+      "subjectTemplate": "Save the date: {{eventDate}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nPlease save the date for {{eventDate}}. The event is important because {{eventPurpose}}. {{teaser}}.\n\n{{nextUpdate}}.\n\nBest,",
+      "guidance": [
+        "Keep the save-the-date message short.",
+        "Give one reason the event matters so people remember it.",
+        "Promise the full details later instead of cramming them in now."
+      ],
+      "pitfalls": [
+        "Do not include a full agenda before it is ready.",
+        "Do not make the date hard to find."
+      ],
+      "examples": [
+        {"label":"Membership event","input":"The event is October 14 and the team will send full details later.","output":"Hi Members and friends,\n\nPlease save the date for October 14. The event is important because it is a community gathering to share updates and connections. More details and RSVP info will follow soon.\n\nWe will send the full invitation next month.\n\nBest,"},
+        {"label":"Volunteer appreciation event","input":"The event recognizes volunteers and includes a later RSVP.","output":"Hi Members and friends,\n\nPlease save the date for October 14. The event is important because it is a volunteer appreciation gathering and a chance to connect with the team. More details and RSVP info will follow soon.\n\nWe will send the full invitation next month.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Is a save-the-date email enough on its own?","a":"It is a placeholder, not the full invite. Send the details later."},
+        {"q":"What is the main goal?","a":"To make sure people reserve the date early."}
+      ],
+      "relatedTags": ["events", "save-the-date", "community"]
+    },
+    {
+      "slug": "membership-welcome-orientation-email",
+      "name": "Membership Welcome Orientation Email",
+      "keyword": "membership welcome email",
+      "intent": "welcome",
+      "audience": "Associations and membership organizations",
+      "outcome": "Welcome new members and show them how to get value from the organization right away.",
+      "metaDescription": "Write a membership welcome email with benefits, orientation steps, and support contact. Free private email tool by ReplyMind.",
+      "h1": "Welcome members with a clear first step.",
+      "intro": "A welcome email should show members what they now have access to and how to use it. This tool helps you explain the benefits, orientation, and the best place to start.",
+      "fields": [
+        {"key":"recipient","label":"New member name or group","type":"text","placeholder":"Jordan","required":false},
+        {"key":"benefits","label":"Top benefits","type":"textarea","placeholder":"Events, resources, directory access, and updates","required":true},
+        {"key":"orientation","label":"Orientation step","type":"textarea","placeholder":"Join the welcome call or review the member guide","required":true},
+        {"key":"bestStart","label":"Best place to start","type":"textarea","placeholder":"Complete your profile and browse the member hub","required":true},
+        {"key":"support","label":"Support contact","type":"textarea","placeholder":"Reply with any questions","required":true}
+      ],
+      "subjectTemplate": "Welcome to membership",
+      "bodyTemplate": "Hi {{recipient}},\n\nWelcome. Your membership includes {{benefits}}. To get oriented, {{orientation}}. The best place to start is to {{bestStart}}.\n\nIf you need help, {{support}}.\n\nBest,",
+      "guidance": [
+        "Show value immediately instead of making members search for it.",
+        "Give one orientation step and one first task.",
+        "Include a support path so new members feel covered."
+      ],
+      "pitfalls": [
+        "Do not use a welcome email just to repeat the sales page.",
+        "Do not overload the message with every benefit at once."
+      ],
+      "examples": [
+        {"label":"Professional membership","input":"The member gets events, a directory, and welcome call access.","output":"Hi Jordan,\n\nWelcome. Your membership includes events, resources, directory access, and updates. To get oriented, join the welcome call or review the member guide. The best place to start is to complete your profile and browse the member hub.\n\nIf you need help, reply with any questions.\n\nBest,"},
+        {"label":"Community network membership","input":"The member gets local meetups and peer resources.","output":"Hi Jordan,\n\nWelcome. Your membership includes local meetups, resources, and updates. To get oriented, join the welcome call or review the member guide. The best place to start is to complete your profile and browse the member hub.\n\nIf you need help, reply with any questions.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q":"Should welcome emails include login help?","a":"Yes, if the member needs to access a portal or hub."},
+        {"q":"What makes the first welcome useful?","a":"Clear benefits, a first action, and a support path."}
+      ],
+      "relatedTags": ["membership", "welcome", "orientation"]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "batch": "broken-batch",
+  "avatar": "Test users",
+  "tools": [
+    {
+      "slug": "duplicate-tool",
+      "name": "Thin Tool",
+      "keyword": "thin tool",
+      "intent": "test",
+      "audience": "QA",
+      "outcome": "Too short.",
+      "metaDescription": "Too short.",
+      "h1": "Too short.",
+      "intro": "Too short.",
+      "fields": [
+        {"key": "recipient", "label": "To", "type": "text", "placeholder": "X", "required": true},
+        {"key": "context", "label": "Why", "type": "textarea", "placeholder": "X", "required": true},
+        {"key": "detail", "label": "What", "type": "invalid", "placeholder": "X", "required": "yes"}
+      ],
+      "subjectTemplate": "Test",
+      "bodyTemplate": "Hello {{missing}}.",
+      "guidance": ["Generic tip."],
+      "pitfalls": ["Mistake."],
+      "examples": [{"label": "One", "input": "Short", "output": "Short"}],
+      "faqs": [{"q": "Why?", "a": "Short"}],
+      "relatedTags": ["test", "test"]
+    },
+    {
+      "slug": "duplicate-tool",
+      "name": "Thin Tool",
+      "keyword": "thin tool",
+      "intent": "test",
+      "audience": "QA",
+      "outcome": "Too short.",
+      "metaDescription": "Too short.",
+      "h1": "Too short.",
+      "intro": "Too short.",
+      "fields": [],
+      "subjectTemplate": "Test",
+      "bodyTemplate": "Hello {{missing}}.",
+      "guidance": ["Generic tip."],
+      "pitfalls": ["Mistake."],
+      "examples": [{"label": "One", "input": "Short", "output": "Short"}],
+      "faqs": [{"q": "Why?", "a": "Short"}],
+      "relatedTags": ["test", "test"]
+    }
+  ]
+}

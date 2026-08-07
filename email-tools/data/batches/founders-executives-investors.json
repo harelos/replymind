@@ -1,0 +1,2606 @@
+{
+  "batch": "founders-executives-investors",
+  "avatar": "Founders, executives, board members, operators, and investors",
+  "tools": [
+    {
+      "slug": "monthly-investor-update-summary-writer",
+      "name": "Monthly Investor Update Summary Writer",
+      "keyword": "monthly investor update",
+      "intent": "update",
+      "audience": "Founders and CEOs",
+      "outcome": "Turn a messy month into a crisp investor update that highlights traction, risks, and the ask.",
+      "metaDescription": "Write a clear monthly investor update with progress, metrics, blockers, and next steps. Free private email tool by ReplyMind.",
+      "h1": "Send investors a clear month-end update.",
+      "intro": "When investor updates drift into noise, people stop reading. This tool helps you package the real business story into a short message that covers momentum, problems, and the next focus without sounding defensive or overpolished.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient or group", "type": "text", "placeholder": "Seed investors and board observers", "required": false},
+        {"key": "wins", "label": "Top wins this month", "type": "textarea", "placeholder": "Closed 3 enterprise pilots and shipped the new onboarding flow", "required": true},
+        {"key": "metrics", "label": "Key metrics to share", "type": "textarea", "placeholder": "MRR, burn, pipeline, retention, or hiring progress", "required": true},
+        {"key": "risks", "label": "Current risks or blockers", "type": "textarea", "placeholder": "Hiring delay in product and lower conversion from demo to trial", "required": true},
+        {"key": "ask", "label": "Specific help or next step", "type": "textarea", "placeholder": "Intro us to 2 fintech operators and review the hiring plan", "required": true}
+      ],
+      "subjectTemplate": "Monthly update: {{wins}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nHere is the quick update for the month.\n\nWins: {{wins}}\nMetrics: {{metrics}}\nRisks: {{risks}}\nAsk: {{ask}}\n\nIf helpful, I can also share the detailed operating notes behind these bullets.\n\nBest,",
+      "guidance": [
+        "Lead with the real business signal, not a generic status line.",
+        "Use plain language for metrics so a non-operator can scan the message quickly.",
+        "Name one concrete ask if you want investors to stay engaged."
+      ],
+      "pitfalls": [
+        "Do not bury bad news in a long paragraph.",
+        "Do not list every metric if only a few matter for the decision."
+      ],
+      "examples": [
+        {
+          "label": "Early-stage software company",
+          "input": "We launched pricing, added 8 paying customers, and missed one onboarding milestone.",
+          "output": "A monthly update that separates traction, the missed milestone, and a request for intros to two design partners."
+        },
+        {
+          "label": "Later-stage team with a hiring gap",
+          "input": "Revenue is steady, burn is controlled, and product hiring is behind schedule.",
+          "output": "A clear update that shows stability, explains the hiring bottleneck, and asks for candidate referrals."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include every metric in the update?",
+          "a": "No. Include the few numbers that explain the business direction and leave the rest for an appendix or dashboard."
+        },
+        {
+          "q": "How direct should the ask be?",
+          "a": "Direct and specific. Investors respond better when they know exactly how to help."
+        }
+      ],
+      "relatedTags": ["investor-update", "founder-ops", "monthly-report"]
+    },
+    {
+      "slug": "board-pre-read-brief-generator",
+      "name": "Board Pre-Read Brief Generator",
+      "keyword": "board pre-read",
+      "intent": "brief",
+      "audience": "Founders and chiefs of staff",
+      "outcome": "Package board context into a concise pre-read that keeps the meeting focused on decisions.",
+      "metaDescription": "Draft a board pre-read with context, decisions, tradeoffs, and questions. Free private email tool by ReplyMind.",
+      "h1": "Write the board memo before the room goes off track.",
+      "intro": "A good board pre-read saves time later. This tool helps you turn a set of updates into a disciplined memo that makes the decision points obvious and reduces the need for live narration.",
+      "fields": [
+        {"key": "meetingDate", "label": "Board date", "type": "text", "placeholder": "September 12", "required": false},
+        {"key": "context", "label": "Current situation", "type": "textarea", "placeholder": "Growth is strong but the product roadmap is slipping", "required": true},
+        {"key": "decisions", "label": "Decisions or approvals needed", "type": "textarea", "placeholder": "Approve hiring plan, budget shift, or market expansion", "required": true},
+        {"key": "tradeoffs", "label": "Main tradeoffs", "type": "textarea", "placeholder": "Speed versus margin, focus versus breadth", "required": true},
+        {"key": "questions", "label": "Questions for the board", "type": "textarea", "placeholder": "Which priority should we drop to protect execution?", "required": true}
+      ],
+      "subjectTemplate": "Board pre-read for {{meetingDate}}",
+      "bodyTemplate": "Hi everyone,\n\nAhead of the board meeting on {{meetingDate}}, I wanted to share the pre-read.\n\nContext: {{context}}\nDecisions needed: {{decisions}}\nTradeoffs: {{tradeoffs}}\nQuestions: {{questions}}\n\nI would value direct feedback before the meeting so we can stay focused on the decision points.\n\nBest,",
+      "guidance": [
+        "Put the choice in the open so the board can prepare useful feedback.",
+        "Keep the memo anchored to decisions, not a full operating report.",
+        "Use the pre-read to surface where you want disagreement."
+      ],
+      "pitfalls": [
+        "Do not write a slide deck in email form.",
+        "Do not hide the real question behind background details."
+      ],
+      "examples": [
+        {
+          "label": "Budget decision",
+          "input": "Need approval to shift spend from brand to demand capture.",
+          "output": "A board pre-read that frames the budget change, the expected tradeoff, and the question to resolve."
+        },
+        {
+          "label": "Roadmap priority",
+          "input": "Engineering can only finish one of two major initiatives this quarter.",
+          "output": "A concise memo that lays out the decision, the risks of each option, and what guidance is needed."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should a pre-read be sent as email or attachment?",
+          "a": "Email is fine if it is short. If the memo is long, keep the email brief and attach the full version."
+        },
+        {
+          "q": "What makes a board pre-read useful?",
+          "a": "It should clarify the decision, show the tradeoffs, and tell the board exactly what feedback you need."
+        }
+      ],
+      "relatedTags": ["board", "pre-read", "decision-making"]
+    },
+    {
+      "slug": "fundraising-follow-up-clarity-email",
+      "name": "Fundraising Follow-Up Clarity Email",
+      "keyword": "fundraising follow up",
+      "intent": "follow-up",
+      "audience": "Founders raising capital",
+      "outcome": "Send a calm follow-up that reinforces the opportunity and answers the unanswered question.",
+      "metaDescription": "Draft a focused fundraising follow-up after a meeting or partner call. Free private email tool by ReplyMind.",
+      "h1": "Follow up on fundraising without sounding repetitive.",
+      "intro": "Fundraising emails work when they make the next step obvious. This tool helps you restate the core story, answer the remaining objection, and move the conversation forward with specificity.",
+      "fields": [
+        {"key": "investor", "label": "Investor or firm name", "type": "text", "placeholder": "North River Ventures", "required": false},
+        {"key": "story", "label": "Core company story", "type": "textarea", "placeholder": "We are solving fast workflow automation for finance teams", "required": true},
+        {"key": "update", "label": "What changed since the meeting", "type": "textarea", "placeholder": "Two new customer calls, stronger retention, or updated pricing", "required": true},
+        {"key": "concern", "label": "Open concern to address", "type": "textarea", "placeholder": "Why now, timing, or category risk", "required": true},
+        {"key": "nextStep", "label": "Requested next step", "type": "textarea", "placeholder": "Invite the partner meeting or send diligence questions", "required": true}
+      ],
+      "subjectTemplate": "Follow-up on our fundraise conversation",
+      "bodyTemplate": "Hi {{investor}},\n\nThanks again for the conversation. Since we spoke, {{update}}.\n\nTo restate the thesis, {{story}}. I also wanted to address {{concern}} directly.\n\nIf the conversation is still active, the next step I would suggest is {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Use the follow-up to sharpen the narrative, not re-send the pitch.",
+        "Address the open objection explicitly so the investor does not have to infer it.",
+        "Keep the ask aligned with the stage of the process."
+      ],
+      "pitfalls": [
+        "Do not write as if momentum alone should close the round.",
+        "Do not paste a long metrics dump into the body."
+      ],
+      "examples": [
+        {
+          "label": "Seed round",
+          "input": "The investor wanted proof that customers would pay without heavy services.",
+          "output": "A follow-up that shares new customer behavior, restates the wedge, and asks for the next diligence step."
+        },
+        {
+          "label": "Series A",
+          "input": "The investor wanted more clarity on expansion efficiency.",
+          "output": "A response that updates on pipeline quality, addresses the concern, and asks for a partner meeting."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I send a fundraising follow-up after every meeting?",
+          "a": "Yes, when there is a real next step or a concern to resolve. Keep it short and useful."
+        },
+        {
+          "q": "How much should I restate the deck?",
+          "a": "Only enough to reconnect the dots. The email should complement the deck, not duplicate it."
+        }
+      ],
+      "relatedTags": ["fundraising", "investors", "follow-up"]
+    },
+    {
+      "slug": "de-risk-the-round-update",
+      "name": "Round De-Risking Update",
+      "keyword": "investor de-risking update",
+      "intent": "update",
+      "audience": "Founders and CFOs",
+      "outcome": "Show investors what has changed to reduce uncertainty in the round.",
+      "metaDescription": "Write a de-risking email for investors that explains evidence, traction, and the next proof point. Free private email tool by ReplyMind.",
+      "h1": "Show what changed since the last round conversation.",
+      "intro": "When a round stalls, investors usually need new evidence, not more enthusiasm. This tool helps you communicate the concrete proof points that make the opportunity feel less risky.",
+      "fields": [
+        {"key": "roundStage", "label": "Round stage", "type": "text", "placeholder": "Seed extension or Series A", "required": false},
+        {"key": "evidence", "label": "New evidence", "type": "textarea", "placeholder": "Usage growth, retention improvement, or signed pilots", "required": true},
+        {"key": "riskReduced", "label": "Risk that is now lower", "type": "textarea", "placeholder": "Demand validation or implementation complexity", "required": true},
+        {"key": "remainingRisk", "label": "Remaining concern", "type": "textarea", "placeholder": "Enterprise sales cycle length", "required": true},
+        {"key": "proofPoint", "label": "Next proof point", "type": "textarea", "placeholder": "Close three more logos by month-end", "required": true}
+      ],
+      "subjectTemplate": "Update on the round and what has de-risked",
+      "bodyTemplate": "Hi {{roundStage}} investors,\n\nI wanted to share a quick update on what has changed.\n\nNew evidence: {{evidence}}\nRisk reduced: {{riskReduced}}\nRemaining concern: {{remainingRisk}}\nNext proof point: {{proofPoint}}\n\nThis is the clearest reason I believe the opportunity is stronger now than it was in our last conversation.\n\nBest,",
+      "guidance": [
+        "Frame the email around evidence that reduces uncertainty.",
+        "Name the remaining risk rather than pretending it disappeared.",
+        "Tie the update to one measurable proof point."
+      ],
+      "pitfalls": [
+        "Do not oversell incremental progress as a full validation.",
+        "Do not leave the investor guessing which risk you still see."
+      ],
+      "examples": [
+        {
+          "label": "Product validation",
+          "input": "Trial usage is up and conversion from trial to paid improved.",
+          "output": "An email that shows the reduction in demand risk and names the next proof point for close rates."
+        },
+        {
+          "label": "Execution validation",
+          "input": "The team shipped core features faster than planned.",
+          "output": "A concise update that uses the shipment as evidence and spells out what still needs to be proven."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is this only for active investors?",
+          "a": "No. It also works for prospects who paused but may re-engage if the story gets stronger."
+        },
+        {
+          "q": "What is the best tone here?",
+          "a": "Measured and evidence-based. The goal is credibility, not pressure."
+        }
+      ],
+      "relatedTags": ["fundraising", "traction", "investor-update"]
+    },
+    {
+      "slug": "board-decision-ask-email-builder",
+      "name": "Board Decision Ask Email Builder",
+      "keyword": "board decision ask",
+      "intent": "request",
+      "audience": "Founders, CEOs, and board observers",
+      "outcome": "Ask the board for a clear decision with enough context to act on it quickly.",
+      "metaDescription": "Draft a direct board decision request that presents context, options, and the needed vote. Free private email tool by ReplyMind.",
+      "h1": "Ask the board for the decision you actually need.",
+      "intro": "Board emails get more useful when the request is explicit. This tool helps you state the decision, show the options, and make the impact of each choice easy to compare.",
+      "fields": [
+        {"key": "decision", "label": "Decision needed", "type": "textarea", "placeholder": "Approve the new hiring plan", "required": true},
+        {"key": "options", "label": "Options under consideration", "type": "textarea", "placeholder": "Hire now, delay, or re-scope the plan", "required": true},
+        {"key": "impact", "label": "Impact of the choice", "type": "textarea", "placeholder": "Speed, cost, and product delivery timing", "required": true},
+        {"key": "deadline", "label": "Decision deadline", "type": "text", "placeholder": "By Friday", "required": false},
+        {"key": "ask", "label": "What you want from them", "type": "textarea", "placeholder": "Reply with a vote or comment by Thursday", "required": true}
+      ],
+      "subjectTemplate": "Decision needed: {{decision}}",
+      "bodyTemplate": "Hi team,\n\nI need the board's input on this decision: {{decision}}\n\nOptions: {{options}}\nImpact: {{impact}}\nDeadline: {{deadline}}\nAsk: {{ask}}\n\nI am happy to add context, but I want to keep the decision itself front and center.\n\nBest,",
+      "guidance": [
+        "Name the decision in one line before explaining anything else.",
+        "Make the tradeoff between options visible.",
+        "Include a deadline so the request is actionable."
+      ],
+      "pitfalls": [
+        "Do not ask for vague approval without specifying the choice.",
+        "Do not send so much context that the decision gets lost."
+      ],
+      "examples": [
+        {
+          "label": "Hiring decision",
+          "input": "Need approval to add two engineers or keep headcount flat.",
+          "output": "An email that compares the options, the impact, and the required response date."
+        },
+        {
+          "label": "Go-to-market decision",
+          "input": "Need to choose between two launch markets.",
+          "output": "A concise request that frames the decision and asks the board to respond directly."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include my recommendation?",
+          "a": "Yes, if you already have one. The board can respond faster when they know your view."
+        },
+        {
+          "q": "How much detail is enough?",
+          "a": "Enough to compare options and understand the consequences, but not enough to turn the email into a memo."
+        }
+      ],
+      "relatedTags": ["board", "decision", "approval"]
+    },
+    {
+      "slug": "exec-team-alignment-note",
+      "name": "Exec Team Alignment Note",
+      "keyword": "executive alignment email",
+      "intent": "align",
+      "audience": "Founders and executive teams",
+      "outcome": "Align leadership around priorities, ownership, and what will not be done this cycle.",
+      "metaDescription": "Write an executive alignment email that clarifies priorities, owners, and tradeoffs. Free private email tool by ReplyMind.",
+      "h1": "Align the leadership team around one plan.",
+      "intro": "Executive teams often agree on goals but not on the tradeoffs. This tool helps you write a note that makes priority, ownership, and exclusions explicit so the team can move as one.",
+      "fields": [
+        {"key": "priority", "label": "Primary priority", "type": "textarea", "placeholder": "Improve retention before expanding new channels", "required": true},
+        {"key": "owners", "label": "Ownership and drivers", "type": "textarea", "placeholder": "Product owns retention and sales owns renewal process", "required": true},
+        {"key": "tradeoff", "label": "What we are deprioritizing", "type": "textarea", "placeholder": "New markets and nonessential experiments", "required": true},
+        {"key": "cadence", "label": "Check-in cadence", "type": "text", "placeholder": "Weekly exec review", "required": false},
+        {"key": "decision", "label": "Decision to align on", "type": "textarea", "placeholder": "We will not add new projects until retention is stable", "required": true}
+      ],
+      "subjectTemplate": "Alignment on {{priority}}",
+      "bodyTemplate": "Hi team,\n\nI want to align us on one operating point.\n\nPriority: {{priority}}\nOwners: {{owners}}\nTradeoff: {{tradeoff}}\nDecision: {{decision}}\nCadence: {{cadence}}\n\nIf anyone sees a gap in this framing, reply before the next exec review so we can resolve it early.\n\nBest,",
+      "guidance": [
+        "State the priority in operational terms, not strategy jargon.",
+        "Name what will be paused so the team understands the tradeoff.",
+        "Use the email to prevent hidden disagreement."
+      ],
+      "pitfalls": [
+        "Do not list goals without clarifying owners.",
+        "Do not pretend alignment exists if the tradeoff is still unresolved."
+      ],
+      "examples": [
+        {
+          "label": "Focus reset",
+          "input": "The company is doing too many things at once.",
+          "output": "A note that narrows the plan and assigns clear ownership for the chosen priority."
+        },
+        {
+          "label": "Retention push",
+          "input": "The executive team needs to focus on customer retention for a quarter.",
+          "output": "An alignment email that explains what will stop, who owns the work, and how progress will be reviewed."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is this a strategy memo?",
+          "a": "No. It is a short alignment note that turns strategy into operational clarity."
+        },
+        {
+          "q": "Should I copy the whole company?",
+          "a": "Only if the message is meant to reset shared priorities broadly. Otherwise keep it to the leadership group."
+        }
+      ],
+      "relatedTags": ["alignment", "exec-team", "priorities"]
+    },
+    {
+      "slug": "partnership-intro-followup-email",
+      "name": "Partnership Intro Follow-Up Email",
+      "keyword": "partnership follow up",
+      "intent": "follow-up",
+      "audience": "Founders and partnership leads",
+      "outcome": "Turn a warm introduction into a clear partnership next step.",
+      "metaDescription": "Draft a partnership follow-up that summarizes fit, value, and next actions. Free private email tool by ReplyMind.",
+      "h1": "Keep a promising partnership conversation moving.",
+      "intro": "Partnership conversations often stall because both sides assume the other will write next. This tool helps you recap fit, name the mutual value, and propose a specific next action.",
+      "fields": [
+        {"key": "partner", "label": "Partner name", "type": "text", "placeholder": "Acme Payments", "required": false},
+        {"key": "fit", "label": "Why the partnership makes sense", "type": "textarea", "placeholder": "Shared customers and complementary distribution", "required": true},
+        {"key": "value", "label": "Mutual value created", "type": "textarea", "placeholder": "Faster onboarding for their customers and more reach for us", "required": true},
+        {"key": "nextStep", "label": "Suggested next step", "type": "textarea", "placeholder": "30-minute scoping call next week", "required": true},
+        {"key": "owner", "label": "Internal owner", "type": "text", "placeholder": "Maya", "required": false}
+      ],
+      "subjectTemplate": "Following up on the partnership idea",
+      "bodyTemplate": "Hi {{partner}},\n\nThanks again for the introduction. I think the fit is strong because {{fit}}.\n\nThe mutual value we see is {{value}}. From our side, {{owner}} can help move this forward.\n\nIf it makes sense, the next step I would suggest is {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Make the mutual benefit obvious in one sentence.",
+        "Assign an internal owner if you want the deal to keep moving.",
+        "Propose a next step that respects both teams' time."
+      ],
+      "pitfalls": [
+        "Do not overstate strategic fit before there is a real use case.",
+        "Do not leave the next step vague."
+      ],
+      "examples": [
+        {
+          "label": "Distribution partnership",
+          "input": "A company with the same audience could send referrals.",
+          "output": "A follow-up that spells out how each side benefits and suggests a scoping call."
+        },
+        {
+          "label": "Product integration",
+          "input": "The teams want to explore a joint workflow integration.",
+          "output": "An email that names the fit, the value, and the internal owner responsible for next steps."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I mention revenue share immediately?",
+          "a": "Only if the conversation is already at that stage. Early follow-ups should focus on fit and use case."
+        },
+        {
+          "q": "What if the partner is slow to respond?",
+          "a": "Use the follow-up to make the value and next step obvious, then keep the tone light and respectful."
+        }
+      ],
+      "relatedTags": ["partnership", "follow-up", "alliance"]
+    },
+    {
+      "slug": "enterprise-partnership-proposal-email",
+      "name": "Enterprise Partnership Proposal Email",
+      "keyword": "partnership proposal email",
+      "intent": "proposal",
+      "audience": "Founders and business development leaders",
+      "outcome": "Present a partnership proposal that feels concrete instead of exploratory.",
+      "metaDescription": "Write a partnership proposal email with use case, scope, value, and next step. Free private email tool by ReplyMind.",
+      "h1": "Propose a partnership with enough detail to discuss it.",
+      "intro": "Big partners do not need generic enthusiasm. They need a proposal that defines the use case, the scope, the value exchange, and the first practical step.",
+      "fields": [
+        {"key": "useCase", "label": "Primary use case", "type": "textarea", "placeholder": "Offer our workflow to your customer base", "required": true},
+        {"key": "scope", "label": "Proposed scope", "type": "textarea", "placeholder": "Pilot with one segment or one region", "required": true},
+        {"key": "valueExchange", "label": "Value exchange", "type": "textarea", "placeholder": "Distribution, product access, or co-marketing", "required": true},
+        {"key": "risk", "label": "Key risk or concern", "type": "textarea", "placeholder": "Implementation effort or brand fit", "required": true},
+        {"key": "step", "label": "First step", "type": "textarea", "placeholder": "Align on a 2-week pilot scope", "required": true}
+      ],
+      "subjectTemplate": "A concrete partnership idea for {{useCase}}",
+      "bodyTemplate": "Hi,\n\nI wanted to share a concrete proposal.\n\nUse case: {{useCase}}\nScope: {{scope}}\nValue exchange: {{valueExchange}}\nMain risk: {{risk}}\nFirst step: {{step}}\n\nIf this is directionally interesting, I suggest we discuss scope before we get into any broader agreement.\n\nBest,",
+      "guidance": [
+        "Lead with the use case and keep the proposal bounded.",
+        "Show the value exchange explicitly so the partner can evaluate it.",
+        "Surface the main risk early to build trust."
+      ],
+      "pitfalls": [
+        "Do not make the proposal sound like a wish list.",
+        "Do not skip the first step and expect the partner to fill in the gap."
+      ],
+      "examples": [
+        {
+          "label": "Channel pilot",
+          "input": "Use a partner's customer base to test a niche offer.",
+          "output": "A proposal that narrows the pilot, explains the value exchange, and asks for a scoping conversation."
+        },
+        {
+          "label": "Co-marketing idea",
+          "input": "Run a joint webinar and capture leads for both teams.",
+          "output": "A concrete note that defines the scope, main risk, and first step."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should the proposal include legal terms?",
+          "a": "Not in the first email. Keep it to the business case and the pilot shape."
+        },
+        {
+          "q": "What makes this different from a follow-up?",
+          "a": "A proposal introduces a specific structure for the partnership instead of merely continuing the conversation."
+        }
+      ],
+      "relatedTags": ["partnership", "proposal", "business-development"]
+    },
+    {
+      "slug": "crisis-holding-statement-email",
+      "name": "Crisis Holding Statement Email",
+      "keyword": "holding statement email",
+      "intent": "crisis-response",
+      "audience": "Founders, executives, and comms leads",
+      "outcome": "Respond quickly when you need to acknowledge an issue before all facts are settled.",
+      "metaDescription": "Draft a careful holding statement email that acknowledges the issue, action taken, and next update. Free private email tool by ReplyMind.",
+      "h1": "Acknowledge the issue without overpromising.",
+      "intro": "In a fast-moving issue, silence creates its own problem. This tool helps you send a measured holding statement that acknowledges the situation, says what you know, and commits to a next update.",
+      "fields": [
+        {"key": "issue", "label": "What happened", "type": "textarea", "placeholder": "Service outage, security incident, or public misstatement", "required": true},
+        {"key": "knownFacts", "label": "Known facts", "type": "textarea", "placeholder": "What is confirmed right now", "required": true},
+        {"key": "action", "label": "Action taken", "type": "textarea", "placeholder": "Team is investigating and mitigating", "required": true},
+        {"key": "updateTime", "label": "Next update time", "type": "text", "placeholder": "By 4 PM PT", "required": false},
+        {"key": "audience", "label": "Who is receiving this", "type": "text", "placeholder": "Customers and partners", "required": false}
+      ],
+      "subjectTemplate": "Update on {{issue}}",
+      "bodyTemplate": "Hi {{audience}},\n\nWe are aware of {{issue}} and want to share what we know so far.\n\nKnown facts: {{knownFacts}}\nAction taken: {{action}}\nNext update: {{updateTime}}\n\nWe will share more as soon as we can confirm it.\n\nBest,",
+      "guidance": [
+        "Acknowledge the issue quickly and avoid speculation.",
+        "Separate confirmed facts from work in progress.",
+        "Commit to the next update so people know when to expect more."
+      ],
+      "pitfalls": [
+        "Do not guess at root cause before it is verified.",
+        "Do not sound detached; people need to know you are engaged."
+      ],
+      "examples": [
+        {
+          "label": "Outage notice",
+          "input": "The product is partially unavailable and the cause is not confirmed.",
+          "output": "A holding statement that names the incident, what is known, what is being done, and when the next update will arrive."
+        },
+        {
+          "label": "Public correction",
+          "input": "A company post included an inaccurate statement.",
+          "output": "A careful message that acknowledges the error and promises a follow-up after review."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I admit fault in a holding statement?",
+          "a": "Only if fault is confirmed. The purpose is to acknowledge, not to speculate."
+        },
+        {
+          "q": "Can this be sent internally too?",
+          "a": "Yes, but the internal version may include more detail about responsibilities and timing."
+        }
+      ],
+      "relatedTags": ["crisis", "holding-statement", "risk"]
+    },
+    {
+      "slug": "incident-update-for-customers",
+      "name": "Incident Update for Customers",
+      "keyword": "customer incident update",
+      "intent": "update",
+      "audience": "Founders and operators",
+      "outcome": "Keep customers informed during an incident with a practical, non-defensive update.",
+      "metaDescription": "Write a customer incident update that explains status, impact, and next steps. Free private email tool by ReplyMind.",
+      "h1": "Keep customers informed when something goes wrong.",
+      "intro": "Customers want clarity more than detail during an incident. This tool helps you explain the impact, the current status, and what to expect next in a way that reduces confusion.",
+      "fields": [
+        {"key": "impact", "label": "Customer impact", "type": "textarea", "placeholder": "Some users cannot sync data or send invoices", "required": true},
+        {"key": "status", "label": "Current status", "type": "textarea", "placeholder": "Mitigation is in progress or the fix is deployed", "required": true},
+        {"key": "workaround", "label": "Workaround if available", "type": "textarea", "placeholder": "Use the web app instead of the mobile app", "required": true},
+        {"key": "eta", "label": "Estimated timing", "type": "text", "placeholder": "Next update in two hours", "required": false},
+        {"key": "apology", "label": "Apology or acknowledgement", "type": "textarea", "placeholder": "We know this is disruptive and we are sorry", "required": true}
+      ],
+      "subjectTemplate": "Update on the issue affecting your account",
+      "bodyTemplate": "Hi,\n\nWe want to update you on the issue affecting your account.\n\nImpact: {{impact}}\nCurrent status: {{status}}\nWorkaround: {{workaround}}\nTiming: {{eta}}\n\n{{apology}}\n\nWe will keep sharing updates until this is fully resolved.\n\nBest,",
+      "guidance": [
+        "Tell customers what is affected and what is not.",
+        "Include a workaround when one exists.",
+        "Do not hide timing information if you can responsibly share it."
+      ],
+      "pitfalls": [
+        "Do not send a vague apology without status.",
+        "Do not overload customers with internal incident detail."
+      ],
+      "examples": [
+        {
+          "label": "API issue",
+          "input": "A subset of integrations are delayed and there is a workaround.",
+          "output": "A customer update that explains the impact, the workaround, and the next status update timing."
+        },
+        {
+          "label": "Checkout issue",
+          "input": "Some customers cannot complete a payment flow.",
+          "output": "A short incident email that covers effect, status, workaround, and a direct apology."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I send this before the root cause is known?",
+          "a": "Yes, if the impact is real and customers need guidance. Be clear that the root cause is still under review."
+        },
+        {
+          "q": "How technical should this be?",
+          "a": "Only as technical as your customers need to take action or understand the impact."
+        }
+      ],
+      "relatedTags": ["incident", "customer-communication", "status-update"]
+    },
+    {
+      "slug": "layoff-manager-email-draft",
+      "name": "Layoff Manager Email Draft",
+      "keyword": "layoff manager email",
+      "intent": "difficult-message",
+      "audience": "Founders and managers",
+      "outcome": "Help managers communicate a layoff decision with clarity, empathy, and consistency.",
+      "metaDescription": "Draft a manager email for a layoff announcement that is direct, empathetic, and consistent. Free private email tool by ReplyMind.",
+      "h1": "Write the manager note with care and precision.",
+      "intro": "Layoff communication should be clear enough to reduce confusion and respectful enough to avoid adding harm. This tool helps managers deliver the message, the context, and the next steps in a controlled tone.",
+      "fields": [
+        {"key": "decision", "label": "Decision context", "type": "textarea", "placeholder": "We are reducing the team to extend runway", "required": true},
+        {"key": "managerRole", "label": "Manager role", "type": "text", "placeholder": "Direct manager or team lead", "required": false},
+        {"key": "support", "label": "Support being offered", "type": "textarea", "placeholder": "Severance, benefits, and transition help", "required": true},
+        {"key": "message", "label": "Core message", "type": "textarea", "placeholder": "What the manager should say in the first conversation", "required": true},
+        {"key": "nextSteps", "label": "Next steps for the team", "type": "textarea", "placeholder": "When to expect follow-up and who owns logistics", "required": true}
+      ],
+      "subjectTemplate": "Guidance for the team message",
+      "bodyTemplate": "Hi {{managerRole}},\n\nHere is the guidance for the team conversation.\n\nDecision context: {{decision}}\nSupport: {{support}}\nCore message: {{message}}\nNext steps: {{nextSteps}}\n\nPlease keep the message direct, human, and consistent with the company note.\n\nBest,",
+      "guidance": [
+        "Keep the message factual and avoid extra explanation that can sound evasive.",
+        "State the support clearly so managers do not improvise.",
+        "Give managers a consistent core message to reduce variation."
+      ],
+      "pitfalls": [
+        "Do not over-explain the decision in a way that invites debate in the wrong moment.",
+        "Do not leave managers guessing about support or logistics."
+      ],
+      "examples": [
+        {
+          "label": "Team reduction",
+          "input": "The company is reducing headcount and managers need a script.",
+          "output": "A clear manager note that explains the context, support, core message, and next steps."
+        },
+        {
+          "label": "Role elimination",
+          "input": "One function is being sunset and the team needs guidance.",
+          "output": "A direct internal email that helps managers communicate consistently and respectfully."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should managers personalize this note?",
+          "a": "They can adapt tone, but the substance should stay consistent across teams."
+        },
+        {
+          "q": "Is this for the affected employees or the managers?",
+          "a": "This version is for managers who need guidance before speaking with their teams."
+        }
+      ],
+      "relatedTags": ["layoffs", "manager-communication", "hr"]
+    },
+    {
+      "slug": "founder-recruiting-candidate-followup",
+      "name": "Founder Recruiting Candidate Follow-Up",
+      "keyword": "founder candidate follow up",
+      "intent": "follow-up",
+      "audience": "Founders and hiring leads",
+      "outcome": "Re-engage a strong candidate with a personal note that keeps the process moving.",
+      "metaDescription": "Draft a founder-led candidate follow-up after an interview or intro. Free private email tool by ReplyMind.",
+      "h1": "Keep strong candidates warm after the conversation.",
+      "intro": "When a candidate is promising, a generic follow-up can make the process feel distant. This tool helps you personalize the message, reinforce fit, and invite the next step.",
+      "fields": [
+        {"key": "candidate", "label": "Candidate name", "type": "text", "placeholder": "Priya", "required": false},
+        {"key": "fit", "label": "Why they stood out", "type": "textarea", "placeholder": "Strong product judgment and clear communication", "required": true},
+        {"key": "companyNeed", "label": "What the company needs", "type": "textarea", "placeholder": "A leader who can build and ship quickly", "required": true},
+        {"key": "processStatus", "label": "Current process status", "type": "textarea", "placeholder": "Next interview, reference check, or decision pending", "required": true},
+        {"key": "nextStep", "label": "Next step requested", "type": "textarea", "placeholder": "Schedule the next conversation this week", "required": true}
+      ],
+      "subjectTemplate": "Great speaking with you",
+      "bodyTemplate": "Hi {{candidate}},\n\nThanks again for the conversation. You stood out because {{fit}}.\n\nWhat we need right now is {{companyNeed}}. At the moment, the process is {{processStatus}}.\n\nIf you are still interested, I would like to move to {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Make the note personal enough that the candidate feels remembered.",
+        "Be explicit about process status so they know what to expect.",
+        "Ask for one next step instead of reopening the whole process."
+      ],
+      "pitfalls": [
+        "Do not send a canned thank-you with no substance.",
+        "Do not imply urgency if the hiring process is not actually moving."
+      ],
+      "examples": [
+        {
+          "label": "Exec hire",
+          "input": "The candidate has strong strategic judgment and the role is still open.",
+          "output": "A founder follow-up that states why they fit and asks for the next conversation."
+        },
+        {
+          "label": "IC hire",
+          "input": "The team needs someone who can start quickly and own execution.",
+          "output": "A concise note that keeps the candidate warm and clarifies the next step."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should founders always write recruiting follow-ups?",
+          "a": "For senior candidates, yes when possible. A founder note can materially increase signal and trust."
+        },
+        {
+          "q": "How much pressure is appropriate?",
+          "a": "Very little. The message should invite the next step, not force it."
+        }
+      ],
+      "relatedTags": ["recruiting", "founder-led", "follow-up"]
+    },
+    {
+      "slug": "investor-rejection-graceful-reply",
+      "name": "Investor Rejection Graceful Reply",
+      "keyword": "investor rejection reply",
+      "intent": "reply",
+      "audience": "Founders",
+      "outcome": "Respond to a pass in a way that preserves the relationship and leaves the door open.",
+      "metaDescription": "Write a graceful reply to an investor pass that keeps the relationship warm. Free private email tool by ReplyMind.",
+      "h1": "Reply well when an investor passes.",
+      "intro": "A pass does not have to end the relationship. This tool helps you acknowledge the decision, stay respectful, and create a natural path for future contact.",
+      "fields": [
+        {"key": "investor", "label": "Investor or firm", "type": "text", "placeholder": "Summit Ridge", "required": false},
+        {"key": "reason", "label": "Reason they gave", "type": "textarea", "placeholder": "Too early, category not in focus, or timing mismatch", "required": true},
+        {"key": "appreciation", "label": "What to thank them for", "type": "textarea", "placeholder": "Time, feedback, or thoughtful diligence", "required": true},
+        {"key": "updatePath", "label": "Future update path", "type": "textarea", "placeholder": "Share progress in six months", "required": true},
+        {"key": "close", "label": "Closing note", "type": "textarea", "placeholder": "Happy to keep you posted as things develop", "required": true}
+      ],
+      "subjectTemplate": "Thank you for the update",
+      "bodyTemplate": "Hi {{investor}},\n\nThanks for the honest update. I understand the concern around {{reason}}.\n\nI appreciate {{appreciation}}. We will stay in touch and follow up with {{updatePath}}.\n\n{{close}}\n\nBest,",
+      "guidance": [
+        "Acknowledge the pass without trying to relitigate it.",
+        "Leave the relationship open with a clear future update path.",
+        "Keep the note short and calm."
+      ],
+      "pitfalls": [
+        "Do not argue with the decision in the reply.",
+        "Do not disappear if you actually want a future conversation."
+      ],
+      "examples": [
+        {
+          "label": "Too early pass",
+          "input": "The investor likes the team but thinks the company is not ready yet.",
+          "output": "A respectful reply that thanks them and proposes a future update window."
+        },
+        {
+          "label": "Category mismatch",
+          "input": "The investor is not focused on this space right now.",
+          "output": "A brief note that acknowledges the mismatch and keeps the door open."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I ask for feedback after a pass?",
+          "a": "Yes, but only if you can ask lightly and professionally. Do not make the response feel like a challenge."
+        },
+        {
+          "q": "Can this help with future rounds too?",
+          "a": "Yes. A courteous pass reply can preserve the relationship for later."
+        }
+      ],
+      "relatedTags": ["investors", "rejection", "relationship-management"]
+    },
+    {
+      "slug": "cap-table-context-email",
+      "name": "Cap Table Context Email",
+      "keyword": "cap table context email",
+      "intent": "explain",
+      "audience": "Founders and CFOs",
+      "outcome": "Explain a cap table topic clearly without turning the email into a finance lesson.",
+      "metaDescription": "Draft a clear cap table context email for investors, advisors, or internal stakeholders. Free private email tool by ReplyMind.",
+      "h1": "Explain the cap table issue in plain English.",
+      "intro": "Cap table conversations get confusing fast. This tool helps you explain the relevant fact pattern, the effect on ownership, and the specific question you want answered.",
+      "fields": [
+        {"key": "context", "label": "Cap table context", "type": "textarea", "placeholder": "New option grant, secondary, or investor rights question", "required": true},
+        {"key": "effect", "label": "Effect on ownership or control", "type": "textarea", "placeholder": "What changes and why it matters", "required": true},
+        {"key": "question", "label": "Question to answer", "type": "textarea", "placeholder": "Should we reserve shares now or later?", "required": true},
+        {"key": "audience", "label": "Audience", "type": "text", "placeholder": "Board or investor group", "required": false},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "Reply with a view before Friday", "required": true}
+      ],
+      "subjectTemplate": "Cap table context and a question",
+      "bodyTemplate": "Hi {{audience}},\n\nI wanted to share the context on this cap table item.\n\nContext: {{context}}\nEffect: {{effect}}\nQuestion: {{question}}\nNext step: {{nextStep}}\n\nI am trying to keep this simple and make the decision point easy to answer.\n\nBest,",
+      "guidance": [
+        "Translate the finance issue into the business impact.",
+        "Ask one precise question instead of a broad request for advice.",
+        "Keep terminology simple unless the audience expects technical detail."
+      ],
+      "pitfalls": [
+        "Do not assume everyone will follow ownership math without explanation.",
+        "Do not bury the actual question inside background detail."
+      ],
+      "examples": [
+        {
+          "label": "Option grant",
+          "input": "Need to explain a refresh grant for a key employee.",
+          "output": "A plain-language email that covers the context, the ownership effect, and the question to answer."
+        },
+        {
+          "label": "Secondary sale",
+          "input": "A founder wants to discuss a small secondary and the board needs context.",
+          "output": "A short note that explains the reason, the effect, and the decision requested."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include exact percentages?",
+          "a": "Only if the audience needs them to answer the question. Otherwise keep the note at a higher level."
+        },
+        {
+          "q": "Is this for legal review?",
+          "a": "No. It is for communication and alignment. Legal details should be handled separately."
+        }
+      ],
+      "relatedTags": ["cap-table", "finance", "board"]
+    },
+    {
+      "slug": "diligence-answer-request-email",
+      "name": "Diligence Answer Request Email",
+      "keyword": "diligence request email",
+      "intent": "request",
+      "audience": "Founders and CFOs",
+      "outcome": "Ask for diligence answers in a way that is structured and easy to delegate.",
+      "metaDescription": "Write a diligence request email that organizes questions, owners, and deadlines. Free private email tool by ReplyMind.",
+      "h1": "Request diligence answers without creating chaos.",
+      "intro": "Diligence work becomes easier when each request is explicit. This tool helps you ask for the right inputs, assign owners, and set deadlines without sounding disorganized.",
+      "fields": [
+        {"key": "requester", "label": "Who is asking", "type": "text", "placeholder": "Finance team", "required": false},
+        {"key": "questions", "label": "Questions needed", "type": "textarea", "placeholder": "Contracts, customer references, or revenue details", "required": true},
+        {"key": "owners", "label": "Owners to assign", "type": "textarea", "placeholder": "Legal owns contracts and sales owns references", "required": true},
+        {"key": "deadline", "label": "Deadline", "type": "text", "placeholder": "By Wednesday noon", "required": true},
+        {"key": "format", "label": "Preferred format", "type": "textarea", "placeholder": "Reply inline, use a doc, or upload files", "required": true}
+      ],
+      "subjectTemplate": "Diligence requests and timing",
+      "bodyTemplate": "Hi {{requester}},\n\nWe need a clean path for diligence.\n\nQuestions: {{questions}}\nOwners: {{owners}}\nDeadline: {{deadline}}\nFormat: {{format}}\n\nPlease route each item to the right person so we can keep the process moving.\n\nBest,",
+      "guidance": [
+        "Break diligence into specific questions, not one large ask.",
+        "Assign owners so the request is easy to execute.",
+        "Specify the output format to reduce back-and-forth."
+      ],
+      "pitfalls": [
+        "Do not send a single long email with no structure.",
+        "Do not assume recipients know who should answer each item."
+      ],
+      "examples": [
+        {
+          "label": "Fundraise diligence",
+          "input": "Need financial, legal, and customer references for investors.",
+          "output": "A structured request that assigns owners and deadlines for each workstream."
+        },
+        {
+          "label": "Acquisition diligence",
+          "input": "Need a clean response package for a strategic buyer.",
+          "output": "A clear email that lists the questions, the owners, and the expected format."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I send all diligence asks at once?",
+          "a": "Only if they are organized. Otherwise group them by owner or workstream."
+        },
+        {
+          "q": "How firm should the deadline be?",
+          "a": "Firm enough to create momentum, but realistic enough that the team can actually deliver."
+        }
+      ],
+      "relatedTags": ["diligence", "fundraising", "operations"]
+    },
+    {
+      "slug": "board-metric-explanation-email",
+      "name": "Board Metric Explanation Email",
+      "keyword": "board metric explanation",
+      "intent": "explain",
+      "audience": "Founders and finance leaders",
+      "outcome": "Explain a metric movement so the board understands the cause, not just the number.",
+      "metaDescription": "Draft a board email that explains a metric change with causes, context, and next actions. Free private email tool by ReplyMind.",
+      "h1": "Explain the metric movement before the board asks.",
+      "intro": "A surprising metric needs interpretation, not just reporting. This tool helps you explain what moved, why it moved, and what you are doing about it so the board can focus on the real issue.",
+      "fields": [
+        {"key": "metric", "label": "Metric", "type": "text", "placeholder": "Activation rate or burn multiple", "required": true},
+        {"key": "movement", "label": "What changed", "type": "textarea", "placeholder": "It went up, down, or flattened", "required": true},
+        {"key": "cause", "label": "Likely cause", "type": "textarea", "placeholder": "Pricing change, seasonality, or channel mix", "required": true},
+        {"key": "context", "label": "Context behind the change", "type": "textarea", "placeholder": "What happened operationally", "required": true},
+        {"key": "action", "label": "Action you are taking", "type": "textarea", "placeholder": "What the team will do next", "required": true}
+      ],
+      "subjectTemplate": "Context on the {{metric}} movement",
+      "bodyTemplate": "Hi team,\n\nI wanted to add context on {{metric}}.\n\nWhat changed: {{movement}}\nLikely cause: {{cause}}\nContext: {{context}}\nAction: {{action}}\n\nI want to make sure the board sees the full picture, not only the number.\n\nBest,",
+      "guidance": [
+        "Explain the metric in a cause-and-effect structure.",
+        "Separate what is known from what is still being tested.",
+        "Always pair the movement with an action."
+      ],
+      "pitfalls": [
+        "Do not report a metric drop without interpretation.",
+        "Do not over-claim causality if you only have correlation."
+      ],
+      "examples": [
+        {
+          "label": "Activation drop",
+          "input": "Activation fell after a product flow changed.",
+          "output": "An email that explains the movement, the likely cause, and the next action."
+        },
+        {
+          "label": "Burn increase",
+          "input": "Spend went up because hiring and infrastructure costs rose.",
+          "output": "A board note that gives context and spells out the mitigation plan."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I wait until the next board meeting?",
+          "a": "Not if the movement changes the story materially. Send the context sooner."
+        },
+        {
+          "q": "Can I use charts instead?",
+          "a": "Charts help, but the email should still explain the meaning in plain language."
+        }
+      ],
+      "relatedTags": ["board", "metrics", "explanation"]
+    },
+    {
+      "slug": "strategic-pivot-announcement-email",
+      "name": "Strategic Pivot Announcement Email",
+      "keyword": "strategic pivot email",
+      "intent": "announce",
+      "audience": "Founders and executive teams",
+      "outcome": "Announce a strategic pivot in a way that is honest about why the change is happening.",
+      "metaDescription": "Write a strategic pivot email for investors, employees, or partners. Free private email tool by ReplyMind.",
+      "h1": "Explain the pivot without confusing the team.",
+      "intro": "A pivot email needs to make the reason for change legible. This tool helps you say what is changing, why now, what stays true, and what people should do next.",
+      "fields": [
+        {"key": "change", "label": "What is changing", "type": "textarea", "placeholder": "We are narrowing from broad SMB to a specific vertical", "required": true},
+        {"key": "whyNow", "label": "Why now", "type": "textarea", "placeholder": "Customer evidence or market feedback", "required": true},
+        {"key": "stable", "label": "What stays the same", "type": "textarea", "placeholder": "Core mission, team values, or key product strengths", "required": true},
+        {"key": "impact", "label": "Impact on the team or customer", "type": "textarea", "placeholder": "What people should expect to change", "required": true},
+        {"key": "nextMove", "label": "Next move", "type": "textarea", "placeholder": "How to execute the new direction", "required": true}
+      ],
+      "subjectTemplate": "A strategic update on where we are headed",
+      "bodyTemplate": "Hi everyone,\n\nWe are making an intentional shift.\n\nWhat is changing: {{change}}\nWhy now: {{whyNow}}\nWhat stays the same: {{stable}}\nImpact: {{impact}}\nNext move: {{nextMove}}\n\nThis is about focusing the company on the clearest path forward.\n\nBest,",
+      "guidance": [
+        "Explain the change as a decision, not a drift.",
+        "Clarify continuity so the pivot does not feel like a total reset.",
+        "Tell people what to do next so the message leads to action."
+      ],
+      "pitfalls": [
+        "Do not make the pivot sound like a failure report.",
+        "Do not leave people guessing whether the mission changed too."
+      ],
+      "examples": [
+        {
+          "label": "Market focus shift",
+          "input": "The company is narrowing to one segment after customer feedback.",
+          "output": "A clear pivot email that explains the change, the reason, and the next move."
+        },
+        {
+          "label": "Product focus shift",
+          "input": "The team is dropping a side product to focus on the core workflow.",
+          "output": "An announcement that makes continuity and action visible."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should this go to everyone at once?",
+          "a": "Only if the pivot affects the whole organization. Otherwise send tailored versions to each audience."
+        },
+        {
+          "q": "How candid should I be about the old direction?",
+          "a": "Candid, but not performative. Explain the learning and move forward."
+        }
+      ],
+      "relatedTags": ["strategy", "pivot", "announcement"]
+    },
+    {
+      "slug": "investor-office-hours-invitation",
+      "name": "Investor Office Hours Invitation",
+      "keyword": "investor office hours",
+      "intent": "invite",
+      "audience": "Founders and investor relations",
+      "outcome": "Invite investors to a structured office hours session without creating an open-ended burden.",
+      "metaDescription": "Draft an investor office hours invitation with purpose, format, timing, and topics. Free private email tool by ReplyMind.",
+      "h1": "Invite investors into a useful office hours format.",
+      "intro": "Office hours work when they have a purpose and a clear boundary. This tool helps you invite investors to a session that is useful for both sides instead of turning into an unstructured chat.",
+      "fields": [
+        {"key": "purpose", "label": "Purpose of the session", "type": "textarea", "placeholder": "Share progress and answer a few focused questions", "required": true},
+        {"key": "topics", "label": "Topics to cover", "type": "textarea", "placeholder": "Hiring, product roadmap, or fundraising timing", "required": true},
+        {"key": "format", "label": "Format", "type": "textarea", "placeholder": "30-minute group session or short one-on-one slots", "required": true},
+        {"key": "time", "label": "Time window", "type": "text", "placeholder": "Next Thursday afternoon", "required": false},
+        {"key": "replyAsk", "label": "What to reply with", "type": "textarea", "placeholder": "Reply with your topic or preferred slot", "required": true}
+      ],
+      "subjectTemplate": "Invite: investor office hours",
+      "bodyTemplate": "Hi everyone,\n\nI am setting up a short office hours session.\n\nPurpose: {{purpose}}\nTopics: {{topics}}\nFormat: {{format}}\nTime: {{time}}\nReply with: {{replyAsk}}\n\nI want the session to stay focused and useful, so please send the topic you want to cover.\n\nBest,",
+      "guidance": [
+        "Keep the invitation bounded so it feels manageable.",
+        "State the topics you want to cover so the right people show up.",
+        "Ask for a specific reply to simplify coordination."
+      ],
+      "pitfalls": [
+        "Do not invite investors to an unstructured open door.",
+        "Do not omit the format and force people to guess how the session works."
+      ],
+      "examples": [
+        {
+          "label": "Quarterly investor office hours",
+          "input": "Want to share progress and answer a few focused questions.",
+          "output": "An invitation that defines the format, topics, and reply request."
+        },
+        {
+          "label": "Targeted update session",
+          "input": "Need to update a subset of investors on a key initiative.",
+          "output": "A short invite that keeps the session structured and manageable."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is office hours better than a written update?",
+          "a": "It is better when you need conversation and live questions. Otherwise a written update may be enough."
+        },
+        {
+          "q": "Should I include every investor?",
+          "a": "Only if the session is meant to be broad. Otherwise target the people most relevant to the topic."
+        }
+      ],
+      "relatedTags": ["investors", "office-hours", "coordination"]
+    },
+    {
+      "slug": "pipeline-gap-explainer-email",
+      "name": "Pipeline Gap Explainer Email",
+      "keyword": "pipeline gap email",
+      "intent": "explain",
+      "audience": "Founders, CROs, and CEOs",
+      "outcome": "Explain why pipeline is behind target and what the team is doing about it.",
+      "metaDescription": "Write a pipeline gap email with causes, actions, and next checkpoints. Free private email tool by ReplyMind.",
+      "h1": "Explain the pipeline gap before it becomes a surprise.",
+      "intro": "When pipeline misses target, leaders need a grounded explanation, not reassurance. This tool helps you describe what happened, why it happened, and what changes next.",
+      "fields": [
+        {"key": "gap", "label": "Size of the gap", "type": "textarea", "placeholder": "Pipeline is 20% below plan", "required": true},
+        {"key": "reason", "label": "Why it happened", "type": "textarea", "placeholder": "Fewer inbound leads, slower outbound replies, or lost deals", "required": true},
+        {"key": "action", "label": "Action in motion", "type": "textarea", "placeholder": "Rebalance channels or tighten qualification", "required": true},
+        {"key": "owner", "label": "Owner", "type": "text", "placeholder": "Sales leadership", "required": false},
+        {"key": "checkpoint", "label": "Next checkpoint", "type": "text", "placeholder": "Review again in two weeks", "required": true}
+      ],
+      "subjectTemplate": "Context on the pipeline gap",
+      "bodyTemplate": "Hi team,\n\nWe are below plan on pipeline.\n\nGap: {{gap}}\nReason: {{reason}}\nAction: {{action}}\nOwner: {{owner}}\nCheckpoint: {{checkpoint}}\n\nThe goal is to make the issue visible early and keep the response practical.\n\nBest,",
+      "guidance": [
+        "Describe the gap numerically if you can.",
+        "Tie the cause to a concrete operating change.",
+        "Always include the next checkpoint so the issue stays live."
+      ],
+      "pitfalls": [
+        "Do not use vague language like 'softness' without specifics.",
+        "Do not send a problem email with no owner or follow-up date."
+      ],
+      "examples": [
+        {
+          "label": "Inbound slowdown",
+          "input": "Inbound pipeline declined after a channel change.",
+          "output": "A direct explanation that identifies the gap, the reason, and the mitigation."
+        },
+        {
+          "label": "Outbound friction",
+          "input": "Outbound response rates dropped after target account changes.",
+          "output": "A practical update with action, owner, and the next review date."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should this go to investors too?",
+          "a": "Yes, if the gap affects growth expectations or spend decisions. Adapt the detail level for the audience."
+        },
+        {
+          "q": "Should I assign blame?",
+          "a": "No. Focus on cause, ownership, and response."
+        }
+      ],
+      "relatedTags": ["pipeline", "revenue", "explanation"]
+    },
+    {
+      "slug": "customer-escalation-founder-email",
+      "name": "Customer Escalation Founder Email",
+      "keyword": "founder escalation email",
+      "intent": "escalation",
+      "audience": "Founders and executive sponsors",
+      "outcome": "Respond personally to a high-stakes customer escalation with accountability and next steps.",
+      "metaDescription": "Write a founder escalation email to a customer with acknowledgment, ownership, and remediation steps. Free private email tool by ReplyMind.",
+      "h1": "Respond personally when a customer escalates.",
+      "intro": "High-value customers often escalate because they want assurance that someone senior is engaged. This tool helps you send a message that acknowledges the issue, takes ownership, and sets a path forward.",
+      "fields": [
+        {"key": "customer", "label": "Customer name", "type": "text", "placeholder": "Northwind Retail", "required": false},
+        {"key": "issue", "label": "Escalated issue", "type": "textarea", "placeholder": "Implementation delay, bug, or billing dispute", "required": true},
+        {"key": "acknowledgement", "label": "Acknowledgement", "type": "textarea", "placeholder": "What you want to say up front", "required": true},
+        {"key": "remediation", "label": "Remediation steps", "type": "textarea", "placeholder": "Who is doing what next", "required": true},
+        {"key": "update", "label": "Update timing", "type": "text", "placeholder": "We will update by tomorrow morning", "required": false}
+      ],
+      "subjectTemplate": "Following up personally on {{issue}}",
+      "bodyTemplate": "Hi {{customer}},\n\nI wanted to reach out personally about {{issue}}.\n\n{{acknowledgement}}\n\nRemediation steps: {{remediation}}\nUpdate timing: {{update}}\n\nWe will stay on this until it is resolved.\n\nBest,",
+      "guidance": [
+        "Lead with ownership, not explanation.",
+        "Include a concrete remediation plan so the customer sees motion.",
+        "Set the next update time to reduce anxiety."
+      ],
+      "pitfalls": [
+        "Do not imply that the issue is someone else's problem.",
+        "Do not leave the customer without a follow-up window."
+      ],
+      "examples": [
+        {
+          "label": "Implementation delay",
+          "input": "A strategic customer is frustrated about a delayed launch.",
+          "output": "A founder email that acknowledges the delay and states the immediate remediation steps."
+        },
+        {
+          "label": "Billing dispute",
+          "input": "A customer escalated an invoice issue to the founder.",
+          "output": "A personal reply that explains the resolution path and update timing."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I apologize in the first line?",
+          "a": "Often yes, if the issue is clearly on your side. Keep it direct and sincere."
+        },
+        {
+          "q": "Is this for every support issue?",
+          "a": "No. Use it for high-stakes escalation where senior attention matters."
+        }
+      ],
+      "relatedTags": ["customer-escalation", "founder-led", "account-risk"]
+    },
+    {
+      "slug": "investor-prospecting-warm-intro-email",
+      "name": "Investor Warm Intro Email",
+      "keyword": "warm intro investor email",
+      "intent": "intro",
+      "audience": "Founders",
+      "outcome": "Ask for a warm introduction to an investor with enough context to make the intro easy.",
+      "metaDescription": "Draft a warm intro request to an investor with fit, timing, and why now. Free private email tool by ReplyMind.",
+      "h1": "Ask for a warm introduction the right way.",
+      "intro": "Warm intros work best when the intro maker can explain why the meeting matters. This tool helps you write a concise request with fit, timing, and the exact reason the investor should care now.",
+      "fields": [
+        {"key": "investor", "label": "Target investor", "type": "text", "placeholder": "Name or firm", "required": false},
+        {"key": "fit", "label": "Why this investor fits", "type": "textarea", "placeholder": "Relevant portfolio, thesis, or stage", "required": true},
+        {"key": "whyNow", "label": "Why now", "type": "textarea", "placeholder": "Recent traction or fundraising timing", "required": true},
+        {"key": "introMaker", "label": "Who is introducing", "type": "text", "placeholder": "Taylor", "required": false},
+        {"key": "ask", "label": "What to send in the intro", "type": "textarea", "placeholder": "Please introduce us with this context", "required": true}
+      ],
+      "subjectTemplate": "Request for a warm intro to {{investor}}",
+      "bodyTemplate": "Hi {{introMaker}},\n\nI am hoping you can make a warm introduction to {{investor}}.\n\nWhy this fit makes sense: {{fit}}\nWhy now: {{whyNow}}\nAsk: {{ask}}\n\nI have kept the request tight so the intro is easy to send.\n\nBest,",
+      "guidance": [
+        "Give the intro maker enough context to forward the request naturally.",
+        "Explain why the investor is relevant now, not just generally.",
+        "Keep the ask short so it is easy to act on."
+      ],
+      "pitfalls": [
+        "Do not ask for an intro without explaining the fit.",
+        "Do not write a long pitch into the intro request."
+      ],
+      "examples": [
+        {
+          "label": "Stage-fit intro",
+          "input": "Need a seed investor who knows workflow software.",
+          "output": "A concise intro request that gives the connector a clear reason to help."
+        },
+        {
+          "label": "Timing-fit intro",
+          "input": "Raising this month and have new traction to share.",
+          "output": "A warm intro note that explains why now and what context to include."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I paste my full pitch in the intro request?",
+          "a": "No. Give enough context for the introduction, then let the meeting do the rest."
+        },
+        {
+          "q": "What if I do not know the exact investor fit?",
+          "a": "Focus on stage, thesis, or portfolio overlap that makes the connection credible."
+        }
+      ],
+      "relatedTags": ["investors", "warm-intro", "fundraising"]
+    },
+    {
+      "slug": "board-followup-action-items-email",
+      "name": "Board Follow-Up Action Items Email",
+      "keyword": "board follow up action items",
+      "intent": "follow-up",
+      "audience": "Founders and chiefs of staff",
+      "outcome": "Convert board discussion into a clear follow-up with owners and deadlines.",
+      "metaDescription": "Draft a board follow-up email that captures action items, owners, and due dates. Free private email tool by ReplyMind.",
+      "h1": "Turn the board conversation into action.",
+      "intro": "Board meetings are useful only if the follow-up is crisp. This tool helps you summarize decisions, assign owners, and make it obvious what happens before the next meeting.",
+      "fields": [
+        {"key": "decisions", "label": "Decisions made", "type": "textarea", "placeholder": "Approved hiring change and budget shift", "required": true},
+        {"key": "actions", "label": "Action items", "type": "textarea", "placeholder": "What must be completed next", "required": true},
+        {"key": "owners", "label": "Owners", "type": "textarea", "placeholder": "Who owns each task", "required": true},
+        {"key": "dueDates", "label": "Due dates", "type": "textarea", "placeholder": "When each item should be done", "required": true},
+        {"key": "nextMeeting", "label": "Next meeting or check-in", "type": "text", "placeholder": "Next board call", "required": false}
+      ],
+      "subjectTemplate": "Board follow-up and actions",
+      "bodyTemplate": "Hi everyone,\n\nThank you for the discussion. Here is the follow-up.\n\nDecisions: {{decisions}}\nAction items: {{actions}}\nOwners: {{owners}}\nDue dates: {{dueDates}}\nNext meeting: {{nextMeeting}}\n\nPlease reply if anything is missing or misassigned.\n\nBest,",
+      "guidance": [
+        "Capture actions immediately after the meeting while the context is fresh.",
+        "Name owners for every item so nothing floats.",
+        "Keep the email short enough that people will actually read it."
+      ],
+      "pitfalls": [
+        "Do not send vague minutes instead of action items.",
+        "Do not leave due dates implied."
+      ],
+      "examples": [
+        {
+          "label": "Meeting recap",
+          "input": "The board agreed on a budget change and asked for follow-up analysis.",
+          "output": "A concise note that lists the decision, action items, owners, and deadlines."
+        },
+        {
+          "label": "Strategy check-in",
+          "input": "The board wants progress on a key initiative before the next meeting.",
+          "output": "An action-oriented email that makes next steps explicit."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include every board comment?",
+          "a": "No. Only include decisions and actionable follow-up."
+        },
+        {
+          "q": "Can this be used internally too?",
+          "a": "Yes, especially when leadership needs a clear record of who owns what."
+        }
+      ],
+      "relatedTags": ["board", "actions", "follow-up"]
+    },
+    {
+      "slug": "executive-brief-for-ceo-email",
+      "name": "Executive Brief for CEO Email",
+      "keyword": "ceo brief email",
+      "intent": "brief",
+      "audience": "Chiefs of staff and senior operators",
+      "outcome": "Condense a complex issue into a CEO-ready brief with the decision and recommended action.",
+      "metaDescription": "Write a CEO brief email that highlights the issue, recommendation, and needed input. Free private email tool by ReplyMind.",
+      "h1": "Brief the CEO in the fewest useful words.",
+      "intro": "CEOs need the point fast. This tool helps you turn a long internal issue into a short brief that gives context, the recommendation, and the one question that needs an answer.",
+      "fields": [
+        {"key": "issue", "label": "Issue", "type": "textarea", "placeholder": "Hiring bottleneck or pricing problem", "required": true},
+        {"key": "context", "label": "Context", "type": "textarea", "placeholder": "What led to the issue", "required": true},
+        {"key": "recommendation", "label": "Recommended action", "type": "textarea", "placeholder": "What you think should happen next", "required": true},
+        {"key": "decision", "label": "Decision needed", "type": "textarea", "placeholder": "What you want the CEO to approve", "required": true},
+        {"key": "deadline", "label": "Deadline or timing", "type": "text", "placeholder": "Today before 3 PM", "required": false}
+      ],
+      "subjectTemplate": "Briefing: {{issue}}",
+      "bodyTemplate": "Hi,\n\nQuick brief on {{issue}}.\n\nContext: {{context}}\nRecommendation: {{recommendation}}\nDecision needed: {{decision}}\nTiming: {{deadline}}\n\nI am happy to add detail if useful, but this is the core decision point.\n\nBest,",
+      "guidance": [
+        "Lead with the issue and recommendation, not the background.",
+        "Make the decision explicit so the CEO can respond quickly.",
+        "Keep the body short enough to scan on mobile."
+      ],
+      "pitfalls": [
+        "Do not write a memo when the CEO asked for a brief.",
+        "Do not hide the recommendation in the middle of the note."
+      ],
+      "examples": [
+        {
+          "label": "Hiring bottleneck",
+          "input": "The CEO needs a view on whether to fast-track a key role.",
+          "output": "A short brief that states the issue, recommendation, and deadline."
+        },
+        {
+          "label": "Pricing decision",
+          "input": "A pricing change needs executive approval.",
+          "output": "A concise message that makes the decision and timing obvious."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much context should I include?",
+          "a": "Only the context needed to understand the recommendation and make the decision."
+        },
+        {
+          "q": "Should I include alternatives?",
+          "a": "Only if the CEO truly needs to choose between them. Otherwise keep the recommendation direct."
+        }
+      ],
+      "relatedTags": ["ceo", "executive-brief", "decision"]
+    },
+    {
+      "slug": "investor-checkin-after-quiet-period",
+      "name": "Investor Check-In After Quiet Period",
+      "keyword": "investor check in after silence",
+      "intent": "re-engage",
+      "audience": "Founders",
+      "outcome": "Re-open a quiet investor thread with a real update and a low-friction ask.",
+      "metaDescription": "Draft a check-in email to re-engage an investor after a quiet period. Free private email tool by ReplyMind.",
+      "h1": "Restart the investor thread with substance.",
+      "intro": "When an investor goes quiet, the right move is usually a useful update, not pressure. This tool helps you bring the conversation back with a reason to respond now.",
+      "fields": [
+        {"key": "investor", "label": "Investor name", "type": "text", "placeholder": "Ariana", "required": false},
+        {"key": "update", "label": "New development", "type": "textarea", "placeholder": "Revenue, customer, or product milestone", "required": true},
+        {"key": "context", "label": "Why it matters", "type": "textarea", "placeholder": "How the update changes the story", "required": true},
+        {"key": "ask", "label": "Light ask", "type": "textarea", "placeholder": "Open to a short catch-up?", "required": true},
+        {"key": "timing", "label": "Why now", "type": "textarea", "placeholder": "Fresh traction or new round timing", "required": true}
+      ],
+      "subjectTemplate": "Quick update and a note",
+      "bodyTemplate": "Hi {{investor}},\n\nI wanted to share a quick update.\n\nNew development: {{update}}\nWhy it matters: {{context}}\nWhy now: {{timing}}\nAsk: {{ask}}\n\nIf it makes sense, I would be glad to reconnect.\n\nBest,",
+      "guidance": [
+        "Open with something genuinely new.",
+        "Explain why the update matters instead of assuming the investor will infer it.",
+        "Keep the ask easy to answer."
+      ],
+      "pitfalls": [
+        "Do not re-open with a generic 'just checking in'.",
+        "Do not create pressure if the investor already paused politely."
+      ],
+      "examples": [
+        {
+          "label": "New traction",
+          "input": "A major customer signed after the last conversation.",
+          "output": "A re-engagement email that shares the milestone and invites a short catch-up."
+        },
+        {
+          "label": "New timing",
+          "input": "The company is likely to raise soon.",
+          "output": "A brief update that gives the investor a reason to respond again."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How long should I wait before re-engaging?",
+          "a": "Long enough to have something real to say. The update matters more than the calendar."
+        },
+        {
+          "q": "Should I mention they went quiet?",
+          "a": "Usually no. Keep the tone neutral and forward-looking."
+        }
+      ],
+      "relatedTags": ["investors", "re-engagement", "follow-up"]
+    },
+    {
+      "slug": "operating-rhythm-reset-email",
+      "name": "Operating Rhythm Reset Email",
+      "keyword": "operating rhythm reset",
+      "intent": "reset",
+      "audience": "Founders and executive operators",
+      "outcome": "Reset meeting cadence, reporting, and decision flow when the team has become too noisy.",
+      "metaDescription": "Write an operating rhythm reset email that clarifies cadence, owners, and inputs. Free private email tool by ReplyMind.",
+      "h1": "Reset the operating rhythm without creating more process.",
+      "intro": "When leadership cadence breaks down, the answer is usually less confusion, not more meetings. This tool helps you write a reset note that clarifies what meetings exist, why they exist, and what each one should produce.",
+      "fields": [
+        {"key": "problem", "label": "Current issue", "type": "textarea", "placeholder": "Too many meetings and unclear decisions", "required": true},
+        {"key": "cadence", "label": "New cadence", "type": "textarea", "placeholder": "Weekly exec review, monthly board sync", "required": true},
+        {"key": "owners", "label": "Meeting owners", "type": "textarea", "placeholder": "Who runs what", "required": true},
+        {"key": "outputs", "label": "Expected outputs", "type": "textarea", "placeholder": "Decision, action item, or status update", "required": true},
+        {"key": "rule", "label": "Operating rule", "type": "textarea", "placeholder": "No meeting without a decision or prep doc", "required": true}
+      ],
+      "subjectTemplate": "Resetting how we operate",
+      "bodyTemplate": "Hi team,\n\nWe need to reset our operating rhythm.\n\nProblem: {{problem}}\nNew cadence: {{cadence}}\nOwners: {{owners}}\nExpected outputs: {{outputs}}\nRule: {{rule}}\n\nThe goal is to make our time more focused and our decisions cleaner.\n\nBest,",
+      "guidance": [
+        "Describe the dysfunction plainly.",
+        "Use the reset to remove unnecessary meetings or inputs.",
+        "State the rule in operational language so it is easy to follow."
+      ],
+      "pitfalls": [
+        "Do not add new rituals without removing old ones.",
+        "Do not assume everyone understands the reason for the reset."
+      ],
+      "examples": [
+        {
+          "label": "Meeting overload",
+          "input": "The executive team is spending too much time in status meetings.",
+          "output": "A reset email that defines the new cadence and outputs."
+        },
+        {
+          "label": "Decision lag",
+          "input": "Key decisions keep slipping because ownership is unclear.",
+          "output": "A note that clarifies owners, outputs, and a new operating rule."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I explain why the old rhythm failed?",
+          "a": "Briefly. Focus more on the new operating rules than the diagnosis."
+        },
+        {
+          "q": "Is this for internal teams only?",
+          "a": "Usually yes, though some of it can also inform board reporting if cadence changes materially."
+        }
+      ],
+      "relatedTags": ["operations", "cadence", "executive-team"]
+    },
+    {
+      "slug": "investor-thank-you-after-intro",
+      "name": "Investor Thank You After Intro",
+      "keyword": "thank you after investor intro",
+      "intent": "thank-you",
+      "audience": "Founders",
+      "outcome": "Thank the person who made the introduction and confirm the follow-through.",
+      "metaDescription": "Write a thank-you email after an investor introduction with status and next steps. Free private email tool by ReplyMind.",
+      "h1": "Close the loop after a useful introduction.",
+      "intro": "Intro givers appreciate knowing what happened next. This tool helps you send a short thank-you that confirms the meeting took place and keeps the connector informed without oversharing.",
+      "fields": [
+        {"key": "connector", "label": "Person who introduced you", "type": "text", "placeholder": "Morgan", "required": false},
+        {"key": "investor", "label": "Investor introduced to", "type": "text", "placeholder": "Horizon Capital", "required": false},
+        {"key": "status", "label": "Meeting status", "type": "textarea", "placeholder": "We had a strong first call and shared the deck", "required": true},
+        {"key": "appreciation", "label": "What you appreciated", "type": "textarea", "placeholder": "The introduction and context you provided", "required": true},
+        {"key": "nextStep", "label": "Next step or update", "type": "textarea", "placeholder": "Waiting on partner feedback", "required": true}
+      ],
+      "subjectTemplate": "Thank you for the introduction",
+      "bodyTemplate": "Hi {{connector}},\n\nThank you again for the introduction to {{investor}}.\n\nStatus: {{status}}\nAppreciation: {{appreciation}}\nNext step: {{nextStep}}\n\nI will keep you posted as things move forward.\n\nBest,",
+      "guidance": [
+        "Let the connector know the intro was used well.",
+        "Give a compact status update so they feel included.",
+        "Keep the tone appreciative, not transactional."
+      ],
+      "pitfalls": [
+        "Do not leave the intro giver wondering whether you followed up.",
+        "Do not overload them with details they did not ask for."
+      ],
+      "examples": [
+        {
+          "label": "Successful intro",
+          "input": "The investor call went well and next steps are pending.",
+          "output": "A warm thank-you that confirms the meeting and the current status."
+        },
+        {
+          "label": "Early-stage intro",
+          "input": "The introduction was helpful even though the process is just starting.",
+          "output": "A short note that shows appreciation and keeps the connector updated."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Do I need to send this every time?",
+          "a": "Yes, if someone made the intro and expects a loop back."
+        },
+        {
+          "q": "How much should I share?",
+          "a": "Enough to show progress, but not so much that you turn the thank-you into a full update."
+        }
+      ],
+      "relatedTags": ["thank-you", "introductions", "investors"]
+    },
+    {
+      "slug": "decision-rationale-note",
+      "name": "Decision Rationale Note",
+      "keyword": "decision rationale email",
+      "intent": "explain",
+      "audience": "Founders and executives",
+      "outcome": "Explain why a decision was made so the team understands the logic and can support execution.",
+      "metaDescription": "Draft a decision rationale note that explains the choice, tradeoffs, and implications. Free private email tool by ReplyMind.",
+      "h1": "Explain the decision behind the decision.",
+      "intro": "When teams do not understand why a choice was made, execution slows. This tool helps you communicate the reasoning, the tradeoffs, and what the team should do now.",
+      "fields": [
+        {"key": "decision", "label": "Decision made", "type": "textarea", "placeholder": "We chose to delay the launch", "required": true},
+        {"key": "reason", "label": "Reason for the decision", "type": "textarea", "placeholder": "Data was incomplete or risk was too high", "required": true},
+        {"key": "tradeoffs", "label": "Tradeoffs considered", "type": "textarea", "placeholder": "Speed versus quality, scope versus focus", "required": true},
+        {"key": "implication", "label": "What changes now", "type": "textarea", "placeholder": "Team priorities and timelines", "required": true},
+        {"key": "action", "label": "Action required", "type": "textarea", "placeholder": "What people should do next", "required": true}
+      ],
+      "subjectTemplate": "Why we made this decision",
+      "bodyTemplate": "Hi team,\n\nI want to explain the reasoning behind {{decision}}.\n\nReason: {{reason}}\nTradeoffs: {{tradeoffs}}\nImplication: {{implication}}\nAction: {{action}}\n\nThe goal is to make the logic clear so the team can execute without confusion.\n\nBest,",
+      "guidance": [
+        "Explain the logic, not just the outcome.",
+        "Show the tradeoffs so people understand what was considered.",
+        "End with the action required from the team."
+      ],
+      "pitfalls": [
+        "Do not frame the message as a debate unless you want one.",
+        "Do not make the rationale so abstract that it fails to guide action."
+      ],
+      "examples": [
+        {
+          "label": "Launch delay",
+          "input": "The product launch is being delayed to fix a quality issue.",
+          "output": "A rationale note that explains the choice, the tradeoffs, and the next steps."
+        },
+        {
+          "label": "Market focus",
+          "input": "The company is choosing one segment over another.",
+          "output": "A clear explanation that helps the team support the decision."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include dissenting opinions?",
+          "a": "Only if doing so helps the team understand the tradeoffs better."
+        },
+        {
+          "q": "Is this different from an announcement?",
+          "a": "Yes. The rationale note focuses on the why behind the decision, not just the change itself."
+        }
+      ],
+      "relatedTags": ["decision-making", "leadership", "explanation"]
+    },
+    {
+      "slug": "investor-diligence-clarification-email",
+      "name": "Investor Diligence Clarification Email",
+      "keyword": "investor diligence clarification",
+      "intent": "clarify",
+      "audience": "Founders and CFOs",
+      "outcome": "Clarify investor diligence questions that need a cleaner answer or a corrected premise.",
+      "metaDescription": "Write a clarification email for investor diligence questions with context and corrected details. Free private email tool by ReplyMind.",
+      "h1": "Clarify diligence questions before confusion spreads.",
+      "intro": "Sometimes diligence questions are based on a misunderstanding, missing context, or a vague request. This tool helps you clear that up politely and keep the process moving.",
+      "fields": [
+        {"key": "question", "label": "Original question", "type": "textarea", "placeholder": "The question they asked", "required": true},
+        {"key": "clarification", "label": "What needs clarifying", "type": "textarea", "placeholder": "The premise or detail that needs correction", "required": true},
+        {"key": "context", "label": "Supporting context", "type": "textarea", "placeholder": "The facts that support your clarification", "required": true},
+        {"key": "updatedAnswer", "label": "Updated answer", "type": "textarea", "placeholder": "The clean answer you want them to have", "required": true},
+        {"key": "followUp", "label": "Follow-up offer", "type": "textarea", "placeholder": "Happy to walk through it live if helpful", "required": true}
+      ],
+      "subjectTemplate": "Clarification on the diligence question",
+      "bodyTemplate": "Hi,\n\nI wanted to clarify the question around {{question}}.\n\nClarification: {{clarification}}\nContext: {{context}}\nUpdated answer: {{updatedAnswer}}\nFollow-up: {{followUp}}\n\nI hope this helps keep the diligence thread clean and accurate.\n\nBest,",
+      "guidance": [
+        "Correct the premise gently and directly.",
+        "Give the clean answer immediately after the clarification.",
+        "Offer a live follow-up if the question is still complex."
+      ],
+      "pitfalls": [
+        "Do not sound defensive when correcting the record.",
+        "Do not leave the question half-answered after clarifying it."
+      ],
+      "examples": [
+        {
+          "label": "Revenue question",
+          "input": "An investor misunderstood a revenue figure in the data room.",
+          "output": "A careful correction with context and the updated answer."
+        },
+        {
+          "label": "Customer question",
+          "input": "The investor asked about a customer relationship that has changed.",
+          "output": "A clarification note that resets the premise and keeps the process accurate."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I correct an investor if they are slightly wrong?",
+          "a": "Yes, if the misunderstanding matters to the decision. Keep the tone polite."
+        },
+        {
+          "q": "Can this be used in later-stage diligence?",
+          "a": "Yes. It is especially useful when many parties are reviewing the same facts."
+        }
+      ],
+      "relatedTags": ["diligence", "clarification", "investors"]
+    },
+    {
+      "slug": "customer-board-incident-bridge-note",
+      "name": "Customer Board Incident Bridge Note",
+      "keyword": "board incident bridge",
+      "intent": "update",
+      "audience": "Founders and customer leaders",
+      "outcome": "Bridge the gap between an incident and the board update with a tight summary.",
+      "metaDescription": "Draft a bridge note for the board after a customer-facing incident. Free private email tool by ReplyMind.",
+      "h1": "Bridge the gap between customer impact and board awareness.",
+      "intro": "Boards do not need every technical detail during an incident. They need a summary of impact, remediation, and the risk to the business. This tool helps you write that bridge clearly.",
+      "fields": [
+        {"key": "incident", "label": "Incident summary", "type": "textarea", "placeholder": "What happened at a high level", "required": true},
+        {"key": "customerImpact", "label": "Customer impact", "type": "textarea", "placeholder": "What customers experienced", "required": true},
+        {"key": "businessRisk", "label": "Business risk", "type": "textarea", "placeholder": "Churn, reputation, or renewals", "required": true},
+        {"key": "remediation", "label": "Remediation status", "type": "textarea", "placeholder": "Fix deployed or investigation underway", "required": true},
+        {"key": "boardAsk", "label": "What the board should know or do", "type": "textarea", "placeholder": "No action needed yet or prepare for follow-up", "required": true}
+      ],
+      "subjectTemplate": "Board bridge on the customer incident",
+      "bodyTemplate": "Hi team,\n\nHere is the bridge note on the incident.\n\nIncident: {{incident}}\nCustomer impact: {{customerImpact}}\nBusiness risk: {{businessRisk}}\nRemediation: {{remediation}}\nBoard note: {{boardAsk}}\n\nI am sharing this so the board has a clean summary without the operational noise.\n\nBest,",
+      "guidance": [
+        "Translate incident detail into business impact.",
+        "Tell the board whether action is needed now.",
+        "Keep the note short enough to be forwarded cleanly."
+      ],
+      "pitfalls": [
+        "Do not send the board raw operational logs.",
+        "Do not omit the business risk if there is one."
+      ],
+      "examples": [
+        {
+          "label": "Service outage",
+          "input": "Customers experienced a partial outage and support is responding.",
+          "output": "A bridge note that summarizes impact, remediation, and whether board action is needed."
+        },
+        {
+          "label": "Security issue",
+          "input": "A security concern was identified and contained.",
+          "output": "A concise summary that helps the board understand the risk and the current status."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should this replace the customer update?",
+          "a": "No. It is a separate note designed for the board audience."
+        },
+        {
+          "q": "Do I need root cause before sending it?",
+          "a": "No. You need a clear high-level summary and the current remediation status."
+        }
+      ],
+      "relatedTags": ["board", "incident", "customer-risk"]
+    },
+    {
+      "slug": "founder-weekly-priorities-email",
+      "name": "Founder Weekly Priorities Email",
+      "keyword": "weekly founder priorities",
+      "intent": "align",
+      "audience": "Founders and leadership teams",
+      "outcome": "Share weekly priorities so the team knows what matters now and what can wait.",
+      "metaDescription": "Draft a founder weekly priorities email with focus, owners, and ignored work. Free private email tool by ReplyMind.",
+      "h1": "Send the weekly priorities that keep everyone aligned.",
+      "intro": "Weekly priority notes work when they reduce ambiguity. This tool helps you name the top priorities, explain why they matter, and make it explicit what is not getting attention this week.",
+      "fields": [
+        {"key": "topPriority", "label": "Top priority", "type": "textarea", "placeholder": "Ship onboarding fix or close key customer", "required": true},
+        {"key": "secondaryPriority", "label": "Secondary priority", "type": "textarea", "placeholder": "Support work that cannot be ignored", "required": true},
+        {"key": "blockedWork", "label": "Blocked or paused work", "type": "textarea", "placeholder": "What should wait until next week", "required": true},
+        {"key": "owner", "label": "Primary owner", "type": "text", "placeholder": "Alex", "required": false},
+        {"key": "why", "label": "Why these priorities matter", "type": "textarea", "placeholder": "Business reason for the focus", "required": true}
+      ],
+      "subjectTemplate": "This week's priorities",
+      "bodyTemplate": "Hi team,\n\nHere are the priorities for this week.\n\nTop priority: {{topPriority}}\nSecondary priority: {{secondaryPriority}}\nBlocked work: {{blockedWork}}\nOwner: {{owner}}\nWhy this matters: {{why}}\n\nIf anything here feels misaligned, reply quickly so we can correct it.\n\nBest,",
+      "guidance": [
+        "Use the note to create focus, not just update the team.",
+        "Say what is blocked so people know what to deprioritize.",
+        "Keep the message short enough to become a weekly habit."
+      ],
+      "pitfalls": [
+        "Do not list too many priorities.",
+        "Do not leave the team guessing which work should stop."
+      ],
+      "examples": [
+        {
+          "label": "Product week",
+          "input": "The company is focused on a launch blocker.",
+          "output": "A weekly note that assigns focus and lists paused work."
+        },
+        {
+          "label": "Commercial week",
+          "input": "The team needs to close a key customer and support the pipeline.",
+          "output": "A concise priorities email that explains what matters and why."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I send this every Monday?",
+          "a": "A consistent day helps, but the important part is that the message stays current and actionable."
+        },
+        {
+          "q": "Can this replace a meeting?",
+          "a": "Sometimes yes, if the goal is only alignment and there is no need for live discussion."
+        }
+      ],
+      "relatedTags": ["priorities", "weekly-update", "alignment"]
+    },
+    {
+      "slug": "investor-pipeline-status-email",
+      "name": "Investor Pipeline Status Email",
+      "keyword": "investor pipeline status",
+      "intent": "update",
+      "audience": "Founders and fundraising leads",
+      "outcome": "Share fundraising pipeline status in a way that shows progress, gaps, and timing.",
+      "metaDescription": "Write an investor pipeline status email with stage, progress, risks, and next moves. Free private email tool by ReplyMind.",
+      "h1": "Report fundraising pipeline without the drama.",
+      "intro": "Fundraising pipeline updates should show motion and reality at the same time. This tool helps you explain where conversations stand, what is stuck, and what you are doing next.",
+      "fields": [
+        {"key": "stage", "label": "Stage of the pipeline", "type": "textarea", "placeholder": "First meeting, diligence, or term sheet stage", "required": true},
+        {"key": "progress", "label": "Progress made", "type": "textarea", "placeholder": "New meetings, deeper diligence, or stronger interest", "required": true},
+        {"key": "risk", "label": "Main risk", "type": "textarea", "placeholder": "Timing, conviction, or competition", "required": true},
+        {"key": "action", "label": "Action underway", "type": "textarea", "placeholder": "What you are doing to keep momentum", "required": true},
+        {"key": "timing", "label": "Timing expectation", "type": "text", "placeholder": "Expect movement this week", "required": false}
+      ],
+      "subjectTemplate": "Fundraising pipeline status",
+      "bodyTemplate": "Hi,\n\nQuick status on the fundraising pipeline.\n\nStage: {{stage}}\nProgress: {{progress}}\nRisk: {{risk}}\nAction: {{action}}\nTiming: {{timing}}\n\nI want to keep the update factual and useful for anyone helping with the round.\n\nBest,",
+      "guidance": [
+        "Use the update to show both momentum and bottlenecks.",
+        "Keep the stage language specific so people know where each conversation stands.",
+        "Pair every risk with an action."
+      ],
+      "pitfalls": [
+        "Do not call the round 'strong' without evidence.",
+        "Do not skip timing if it matters to the audience."
+      ],
+      "examples": [
+        {
+          "label": "Active pipeline",
+          "input": "Several investors are in diligence and one is moving faster.",
+          "output": "A status note that shows progress, risk, and the action plan."
+        },
+        {
+          "label": "Slow pipeline",
+          "input": "Interest exists, but timing is slipping.",
+          "output": "A factual update that explains the gap and what is being done."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include names?",
+          "a": "Only if the audience needs them and the relationships permit it."
+        },
+        {
+          "q": "Is this just for the internal team?",
+          "a": "Usually yes, but it can also help advisors or board members who are supporting the raise."
+        }
+      ],
+      "relatedTags": ["fundraising", "pipeline", "status"]
+    },
+    {
+      "slug": "advisory-board-update-email",
+      "name": "Advisory Board Update Email",
+      "keyword": "advisory board update",
+      "intent": "update",
+      "audience": "Founders and advisory-board leads",
+      "outcome": "Keep advisors engaged with a focused update and a clear question.",
+      "metaDescription": "Draft an advisory board update email with progress, challenge, and ask. Free private email tool by ReplyMind.",
+      "h1": "Keep your advisors useful, not merely informed.",
+      "intro": "Advisors help most when they know where the real tension is. This tool helps you send a concise update that shares progress, highlights the challenge, and asks for the right input.",
+      "fields": [
+        {"key": "progress", "label": "What has progressed", "type": "textarea", "placeholder": "Growth, product, or hiring progress", "required": true},
+        {"key": "challenge", "label": "Primary challenge", "type": "textarea", "placeholder": "What is blocking the next step", "required": true},
+        {"key": "question", "label": "Question for advisors", "type": "textarea", "placeholder": "Which approach would you recommend?", "required": true},
+        {"key": "context", "label": "Context they need", "type": "textarea", "placeholder": "A little background to answer well", "required": true},
+        {"key": "nextTouch", "label": "Next touchpoint", "type": "text", "placeholder": "Advisory call next week", "required": false}
+      ],
+      "subjectTemplate": "Advisory update and one question",
+      "bodyTemplate": "Hi everyone,\n\nQuick update from the last period.\n\nProgress: {{progress}}\nChallenge: {{challenge}}\nContext: {{context}}\nQuestion: {{question}}\nNext touchpoint: {{nextTouch}}\n\nI am hoping to get your practical perspective on the issue above.\n\nBest,",
+      "guidance": [
+        "Give advisors one question they can actually answer.",
+        "Keep the update short and centered on a real business tension.",
+        "Use the note to prepare the call, not replace it."
+      ],
+      "pitfalls": [
+        "Do not send a full operating report to advisors.",
+        "Do not ask for advice on too many unrelated issues."
+      ],
+      "examples": [
+        {
+          "label": "Growth challenge",
+          "input": "The team improved conversion but needs help scaling acquisition.",
+          "output": "An advisory update with progress, challenge, and a specific question."
+        },
+        {
+          "label": "Hiring challenge",
+          "input": "The company is struggling to hire a critical leader.",
+          "output": "A note that summarizes the issue and asks for a concrete recommendation."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should advisors receive the same update as investors?",
+          "a": "Not always. Advisors usually need less financial detail and more specific problems to solve."
+        },
+        {
+          "q": "How often should I send this?",
+          "a": "Only as often as you have a useful question or meaningful progress to share."
+        }
+      ],
+      "relatedTags": ["advisors", "update", "question"]
+    },
+    {
+      "slug": "cross-functional-escalation-note",
+      "name": "Cross-Functional Escalation Note",
+      "keyword": "cross functional escalation",
+      "intent": "escalation",
+      "audience": "Executives and operators",
+      "outcome": "Escalate a cross-functional issue without creating blame or confusion.",
+      "metaDescription": "Write a cross-functional escalation email that names the issue, owners, and decision needed. Free private email tool by ReplyMind.",
+      "h1": "Escalate the issue without escalating the noise.",
+      "intro": "Cross-functional issues can stall because nobody owns the whole picture. This tool helps you write a note that defines the problem, shows the dependencies, and asks for the needed decision.",
+      "fields": [
+        {"key": "issue", "label": "Issue", "type": "textarea", "placeholder": "A launch depends on three teams and one is blocked", "required": true},
+        {"key": "dependencies", "label": "Dependencies", "type": "textarea", "placeholder": "Which teams or workstreams are involved", "required": true},
+        {"key": "owner", "label": "Current owner", "type": "text", "placeholder": "Program manager or lead", "required": false},
+        {"key": "decision", "label": "Decision needed", "type": "textarea", "placeholder": "Which tradeoff or priority needs resolution", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "Call with owners today", "required": true}
+      ],
+      "subjectTemplate": "Escalation on {{issue}}",
+      "bodyTemplate": "Hi team,\n\nI want to flag an issue that needs a coordinated response.\n\nIssue: {{issue}}\nDependencies: {{dependencies}}\nOwner: {{owner}}\nDecision needed: {{decision}}\nNext step: {{nextStep}}\n\nThe point here is to resolve the dependency quickly without turning this into a blame conversation.\n\nBest,",
+      "guidance": [
+        "Describe the dependency chain clearly.",
+        "Ask for the specific decision that will unlock progress.",
+        "Keep blame language out of the note."
+      ],
+      "pitfalls": [
+        "Do not escalate a cross-functional issue as a personal complaint.",
+        "Do not omit the decision needed."
+      ],
+      "examples": [
+        {
+          "label": "Launch dependency",
+          "input": "A product release is blocked by legal and finance review.",
+          "output": "A clear escalation note that frames the issue, owners, and next step."
+        },
+        {
+          "label": "Customer handoff",
+          "input": "Sales and success are not aligned on a key account plan.",
+          "output": "A practical message that asks for the decision needed and keeps the conversation constructive."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I send this to everyone involved?",
+          "a": "Only if everyone needs to see the same issue and the same decision path."
+        },
+        {
+          "q": "How direct should I be?",
+          "a": "Direct about the issue, careful about tone, and explicit about the next step."
+        }
+      ],
+      "relatedTags": ["escalation", "cross-functional", "decision"]
+    },
+    {
+      "slug": "investor-reference-request-email",
+      "name": "Investor Reference Request Email",
+      "keyword": "investor reference request",
+      "intent": "request",
+      "audience": "Founders and CEOs",
+      "outcome": "Ask a trusted contact for a relevant investor reference without making the request awkward.",
+      "metaDescription": "Draft a respectful investor reference request email with context, fit, and timing. Free private email tool by ReplyMind.",
+      "h1": "Ask for a reference in a clean, low-friction way.",
+      "intro": "A reference request works best when the person knows exactly why you are asking and how it helps. This tool helps you write that request with enough context to be useful and not burdensome.",
+      "fields": [
+        {"key": "contact", "label": "Person you are asking", "type": "text", "placeholder": "Former founder or operator", "required": false},
+        {"key": "investor", "label": "Investor or firm", "type": "text", "placeholder": "The firm you want introduced to", "required": false},
+        {"key": "fit", "label": "Why they are a fit", "type": "textarea", "placeholder": "Thesis overlap or prior relationship", "required": true},
+        {"key": "context", "label": "Context for the ask", "type": "textarea", "placeholder": "Why you are raising and why now", "required": true},
+        {"key": "helpRequest", "label": "Specific help requested", "type": "textarea", "placeholder": "Can you speak to your experience with them?", "required": true}
+      ],
+      "subjectTemplate": "Would you be open to a quick reference?",
+      "bodyTemplate": "Hi {{contact}},\n\nI wanted to ask if you would be open to a reference for {{investor}}.\n\nWhy they are a fit: {{fit}}\nContext: {{context}}\nHelp requested: {{helpRequest}}\n\nI know your time is valuable, so I wanted to keep the ask specific.\n\nBest,",
+      "guidance": [
+        "Be specific about why the reference matters.",
+        "Make the request easy to say yes or no to.",
+        "Keep the note respectful of the person's time."
+      ],
+      "pitfalls": [
+        "Do not ask for a reference without explaining the fit.",
+        "Do not make the request feel open-ended or high effort."
+      ],
+      "examples": [
+        {
+          "label": "Operator reference",
+          "input": "A trusted contact knows the target investor well.",
+          "output": "A concise reference request that gives enough context for a useful intro."
+        },
+        {
+          "label": "Founder reference",
+          "input": "Want a founder to speak to their experience with the firm.",
+          "output": "A respectful note that asks for a targeted reference rather than a broad endorsement."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I ask multiple people for the same reference?",
+          "a": "Only if the asks are natural and not duplicative. Avoid creating pressure through volume."
+        },
+        {
+          "q": "Is this only for fundraising?",
+          "a": "Mostly, yes. It is useful whenever a reference can materially improve a high-stakes conversation."
+        }
+      ],
+      "relatedTags": ["investors", "reference", "intro-request"]
+    },
+    {
+      "slug": "board-risk-flag-email",
+      "name": "Board Risk Flag Email",
+      "keyword": "board risk flag",
+      "intent": "alert",
+      "audience": "Founders and CEOs",
+      "outcome": "Alert the board early to a meaningful risk with enough context to avoid surprise later.",
+      "metaDescription": "Write a board risk flag email that names the risk, likely impact, and mitigation. Free private email tool by ReplyMind.",
+      "h1": "Flag the risk before the board is surprised.",
+      "intro": "The best time to alert the board is before the issue becomes a crisis. This tool helps you write a short risk flag that explains the issue, the likely business impact, and the mitigation path.",
+      "fields": [
+        {"key": "risk", "label": "Risk being flagged", "type": "textarea", "placeholder": "A key customer may churn", "required": true},
+        {"key": "impact", "label": "Potential impact", "type": "textarea", "placeholder": "Revenue, credibility, or timing impact", "required": true},
+        {"key": "mitigation", "label": "Mitigation steps", "type": "textarea", "placeholder": "What the team is doing now", "required": true},
+        {"key": "timing", "label": "Timing or urgency", "type": "text", "placeholder": "Needs attention this week", "required": false},
+        {"key": "question", "label": "Question for the board", "type": "textarea", "placeholder": "Any guidance on how to handle this?", "required": true}
+      ],
+      "subjectTemplate": "Board risk flag: {{risk}}",
+      "bodyTemplate": "Hi team,\n\nI want to flag a risk early.\n\nRisk: {{risk}}\nPotential impact: {{impact}}\nMitigation: {{mitigation}}\nTiming: {{timing}}\nQuestion: {{question}}\n\nI am sharing this now so we can handle it proactively.\n\nBest,",
+      "guidance": [
+        "Name the risk plainly and early.",
+        "Pair the risk with active mitigation.",
+        "Ask the board only what you actually need from them."
+      ],
+      "pitfalls": [
+        "Do not wait until the next meeting if the issue is time-sensitive.",
+        "Do not flag a risk without stating what is being done."
+      ],
+      "examples": [
+        {
+          "label": "Customer churn risk",
+          "input": "A large account may leave if implementation slips further.",
+          "output": "A direct board alert with impact, mitigation, and a question."
+        },
+        {
+          "label": "Hiring risk",
+          "input": "A critical role has stayed open too long.",
+          "output": "A practical risk note that asks for guidance or support."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I soften the language to reduce concern?",
+          "a": "No. Be calm but clear. Softening can create more concern later if the board feels surprised."
+        },
+        {
+          "q": "Is this only for bad news?",
+          "a": "Mostly yes, but it can also be used for risks that are not yet urgent and need early visibility."
+        }
+      ],
+      "relatedTags": ["board", "risk", "alert"]
+    },
+    {
+      "slug": "executive-org-change-announcement",
+      "name": "Executive Org Change Announcement",
+      "keyword": "org change announcement",
+      "intent": "announce",
+      "audience": "Founders and executive teams",
+      "outcome": "Communicate an organizational change with clarity about reporting lines and why the change is happening.",
+      "metaDescription": "Draft an executive org change announcement with reporting lines, rationale, and next steps. Free private email tool by ReplyMind.",
+      "h1": "Announce the org change without creating confusion.",
+      "intro": "Org changes can create more uncertainty than the change itself. This tool helps you explain what changed, why it changed, and what people should do now.",
+      "fields": [
+        {"key": "change", "label": "What changed", "type": "textarea", "placeholder": "New reporting structure or team split", "required": true},
+        {"key": "reason", "label": "Why the change happened", "type": "textarea", "placeholder": "Speed, focus, or clearer ownership", "required": true},
+        {"key": "impact", "label": "Impact on people", "type": "textarea", "placeholder": "Who reports to whom and what changes", "required": true},
+        {"key": "transition", "label": "Transition timing", "type": "text", "placeholder": "Effective next Monday", "required": false},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "Who to contact with questions", "required": true}
+      ],
+      "subjectTemplate": "Update on the organizational structure",
+      "bodyTemplate": "Hi team,\n\nWe are making an organizational change.\n\nWhat changed: {{change}}\nWhy: {{reason}}\nImpact: {{impact}}\nTransition: {{transition}}\nNext step: {{nextStep}}\n\nThe goal is to make the reporting structure clearer and support execution.\n\nBest,",
+      "guidance": [
+        "Explain the change in one line before you add detail.",
+        "Be explicit about reporting lines and timing.",
+        "Give people a place to direct questions."
+      ],
+      "pitfalls": [
+        "Do not hide the reporting changes in a vague announcement.",
+        "Do not leave transition timing implied."
+      ],
+      "examples": [
+        {
+          "label": "Team reorg",
+          "input": "Two product groups are being merged under one leader.",
+          "output": "An announcement that states the change, the reason, and the transition timing."
+        },
+        {
+          "label": "Functional split",
+          "input": "A growth team is separating from product marketing.",
+          "output": "A clear org note with impact and next steps."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I explain why the old structure was changed?",
+          "a": "Briefly. The point is to help people understand the new operating shape."
+        },
+        {
+          "q": "Should this go out before the org chart is updated?",
+          "a": "Only if the message clearly explains the timing and where people should look next."
+        }
+      ],
+      "relatedTags": ["organization", "announcement", "leadership"]
+    },
+    {
+      "slug": "board-meeting-agenda-email",
+      "name": "Board Meeting Agenda Email",
+      "keyword": "board meeting agenda",
+      "intent": "agenda",
+      "audience": "Founders and chiefs of staff",
+      "outcome": "Send a board agenda that makes the meeting's purpose and flow easy to follow.",
+      "metaDescription": "Write a board meeting agenda email with timing, topics, and decision points. Free private email tool by ReplyMind.",
+      "h1": "Send an agenda that keeps the board meeting focused.",
+      "intro": "Board agendas work best when they show priorities and decision points clearly. This tool helps you structure the meeting so everyone can prepare for the right discussion.",
+      "fields": [
+        {"key": "meeting", "label": "Meeting date or name", "type": "text", "placeholder": "Q3 board meeting", "required": false},
+        {"key": "topics", "label": "Agenda topics", "type": "textarea", "placeholder": "Metrics, hiring, product, and strategy", "required": true},
+        {"key": "timing", "label": "Timing or sequence", "type": "textarea", "placeholder": "15 minutes per topic or decision order", "required": true},
+        {"key": "decisions", "label": "Decision points", "type": "textarea", "placeholder": "Which topics require board input", "required": true},
+        {"key": "prep", "label": "Prep requested", "type": "textarea", "placeholder": "Read the memo before the call", "required": true}
+      ],
+      "subjectTemplate": "Board agenda for {{meeting}}",
+      "bodyTemplate": "Hi everyone,\n\nHere is the agenda for {{meeting}}.\n\nTopics: {{topics}}\nTiming: {{timing}}\nDecision points: {{decisions}}\nPrep: {{prep}}\n\nPlease review the prep in advance so we can use the meeting well.\n\nBest,",
+      "guidance": [
+        "Show the flow of the meeting, not just the topics.",
+        "Call out the decision points so the board can prepare.",
+        "Make prep expectations explicit."
+      ],
+      "pitfalls": [
+        "Do not send a topic list without sequence or purpose.",
+        "Do not ask for prep without saying why it matters."
+      ],
+      "examples": [
+        {
+          "label": "Quarterly meeting",
+          "input": "Need to cover operating metrics and a product decision.",
+          "output": "A board agenda email that lays out topics, timing, and prep."
+        },
+        {
+          "label": "Special meeting",
+          "input": "Need a short meeting to approve a hiring plan.",
+          "output": "A focused agenda with one decision and the required prep."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How long should the agenda be?",
+          "a": "Short enough to skim, but clear enough that the board knows what will be decided."
+        },
+        {
+          "q": "Should I attach the full materials?",
+          "a": "Yes if there is a pre-read. The agenda email should point people to it."
+        }
+      ],
+      "relatedTags": ["board", "agenda", "meeting"]
+    },
+    {
+      "slug": "pricing-change-customer-note",
+      "name": "Pricing Change Customer Note",
+      "keyword": "pricing change email",
+      "intent": "announce",
+      "audience": "Founders and revenue leaders",
+      "outcome": "Explain a pricing change to customers in a way that is clear and defensible.",
+      "metaDescription": "Draft a pricing change email with reason, timing, and customer impact. Free private email tool by ReplyMind.",
+      "h1": "Announce a pricing change with a clear reason.",
+      "intro": "Pricing changes are sensitive because customers want to know what is changing and why. This tool helps you explain the change, its timing, and any impact on current customers.",
+      "fields": [
+        {"key": "change", "label": "Pricing change", "type": "textarea", "placeholder": "Higher rates, new tier, or billing update", "required": true},
+        {"key": "reason", "label": "Reason for the change", "type": "textarea", "placeholder": "New value, rising costs, or simplification", "required": true},
+        {"key": "timing", "label": "Effective timing", "type": "text", "placeholder": "Starting next billing cycle", "required": false},
+        {"key": "impact", "label": "Customer impact", "type": "textarea", "placeholder": "Who is affected and how", "required": true},
+        {"key": "support", "label": "Support or transition help", "type": "textarea", "placeholder": "Grandfathering, notice period, or help center", "required": true}
+      ],
+      "subjectTemplate": "An update on pricing",
+      "bodyTemplate": "Hi,\n\nWe are making a pricing change.\n\nChange: {{change}}\nReason: {{reason}}\nTiming: {{timing}}\nImpact: {{impact}}\nSupport: {{support}}\n\nWe want to be clear about what is changing and how we will support customers through it.\n\nBest,",
+      "guidance": [
+        "Explain the reason in business terms customers can understand.",
+        "State the timing and impact plainly.",
+        "Include support details if there is a transition period."
+      ],
+      "pitfalls": [
+        "Do not make the announcement sound like a surprise fee hike.",
+        "Do not bury the effective date."
+      ],
+      "examples": [
+        {
+          "label": "Tier change",
+          "input": "The pricing model is being simplified into fewer tiers.",
+          "output": "A customer note that explains the change, the reason, and the support offered."
+        },
+        {
+          "label": "Price increase",
+          "input": "Prices are increasing for new customers next month.",
+          "output": "A clear announcement with timing and customer impact."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should current customers get the same message as new customers?",
+          "a": "Not necessarily. Segment the note if the impact differs."
+        },
+        {
+          "q": "Can I justify a price increase by referencing costs?",
+          "a": "Yes, if it is true and framed as part of the overall value or service changes."
+        }
+      ],
+      "relatedTags": ["pricing", "customers", "announcement"]
+    },
+    {
+      "slug": "board-vote-request-email",
+      "name": "Board Vote Request Email",
+      "keyword": "board vote request",
+      "intent": "request",
+      "audience": "Founders and board chairs",
+      "outcome": "Request a formal board vote with the resolution and the decision needed.",
+      "metaDescription": "Write a board vote request email with resolution text, context, and deadline. Free private email tool by ReplyMind.",
+      "h1": "Request the board vote directly.",
+      "intro": "When a formal approval is needed, the email should make the resolution and the voting ask obvious. This tool helps you keep that request precise and easy to act on.",
+      "fields": [
+        {"key": "resolution", "label": "Resolution text", "type": "textarea", "placeholder": "Approve the stock option refresh", "required": true},
+        {"key": "context", "label": "Context", "type": "textarea", "placeholder": "Why the vote is needed now", "required": true},
+        {"key": "decision", "label": "Decision needed", "type": "textarea", "placeholder": "Vote yes or no by the deadline", "required": true},
+        {"key": "deadline", "label": "Voting deadline", "type": "text", "placeholder": "Friday at 5 PM", "required": true},
+        {"key": "format", "label": "Preferred response format", "type": "textarea", "placeholder": "Reply to this email with your vote", "required": true}
+      ],
+      "subjectTemplate": "Request for board vote",
+      "bodyTemplate": "Hi team,\n\nWe need a board vote on the following resolution.\n\nResolution: {{resolution}}\nContext: {{context}}\nDecision needed: {{decision}}\nDeadline: {{deadline}}\nFormat: {{format}}\n\nPlease reply in the requested format so we can record the vote cleanly.\n\nBest,",
+      "guidance": [
+        "State the resolution exactly as it should be voted on.",
+        "Make the response format explicit for clean recordkeeping.",
+        "Include the deadline in the subject or body."
+      ],
+      "pitfalls": [
+        "Do not bury the actual vote request inside background information.",
+        "Do not make the response format ambiguous."
+      ],
+      "examples": [
+        {
+          "label": "Option approval",
+          "input": "Need a vote to approve an equity grant.",
+          "output": "A concise vote request with the resolution and the deadline."
+        },
+        {
+          "label": "Policy approval",
+          "input": "Need board approval for a policy change.",
+          "output": "A direct request that states the resolution and reply format."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can I send this by email instead of scheduling a call?",
+          "a": "Yes, if the governance process allows it and the resolution is clear."
+        },
+        {
+          "q": "Should I include pros and cons?",
+          "a": "Only enough to support the vote. The request itself should stay clean."
+        }
+      ],
+      "relatedTags": ["board", "vote", "approval"]
+    },
+    {
+      "slug": "investor-quarterly-narrative-update",
+      "name": "Investor Quarterly Narrative Update",
+      "keyword": "quarterly investor narrative",
+      "intent": "update",
+      "audience": "Founders and CEOs",
+      "outcome": "Summarize the quarter as a story investors can follow, not a spreadsheet dump.",
+      "metaDescription": "Write a quarterly investor narrative update with themes, progress, and focus areas. Free private email tool by ReplyMind.",
+      "h1": "Tell investors the story of the quarter.",
+      "intro": "Quarterly updates should show how the business moved and what that means. This tool helps you turn quarter-end performance into a narrative that is concise, credible, and actionable.",
+      "fields": [
+        {"key": "theme", "label": "Quarter theme", "type": "textarea", "placeholder": "Execution, focus, or efficiency", "required": true},
+        {"key": "progress", "label": "What progressed", "type": "textarea", "placeholder": "Product, revenue, or team progress", "required": true},
+        {"key": "setback", "label": "What did not go as planned", "type": "textarea", "placeholder": "A delay or miss worth noting", "required": true},
+        {"key": "focusNext", "label": "What is next quarter's focus", "type": "textarea", "placeholder": "The main priorities for next quarter", "required": true},
+        {"key": "help", "label": "Any help request", "type": "textarea", "placeholder": "Introductions, hiring, or strategic feedback", "required": true}
+      ],
+      "subjectTemplate": "Quarterly update and what we learned",
+      "bodyTemplate": "Hi everyone,\n\nHere is the quick narrative from the quarter.\n\nTheme: {{theme}}\nProgress: {{progress}}\nSetback: {{setback}}\nFocus next: {{focusNext}}\nHelp request: {{help}}\n\nI want to be transparent about what happened and clear about where we are heading.\n\nBest,",
+      "guidance": [
+        "Organize the quarter around one narrative theme.",
+        "Include one thing that did not go as planned so the update feels real.",
+        "End with the next focus and a concrete help request."
+      ],
+      "pitfalls": [
+        "Do not turn the update into a full metrics appendix.",
+        "Do not make the story so polished that it stops feeling credible."
+      ],
+      "examples": [
+        {
+          "label": "Efficiency quarter",
+          "input": "The team improved burn but had slower growth.",
+          "output": "A narrative update that explains the tradeoff and the next focus."
+        },
+        {
+          "label": "Execution quarter",
+          "input": "Product shipped on time, but a launch issue caused a miss.",
+          "output": "A clear story that includes the setback and the next quarter's priorities."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Do investors want a narrative or raw metrics?",
+          "a": "Both, but the narrative helps them interpret the metrics quickly."
+        },
+        {
+          "q": "Should I share failure in the quarterly update?",
+          "a": "Yes, if it matters. Credibility comes from showing both progress and misses."
+        }
+      ],
+      "relatedTags": ["quarterly-update", "investors", "narrative"]
+    },
+    {
+      "slug": "founder-board-one-on-one-prep",
+      "name": "Founder Board One-on-One Prep",
+      "keyword": "board one on one prep",
+      "intent": "prep",
+      "audience": "Founders",
+      "outcome": "Prepare for a one-on-one with a board member using the right context and asks.",
+      "metaDescription": "Draft a board one-on-one prep email with context, questions, and desired feedback. Free private email tool by ReplyMind.",
+      "h1": "Prepare the board one-on-one with purpose.",
+      "intro": "One-on-ones with board members are strongest when they have a clear purpose. This tool helps you send a prep note that frames the conversation and asks for the most helpful input.",
+      "fields": [
+        {"key": "member", "label": "Board member", "type": "text", "placeholder": "Board member name", "required": false},
+        {"key": "purpose", "label": "Purpose of the one-on-one", "type": "textarea", "placeholder": "Review an issue or get strategic advice", "required": true},
+        {"key": "context", "label": "Context to share", "type": "textarea", "placeholder": "Background they need before the call", "required": true},
+        {"key": "questions", "label": "Questions to discuss", "type": "textarea", "placeholder": "What you want their view on", "required": true},
+        {"key": "desiredFeedback", "label": "Desired feedback", "type": "textarea", "placeholder": "Which decision or idea you want pressure-tested", "required": true}
+      ],
+      "subjectTemplate": "Prep for our one-on-one",
+      "bodyTemplate": "Hi {{member}},\n\nAhead of our one-on-one, I wanted to share a bit of prep.\n\nPurpose: {{purpose}}\nContext: {{context}}\nQuestions: {{questions}}\nDesired feedback: {{desiredFeedback}}\n\nI want to use the time well and focus on the most useful discussion.\n\nBest,",
+      "guidance": [
+        "Tell the board member what the conversation is for.",
+        "Give enough context to make their feedback specific.",
+        "Ask targeted questions rather than a broad 'thoughts?'"
+      ],
+      "pitfalls": [
+        "Do not send a one-on-one prep note that is more complex than the conversation itself.",
+        "Do not ask for feedback without framing the decision."
+      ],
+      "examples": [
+        {
+          "label": "Strategic advice",
+          "input": "Need input on which growth path to prioritize.",
+          "output": "A prep note that explains the purpose, context, and questions."
+        },
+        {
+          "label": "Concern review",
+          "input": "Want to pressure-test a difficult operational issue.",
+          "output": "A concise one-on-one prep email with the specific feedback requested."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I send prep for every one-on-one?",
+          "a": "If the discussion needs context or a specific decision, yes. Otherwise keep it light."
+        },
+        {
+          "q": "How long should the prep note be?",
+          "a": "Short. The goal is to make the meeting better, not replace it."
+        }
+      ],
+      "relatedTags": ["board", "prep", "one-on-one"]
+    },
+    {
+      "slug": "investor-soft-circle-checkin",
+      "name": "Investor Soft-Circle Check-In",
+      "keyword": "investor soft circle check in",
+      "intent": "update",
+      "audience": "Founders",
+      "outcome": "Keep soft-circle investors warm with a relevant progress update.",
+      "metaDescription": "Write a soft-circle investor check-in with progress, timing, and next touchpoint. Free private email tool by ReplyMind.",
+      "h1": "Keep soft-circle investors warm without overdoing it.",
+      "intro": "Soft-circle relationships need light, useful contact. This tool helps you send a progress update that reminds investors why the opportunity is moving and when they may hear from you again.",
+      "fields": [
+        {"key": "investor", "label": "Investor name", "type": "text", "placeholder": "Name or firm", "required": false},
+        {"key": "progress", "label": "Progress since last touch", "type": "textarea", "placeholder": "New customer, product, or hiring progress", "required": true},
+        {"key": "timing", "label": "Timing context", "type": "textarea", "placeholder": "Where you are in the raise or process", "required": true},
+        {"key": "nextTouch", "label": "Next touchpoint", "type": "textarea", "placeholder": "When you plan to update them again", "required": true},
+        {"key": "ask", "label": "Soft ask", "type": "textarea", "placeholder": "Let me know if it is helpful to reconnect", "required": true}
+      ],
+      "subjectTemplate": "A quick progress note",
+      "bodyTemplate": "Hi {{investor}},\n\nI wanted to send a quick progress note.\n\nProgress: {{progress}}\nTiming: {{timing}}\nNext touchpoint: {{nextTouch}}\nAsk: {{ask}}\n\nI will keep the updates tight and useful as things move forward.\n\nBest,",
+      "guidance": [
+        "Send only when there is a real update to share.",
+        "Keep the tone warm but not needy.",
+        "Let the next touchpoint be clear so follow-up is easier."
+      ],
+      "pitfalls": [
+        "Do not over-message soft-circle investors.",
+        "Do not imply urgency if the relationship is still informal."
+      ],
+      "examples": [
+        {
+          "label": "Progress note",
+          "input": "A soft-circle investor wants to stay informed about traction.",
+          "output": "A short progress update that keeps the relationship warm."
+        },
+        {
+          "label": "Light re-engagement",
+          "input": "Need to keep a maybe-investor updated without pressure.",
+          "output": "A respectful check-in with timing and a soft ask."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a soft-circle investor?",
+          "a": "Someone who is interested enough to stay informed but has not committed to investing."
+        },
+        {
+          "q": "How often should I send this?",
+          "a": "Only when you have something meaningful to share or when the timing has changed."
+        }
+      ],
+      "relatedTags": ["investors", "soft-circle", "check-in"]
+    },
+    {
+      "slug": "board-prep-q-and-a-note",
+      "name": "Board Prep Q and A Note",
+      "keyword": "board prep q and a",
+      "intent": "prep",
+      "audience": "Founders and chiefs of staff",
+      "outcome": "Anticipate board questions with prepared answers that are short and direct.",
+      "metaDescription": "Draft a board prep Q&A note with likely questions, concise answers, and context. Free private email tool by ReplyMind.",
+      "h1": "Prepare answers before the board asks the questions.",
+      "intro": "A strong board prep note helps the team answer hard questions cleanly. This tool turns likely questions into concise answers with just enough context to be useful.",
+      "fields": [
+        {"key": "questions", "label": "Likely questions", "type": "textarea", "placeholder": "What will the board ask?", "required": true},
+        {"key": "answers", "label": "Prepared answers", "type": "textarea", "placeholder": "Short, direct answers to each question", "required": true},
+        {"key": "context", "label": "Context to keep in mind", "type": "textarea", "placeholder": "Background or assumptions", "required": true},
+        {"key": "gaps", "label": "Open gaps", "type": "textarea", "placeholder": "What you still do not know", "required": true},
+        {"key": "owner", "label": "Answer owner", "type": "text", "placeholder": "Who will speak to this", "required": false}
+      ],
+      "subjectTemplate": "Board prep Q&A",
+      "bodyTemplate": "Hi team,\n\nHere is the board prep Q&A.\n\nQuestions: {{questions}}\nAnswers: {{answers}}\nContext: {{context}}\nGaps: {{gaps}}\nOwner: {{owner}}\n\nPlease review so we can answer consistently in the meeting.\n\nBest,",
+      "guidance": [
+        "Write answers as if you had only 20 seconds to speak.",
+        "Be explicit about what remains unknown.",
+        "Assign answer ownership so the team is aligned."
+      ],
+      "pitfalls": [
+        "Do not write long essays in the answer section.",
+        "Do not pretend the gaps do not exist."
+      ],
+      "examples": [
+        {
+          "label": "Metrics questions",
+          "input": "The board will ask about growth and burn.",
+          "output": "A prep note that pairs each likely question with a concise answer."
+        },
+        {
+          "label": "Strategy questions",
+          "input": "Expect questions about market focus and product timing.",
+          "output": "A Q&A email that gives the team a shared response set."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Who should fill this out?",
+          "a": "Usually the founders, chief of staff, or finance lead with the clearest view of the topics."
+        },
+        {
+          "q": "Is this a substitute for rehearsal?",
+          "a": "No. It is a preparation tool that makes rehearsal more effective."
+        }
+      ],
+      "relatedTags": ["board", "prep", "questions"]
+    },
+    {
+      "slug": "investor-recap-after-partner-meeting",
+      "name": "Investor Recap After Partner Meeting",
+      "keyword": "partner meeting recap",
+      "intent": "follow-up",
+      "audience": "Founders",
+      "outcome": "Recap a partner meeting in a way that confirms interest and clarifies the remaining step.",
+      "metaDescription": "Draft a recap email after a partner meeting with takeaways, remaining questions, and next step. Free private email tool by ReplyMind.",
+      "h1": "Follow up after the partner meeting with precision.",
+      "intro": "A partner meeting recap should make the next move obvious. This tool helps you restate the key takeaways, show you heard their concerns, and propose the next step.",
+      "fields": [
+        {"key": "partner", "label": "Partner or investor", "type": "text", "placeholder": "The partner name", "required": false},
+        {"key": "takeaways", "label": "Key takeaways", "type": "textarea", "placeholder": "What mattered most in the meeting", "required": true},
+        {"key": "concerns", "label": "Open concerns", "type": "textarea", "placeholder": "Questions or hesitation they raised", "required": true},
+        {"key": "response", "label": "Your response", "type": "textarea", "placeholder": "How you addressed the concerns", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "What should happen next", "required": true}
+      ],
+      "subjectTemplate": "Recap from our meeting",
+      "bodyTemplate": "Hi {{partner}},\n\nThanks again for the meeting. My takeaways were {{takeaways}}.\n\nI also heard your concerns around {{concerns}} and wanted to respond with {{response}}.\n\nIf that is helpful, the next step I would suggest is {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Echo back the other side's concerns so they know you listened.",
+        "Respond directly to the key question before proposing the next step.",
+        "Use the recap to reduce ambiguity, not add more."
+      ],
+      "pitfalls": [
+        "Do not send a recap that only restates your own priorities.",
+        "Do not ignore the concerns they raised."
+      ],
+      "examples": [
+        {
+          "label": "Investor partner meeting",
+          "input": "The meeting covered traction and the investor raised a concern about timing.",
+          "output": "A recap email that reflects the concern and proposes the next step."
+        },
+        {
+          "label": "Business partner meeting",
+          "input": "The partner liked the concept but wanted a clearer use case.",
+          "output": "A follow-up that confirms the takeaways and keeps the thread moving."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I send this the same day?",
+          "a": "Yes, ideally while the conversation is still fresh."
+        },
+        {
+          "q": "Is this different from a normal follow-up?",
+          "a": "Yes. It is structured to restate meeting takeaways and answer open concerns."
+        }
+      ],
+      "relatedTags": ["recap", "follow-up", "investors"]
+    },
+    {
+      "slug": "founder-upstream-issue-email",
+      "name": "Founder Upstream Issue Email",
+      "keyword": "upstream issue email",
+      "intent": "escalation",
+      "audience": "Founders and operators",
+      "outcome": "Raise a root-cause issue that starts upstream of the team currently feeling the pain.",
+      "metaDescription": "Draft an upstream issue email that explains root cause, downstream effect, and needed change. Free private email tool by ReplyMind.",
+      "h1": "Surface the root cause before it keeps repeating.",
+      "intro": "When the symptom shows up downstream, the fix often belongs somewhere upstream. This tool helps you explain the root cause, the impact, and the change needed without turning the message into blame.",
+      "fields": [
+        {"key": "symptom", "label": "Visible symptom", "type": "textarea", "placeholder": "What people are noticing", "required": true},
+        {"key": "rootCause", "label": "Likely upstream cause", "type": "textarea", "placeholder": "What is causing the symptom higher up", "required": true},
+        {"key": "downstreamEffect", "label": "Downstream effect", "type": "textarea", "placeholder": "How the issue shows up for others", "required": true},
+        {"key": "changeNeeded", "label": "Change needed upstream", "type": "textarea", "placeholder": "What should change in the process", "required": true},
+        {"key": "owner", "label": "Owner for the change", "type": "text", "placeholder": "Team or leader to engage", "required": false}
+      ],
+      "subjectTemplate": "Upstream issue behind the current problem",
+      "bodyTemplate": "Hi team,\n\nI want to flag an upstream issue that is driving what we are seeing.\n\nSymptom: {{symptom}}\nRoot cause: {{rootCause}}\nDownstream effect: {{downstreamEffect}}\nChange needed: {{changeNeeded}}\nOwner: {{owner}}\n\nThe goal is to fix the source rather than keep reacting to the symptom.\n\nBest,",
+      "guidance": [
+        "Describe the symptom and the upstream cause separately.",
+        "Focus on the process change rather than blame.",
+        "Name an owner so the issue does not stay abstract."
+      ],
+      "pitfalls": [
+        "Do not confuse the symptom with the cause.",
+        "Do not escalate a systemic issue as a personal critique."
+      ],
+      "examples": [
+        {
+          "label": "Quality issue",
+          "input": "Customer support keeps seeing the same bug report.",
+          "output": "A note that identifies the upstream cause and the process change needed."
+        },
+        {
+          "label": "Sales issue",
+          "input": "Deals keep slipping because qualification is weak earlier in the funnel.",
+          "output": "An upstream issue email that points to the source and assigns ownership."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I send this to the whole company?",
+          "a": "Only if the upstream issue affects many teams. Otherwise target the people who can fix it."
+        },
+        {
+          "q": "Can I use this for recurring problems?",
+          "a": "Yes. It is especially useful when the same symptom keeps showing up."
+        }
+      ],
+      "relatedTags": ["operations", "root-cause", "escalation"]
+    },
+    {
+      "slug": "executive-handoff-note",
+      "name": "Executive Handoff Note",
+      "keyword": "executive handoff email",
+      "intent": "handoff",
+      "audience": "Founders and executives",
+      "outcome": "Hand off an issue or project to another executive with context and ownership.",
+      "metaDescription": "Write an executive handoff email with context, ownership, and next steps. Free private email tool by ReplyMind.",
+      "h1": "Hand off the work without dropping the context.",
+      "intro": "Handoffs break when the new owner does not know what matters. This tool helps you pass along the context, the reason for the handoff, and the exact next steps.",
+      "fields": [
+        {"key": "item", "label": "What is being handed off", "type": "textarea", "placeholder": "A customer issue, project, or decision", "required": true},
+        {"key": "reason", "label": "Why it is being handed off", "type": "textarea", "placeholder": "Who should own it and why", "required": true},
+        {"key": "context", "label": "Context to preserve", "type": "textarea", "placeholder": "History or constraints", "required": true},
+        {"key": "owner", "label": "New owner", "type": "text", "placeholder": "New executive owner", "required": false},
+        {"key": "nextStep", "label": "Immediate next step", "type": "textarea", "placeholder": "What should happen first", "required": true}
+      ],
+      "subjectTemplate": "Handoff on {{item}}",
+      "bodyTemplate": "Hi {{owner}},\n\nI am handing off {{item}} because {{reason}}.\n\nContext: {{context}}\nNext step: {{nextStep}}\n\nI wanted to preserve enough context so you can pick this up quickly.\n\nBest,",
+      "guidance": [
+        "Explain why the handoff is happening so the new owner trusts the transfer.",
+        "Preserve the minimum context needed to avoid rework.",
+        "Name the first action so the handoff becomes real."
+      ],
+      "pitfalls": [
+        "Do not hand off a task without explaining the background.",
+        "Do not leave the new owner without an immediate next step."
+      ],
+      "examples": [
+        {
+          "label": "Customer ownership transfer",
+          "input": "A strategic account needs a new owner after a role change.",
+          "output": "A handoff note that preserves history and clarifies first actions."
+        },
+        {
+          "label": "Project transfer",
+          "input": "A launch project is moving from product to operations.",
+          "output": "A concise executive handoff with context and next step."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is this only for leadership changes?",
+          "a": "No. It works whenever a high-stakes item needs to move between owners."
+        },
+        {
+          "q": "How much context is enough?",
+          "a": "Enough to avoid rework and confusion, but not so much that the handoff becomes a history lesson."
+        }
+      ],
+      "relatedTags": ["handoff", "ownership", "executive"]
+    },
+    {
+      "slug": "investor-board-combined-update",
+      "name": "Investor and Board Combined Update",
+      "keyword": "combined investor board update",
+      "intent": "update",
+      "audience": "Founders and CEOs",
+      "outcome": "Write one update that works for both investors and board members without flattening the detail.",
+      "metaDescription": "Draft a combined investor and board update with highlights, risks, and asks. Free private email tool by ReplyMind.",
+      "h1": "One update for both investors and the board.",
+      "intro": "Sometimes the same update needs to serve two audiences. This tool helps you write a note that stays readable for investors while still carrying enough operational detail for the board.",
+      "fields": [
+        {"key": "highlights", "label": "Highlights", "type": "textarea", "placeholder": "Top wins and progress", "required": true},
+        {"key": "risks", "label": "Risks", "type": "textarea", "placeholder": "What needs attention", "required": true},
+        {"key": "asks", "label": "Asks", "type": "textarea", "placeholder": "Help or feedback requested", "required": true},
+        {"key": "boardDetail", "label": "Board-only detail", "type": "textarea", "placeholder": "Extra detail for board members", "required": true},
+        {"key": "investorTone", "label": "Tone note for investors", "type": "text", "placeholder": "Keep the language concise and plain", "required": false}
+      ],
+      "subjectTemplate": "Company update",
+      "bodyTemplate": "Hi everyone,\n\nHere is the update.\n\nHighlights: {{highlights}}\nRisks: {{risks}}\nAsks: {{asks}}\nBoard detail: {{boardDetail}}\nTone note: {{investorTone}}\n\nI wanted one message that is useful to both groups without losing the important details.\n\nBest,",
+      "guidance": [
+        "Use the shared update for the common facts and reserve nuance for the board detail field.",
+        "Keep the investor-facing language plain and concise.",
+        "Make the asks explicit so both audiences know how to help."
+      ],
+      "pitfalls": [
+        "Do not write so much detail that the combined message becomes unreadable.",
+        "Do not make assumptions about which audience knows which context."
+      ],
+      "examples": [
+        {
+          "label": "Monthly update",
+          "input": "Need one message for both investors and board members.",
+          "output": "A combined update with shared highlights and a board-only detail block."
+        },
+        {
+          "label": "Quarterly update",
+          "input": "Want to keep everyone aligned without sending two separate notes.",
+          "output": "A concise combined update that keeps the tone and asks clear."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should combined updates replace separate board notes?",
+          "a": "Only if the content truly serves both groups. Otherwise tailor the detail by audience."
+        },
+        {
+          "q": "How do I avoid making the email too long?",
+          "a": "Keep the shared section short and place audience-specific nuance in the appropriate field."
+        }
+      ],
+      "relatedTags": ["board", "investors", "update"]
+    },
+    {
+      "slug": "go-no-go-decision-email",
+      "name": "Go No-Go Decision Email",
+      "keyword": "go no go decision email",
+      "intent": "decision",
+      "audience": "Founders and operators",
+      "outcome": "Make a go/no-go call visible with the key factors behind the decision.",
+      "metaDescription": "Draft a go/no-go decision email that lists the criteria, inputs, and final call. Free private email tool by ReplyMind.",
+      "h1": "Make the go/no-go call clear and defensible.",
+      "intro": "The team needs to know whether to move forward or stop. This tool helps you state the decision, the criteria, and the reasons so the outcome is understandable and actionable.",
+      "fields": [
+        {"key": "decision", "label": "Final call", "type": "textarea", "placeholder": "Go or no-go", "required": true},
+        {"key": "criteria", "label": "Criteria used", "type": "textarea", "placeholder": "What mattered in the decision", "required": true},
+        {"key": "inputs", "label": "Inputs considered", "type": "textarea", "placeholder": "Data, feedback, or risk factors", "required": true},
+        {"key": "reason", "label": "Reasoning", "type": "textarea", "placeholder": "Why the call was made", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "What happens after the decision", "required": true}
+      ],
+      "subjectTemplate": "Decision: {{decision}}",
+      "bodyTemplate": "Hi team,\n\nWe have made the call.\n\nDecision: {{decision}}\nCriteria: {{criteria}}\nInputs: {{inputs}}\nReason: {{reason}}\nNext step: {{nextStep}}\n\nI want the decision to be easy to understand and easy to execute.\n\nBest,",
+      "guidance": [
+        "State the decision up front.",
+        "Tie the reasoning to the criteria used.",
+        "Tell people what happens next, especially if the answer is no-go."
+      ],
+      "pitfalls": [
+        "Do not leave the team waiting to infer the answer.",
+        "Do not explain the decision without stating it plainly."
+      ],
+      "examples": [
+        {
+          "label": "Product launch",
+          "input": "Need to decide whether to launch on schedule.",
+          "output": "A direct go/no-go email with the criteria and the next step."
+        },
+        {
+          "label": "Partnership trial",
+          "input": "Need to decide whether to proceed with a pilot.",
+          "output": "A clear note that states the call and why it was made."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I explain why it was not a tie?",
+          "a": "Only if that helps the team understand the real tradeoff."
+        },
+        {
+          "q": "Can this be used after an executive review?",
+          "a": "Yes. It is useful whenever a binary decision needs to be communicated clearly."
+        }
+      ],
+      "relatedTags": ["decision", "go-no-go", "execution"]
+    },
+    {
+      "slug": "investor-question-answer-email",
+      "name": "Investor Question Answer Email",
+      "keyword": "investor question answer email",
+      "intent": "answer",
+      "audience": "Founders and CFOs",
+      "outcome": "Answer an investor's follow-up question clearly without drifting into unnecessary detail.",
+      "metaDescription": "Draft an investor question answer email with concise answers and supporting context. Free private email tool by ReplyMind.",
+      "h1": "Answer investor questions without rambling.",
+      "intro": "Investors value direct answers. This tool helps you respond to a follow-up question with the answer first, supporting detail second, and an offer to clarify if needed.",
+      "fields": [
+        {"key": "question", "label": "Investor question", "type": "textarea", "placeholder": "The question they asked", "required": true},
+        {"key": "answer", "label": "Direct answer", "type": "textarea", "placeholder": "The answer in one or two sentences", "required": true},
+        {"key": "context", "label": "Supporting context", "type": "textarea", "placeholder": "Facts or nuance that support the answer", "required": true},
+        {"key": "confidence", "label": "Confidence note", "type": "text", "placeholder": "High confidence or still validating", "required": false},
+        {"key": "followUp", "label": "Offer to follow up", "type": "textarea", "placeholder": "Happy to unpack more if useful", "required": true}
+      ],
+      "subjectTemplate": "Re: your question",
+      "bodyTemplate": "Hi,\n\nOn your question about {{question}}, the short answer is {{answer}}.\n\nContext: {{context}}\nConfidence note: {{confidence}}\nFollow-up: {{followUp}}\n\nI wanted to keep the response direct and accurate.\n\nBest,",
+      "guidance": [
+        "Answer directly before adding nuance.",
+        "Use a confidence note when the answer is still evolving.",
+        "Offer a follow-up only if the question needs it."
+      ],
+      "pitfalls": [
+        "Do not make the investor hunt for the answer.",
+        "Do not bury uncertainty if the answer is not yet settled."
+      ],
+      "examples": [
+        {
+          "label": "Traction question",
+          "input": "Investor asks why growth slowed last month.",
+          "output": "A direct answer with context and a clear confidence note."
+        },
+        {
+          "label": "Roadmap question",
+          "input": "Investor asks about timing for a product release.",
+          "output": "A short, accurate reply with the answer first and supporting detail second."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I answer every investor question by email?",
+          "a": "If the answer is simple and factual, yes. If the question is strategic or complex, email can be the setup for a call."
+        },
+        {
+          "q": "How much context is too much?",
+          "a": "Enough context to support the answer, but not so much that the answer gets lost."
+        }
+      ],
+      "relatedTags": ["investors", "qa", "follow-up"]
+    },
+    {
+      "slug": "ceo-community-note",
+      "name": "CEO Community Note",
+      "keyword": "ceo community note",
+      "intent": "engage",
+      "audience": "Founders and CEOs",
+      "outcome": "Write a thoughtful note to a founder or CEO peer community with useful context and a question.",
+      "metaDescription": "Draft a CEO community note that shares a lesson, context, and one question. Free private email tool by ReplyMind.",
+      "h1": "Write to your founder peer group with substance.",
+      "intro": "Peer communities work when the note gives others something to respond to. This tool helps you share a real update, the lesson learned, and the one question you want the group to weigh in on.",
+      "fields": [
+        {"key": "update", "label": "Update or story", "type": "textarea", "placeholder": "What happened recently", "required": true},
+        {"key": "lesson", "label": "Lesson learned", "type": "textarea", "placeholder": "What it taught you", "required": true},
+        {"key": "question", "label": "Question for the group", "type": "textarea", "placeholder": "What input do you want?", "required": true},
+        {"key": "context", "label": "Useful context", "type": "textarea", "placeholder": "Any background people need", "required": true},
+        {"key": "tone", "label": "Tone note", "type": "text", "placeholder": "Keep it candid and practical", "required": false}
+      ],
+      "subjectTemplate": "A founder note and a question",
+      "bodyTemplate": "Hi everyone,\n\nI wanted to share a quick note.\n\nUpdate: {{update}}\nLesson: {{lesson}}\nContext: {{context}}\nQuestion: {{question}}\nTone: {{tone}}\n\nI am hoping this is useful to others who have navigated the same kind of decision.\n\nBest,",
+      "guidance": [
+        "Make the note useful to peers, not just informative.",
+        "Share one lesson that others can actually apply.",
+        "Ask a question that invites real responses."
+      ],
+      "pitfalls": [
+        "Do not write a polished success story with no substance.",
+        "Do not ask a question so broad that nobody can answer it well."
+      ],
+      "examples": [
+        {
+          "label": "Hiring lesson",
+          "input": "A key hire took longer than expected and the founder learned something useful.",
+          "output": "A community note that shares the lesson and asks for peer advice."
+        },
+        {
+          "label": "Strategy lesson",
+          "input": "A market decision taught the team something about focus.",
+          "output": "A candid note that gives the group a real question to answer."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should this be public or private?",
+          "a": "Use it in the format your community expects. The content should be substantive either way."
+        },
+        {
+          "q": "How personal should I get?",
+          "a": "Personal enough to be real, but focused on the business lesson."
+        }
+      ],
+      "relatedTags": ["ceo", "community", "peer-network"]
+    }
+  ]
+}

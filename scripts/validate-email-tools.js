@@ -7,7 +7,8 @@ const failures=[];
 const titles=new Set();
 const descriptions=new Set();
 const canonicals=new Set();
-const directories=fs.readdirSync(toolsRoot,{withFileTypes:true}).filter(item=>item.isDirectory()&&item.name!=='assets');
+const infrastructureDirectories=new Set(['assets','data','audiences']);
+const directories=fs.readdirSync(toolsRoot,{withFileTypes:true}).filter(item=>item.isDirectory()&&!infrastructureDirectories.has(item.name));
 
 function fail(message){failures.push(message);}
 function match(html,re){return (html.match(re)||[])[1]||'';}

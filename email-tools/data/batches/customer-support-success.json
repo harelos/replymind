@@ -1,0 +1,4349 @@
+{
+  "batch": "customer-support-success",
+  "avatar": "Customer support and customer success teams",
+  "tools": [
+    {
+      "slug": "apology-follow-up-with-resolution-plan",
+      "name": "Apology Follow-Up With Resolution Plan",
+      "keyword": "customer apology follow up email",
+      "intent": "apology",
+      "audience": "Support specialists",
+      "outcome": "Acknowledge the issue clearly, apologize without overexplaining, and show the exact path to resolution.",
+      "metaDescription": "Build an apology follow-up that names the issue, confirms ownership, and sets a concrete resolution plan. Free private email tool by ReplyMind.",
+      "h1": "Own the issue and show the path forward.",
+      "intro": "When something goes wrong, customers want clarity more than polished language. This tool helps you name the problem, apologize in a human way, and outline the next action without sounding defensive.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "issue",
+          "label": "What happened",
+          "type": "textarea",
+          "placeholder": "The order shipped to the wrong address",
+          "required": true
+        },
+        {
+          "key": "impact",
+          "label": "Customer impact",
+          "type": "textarea",
+          "placeholder": "The customer missed the event date",
+          "required": true
+        },
+        {
+          "key": "resolution",
+          "label": "Current resolution plan",
+          "type": "textarea",
+          "placeholder": "We are re-sending the package overnight",
+          "required": true
+        },
+        {
+          "key": "timing",
+          "label": "When you will update them",
+          "type": "text",
+          "placeholder": "By 3 PM today",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "We are sorry about this and here is what happens next",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to acknowledge that {{issue}}. I understand that this caused {{impact}} and that is not the experience we want to create.\n\nHere is the current plan: {{resolution}}. I will update you again {{timing}} so you are not left guessing.\n\nBest,",
+      "guidance": [
+        "State the issue in plain language before you apologize so the customer knows you understand the problem.",
+        "Keep the plan concrete: who is doing what, and by when.",
+        "Use one short reassurance line, but do not promise an outcome you have not verified."
+      ],
+      "pitfalls": [
+        "Do not bury the apology inside a long explanation of why the issue happened.",
+        "Do not say the matter is resolved if the fix is still in progress."
+      ],
+      "examples": [
+        {
+          "label": "Wrong shipment address",
+          "input": "Issue: package sent to old address; impact: customer missed deadline; resolution: resend overnight at no cost; timing: 4 PM today",
+          "output": "A clear apology that confirms the shipment error, recognizes the deadline miss, states the overnight resend, and promises a same-day update."
+        },
+        {
+          "label": "Billing mistake",
+          "input": "Issue: duplicate charge; impact: customer is worried about cash flow; resolution: refund duplicate charge and confirm bank timing; timing: tomorrow morning",
+          "output": "A calm note that names the duplicate charge, acknowledges the cash-flow concern, and explains the refund timing without blame."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I use the word sorry more than once?",
+          "a": "Usually once is enough if the rest of the message shows ownership and a concrete plan."
+        },
+        {
+          "q": "What if I still do not have a final fix?",
+          "a": "Say what is known, what is being checked, and when the next update will arrive."
+        }
+      ],
+      "relatedTags": [
+        "support",
+        "apology",
+        "resolution",
+        "service-recovery"
+      ]
+    },
+    {
+      "slug": "refund-approval-explanation-email",
+      "name": "Refund Approval Explanation Email",
+      "keyword": "refund approval email",
+      "intent": "refund",
+      "audience": "Support agents",
+      "outcome": "Confirm a refund decision with enough detail to reduce follow-up questions and confusion.",
+      "metaDescription": "Write a refund approval email that explains what is being refunded, why, and what the customer should expect next. Free private email tool by ReplyMind.",
+      "h1": "Explain the refund without creating more back-and-forth.",
+      "intro": "A refund email should be simple, specific, and easy to trust. This tool helps you confirm the approved amount, clarify timing, and avoid vague wording that leads to more support tickets.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "refundAmount",
+          "label": "Refund amount",
+          "type": "text",
+          "placeholder": "$49.00",
+          "required": true
+        },
+        {
+          "key": "reason",
+          "label": "Refund reason",
+          "type": "textarea",
+          "placeholder": "The product was out of stock and the order could not be fulfilled",
+          "required": true
+        },
+        {
+          "key": "processingTime",
+          "label": "Processing time",
+          "type": "text",
+          "placeholder": "3 to 5 business days",
+          "required": true
+        },
+        {
+          "key": "reference",
+          "label": "Reference or order ID",
+          "type": "text",
+          "placeholder": "Order #18422",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Your refund is approved",
+      "bodyTemplate": "Hi {{recipientName}},\n\nYour refund of {{refundAmount}} for {{reference}} has been approved. The reason is {{reason}}.\n\nYou should see the credit within {{processingTime}} depending on your bank or card provider. If you do not see it after that window, reply here and I will check the status.\n\nBest,",
+      "guidance": [
+        "Put the amount near the top so the customer does not have to hunt for it.",
+        "Separate approval from processing time so the customer understands that bank timing is outside your control.",
+        "Offer one clear next step if the refund does not appear."
+      ],
+      "pitfalls": [
+        "Do not mix the refund explanation with policy language the customer already rejected.",
+        "Do not imply instant receipt if card processing may take longer."
+      ],
+      "examples": [
+        {
+          "label": "Subscription refund",
+          "input": "Refund amount: $29.00; reason: duplicate subscription charge; processing time: 3 to 5 business days; reference: Subscription renewal",
+          "output": "A concise confirmation that the duplicate subscription charge is being refunded and that the customer should expect the credit within the stated window."
+        },
+        {
+          "label": "Order cancellation",
+          "input": "Refund amount: $112.40; reason: item became unavailable before shipping; processing time: 5 to 7 business days; reference: Order #18422",
+          "output": "A clear approval message that connects the refund to the unavailable item and states when the credit should post."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I mention payment method details?",
+          "a": "Only if it helps the customer understand where the refund will appear."
+        },
+        {
+          "q": "Do I need to restate the full policy?",
+          "a": "No. This email should explain the specific decision, not repeat the entire policy."
+        }
+      ],
+      "relatedTags": [
+        "refunds",
+        "billing",
+        "support",
+        "customer-trust"
+      ]
+    },
+    {
+      "slug": "refund-denial-with-alternative-options",
+      "name": "Refund Denial With Alternative Options",
+      "keyword": "refund denial email",
+      "intent": "refund",
+      "audience": "Support leads",
+      "outcome": "Decline a refund respectfully while offering realistic alternatives that keep the conversation productive.",
+      "metaDescription": "Write a respectful refund denial email that explains the decision and offers another path forward. Free private email tool by ReplyMind.",
+      "h1": "Say no without sounding dismissive.",
+      "intro": "When a refund cannot be approved, the message still needs empathy and direction. This tool helps you give a clear decision, explain the basis briefly, and offer the next best option.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "decisionReason",
+          "label": "Why the refund is declined",
+          "type": "textarea",
+          "placeholder": "The request is outside the trial window",
+          "required": true
+        },
+        {
+          "key": "alternative",
+          "label": "Alternative offer",
+          "type": "textarea",
+          "placeholder": "We can extend the account by two weeks",
+          "required": true
+        },
+        {
+          "key": "policyNote",
+          "label": "Policy note",
+          "type": "textarea",
+          "placeholder": "The purchase terms were accepted at checkout",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Update on your refund request",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI reviewed your request carefully, and at this time we are not able to approve the refund because {{decisionReason}}. {{policyNote}}\n\nI know that is not the answer you hoped for. One alternative I can offer is {{alternative}}. If you want to discuss that option, reply here and I will help.\n\nBest,",
+      "guidance": [
+        "Lead with the decision, then explain it briefly.",
+        "Offer one alternative that is actually available, not a vague invitation to keep talking.",
+        "Keep the tone steady; a defensive explanation usually escalates the dispute."
+      ],
+      "pitfalls": [
+        "Do not use legalistic wording if the customer asked a simple service question.",
+        "Do not pile on multiple alternative offers if one clear option is enough."
+      ],
+      "examples": [
+        {
+          "label": "Outside trial window",
+          "input": "Decision reason: request came 12 days after the 7-day trial; alternative: one-month account credit; policy note: the trial terms were accepted at signup",
+          "output": "A short refusal that explains the timing issue and offers a credit instead of creating a hard stop."
+        },
+        {
+          "label": "Used digital service",
+          "input": "Decision reason: the full report was downloaded and used; alternative: we can offer a strategy call; policy note: digital access counts as delivery",
+          "output": "A firm but calm explanation that points to a useful alternative rather than arguing about the policy."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I apologize if the refund is denied?",
+          "a": "You can acknowledge the disappointment without apologizing for a decision that follows policy."
+        },
+        {
+          "q": "How much detail is enough?",
+          "a": "Enough to be understandable, not enough to invite debate over every policy clause."
+        }
+      ],
+      "relatedTags": [
+        "refunds",
+        "policy",
+        "escalation",
+        "support"
+      ]
+    },
+    {
+      "slug": "escalation-handoff-summary-email",
+      "name": "Escalation Handoff Summary Email",
+      "keyword": "support escalation handoff email",
+      "intent": "escalation",
+      "audience": "Frontline support agents",
+      "outcome": "Transfer a case internally with a clean summary so the next owner can act fast.",
+      "metaDescription": "Create an internal escalation handoff email that summarizes the issue, urgency, history, and next action. Free private email tool by ReplyMind.",
+      "h1": "Give the next owner everything they need in one pass.",
+      "intro": "Escalations slow down when the summary is messy or incomplete. This tool helps you package the timeline, customer context, and requested outcome so the receiving team can move immediately.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "summary",
+          "label": "Issue summary",
+          "type": "textarea",
+          "placeholder": "Customer cannot access their account after password reset",
+          "required": true
+        },
+        {
+          "key": "history",
+          "label": "What has already been tried",
+          "type": "textarea",
+          "placeholder": "Reset link resent twice, cache cleared, login tested",
+          "required": true
+        },
+        {
+          "key": "priority",
+          "label": "Urgency level",
+          "type": "text",
+          "placeholder": "High",
+          "required": true
+        },
+        {
+          "key": "requestedOutcome",
+          "label": "Requested outcome",
+          "type": "textarea",
+          "placeholder": "Restore account access and confirm root cause",
+          "required": true
+        }
+      ],
+      "subjectTemplate": "Escalation handoff: {{priority}} priority case",
+      "bodyTemplate": "Hi {{recipientName}},\n\nTeam,\n\nPlease take over this case.\n\nSummary: {{summary}}\nAlready tried: {{history}}\nRequested outcome: {{requestedOutcome}}\n\nPlease treat this as {{priority}} priority and advise on next steps.\n\nThanks,",
+      "guidance": [
+        "Write the summary as if the receiving team has never seen the case before.",
+        "List what has already been tried so nobody repeats the same steps.",
+        "Include the requested outcome in action language, not as a vague complaint."
+      ],
+      "pitfalls": [
+        "Do not forward a raw thread without a distilled handoff note.",
+        "Do not leave out urgency if the case is time-sensitive."
+      ],
+      "examples": [
+        {
+          "label": "Login failure",
+          "input": "Summary: account locked after MFA reset; history: lock cleared once, browser tested, password reset, still failing; priority: high; requested outcome: restore access today",
+          "output": "A compact internal handoff that gives engineering or tier 2 the full context and urgency."
+        },
+        {
+          "label": "Billing dispute",
+          "input": "Summary: customer disputes duplicate invoice; history: invoice numbers checked, payment processor confirmed charge; priority: medium; requested outcome: verify whether second invoice should be voided",
+          "output": "A clear escalation note that lets finance review the exact dispute without re-asking basic questions."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How long should the handoff be?",
+          "a": "Short enough to scan, but complete enough that the next owner can act without reopening the whole thread."
+        },
+        {
+          "q": "Should I include my own diagnosis?",
+          "a": "Yes, if it is clearly marked as your current best read, not a verified conclusion."
+        }
+      ],
+      "relatedTags": [
+        "escalation",
+        "handoff",
+        "internal-support",
+        "triage"
+      ]
+    },
+    {
+      "slug": "incident-status-update-to-customers",
+      "name": "Incident Status Update to Customers",
+      "keyword": "customer incident update email",
+      "intent": "incident-update",
+      "audience": "Support managers",
+      "outcome": "Share an outage or incident update that is calm, specific, and useful without overpromising.",
+      "metaDescription": "Draft a customer-facing incident update that explains the impact, current status, and next update window. Free private email tool by ReplyMind.",
+      "h1": "Keep customers informed when service is disrupted.",
+      "intro": "During an incident, customers need facts, not speculation. This tool helps you communicate impact, current status, and the next update time in a way that reduces anxiety.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "incidentSummary",
+          "label": "What is happening",
+          "type": "textarea",
+          "placeholder": "Checkout is failing for some users",
+          "required": true
+        },
+        {
+          "key": "customerImpact",
+          "label": "Customer impact",
+          "type": "textarea",
+          "placeholder": "Some customers cannot complete payment",
+          "required": true
+        },
+        {
+          "key": "currentStatus",
+          "label": "Current status",
+          "type": "textarea",
+          "placeholder": "The team has identified the cause and is testing a fix",
+          "required": true
+        },
+        {
+          "key": "nextUpdate",
+          "label": "Next update time",
+          "type": "text",
+          "placeholder": "In 30 minutes",
+          "required": true
+        }
+      ],
+      "subjectTemplate": "Update on the incident affecting your account",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe are currently investigating {{incidentSummary}}. The impact we are seeing is {{customerImpact}}.\n\nCurrent status: {{currentStatus}}. We will send the next update {{nextUpdate}} even if the situation has not fully changed.\n\nBest,",
+      "guidance": [
+        "Describe impact in customer language, not only in technical terms.",
+        "Always include a next update window so customers know when to expect another message.",
+        "Avoid guesses about root cause until the team has confirmed it."
+      ],
+      "pitfalls": [
+        "Do not minimize the issue if customers are actively blocked.",
+        "Do not send an update with no time commitment for the next communication."
+      ],
+      "examples": [
+        {
+          "label": "Checkout outage",
+          "input": "Incident summary: checkout failing for some users; customer impact: payments cannot complete; current status: fix being tested; next update: in 30 minutes",
+          "output": "A direct status note that tells customers what is broken, what it affects, and when they will hear again."
+        },
+        {
+          "label": "Email delivery delay",
+          "input": "Incident summary: confirmation emails delayed; customer impact: users wait longer for verification; current status: mail queue is recovering; next update: by noon",
+          "output": "A reassuring update that explains the delay without pretending the issue is already fully resolved."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I mention every technical detail?",
+          "a": "No. Mention only what helps customers understand the effect and the expected timing."
+        },
+        {
+          "q": "What if I do not have a fix yet?",
+          "a": "Say that the team is still investigating and give the next update time you can honor."
+        }
+      ],
+      "relatedTags": [
+        "incident",
+        "status-update",
+        "support",
+        "customer-communications"
+      ]
+    },
+    {
+      "slug": "onboarding-welcome-and-first-step-email",
+      "name": "Onboarding Welcome and First Step Email",
+      "keyword": "customer onboarding welcome email",
+      "intent": "onboarding",
+      "audience": "Customer success managers",
+      "outcome": "Welcome a new customer and point them to the single most important first action.",
+      "metaDescription": "Write a customer onboarding welcome email that explains the first step, the timeline, and where to get help. Free private email tool by ReplyMind.",
+      "h1": "Set the tone for a smooth onboarding start.",
+      "intro": "Early onboarding messages should lower friction, not add more to read. This tool helps you welcome the customer, name the first step, and set expectations for what happens next.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "accountGoal",
+          "label": "Customer goal",
+          "type": "textarea",
+          "placeholder": "Launch the first team workspace",
+          "required": true
+        },
+        {
+          "key": "firstStep",
+          "label": "First action",
+          "type": "textarea",
+          "placeholder": "Complete the setup checklist",
+          "required": true
+        },
+        {
+          "key": "helpContact",
+          "label": "Where to get help",
+          "type": "text",
+          "placeholder": "Reply here or book office hours",
+          "required": true
+        },
+        {
+          "key": "timeline",
+          "label": "Onboarding timeline",
+          "type": "text",
+          "placeholder": "This week",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Welcome aboard, here is your first step",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWelcome aboard. Your goal is {{accountGoal}}, and the best first step is {{firstStep}}.\n\nIf you get stuck, {{helpContact}}. We will keep you moving through {{timeline}} and make sure you know what to do next.\n\nBest,",
+      "guidance": [
+        "Pick one first action instead of listing the entire onboarding path in the first email.",
+        "Tie the message to the customer’s stated goal so the onboarding feels relevant.",
+        "Make help access obvious and low effort."
+      ],
+      "pitfalls": [
+        "Do not front-load too many setup tasks before the customer has done the first one.",
+        "Do not use a generic welcome that could apply to any product."
+      ],
+      "examples": [
+        {
+          "label": "Team workspace launch",
+          "input": "Goal: launch a team workspace; first step: finish the setup checklist; help contact: reply here or book office hours; timeline: this week",
+          "output": "A focused onboarding welcome that points to the setup checklist and makes help easy to find."
+        },
+        {
+          "label": "New reporting user",
+          "input": "Goal: send first report; first step: connect data sources; help contact: join the live setup session; timeline: over the next two days",
+          "output": "A friendly but practical note that gets the user to the one task that unlocks everything else."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include every onboarding milestone?",
+          "a": "Only if it helps. The first email should emphasize the immediate next step."
+        },
+        {
+          "q": "How formal should the tone be?",
+          "a": "Match the customer relationship, but keep the language simple and direct."
+        }
+      ],
+      "relatedTags": [
+        "onboarding",
+        "welcome",
+        "activation",
+        "customer-success"
+      ]
+    },
+    {
+      "slug": "activation-nudge-for-stalled-users",
+      "name": "Activation Nudge for Stalled Users",
+      "keyword": "stalled user activation email",
+      "intent": "activation",
+      "audience": "Customer success teams",
+      "outcome": "Reconnect with a customer who has not completed a key setup step.",
+      "metaDescription": "Create a low-pressure activation nudge that names the stuck step and offers a simple way forward. Free private email tool by ReplyMind.",
+      "h1": "Help the customer finish what they started.",
+      "intro": "When setup stalls, the best message is often short and specific. This tool helps you identify the missing step, remind the customer why it matters, and offer direct help.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "stalledStep",
+          "label": "Stalled step",
+          "type": "textarea",
+          "placeholder": "Connect the calendar integration",
+          "required": true
+        },
+        {
+          "key": "benefit",
+          "label": "Why it matters",
+          "type": "textarea",
+          "placeholder": "This unlocks meeting reminders",
+          "required": true
+        },
+        {
+          "key": "helpOffer",
+          "label": "Help offer",
+          "type": "textarea",
+          "placeholder": "I can walk you through it in five minutes",
+          "required": true
+        },
+        {
+          "key": "deadline",
+          "label": "Soft timing cue",
+          "type": "text",
+          "placeholder": "This week",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Quick check-in on your setup",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI noticed you have not finished {{stalledStep}} yet. That step matters because {{benefit}}.\n\nIf you want help, {{helpOffer}}. If you plan to tackle it later, {{deadline}} is still a good time to get it done.\n\nBest,",
+      "guidance": [
+        "Use a light, helpful tone rather than pressure.",
+        "Connect the stuck step to a practical benefit so the message feels relevant.",
+        "Make the offer for help concrete and easy to accept."
+      ],
+      "pitfalls": [
+        "Do not make the message sound like a punishment for inactivity.",
+        "Do not be vague about what the customer should do next."
+      ],
+      "examples": [
+        {
+          "label": "Integration unfinished",
+          "input": "Stalled step: connect the calendar integration; benefit: meeting reminders will send automatically; help offer: I can walk you through it in five minutes; deadline: this week",
+          "output": "A concise activation nudge that names the missing integration and offers quick help."
+        },
+        {
+          "label": "Dashboard not shared",
+          "input": "Stalled step: share the dashboard with the team; benefit: teammates can see the same numbers; help offer: I can send the share link steps; deadline: by Friday",
+          "output": "A gentle reminder that keeps the focus on the next action and its benefit."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How many reminders should I send?",
+          "a": "Enough to be useful, but not so many that the customer feels chased."
+        },
+        {
+          "q": "Should I mention inactivity metrics?",
+          "a": "Not in the customer-facing note. Keep the message centered on the value and next step."
+        }
+      ],
+      "relatedTags": [
+        "activation",
+        "onboarding",
+        "nudges",
+        "customer-success"
+      ]
+    },
+    {
+      "slug": "renewal-reminder-with-value-recap",
+      "name": "Renewal Reminder With Value Recap",
+      "keyword": "renewal reminder email",
+      "intent": "renewal",
+      "audience": "Customer success managers",
+      "outcome": "Remind customers about renewal while reinforcing the value they already received.",
+      "metaDescription": "Build a renewal reminder that recaps usage value, dates, and the next action without sounding automated. Free private email tool by ReplyMind.",
+      "h1": "Renew renewals by reminding customers why they stayed.",
+      "intro": "Renewal messages land better when they reflect what the customer has actually used. This tool helps you summarize wins, flag the renewal date, and make the next step easy.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "valueRecap",
+          "label": "Value recap",
+          "type": "textarea",
+          "placeholder": "The team launched three campaigns and saved admin time",
+          "required": true
+        },
+        {
+          "key": "renewalDate",
+          "label": "Renewal date",
+          "type": "text",
+          "placeholder": "August 20",
+          "required": true
+        },
+        {
+          "key": "nextAction",
+          "label": "Next action",
+          "type": "textarea",
+          "placeholder": "Confirm continuation or request a billing update",
+          "required": true
+        },
+        {
+          "key": "supportingDetail",
+          "label": "Supporting detail",
+          "type": "textarea",
+          "placeholder": "Current plan and seat count",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Your renewal is coming up",
+      "bodyTemplate": "Hi {{recipientName}},\n\nAs we get close to {{renewalDate}}, I wanted to recap the value you have seen: {{valueRecap}}.\n\nThe next step is {{nextAction}}. If helpful, I can also review {{supportingDetail}} before the renewal is processed.\n\nBest,",
+      "guidance": [
+        "Lead with what the customer gained, not just the renewal date.",
+        "Give one clear action so the customer knows how to move forward.",
+        "Offer help with account details only if it is relevant to the renewal."
+      ],
+      "pitfalls": [
+        "Do not sound like a billing notice with a little marketing added on.",
+        "Do not invent usage benefits that are not grounded in the account."
+      ],
+      "examples": [
+        {
+          "label": "Team adoption recap",
+          "input": "Value recap: three teams adopted the workflow and reduced manual follow-up; renewal date: August 20; next action: confirm continuation; supporting detail: current seat count",
+          "output": "A renewal reminder that reminds the customer why the product mattered and what they need to confirm."
+        },
+        {
+          "label": "Campaign value recap",
+          "input": "Value recap: launched campaigns faster and saved weekly admin time; renewal date: September 1; next action: review the updated invoice; supporting detail: billing contact",
+          "output": "A clear renewal note that ties the reminder to actual outcomes and the billing step."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should the renewal email be sent only once?",
+          "a": "Usually a reminder sequence works better, but each message should still feel personally relevant."
+        },
+        {
+          "q": "How much product detail belongs here?",
+          "a": "Only the details that show value and help the renewal move forward."
+        }
+      ],
+      "relatedTags": [
+        "renewal",
+        "retention",
+        "customer-success",
+        "account-management"
+      ]
+    },
+    {
+      "slug": "churn-risk-save-offer-email",
+      "name": "Churn Risk Save Offer Email",
+      "keyword": "customer save offer email",
+      "intent": "retention",
+      "audience": "Customer success leads",
+      "outcome": "Respond to a cancellation signal with a focused save offer that addresses the real reason.",
+      "metaDescription": "Write a churn-prevention email that reflects the customer’s concern and offers a relevant save path. Free private email tool by ReplyMind.",
+      "h1": "Respond to churn risk with something specific.",
+      "intro": "A save email works only if it addresses the stated friction. This tool helps you reflect the concern, propose a realistic offer, and invite a decision without pressure.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "concern",
+          "label": "Customer concern",
+          "type": "textarea",
+          "placeholder": "The team is not using the product enough",
+          "required": true
+        },
+        {
+          "key": "saveOffer",
+          "label": "Save offer",
+          "type": "textarea",
+          "placeholder": "We can add a working session to reset the rollout",
+          "required": true
+        },
+        {
+          "key": "decisionDate",
+          "label": "Decision date",
+          "type": "text",
+          "placeholder": "By Friday",
+          "required": false
+        },
+        {
+          "key": "businessImpact",
+          "label": "Business impact to mention",
+          "type": "textarea",
+          "placeholder": "This would preserve the current setup and data history",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "A possible path before you decide",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI understand the concern is {{concern}}. Before you make a final decision, I wanted to suggest {{saveOffer}}.\n\nIf useful, that would {{businessImpact}}. Let me know by {{decisionDate}} whether you want to try this path.\n\nBest,",
+      "guidance": [
+        "Mirror the customer’s concern before offering a save option.",
+        "Keep the offer directly tied to the problem; generic discounts are often weak here.",
+        "Make the deadline soft and respectful."
+      ],
+      "pitfalls": [
+        "Do not argue against cancellation if the customer has already been clear.",
+        "Do not offer a save tactic that does not address the stated reason."
+      ],
+      "examples": [
+        {
+          "label": "Low adoption",
+          "input": "Concern: the team is not using the product enough; save offer: a working session to reset the rollout; decision date: by Friday; business impact: preserve the current setup and data history",
+          "output": "A targeted save note that offers help instead of a generic retention plea."
+        },
+        {
+          "label": "Budget pressure",
+          "input": "Concern: budget is tight this quarter; save offer: pause one seat for 60 days; decision date: next week; business impact: keep the account active without losing setup",
+          "output": "A pragmatic save message that acknowledges the constraint and offers a realistic path."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I lead with a discount?",
+          "a": "Only if price is the real issue. Otherwise, lead with the friction that is actually driving churn."
+        },
+        {
+          "q": "What if the customer is already upset?",
+          "a": "Keep the note short, factual, and focused on one useful option."
+        }
+      ],
+      "relatedTags": [
+        "retention",
+        "churn",
+        "save-offer",
+        "customer-success"
+      ]
+    },
+    {
+      "slug": "feature-request-acknowledgement-email",
+      "name": "Feature Request Acknowledgement Email",
+      "keyword": "feature request acknowledgement email",
+      "intent": "feature-request",
+      "audience": "Support and success teams",
+      "outcome": "Acknowledge a request respectfully and explain what will happen with it next.",
+      "metaDescription": "Create a feature request acknowledgement that confirms receipt, clarifies next steps, and sets expectations. Free private email tool by ReplyMind.",
+      "h1": "Acknowledge the request without overpromising it.",
+      "intro": "Customers often want to know they were heard. This tool helps you confirm the request, restate the use case, and explain how it will be reviewed.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "requestedFeature",
+          "label": "Requested feature",
+          "type": "textarea",
+          "placeholder": "Bulk export of filtered reports",
+          "required": true
+        },
+        {
+          "key": "useCase",
+          "label": "Customer use case",
+          "type": "textarea",
+          "placeholder": "The team sends weekly reports to clients",
+          "required": true
+        },
+        {
+          "key": "reviewPath",
+          "label": "Review path",
+          "type": "textarea",
+          "placeholder": "I will share this with product and note the impact",
+          "required": true
+        },
+        {
+          "key": "expectation",
+          "label": "Expectation setting",
+          "type": "textarea",
+          "placeholder": "I cannot promise a release date",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Thanks for the feature request",
+      "bodyTemplate": "Hi {{recipientName}},\n\nThanks for sending this over. You are asking for {{requestedFeature}}, and the use case you shared is {{useCase}}.\n\nI will {{reviewPath}}. {{expectation}}\n\nBest,",
+      "guidance": [
+        "Repeat the request in the customer’s words so they know you understood it.",
+        "Say what review path you will take, even if the answer is not immediate.",
+        "Avoid implying product commitment unless that decision is confirmed."
+      ],
+      "pitfalls": [
+        "Do not let the message become a silent inbox receipt.",
+        "Do not promise product timing you cannot control."
+      ],
+      "examples": [
+        {
+          "label": "Bulk export request",
+          "input": "Requested feature: bulk export of filtered reports; use case: weekly client reporting; review path: share with product and note the impact; expectation: no release promise",
+          "output": "An acknowledgement that confirms the request and tells the customer how it will be handled."
+        },
+        {
+          "label": "Mobile alerting request",
+          "input": "Requested feature: mobile push alerts; use case: respond faster while traveling; review path: log the request against account risk; expectation: cannot promise delivery date",
+          "output": "A clear note that validates the use case while keeping expectations grounded."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I give a yes or no answer?",
+          "a": "Only if the decision is already known. Otherwise, acknowledge and explain the review path."
+        },
+        {
+          "q": "Is it okay to close the loop later?",
+          "a": "Yes, if you actually do. Customers should not have to chase an update."
+        }
+      ],
+      "relatedTags": [
+        "feature-request",
+        "product-feedback",
+        "support",
+        "customer-success"
+      ]
+    },
+    {
+      "slug": "bug-report-request-for-more-details",
+      "name": "Bug Report Request for More Details",
+      "keyword": "bug report follow up email",
+      "intent": "troubleshooting",
+      "audience": "Support agents",
+      "outcome": "Collect the extra information needed to reproduce and fix a bug.",
+      "metaDescription": "Write a bug follow-up email that asks for the exact details support or engineering needs next. Free private email tool by ReplyMind.",
+      "h1": "Ask for the details that will actually help.",
+      "intro": "A vague bug report often needs a precise follow-up. This tool helps you request the minimum useful details without sounding like you are making the customer do your job.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "symptom",
+          "label": "Observed symptom",
+          "type": "textarea",
+          "placeholder": "The report crashes on export",
+          "required": true
+        },
+        {
+          "key": "neededDetails",
+          "label": "Details needed",
+          "type": "textarea",
+          "placeholder": "Browser version, steps taken, and screenshot",
+          "required": true
+        },
+        {
+          "key": "whyNeeded",
+          "label": "Why it is needed",
+          "type": "textarea",
+          "placeholder": "So we can reproduce the issue",
+          "required": true
+        },
+        {
+          "key": "priority",
+          "label": "Priority",
+          "type": "text",
+          "placeholder": "High",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "A few details to help us reproduce this",
+      "bodyTemplate": "Hi {{recipientName}},\n\nThanks for reporting that {{symptom}}. To help us reproduce it, could you share {{neededDetails}}?\n\nWe need that information because {{whyNeeded}}. I will treat this as {{priority}} priority while we investigate.\n\nBest,",
+      "guidance": [
+        "Ask for specific inputs, not a broad request to explain everything again.",
+        "Explain why each detail matters so the request feels reasonable.",
+        "If the bug is urgent, say so clearly."
+      ],
+      "pitfalls": [
+        "Do not send a laundry list of questions if only two or three details are essential.",
+        "Do not make the customer feel responsible for your internal reproduction work."
+      ],
+      "examples": [
+        {
+          "label": "Export crash",
+          "input": "Symptom: report crashes on export; needed details: browser version, steps taken, screenshot; why needed: so we can reproduce it; priority: high",
+          "output": "A focused request that gets the exact technical details needed to investigate a crash."
+        },
+        {
+          "label": "Sync failure",
+          "input": "Symptom: data not syncing; needed details: workspace ID, last successful sync time, error message; why needed: so engineering can trace the failure; priority: medium",
+          "output": "A practical follow-up that narrows the issue without overwhelming the customer."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I ask the customer to send logs?",
+          "a": "Only if logs are truly useful and the customer can provide them easily."
+        },
+        {
+          "q": "Can I keep this message very short?",
+          "a": "Yes, as long as the specific details you need are still clear."
+        }
+      ],
+      "relatedTags": [
+        "bug-report",
+        "troubleshooting",
+        "support",
+        "engineering-handoff"
+      ]
+    },
+    {
+      "slug": "password-reset-and-access-recovery-email",
+      "name": "Password Reset and Access Recovery Email",
+      "keyword": "account access recovery email",
+      "intent": "access-recovery",
+      "audience": "Support agents",
+      "outcome": "Guide a locked-out customer back into their account with clear, safe instructions.",
+      "metaDescription": "Create an access recovery email that explains the reset step, what to expect, and what to do if access still fails. Free private email tool by ReplyMind.",
+      "h1": "Help them get back in without confusion.",
+      "intro": "Access issues are stressful and time-sensitive. This tool helps you explain the reset path, confirm safety, and point to the next step if the problem continues.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "accessIssue",
+          "label": "Access issue",
+          "type": "textarea",
+          "placeholder": "The user cannot log in after a password reset",
+          "required": true
+        },
+        {
+          "key": "resetAction",
+          "label": "Reset action",
+          "type": "textarea",
+          "placeholder": "Use the reset link sent to the account email",
+          "required": true
+        },
+        {
+          "key": "followUpStep",
+          "label": "Follow-up step",
+          "type": "textarea",
+          "placeholder": "Reply if the link expires or the login still fails",
+          "required": true
+        },
+        {
+          "key": "securityNote",
+          "label": "Security note",
+          "type": "textarea",
+          "placeholder": "Do not share the link publicly",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Let’s get your access restored",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI understand you are having trouble because {{accessIssue}}. Please use {{resetAction}}.\n\n{{securityNote}} If that does not restore access, {{followUpStep}} and I will help with the next step.\n\nBest,",
+      "guidance": [
+        "Keep the instructions short and sequential.",
+        "Include one security reminder if the recovery step involves a link or code.",
+        "End with a clear fallback in case the reset does not work."
+      ],
+      "pitfalls": [
+        "Do not pack in multiple recovery paths unless the first one is known to fail.",
+        "Do not use technical phrasing that makes the customer more anxious."
+      ],
+      "examples": [
+        {
+          "label": "Expired link",
+          "input": "Access issue: login failed after a reset; reset action: use the fresh reset link sent to the account email; follow-up step: reply if it expires again; security note: do not share the link",
+          "output": "A simple recovery note that tells the customer exactly what to do next and what to avoid."
+        },
+        {
+          "label": "MFA problem",
+          "input": "Access issue: MFA app stopped working; reset action: verify identity and re-enroll MFA; follow-up step: contact us if the code still fails; security note: keep the codes private",
+          "output": "A careful access recovery note that confirms the MFA re-enrollment step and tells the customer exactly how to follow up if the code still fails."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include a phone number?",
+          "a": "Only if it is the best recovery route and truly available."
+        },
+        {
+          "q": "What if the issue might be security-related?",
+          "a": "Use plain language and follow your internal verification process before offering any reset."
+        }
+      ],
+      "relatedTags": [
+        "access",
+        "password-reset",
+        "support",
+        "security"
+      ]
+    },
+    {
+      "slug": "account-hold-verification-request",
+      "name": "Account Hold Verification Request",
+      "keyword": "account verification email",
+      "intent": "verification",
+      "audience": "Trust and support teams",
+      "outcome": "Request the minimum information needed to verify an account hold or identity check.",
+      "metaDescription": "Write a verification request email that explains why information is needed and how to respond safely. Free private email tool by ReplyMind.",
+      "h1": "Ask for verification clearly and respectfully.",
+      "intro": "Verification messages need to feel firm, not suspicious. This tool helps you explain the hold, list the exact details needed, and make the response path simple.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "holdReason",
+          "label": "Reason for hold",
+          "type": "textarea",
+          "placeholder": "The billing details do not match the account records",
+          "required": true
+        },
+        {
+          "key": "neededInfo",
+          "label": "Information needed",
+          "type": "textarea",
+          "placeholder": "Confirm the last four digits of the card and the billing address",
+          "required": true
+        },
+        {
+          "key": "responseMethod",
+          "label": "How to reply",
+          "type": "textarea",
+          "placeholder": "Reply directly to this message",
+          "required": true
+        },
+        {
+          "key": "deadline",
+          "label": "Response deadline",
+          "type": "text",
+          "placeholder": "Within 48 hours",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "We need one more step to verify your account",
+      "bodyTemplate": "Hi {{recipientName}},\n\nYour account is currently on hold because {{holdReason}}. To continue, please provide {{neededInfo}}.\n\nThe safest way to respond is to {{responseMethod}}. If possible, please reply {{deadline}} so we can keep this moving.\n\nBest,",
+      "guidance": [
+        "Explain the hold in plain terms without disclosing sensitive internal checks.",
+        "Be specific about the exact details you need.",
+        "Give the customer a safe, simple response path."
+      ],
+      "pitfalls": [
+        "Do not request more personal information than the case requires.",
+        "Do not sound accusatory or imply fraud without cause."
+      ],
+      "examples": [
+        {
+          "label": "Billing mismatch",
+          "input": "Reason for hold: billing details do not match the account record; needed info: last four digits of the card and billing address; response method: reply directly; deadline: within 48 hours",
+          "output": "A precise verification request that explains the hold and the exact response needed."
+        },
+        {
+          "label": "Ownership check",
+          "input": "Reason for hold: account ownership needs confirmation; needed info: name on file and recent invoice number; response method: reply to this message; deadline: today",
+          "output": "A clean, respectful request that keeps the process moving without exposing unnecessary detail."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I mention the word security?",
+          "a": "Only if it is relevant. Clarity is more important than formal labels."
+        },
+        {
+          "q": "Can I ask for documents?",
+          "a": "Yes, if your process requires them and you explain why they are needed."
+        }
+      ],
+      "relatedTags": [
+        "verification",
+        "account-hold",
+        "support",
+        "trust-and-safety"
+      ]
+    },
+    {
+      "slug": "billing-dispute-clarification-email",
+      "name": "Billing Dispute Clarification Email",
+      "keyword": "billing dispute email",
+      "intent": "billing",
+      "audience": "Support and billing teams",
+      "outcome": "Clarify a disputed charge and request the details needed to review it.",
+      "metaDescription": "Create a billing dispute clarification email that asks for the exact invoice or transaction details needed to investigate. Free private email tool by ReplyMind.",
+      "h1": "Clarify the charge before the dispute grows.",
+      "intro": "Billing disputes are easiest to resolve when the details are specific. This tool helps you ask for the exact invoice, date, and concern so the review can move forward.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "chargeDetails",
+          "label": "Charge details",
+          "type": "textarea",
+          "placeholder": "Invoice #4821 for annual plan",
+          "required": true
+        },
+        {
+          "key": "disputeReason",
+          "label": "Customer concern",
+          "type": "textarea",
+          "placeholder": "The customer believes the charge was duplicated",
+          "required": true
+        },
+        {
+          "key": "neededEvidence",
+          "label": "What you need next",
+          "type": "textarea",
+          "placeholder": "A screenshot of the statement line item",
+          "required": true
+        },
+        {
+          "key": "reviewWindow",
+          "label": "Review window",
+          "type": "text",
+          "placeholder": "Two business days",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "A few details to review the charge",
+      "bodyTemplate": "Hi {{recipientName}},\n\nThanks for flagging {{chargeDetails}}. I understand the concern is {{disputeReason}}.\n\nTo review this properly, please send {{neededEvidence}}. Once I have that, I will complete the review within {{reviewWindow}}.\n\nBest,",
+      "guidance": [
+        "Ask for the smallest set of details that will actually move the review forward.",
+        "Avoid sounding like you have already decided the dispute is invalid.",
+        "Set a realistic review window if one exists."
+      ],
+      "pitfalls": [
+        "Do not ask the customer to restate the same issue in multiple ways.",
+        "Do not promise an instant reversal before the facts are checked."
+      ],
+      "examples": [
+        {
+          "label": "Duplicate charge concern",
+          "input": "Charge details: invoice #4821 for annual plan; dispute reason: duplicate charge; needed evidence: screenshot of the statement line item; review window: two business days",
+          "output": "A concise billing follow-up that asks for the exact proof needed for investigation."
+        },
+        {
+          "label": "Unexpected renewal",
+          "input": "Charge details: renewal invoice dated July 31; dispute reason: customer expected cancellation; needed evidence: cancellation confirmation email; review window: one business day",
+          "output": "A practical note that identifies the exact document needed to verify the claim."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I apologize for the charge?",
+          "a": "You can acknowledge the concern without accepting fault before the review is complete."
+        },
+        {
+          "q": "What if I already know it was valid?",
+          "a": "Still explain the basis of the charge and what evidence you need to confirm the facts."
+        }
+      ],
+      "relatedTags": [
+        "billing",
+        "disputes",
+        "support",
+        "finance-communication"
+      ]
+    },
+    {
+      "slug": "cancellation-reason-saving-questionnaire-email",
+      "name": "Cancellation Reason Saving Questionnaire Email",
+      "keyword": "cancellation reason email",
+      "intent": "retention",
+      "audience": "Customer success and support teams",
+      "outcome": "Ask a canceling customer for the one reason that matters most so you can respond appropriately.",
+      "metaDescription": "Build a cancellation reason email that asks the right question and invites a practical reply. Free private email tool by ReplyMind.",
+      "h1": "Find the real reason before you lose the account.",
+      "intro": "When someone cancels, the best response is often a short question that surfaces the true blocker. This tool helps you ask cleanly and keep the door open if they want to talk.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "cancelSignal",
+          "label": "Cancellation signal",
+          "type": "textarea",
+          "placeholder": "The customer said they are moving to another tool",
+          "required": true
+        },
+        {
+          "key": "questionPrompt",
+          "label": "Question to ask",
+          "type": "textarea",
+          "placeholder": "What is the main reason you decided to cancel?",
+          "required": true
+        },
+        {
+          "key": "responseUse",
+          "label": "How you will use the answer",
+          "type": "textarea",
+          "placeholder": "We will use it to improve the account review and save process",
+          "required": true
+        },
+        {
+          "key": "optionalOffer",
+          "label": "Optional offer",
+          "type": "textarea",
+          "placeholder": "If useful, I can also suggest one workaround",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Before you go, can I ask one quick question?",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI saw your note about {{cancelSignal}}. Before we close the loop, could you answer this: {{questionPrompt}}?\n\nYour answer will help us {{responseUse}}. If you want, {{optionalOffer}}.\n\nBest,",
+      "guidance": [
+        "Ask one focused question rather than a survey.",
+        "Explain why the answer matters so the request feels worthwhile.",
+        "Offer an optional next step only if it is genuinely helpful."
+      ],
+      "pitfalls": [
+        "Do not overwhelm the customer with a long cancellation form in email.",
+        "Do not make the note feel like a trap to block cancellation."
+      ],
+      "examples": [
+        {
+          "label": "Switching tools",
+          "input": "Cancellation signal: moving to another platform; question to ask: what is the main reason you decided to cancel?; response use: improve the account review and save process; optional offer: suggest one workaround",
+          "output": "A short, respectful cancellation question that can surface the real reason without pressure."
+        },
+        {
+          "label": "Budget cut",
+          "input": "Cancellation signal: budget cut this quarter; question to ask: what would make the account easier to keep later?; response use: inform future retention planning; optional offer: review a lighter plan",
+          "output": "A gentle question that captures the main constraint and leaves a door open."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I ask for a call instead?",
+          "a": "Only if the customer has shown willingness. Email should make the first ask easy."
+        },
+        {
+          "q": "How many questions is too many?",
+          "a": "More than one or two usually reduces response rate and increases friction."
+        }
+      ],
+      "relatedTags": [
+        "cancellation",
+        "retention",
+        "support",
+        "churn-prevention"
+      ]
+    },
+    {
+      "slug": "escalation-reassurance-note-to-customer",
+      "name": "Escalation Reassurance Note to Customer",
+      "keyword": "support escalation reassurance email",
+      "intent": "escalation",
+      "audience": "Support specialists",
+      "outcome": "Tell the customer their issue has been escalated and explain what that means next.",
+      "metaDescription": "Write a customer-facing escalation reassurance email that explains ownership, timing, and the next update. Free private email tool by ReplyMind.",
+      "h1": "Let the customer know the case is moving.",
+      "intro": "A customer who hears the word escalation wants to know what happens next. This tool helps you explain ownership, timing, and the next touchpoint in a way that calms uncertainty.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "caseState",
+          "label": "Current case state",
+          "type": "textarea",
+          "placeholder": "Tier 1 has confirmed the issue and escalated it",
+          "required": true
+        },
+        {
+          "key": "ownerTeam",
+          "label": "Owning team",
+          "type": "text",
+          "placeholder": "Product support",
+          "required": true
+        },
+        {
+          "key": "whatNext",
+          "label": "What happens next",
+          "type": "textarea",
+          "placeholder": "They will investigate and share the result",
+          "required": true
+        },
+        {
+          "key": "updateTime",
+          "label": "Next customer update",
+          "type": "text",
+          "placeholder": "Tomorrow by noon",
+          "required": true
+        }
+      ],
+      "subjectTemplate": "Your case has been escalated",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to let you know that {{caseState}}. {{ownerTeam}} is now handling the next stage.\n\nWhat happens next: {{whatNext}}. I will send you another update {{updateTime}} so you know where things stand.\n\nBest,",
+      "guidance": [
+        "Use escalation as a status update, not as a vague reassurance.",
+        "Name the team or owner whenever possible.",
+        "Always include a next update time and a concrete contact path if the customer needs help."
+      ],
+      "pitfalls": [
+        "Do not say the case is solved if it is only escalated.",
+        "Do not leave the customer wondering who is responsible now."
+      ],
+      "examples": [
+        {
+          "label": "Product bug escalation",
+          "input": "Current case state: Tier 1 confirmed the issue and escalated it; owning team: product support; what next: they will investigate and share the result; next customer update: tomorrow by noon",
+          "output": "A calm escalation note that tells the customer the issue is now owned and when to expect more information."
+        },
+        {
+          "label": "Billing escalation",
+          "input": "Current case state: billing support has reviewed the account and escalated the dispute; owning team: finance operations; what next: they will verify the invoice trail; next customer update: in 24 hours",
+          "output": "A reassuring handoff that makes the internal ownership clear to the customer."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I explain internal queue names?",
+          "a": "No. Use plain team names and customer-relevant timing."
+        },
+        {
+          "q": "Is escalation always good news?",
+          "a": "It is only useful if you also explain what the customer can expect next."
+        }
+      ],
+      "relatedTags": [
+        "escalation",
+        "customer-updates",
+        "support",
+        "ownership"
+      ]
+    },
+    {
+      "slug": "incident-apology-follow-up-after-fix",
+      "name": "Incident Apology Follow-Up After Fix",
+      "keyword": "incident apology follow up email",
+      "intent": "incident-recovery",
+      "audience": "Support managers",
+      "outcome": "Close the loop after an incident with a clear apology, fix summary, and next prevention step.",
+      "metaDescription": "Write a post-incident apology email that explains what was fixed and what happens next. Free private email tool by ReplyMind.",
+      "h1": "Close the incident loop with clarity.",
+      "intro": "After the immediate issue is fixed, customers still need a straightforward explanation. This tool helps you acknowledge the impact, summarize the fix, and signal follow-up work.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "incidentImpact",
+          "label": "Impact recap",
+          "type": "textarea",
+          "placeholder": "Some customers could not complete checkout",
+          "required": true
+        },
+        {
+          "key": "fixSummary",
+          "label": "Fix summary",
+          "type": "textarea",
+          "placeholder": "A faulty payment route was corrected",
+          "required": true
+        },
+        {
+          "key": "preventionStep",
+          "label": "Prevention step",
+          "type": "textarea",
+          "placeholder": "We added monitoring to catch the issue sooner",
+          "required": true
+        },
+        {
+          "key": "restorationTime",
+          "label": "When service was restored",
+          "type": "text",
+          "placeholder": "At 10:15 AM",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Update after the incident",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to follow up on the issue that affected {{incidentImpact}}. The problem has now been fixed, and service was restored {{restorationTime}}.\n\nThe fix was {{fixSummary}}. To reduce the chance of this happening again, we also {{preventionStep}}.\n\nBest,",
+      "guidance": [
+        "Explain both the fix and the prevention step so the message feels complete.",
+        "Keep the apology specific to the impact, not generic fluff.",
+        "Use a factual restoration time if it is known."
+      ],
+      "pitfalls": [
+        "Do not make the follow-up sound like a marketing announcement.",
+        "Do not skip the prevention step unless there truly is no update yet."
+      ],
+      "examples": [
+        {
+          "label": "Checkout incident",
+          "input": "Impact recap: some customers could not complete checkout; fix summary: the payment route was corrected; prevention step: added monitoring; restoration time: at 10:15 AM",
+          "output": "A clear post-incident note that explains what broke, what fixed it, and what is being done to reduce recurrence."
+        },
+        {
+          "label": "Email delay incident",
+          "input": "Impact recap: confirmation emails were delayed; fix summary: mail queue cleared and routing restored; prevention step: created a queue alert; restoration time: this morning",
+          "output": "A reassuring incident wrap-up that tells customers the issue is resolved and being monitored."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should this email include the root cause?",
+          "a": "Only if the team has confirmed it. Otherwise, keep the explanation at the fix level."
+        },
+        {
+          "q": "Do I need to apologize again after the fix?",
+          "a": "A brief apology is appropriate if the incident materially affected customers."
+        }
+      ],
+      "relatedTags": [
+        "incident",
+        "postmortem-communication",
+        "support",
+        "service-recovery"
+      ]
+    },
+    {
+      "slug": "customer-check-in-after-ticket-close",
+      "name": "Customer Check-In After Ticket Close",
+      "keyword": "post ticket close check in email",
+      "intent": "follow-up",
+      "audience": "Support agents",
+      "outcome": "Confirm the issue stayed fixed after closing a ticket and invite a reply if anything remains.",
+      "metaDescription": "Create a post-ticket-close check-in email that confirms resolution and offers one easy reply path. Free private email tool by ReplyMind.",
+      "h1": "Check that the fix actually held.",
+      "intro": "Closing a ticket is not always the end of the story. This tool helps you send a light follow-up to confirm things are still working and to reopen the door if needed.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "ticketIssue",
+          "label": "Original issue",
+          "type": "textarea",
+          "placeholder": "The customer could not export reports",
+          "required": true
+        },
+        {
+          "key": "fixApplied",
+          "label": "What was fixed",
+          "type": "textarea",
+          "placeholder": "Export settings were corrected",
+          "required": true
+        },
+        {
+          "key": "checkWindow",
+          "label": "Check-in timing",
+          "type": "text",
+          "placeholder": "A few days later",
+          "required": true
+        },
+        {
+          "key": "replyPrompt",
+          "label": "Reply prompt",
+          "type": "textarea",
+          "placeholder": "Reply if anything still looks off",
+          "required": true
+        }
+      ],
+      "subjectTemplate": "Checking in after your support case",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to check in {{checkWindow}} after the issue with {{ticketIssue}}. We had fixed that by {{fixApplied}}.\n\nIf anything still looks off, {{replyPrompt}} and I will take another look.\n\nBest,",
+      "guidance": [
+        "Keep the follow-up low-pressure and concise.",
+        "Reference the exact fix so the customer can connect the email to the prior issue.",
+        "Make reopening the conversation easy if the problem returns."
+      ],
+      "pitfalls": [
+        "Do not make this sound like a satisfaction survey if your goal is issue validation.",
+        "Do not close the loop without giving a reply path."
+      ],
+      "examples": [
+        {
+          "label": "Export case",
+          "input": "Original issue: could not export reports; what was fixed: export settings were corrected; check-in timing: a few days later; reply prompt: reply if anything still looks off",
+          "output": "A practical post-close check-in that invites the customer to flag any remaining issue."
+        },
+        {
+          "label": "Login case",
+          "input": "Original issue: login loop after password reset; what was fixed: session tokens were refreshed; check-in timing: this week; reply prompt: let me know if access slips again",
+          "output": "A simple follow-up that confirms the prior resolution and keeps the door open."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I ask for a rating here?",
+          "a": "Only if the purpose is feedback. This tool is mainly for verifying the fix and keeping support available."
+        },
+        {
+          "q": "What if the customer never replies?",
+          "a": "That is normal. The value is in giving them an easy path back if needed."
+        }
+      ],
+      "relatedTags": [
+        "follow-up",
+        "ticket-close",
+        "support",
+        "quality-check"
+      ]
+    },
+    {
+      "slug": "help-center-article-deflection-email",
+      "name": "Help Center Article Deflection Email",
+      "keyword": "help center article email",
+      "intent": "self-service",
+      "audience": "Support teams",
+      "outcome": "Point a customer to the best help article without making them feel brushed off.",
+      "metaDescription": "Write a helpful deflection email that shares one relevant article and why it solves the issue. Free private email tool by ReplyMind.",
+      "h1": "Offer self-service that actually helps.",
+      "intro": "Sending a help article only works when it matches the customer’s problem and explains why it is useful. This tool keeps the handoff warm and practical.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "issueType",
+          "label": "Issue type",
+          "type": "textarea",
+          "placeholder": "How to change a billing address",
+          "required": true
+        },
+        {
+          "key": "articleTitle",
+          "label": "Article title",
+          "type": "text",
+          "placeholder": "Update your billing details",
+          "required": true
+        },
+        {
+          "key": "articleBenefit",
+          "label": "Why it helps",
+          "type": "textarea",
+          "placeholder": "It walks through the exact steps with screenshots",
+          "required": true
+        },
+        {
+          "key": "fallbackHelp",
+          "label": "Fallback help",
+          "type": "textarea",
+          "placeholder": "Reply here if the article does not solve it",
+          "required": true
+        }
+      ],
+      "subjectTemplate": "A quick resource for this issue",
+      "bodyTemplate": "Hi {{recipientName}},\n\nFor {{issueType}}, the best next step is our article {{articleTitle}}. It helps because {{articleBenefit}}.\n\nIf it does not solve the issue, {{fallbackHelp}} and I will step back in.\n\nBest,",
+      "guidance": [
+        "Explain why the article is relevant instead of just dropping a link.",
+        "Include a fallback so the customer knows they are not being dismissed.",
+        "Use only one resource if it fully matches the problem."
+      ],
+      "pitfalls": [
+        "Do not send a generic article list.",
+        "Do not use deflection when the customer has already signaled urgency or distress."
+      ],
+      "examples": [
+        {
+          "label": "Billing address change",
+          "input": "Issue type: how to change a billing address; article title: Update your billing details; article benefit: it walks through the exact steps with screenshots; fallback help: reply here if the article does not solve it",
+          "output": "A warm deflection message that gives one relevant article and a direct fallback."
+        },
+        {
+          "label": "Export question",
+          "input": "Issue type: export a filtered report; article title: Export report data; article benefit: it explains which filters are supported; fallback help: I will step back in if needed",
+          "output": "A focused self-service note that directs the customer to the correct procedure without ending support."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include multiple links?",
+          "a": "Usually no. One good article is better than a pile of options."
+        },
+        {
+          "q": "What if the customer asked for a human answer?",
+          "a": "Do not deflect. Answer directly or offer the article as a backup."
+        }
+      ],
+      "relatedTags": [
+        "help-center",
+        "self-service",
+        "deflection",
+        "support"
+      ]
+    },
+    {
+      "slug": "csat-request-after-resolution",
+      "name": "CSAT Request After Resolution",
+      "keyword": "customer satisfaction email",
+      "intent": "feedback",
+      "audience": "Support teams",
+      "outcome": "Ask for feedback after a resolved case in a short, low-friction way.",
+      "metaDescription": "Draft a CSAT request that follows a real resolution and invites honest feedback. Free private email tool by ReplyMind.",
+      "h1": "Ask for feedback after the work is done.",
+      "intro": "A feedback ask is strongest after the customer’s issue is actually handled. This tool helps you keep the request short, clear, and easy to answer.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "resolvedIssue",
+          "label": "Resolved issue",
+          "type": "textarea",
+          "placeholder": "The invoice was corrected",
+          "required": true
+        },
+        {
+          "key": "feedbackPurpose",
+          "label": "Why feedback matters",
+          "type": "textarea",
+          "placeholder": "It helps us improve the support experience",
+          "required": true
+        },
+        {
+          "key": "surveyLinkText",
+          "label": "Survey or reply prompt",
+          "type": "text",
+          "placeholder": "Reply with one sentence or use the survey link",
+          "required": true
+        },
+        {
+          "key": "thankYouNote",
+          "label": "Thank-you line",
+          "type": "textarea",
+          "placeholder": "Thanks for giving us a chance to help",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Your case is resolved, and we would value your feedback",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI’m glad we could help resolve {{resolvedIssue}}. Your feedback will help us {{feedbackPurpose}}.\n\n{{surveyLinkText}}. {{thankYouNote}}\n\nBest,",
+      "guidance": [
+        "Ask only after the issue is resolved or materially advanced.",
+        "Keep the ask short so it feels respectful of the customer’s time.",
+        "Make the response path easy to complete."
+      ],
+      "pitfalls": [
+        "Do not ask for feedback in the middle of an unresolved complaint.",
+        "Do not make the customer work hard to submit the rating."
+      ],
+      "examples": [
+        {
+          "label": "Invoice correction",
+          "input": "Resolved issue: the invoice was corrected; feedback purpose: improve the support experience; survey link text: reply with one sentence or use the survey link; thank-you note: thanks for giving us a chance to help",
+          "output": "A short CSAT request that feels appropriate because the case is already resolved."
+        },
+        {
+          "label": "Access restored",
+          "input": "Resolved issue: account access was restored; feedback purpose: make our recovery process faster; survey link text: a quick reply or the one-click survey link; thank-you note: appreciate your patience",
+          "output": "A concise CSAT ask that reminds the customer the case is resolved, invites one quick rating or reply, and thanks them for their time."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I send CSAT after every ticket?",
+          "a": "Only where it makes sense. Timing and relevance matter more than volume."
+        },
+        {
+          "q": "Can the message be one sentence?",
+          "a": "Yes, if it still includes the reason for the ask and a clear response path."
+        }
+      ],
+      "relatedTags": [
+        "csat",
+        "feedback",
+        "post-resolution",
+        "support"
+      ]
+    },
+    {
+      "slug": "nps-ask-for-active-customers",
+      "name": "NPS Ask for Active Customers",
+      "keyword": "nps request email",
+      "intent": "feedback",
+      "audience": "Customer success managers",
+      "outcome": "Request an NPS response from an active customer in a way that feels personal and relevant.",
+      "metaDescription": "Write an NPS request that connects the ask to the customer’s current experience and relationship. Free private email tool by ReplyMind.",
+      "h1": "Ask for NPS only when the relationship is active.",
+      "intro": "NPS requests work better when the customer still has recent context to evaluate. This tool helps you mention the relationship, make the ask relevant, and keep it brief.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "relationshipContext",
+          "label": "Relationship context",
+          "type": "textarea",
+          "placeholder": "The customer has been live for three months",
+          "required": true
+        },
+        {
+          "key": "experienceFocus",
+          "label": "What they should consider",
+          "type": "textarea",
+          "placeholder": "Their day-to-day experience with the product",
+          "required": true
+        },
+        {
+          "key": "responseLink",
+          "label": "Response link or reply cue",
+          "type": "text",
+          "placeholder": "Use the one-question survey link",
+          "required": true
+        },
+        {
+          "key": "appreciationLine",
+          "label": "Appreciation line",
+          "type": "textarea",
+          "placeholder": "Thank you for being an active customer",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "A quick question about your experience",
+      "bodyTemplate": "Hi {{recipientName}},\n\nYou have now been live with us for {{relationshipContext}}, and I wanted to ask about your experience with {{experienceFocus}}.\n\n{{responseLink}}. {{appreciationLine}}\n\nBest,",
+      "guidance": [
+        "Keep the request tied to current use, not a generic survey blast.",
+        "Use one clear survey path if the customer is already familiar with your process.",
+        "Write like a relationship check, not a marketing campaign."
+      ],
+      "pitfalls": [
+        "Do not send NPS before the customer has enough experience to judge.",
+        "Do not overexplain the scoring system in the email."
+      ],
+      "examples": [
+        {
+          "label": "Three-month customer",
+          "input": "Relationship context: live for three months; experience focus: day-to-day product use; response link or reply cue: use the one-question survey link; appreciation line: thank you for being an active customer",
+          "output": "A relevant NPS ask that feels connected to the customer’s actual experience."
+        },
+        {
+          "label": "Renewed account",
+          "input": "Relationship context: recently renewed; experience focus: support responsiveness and product reliability; response link or reply cue: answer the one-question survey; appreciation line: we appreciate the continued partnership",
+          "output": "A timely feedback request that fits a customer who has recent context to review."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I ask for an NPS score by email or link?",
+          "a": "Either can work. The important part is making the ask easy to complete."
+        },
+        {
+          "q": "When should I not send NPS?",
+          "a": "Not during an open issue or immediately after a bad incident."
+        }
+      ],
+      "relatedTags": [
+        "nps",
+        "feedback",
+        "customer-success",
+        "retention"
+      ]
+    },
+    {
+      "slug": "exec-update-for-account-health",
+      "name": "Executive Update for Account Health",
+      "keyword": "account health update email",
+      "intent": "account-management",
+      "audience": "Customer success managers",
+      "outcome": "Share a brief, executive-friendly update on account health without unnecessary operational detail.",
+      "metaDescription": "Build an executive account health email that summarizes adoption, risks, and next actions in a concise format. Free private email tool by ReplyMind.",
+      "h1": "Give executives the short version they actually need.",
+      "intro": "Executive stakeholders want a crisp read on account health, not a support transcript. This tool helps you summarize the state of the account, the main risk, and the next action.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "healthState",
+          "label": "Current health",
+          "type": "text",
+          "placeholder": "Stable but watch renewal risk",
+          "required": true
+        },
+        {
+          "key": "mainRisk",
+          "label": "Main risk",
+          "type": "textarea",
+          "placeholder": "Low adoption in one department",
+          "required": true
+        },
+        {
+          "key": "nextAction",
+          "label": "Next action",
+          "type": "textarea",
+          "placeholder": "Schedule a leadership check-in next week",
+          "required": true
+        },
+        {
+          "key": "evidencePoint",
+          "label": "Evidence point",
+          "type": "textarea",
+          "placeholder": "Usage is flat for the last 30 days",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Account health update",
+      "bodyTemplate": "Hi {{recipientName}},\n\nCurrent account health is {{healthState}}. The main concern is {{mainRisk}}.\n\nOur next action is {{nextAction}}. One supporting data point is {{evidencePoint}}.\n\nBest,",
+      "guidance": [
+        "Keep the update brief and decision-oriented.",
+        "Use one supporting data point, not a full dashboard summary.",
+        "Focus on what needs attention next."
+      ],
+      "pitfalls": [
+        "Do not overload executives with operational detail.",
+        "Do not frame normal variance as a crisis."
+      ],
+      "examples": [
+        {
+          "label": "Renewal risk update",
+          "input": "Current health: stable but watch renewal risk; main risk: low adoption in one department; next action: schedule a leadership check-in next week; evidence point: usage is flat for 30 days",
+          "output": "A concise account health note that highlights the single biggest risk and next step."
+        },
+        {
+          "label": "Expansion-ready update",
+          "input": "Current health: strong; main risk: procurement timing; next action: align on renewal timeline; evidence point: product usage is rising",
+          "output": "An executive-ready update that keeps the conversation focused on the next business step."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should this sound formal?",
+          "a": "Professional and concise is enough. The goal is clarity, not stiffness."
+        },
+        {
+          "q": "Do I need charts or attachments?",
+          "a": "Not for the email itself. Attachments should only be used if they help decision-makers act."
+        }
+      ],
+      "relatedTags": [
+        "account-health",
+        "executive-update",
+        "customer-success",
+        "renewal"
+      ]
+    },
+    {
+      "slug": "renewal-risk-escalation-email",
+      "name": "Renewal Risk Escalation Email",
+      "keyword": "renewal risk email",
+      "intent": "renewal",
+      "audience": "Customer success and sales",
+      "outcome": "Alert internal stakeholders that a renewal needs attention now, with the reason and ask.",
+      "metaDescription": "Write an internal renewal risk escalation email that flags the issue and asks for a clear decision or intervention. Free private email tool by ReplyMind.",
+      "h1": "Escalate renewal risk before it becomes churn.",
+      "intro": "Renewal risk emails should be actionable, not alarming for its own sake. This tool helps you state the risk, show why it matters, and ask for the exact support you need.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "renewalRisk",
+          "label": "Risk summary",
+          "type": "textarea",
+          "placeholder": "The customer is unhappy with support response times",
+          "required": true
+        },
+        {
+          "key": "riskEvidence",
+          "label": "Evidence",
+          "type": "textarea",
+          "placeholder": "They have mentioned cancellation twice",
+          "required": true
+        },
+        {
+          "key": "neededSupport",
+          "label": "What you need from the team",
+          "type": "textarea",
+          "placeholder": "Executive outreach or a save offer",
+          "required": true
+        },
+        {
+          "key": "deadline",
+          "label": "Decision deadline",
+          "type": "text",
+          "placeholder": "Today",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Renewal risk escalation",
+      "bodyTemplate": "Hi {{recipientName}},\n\nTeam,\n\nI’m escalating a renewal risk. The situation is {{renewalRisk}}, and the evidence we have is {{riskEvidence}}.\n\nWhat I need next is {{neededSupport}}. Please weigh in by {{deadline}} so we can respond before the account moves further.\n\nThanks,",
+      "guidance": [
+        "State the risk in one sentence before adding evidence.",
+        "Ask for a concrete intervention, not general awareness.",
+        "Use a deadline only if it is meaningful."
+      ],
+      "pitfalls": [
+        "Do not make the note emotionally dramatic if the ask is operational.",
+        "Do not send it without saying what action is needed."
+      ],
+      "examples": [
+        {
+          "label": "Support pain risk",
+          "input": "Risk summary: the customer is unhappy with support response times; evidence: they have mentioned cancellation twice; needed support: executive outreach or a save offer; deadline: today",
+          "output": "A focused internal escalation that gives leadership the exact reason and ask."
+        },
+        {
+          "label": "Adoption risk",
+          "input": "Risk summary: low product adoption is threatening renewal; evidence: only one team is active; needed support: a rollout review; deadline: this week",
+          "output": "A practical renewal risk alert that can prompt a targeted intervention."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I send this to sales too?",
+          "a": "If sales owns the renewal motion, yes. Keep the message aligned on the action needed."
+        },
+        {
+          "q": "How urgent should the tone be?",
+          "a": "Urgent enough to drive action, but still fact-based."
+        }
+      ],
+      "relatedTags": [
+        "renewal",
+        "risk",
+        "escalation",
+        "customer-success"
+      ]
+    },
+    {
+      "slug": "implementation-delay-apology-email",
+      "name": "Implementation Delay Apology Email",
+      "keyword": "implementation delay email",
+      "intent": "apology",
+      "audience": "Customer success managers",
+      "outcome": "Apologize for an implementation delay and reset expectations with a new plan.",
+      "metaDescription": "Create an implementation delay apology that explains the delay, new timing, and next milestone. Free private email tool by ReplyMind.",
+      "h1": "Reset the implementation timeline honestly.",
+      "intro": "Implementation delays are a trust moment. This tool helps you acknowledge the slip, explain the updated plan, and reduce confusion about what happens next.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "delayReason",
+          "label": "Why the delay happened",
+          "type": "textarea",
+          "placeholder": "The required data export took longer than expected",
+          "required": true
+        },
+        {
+          "key": "newTimeline",
+          "label": "New timeline",
+          "type": "text",
+          "placeholder": "Next Tuesday",
+          "required": true
+        },
+        {
+          "key": "nextMilestone",
+          "label": "Next milestone",
+          "type": "textarea",
+          "placeholder": "Finish configuration and begin validation",
+          "required": true
+        },
+        {
+          "key": "customerImpact",
+          "label": "Impact on the customer",
+          "type": "textarea",
+          "placeholder": "Launch is pushed back by one week",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "An update on your implementation timeline",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to apologize for the delay. The timing shifted because {{delayReason}}.\n\nThe updated plan is to move forward by {{newTimeline}}. The next milestone is {{nextMilestone}}, and I understand this has {{customerImpact}}.\n\nBest,",
+      "guidance": [
+        "Name the delay plainly before describing the new plan.",
+        "Give one updated timeline and one next milestone.",
+        "Acknowledge impact without overexplaining the internal backstory."
+      ],
+      "pitfalls": [
+        "Do not leave the customer with a new date but no milestone.",
+        "Do not sound defensive about why the delay happened."
+      ],
+      "examples": [
+        {
+          "label": "Data export delay",
+          "input": "Why the delay happened: the required data export took longer than expected; new timeline: next Tuesday; next milestone: finish configuration and begin validation; impact: launch is pushed back by one week",
+          "output": "A straightforward implementation update that apologizes, resets timing, and names the next milestone."
+        },
+        {
+          "label": "Training delay",
+          "input": "Why the delay happened: the customer team needed more time for prep; new timeline: Friday; next milestone: complete training and confirm rollout; impact: onboarding is delayed",
+          "output": "A calm apology that respects the customer’s situation while making the next step clear."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I offer a discount here?",
+          "a": "Only if that is part of your process. The priority is clarity and a credible new plan."
+        },
+        {
+          "q": "What if the new timeline could move again?",
+          "a": "Say that it is the current best estimate and promise a follow-up if it changes."
+        }
+      ],
+      "relatedTags": [
+        "implementation",
+        "apology",
+        "timeline",
+        "customer-success"
+      ]
+    },
+    {
+      "slug": "quarterly-business-review-invite-email",
+      "name": "Quarterly Business Review Invite Email",
+      "keyword": "qbr invite email",
+      "intent": "qbr",
+      "audience": "Customer success managers",
+      "outcome": "Invite a customer to a business review with a specific agenda and purpose.",
+      "metaDescription": "Write a QBR invitation that sets the agenda, purpose, and expected outcome. Free private email tool by ReplyMind.",
+      "h1": "Invite the customer to a review that feels worth the time.",
+      "intro": "A good QBR invite makes the purpose obvious before the meeting happens. This tool helps you frame the agenda, the value of the conversation, and the decision you want to support.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "reviewPurpose",
+          "label": "Purpose",
+          "type": "textarea",
+          "placeholder": "Review progress and plan next-quarter priorities",
+          "required": true
+        },
+        {
+          "key": "agendaFocus",
+          "label": "Agenda focus",
+          "type": "textarea",
+          "placeholder": "Adoption, outcomes, and upcoming requests",
+          "required": true
+        },
+        {
+          "key": "meetingLength",
+          "label": "Meeting length",
+          "type": "text",
+          "placeholder": "30 minutes",
+          "required": true
+        },
+        {
+          "key": "desiredOutcome",
+          "label": "Desired outcome",
+          "type": "textarea",
+          "placeholder": "Agree on the next set of priorities",
+          "required": true
+        }
+      ],
+      "subjectTemplate": "Invite to your quarterly review",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI’d like to schedule a {{meetingLength}} review to {{reviewPurpose}}. The agenda would focus on {{agendaFocus}}.\n\nThe goal of the meeting is {{desiredOutcome}}. If that works, I can send a few time options.\n\nBest,",
+      "guidance": [
+        "Explain why the meeting matters before asking for time.",
+        "Keep the agenda tightly tied to outcomes.",
+        "Offer times only after the purpose is clear."
+      ],
+      "pitfalls": [
+        "Do not invite the customer to a review with no reason attached.",
+        "Do not overload the invite with a full slide deck worth of detail."
+      ],
+      "examples": [
+        {
+          "label": "Adoption review",
+          "input": "Purpose: review progress and plan next-quarter priorities; agenda focus: adoption, outcomes, and upcoming requests; meeting length: 30 minutes; desired outcome: agree on the next set of priorities",
+          "output": "A clean QBR invite that makes the business value of the meeting obvious."
+        },
+        {
+          "label": "Renewal prep review",
+          "input": "Purpose: align on renewal readiness; agenda focus: usage, support themes, and open risks; meeting length: 45 minutes; desired outcome: confirm the renewal plan",
+          "output": "A useful review invite that frames the meeting around a decision and a plan."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I attach a deck with the invite?",
+          "a": "Only if it helps. The email itself should already explain the purpose."
+        },
+        {
+          "q": "Is a calendar link enough?",
+          "a": "Not by itself. The customer should know why the meeting matters."
+        }
+      ],
+      "relatedTags": [
+        "qbr",
+        "customer-success",
+        "renewal",
+        "business-review"
+      ]
+    },
+    {
+      "slug": "usage-milestone-congratulations-email",
+      "name": "Usage Milestone Congratulations Email",
+      "keyword": "customer milestone email",
+      "intent": "engagement",
+      "audience": "Customer success teams",
+      "outcome": "Celebrate a real usage milestone in a way that reinforces progress and future value.",
+      "metaDescription": "Create a milestone congratulations email that highlights a real achievement and encourages continued momentum. Free private email tool by ReplyMind.",
+      "h1": "Celebrate the progress that matters.",
+      "intro": "Milestone emails are best when they recognize actual progress, not generic praise. This tool helps you name the achievement, connect it to value, and point to the next useful step.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "milestone",
+          "label": "Milestone achieved",
+          "type": "textarea",
+          "placeholder": "The team completed its first 100 reports",
+          "required": true
+        },
+        {
+          "key": "valueShown",
+          "label": "Value shown",
+          "type": "textarea",
+          "placeholder": "Reporting is now part of the weekly workflow",
+          "required": true
+        },
+        {
+          "key": "nextStep",
+          "label": "Next step",
+          "type": "textarea",
+          "placeholder": "Try the scheduled delivery feature",
+          "required": true
+        },
+        {
+          "key": "sharedAudience",
+          "label": "Who should see this",
+          "type": "text",
+          "placeholder": "Team lead or admin",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Congratulations on the milestone",
+      "bodyTemplate": "Hi {{recipientName}},\n\nCongratulations on reaching {{milestone}}. It shows that {{valueShown}}.\n\nA natural next step would be {{nextStep}}. If useful, I can also share this with {{sharedAudience}}.\n\nBest,",
+      "guidance": [
+        "Celebrate something the customer actually did, not just product usage in general.",
+        "Connect the milestone to a business or workflow outcome.",
+        "Offer one next step that builds on the momentum."
+      ],
+      "pitfalls": [
+        "Do not overhype minor usage if the customer may not care.",
+        "Do not turn the congratulations into a sales pitch."
+      ],
+      "examples": [
+        {
+          "label": "Reporting milestone",
+          "input": "Milestone achieved: first 100 reports completed; value shown: reporting is now part of the weekly workflow; next step: try scheduled delivery; shared audience: team lead",
+          "output": "A positive milestone note that celebrates real progress and suggests a natural next step."
+        },
+        {
+          "label": "Activation milestone",
+          "input": "Milestone achieved: first successful automation run; value shown: manual follow-up time dropped; next step: expand to a second workflow; shared audience: admin",
+          "output": "A congratulatory email that reinforces value without feeling promotional."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I make this long?",
+          "a": "No. Milestone notes are strongest when they are brief and specific."
+        },
+        {
+          "q": "Can I copy the same message to everyone?",
+          "a": "Not if the milestone is account-specific. The value comes from the concrete achievement."
+        }
+      ],
+      "relatedTags": [
+        "milestone",
+        "engagement",
+        "customer-success",
+        "adoption"
+      ]
+    },
+    {
+      "slug": "handoff-to-billing-team-email",
+      "name": "Handoff to Billing Team Email",
+      "keyword": "billing team handoff email",
+      "intent": "internal-handoff",
+      "audience": "Support agents",
+      "outcome": "Pass a billing issue to the right internal team with the facts they need.",
+      "metaDescription": "Write a billing handoff email that summarizes the charge issue, the customer’s concern, and the requested review. Free private email tool by ReplyMind.",
+      "h1": "Transfer the billing case with precision.",
+      "intro": "Billing handoffs fail when the receiving team has to reconstruct the case from scratch. This tool helps you package the key facts, customer concern, and requested action clearly.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "billingIssue",
+          "label": "Issue summary",
+          "type": "textarea",
+          "placeholder": "The customer was charged twice for the same invoice",
+          "required": true
+        },
+        {
+          "key": "customerConcern",
+          "label": "Customer concern",
+          "type": "textarea",
+          "placeholder": "They need a fast correction and reassurance",
+          "required": true
+        },
+        {
+          "key": "reviewNeeded",
+          "label": "What billing should review",
+          "type": "textarea",
+          "placeholder": "Check the processor trail and void the duplicate",
+          "required": true
+        },
+        {
+          "key": "priorityLevel",
+          "label": "Priority level",
+          "type": "text",
+          "placeholder": "High",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Billing handoff for review",
+      "bodyTemplate": "Hi {{recipientName}},\n\nBilling team,\n\nPlease review this case: {{billingIssue}}. The customer’s concern is {{customerConcern}}.\n\nWhat needs review: {{reviewNeeded}}. Please treat this as {{priorityLevel}} priority if possible.\n\nThanks,",
+      "guidance": [
+        "Keep the summary customer-facing and factual.",
+        "State the exact review requested so the billing team can work immediately.",
+        "Mark priority only when it affects response time."
+      ],
+      "pitfalls": [
+        "Do not send billing a vague complaint with no action requested.",
+        "Do not copy a long customer thread into the handoff note."
+      ],
+      "examples": [
+        {
+          "label": "Duplicate charge",
+          "input": "Issue summary: charged twice for the same invoice; customer concern: they need a fast correction and reassurance; what needs review: check the processor trail and void the duplicate; priority level: high",
+          "output": "A concise billing handoff that gives finance exactly what to investigate."
+        },
+        {
+          "label": "Tax line error",
+          "input": "Issue summary: tax amount looks incorrect on renewal; customer concern: wants confirmation before paying; what needs review: verify tax rules and invoice calculation; priority level: medium",
+          "output": "A clean internal transfer that lets billing focus on the specific calculation."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include screenshots?",
+          "a": "If they help. Attach only the evidence the billing team needs to review the charge."
+        },
+        {
+          "q": "Do I need to explain the whole customer history?",
+          "a": "No. Just the history that matters for the billing review."
+        }
+      ],
+      "relatedTags": [
+        "billing",
+        "handoff",
+        "support",
+        "internal-communication"
+      ]
+    },
+    {
+      "slug": "customer-education-email-for-new-feature",
+      "name": "Customer Education Email for New Feature",
+      "keyword": "new feature education email",
+      "intent": "education",
+      "audience": "Customer success managers",
+      "outcome": "Introduce a new feature in a way that teaches the customer how and why to use it.",
+      "metaDescription": "Write a customer education email that explains a new feature’s value, use case, and first action. Free private email tool by ReplyMind.",
+      "h1": "Teach the feature in customer language.",
+      "intro": "Feature announcements work best when they show practical value fast. This tool helps you explain what changed, why it matters, and what the customer can do first.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "featureName",
+          "label": "Feature name",
+          "type": "text",
+          "placeholder": "Scheduled report delivery",
+          "required": true
+        },
+        {
+          "key": "useCase",
+          "label": "Primary use case",
+          "type": "textarea",
+          "placeholder": "Send reports automatically every Monday",
+          "required": true
+        },
+        {
+          "key": "firstAction",
+          "label": "First action",
+          "type": "textarea",
+          "placeholder": "Open the report and choose delivery settings",
+          "required": true
+        },
+        {
+          "key": "helpResource",
+          "label": "Help resource",
+          "type": "text",
+          "placeholder": "See the help article or reply with questions",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "A new feature that may help your team",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe just added {{featureName}}. It is useful when you want to {{useCase}}.\n\nThe first step is {{firstAction}}. If you want more detail, {{helpResource}}.\n\nBest,",
+      "guidance": [
+        "Lead with the problem the feature solves, not the release note name.",
+        "Give one concrete first action the customer can complete immediately.",
+        "Offer a help resource only if it adds meaningful context or saves a support reply."
+      ],
+      "pitfalls": [
+        "Do not turn the email into a product launch blog post.",
+        "Do not assume the customer will understand technical feature names."
+      ],
+      "examples": [
+        {
+          "label": "Scheduled delivery",
+          "input": "Feature name: scheduled report delivery; primary use case: send reports automatically every Monday; first action: open the report and choose delivery settings; help resource: see the help article",
+          "output": "A useful feature education email that tells the customer how the feature helps and what to do first."
+        },
+        {
+          "label": "Saved views",
+          "input": "Feature name: saved views; primary use case: return to the same filtered list quickly; first action: save the current filter set; help resource: reply with questions",
+          "output": "A simple educational note that focuses on a practical workflow improvement."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I send this to every customer?",
+          "a": "Only the customers for whom the feature is relevant. Relevance drives engagement."
+        },
+        {
+          "q": "How much detail is too much?",
+          "a": "If the customer has to read more than once to understand the first action, it is too much."
+        }
+      ],
+      "relatedTags": [
+        "education",
+        "feature-announcement",
+        "customer-success",
+        "adoption"
+      ]
+    },
+    {
+      "slug": "support-sla-breach-notification",
+      "name": "Support SLA Breach Notification",
+      "keyword": "support sla breach email",
+      "intent": "apology",
+      "audience": "Support managers",
+      "outcome": "Notify a customer that a service-level target was missed and explain the next step.",
+      "metaDescription": "Draft a support SLA breach notification that acknowledges the miss, explains the cause briefly, and resets expectations. Free private email tool by ReplyMind.",
+      "h1": "Explain the miss without hiding behind policy.",
+      "intro": "If a support response target was missed, the customer deserves a direct and useful update. This tool helps you acknowledge the breach, explain what is being done, and commit to the next update.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "missedTarget",
+          "label": "Missed target",
+          "type": "textarea",
+          "placeholder": "The four-hour response target was missed",
+          "required": true
+        },
+        {
+          "key": "reasonBrief",
+          "label": "Brief reason",
+          "type": "textarea",
+          "placeholder": "The case was misrouted during a queue spike",
+          "required": true
+        },
+        {
+          "key": "correctiveAction",
+          "label": "Corrective action",
+          "type": "textarea",
+          "placeholder": "We reassigned the case and added coverage",
+          "required": true
+        },
+        {
+          "key": "nextUpdate",
+          "label": "Next update time",
+          "type": "text",
+          "placeholder": "By 2 PM",
+          "required": true
+        }
+      ],
+      "subjectTemplate": "Update on your support case timing",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to let you know that {{missedTarget}}. This happened because {{reasonBrief}}.\n\nWe have already taken action: {{correctiveAction}}. I will send the next update {{nextUpdate}}.\n\nBest,",
+      "guidance": [
+        "Own the miss directly and avoid blaming process or volume alone.",
+        "State what was fixed internally before moving on.",
+        "Give a next update time so the customer does not need to ask."
+      ],
+      "pitfalls": [
+        "Do not wait for the customer to complain before acknowledging the miss.",
+        "Do not use generic apology language with no operational detail."
+      ],
+      "examples": [
+        {
+          "label": "Queue spike",
+          "input": "Missed target: the four-hour response target was missed; brief reason: the case was misrouted during a queue spike; corrective action: reassigned the case and added coverage; next update: by 2 PM",
+          "output": "A direct SLA-breach note that acknowledges the miss and shows what has already been done."
+        },
+        {
+          "label": "After-hours delay",
+          "input": "Missed target: overnight response window was missed; brief reason: the ticket lacked a clear severity flag; corrective action: added manual review; next update: this afternoon",
+          "output": "A clear status message that explains the miss and the concrete corrective action."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I reference the SLA contract?",
+          "a": "Only if it helps clarify the expectation. The email should still focus on the customer experience."
+        },
+        {
+          "q": "Can I avoid saying it was a miss?",
+          "a": "No. Clear ownership is better than vague language here."
+        }
+      ],
+      "relatedTags": [
+        "sla",
+        "support",
+        "apology",
+        "service-recovery"
+      ]
+    },
+    {
+      "slug": "renewal-confirmation-email",
+      "name": "Renewal Confirmation Email",
+      "keyword": "renewal confirmation email",
+      "intent": "renewal",
+      "audience": "Customer success and account managers",
+      "outcome": "Confirm a renewal decision and summarize the next operational step.",
+      "metaDescription": "Write a renewal confirmation email that confirms the decision and explains what happens next. Free private email tool by ReplyMind.",
+      "h1": "Confirm the renewal cleanly.",
+      "intro": "Renewal confirmation should remove ambiguity and keep the relationship moving. This tool helps you confirm the decision, note the term, and explain any next admin step.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "renewalDecision",
+          "label": "Renewal decision",
+          "type": "text",
+          "placeholder": "Renewed",
+          "required": true
+        },
+        {
+          "key": "termLength",
+          "label": "Term length",
+          "type": "text",
+          "placeholder": "12 months",
+          "required": true
+        },
+        {
+          "key": "adminStep",
+          "label": "Admin step",
+          "type": "textarea",
+          "placeholder": "We will send the updated agreement for signature",
+          "required": true
+        },
+        {
+          "key": "thankYouDetail",
+          "label": "Thank-you detail",
+          "type": "textarea",
+          "placeholder": "Thanks for continuing the partnership",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Renewal confirmed",
+      "bodyTemplate": "Hi {{recipientName}},\n\nYour account is now {{renewalDecision}} for {{termLength}}. The next admin step is {{adminStep}}.\n\n{{thankYouDetail}}\n\nBest,",
+      "guidance": [
+        "Make the confirmation unmistakable in the first line.",
+        "State the term or effective period so there is no ambiguity.",
+        "Add only one next admin step and keep it operational."
+      ],
+      "pitfalls": [
+        "Do not bury the confirmation in a paragraph of account history.",
+        "Do not ask for decisions that have already been made."
+      ],
+      "examples": [
+        {
+          "label": "Standard renewal",
+          "input": "Renewal decision: renewed; term length: 12 months; admin step: we will send the updated agreement for signature; thank-you detail: thanks for continuing the partnership",
+          "output": "A straightforward renewal confirmation that tells the customer the account status and next admin action."
+        },
+        {
+          "label": "Expansion renewal",
+          "input": "Renewal decision: renewed with additional seats; term length: 24 months; admin step: updated invoice will follow; thank-you detail: appreciate the expanded scope",
+          "output": "A clear confirmation that includes the renewed term and the billing follow-up."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should this email restate the whole contract?",
+          "a": "No. Just confirm the decision, the term, and the next administrative step."
+        },
+        {
+          "q": "Is a thank-you necessary?",
+          "a": "Not mandatory, but a brief thank-you is appropriate when renewal is confirmed."
+        }
+      ],
+      "relatedTags": [
+        "renewal",
+        "confirmation",
+        "account-management",
+        "customer-success"
+      ]
+    },
+    {
+      "slug": "trial-end-warning-and-next-step",
+      "name": "Trial End Warning and Next Step",
+      "keyword": "trial end email",
+      "intent": "trial",
+      "audience": "Customer success teams",
+      "outcome": "Warn a trial user about the end date and point them to the highest-value action before it expires.",
+      "metaDescription": "Create a trial-end email that sets the deadline, highlights value, and gives one practical next step. Free private email tool by ReplyMind.",
+      "h1": "Help the trial user finish strong.",
+      "intro": "Trial-end emails should be useful, not just time-based reminders. This tool helps you show what they have already achieved and what to do before the trial ends.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "trialEndDate",
+          "label": "Trial end date",
+          "type": "text",
+          "placeholder": "August 14",
+          "required": true
+        },
+        {
+          "key": "valueAchieved",
+          "label": "Value already seen",
+          "type": "textarea",
+          "placeholder": "They completed setup and invited teammates",
+          "required": true
+        },
+        {
+          "key": "bestNextStep",
+          "label": "Best next step",
+          "type": "textarea",
+          "placeholder": "Connect the last data source",
+          "required": true
+        },
+        {
+          "key": "supportOption",
+          "label": "Support option",
+          "type": "text",
+          "placeholder": "Reply if you want help finishing setup",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Your trial ends soon",
+      "bodyTemplate": "Hi {{recipientName}},\n\nYour trial ends on {{trialEndDate}}. So far, you have already seen {{valueAchieved}}.\n\nThe best next step before the trial ends is {{bestNextStep}}. {{supportOption}}\n\nBest,",
+      "guidance": [
+        "Tie the reminder to a real action the user can still complete.",
+        "Point to the trial value they have already experienced.",
+        "Keep the tone helpful rather than urgent for its own sake."
+      ],
+      "pitfalls": [
+        "Do not write a generic expiry warning with no value context.",
+        "Do not overdo urgency unless there is a real deadline consequence."
+      ],
+      "examples": [
+        {
+          "label": "Setup nearly complete",
+          "input": "Trial end date: August 14; value already seen: they completed setup and invited teammates; best next step: connect the last data source; support option: reply if you want help finishing setup",
+          "output": "A trial-end reminder that states the deadline, points to the value already achieved, and names one next step the user can still complete."
+        },
+        {
+          "label": "Reporting trial",
+          "input": "Trial end date: next Monday; value already seen: they built the first dashboard; best next step: schedule automated delivery; support option: book a quick setup session",
+          "output": "A practical reminder that reinforces what the user has accomplished and how to continue."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I mention pricing here?",
+          "a": "Only if the customer asks. The main goal is to help them get value before the trial ends."
+        },
+        {
+          "q": "How early should this be sent?",
+          "a": "Early enough to allow action, but close enough that the date feels relevant."
+        }
+      ],
+      "relatedTags": [
+        "trial",
+        "onboarding",
+        "activation",
+        "customer-success"
+      ]
+    },
+    {
+      "slug": "helpdesk-escalation-summary-for-engineering",
+      "name": "Helpdesk Escalation Summary for Engineering",
+      "keyword": "engineering escalation summary",
+      "intent": "internal-handoff",
+      "audience": "Support agents",
+      "outcome": "Give engineering a concise summary of the bug, impact, and reproduction path.",
+      "metaDescription": "Write an engineering escalation summary that packages the symptom, impact, and reproduction details cleanly. Free private email tool by ReplyMind.",
+      "h1": "Escalate the bug with enough context to act.",
+      "intro": "Engineering escalations need a crisp problem statement and the evidence to match. This tool helps you summarize the symptom, impact, and reproduction path so the ticket moves faster.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "bugSymptom",
+          "label": "Bug symptom",
+          "type": "textarea",
+          "placeholder": "Reports fail when exporting from a filtered view",
+          "required": true
+        },
+        {
+          "key": "impactScope",
+          "label": "Impact scope",
+          "type": "textarea",
+          "placeholder": "Affects all users on desktop",
+          "required": true
+        },
+        {
+          "key": "reproSteps",
+          "label": "Reproduction steps",
+          "type": "textarea",
+          "placeholder": "Open filter, click export, then confirm download",
+          "required": true
+        },
+        {
+          "key": "evidence",
+          "label": "Evidence available",
+          "type": "textarea",
+          "placeholder": "Screenshot and timestamped error",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Engineering escalation: reproducible bug",
+      "bodyTemplate": "Hi {{recipientName}},\n\nEngineering team,\n\nBug symptom: {{bugSymptom}}\nImpact scope: {{impactScope}}\nRepro steps: {{reproSteps}}\nEvidence: {{evidence}}\n\nPlease advise on the likely cause or next diagnostic step.\n\nThanks,",
+      "guidance": [
+        "Format the escalation so the key facts are visible immediately.",
+        "Include reproduction steps whenever possible.",
+        "State the impact scope so prioritization is easier."
+      ],
+      "pitfalls": [
+        "Do not send engineering a vague symptom with no reproduction path.",
+        "Do not bury evidence in a long narrative."
+      ],
+      "examples": [
+        {
+          "label": "Export bug",
+          "input": "Bug symptom: reports fail when exporting from a filtered view; impact scope: affects all users on desktop; repro steps: open filter, click export, then confirm download; evidence: screenshot and timestamped error",
+          "output": "A strong engineering summary that includes the symptom, scope, steps, and proof in one message."
+        },
+        {
+          "label": "Sync bug",
+          "input": "Bug symptom: calendar sync duplicates events; impact scope: affects one workspace; repro steps: connect calendar and refresh twice; evidence: screen recording",
+          "output": "A practical bug escalation that gives engineering a reproducible path and impact context."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include a workaround?",
+          "a": "Yes, if one exists and helps frame the impact."
+        },
+        {
+          "q": "How technical should the wording be?",
+          "a": "Technical enough to be useful, but still readable at a glance."
+        }
+      ],
+      "relatedTags": [
+        "engineering",
+        "bug-escalation",
+        "support",
+        "troubleshooting"
+      ]
+    },
+    {
+      "slug": "customer-reengagement-after-inactivity",
+      "name": "Customer Reengagement After Inactivity",
+      "keyword": "inactive customer reengagement email",
+      "intent": "reengagement",
+      "audience": "Customer success managers",
+      "outcome": "Reconnect with a dormant customer by referencing a clear use case and easy next step.",
+      "metaDescription": "Write a reengagement email for inactive customers that references value and offers a simple re-entry path. Free private email tool by ReplyMind.",
+      "h1": "Bring the conversation back with relevance.",
+      "intro": "Dormant accounts usually respond to relevance, not pressure. This tool helps you remind the customer what they were working toward and how to restart without friction.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "lastActiveContext",
+          "label": "Last active context",
+          "type": "textarea",
+          "placeholder": "They last used the product to track project updates",
+          "required": true
+        },
+        {
+          "key": "reentryValue",
+          "label": "Re-entry value",
+          "type": "textarea",
+          "placeholder": "A quick update could save them time again",
+          "required": true
+        },
+        {
+          "key": "restartStep",
+          "label": "Restart step",
+          "type": "textarea",
+          "placeholder": "Log in and resume the saved workflow",
+          "required": true
+        },
+        {
+          "key": "helpOffer",
+          "label": "Help offer",
+          "type": "textarea",
+          "placeholder": "I can help you pick up where you left off",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "A quick way to pick this back up",
+      "bodyTemplate": "Hi {{recipientName}},\n\nThe last time you were active, you were using the product to {{lastActiveContext}}. It may still be useful because {{reentryValue}}.\n\nIf you want to restart, the first step is {{restartStep}}. {{helpOffer}}\n\nBest,",
+      "guidance": [
+        "Reference the last real use case to make the outreach feel personal.",
+        "Keep the restart path simple and easy to complete.",
+        "Offer help without making the customer feel monitored or blamed for inactivity."
+      ],
+      "pitfalls": [
+        "Do not send a generic we-miss-you email with no relevance.",
+        "Do not pressure the customer to respond immediately."
+      ],
+      "examples": [
+        {
+          "label": "Project tracking account",
+          "input": "Last active context: track project updates; reentry value: a quick update could save time again; restart step: log in and resume the saved workflow; help offer: I can help you pick up where you left off",
+          "output": "A relevant reengagement note that reminds the customer what they used the product for."
+        },
+        {
+          "label": "Reporting account",
+          "input": "Last active context: building client reports; reentry value: the reporting workflow can still reduce manual work; restart step: open the last saved report; help offer: I can send the quick-start steps",
+          "output": "A low-pressure reengagement note that references the earlier workflow, explains why it still matters, and gives the customer a simple restart path."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How long should inactivity be before sending this?",
+          "a": "Use your own account context and lifecycle timing. The message should match the account state."
+        },
+        {
+          "q": "Should I mention inactivity directly?",
+          "a": "Yes, but lightly. Focus on relevance and a useful next step."
+        }
+      ],
+      "relatedTags": [
+        "reengagement",
+        "inactive-accounts",
+        "customer-success",
+        "retention"
+      ]
+    },
+    {
+      "slug": "service-credit-explanation-email",
+      "name": "Service Credit Explanation Email",
+      "keyword": "service credit email",
+      "intent": "apology",
+      "audience": "Support and account teams",
+      "outcome": "Explain a service credit clearly so the customer understands what it covers and how it is applied.",
+      "metaDescription": "Create a service credit explanation that states the credit amount, reason, and application details. Free private email tool by ReplyMind.",
+      "h1": "Explain the credit before the invoice lands.",
+      "intro": "Service credits can be confusing if the explanation is vague. This tool helps you state the amount, the reason, and how it will show up on the customer’s account.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "creditAmount",
+          "label": "Credit amount",
+          "type": "text",
+          "placeholder": "$100",
+          "required": true
+        },
+        {
+          "key": "creditReason",
+          "label": "Reason for the credit",
+          "type": "textarea",
+          "placeholder": "Support response time missed the agreed target",
+          "required": true
+        },
+        {
+          "key": "applicationMethod",
+          "label": "How it will apply",
+          "type": "textarea",
+          "placeholder": "It will appear on the next invoice",
+          "required": true
+        },
+        {
+          "key": "accountReference",
+          "label": "Account reference",
+          "type": "text",
+          "placeholder": "January billing cycle",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Details on your service credit",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe are applying a service credit of {{creditAmount}} for {{accountReference}}. The reason is {{creditReason}}.\n\nIt will be applied as {{applicationMethod}}. If you want me to walk through the billing detail, reply here and I will help.\n\nBest,",
+      "guidance": [
+        "State the amount and reason clearly at the top.",
+        "Explain where the credit will appear so the customer can recognize it.",
+        "Offer to clarify billing detail if needed."
+      ],
+      "pitfalls": [
+        "Do not make the credit sound conditional if it has already been approved.",
+        "Do not assume the customer will know how credits appear on invoices."
+      ],
+      "examples": [
+        {
+          "label": "SLA credit",
+          "input": "Credit amount: $100; reason for the credit: support response time missed the agreed target; how it will apply: it will appear on the next invoice; account reference: January billing cycle",
+          "output": "A clear credit explanation that removes ambiguity about the amount and where it appears."
+        },
+        {
+          "label": "Incident credit",
+          "input": "Credit amount: $250; reason for the credit: service downtime affected usage; how it will apply: it will be applied to the next renewal; account reference: annual plan",
+          "output": "A practical note that connects the credit to the incident and billing application."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I explain how the amount was calculated?",
+          "a": "Only if that detail is useful or the customer asked for it."
+        },
+        {
+          "q": "Can the credit email also apologize?",
+          "a": "Yes, a brief apology is appropriate when the credit follows a service issue."
+        }
+      ],
+      "relatedTags": [
+        "service-credit",
+        "billing",
+        "apology",
+        "support"
+      ]
+    },
+    {
+      "slug": "customer-expectation-reset-email",
+      "name": "Customer Expectation Reset Email",
+      "keyword": "set expectations email",
+      "intent": "expectation-setting",
+      "audience": "Customer success and support teams",
+      "outcome": "Reset expectations when timing, scope, or support boundaries need to be clarified.",
+      "metaDescription": "Write an expectation reset email that sets the scope, timing, and support boundary in plain language. Free private email tool by ReplyMind.",
+      "h1": "Reset expectations before frustration grows.",
+      "intro": "Expectation resets are most effective when they are calm and explicit. This tool helps you define what is included, what is not, and when the customer should expect the next step.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "scopeBoundary",
+          "label": "Scope boundary",
+          "type": "textarea",
+          "placeholder": "We can help with setup, not custom development",
+          "required": true
+        },
+        {
+          "key": "timingExpectation",
+          "label": "Timing expectation",
+          "type": "textarea",
+          "placeholder": "Response times may be longer during the holiday week",
+          "required": true
+        },
+        {
+          "key": "nextStep",
+          "label": "Next step",
+          "type": "textarea",
+          "placeholder": "We will review the request and reply by Tuesday",
+          "required": true
+        },
+        {
+          "key": "toneGuide",
+          "label": "Tone guide",
+          "type": "text",
+          "placeholder": "Clear and calm",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "A quick clarification on what to expect",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to clarify one thing so expectations stay aligned. {{scopeBoundary}}\n\nOn timing, {{timingExpectation}}. The next step is {{nextStep}}. I’m aiming to keep this {{toneGuide}}.\n\nBest,",
+      "guidance": [
+        "Be explicit about boundaries without sounding rigid.",
+        "Pair the boundary with a next step so the message does not feel like a dead end.",
+        "Use calm language if the customer is already frustrated."
+      ],
+      "pitfalls": [
+        "Do not hide the boundary inside a long explanation.",
+        "Do not set an expectation without also giving a concrete next step."
+      ],
+      "examples": [
+        {
+          "label": "Support scope",
+          "input": "Scope boundary: we can help with setup, not custom development; timing expectation: response times may be longer during the holiday week; next step: we will review the request and reply by Tuesday; tone guide: clear and calm",
+          "output": "A direct expectation reset that sets boundaries and still keeps the conversation moving."
+        },
+        {
+          "label": "Delivery timing",
+          "input": "Scope boundary: the team can confirm status but not change shipping carrier terms; timing expectation: final resolution may take two business days; next step: we will update the case tomorrow; tone guide: respectful",
+          "output": "A useful clarification email that reduces confusion and gives the customer a next update."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I apologize when resetting expectations?",
+          "a": "You can acknowledge the inconvenience, but the main point is clarity."
+        },
+        {
+          "q": "Is this the same as saying no?",
+          "a": "Not necessarily. It is about defining scope and timing honestly."
+        }
+      ],
+      "relatedTags": [
+        "expectations",
+        "support",
+        "scope",
+        "customer-success"
+      ]
+    },
+    {
+      "slug": "customer-satisfaction-save-after-negative-feedback",
+      "name": "Customer Satisfaction Save After Negative Feedback",
+      "keyword": "negative feedback response email",
+      "intent": "service-recovery",
+      "audience": "Customer success and support leaders",
+      "outcome": "Respond to negative feedback with ownership, a fix path, and a reason to stay engaged.",
+      "metaDescription": "Write a save email after negative feedback that acknowledges the concern and proposes a fix path. Free private email tool by ReplyMind.",
+      "h1": "Respond to negative feedback with a concrete next move.",
+      "intro": "Negative feedback is a chance to recover trust if the reply is direct and useful. This tool helps you acknowledge the issue, explain what you can change, and invite a continued conversation.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "feedbackConcern",
+          "label": "Feedback concern",
+          "type": "textarea",
+          "placeholder": "The support experience felt slow and unclear",
+          "required": true
+        },
+        {
+          "key": "ownershipStatement",
+          "label": "Ownership statement",
+          "type": "textarea",
+          "placeholder": "We should have communicated more clearly",
+          "required": true
+        },
+        {
+          "key": "fixPath",
+          "label": "Fix path",
+          "type": "textarea",
+          "placeholder": "We will reassign the case and provide one named contact",
+          "required": true
+        },
+        {
+          "key": "followUpAsk",
+          "label": "Follow-up ask",
+          "type": "textarea",
+          "placeholder": "Please reply if you want me to stay involved",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Thanks for the honest feedback",
+      "bodyTemplate": "Hi {{recipientName}},\n\nThank you for the honest feedback. I understand the concern was {{feedbackConcern}}.\n\nYou are right that {{ownershipStatement}}. Here is the path forward: {{fixPath}}. {{followUpAsk}}\n\nBest,",
+      "guidance": [
+        "Acknowledge the criticism before defending the process.",
+        "State one corrective action you can actually carry out.",
+        "Keep the invitation open if the customer wants continued support."
+      ],
+      "pitfalls": [
+        "Do not write a defensive response that argues with the feedback.",
+        "Do not offer too many fixes at once."
+      ],
+      "examples": [
+        {
+          "label": "Slow support feedback",
+          "input": "Feedback concern: the support experience felt slow and unclear; ownership statement: we should have communicated more clearly; fix path: reassign the case and provide one named contact; follow-up ask: reply if you want me to stay involved",
+          "output": "A direct recovery email that owns the issue and proposes a specific fix."
+        },
+        {
+          "label": "Unhelpful onboarding feedback",
+          "input": "Feedback concern: the onboarding felt overwhelming; ownership statement: we should have broken it into smaller steps; fix path: we will send a shorter checklist and a live help option; follow-up ask: I can stay involved if helpful",
+          "output": "A constructive response that turns criticism into a practical next step."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I thank the customer for criticism?",
+          "a": "Yes. Honest feedback can help you improve the relationship and the process."
+        },
+        {
+          "q": "What if the feedback is very blunt?",
+          "a": "Stay calm and focus on the specific concern and the next action."
+        }
+      ],
+      "relatedTags": [
+        "negative-feedback",
+        "service-recovery",
+        "customer-success",
+        "support"
+      ]
+    },
+    {
+      "slug": "status-update-delay-with-new-timeline",
+      "name": "Status Update Delay With New Timeline",
+      "keyword": "delay status update email",
+      "intent": "status-update",
+      "audience": "Support and success teams",
+      "outcome": "Tell the customer about a delay and provide a usable revised timeline.",
+      "metaDescription": "Create a delay status update that explains what changed, the new timing, and what to expect next. Free private email tool by ReplyMind.",
+      "h1": "Update the customer before they have to ask.",
+      "intro": "Delays are easier to accept when the customer gets a direct update and a revised timeline. This tool helps you say what changed, what is next, and when to expect another update.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "originalExpectation",
+          "label": "Original expectation",
+          "type": "textarea",
+          "placeholder": "The report was expected today",
+          "required": true
+        },
+        {
+          "key": "delayReason",
+          "label": "Why it changed",
+          "type": "textarea",
+          "placeholder": "We found an upstream data issue",
+          "required": true
+        },
+        {
+          "key": "newTimeline",
+          "label": "New timeline",
+          "type": "text",
+          "placeholder": "Tomorrow morning",
+          "required": true
+        },
+        {
+          "key": "nextStatus",
+          "label": "Next status touchpoint",
+          "type": "text",
+          "placeholder": "By end of day",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Update on the delay",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to update you that {{originalExpectation}} has shifted because {{delayReason}}.\n\nThe new timeline is {{newTimeline}}. I will send another status update {{nextStatus}} so you know where things stand.\n\nBest,",
+      "guidance": [
+        "Say the change plainly and early so the customer is never guessing.",
+        "Give a revised timeline that the customer can actually plan around.",
+        "Include another status update time if the delay is still open."
+      ],
+      "pitfalls": [
+        "Do not imply certainty if the timeline is still provisional.",
+        "Do not leave the customer without a next status touchpoint."
+      ],
+      "examples": [
+        {
+          "label": "Report delay",
+          "input": "Original expectation: the report was expected today; why it changed: we found an upstream data issue; new timeline: tomorrow morning; next status touchpoint: by end of day",
+          "output": "A practical delay update that tells the customer what changed and when to expect the next word."
+        },
+        {
+          "label": "Implementation delay",
+          "input": "Original expectation: rollout was expected this afternoon; why it changed: the validation step needs more time; new timeline: next week; next status touchpoint: tomorrow",
+          "output": "A clear status message that resets the timing and prevents uncertainty."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I give a reason even if it is internal?",
+          "a": "Yes, but keep it brief and customer-relevant."
+        },
+        {
+          "q": "How often should I send delay updates?",
+          "a": "Only as often as useful. Each update should include something the customer can act on."
+        }
+      ],
+      "relatedTags": [
+        "status-update",
+        "delay",
+        "support",
+        "customer-communications"
+      ]
+    },
+    {
+      "slug": "pilot-success-summary-email",
+      "name": "Pilot Success Summary Email",
+      "keyword": "pilot success summary email",
+      "intent": "success-summary",
+      "audience": "Customer success managers",
+      "outcome": "Summarize what went well in a pilot and propose the next step toward broader adoption.",
+      "metaDescription": "Write a pilot success summary that captures outcomes, lessons, and the proposed next step. Free private email tool by ReplyMind.",
+      "h1": "Turn a successful pilot into momentum.",
+      "intro": "Pilot wrap-ups should connect the experiment to business value and a clear next decision. This tool helps you summarize the result, name the impact, and suggest what comes next.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "pilotOutcome",
+          "label": "Pilot outcome",
+          "type": "textarea",
+          "placeholder": "The pilot met the intended workflow goals",
+          "required": true
+        },
+        {
+          "key": "valueSignal",
+          "label": "Value signal",
+          "type": "textarea",
+          "placeholder": "The team saved time and reduced manual work",
+          "required": true
+        },
+        {
+          "key": "nextDecision",
+          "label": "Next decision",
+          "type": "textarea",
+          "placeholder": "Discuss rollout to the wider team",
+          "required": true
+        },
+        {
+          "key": "stakeholderGroup",
+          "label": "Stakeholder group",
+          "type": "text",
+          "placeholder": "Leadership team",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Pilot results and next steps",
+      "bodyTemplate": "Hi {{recipientName}},\n\nThe pilot result was {{pilotOutcome}}. One clear value signal was {{valueSignal}}.\n\nThe next decision is {{nextDecision}}. If useful, we can review this with {{stakeholderGroup}}.\n\nBest,",
+      "guidance": [
+        "Summarize outcomes in a way that supports a decision, not just a recap.",
+        "Highlight one value signal that is easy to repeat internally.",
+        "Make the next step concrete and decision-oriented."
+      ],
+      "pitfalls": [
+        "Do not treat the pilot summary like a generic status update.",
+        "Do not overstate success if the pilot had mixed results."
+      ],
+      "examples": [
+        {
+          "label": "Workflow pilot",
+          "input": "Pilot outcome: the pilot met the intended workflow goals; value signal: the team saved time and reduced manual work; next decision: discuss rollout to the wider team; stakeholder group: leadership team",
+          "output": "A pilot wrap-up that summarizes the result, calls out a clear value signal, and points the customer toward the next rollout decision."
+        },
+        {
+          "label": "Reporting pilot",
+          "input": "Pilot outcome: the pilot solved the reporting use case; value signal: manual follow-up dropped; next decision: approve phased expansion; stakeholder group: operations",
+          "output": "A helpful summary that turns pilot success into a next-step conversation."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I include the full pilot timeline?",
+          "a": "Only if it helps the decision. The summary should stay focused on outcome and next step."
+        },
+        {
+          "q": "Can I use this if the pilot was only partially successful?",
+          "a": "Yes, but be precise about what worked and what still needs attention."
+        }
+      ],
+      "relatedTags": [
+        "pilot",
+        "success-summary",
+        "customer-success",
+        "adoption"
+      ]
+    },
+    {
+      "slug": "customer-request-denial-with-explanation",
+      "name": "Customer Request Denial With Explanation",
+      "keyword": "request denial email",
+      "intent": "policy",
+      "audience": "Support and success teams",
+      "outcome": "Decline a customer request while explaining the reason in plain language.",
+      "metaDescription": "Write a request denial email that is respectful, direct, and clear about the reason. Free private email tool by ReplyMind.",
+      "h1": "Say no clearly and keep the relationship intact.",
+      "intro": "Customers handle a denial better when the reason is clear and the tone is respectful. This tool helps you explain the decision and, when possible, point to a next-best option.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "requestType",
+          "label": "Request type",
+          "type": "textarea",
+          "placeholder": "A retroactive discount on a past invoice",
+          "required": true
+        },
+        {
+          "key": "denialReason",
+          "label": "Reason for denial",
+          "type": "textarea",
+          "placeholder": "The request falls outside the approved policy window",
+          "required": true
+        },
+        {
+          "key": "nextBestOption",
+          "label": "Next best option",
+          "type": "textarea",
+          "placeholder": "We can review a future credit on the next order",
+          "required": false
+        },
+        {
+          "key": "toneNote",
+          "label": "Tone note",
+          "type": "text",
+          "placeholder": "Respectful and firm",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Update on your request",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI reviewed your request for {{requestType}}. At this time, we cannot approve it because {{denialReason}}.\n\nIf it helps, {{nextBestOption}}. I’m keeping the tone here {{toneNote}} because I want to be clear without being abrupt.\n\nBest,",
+      "guidance": [
+        "Give the reason for the denial in one sentence.",
+        "Offer a next-best option only if you can actually support it.",
+        "Use firm wording that still respects the relationship."
+      ],
+      "pitfalls": [
+        "Do not overjustify a decision that is already firm.",
+        "Do not sound apologetic for a rule you are not changing."
+      ],
+      "examples": [
+        {
+          "label": "Discount denial",
+          "input": "Request type: a retroactive discount on a past invoice; denial reason: the request falls outside the approved policy window; next best option: we can review a future credit on the next order; tone note: respectful and firm",
+          "output": "A clean denial email that explains the decision and leaves one possible path open."
+        },
+        {
+          "label": "Deadline extension denial",
+          "input": "Request type: extending the renewal deadline by two months; denial reason: the renewal cycle has already closed; next best option: we can schedule a follow-up for the next term; tone note: clear and calm",
+          "output": "A direct refusal that avoids legalistic language and gives a practical alternative."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I apologize when denying a request?",
+          "a": "You can acknowledge disappointment, but avoid apologizing for a policy-bound decision as if it were an error."
+        },
+        {
+          "q": "How much detail is enough?",
+          "a": "Enough to make the decision understandable, not enough to invite a long debate."
+        }
+      ],
+      "relatedTags": [
+        "denial",
+        "policy",
+        "support",
+        "customer-success"
+      ]
+    },
+    {
+      "slug": "customer-feedback-loop-closure-email",
+      "name": "Customer Feedback Loop Closure Email",
+      "keyword": "feedback loop closure email",
+      "intent": "follow-up",
+      "audience": "Customer success and support teams",
+      "outcome": "Close the loop after a customer shares feedback by showing what was learned and what changed.",
+      "metaDescription": "Create a feedback loop closure email that shows the customer their input led to action. Free private email tool by ReplyMind.",
+      "h1": "Show the customer that feedback went somewhere.",
+      "intro": "Closing the feedback loop builds trust when customers can see a real response. This tool helps you summarize the input, share the change, and thank them for influencing it.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "feedbackSummary",
+          "label": "What they told you",
+          "type": "textarea",
+          "placeholder": "The onboarding steps were too spread out",
+          "required": true
+        },
+        {
+          "key": "actionTaken",
+          "label": "What changed",
+          "type": "textarea",
+          "placeholder": "We shortened the checklist and added one guide",
+          "required": true
+        },
+        {
+          "key": "resultExpected",
+          "label": "Expected result",
+          "type": "textarea",
+          "placeholder": "It should be easier to get started",
+          "required": true
+        },
+        {
+          "key": "thanksLine",
+          "label": "Thanks line",
+          "type": "text",
+          "placeholder": "Thanks for helping us improve it",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "You helped us improve this",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to close the loop on your feedback that {{feedbackSummary}}. Based on that, we have {{actionTaken}}.\n\nWe expect this to {{resultExpected}}. {{thanksLine}}\n\nBest,",
+      "guidance": [
+        "Make the connection between the feedback and the change explicit.",
+        "Share the likely customer benefit of the change.",
+        "Keep the tone grateful, but avoid sounding performative."
+      ],
+      "pitfalls": [
+        "Do not say feedback was acted on unless it truly was.",
+        "Do not make the message read like an internal changelog."
+      ],
+      "examples": [
+        {
+          "label": "Onboarding feedback",
+          "input": "What they told you: the onboarding steps were too spread out; what changed: we shortened the checklist and added one guide; expected result: it should be easier to get started; thanks line: thanks for helping us improve it",
+          "output": "A useful closure email that shows the customer their input drove a concrete change."
+        },
+        {
+          "label": "Support feedback",
+          "input": "What they told you: status updates were too sparse; what changed: we added a clearer update cadence; expected result: fewer follow-up questions; thanks line: we appreciate the candid input",
+          "output": "A concise closure note that shows the customer the feedback was heard, the process changed, and the loop is now complete."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I close the loop even if the change is small?",
+          "a": "Yes, if the feedback genuinely led to an improvement. Small actions still matter."
+        },
+        {
+          "q": "Can I send this without an update yet?",
+          "a": "Only if you can explain what is being reviewed next. Otherwise, wait until there is something concrete to share."
+        }
+      ],
+      "relatedTags": [
+        "feedback-loop",
+        "customer-success",
+        "support",
+        "trust"
+      ]
+    },
+    {
+      "slug": "live-chat-follow-up-after-resolution",
+      "name": "Live Chat Follow-Up After Resolution",
+      "keyword": "live chat follow up email",
+      "intent": "follow-up",
+      "audience": "Support agents",
+      "outcome": "Follow up after a live chat with a concise recap and next-step reminder.",
+      "metaDescription": "Write a live chat follow-up email that summarizes the solution and keeps the next step clear. Free private email tool by ReplyMind.",
+      "h1": "Turn a chat answer into a lasting resolution.",
+      "intro": "Chat sessions move fast, so the follow-up should be simple and complete. This tool helps you recap what was solved, what the customer should do next, and how to reopen the case if needed.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "chatIssue",
+          "label": "Issue solved in chat",
+          "type": "textarea",
+          "placeholder": "The customer could not find the export button",
+          "required": true
+        },
+        {
+          "key": "solutionRecap",
+          "label": "Solution recap",
+          "type": "textarea",
+          "placeholder": "We showed where the export option lives",
+          "required": true
+        },
+        {
+          "key": "nextReminder",
+          "label": "Next reminder",
+          "type": "textarea",
+          "placeholder": "Try it once and reply if anything still blocks you",
+          "required": true
+        },
+        {
+          "key": "chatTicketRef",
+          "label": "Chat or ticket reference",
+          "type": "text",
+          "placeholder": "Chat #5521",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Recap from our chat",
+      "bodyTemplate": "Hi {{recipientName}},\n\nThanks for chatting with us about {{chatIssue}}. In the chat, we covered {{solutionRecap}}.\n\n{{nextReminder}}. I’ve also noted {{chatTicketRef}} if you need to reply later.\n\nBest,",
+      "guidance": [
+        "Use the email to lock in the answer from chat while it is still fresh.",
+        "Repeat the solution in plain language so the customer can find it later.",
+        "Add one reply path in case the fix does not hold."
+      ],
+      "pitfalls": [
+        "Do not re-open the full conversation unnecessarily.",
+        "Do not omit the next step just because the chat felt complete."
+      ],
+      "examples": [
+        {
+          "label": "Export button found",
+          "input": "Issue solved in chat: could not find the export button; solution recap: showed where the export option lives; next reminder: try it once and reply if anything still blocks you; chat ticket ref: Chat #5521",
+          "output": "A short recap email that reinforces the chat solution and gives the customer a clear fallback."
+        },
+        {
+          "label": "Login setting corrected",
+          "input": "Issue solved in chat: login failed after a browser change; solution recap: cleared the saved session and reset the browser setting; next reminder: log in again and reply if it fails; chat ticket ref: Chat #5588",
+          "output": "A clean post-chat summary that helps the customer remember the fix later."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Do I need to repeat everything from chat?",
+          "a": "No. Only the issue, the solution, and the next step matter here."
+        },
+        {
+          "q": "Should I send this even if the chat resolved the issue?",
+          "a": "Yes, if the customer may need a reference or if the case could recur."
+        }
+      ],
+      "relatedTags": [
+        "live-chat",
+        "follow-up",
+        "support",
+        "resolution"
+      ]
+    },
+    {
+      "slug": "support-appointment-reminder-email",
+      "name": "Support Appointment Reminder Email",
+      "keyword": "support appointment reminder email",
+      "intent": "reminder",
+      "audience": "Support coordinators",
+      "outcome": "Remind the customer about a scheduled support call without sounding robotic.",
+      "metaDescription": "Write a support appointment reminder that confirms the time, purpose, and preparation needed. Free private email tool by ReplyMind.",
+      "h1": "Keep the support appointment on track.",
+      "intro": "Support calls work better when the customer knows why the meeting exists and what to bring. This tool helps you remind them with the right details and a simple prep note.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "appointmentTime",
+          "label": "Appointment time",
+          "type": "text",
+          "placeholder": "Tomorrow at 2 PM",
+          "required": true
+        },
+        {
+          "key": "callPurpose",
+          "label": "Purpose of the call",
+          "type": "textarea",
+          "placeholder": "Walk through the setup steps together",
+          "required": true
+        },
+        {
+          "key": "prepNeeded",
+          "label": "What to prepare",
+          "type": "textarea",
+          "placeholder": "Have the admin login ready",
+          "required": true
+        },
+        {
+          "key": "joinInstructions",
+          "label": "Join instructions",
+          "type": "text",
+          "placeholder": "Use the meeting link in the calendar invite",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Reminder for our support appointment",
+      "bodyTemplate": "Hi {{recipientName}},\n\nThis is a quick reminder about our appointment {{appointmentTime}}. We’ll use the call to {{callPurpose}}.\n\nPlease have {{prepNeeded}} ready. {{joinInstructions}}\n\nBest,",
+      "guidance": [
+        "Include the purpose so the customer sees the value of attending.",
+        "Mention preparation only if it genuinely helps the call go faster.",
+        "Keep the reminder short and easy to scan."
+      ],
+      "pitfalls": [
+        "Do not make this feel like a generic calendar automation.",
+        "Do not leave out the preparation note if there is one."
+      ],
+      "examples": [
+        {
+          "label": "Setup help call",
+          "input": "Appointment time: tomorrow at 2 PM; purpose of the call: walk through the setup steps together; what to prepare: have the admin login ready; join instructions: use the meeting link in the calendar invite",
+          "output": "A clear reminder that confirms time, purpose, and prep without extra noise."
+        },
+        {
+          "label": "Troubleshooting call",
+          "input": "Appointment time: Friday morning; purpose of the call: review the error together; what to prepare: recent screenshots; join instructions: open the same meeting link",
+          "output": "A concise appointment reminder that confirms the time, explains the purpose of the call, and tells the customer what to prepare before joining."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I add a map or calendar link?",
+          "a": "Only if it reduces friction. The main job is to confirm the appointment and preparation."
+        },
+        {
+          "q": "Can this be sent from a shared inbox?",
+          "a": "Yes, if that is how the support appointment is managed."
+        }
+      ],
+      "relatedTags": [
+        "reminder",
+        "support-call",
+        "customer-success",
+        "scheduling"
+      ]
+    },
+    {
+      "slug": "renewal-objection-response-email",
+      "name": "Renewal Objection Response Email",
+      "keyword": "renewal objection email",
+      "intent": "renewal",
+      "audience": "Customer success managers",
+      "outcome": "Respond to a renewal objection with a focused answer and a practical next step.",
+      "metaDescription": "Write a renewal objection response that addresses the concern and keeps the conversation moving. Free private email tool by ReplyMind.",
+      "h1": "Answer the objection instead of skirting it.",
+      "intro": "Renewal objections often hide a specific concern about value, budget, or timing. This tool helps you respond directly and offer a clear next step instead of a broad reassurance.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "objection",
+          "label": "Customer objection",
+          "type": "textarea",
+          "placeholder": "The product is not being used enough",
+          "required": true
+        },
+        {
+          "key": "responsePoint",
+          "label": "Your response point",
+          "type": "textarea",
+          "placeholder": "We can reset the rollout with a smaller scope",
+          "required": true
+        },
+        {
+          "key": "proofPoint",
+          "label": "Proof point",
+          "type": "textarea",
+          "placeholder": "One team is already using it weekly",
+          "required": true
+        },
+        {
+          "key": "nextAsk",
+          "label": "Next ask",
+          "type": "textarea",
+          "placeholder": "Schedule a 20-minute review call",
+          "required": true
+        }
+      ],
+      "subjectTemplate": "Re: your renewal concern",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI understand the concern is {{objection}}. One response I’d suggest is {{responsePoint}}.\n\nThe proof point here is {{proofPoint}}. If you are open to it, the next step is {{nextAsk}}.\n\nBest,",
+      "guidance": [
+        "Address the objection in the first sentence.",
+        "Back up your answer with one relevant proof point.",
+        "Ask for one next step that would move the decision forward."
+      ],
+      "pitfalls": [
+        "Do not respond with a generic value recap if the objection is specific.",
+        "Do not overload the customer with multiple rebuttals."
+      ],
+      "examples": [
+        {
+          "label": "Low usage objection",
+          "input": "Objection: the product is not being used enough; response point: reset the rollout with a smaller scope; proof point: one team is already using it weekly; next ask: schedule a 20-minute review call",
+          "output": "A direct renewal response that addresses usage concerns and offers a practical next step."
+        },
+        {
+          "label": "Budget objection",
+          "input": "Objection: budget is tight; response point: pause one module and renew the core package; proof point: current usage still supports the core team; next ask: review the options together",
+          "output": "A focused answer that respects the budget issue and keeps the renewal conversation moving."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I defend the product heavily?",
+          "a": "No. Answer the objection directly and keep the message practical."
+        },
+        {
+          "q": "What if the objection is emotional rather than factual?",
+          "a": "Acknowledge the feeling and answer with the most relevant practical option."
+        }
+      ],
+      "relatedTags": [
+        "renewal",
+        "objections",
+        "customer-success",
+        "retention"
+      ]
+    },
+    {
+      "slug": "customer-thank-you-after-escalation-close",
+      "name": "Customer Thank-You After Escalation Close",
+      "keyword": "escalation close thank you email",
+      "intent": "follow-up",
+      "audience": "Support managers",
+      "outcome": "Close an escalated case with appreciation and a quick recap of what changed.",
+      "metaDescription": "Write a thank-you email after closing an escalation that confirms the outcome and appreciates the customer’s patience. Free private email tool by ReplyMind.",
+      "h1": "Close the escalation with a human thank-you.",
+      "intro": "Once a difficult case is closed, a short thank-you can reinforce trust. This tool helps you recap the outcome and acknowledge the customer’s patience without sounding ceremonial.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "escalationOutcome",
+          "label": "Outcome",
+          "type": "textarea",
+          "placeholder": "The access issue was resolved and the account is working again",
+          "required": true
+        },
+        {
+          "key": "patienceNote",
+          "label": "Patience note",
+          "type": "textarea",
+          "placeholder": "Thank you for working with us through the investigation",
+          "required": true
+        },
+        {
+          "key": "whatChanged",
+          "label": "What changed",
+          "type": "textarea",
+          "placeholder": "We updated the setting and confirmed the fix",
+          "required": true
+        },
+        {
+          "key": "futureHelp",
+          "label": "Future help line",
+          "type": "text",
+          "placeholder": "Reply if anything comes up again",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Thank you for your patience",
+      "bodyTemplate": "Hi {{recipientName}},\n\nNow that {{escalationOutcome}}, I wanted to thank you for your patience while we worked through it.\n\nWe also {{whatChanged}}. {{futureHelp}} {{patienceNote}}\n\nBest,",
+      "guidance": [
+        "Keep the note short and appreciative.",
+        "Include one line about what changed so the customer knows the work was real.",
+        "End with an easy future-help path and mention the owning contact if needed."
+      ],
+      "pitfalls": [
+        "Do not make the thank-you sound like a canned apology template.",
+        "Do not omit the resolution summary."
+      ],
+      "examples": [
+        {
+          "label": "Access issue closed",
+          "input": "Outcome: the access issue was resolved and the account is working again; patience note: thank you for working with us through the investigation; what changed: we updated the setting and confirmed the fix; future help line: reply if anything comes up again",
+          "output": "A warm closeout note that thanks the customer and confirms the change that fixed the issue."
+        },
+        {
+          "label": "Billing escalation closed",
+          "input": "Outcome: the billing dispute has been resolved; patience note: appreciate your patience; what changed: the duplicate line was reversed; future help line: reach out if you need another review",
+          "output": "A short appreciation email that closes the loop after a difficult billing case."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I mention how long the escalation took?",
+          "a": "Only if it is part of the resolution context. Keep the note focused on closure and gratitude."
+        },
+        {
+          "q": "Is this separate from a CSAT ask?",
+          "a": "Yes. This tool is about closing the escalation cleanly, not collecting a rating."
+        }
+      ],
+      "relatedTags": [
+        "escalation",
+        "thank-you",
+        "support",
+        "closeout"
+      ]
+    },
+    {
+      "slug": "customer-status-check-in-on-open-case",
+      "name": "Customer Status Check-In on Open Case",
+      "keyword": "open case status update email",
+      "intent": "status-update",
+      "audience": "Support agents",
+      "outcome": "Send a proactive status check-in when a case is still open but moving.",
+      "metaDescription": "Write an open-case status update that reassures the customer and explains what is happening next. Free private email tool by ReplyMind.",
+      "h1": "Keep the customer informed while the case is still open.",
+      "intro": "Open cases need steady communication so the customer does not feel forgotten. This tool helps you share the current state, the next action, and when to expect another update.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "openCaseState",
+          "label": "Current state",
+          "type": "textarea",
+          "placeholder": "The team is reproducing the issue",
+          "required": true
+        },
+        {
+          "key": "nextActionInternal",
+          "label": "Next internal action",
+          "type": "textarea",
+          "placeholder": "Engineering is testing the fix",
+          "required": true
+        },
+        {
+          "key": "customerExpectation",
+          "label": "Customer expectation",
+          "type": "textarea",
+          "placeholder": "You will hear from us again tomorrow",
+          "required": true
+        },
+        {
+          "key": "caseOwner",
+          "label": "Case owner",
+          "type": "text",
+          "placeholder": "Maya from support",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "Status update on your open case",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to share a quick status update on your open case. Right now, {{openCaseState}}.\n\nNext, {{nextActionInternal}}. {{customerExpectation}}. {{caseOwner}} is still tracking this.\n\nBest,",
+      "guidance": [
+        "Tell the customer what is happening now, not just that work is happening.",
+        "Name an owner if it helps reassure them.",
+        "Include the next touchpoint so the case does not go silent."
+      ],
+      "pitfalls": [
+        "Do not send an empty update that says only we are still looking into it.",
+        "Do not let the case go quiet for too long."
+      ],
+      "examples": [
+        {
+          "label": "Bug reproduction",
+          "input": "Current state: the team is reproducing the issue; next internal action: engineering is testing the fix; customer expectation: you will hear from us again tomorrow; case owner: Maya from support",
+          "output": "A steady status update that reassures the customer an owner is tracking the case."
+        },
+        {
+          "label": "Billing review",
+          "input": "Current state: billing is comparing the invoice trail; next internal action: finance will confirm the charge source; customer expectation: another update by end of day; case owner: Luis",
+          "output": "A clear open-case update that sets a realistic expectation for the next communication."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How often should status updates go out?",
+          "a": "Only often enough to keep the customer informed. Every update should say something meaningful."
+        },
+        {
+          "q": "Should I repeat the whole ticket history?",
+          "a": "No. This is a progress note, not a transcript."
+        }
+      ],
+      "relatedTags": [
+        "status-update",
+        "open-case",
+        "support",
+        "case-management"
+      ]
+    },
+    {
+      "slug": "customer-onboarding-reminder-for-incomplete-profile",
+      "name": "Customer Onboarding Reminder for Incomplete Profile",
+      "keyword": "incomplete profile reminder email",
+      "intent": "onboarding",
+      "audience": "Customer success teams",
+      "outcome": "Prompt the customer to finish profile or setup details that block activation.",
+      "metaDescription": "Create a reminder email for incomplete onboarding details with one clear action and a benefit. Free private email tool by ReplyMind.",
+      "h1": "Finish the setup that unlocks the next step.",
+      "intro": "Incomplete profiles often block onboarding progress without the customer realizing it. This tool helps you name the missing piece, explain the benefit, and ask for completion politely.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "missingItem",
+          "label": "Missing item",
+          "type": "textarea",
+          "placeholder": "The billing contact is not filled in",
+          "required": true
+        },
+        {
+          "key": "whyItMatters",
+          "label": "Why it matters",
+          "type": "textarea",
+          "placeholder": "It lets us send the right invoices",
+          "required": true
+        },
+        {
+          "key": "actionNeeded",
+          "label": "Action needed",
+          "type": "textarea",
+          "placeholder": "Add the billing contact and save the profile",
+          "required": true
+        },
+        {
+          "key": "helpLine",
+          "label": "Help line",
+          "type": "text",
+          "placeholder": "Reply if you want me to check it with you",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "One onboarding step is still missing",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI noticed that {{missingItem}} is still incomplete. It matters because {{whyItMatters}}.\n\nThe next step is to {{actionNeeded}}. {{helpLine}}\n\nBest,",
+      "guidance": [
+        "Point to the exact missing field or action.",
+        "Explain the practical reason it matters.",
+        "Offer help only if the customer may need assistance."
+      ],
+      "pitfalls": [
+        "Do not make the customer guess which onboarding item is missing.",
+        "Do not sound like a system alert if you are sending a human follow-up."
+      ],
+      "examples": [
+        {
+          "label": "Billing contact missing",
+          "input": "Missing item: the billing contact is not filled in; why it matters: it lets us send the right invoices; action needed: add the billing contact and save the profile; help line: reply if you want me to check it with you",
+          "output": "A useful onboarding reminder that pinpoints the missing item and why it matters."
+        },
+        {
+          "label": "Team details missing",
+          "input": "Missing item: team size is not complete; why it matters: it helps us configure the account correctly; action needed: update the profile and save; help line: I can review it if helpful",
+          "output": "A clear prompt that gets the customer back to the one unfinished step."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I list all incomplete fields?",
+          "a": "Only if they are truly blocking. One clear action is better than a long checklist."
+        },
+        {
+          "q": "Can I send this before the customer asks for help?",
+          "a": "Yes, if the missing item is preventing activation or setup progress."
+        }
+      ],
+      "relatedTags": [
+        "onboarding",
+        "profile-completion",
+        "customer-success",
+        "activation"
+      ]
+    },
+    {
+      "slug": "customer-renewal-prep-doc-request",
+      "name": "Customer Renewal Prep Doc Request",
+      "keyword": "renewal prep email",
+      "intent": "renewal",
+      "audience": "Customer success managers",
+      "outcome": "Request the documents or details needed to prepare a smooth renewal.",
+      "metaDescription": "Write a renewal prep request that asks for the right documents and explains why they matter. Free private email tool by ReplyMind.",
+      "h1": "Collect the renewal details before the deadline.",
+      "intro": "Renewals move better when the paperwork and account details are gathered early. This tool helps you ask for the right inputs and explain how they will be used.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "documentsNeeded",
+          "label": "Documents needed",
+          "type": "textarea",
+          "placeholder": "Updated billing contact and PO number",
+          "required": true
+        },
+        {
+          "key": "whyNeeded",
+          "label": "Why they matter",
+          "type": "textarea",
+          "placeholder": "So we can prepare the renewal paperwork",
+          "required": true
+        },
+        {
+          "key": "prepDeadline",
+          "label": "Prep deadline",
+          "type": "text",
+          "placeholder": "By next Wednesday",
+          "required": true
+        },
+        {
+          "key": "supportOffer",
+          "label": "Support offer",
+          "type": "textarea",
+          "placeholder": "I can review the items before you send them",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "A quick renewal prep request",
+      "bodyTemplate": "Hi {{recipientName}},\n\nTo prepare the renewal, could you send {{documentsNeeded}}? We need these because {{whyNeeded}}.\n\nIf possible, please share them {{prepDeadline}}. {{supportOffer}}\n\nBest,",
+      "guidance": [
+        "Be specific about what is needed and why.",
+        "Use a deadline that gives the customer enough time to respond.",
+        "Offer to review the details if that reduces back-and-forth."
+      ],
+      "pitfalls": [
+        "Do not ask for documents without explaining the purpose.",
+        "Do not set a deadline that feels arbitrary."
+      ],
+      "examples": [
+        {
+          "label": "PO and contact request",
+          "input": "Documents needed: updated billing contact and PO number; why they matter: so we can prepare the renewal paperwork; prep deadline: by next Wednesday; support offer: I can review the items before you send them",
+          "output": "A practical renewal prep request that tells the customer exactly what to provide."
+        },
+        {
+          "label": "Legal signoff request",
+          "input": "Documents needed: signer name and company address; why they matter: so the agreement can be issued correctly; prep deadline: this week; support offer: I can verify the details first",
+          "output": "A practical renewal prep request that asks for the remaining documents, explains why they are needed, and offers help if the customer wants a quick review first."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I attach a form?",
+          "a": "Only if it simplifies the response. The email should still explain why the items are needed."
+        },
+        {
+          "q": "Can I ask for multiple documents here?",
+          "a": "Yes, if each one is genuinely required for the renewal process."
+        }
+      ],
+      "relatedTags": [
+        "renewal",
+        "paperwork",
+        "customer-success",
+        "account-management"
+      ]
+    },
+    {
+      "slug": "customer-support-macros-to-human-email",
+      "name": "Customer Support Macro to Human Email",
+      "keyword": "support macro email",
+      "intent": "tone-adjustment",
+      "audience": "Support agents",
+      "outcome": "Turn a templated macro into a warmer, more human customer email.",
+      "metaDescription": "Rewrite a support macro into a human customer email that stays accurate but sounds less robotic. Free private email tool by ReplyMind.",
+      "h1": "Make the macro sound like a person wrote it.",
+      "intro": "Macros are efficient, but customers can feel the distance. This tool helps you soften the tone, keep the factual content, and add one human line that fits the situation.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "macroText",
+          "label": "Current macro text",
+          "type": "textarea",
+          "placeholder": "Thank you for contacting support...",
+          "required": true
+        },
+        {
+          "key": "humanTone",
+          "label": "Desired tone",
+          "type": "text",
+          "placeholder": "Warm and direct",
+          "required": true
+        },
+        {
+          "key": "mustKeep",
+          "label": "What must stay unchanged",
+          "type": "textarea",
+          "placeholder": "The policy explanation and the next step",
+          "required": true
+        },
+        {
+          "key": "customerContext",
+          "label": "Customer context",
+          "type": "textarea",
+          "placeholder": "They are frustrated after several replies",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "A more human version of the support reply",
+      "bodyTemplate": "Hi {{recipientName}},\n\nHere is a warmer version of the message in {{humanTone}} tone:\n\n{{macroText}}\n\nIt should still keep {{mustKeep}} in place while reflecting the customer context: {{customerContext}}.\n\nBest,",
+      "guidance": [
+        "Keep the facts intact while changing the delivery.",
+        "Add one human sentence that acknowledges the customer’s state.",
+        "Do not rewrite policy language so much that it becomes inaccurate."
+      ],
+      "pitfalls": [
+        "Do not let the rewrite drift away from the required policy or action step.",
+        "Do not remove clarity just to sound softer."
+      ],
+      "examples": [
+        {
+          "label": "Policy reply",
+          "input": "Current macro text: Thank you for contacting support...; desired tone: warm and direct; must keep: the policy explanation and the next step; customer context: they are frustrated after several replies",
+          "output": "A rewrite prompt that keeps the policy intact while making the response feel less canned."
+        },
+        {
+          "label": "Delay reply",
+          "input": "Current macro text: Your case is still under review...; desired tone: calm and human; must keep: the timing update and next contact window; customer context: they have waited two days",
+          "output": "A humanized macro that preserves the timing facts and improves the customer feel."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is this meant to replace macros entirely?",
+          "a": "No. It helps make a macro sound more human while keeping the key facts intact."
+        },
+        {
+          "q": "Can I use it for policy replies?",
+          "a": "Yes, but only if the policy wording stays accurate."
+        }
+      ],
+      "relatedTags": [
+        "macros",
+        "tone",
+        "support",
+        "customer-communication"
+      ]
+    },
+    {
+      "slug": "customer-request-for-workaround-email",
+      "name": "Customer Request for Workaround Email",
+      "keyword": "workaround email",
+      "intent": "troubleshooting",
+      "audience": "Support agents",
+      "outcome": "Explain a temporary workaround and how long it should help.",
+      "metaDescription": "Write a workaround email that gives the customer a temporary path forward without overstating it. Free private email tool by ReplyMind.",
+      "h1": "Offer a temporary workaround the customer can use now.",
+      "intro": "Sometimes a workaround is the most useful thing you can give the customer while a permanent fix is pending. This tool helps you explain the workaround, its limits, and when to expect more.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "blockedTask",
+          "label": "Blocked task",
+          "type": "textarea",
+          "placeholder": "They cannot export the report right now",
+          "required": true
+        },
+        {
+          "key": "workaroundStep",
+          "label": "Workaround step",
+          "type": "textarea",
+          "placeholder": "Use the CSV download from the alternate menu",
+          "required": true
+        },
+        {
+          "key": "workaroundLimit",
+          "label": "Workaround limit",
+          "type": "textarea",
+          "placeholder": "It does not preserve all formatting",
+          "required": true
+        },
+        {
+          "key": "permanentFixTiming",
+          "label": "Permanent fix timing",
+          "type": "text",
+          "placeholder": "Later this week",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "A temporary workaround for this issue",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI know {{blockedTask}} has been frustrating. For now, you can use this workaround: {{workaroundStep}}.\n\nOne limitation is {{workaroundLimit}}. We are still working on the permanent fix and expect more on that {{permanentFixTiming}}.\n\nBest,",
+      "guidance": [
+        "Explain the workaround in one clear sequence.",
+        "Be honest about what the workaround does not solve.",
+        "If you know the permanent fix timing, say so carefully."
+      ],
+      "pitfalls": [
+        "Do not present a workaround as if it were the final fix.",
+        "Do not leave the customer guessing about limitations."
+      ],
+      "examples": [
+        {
+          "label": "Export workaround",
+          "input": "Blocked task: they cannot export the report right now; workaround step: use the CSV download from the alternate menu; workaround limit: it does not preserve all formatting; permanent fix timing: later this week",
+          "output": "A useful workaround email that gives the customer a temporary path and honest limitation."
+        },
+        {
+          "label": "Sync workaround",
+          "input": "Blocked task: updates are not syncing to one dashboard; workaround step: refresh the backup view; workaround limit: it may lag by a few minutes; permanent fix timing: tomorrow",
+          "output": "A practical workaround note that helps the customer keep moving while the fix is pending."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I call this a workaround or a temporary fix?",
+          "a": "Workaround is usually clearer and less likely to be misunderstood as a permanent solution."
+        },
+        {
+          "q": "What if I do not know the permanent fix timing?",
+          "a": "Say that the team is still investigating and give the next update time instead."
+        }
+      ],
+      "relatedTags": [
+        "workaround",
+        "troubleshooting",
+        "support",
+        "temporary-fix"
+      ]
+    },
+    {
+      "slug": "customer-feedback-request-after-success-moment",
+      "name": "Customer Feedback Request After Success Moment",
+      "keyword": "success moment feedback email",
+      "intent": "feedback",
+      "audience": "Customer success teams",
+      "outcome": "Ask for feedback right after a visible success so the response is more likely to be thoughtful.",
+      "metaDescription": "Write a feedback request that follows a success moment and asks for a short, useful response. Free private email tool by ReplyMind.",
+      "h1": "Ask while the success is still fresh.",
+      "intro": "Feedback requests work best when they are timed to a real win. This tool helps you reference the success, ask for one useful reaction, and keep the response easy.",
+      "fields": [
+        {
+          "key": "recipientName",
+          "label": "Recipient name",
+          "type": "text",
+          "placeholder": "Jordan",
+          "required": false
+        },
+        {
+          "key": "successMoment",
+          "label": "Success moment",
+          "type": "textarea",
+          "placeholder": "They completed their first successful rollout",
+          "required": true
+        },
+        {
+          "key": "feedbackQuestion",
+          "label": "Feedback question",
+          "type": "textarea",
+          "placeholder": "What made the rollout feel smooth or rough?",
+          "required": true
+        },
+        {
+          "key": "responseFormat",
+          "label": "Response format",
+          "type": "text",
+          "placeholder": "A quick reply is enough",
+          "required": true
+        },
+        {
+          "key": "whyNow",
+          "label": "Why now",
+          "type": "textarea",
+          "placeholder": "This moment is fresh and useful",
+          "required": false
+        }
+      ],
+      "subjectTemplate": "A quick question while this is fresh",
+      "bodyTemplate": "Hi {{recipientName}},\n\nYou just reached {{successMoment}}, and I wanted to ask one quick question: {{feedbackQuestion}}.\n\n{{responseFormat}}. I’m asking now because {{whyNow}}.\n\nBest,",
+      "guidance": [
+        "Time the ask to an actual success, not random timing.",
+        "Keep the request to one focused question.",
+        "Make the response format easy and low-effort."
+      ],
+      "pitfalls": [
+        "Do not ask for feedback immediately after a problem unless the issue is fully resolved.",
+        "Do not make the customer feel like they have to write an essay."
+      ],
+      "examples": [
+        {
+          "label": "Rollout win",
+          "input": "Success moment: they completed their first successful rollout; feedback question: what made the rollout feel smooth or rough?; response format: a quick reply is enough; why now: this moment is fresh and useful",
+          "output": "A timely feedback request that uses a real success moment to increase response quality."
+        },
+        {
+          "label": "Training completion",
+          "input": "Success moment: the team finished training; feedback question: which part of the training was most useful?; response format: one sentence is fine; why now: the material is still fresh",
+          "output": "A timely feedback request that uses a real success moment to increase response quality while keeping the customer?s reply effort low."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should I ask more than one question?",
+          "a": "Usually no. One good question gets better answers."
+        },
+        {
+          "q": "Is timing more important than the wording?",
+          "a": "Both matter, but timing strongly affects whether the customer responds."
+        }
+      ],
+      "relatedTags": [
+        "feedback",
+        "timing",
+        "customer-success",
+        "success-moment"
+      ]
+    }
+  ]
+}
