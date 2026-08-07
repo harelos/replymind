@@ -14,18 +14,28 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Paddle V2 SDK -->
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 </head>
 <body>
 
   <header class="site-header">
     <div class="container">
-      <a href="index.html" class="brand">
-        <div class="brand-mark">🍅</div>
+      <a href="/" class="brand">
+        <div class="brand-mark">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="13" r="8"/>
+            <path d="M12 2v3"/>
+            <path d="M9 4c1.5 0 3 .8 3 2s1.5 2 3 2"/>
+          </svg>
+        </div>
         <span>Dopamodoro</span>
       </a>
       <nav class="site-nav">
+        <a href="#pro-experience">Pro Experience</a>
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
         <a href="#download">Download</a>
@@ -35,89 +45,233 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero">
       <div class="container hero-inner">
-        <div class="eyebrow">🍅 Pomodoro for ADHD brains</div>
+        <div class="eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Rebuilt for ADHD Brains
+        </div>
         <h1>Focus that<br><span class="gradient">finally fits.</span></h1>
-        <p>A Pomodoro timer rebuilt for how ADHD brains actually work. No shame, no all-or-nothing streaks, no sterile timer. Just dopamine-positive focus.</p>
+        <p>A Pomodoro timer built for how neurodivergent brains actually work. Zero shame, RSD-proof streak protection, and dopamine-positive focus tools.</p>
         <div class="cta-row">
-          <a href="#download" class="btn-primary">Get Dopamodoro →</a>
-          <a href="#features" class="btn-secondary">See features</a>
+          <a href="#download" class="btn-primary">
+            Get Dopamodoro
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#pro-experience" class="btn-secondary">
+            Experience Pro ✨
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- Interactive Pro Experience Showcase -->
+    <section id="pro-experience" class="pro-showcase">
+      <div class="container">
+        <h2>Feel the difference. <span class="gradient">The Pro Experience.</span></h2>
+        <p class="sub">Don't just read about it — test-drive the killer features that keep ADHD brains in flow.</p>
+
+        <div class="interactive-grid">
+          
+          <!-- Card 1: Streak Protection -->
+          <div class="demo-card" id="demo-streak">
+            <div class="demo-badge">Killer Feature #1</div>
+            <h3>Streak Protection ❄️</h3>
+            <p>Missed a day? Don't let Rejection Sensitive Dysphoria (RSD) erase weeks of momentum. Pro gives you 3 Freeze Shields monthly.</p>
+
+            <div class="demo-widget streak-widget">
+              <div class="streak-days">
+                <div class="day-chip active"><span class="day-name">M</span><span class="status-icon">⚡</span></div>
+                <div class="day-chip active"><span class="day-name">T</span><span class="status-icon">⚡</span></div>
+                <div class="day-chip active"><span class="day-name">W</span><span class="status-icon">⚡</span></div>
+                <div class="day-chip missed" id="streak-target-day">
+                  <span class="day-name">T</span>
+                  <span class="status-icon" id="streak-icon">❌</span>
+                </div>
+                <div class="day-chip"><span class="day-name">F</span><span class="status-icon">•</span></div>
+              </div>
+
+              <div class="demo-action-area">
+                <div class="streak-status-text" id="streak-status">Status: Missed Thursday (Streak in danger!)</div>
+                <button class="btn-demo" id="btn-trigger-streak">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg>
+                  Simulate Streak Freeze
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: AI Focus Coach -->
+          <div class="demo-card" id="demo-coach">
+            <div class="demo-badge">Killer Feature #2</div>
+            <h3>AI Focus Coach 🤖</h3>
+            <p>Stuck or distracted? Tap the coach to break overwhelm into micro-steps without leaving your timer.</p>
+
+            <div class="demo-widget coach-widget">
+              <div class="chat-box">
+                <div class="chat-msg user-msg">"I'm overwhelmed by this task and losing focus..."</div>
+                <div class="chat-msg ai-msg" id="ai-coach-reply">
+                  <div class="typing-indicator" id="typing-indicator">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="ai-text hidden" id="ai-text">
+                    <strong>Zero guilt!</strong> Let me slice this into 3 micro-steps:<br>
+                    1. Open the project folder.<br>
+                    2. Write just 1 sentence.<br>
+                    3. Take a 2-min breather. You've got this! 🚀
+                  </div>
+                </div>
+              </div>
+
+              <div class="demo-action-area">
+                <button class="btn-demo" id="btn-trigger-coach">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  Ask AI Coach
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Auto-Journal & Summary -->
+          <div class="demo-card" id="demo-journal">
+            <div class="demo-badge">Killer Feature #3</div>
+            <h3>Auto-Journal & AI Insights 📖</h3>
+            <p>Forget manual logging. Every focus block is recorded automatically and synthesized into dopamine-boosting summaries.</p>
+
+            <div class="demo-widget journal-widget">
+              <div class="journal-timeline">
+                <div class="journal-entry">
+                  <span class="time">09:30 AM</span>
+                  <span class="task">Design landing page hero</span>
+                  <span class="dur">25m</span>
+                </div>
+                <div class="journal-entry">
+                  <span class="time">10:05 AM</span>
+                  <span class="task">Fix checkout script bug</span>
+                  <span class="dur">20m</span>
+                </div>
+              </div>
+
+              <div class="ai-insight-box hidden" id="ai-insight-box">
+                <span class="insight-label">⚡ AI Daily Insight</span>
+                <p>You completed 45 mins of deep focus with 0 context drop! Peak momentum was achieved at 10:05 AM.</p>
+              </div>
+
+              <div class="demo-action-area">
+                <button class="btn-demo" id="btn-trigger-journal">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                  Generate AI Summary
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
     <section id="features">
       <div class="container">
         <h2>Built different. <span class="gradient">On purpose.</span></h2>
-        <p class="sub">Every feature ships because an ADHD founder needed it for themselves first.</p>
+        <p class="sub">Designed by an ADHD founder who needed a tool built around working memory & executive function.</p>
 
         <div class="features">
           <div class="feature">
-            <div class="icon">📌</div>
+            <div class="icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"/><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"/></svg>
+            </div>
             <h3>Multi-task pinning</h3>
-            <p>Pin up to 5 tasks at once. Switch context mid-session without losing track of what you actually did.</p>
+            <p>Pin up to 5 tasks at once. Switch context mid-session without losing track of what you actually started.</p>
           </div>
+
           <div class="feature">
-            <div class="icon">📖</div>
+            <div class="icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
             <h3>Auto-journal</h3>
-            <p>Every focus session and every task pinned more than a minute is logged automatically. No manual tracking.</p>
+            <p>Every focus session and pinned task is logged automatically in the background. Zero manual tracking required.</p>
           </div>
+
           <div class="feature">
-            <div class="icon">❄️</div>
+            <div class="icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg>
+            </div>
             <h3>Streak protection (Pro)</h3>
-            <p>3 Streak Freezes per month. Missed days don't erase weeks of progress. No more RSD spirals.</p>
+            <p>3 Streak Freezes per month. Missed days won't wipe out weeks of hard work. Designed to eliminate RSD shame.</p>
           </div>
+
           <div class="feature">
-            <div class="icon">✨</div>
+            <div class="icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
             <h3>North Star goals</h3>
-            <p>One big-picture goal pinned at the top, so every focus session feels connected to the bigger thing.</p>
+            <p>Pin your big-picture objective right at the top so every quick timer block stays connected to your core mission.</p>
           </div>
+
           <div class="feature">
-            <div class="icon">🏆</div>
+            <div class="icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>
+            </div>
             <h3>Gamified focus</h3>
-            <p>Tomato rewards, XP, 10 level titles (Sprout → Dopamodoro Legend), 17 achievements with real progress bars.</p>
+            <p>Earn XP, unlock 10 title levels (Sprout → Dopamodoro Legend), and complete 17 achievements with real progress bars.</p>
           </div>
+
           <div class="feature">
-            <div class="icon">⏱</div>
-            <h3>15/20/25/custom</h3>
-            <p>Pick any focus length. Some brains need 15 min. Some need 45. The timer adapts to you, not the other way around.</p>
+            <div class="icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>15 / 20 / 25 / Custom</h3>
+            <p>Pick whatever time window fits your brain today. 15-minute bursts or 45-minute deep dives — timer adapts to you.</p>
           </div>
+
           <div class="feature">
-            <div class="icon">📝</div>
+            <div class="icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
             <h3>Task notes &amp; subtasks</h3>
-            <p>Each task can hold separate notes, ideas, and sub-checklist. Break big things into small ones without leaving the app.</p>
+            <p>Attach notes and sub-checklists directly to tasks. Deconstruct overwhelming goals without leaving the app.</p>
           </div>
+
           <div class="feature">
-            <div class="icon">🔒</div>
+            <div class="icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
             <h3>Zero tracking</h3>
-            <p>No ads. No analytics. No accounts. Everything stays on your device. We physically cannot see your data.</p>
+            <p>No ads, no analytics, no external tracking. Everything lives locally on your device. We physically cannot see your data.</p>
           </div>
+
           <div class="feature">
-            <div class="icon">🎨</div>
+            <div class="icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M12 8v4l3 3"/></svg>
+            </div>
             <h3>Made by an ADHD founder</h3>
-            <p>Not a product manager guessing at a market. The person building it uses it every day to manage their own focus.</p>
+            <p>Not a generic app built by a corporate squad. Built out of personal necessity by someone who uses it every single day.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Pricing Section -->
     <section id="pricing">
       <div class="container">
         <h2>Free forever. <span class="gradient">Pro when you're ready.</span></h2>
-        <p class="sub">The timer, tasks, journal, streaks and your first North Star goal are free for good. Pro adds the coach and protects your momentum.</p>
+        <p class="sub">Keep the core timer and journal free forever. Upgrade to Pro for the AI Focus Coach and RSD streak protection.</p>
 
         <div class="pricing-toggle">
           <button id="tog-monthly" class="active">Monthly</button>
           <button id="tog-annual">Annual</button>
-          <span class="save">Save 40%</span>
+          <span class="save">Save 37%</span>
         </div>
 
         <div class="pricing">
-          <!-- Free -->
+          <!-- Free Plan -->
           <div class="price-card">
             <div class="price-name">Free</div>
-            <div class="price-desc">Everything you need to start focusing today.</div>
+            <div class="price-desc">Essential focus tools to get started today.</div>
             <div class="price-amount">$0</div>
             <div class="price-note">forever</div>
             <ul class="price-features">
@@ -128,53 +282,67 @@
               <li>1 North Star goal, 3 task groups</li>
               <li>AI coach with your own OpenAI key</li>
             </ul>
-          <a href="https://chromewebstore.google.com/" target="_blank" rel="noopener" class="btn-secondary">Add to Chrome</a>
+            <a href="https://chromewebstore.google.com/" target="_blank" rel="noopener" class="btn-secondary">Add to Chrome</a>
           </div>
-          <!-- Pro -->
+
+          <!-- Pro Plan -->
           <div class="price-card popular">
             <div class="price-badge">Most Popular</div>
             <div class="price-name">Pro</div>
-            <div class="price-desc">The AI coach and streak protection that keep ADHD brains going.</div>
-            <div class="price-amount"><span class="per">$</span><span class="price-num" data-monthly="6.99" data-annual="4">6.99</span><span class="per per-text">/mo</span></div>
-            <div class="price-note note-text">&nbsp;</div>
+            <div class="price-desc">AI coaching + RSD streak protection for effortless focus.</div>
+            <div class="price-amount">
+              <span class="per">$</span><span class="price-num" id="pro-price-num" data-monthly="3.99" data-annual="2.50">3.99</span><span class="per per-text">/mo</span>
+            </div>
+            <div class="price-note note-text" id="pro-note-text">&nbsp;</div>
             <ul class="price-features">
               <li>Everything in Free</li>
-              <li>AI Focus Coach, no API key needed</li>
-              <li>Daily &amp; weekly AI summaries</li>
-              <li>Streak Freezes, 3 per month</li>
+              <li>AI Focus Coach (No API key needed)</li>
+              <li>Daily &amp; weekly AI focus summaries</li>
+              <li>3 Streak Freezes per month</li>
               <li>Unlimited North Star goals</li>
               <li>50 task groups</li>
             </ul>
-            <a href="checkout.html?plan=pro&billing=monthly" data-plan="pro" class="btn-primary">Get Pro</a>
+            <button class="btn-primary paddle-checkout-btn" id="btn-pro-checkout" data-plan="pro" data-price-id="pri_pro_monthly">
+              Get Pro
+            </button>
           </div>
-          <!-- Lifetime -->
+
+          <!-- Lifetime Plan -->
           <div class="price-card">
             <div class="price-name">Lifetime</div>
-            <div class="price-desc">Pay once, yours forever. No subscription to forget or feel guilty about.</div>
-            <div class="price-amount"><span class="per">$</span>99</div>
-            <div class="price-note">one-time</div>
+            <div class="price-desc">Pay once, yours forever. Zero recurring subscription anxiety.</div>
+            <div class="price-amount"><span class="per">$</span>59</div>
+            <div class="price-note">one-time payment</div>
             <ul class="price-features">
               <li>Everything in Pro, forever</li>
-              <li>All future features included</li>
+              <li>All future updates included</li>
               <li>No recurring charge, ever</li>
-              <li>Made for the "I'll forget to cancel" brain</li>
+              <li>Built for the "I'll forget to cancel" brain</li>
             </ul>
-            <a href="checkout.html?plan=lifetime" data-plan="lifetime" class="btn-secondary">Get Lifetime</a>
+            <button class="btn-secondary paddle-checkout-btn" id="btn-lifetime-checkout" data-plan="lifetime" data-price-id="pri_lifetime">
+              Get Lifetime
+            </button>
           </div>
         </div>
-        <p style="text-align:center; font-size: 12.5px; color: var(--text-3); margin-top: 22px;">
-          7-day money-back guarantee. Cancel anytime. Secure checkout via Paddle on ReplyMind's approved domain.
+
+        <p class="guarantee-text">
+          7-day money-back guarantee. Cancel anytime. Instant checkout secured by Paddle.
         </p>
       </div>
     </section>
 
+    <!-- Download Section -->
     <section id="download">
       <div class="container">
         <h2>Get it in <span class="gradient">30 seconds.</span></h2>
-        <p class="sub">Available on Chrome. Android coming soon on Google Play. iOS later.</p>
+        <p class="sub">Available on Chrome Web Store. Android & iOS versions coming soon.</p>
         <div class="cta-row">
-          <a href="https://chromewebstore.google.com/" class="btn-primary" target="_blank" rel="noopener">+ Add to Chrome</a>
-        <a href="#" class="btn-secondary">Coming soon: Google Play</a>
+          <a href="https://chromewebstore.google.com/" class="btn-primary" target="_blank" rel="noopener">
+            + Add to Chrome
+          </a>
+          <a href="#" class="btn-secondary" onclick="alert('Android app is currently in beta! Join waitlist via support.'); return false;">
+            Android App (Beta)
+          </a>
         </div>
       </div>
     </section>
@@ -183,7 +351,13 @@
   <footer class="site-footer">
     <div class="container">
       <div class="brand">
-        <div class="brand-mark">🍅</div>
+        <div class="brand-mark">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="13" r="8"/>
+            <path d="M12 2v3"/>
+            <path d="M9 4c1.5 0 3 .8 3 2s1.5 2 3 2"/>
+          </svg>
+        </div>
         <span>Dopamodoro</span>
       </div>
       <div class="footer-links">
@@ -192,28 +366,152 @@
         <a href="support.html">Support</a>
         <a href="https://github.com/harelos/dopamadoro" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <div>© 2026 TigerBrandsGlobal. Made with ❤️ for ADHD brains.</div>
+      <div>© 2026 Dopamodoro. Made with ❤️ for ADHD brains.</div>
     </div>
   </footer>
 
   <script>
+    // --- Paddle V2 Initialization ---
+    const PADDLE_CLIENT_TOKEN = 'apikey_01kzbwnpv1bp09tw6dk5v50ngj';
+    
+    // Paddle Price ID Configuration (Replace placeholders with actual Paddle Price IDs if created)
+    const PADDLE_PRICE_IDS = {
+      pro_monthly: 'pri_pro_monthly', // e.g. 'pri_01kzb...'
+      pro_annual: 'pri_pro_annual',   // e.g. 'pri_01kzb...'
+      lifetime: 'pri_lifetime'        // e.g. 'pri_01kzb...'
+    };
+
+    if (window.Paddle) {
+      try {
+        Paddle.Environment.set('production');
+        Paddle.Initialize({ token: PADDLE_CLIENT_TOKEN });
+      } catch (err) {
+        console.warn('Paddle initialization notice:', err);
+      }
+    }
+
+    function triggerPaddleCheckout(priceId) {
+      if (window.Paddle && typeof Paddle.Checkout?.open === 'function') {
+        Paddle.Checkout.open({
+          items: [{ priceId: priceId, quantity: 1 }]
+        });
+      } else {
+        alert('Paddle Checkout overlay is launching. (Price ID: ' + priceId + ')');
+      }
+    }
+
+    // --- Interactive Pricing Toggle ---
     (function () {
       var mo = document.getElementById('tog-monthly');
       var an = document.getElementById('tog-annual');
-      function setP(annual) {
-        mo.classList.toggle('active', !annual);
-        an.classList.toggle('active', annual);
-        var num = document.querySelector('.price-num');
-        if (num) num.textContent = annual ? num.dataset.annual : num.dataset.monthly;
-        var note = document.querySelector('.note-text');
-        if (note) note.innerHTML = annual ? '$49 billed yearly, save 40%' : '&nbsp;';
-        var pro = document.querySelector('a[data-plan="pro"]');
-        if (pro) pro.setAttribute('href', 'checkout.html?plan=pro&billing=' + (annual ? 'annual' : 'monthly'));
+      var num = document.getElementById('pro-price-num');
+      var note = document.getElementById('pro-note-text');
+      var proBtn = document.getElementById('btn-pro-checkout');
+      var lifetimeBtn = document.getElementById('btn-lifetime-checkout');
+
+      function setPricing(isAnnual) {
+        mo.classList.toggle('active', !isAnnual);
+        an.classList.toggle('active', isAnnual);
+        
+        if (num) {
+          num.textContent = isAnnual ? num.dataset.annual : num.dataset.monthly;
+        }
+        if (note) {
+          note.innerHTML = isAnnual ? '$29.99 billed yearly (Save 37%)' : '&nbsp;';
+        }
+        if (proBtn) {
+          proBtn.setAttribute('data-price-id', isAnnual ? PADDLE_PRICE_IDS.pro_annual : PADDLE_PRICE_IDS.pro_monthly);
+        }
       }
+
       if (mo && an) {
-        mo.addEventListener('click', function () { setP(false); });
-        an.addEventListener('click', function () { setP(true); });
-        setP(false);
+        mo.addEventListener('click', function () { setPricing(false); });
+        an.addEventListener('click', function () { setPricing(true); });
+        setPricing(false);
+      }
+
+      if (proBtn) {
+        proBtn.addEventListener('click', function () {
+          var targetPriceId = proBtn.getAttribute('data-price-id') || PADDLE_PRICE_IDS.pro_monthly;
+          triggerPaddleCheckout(targetPriceId);
+        });
+      }
+
+      if (lifetimeBtn) {
+        lifetimeBtn.addEventListener('click', function () {
+          triggerPaddleCheckout(PADDLE_PRICE_IDS.lifetime);
+        });
+      }
+    })();
+
+    // --- Interactive Pro Experience Demos ---
+    // 1. Streak Freeze Demo
+    (function() {
+      var btn = document.getElementById('btn-trigger-streak');
+      var targetDay = document.getElementById('streak-target-day');
+      var streakIcon = document.getElementById('streak-icon');
+      var streakStatus = document.getElementById('streak-status');
+      var frozen = false;
+
+      if (btn && targetDay) {
+        btn.addEventListener('click', function() {
+          frozen = !frozen;
+          if (frozen) {
+            targetDay.classList.remove('missed');
+            targetDay.classList.add('frozen');
+            streakIcon.textContent = '❄️';
+            streakStatus.textContent = '✨ Saved! 3 Streak Freezes remaining';
+            streakStatus.style.color = '#38BDF8';
+            btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Freeze Shield Active!';
+          } else {
+            targetDay.classList.remove('frozen');
+            targetDay.classList.add('missed');
+            streakIcon.textContent = '❌';
+            streakStatus.textContent = 'Status: Missed Thursday (Streak in danger!)';
+            streakStatus.style.color = 'var(--text-3)';
+            btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg> Simulate Streak Freeze';
+          }
+        });
+      }
+    })();
+
+    // 2. AI Coach Demo
+    (function() {
+      var btn = document.getElementById('btn-trigger-coach');
+      var indicator = document.getElementById('typing-indicator');
+      var aiText = document.getElementById('ai-text');
+
+      if (btn && indicator && aiText) {
+        btn.addEventListener('click', function() {
+          indicator.style.display = 'flex';
+          aiText.classList.add('hidden');
+          btn.disabled = true;
+          btn.style.opacity = '0.6';
+
+          setTimeout(function() {
+            indicator.style.display = 'none';
+            aiText.classList.remove('hidden');
+            btn.disabled = false;
+            btn.style.opacity = '1';
+          }, 800);
+        });
+      }
+    })();
+
+    // 3. Auto-Journal AI Summary Demo
+    (function() {
+      var btn = document.getElementById('btn-trigger-journal');
+      var insightBox = document.getElementById('ai-insight-box');
+
+      if (btn && insightBox) {
+        btn.addEventListener('click', function() {
+          insightBox.classList.toggle('hidden');
+          if (!insightBox.classList.contains('hidden')) {
+            btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> AI Summary Generated';
+          } else {
+            btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Generate AI Summary';
+          }
+        });
       }
     })();
   </script>
