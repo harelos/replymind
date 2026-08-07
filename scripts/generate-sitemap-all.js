@@ -7,6 +7,11 @@ const sitemapFile = path.join(root, 'sitemap.xml');
 
 const urls = [
   'https://www.replymind.xyz/',
+  'https://www.replymind.xyz/ai-email-writer-for-gmail/',
+  'https://www.replymind.xyz/ai-email-assistant-for-linkedin/',
+  'https://www.replymind.xyz/free-ai-email-writer-chrome-extension/',
+  'https://www.replymind.xyz/replymind-vs-grammarly-for-email/',
+  'https://www.replymind.xyz/how-to-write-business-emails-faster/',
   'https://www.replymind.xyz/email-tools/',
   'https://www.replymind.xyz/email-tools/audiences/',
   'https://www.replymind.xyz/email-tools/audiences/executives-and-founders/',
