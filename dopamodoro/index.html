@@ -302,9 +302,9 @@
               <li>Unlimited North Star goals</li>
               <li>50 task groups</li>
             </ul>
-            <button class="btn-primary paddle-checkout-btn" id="btn-pro-checkout" data-plan="pro" data-price-id="pri_pro_monthly">
+            <a href="checkout.html?plan=pro&amp;billing=monthly" class="btn-primary" id="btn-pro-checkout">
               Get Pro
-            </button>
+            </a>
           </div>
 
           <!-- Lifetime Plan -->
@@ -319,9 +319,9 @@
               <li>No recurring charge, ever</li>
               <li>Built for the "I'll forget to cancel" brain</li>
             </ul>
-            <button class="btn-secondary paddle-checkout-btn" id="btn-lifetime-checkout" data-plan="lifetime" data-price-id="pri_lifetime">
+            <a href="checkout.html?plan=lifetime" class="btn-secondary" id="btn-lifetime-checkout">
               Get Lifetime
-            </button>
+            </a>
           </div>
         </div>
 
@@ -370,36 +370,6 @@
     </div>
   </footer>
 
-  <script>
-    // --- Paddle V2 Initialization ---
-    const PADDLE_CLIENT_TOKEN = 'apikey_01kzbwnpv1bp09tw6dk5v50ngj';
-    
-    // Paddle Price ID Configuration (Replace placeholders with actual Paddle Price IDs if created)
-    const PADDLE_PRICE_IDS = {
-      pro_monthly: 'pri_pro_monthly', // e.g. 'pri_01kzb...'
-      pro_annual: 'pri_pro_annual',   // e.g. 'pri_01kzb...'
-      lifetime: 'pri_lifetime'        // e.g. 'pri_01kzb...'
-    };
-
-    if (window.Paddle) {
-      try {
-        Paddle.Environment.set('production');
-        Paddle.Initialize({ token: PADDLE_CLIENT_TOKEN });
-      } catch (err) {
-        console.warn('Paddle initialization notice:', err);
-      }
-    }
-
-    function triggerPaddleCheckout(priceId) {
-      if (window.Paddle && typeof Paddle.Checkout?.open === 'function') {
-        Paddle.Checkout.open({
-          items: [{ priceId: priceId, quantity: 1 }]
-        });
-      } else {
-        alert('Paddle Checkout overlay is launching. (Price ID: ' + priceId + ')');
-      }
-    }
-
     // --- Interactive Pricing Toggle ---
     (function () {
       var mo = document.getElementById('tog-monthly');
@@ -407,7 +377,6 @@
       var num = document.getElementById('pro-price-num');
       var note = document.getElementById('pro-note-text');
       var proBtn = document.getElementById('btn-pro-checkout');
-      var lifetimeBtn = document.getElementById('btn-lifetime-checkout');
 
       function setPricing(isAnnual) {
         mo.classList.toggle('active', !isAnnual);
@@ -420,7 +389,7 @@
           note.innerHTML = isAnnual ? '$29.99 billed yearly (Save 37%)' : '&nbsp;';
         }
         if (proBtn) {
-          proBtn.setAttribute('data-price-id', isAnnual ? PADDLE_PRICE_IDS.pro_annual : PADDLE_PRICE_IDS.pro_monthly);
+          proBtn.setAttribute('href', 'checkout.html?plan=pro&billing=' + (isAnnual ? 'annual' : 'monthly'));
         }
       }
 
@@ -428,19 +397,6 @@
         mo.addEventListener('click', function () { setPricing(false); });
         an.addEventListener('click', function () { setPricing(true); });
         setPricing(false);
-      }
-
-      if (proBtn) {
-        proBtn.addEventListener('click', function () {
-          var targetPriceId = proBtn.getAttribute('data-price-id') || PADDLE_PRICE_IDS.pro_monthly;
-          triggerPaddleCheckout(targetPriceId);
-        });
-      }
-
-      if (lifetimeBtn) {
-        lifetimeBtn.addEventListener('click', function () {
-          triggerPaddleCheckout(PADDLE_PRICE_IDS.lifetime);
-        });
       }
     })();
 
