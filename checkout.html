@@ -217,6 +217,7 @@
   var params = new URLSearchParams(window.location.search);
   var planKey = plans[params.get('plan')] ? params.get('plan') : 'pro';
   var billing = (params.get('billing') === 'annual') ? 'annual' : 'monthly';
+  var isTrial = params.get('trial') === 'true';
   var plan = plans[planKey];
   var cycle = plan[billing];
   var productKey = plan.product || 'replymind';
@@ -224,11 +225,20 @@
   // the right account automatically. Falls back to whatever the buyer types in Paddle.
   var accountEmail = (params.get('email') || '').trim().toLowerCase();
 
-  document.getElementById('planBadge').textContent = '⚡ ' + plan.badge;
-  document.getElementById('planName').textContent = plan.name;
-  document.getElementById('planPrice').textContent = cycle.price;
-  document.querySelector('.plan-price .period').textContent = cycle.period;
-  document.title = plan.name + ' — ReplyMind Upgrade';
+  if (isTrial) {
+    document.getElementById('planBadge').textContent = '⚡ 7-Day Free Pro Trial';
+    document.getElementById('pageTitle').textContent = 'Start your 7-day Pro trial';
+    document.querySelector('.subtitle').textContent = 'Try Pro free for 7 days. $0 charged today. Cancel anytime before day 8.';
+    document.getElementById('planName').textContent = 'Pro Trial (7 Days Free)';
+    document.getElementById('planPrice').textContent = '0';
+    document.querySelector('.plan-price .period').textContent = ' today ($19/mo after trial)';
+  } else {
+    document.getElementById('planBadge').textContent = '⚡ ' + plan.badge;
+    document.getElementById('planName').textContent = plan.name;
+    document.getElementById('planPrice').textContent = cycle.price;
+    document.querySelector('.plan-price .period').textContent = cycle.period;
+  }
+  document.title = (isTrial ? '7-Day Free Trial' : plan.name) + ' — ReplyMind';
 
   // Compact one-line feature summary (first few highlights)
   document.getElementById('planMeta').textContent = plan.features.slice(0, 3).join(' · ');
@@ -265,7 +275,7 @@
         frameStyle: "width: 100%; min-width: 312px; background-color: transparent;"
       },
       customer: accountEmail ? { email: accountEmail } : undefined,
-      customData: { account_email: accountEmail, plan: planKey, product: productKey },
+      customData: { account_email: accountEmail, plan: planKey, product: productKey, isTrial: isTrial },
       items: [{ priceId: cycle.priceId, quantity: 1 }]
     });
   }
