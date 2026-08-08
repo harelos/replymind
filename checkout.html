@@ -16,107 +16,74 @@
       --blue-bright: var(--rust);
     }
     
-    .page-container { max-width: 560px; margin: 0 auto; padding: 28px 24px 60px; text-align: center; }
-
-    .plan-badge { 
-      display: inline-flex; align-items: center; gap: 6px; 
-      padding: 5px 14px; 
-      background: var(--cream); 
-      border: 1px solid var(--line); 
-      border-radius: 20px; 
-      font-size: 12px; font-weight: 600; 
-      color: var(--rust); 
-      margin-bottom: 14px; 
+    body { background: var(--paper); }
+    .checkout-layout {
+      max-width: 1040px; margin: 40px auto 80px; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 440px; gap: 60px;
+      align-items: start;
     }
 
-    .page-title { margin-bottom: 4px; }
-    .subtitle { font-size: 13px; color: var(--ink-2); margin-bottom: 20px; line-height: 1.5; }
+    /* Left side: The Sell */
+    .sell-col { padding-top: 20px; }
+    .sell-title { font: 700 42px/1.1 var(--serif); letter-spacing: -1.5px; color: var(--ink); margin-bottom: 24px; }
+    .sell-lede { font-size: 18px; color: var(--ink-2); line-height: 1.5; margin-bottom: 40px; max-width: 480px; }
+    
+    .feature-list { list-style: none; padding: 0; margin: 0 0 40px; display: flex; flex-direction: column; gap: 20px; }
+    .feature-list li { display: flex; align-items: flex-start; gap: 14px; }
+    .feat-icon { flex: none; width: 24px; height: 24px; background: var(--sage-wash); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--sage); margin-top: 2px; }
+    .feat-icon svg { width: 14px; height: 14px; stroke-width: 2.5; }
+    .feat-text { flex: 1; }
+    .feat-title { font-weight: 700; font-size: 16px; color: var(--ink); margin-bottom: 4px; }
+    .feat-desc { font-size: 14px; color: var(--muted); line-height: 1.45; }
 
-    /* Compact Plan Summary Card (Pro style) */
-    .plan-card { 
-      background: var(--ink); 
-      color: #fff;
-      border: 1px solid var(--ink); 
-      border-radius: 14px; 
-      padding: 16px 20px; 
-      margin-bottom: 18px; 
-      text-align: left; 
-      position: relative; 
-      overflow: hidden; 
+    .testimonial { background: var(--cream); border: 1px solid var(--line); padding: 24px; border-radius: 12px; font: italic 15px/1.6 var(--serif); color: var(--ink-2); position: relative; }
+    .testimonial::before { content: "“"; font-family: var(--serif); font-size: 60px; color: var(--hairline); position: absolute; top: -10px; left: 16px; line-height: 1; z-index: 0; }
+    .testimonial p { position: relative; z-index: 1; }
+    .testimonial-author { display: flex; align-items: center; gap: 10px; margin-top: 16px; font-style: normal; }
+    .testimonial-author img { width: 32px; height: 32px; border-radius: 50%; }
+    .testimonial-author div { font-size: 13px; font-weight: 600; color: var(--ink); }
+    .testimonial-author span { font-weight: 400; color: var(--muted); display: block; font-size: 11px; }
+
+    /* Right side: Checkout Box */
+    .checkout-col {
+      background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 24px;
+      box-shadow: 0 12px 32px rgba(40,29,18,0.06);
     }
-    .plan-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .plan-name { font-family: 'Georgia', serif; font-size: 17px; font-weight: 700; color: #fff; }
-    .plan-price { font-family: 'Georgia', serif; font-size: 26px; font-weight: 800; letter-spacing: -1px; white-space: nowrap; color: #fff; }
-    .plan-price .dollar { font-size: 15px; vertical-align: top; margin-top: 3px; display: inline-block; color: #fff; }
-    .plan-price .period { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.7); letter-spacing: 0; }
-    .plan-meta { font-size: 12.5px; color: rgba(255,255,255,0.9); margin-top: 6px; line-height: 1.5; }
-    .plan-features { display: none; }
-
-    /* Billing descriptor note */
-    .pay-note { 
-      display: flex; align-items: center; justify-content: center; gap: 8px; 
-      font-size: 13px; color: var(--ink-2); 
-      background: var(--cream); 
-      border: 1px solid var(--line); 
-      border-radius: 10px; 
-      padding: 11px 16px; 
-      text-align: center; 
-      line-height: 1.45; 
+    
+    .plan-header { border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 20px; text-align: center; }
+    .plan-badge { display: inline-block; padding: 4px 12px; background: var(--accent-wash); color: var(--rust); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; border-radius: 99px; margin-bottom: 12px; }
+    .plan-price-large { font: 700 48px/1 var(--serif); letter-spacing: -2px; color: var(--ink); }
+    .plan-price-large span { font: 500 15px var(--sans); color: var(--muted); letter-spacing: 0; }
+    
+    /* Order Bump */
+    .bump-box {
+      background: #FAFAFA; border: 2px dashed #E5E7EB; border-radius: 12px; padding: 16px; margin-bottom: 24px;
+      cursor: pointer; transition: all 0.2s; position: relative;
     }
-    .pay-note strong { color: var(--ink); font-weight: 700; }
-    .pay-note .pay-note-icon { font-size: 15px; flex-shrink: 0; }
+    .bump-box:hover { border-color: var(--rust); background: #FDFDFD; }
+    .bump-box.active { border: 2px solid var(--rust); background: var(--accent-wash); }
+    .bump-label { display: flex; gap: 14px; cursor: pointer; align-items: flex-start; }
+    .bump-checkbox { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--rust); cursor: pointer; }
+    .bump-content { flex: 1; }
+    .bump-title { font-weight: 700; font-size: 14px; color: var(--ink); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+    .bump-tag { background: #DC2626; color: #fff; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; }
+    .bump-desc { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
 
-    /* Trust Signals */
-    .trust { display: flex; justify-content: center; gap: 32px; margin-top: 36px; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--sage); font-weight: 500; }
-    .trust-item span { font-size: 16px; }
+    /* Trust Signals (Redesigned without emojis) */
+    .trust-clean { display: flex; gap: 12px; border-top: 1px solid var(--line); padding-top: 16px; margin-top: 16px; }
+    .trust-clean-item { flex: 1; display: flex; flex-direction: column; gap: 4px; text-align: center; }
+    .trust-clean-item svg { width: 18px; height: 18px; margin: 0 auto; color: var(--sage); }
+    .trust-clean-item span { font-size: 11px; font-weight: 600; color: var(--ink-2); }
 
     /* Account Gate */
-    .account-gate { 
-      padding: 24px; 
-      border: 1px solid var(--line); 
-      border-radius: 14px; 
-      background: var(--paper); 
-      text-align: left; 
-    }
-    .account-gate h2 { 
-      font-family: 'Georgia', serif; 
-      font-size: 18px; 
-      margin-bottom: 6px; 
-      color: var(--ink);
-    }
-    .account-gate p { 
-      color: var(--ink-2); 
-      font-size: 13.5px; 
-      margin-bottom: 14px; 
-    }
-    .account-gate-row { display: flex; gap: 10px; }
-    .account-gate input { 
-      flex: 1; min-width: 0; padding: 12px 14px; 
-      border: 1px solid var(--line); 
-      border-radius: 9px; 
-      background: var(--paper); 
-      color: var(--ink); 
-      font: inherit; 
-    }
-    .account-gate input:focus {
-      outline: none;
-      border-color: var(--rust);
-    }
-    .account-gate button { 
-      padding: 12px 18px; 
-      border: 0; 
-      border-radius: 9px; 
-      background: var(--rust); 
-      color: #fff; 
-      font: 600 14px 'Inter', sans-serif; 
-      cursor: pointer; 
-    }
-    .account-gate-error { min-height: 18px; color: var(--rust); font-size: 12px; margin-top: 7px; }
+    .account-gate { padding: 10px 0; }
+    .account-gate p { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; }
+    .account-gate input { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; margin-bottom: 10px; }
+    .account-gate button { width: 100%; padding: 14px; background: var(--rust); color: #fff; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; }
     
-    @media(max-width: 560px) { 
-      .account-gate-row { flex-direction: column; } 
-      .trust { gap: 16px; }
+    @media(max-width: 900px) {
+      .checkout-layout { grid-template-columns: 1fr; gap: 40px; }
+      .checkout-col { max-width: 480px; margin: 0 auto; }
     }
   </style>
 </head>
@@ -124,45 +91,89 @@
 <header class="site-nav">
   <div class="nav-inner">
     <a class="wordmark" href="/">Reply<em>Mind</em></a>
-    <nav class="nav-links">
-      <a href="/#pricing">Pricing</a>
-      <a class="button" href="https://chromewebstore.google.com/detail/pjoibapolglmhhkgfilpgailpjmiekai">Install free</a>
-    </nav>
   </div>
 </header>
 
-<div class="page-container">
-  <div class="plan-badge" id="planBadge">⚡ Upgrading to Pro</div>
+<div class="checkout-layout">
+  <!-- Left Side: The Sell -->
+  <div class="sell-col">
+    <h1 class="sell-title">Stop sounding like a robot. Start saving hours.</h1>
+    <p class="sell-lede">Upgrade to Pro to unlock your personal AI that actually learns how you write, remembers your contacts, and drafts perfect replies in seconds.</p>
+    
+    <ul class="feature-list">
+      <li>
+        <div class="feat-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <div class="feat-text">
+          <div class="feat-title">Unlimited Custom Intents</div>
+          <div class="feat-desc">Don't just "accept" or "decline". Write exactly what you mean ("accept but push to next week") and ReplyMind handles the phrasing.</div>
+        </div>
+      </li>
+      <li>
+        <div class="feat-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <div class="feat-text">
+          <div class="feat-title">Infinite Contact Memory</div>
+          <div class="feat-desc">The AI remembers who people are, your past conversations, and the specific tone you use with each person. You never have to explain context again.</div>
+        </div>
+      </li>
+      <li>
+        <div class="feat-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <div class="feat-text">
+          <div class="feat-title">Works where you do</div>
+          <div class="feat-desc">Fully integrated into Gmail and LinkedIn. No switching tabs, no copy-pasting. Just click, generate, and send.</div>
+        </div>
+      </li>
+    </ul>
 
-  <h1 class="page-title" id="pageTitle">Complete your upgrade</h1>
-  <p class="subtitle">Secure checkout via Paddle. Instant activation upon payment.</p>
-
-  <div style="display: flex; flex-direction: column; gap: 16px; max-width: 1000px; margin: 0 auto;">
-    <!-- Plan Summary (compact) -->
-    <div class="plan-card" id="planCard" style="margin-bottom: 0;">
-      <div class="plan-head">
-        <div class="plan-name" id="planName">Pro Plan</div>
-        <div class="plan-price"><span class="dollar">$</span><span id="planPrice">29</span><span class="period">/month</span></div>
+    <div class="testimonial">
+      <p>I used to spend an hour every morning just clearing out my inbox. Now I do it in 10 minutes, and no one has ever guessed I'm using AI. It actually sounds like me.</p>
+      <div class="testimonial-author">
+        <div>Sarah J. <span>VP of Sales</span></div>
       </div>
-      <div class="plan-meta" id="planMeta"></div>
-      <ul class="plan-features" id="planFeatures"></ul>
     </div>
-
-    <!-- Billing descriptor (helps buyers recognize the charge) -->
-    <div class="pay-note">
-      <span class="pay-note-icon">🔒</span>
-      <span>Billed securely by <strong>Paddle</strong>. Your card statement will show <strong>PADDLE&#42;&nbsp;TIGERBESTB</strong></span>
-    </div>
-
-    <!-- Paddle Checkout Container -->
-    <div class="paddle-checkout-container" style="width: 100%; min-width: 312px; background-color: transparent;"></div>
   </div>
 
-  <!-- Trust Signals -->
-  <div class="trust">
-    <div class="trust-item"><span>🔒</span> SSL Encrypted via Paddle</div>
-    <div class="trust-item"><span>🛡️</span> 14-Day Refund</div>
-    <div class="trust-item"><span>⚡</span> Instant Activation</div>
+  <!-- Right Side: Checkout Form -->
+  <div class="checkout-col">
+    <div class="plan-header">
+      <div class="plan-badge" id="planBadge">Upgrading to Pro</div>
+      <div class="plan-price-large">$<span id="planPriceNum">19</span><span><span id="planPeriod">/month</span></span></div>
+    </div>
+    
+    <!-- Order Bump -->
+    <div class="bump-box" id="annualBumpBox">
+      <label class="bump-label">
+        <input type="checkbox" class="bump-checkbox" id="annualBumpToggle" />
+        <div class="bump-content">
+          <div class="bump-title">Upgrade to Annual <span class="bump-tag">Save 21%</span></div>
+          <div class="bump-desc">Pay just $180/year (that's $15/mo). Get 2 months completely free.</div>
+        </div>
+      </label>
+    </div>
+
+    <!-- Paddle Container -->
+    <div class="paddle-checkout-container" style="width: 100%; min-width: 312px; background-color: transparent;"></div>
+
+    <!-- Clean Trust Signals -->
+    <div class="trust-clean">
+      <div class="trust-clean-item">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        <span>Secure Payment</span>
+      </div>
+      <div class="trust-clean-item">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <span>Instant Access</span>
+      </div>
+      <div class="trust-clean-item">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+        <span>14-Day Refund</span>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -177,97 +188,64 @@
       <a href="mailto:hello@replymind.xyz">Contact</a>
     </div>
   </div>
-  <div class="footer-inner">
-    <span class="footer-address">5830 EAST 2ND ST. PMB 90171, CASPER, WY 82609</span>
-  </div>
 </footer>
 
 <script>
-  // Plan data — each plan has monthly + annual pricing/priceIds.
-  // This page sells BOTH products. `product` matters: the webhook grants the
-  // entitlement per product, and without it a ConvertIQ buyer would have been
-  // silently charged for ReplyMind Pro (unknown plan keys fell back to `pro`).
+  // Plan data
   var plans = {
-    // ── ReplyMind ──
     pro: {
       product: 'replymind',
       name: 'Pro Plan', badge: 'Upgrading to Pro',
       monthly: { price: '19',  period: '/month', priceId: 'pri_01kxcm80r76x68s6j9ca9sxezh' },
-      annual:  { price: '180', period: '/year',  priceId: 'pri_01kxcm80zff1am9sb9yw0c7hfq', note: 'Just $15/mo, billed annually. Save 21%.' },
-      features: ['Unlimited replies', 'All 12 intents + Custom', 'Gmail + LinkedIn DMs', 'Auto tone learning', 'Unlimited contact memory', 'Unlimited follow-up reminders']
-    },
-    // ── ConvertIQ ──
-    operator: {
-      product: 'convertiq',
-      name: 'Operator', badge: 'Upgrading ConvertIQ to Operator',
-      monthly: { price: '99',  period: '/month', priceId: 'pri_01kxcn55d65maasr0keyypbczf' },
-      annual:  { price: '948', period: '/year',  priceId: 'pri_01kxcn55mhmpz5b6120015h01k', note: 'Just $79/mo, billed annually. Save 20%.' },
-      features: ['Unlimited audits', 'Every leak, with the exact copy to fix it', 'Ad-to-page congruence', 'Scored against creative that actually converted', 'Audit any competitor page']
-    },
-    studio: {
-      product: 'convertiq',
-      name: 'Studio', badge: 'Upgrading ConvertIQ to Studio',
-      monthly: { price: '299',  period: '/month', priceId: 'pri_01kxcn55w6srn0df6h1894xpy8' },
-      annual:  { price: '2868', period: '/year',  priceId: 'pri_01kxcn5637qsqer3pf7vptrrxd', note: 'Just $239/mo, billed annually. Save 20%.' },
-      features: ['Everything in Operator', 'Multi-brand and multi-client workspaces', 'White-label PDF reports with your logo', 'Team seats', 'Priority support']
+      annual:  { price: '180', period: '/year',  priceId: 'pri_01kxcm80zff1am9sb9yw0c7hfq', note: 'Just $15/mo, billed annually. Save 21%.' }
     }
   };
 
-  // Read plan + billing cycle from URL
   var params = new URLSearchParams(window.location.search);
   var planKey = plans[params.get('plan')] ? params.get('plan') : 'pro';
   var billing = (params.get('billing') === 'annual') ? 'annual' : 'monthly';
   var isTrial = params.get('trial') === 'true';
   var plan = plans[planKey];
-  var cycle = plan[billing];
   var productKey = plan.product || 'replymind';
-  // The extension passes the logged-in account email so the webhook can upgrade
-  // the right account automatically. Falls back to whatever the buyer types in Paddle.
   var accountEmail = (params.get('email') || '').trim().toLowerCase();
+  var coupon = params.get('coupon');
 
+  // Set initial UI
+  var isAnnual = billing === 'annual';
+  var toggle = document.getElementById('annualBumpToggle');
+  var bumpBox = document.getElementById('annualBumpBox');
+  
   if (isTrial) {
-    document.getElementById('planBadge').textContent = '⚡ 7-Day Free Pro Trial';
-    document.getElementById('pageTitle').textContent = 'Start your 7-day Pro trial';
-    document.querySelector('.subtitle').textContent = 'Try Pro free for 7 days. $0 charged today. Cancel anytime before day 8.';
-    document.getElementById('planName').textContent = 'Pro Trial (7 Days Free)';
-    document.getElementById('planPrice').textContent = '0';
-    document.querySelector('.plan-price .period').textContent = ' today ($19/mo after trial)';
+    document.getElementById('planBadge').textContent = '7-Day Free Trial';
+    document.getElementById('planPriceNum').textContent = '0';
+    document.getElementById('planPeriod').textContent = ' today ($19/mo after)';
+    bumpBox.style.display = 'none'; // Don't show bump on trial
   } else {
-    document.getElementById('planBadge').textContent = '⚡ ' + plan.badge;
-    document.getElementById('planName').textContent = plan.name;
-    document.getElementById('planPrice').textContent = cycle.price;
-    document.querySelector('.plan-price .period').textContent = cycle.period;
+    document.getElementById('planBadge').textContent = plan.badge;
+    toggle.checked = isAnnual;
+    updatePriceUI();
   }
-  document.title = (isTrial ? '7-Day Free Trial' : plan.name) + ' — ReplyMind';
-
-  // Compact one-line feature summary (first few highlights)
-  document.getElementById('planMeta').textContent = plan.features.slice(0, 3).join(' · ');
-
-  // Annual savings note
-  if (cycle.note) {
-    var noteEl = document.createElement('div');
-    noteEl.style.cssText = 'margin-top:8px;font-size:12.5px;font-weight:600;color:var(--green-light)';
-    noteEl.textContent = cycle.note;
-    document.getElementById('planCard').appendChild(noteEl);
+  
+  function updatePriceUI() {
+    var cycle = isAnnual ? plan.annual : plan.monthly;
+    document.getElementById('planPriceNum').textContent = cycle.price;
+    document.getElementById('planPeriod').textContent = cycle.period;
+    if (isAnnual) bumpBox.classList.add('active');
+    else bumpBox.classList.remove('active');
   }
 
-  // Initialize Paddle using the provided Client-side Token
   Paddle.Initialize({
-    token: 'live_fdc940732c5e24247a4132b2e80', // Starts with 'test_' for sandbox
+    token: 'live_fdc940732c5e24247a4132b2e80',
     eventCallback: function (event) {
-      // When payment completes, hand off to the success page with the transaction id.
-      // The backend webhook links the paid plan to the checkout email.
       if (event && event.name === 'checkout.completed') {
-        // Fulfillment is by account email via the Paddle webhook, so no code to carry.
         window.location.href = 'success.html';
       }
     }
   });
 
   function openPaddleCheckout() {
-    var target = document.querySelector('.paddle-checkout-container');
-    target.innerHTML = '';
-    Paddle.Checkout.open({
+    var cycle = isAnnual ? plan.annual : plan.monthly;
+    var opts = {
       settings: {
         displayMode: "inline",
         frameTarget: "paddle-checkout-container",
@@ -275,37 +253,48 @@
         frameStyle: "width: 100%; min-width: 312px; background-color: transparent;"
       },
       customer: accountEmail ? { email: accountEmail } : undefined,
-      customData: { account_email: accountEmail, plan: planKey, product: productKey, isTrial: isTrial },
+      customData: { account_email: accountEmail, plan: planKey, product: productKey, isTrial: isTrial, coupon: coupon || '' },
       items: [{ priceId: cycle.priceId, quantity: 1 }]
-    });
+    };
+    if (coupon) {
+      opts.discountId = coupon;
+      opts.discountCode = coupon; 
+    }
+    Paddle.Checkout.open(opts);
   }
 
   function showAccountGate() {
     var target = document.querySelector('.paddle-checkout-container');
-    target.innerHTML = '<div class="account-gate"><h2>Which account should we upgrade?</h2><p>Enter the email you use—or will use—for your account. Paddle will prefill the same email and the paid plan will link automatically.</p><div class="account-gate-row"><input id="accountEmailInput" type="email" autocomplete="email" placeholder="you@example.com"><button id="continueCheckoutBtn">Continue securely</button></div><div class="account-gate-error" id="accountEmailError"></div></div>';
+    target.innerHTML = '<div class="account-gate"><p>Enter your account email to continue. Your paid plan will link automatically.</p><input id="accountEmailInput" type="email" placeholder="you@example.com"><button id="continueCheckoutBtn">Continue to Payment</button><div style="color:var(--rust);font-size:12px;margin-top:8px" id="accountEmailError"></div></div>';
     var input = document.getElementById('accountEmailInput');
     var button = document.getElementById('continueCheckoutBtn');
+    
     function continueCheckout() {
       var value = input.value.trim().toLowerCase();
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-        document.getElementById('accountEmailError').textContent = 'Enter a valid account email.';
-        input.focus();
+        document.getElementById('accountEmailError').textContent = 'Enter a valid email.';
         return;
       }
       accountEmail = value;
       openPaddleCheckout();
     }
     button.addEventListener('click', continueCheckout);
-    input.addEventListener('keydown', function (event) { if (event.key === 'Enter') continueCheckout(); });
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') continueCheckout(); });
     input.focus();
   }
 
-  // Guard against an incomplete catalog, then require an account email before
-  // opening Paddle so every successful payment can be fulfilled automatically.
-  if (/PASTE_/.test(cycle.priceId)) {
-    document.querySelector('.paddle-checkout-container').innerHTML =
-      '<div style="padding:24px;border:1px solid var(--border);border-radius:12px;color:var(--white-70);font-size:14px;line-height:1.6">Checkout for this plan is being finalized. Please email <a href="mailto:hello@replymind.xyz" style="color:var(--blue-bright)">hello@replymind.xyz</a> and we will get you set up right away.</div>';
-  } else if (accountEmail) {
+  // Handle Order Bump Toggle
+  toggle.addEventListener('change', function(e) {
+    isAnnual = e.target.checked;
+    updatePriceUI();
+    if (accountEmail) {
+      // Update Paddle checkout inline without losing state
+      var cycle = isAnnual ? plan.annual : plan.monthly;
+      Paddle.Checkout.updateItems([{ priceId: cycle.priceId, quantity: 1 }]);
+    }
+  });
+
+  if (accountEmail) {
     openPaddleCheckout();
   } else {
     showAccountGate();

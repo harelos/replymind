@@ -20,7 +20,7 @@
 
 <div class="page-container">
   <h1 class="page-title">Privacy Policy</h1>
-  <p class="page-updated">Last updated: August 6, 2026</p>
+  <p class="page-updated">Last updated: August 8, 2026</p>
 
   <div class="limited-use">
     <p><strong>Chrome Web Store Limited Use Statement:</strong> The use of information received from Google APIs will adhere to the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use/" target="_blank">Chrome Web Store User Data Policy</a>, including the Limited Use requirements. Specifically: (1) ReplyMind only uses data to provide, maintain, secure, measure, and improve its disclosed user-facing reply features; (2) ReplyMind does not transfer data except as necessary to provide those features (OpenAI for reply generation), as required by law, for security purposes, or as otherwise permitted by the policy; (3) ReplyMind does not use data for advertising or marketing; and (4) no human reads user data except with explicit consent for specific data, for security investigation, to comply with law, or when data is aggregated and anonymized for internal operations.</p>
@@ -29,6 +29,7 @@
   <h2>1. User Data Collection</h2>
   <p>ReplyMind collects minimal data strictly necessary to provide its service:</p>
   <ul>
+    <li><strong>Account email address</strong> — collected during registration for authentication, account management, and to send you transactional notifications or promotional offers (which you can opt out of at any time).</li>
     <li><strong>Email message text (Gmail)</strong> — the text of the specific email you are actively replying to, read only when you click "Generate Reply". This is transmitted to our server for AI processing and immediately discarded. It is never stored, logged, or cached on our servers.</li>
     <li><strong>LinkedIn message text (paid-plan users)</strong> — the text of the LinkedIn message you are actively replying to, read only when you click "Generate Reply". Transmitted to our server for AI processing and immediately discarded. It is never stored, logged, or cached on our servers.</li>
     <li><strong>Intent selection</strong> — when you generate a reply, you choose a reply intent (e.g. "Agree", "Follow Up", "Decline"). This intent label is sent to our server along with the message text to guide the AI response. The intent label itself is not stored.</li>
@@ -40,6 +41,7 @@
     <li><strong>Contact notes</strong> — notes you voluntarily save about email contacts (e.g. relationship context or tone preferences). They are stored locally in your browser via <code>chrome.storage.local</code>. When you request a Gmail reply for that contact, the relevant note is transmitted securely with that single generation request so the reply can use the context. Contact notes are not stored, logged, or cached on our servers.</li>
     <li><strong>Follow-up reminders</strong> — reminder details (contact name, email, due date, and your custom message) that you set. Stored locally in your browser via <code>chrome.storage.local</code> only; never sent to our servers.</li>
     <li><strong>Session token and account data</strong> — when you sign in, your authentication token and account plan information are stored locally via <code>chrome.storage.sync</code> to keep you logged in across sessions.</li>
+    <li><strong>Error telemetry</strong> — we use Sentry to capture crash reports and unhandled errors in order to improve reliability. This may include basic device information, anonymized IP addresses, and stack traces. It does not include email or LinkedIn message content.</li>
   </ul>
 
   <h2>What we do NOT collect</h2>
@@ -75,6 +77,8 @@
   <ul>
     <li><strong>OpenAI</strong> — our backend sends the generation-request data described above to OpenAI's API to generate reply suggestions. OpenAI processes this data under its own privacy policy at <a href="https://openai.com/policies/privacy-policy" target="_blank">openai.com/policies/privacy-policy</a>. OpenAI does not use API-submitted data to train its models by default.</li>
     <li><strong>Paddle</strong> — if you subscribe to a paid plan, payment is processed by Paddle as our Merchant of Record. We never see, collect, or store your full payment-card information. Paddle's privacy policy applies at <a href="https://www.paddle.com/legal/privacy" target="_blank">paddle.com/legal/privacy</a>.</li>
+    <li><strong>Sentry</strong> — we use Sentry to monitor errors and crashes to improve reliability. Sentry processes error telemetry under its own privacy policy at <a href="https://sentry.io/privacy/" target="_blank">sentry.io/privacy/</a>.</li>
+    <li><strong>Resend</strong> — we use Resend to deliver transactional and promotional emails (such as account updates, support responses, or special offers). Your account email address is shared with Resend solely for this purpose. Resend's privacy policy applies at <a href="https://resend.com/legal/privacy-policy" target="_blank">resend.com/legal/privacy-policy</a>.</li>
   </ul>
   <p>We do not sell your data or use third-party advertising or analytics providers. Optional product analytics are first-party, limited to the non-content events described above, and used to understand reliability, activation, and paid conversion.</p>
 
