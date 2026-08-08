@@ -53,7 +53,7 @@
     .plan-header { border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 20px; text-align: center; }
     .plan-badge { display: inline-block; padding: 4px 12px; background: var(--accent-wash); color: var(--rust); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; border-radius: 99px; margin-bottom: 12px; }
     .plan-price-large { font: 700 48px/1 var(--serif); letter-spacing: -2px; color: var(--ink); }
-    .plan-price-large span { font: 500 15px var(--sans); color: var(--muted); letter-spacing: 0; }
+    .plan-price-large .period { font: 500 15px var(--sans); color: var(--muted); letter-spacing: 0; margin-left: 2px; display: inline-block; transform: translateY(-4px); }
     
     /* Order Bump */
     .bump-box {
@@ -152,7 +152,7 @@
   <div class="checkout-col">
     <div class="plan-header">
       <div class="plan-badge" id="planBadge">Upgrading to Pro</div>
-      <div class="plan-price-large">$<span id="planPriceNum">19</span><span><span id="planPeriod">/month</span></span></div>
+      <div class="plan-price-large">$<span id="planPriceNum">19</span><span id="planPeriod" class="period">/month</span></div>
     </div>
     
     <!-- Order Bump -->
