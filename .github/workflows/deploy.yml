@@ -19,6 +19,16 @@ jobs:
       - name: Checkout main branch
         uses: actions/checkout@v4
 
+      - name: Build sandbox-first public Paddle configuration
+        if: ${{ vars.PADDLE_CLIENT_TOKEN != '' && vars.PADDLE_PRO_MONTHLY_PRICE_ID != '' && vars.PADDLE_PRO_ANNUAL_PRICE_ID != '' }}
+        env:
+          PADDLE_CLIENT_TOKEN: ${{ vars.PADDLE_CLIENT_TOKEN }}
+          PADDLE_PRO_MONTHLY_PRICE_ID: ${{ vars.PADDLE_PRO_MONTHLY_PRICE_ID }}
+          PADDLE_PRO_ANNUAL_PRICE_ID: ${{ vars.PADDLE_PRO_ANNUAL_PRICE_ID }}
+          PADDLE_ENVIRONMENT: ${{ vars.PADDLE_ENVIRONMENT }}
+          ALLOW_PRODUCTION_PADDLE_BUILD: ${{ vars.ALLOW_PRODUCTION_PADDLE_BUILD }}
+        run: node scripts/build-funnel-config.js
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:

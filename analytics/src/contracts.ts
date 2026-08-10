@@ -29,6 +29,14 @@ export const EVENT_TYPES = [
   "tour_started",
   "tour_completed",
   "tour_skipped",
+  "advertorial_view",
+  "advertorial_cta_clicked",
+  "sales_view",
+  "sales_cta_clicked",
+  "quiz_step_completed",
+  "plan_selected",
+  "purchase_completed",
+  "purchase_failed",
 ] as const;
 export type EventType = (typeof EVENT_TYPES)[number];
 export interface AnalyticsEvent {
