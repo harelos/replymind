@@ -10,6 +10,7 @@ Cloudflare Worker + D1 backend selected because the product is already a static 
 - Raw-body HMAC verification adapters for Stripe and Paddle, five-minute replay windows, sandbox-compatible event mappings, and idempotent reconciliation.
 - Consent-gated browser tracker, protected dashboard/editor, privacy and retention policy, tests and synthetic verification.
 - Multi-property schema seeded for ReplyMind and future Dopamodoro.
+- Dopamodoro experiment contract uses the explicit `advertorial → sales → quiz/onboarding → Play` journey. Checkout is not a website step in that acquisition path. `play_handoff_clicked` is reported separately and is never presented as an install, activation, or purchase.
 
 ## Deployment (not yet deployed)
 
@@ -39,4 +40,4 @@ Cloudflare Worker + D1 backend selected because the product is already a static 
 - `POST /v1/webhooks/{paddle,stripe}` verified provider adapters
 - `GET /health`
 
-Known blockers: no Cloudflare account/binding, final analytics subdomain, rotated provider webhook secrets, Meta authorization, or production consent decision was supplied. Therefore there is no honest preview/live URL yet.
+Known blockers: no Cloudflare account/binding, final analytics subdomain, rotated provider webhook secrets, Meta authorization, verified Dopamodoro store/Play destination, or production consent decision was supplied. Dopamodoro currently promises no analytics on its sales page, so the new runtime is intentionally not loaded there. Therefore there is no honest preview/live analytics URL yet.
