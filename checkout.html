@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upgrade — ReplyMind</title>
+  <meta name="description" content="Upgrade your ReplyMind plan to unlock unlimited AI-powered email replies, custom intents, contact memory, and LinkedIn support." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/shared.css">
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+  <style>
+    :root {
+      --green-light: var(--sage);
+      --border: var(--line);
+      --white-70: var(--ink-2);
+      --blue-bright: var(--rust);
+    }
+    
+    body { background: var(--paper); }
+    .checkout-layout {
+      max-width: 1040px; margin: 40px auto 80px; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 440px; gap: 60px;
+      align-items: start;
+    }
+
+    /* Left side: The Sell */
+    .sell-col { padding-top: 20px; }
+    .sell-title { font: 700 42px/1.1 var(--serif); letter-spacing: -1.5px; color: var(--ink); margin-bottom: 24px; }
+    .sell-lede { font-size: 18px; color: var(--ink-2); line-height: 1.5; margin-bottom: 40px; max-width: 480px; }
+    
+    .feature-list { list-style: none; padding: 0; margin: 0 0 40px; display: flex; flex-direction: column; gap: 20px; }
+    .feature-list li { display: flex; align-items: flex-start; gap: 14px; }
+    .feat-icon { flex: none; width: 24px; height: 24px; background: var(--sage-wash); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--sage); margin-top: 2px; }
+    .feat-icon svg { width: 14px; height: 14px; stroke-width: 2.5; }
+    .feat-text { flex: 1; }
+    .feat-title { font-weight: 700; font-size: 16px; color: var(--ink); margin-bottom: 4px; }
+    .feat-desc { font-size: 14px; color: var(--muted); line-height: 1.45; }
+
+    .testimonial { background: var(--cream); border: 1px solid var(--line); padding: 24px; border-radius: 12px; font: italic 15px/1.6 var(--serif); color: var(--ink-2); position: relative; }
+    .testimonial::before { content: "“"; font-family: var(--serif); font-size: 60px; color: var(--hairline); position: absolute; top: -10px; left: 16px; line-height: 1; z-index: 0; }
+    .testimonial p { position: relative; z-index: 1; }
+    .testimonial-author { display: flex; align-items: center; gap: 10px; margin-top: 16px; font-style: normal; }
+    .testimonial-author img { width: 32px; height: 32px; border-radius: 50%; }
+    .testimonial-author div { font-size: 13px; font-weight: 600; color: var(--ink); }
+    .testimonial-author span { font-weight: 400; color: var(--muted); display: block; font-size: 11px; }
+
+    /* Right side: Checkout Box */
+    .checkout-col {
+      background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 24px;
+      box-shadow: 0 12px 32px rgba(40,29,18,0.06);
+    }
+    
+    .plan-header { border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 20px; text-align: center; }
+    .plan-badge { display: inline-block; padding: 4px 12px; background: var(--accent-wash); color: var(--rust); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; border-radius: 99px; margin-bottom: 12px; }
+    .plan-price-large { font: 700 48px/1 var(--serif); letter-spacing: -2px; color: var(--ink); }
+    .plan-price-large .period { font: 500 15px var(--sans); color: var(--muted); letter-spacing: 0; margin-left: 2px; display: inline-block; transform: translateY(-4px); }
+    
+    /* Order Bump */
+    .bump-box {
+      background: #FAFAFA; border: 2px dashed #E5E7EB; border-radius: 12px; padding: 16px; margin-bottom: 24px;
+      cursor: pointer; transition: all 0.2s; position: relative;
+    }
+    .bump-box:hover { border-color: var(--rust); background: #FDFDFD; }
+    .bump-box.active { border: 2px solid var(--rust); background: var(--accent-wash); }
+    .bump-label { display: flex; gap: 14px; cursor: pointer; align-items: flex-start; }
+    .bump-checkbox { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--rust); cursor: pointer; }
+    .bump-content { flex: 1; }
+    .bump-title { font-weight: 700; font-size: 14px; color: var(--ink); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+    .bump-tag { background: #DC2626; color: #fff; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; }
+    .bump-desc { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+
+    /* Trust Signals (Redesigned without emojis) */
+    .trust-clean { display: flex; gap: 12px; border-top: 1px solid var(--line); padding-top: 16px; margin-top: 16px; }
+    .trust-clean-item { flex: 1; display: flex; flex-direction: column; gap: 4px; text-align: center; }
+    .trust-clean-item svg { width: 18px; height: 18px; margin: 0 auto; color: var(--sage); }
+    .trust-clean-item span { font-size: 11px; font-weight: 600; color: var(--ink-2); }
+
+    /* Billing Descriptor */
+    .billing-descriptor {
+      display: flex; gap: 10px; align-items: flex-start;
+      background: #F8FAFC; border: 1px solid #E2E8F0;
+      border-radius: 8px; padding: 12px 14px; margin-bottom: 24px;
+      font-size: 12px; color: var(--ink-2); line-height: 1.45;
+    }
+    .billing-descriptor svg { width: 18px; height: 18px; color: var(--rust); flex: none; margin-top: 1px; }
+    .billing-descriptor strong { color: var(--ink); font-weight: 600; }
+
+    /* Account Gate */
+    .account-gate { padding: 10px 0; }
+    .account-gate p { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; }
+    .account-gate input { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; margin-bottom: 10px; }
+    .account-gate button { width: 100%; padding: 14px; background: var(--rust); color: #fff; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; }
+    
+    @media(max-width: 900px) {
+      .checkout-layout { grid-template-columns: 1fr; gap: 40px; }
+      .checkout-col { max-width: 480px; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="wordmark" href="/">Reply<em>Mind</em></a>
+  </div>
+</header>
+
+<div class="checkout-layout">
+  <!-- Left Side: The Sell -->
+  <div class="sell-col">
+    <h1 class="sell-title">Stop sounding like a robot. Start saving hours.</h1>
+    <p class="sell-lede">Upgrade to Pro to unlock your personal AI that actually learns how you write, remembers your contacts, and drafts perfect replies in seconds.</p>
+    
+    <ul class="feature-list">
+      <li>
+        <div class="feat-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <div class="feat-text">
+          <div class="feat-title">Unlimited Custom Intents</div>
+          <div class="feat-desc">Don't just "accept" or "decline". Write exactly what you mean ("accept but push to next week") and ReplyMind handles the phrasing.</div>
+        </div>
+      </li>
+      <li>
+        <div class="feat-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <div class="feat-text">
+          <div class="feat-title">Infinite Contact Memory</div>
+          <div class="feat-desc">The AI remembers who people are, your past conversations, and the specific tone you use with each person. You never have to explain context again.</div>
+        </div>
+      </li>
+      <li>
+        <div class="feat-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <div class="feat-text">
+          <div class="feat-title">Works where you do</div>
+          <div class="feat-desc">Fully integrated into Gmail and LinkedIn. No switching tabs, no copy-pasting. Just click, generate, and send.</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="testimonial">
+      <p>I used to spend an hour every morning just clearing out my inbox. Now I do it in 10 minutes, and no one has ever guessed I'm using AI. It actually sounds like me.</p>
+      <div class="testimonial-author">
+        <div>Sarah J. <span>VP of Sales</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side: Checkout Form -->
+  <div class="checkout-col">
+    <div class="plan-header">
+      <div class="plan-badge" id="planBadge">Upgrading to Pro</div>
+      <div class="plan-price-large">$<span id="planPriceNum">19</span><span id="planPeriod" class="period">/month</span></div>
+    </div>
+    
+    <!-- Order Bump -->
+    <div class="bump-box" id="annualBumpBox">
+      <label class="bump-label">
+        <input type="checkbox" class="bump-checkbox" id="annualBumpToggle" />
+        <div class="bump-content">
+          <div class="bump-title">Upgrade to Annual <span class="bump-tag">Save 21%</span></div>
+          <div class="bump-desc">Pay just $180/year (that's $15/mo). Get 2 months completely free.</div>
+        </div>
+      </label>
+    </div>
+
+    <!-- Billing Descriptor Explanation -->
+    <div class="billing-descriptor">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <div>
+        <strong>Billing Note:</strong> ReplyMind is a product of TIGERBESTBRANDS LLC. To prevent confusion, please note that your credit card statement will show <strong>PADDLE* TIGERBESTB</strong>.
+      </div>
+    </div>
+
+    <!-- Paddle Container -->
+    <div class="paddle-checkout-container" style="width: 100%; min-width: 312px; background-color: transparent;"></div>
+
+    <!-- Clean Trust Signals -->
+    <div class="trust-clean">
+      <div class="trust-clean-item">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        <span>Secure Payment</span>
+      </div>
+      <div class="trust-clean-item">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <span>Instant Access</span>
+      </div>
+      <div class="trust-clean-item">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+        <span>14-Day Refund</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 ReplyMind by TIGERBESTBRANDS LLC</span>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/refund.html">Refund</a>
+      <a href="/support.html">Support</a>
+      <a href="mailto:hello@replymind.xyz">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Plan data
+  var plans = {
+    pro: {
+      product: 'replymind',
+      name: 'Pro Plan', badge: 'Upgrading to Pro',
+      monthly: { price: '19',  period: '/month', priceId: 'pri_01kxcm80r76x68s6j9ca9sxezh' },
+      annual:  { price: '180', period: '/year',  priceId: 'pri_01kxcm80zff1am9sb9yw0c7hfq', note: 'Just $15/mo, billed annually. Save 21%.' }
+    }
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var planKey = plans[params.get('plan')] ? params.get('plan') : 'pro';
+  var billing = (params.get('billing') === 'annual') ? 'annual' : 'monthly';
+  var isTrial = params.get('trial') === 'true';
+  var plan = plans[planKey];
+  var productKey = plan.product || 'replymind';
+  var accountEmail = (params.get('email') || '').trim().toLowerCase();
+  var coupon = params.get('coupon');
+
+  // Set initial UI
+  var isAnnual = billing === 'annual';
+  var toggle = document.getElementById('annualBumpToggle');
+  var bumpBox = document.getElementById('annualBumpBox');
+  
+  if (isTrial) {
+    document.getElementById('planBadge').textContent = '7-Day Free Trial';
+    document.getElementById('planPriceNum').textContent = '0';
+    document.getElementById('planPeriod').textContent = ' today ($19/mo after)';
+    bumpBox.style.display = 'none'; // Don't show bump on trial
+  } else {
+    document.getElementById('planBadge').textContent = plan.badge;
+    toggle.checked = isAnnual;
+    updatePriceUI();
+  }
+  
+  function updatePriceUI() {
+    var cycle = isAnnual ? plan.annual : plan.monthly;
+    document.getElementById('planPriceNum').textContent = cycle.price;
+    document.getElementById('planPeriod').textContent = cycle.period;
+    if (isAnnual) bumpBox.classList.add('active');
+    else bumpBox.classList.remove('active');
+  }
+
+  Paddle.Initialize({
+    token: 'live_fdc940732c5e24247a4132b2e80',
+    eventCallback: function (event) {
+      if (event && event.name === 'checkout.completed') {
+        window.location.href = 'success.html';
+      }
+    }
+  });
+
+  function openPaddleCheckout() {
+    var cycle = isAnnual ? plan.annual : plan.monthly;
+    var opts = {
+      settings: {
+        displayMode: "inline",
+        frameTarget: "paddle-checkout-container",
+        frameInitialHeight: 450,
+        frameStyle: "width: 100%; min-width: 312px; background-color: transparent;"
+      },
+      customer: accountEmail ? { email: accountEmail } : undefined,
+      customData: { account_email: accountEmail, plan: planKey, product: productKey, isTrial: isTrial, coupon: coupon || '' },
+      items: [{ priceId: cycle.priceId, quantity: 1 }]
+    };
+    if (coupon) {
+      opts.discountId = coupon;
+      opts.discountCode = coupon; 
+    }
+    Paddle.Checkout.open(opts);
+  }
+
+  function showAccountGate() {
+    var target = document.querySelector('.paddle-checkout-container');
+    target.innerHTML = '<div class="account-gate"><p>Enter your account email to continue. Your paid plan will link automatically.</p><input id="accountEmailInput" type="email" placeholder="you@example.com"><button id="continueCheckoutBtn">Continue to Payment</button><div style="color:var(--rust);font-size:12px;margin-top:8px" id="accountEmailError"></div></div>';
+    var input = document.getElementById('accountEmailInput');
+    var button = document.getElementById('continueCheckoutBtn');
+    
+    function continueCheckout() {
+      var value = input.value.trim().toLowerCase();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        document.getElementById('accountEmailError').textContent = 'Enter a valid email.';
+        return;
+      }
+      accountEmail = value;
+      openPaddleCheckout();
+    }
+    button.addEventListener('click', continueCheckout);
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') continueCheckout(); });
+    input.focus();
+  }
+
+  // Handle Order Bump Toggle
+  toggle.addEventListener('change', function(e) {
+    isAnnual = e.target.checked;
+    updatePriceUI();
+    if (accountEmail) {
+      // Update Paddle checkout inline without losing state
+      var cycle = isAnnual ? plan.annual : plan.monthly;
+      Paddle.Checkout.updateItems([{ priceId: cycle.priceId, quantity: 1 }]);
+    }
+  });
+
+  if (accountEmail) {
+    openPaddleCheckout();
+  } else {
+    showAccountGate();
+  }
+</script>
+</body>
+</html>

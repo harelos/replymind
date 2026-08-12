@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Choose your first focus sprint — Dopamodoro</title>
+  <link rel="stylesheet" href="style.css">
+  <style>.quiz{max-width:680px;margin:0 auto;padding:64px 24px}.quiz-card{padding:28px;border:1px solid var(--border);border-radius:18px;background:var(--surface)}.answers{display:grid;gap:12px;margin:24px 0}.answers button{padding:16px;text-align:left;border:1px solid var(--border);border-radius:10px;background:var(--surface-2);color:var(--text);cursor:pointer}.answers button[aria-pressed=true]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}#play{display:none}</style>
+</head>
+<body>
+  <main class="quiz">
+    <p class="eyebrow">60-second setup</p>
+    <h1>What makes starting hardest today?</h1>
+    <p>This answer stays in this page and is not sent to analytics.</p>
+    <section class="quiz-card" aria-labelledby="question">
+      <h2 id="question">Pick the closest fit</h2>
+      <div class="answers">
+        <button type="button">The task feels too big</button>
+        <button type="button">I keep switching tabs</button>
+        <button type="button">I need a tiny first win</button>
+      </div>
+      <a id="play" class="btn-primary" href="https://chromewebstore.google.com/" target="_blank" rel="noopener">Continue to Play</a>
+    </section>
+    <p><small>Play handoff is not counted as an install, activation, or purchase. The store destination remains the same generic destination currently used by the Dopamodoro site until the verified listing URL is configured.</small></p>
+  </main>
+  <script>
+    const answers=[...document.querySelectorAll('.answers button')],play=document.getElementById('play');
+    answers.forEach(button=>button.addEventListener('click',()=>{answers.forEach(x=>x.setAttribute('aria-pressed','false'));button.setAttribute('aria-pressed','true');play.style.display='inline-flex'}));
+  </script>
+</body>
+</html>

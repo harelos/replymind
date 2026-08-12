@@ -1,0 +1,98 @@
+{
+  "batch": "tiny-operations",
+  "avatar": "Operations leaders testing the static factory",
+  "tools": [
+    {
+      "slug": "stakeholder-decision-summary-email-builder",
+      "name": "Stakeholder Decision Summary Email Builder",
+      "keyword": "stakeholder decision summary email",
+      "intent": "decision recap",
+      "audience": "Operations leaders",
+      "outcome": "Turn a completed stakeholder discussion into a written decision, named owner, and deadline that the group can verify.",
+      "metaDescription": "Create a stakeholder decision recap with the agreed choice, rationale, accountable owner, and deadline. Free private email builder by ReplyMind.",
+      "h1": "Document the decision before the meeting becomes five different memories.",
+      "intro": "Important decisions become unreliable when each stakeholder leaves with a different interpretation. This builder turns the agreed choice, its reasoning, and the accountable next step into a concise written record that recipients can correct immediately.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient or group", "type": "text", "placeholder": "Launch working group", "required": true},
+        {"key": "decision", "label": "Decision reached", "type": "textarea", "placeholder": "Use the phased rollout plan", "required": true},
+        {"key": "rationale", "label": "Reason for the choice", "type": "textarea", "placeholder": "It protects the support team during migration", "required": true},
+        {"key": "owner", "label": "Accountable owner", "type": "text", "placeholder": "Morgan", "required": true},
+        {"key": "deadline", "label": "Next deadline", "type": "text", "placeholder": "Friday, 3 PM Eastern", "required": true}
+      ],
+      "subjectTemplate": "Decision recap for {{recipient}}: {{decision}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe agreed to {{decision}}. The deciding reason was {{rationale}}. {{owner}} owns the next action and will complete it by {{deadline}}.\n\nPlease reply today if this record does not match your understanding. Otherwise, we will proceed on that basis.\n\nBest,",
+      "guidance": [
+        "State the actual decision before the background so readers can verify the outcome without reconstructing the meeting.",
+        "Name one accountable owner instead of assigning an action to a department, committee, or vague collective.",
+        "Include a correction window so silence has a clear operational meaning and disagreements surface before work starts."
+      ],
+      "pitfalls": [
+        "Do not present an unresolved option as though the group approved it.",
+        "Avoid burying the owner and deadline inside a chronological meeting summary."
+      ],
+      "examples": [
+        {
+          "label": "Launch sequencing",
+          "input": "A product group chooses a phased release after reviewing support capacity.",
+          "output": "We agreed to release to the pilot cohort first. Support capacity was the deciding constraint. Morgan owns the cohort list and will circulate it by Friday at 3 PM Eastern. Please correct this today if it differs from your understanding."
+        },
+        {
+          "label": "Vendor selection",
+          "input": "Finance and operations select a vendor after a final risk review.",
+          "output": "The group selected Northstar for the initial twelve-month term because its data controls meet the review requirements. Priya will send the approval packet by Tuesday noon. Reply before then if any recorded condition is missing."
+        }
+      ],
+      "faqs": [
+        {"q": "Should the email include every argument discussed in the meeting?", "a": "No. Record the final decision, the reason that materially determined it, the owner, and the deadline. Link to detailed notes separately when they are genuinely needed."},
+        {"q": "What if one stakeholder was absent when the decision was made?", "a": "Name the decision authority and give the absent stakeholder a clear correction or escalation window without implying they attended or agreed."}
+      ],
+      "relatedTags": ["operations", "decision", "stakeholders", "accountability"]
+    },
+    {
+      "slug": "scope-change-approval-email-builder",
+      "name": "Scope Change Approval Email Builder",
+      "keyword": "scope change approval email",
+      "intent": "change approval",
+      "audience": "Project and operations managers",
+      "outcome": "Convert an informal scope request into an answerable approval that shows the added work, tradeoff, cost, and decision deadline.",
+      "metaDescription": "Draft a scope change approval request with impact, tradeoffs, cost, and a decision deadline. Free private project email tool from ReplyMind.",
+      "h1": "Make the scope change answerable before the extra work quietly begins.",
+      "intro": "Scope changes become expensive when a casual request is treated as approval and the impact stays implicit. This builder frames the requested addition, what it displaces, the commercial effect, and the date when a decision is needed.",
+      "fields": [
+        {"key": "recipient", "label": "Approver name", "type": "text", "placeholder": "Dana", "required": true},
+        {"key": "request", "label": "Requested change", "type": "textarea", "placeholder": "Add a second reporting dashboard", "required": true},
+        {"key": "impact", "label": "Delivery impact", "type": "textarea", "placeholder": "Moves launch by four business days", "required": true},
+        {"key": "cost", "label": "Cost or tradeoff", "type": "textarea", "placeholder": "Add $1,200 or remove the export module", "required": true},
+        {"key": "decisionDate", "label": "Decision needed by", "type": "text", "placeholder": "Thursday at noon", "required": true}
+      ],
+      "subjectTemplate": "Approval needed by {{decisionDate}}: {{request}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nYou asked us to {{request}}. We can make that change, and the delivery impact is: {{impact}}. The available tradeoff is {{cost}}.\n\nPlease approve one path by {{decisionDate}} so the team does not begin unapproved work or lose the current schedule.\n\nThanks,",
+      "guidance": [
+        "Describe the added deliverable in observable terms so approval cannot depend on different interpretations of the request.",
+        "Show the schedule, budget, or feature tradeoff directly instead of making the approver discover it after saying yes.",
+        "Set a real decision deadline tied to planning needs, not artificial urgency designed to pressure the recipient."
+      ],
+      "pitfalls": [
+        "Do not begin the additional work while describing the request as still awaiting approval.",
+        "Avoid offering several combinations that obscure the two viable decisions."
+      ],
+      "examples": [
+        {
+          "label": "Additional dashboard",
+          "input": "A client asks for a second dashboard after implementation has started.",
+          "output": "We can add the regional dashboard. It moves launch by four business days. To keep the original date, we can remove the export module; otherwise the added work is $1,200. Please choose one path by Thursday noon."
+        },
+        {
+          "label": "Late compliance review",
+          "input": "A sponsor adds a compliance review to a project near final delivery.",
+          "output": "We can add the compliance review before release. That requires moving delivery to 18 September and reserving two legal-review sessions. Please approve the revised date by Monday so the current release slot can be changed responsibly."
+        }
+      ],
+      "faqs": [
+        {"q": "Should a small scope change still receive written approval?", "a": "Yes when it changes delivery, cost, ownership, risk, or acceptance criteria. A short written confirmation prevents the size of the request from being remembered differently later."},
+        {"q": "How many approval options should the email provide?", "a": "Usually two clear paths are enough: accept the new impact or preserve the original constraint by removing or changing something else."}
+      ],
+      "relatedTags": ["operations", "scope", "approval", "project-management"]
+    }
+  ]
+}

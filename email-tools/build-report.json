@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-07T11:14:51.718Z",
+  "configuration": {
+    "batchDir": "C:\\Users\\Lenovo\\Projects\\Browser Extensions\\replymind\\email-tools\\data\\batches_test",
+    "siteRoot": "C:\\Users\\Lenovo\\Projects\\Browser Extensions\\replymind",
+    "outputRoot": "C:\\Users\\Lenovo\\Projects\\Browser Extensions\\replymind",
+    "expectedToolsPerBatch": 5,
+    "similarityThreshold": 0.72,
+    "updated": "2026-08-07"
+  },
+  "discoveredBatchFiles": 1,
+  "acceptedBatches": [
+    "executives-and-founders"
+  ],
+  "rejectedBatches": [],
+  "existingToolPagesPreserved": 20,
+  "generatedToolPages": 5,
+  "generatedAudienceHubs": 1,
+  "sitemapUrlCount": 33,
+  "issues": []
+}

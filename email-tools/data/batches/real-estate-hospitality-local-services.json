@@ -1,0 +1,1564 @@
+{
+  "batch": "real-estate-hospitality-local-services",
+  "avatar": "Real estate, hospitality, and local services teams",
+  "tools": [
+    {
+      "slug": "new-inquiry-response-for-property-or-service",
+      "name": "New Inquiry Response for Property or Service",
+      "keyword": "real estate inquiry response email",
+      "intent": "inquiry",
+      "audience": "Agents, property managers, and service businesses",
+      "outcome": "Reply quickly with the right basics, confirm relevance, and make the next step easy.",
+      "metaDescription": "Build a fast inquiry response that confirms what was asked, shares the next step, and keeps the conversation moving. Free private email tool by ReplyMind.",
+      "h1": "Turn a new inquiry into a clear next step.",
+      "intro": "When someone reaches out about a property, room, service, or estimate, the first reply should do more than say thanks. This tool helps you acknowledge the request, answer the first practical question, and move toward a showing, booking, or call without sounding canned.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "requestSummary", "label": "What they asked for", "type": "textarea", "placeholder": "They want availability for a downtown two-bedroom", "required": true},
+        {"key": "relevantDetail", "label": "Most useful detail to share now", "type": "textarea", "placeholder": "We have one unit that matches the budget", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "text", "placeholder": "A quick call or showing request", "required": true},
+        {"key": "timeframe", "label": "When you will follow up", "type": "text", "placeholder": "By noon tomorrow", "required": true}
+      ],
+      "subjectTemplate": "Re: your inquiry",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for reaching out about {{requestSummary}}. The most useful detail right now is {{relevantDetail}}.\n\nThe next step is {{nextStep}}, and I will follow up {{timeframe}} with anything else you need.\n\nBest,",
+      "guidance": [
+        "Answer the part of the request that removes the most uncertainty first.",
+        "Keep the next step concrete so the reply can be acted on immediately.",
+        "Use a short time promise only if you can keep it."
+      ],
+      "pitfalls": [
+        "Do not bury the actual answer under a long greeting.",
+        "Do not ask for a full intake before giving the first useful detail."
+      ],
+      "examples": [
+        {"label": "Apartment inquiry", "input": "requestSummary: a downtown two-bedroom; relevantDetail: one unit matches the budget and has parking; nextStep: schedule a showing; timeframe: by noon tomorrow", "output": "Hi there,\n\nThanks for reaching out about a downtown two-bedroom. The most useful detail right now is one unit matches the budget and has parking.\n\nThe next step is schedule a showing, and I will follow up by noon tomorrow with anything else you need.\n\nBest,"},
+        {"label": "Cleaning quote inquiry", "input": "requestSummary: a recurring office cleaning quote; relevantDetail: we can cover evenings; nextStep: send a brief scope; timeframe: this afternoon", "output": "Hi there,\n\nThanks for reaching out about a recurring office cleaning quote. The most useful detail right now is we can cover evenings.\n\nThe next step is send a brief scope, and I will follow up this afternoon with anything else you need.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include every detail in the first reply?", "a": "No. Share the detail that moves the conversation forward, then keep the rest for the next exchange."},
+        {"q": "What if I need more information first?", "a": "Ask one focused question and explain why it matters."}
+      ],
+      "relatedTags": ["inquiry", "reply", "property", "service"]
+    },
+    {
+      "slug": "showing-confirmation-with-prep-notes",
+      "name": "Showing Confirmation With Prep Notes",
+      "keyword": "property showing confirmation email",
+      "intent": "showing",
+      "audience": "Real estate agents and leasing teams",
+      "outcome": "Confirm the showing time, reduce no-shows, and set expectations for the visit.",
+      "metaDescription": "Write a showing confirmation email with time, access details, prep notes, and a simple reply path. Free private email tool by ReplyMind.",
+      "h1": "Confirm the showing without making it feel formal.",
+      "intro": "A good showing confirmation lowers friction before anyone arrives. This tool helps you restate the time, share access or parking details, and tell the person what to bring or expect so the visit starts smoothly.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Maya", "required": false},
+        {"key": "showingTime", "label": "Showing time", "type": "text", "placeholder": "Thursday at 4:30 PM", "required": true},
+        {"key": "locationInfo", "label": "Location or access details", "type": "textarea", "placeholder": "Meet at the front lobby and call on arrival", "required": true},
+        {"key": "prepNote", "label": "Prep note", "type": "textarea", "placeholder": "Please bring a photo ID", "required": true},
+        {"key": "replyNote", "label": "Reply instruction", "type": "text", "placeholder": "Reply if you need to reschedule", "required": true}
+      ],
+      "subjectTemplate": "Showing confirmed for {{showingTime}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m confirming the showing for {{showingTime}}. Please use {{locationInfo}}.\n\nFor the visit, {{prepNote}}. {{replyNote}} if anything changes.\n\nBest,",
+      "guidance": [
+        "Put the time near the top so the confirmation is easy to scan.",
+        "Include one access detail that prevents confusion on arrival.",
+        "Keep prep notes short and practical."
+      ],
+      "pitfalls": [
+        "Do not overload the email with policy language.",
+        "Do not leave the arrival instructions vague."
+      ],
+      "examples": [
+        {"label": "Rental showing", "input": "showingTime: Thursday at 4:30 PM; locationInfo: meet at the front lobby and call on arrival; prepNote: please bring a photo ID; replyNote: reply if you need to reschedule", "output": "Hi,\n\nI’m confirming the showing for Thursday at 4:30 PM. Please use meet at the front lobby and call on arrival.\n\nFor the visit, please bring a photo ID. reply if you need to reschedule if anything changes.\n\nBest,"},
+        {"label": "Vacation rental tour", "input": "showingTime: Friday at 11:00 AM; locationInfo: enter through the side gate and text when you arrive; prepNote: wear shoes suitable for stairs; replyNote: let me know if the time no longer works", "output": "Hi,\n\nI’m confirming the showing for Friday at 11:00 AM. Please use enter through the side gate and text when you arrive.\n\nFor the visit, wear shoes suitable for stairs. let me know if the time no longer works if anything changes.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I add directions again if they already have the listing?", "a": "Yes, if arrival details prevent confusion or help them get in on time."},
+        {"q": "Can I use this for virtual tours?", "a": "Yes. Replace access details with the meeting link and any prep needed."}
+      ],
+      "relatedTags": ["showing", "confirmation", "listing", "visit"]
+    },
+    {
+      "slug": "offer-acknowledgment-and-next-review-step",
+      "name": "Offer Acknowledgment and Next Review Step",
+      "keyword": "real estate offer acknowledgment email",
+      "intent": "offer",
+      "audience": "Agents and leasing coordinators",
+      "outcome": "Acknowledge an offer, confirm receipt, and explain what happens next without overpromising.",
+      "metaDescription": "Create an offer acknowledgment email that confirms receipt, states the review step, and keeps the process calm. Free private email tool by ReplyMind.",
+      "h1": "Acknowledge the offer and keep the process moving.",
+      "intro": "When an offer comes in, people want to know that it was received and is being reviewed. This tool helps you respond with a clear receipt note, a realistic review window, and a next touchpoint that keeps everyone aligned.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Chris", "required": false},
+        {"key": "offerType", "label": "Offer type", "type": "text", "placeholder": "Lease offer", "required": true},
+        {"key": "receivedNote", "label": "Receipt note", "type": "textarea", "placeholder": "We have the signed offer and supporting documents", "required": true},
+        {"key": "reviewWindow", "label": "Review window", "type": "text", "placeholder": "By end of day tomorrow", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "I will confirm once the owner reviews it", "required": true}
+      ],
+      "subjectTemplate": "We received the {{offerType}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe have received the {{offerType}}. {{receivedNote}}.\n\nWe will review it {{reviewWindow}}. {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Acknowledge receipt first so the sender knows nothing was missed.",
+        "Give one review window rather than a vague promise to circle back soon.",
+        "Do not imply acceptance until the decision is actually made."
+      ],
+      "pitfalls": [
+        "Do not make the message sound like a negotiation unless it is one.",
+        "Do not skip the review step if multiple people need to weigh in."
+      ],
+      "examples": [
+        {"label": "Rental offer", "input": "offerType: lease offer; receivedNote: we have the signed offer and supporting documents; reviewWindow: by end of day tomorrow; nextStep: I will confirm once the owner reviews it", "output": "Hi,\n\nWe have received the lease offer. We have the signed offer and supporting documents.\n\nWe will review it by end of day tomorrow. I will confirm once the owner reviews it.\n\nBest,"},
+        {"label": "Commercial space offer", "input": "offerType: commercial lease proposal; receivedNote: we have everything needed to begin review; reviewWindow: later today; nextStep: I will send the next update after the landlord responds", "output": "Hi,\n\nWe have received the commercial lease proposal. We have everything needed to begin review.\n\nWe will review it later today. I will send the next update after the landlord responds.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I restate the offer terms?", "a": "Only the parts needed to confirm what was received and what is next."},
+        {"q": "What if the review will take longer than expected?", "a": "Say so and give the new update timing before silence creates anxiety."}
+      ],
+      "relatedTags": ["offer", "receipt", "review", "next-step"]
+    },
+    {
+      "slug": "tenant-welcome-and-move-in-note",
+      "name": "Tenant Welcome and Move-In Note",
+      "keyword": "tenant welcome email",
+      "intent": "tenant-onboarding",
+      "audience": "Property managers and landlords",
+      "outcome": "Welcome a new tenant, reinforce key move-in details, and reduce first-day questions.",
+      "metaDescription": "Write a tenant welcome email that confirms move-in details, contacts, and practical first steps. Free private email tool by ReplyMind.",
+      "h1": "Welcome a tenant with the essentials in one place.",
+      "intro": "The first email sets the tone for the tenancy. This tool helps you welcome the tenant, remind them of the move-in essentials, and share the contact path for questions so the first day feels organized.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Alyssa", "required": false},
+        {"key": "moveInDate", "label": "Move-in date", "type": "text", "placeholder": "September 1", "required": true},
+        {"key": "keyDetails", "label": "Key or access details", "type": "textarea", "placeholder": "Keys are in the lockbox after 3 PM", "required": true},
+        {"key": "firstTasks", "label": "First tasks", "type": "textarea", "placeholder": "Set up utilities and send a move-in photo", "required": true},
+        {"key": "contactInfo", "label": "Who to contact", "type": "text", "placeholder": "Reply here or call the office", "required": true}
+      ],
+      "subjectTemplate": "Welcome home for {{moveInDate}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nWelcome, and thank you for choosing the home. Your move-in date is {{moveInDate}}. {{keyDetails}}.\n\nFor the first few days, {{firstTasks}}. If you need anything, {{contactInfo}}.\n\nBest,",
+      "guidance": [
+        "Lead with the move-in date so the tenant can orient quickly.",
+        "Include only the practical steps needed for the first day.",
+        "Make the contact path easy to find."
+      ],
+      "pitfalls": [
+        "Do not assume the tenant remembers every detail from the lease packet.",
+        "Do not mix welcome language with unresolved move-in issues."
+      ],
+      "examples": [
+        {"label": "Apartment move-in", "input": "moveInDate: September 1; keyDetails: keys are in the lockbox after 3 PM; firstTasks: set up utilities and send a move-in photo; contactInfo: reply here or call the office", "output": "Hi,\n\nWelcome, and thank you for choosing the home. Your move-in date is September 1. keys are in the lockbox after 3 PM.\n\nFor the first few days, set up utilities and send a move-in photo. If you need anything, reply here or call the office.\n\nBest,"},
+        {"label": "Vacation rental check-in", "input": "moveInDate: Friday; keyDetails: the door code will be shared the morning of arrival; firstTasks: confirm your arrival window; contactInfo: text the guest support line", "output": "Hi,\n\nWelcome, and thank you for choosing the home. Your move-in date is Friday. the door code will be shared the morning of arrival.\n\nFor the first few days, confirm your arrival window. If you need anything, text the guest support line.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should this include all house rules?", "a": "No. Link to the rules separately and keep this note focused on the first few steps."},
+        {"q": "Is this only for residential tenants?", "a": "No. It also works for guest check-in notes and other move-in style handoffs."}
+      ],
+      "relatedTags": ["tenant", "welcome", "move-in", "onboarding"]
+    },
+    {
+      "slug": "rent-reminder-with-clear-due-date",
+      "name": "Rent Reminder With Clear Due Date",
+      "keyword": "rent reminder email",
+      "intent": "payment",
+      "audience": "Landlords and property managers",
+      "outcome": "Remind someone about rent in a direct, respectful way that keeps the tone professional.",
+      "metaDescription": "Build a rent reminder email with the due date, payment method, and what to do if there is a problem. Free private email tool by ReplyMind.",
+      "h1": "Send a rent reminder without unnecessary friction.",
+      "intro": "Payment reminders work best when they are brief and specific. This tool helps you restate the due date, point to the payment method, and invite a response if there is a legitimate issue.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Taylor", "required": false},
+        {"key": "dueDate", "label": "Due date", "type": "text", "placeholder": "The 1st of the month", "required": true},
+        {"key": "paymentMethod", "label": "Payment method", "type": "text", "placeholder": "Pay online through the tenant portal", "required": true},
+        {"key": "lateRisk", "label": "Late-risk note", "type": "textarea", "placeholder": "We have not seen the payment yet", "required": true},
+        {"key": "helpLine", "label": "Help or reply line", "type": "text", "placeholder": "Reply if you need to discuss a delay", "required": true}
+      ],
+      "subjectTemplate": "Rent due {{dueDate}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nA quick reminder that rent is due {{dueDate}}. {{lateRisk}}.\n\nPlease use {{paymentMethod}}. {{helpLine}} if you need to discuss a delay.\n\nBest,",
+      "guidance": [
+        "Keep the tone factual and neutral.",
+        "State the due date and payment method in separate sentences for clarity.",
+        "Leave room for a real issue without sounding accusatory."
+      ],
+      "pitfalls": [
+        "Do not use a threatening tone unless your process requires a formal notice.",
+        "Do not hide the payment instructions in a long paragraph."
+      ],
+      "examples": [
+        {"label": "Standard reminder", "input": "dueDate: the 1st of the month; paymentMethod: pay online through the tenant portal; lateRisk: we have not seen the payment yet; helpLine: reply if you need to discuss a delay", "output": "Hi,\n\nA quick reminder that rent is due the 1st of the month. we have not seen the payment yet.\n\nPlease use pay online through the tenant portal. reply if you need to discuss a delay if you need to discuss a delay.\n\nBest,"},
+        {"label": "Commercial rent reminder", "input": "dueDate: Friday; paymentMethod: wire transfer to the account on file; lateRisk: the invoice remains open; helpLine: let us know if there is an internal delay", "output": "Hi,\n\nA quick reminder that rent is due Friday. the invoice remains open.\n\nPlease use wire transfer to the account on file. let us know if there is an internal delay if you need to discuss a delay.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "How firm should the reminder be?", "a": "Firm enough to be clear, but still professional and calm."},
+        {"q": "Should I mention late fees here?", "a": "Only if your policy and timing call for it."}
+      ],
+      "relatedTags": ["rent", "payment", "reminder", "tenant"]
+    },
+    {
+      "slug": "maintenance-request-acknowledgment",
+      "name": "Maintenance Request Acknowledgment",
+      "keyword": "maintenance request email",
+      "intent": "maintenance",
+      "audience": "Property managers, landlords, and service teams",
+      "outcome": "Acknowledge the issue, confirm receipt, and tell the person what happens next.",
+      "metaDescription": "Create a maintenance acknowledgment email that confirms the issue, urgency, and next update. Free private email tool by ReplyMind.",
+      "h1": "Confirm the maintenance request and next action.",
+      "intro": "Maintenance communication needs speed and structure. This tool helps you confirm the issue, note urgency, and give a realistic next update so the resident or customer does not have to chase you.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Sam", "required": false},
+        {"key": "issue", "label": "Issue summary", "type": "textarea", "placeholder": "The kitchen sink is leaking", "required": true},
+        {"key": "urgency", "label": "Urgency level", "type": "text", "placeholder": "High priority", "required": true},
+        {"key": "nextAction", "label": "Next action", "type": "textarea", "placeholder": "We are sending a technician this afternoon", "required": true},
+        {"key": "updateTime", "label": "Update time", "type": "text", "placeholder": "By 2 PM", "required": true}
+      ],
+      "subjectTemplate": "Maintenance request received",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe received your note about {{issue}}. We have marked it as {{urgency}}.\n\n{{nextAction}}. I will update you again {{updateTime}}.\n\nBest,",
+      "guidance": [
+        "Repeat the issue in plain language so the recipient knows you understood it.",
+        "Give one next action and one next update time.",
+        "Do not promise a repair time unless it is confirmed."
+      ],
+      "pitfalls": [
+        "Do not leave the request feeling ignored.",
+        "Do not overload the first reply with troubleshooting steps."
+      ],
+      "examples": [
+        {"label": "Leaking sink", "input": "issue: the kitchen sink is leaking; urgency: high priority; nextAction: we are sending a technician this afternoon; updateTime: by 2 PM", "output": "Hi,\n\nWe received your note about the kitchen sink is leaking. We have marked it as high priority.\n\nWe are sending a technician this afternoon. I will update you again by 2 PM.\n\nBest,"},
+        {"label": "Hotel AC issue", "input": "issue: the room air conditioning is not cooling; urgency: urgent; nextAction: we are checking the unit now and will advise the guest support team; updateTime: within the hour", "output": "Hi,\n\nWe received your note about the room air conditioning is not cooling. We have marked it as urgent.\n\nWe are checking the unit now and will advise the guest support team. I will update you again within the hour.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include a diagnosis?", "a": "Only if you have confirmed it. The first note should focus on receipt and next action."},
+        {"q": "What if it is not urgent?", "a": "Say that clearly so expectations stay realistic."}
+      ],
+      "relatedTags": ["maintenance", "repair", "tenant", "service"]
+    },
+    {
+      "slug": "repair-delay-update-with-realistic-timing",
+      "name": "Repair Delay Update With Realistic Timing",
+      "keyword": "maintenance delay update email",
+      "intent": "delay",
+      "audience": "Property managers and local service teams",
+      "outcome": "Explain a repair delay clearly, reset expectations, and preserve trust.",
+      "metaDescription": "Write a repair delay update that explains what changed, what is still happening, and when the next update will come. Free private email tool by ReplyMind.",
+      "h1": "Update the customer when the repair is running late.",
+      "intro": "Delays are easier to accept when they are explained plainly. This tool helps you name the reason for the delay, share the new timing, and show that the issue is still being handled.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Alex", "required": false},
+        {"key": "delayReason", "label": "Reason for the delay", "type": "textarea", "placeholder": "The replacement part is arriving later than expected", "required": true},
+        {"key": "newTiming", "label": "New timing", "type": "text", "placeholder": "Tomorrow morning", "required": true},
+        {"key": "currentStatus", "label": "Current status", "type": "textarea", "placeholder": "The technician is still assigned", "required": true},
+        {"key": "nextUpdate", "label": "Next update", "type": "text", "placeholder": "By 5 PM today", "required": true}
+      ],
+      "subjectTemplate": "Update on your repair",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to update you that the repair is delayed because {{delayReason}}. The new timing is {{newTiming}}.\n\n{{currentStatus}}. I will send the next update {{nextUpdate}}.\n\nBest,",
+      "guidance": [
+        "State the delay before the new timing so the message feels honest.",
+        "Use one sentence to show the job is still active.",
+        "Give a specific next update time to avoid follow-up chasing."
+      ],
+      "pitfalls": [
+        "Do not hide the delay inside a vague apology.",
+        "Do not state a new time unless it is grounded in the current schedule."
+      ],
+      "examples": [
+        {"label": "Plumbing delay", "input": "delayReason: the replacement part is arriving later than expected; newTiming: tomorrow morning; currentStatus: the technician is still assigned; nextUpdate: by 5 PM today", "output": "Hi,\n\nI wanted to update you that the repair is delayed because the replacement part is arriving later than expected. The new timing is tomorrow morning.\n\nThe technician is still assigned. I will send the next update by 5 PM today.\n\nBest,"},
+        {"label": "Housekeeping delay", "input": "delayReason: the room was released late by the previous guest; newTiming: within 90 minutes; currentStatus: housekeeping is already on site; nextUpdate: in 30 minutes", "output": "Hi,\n\nI wanted to update you that the repair is delayed because the room was released late by the previous guest. The new timing is within 90 minutes.\n\nhousekeeping is already on site. I will send the next update in 30 minutes.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I apologize in a delay update?", "a": "Yes, but keep the message centered on the new timing and current status."},
+        {"q": "What if I do not have a new time yet?", "a": "Say what is known and when you will provide the next update."}
+      ],
+      "relatedTags": ["delay", "repair", "update", "maintenance"]
+    },
+    {
+      "slug": "cancellation-confirmation-and-rebooking-option",
+      "name": "Cancellation Confirmation and Rebooking Option",
+      "keyword": "booking cancellation confirmation email",
+      "intent": "cancellation",
+      "audience": "Hospitality teams, clinics, and appointment-based businesses",
+      "outcome": "Confirm a cancellation politely and offer a clear rebooking path if appropriate.",
+      "metaDescription": "Build a cancellation confirmation email with the cancelled time, any follow-up action, and a rebooking option. Free private email tool by ReplyMind.",
+      "h1": "Confirm the cancellation and keep the door open.",
+      "intro": "When a booking changes, clarity matters more than language polish. This tool helps you confirm the cancellation, note any policy or next step, and offer an easy path to reschedule if that fits the situation.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "appointmentTime", "label": "Original appointment time", "type": "text", "placeholder": "Tuesday at 3 PM", "required": true},
+        {"key": "cancellationNote", "label": "Cancellation note", "type": "textarea", "placeholder": "Your appointment has been cancelled as requested", "required": true},
+        {"key": "rebookOption", "label": "Rebooking option", "type": "textarea", "placeholder": "We can offer Thursday morning", "required": true},
+        {"key": "policyNote", "label": "Policy note", "type": "text", "placeholder": "No fee applies", "required": true}
+      ],
+      "subjectTemplate": "Cancellation confirmed for {{appointmentTime}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nYour appointment for {{appointmentTime}} is confirmed as cancelled. {{cancellationNote}}.\n\n{{rebookOption}}. {{policyNote}}.\n\nBest,",
+      "guidance": [
+        "Confirm the exact appointment being cancelled so there is no ambiguity.",
+        "If rebooking is available, make it easy to spot.",
+        "Keep policy notes short and factual."
+      ],
+      "pitfalls": [
+        "Do not sound disappointed or punitive.",
+        "Do not offer rebooking if you cannot actually honor it."
+      ],
+      "examples": [
+        {"label": "Salon cancellation", "input": "appointmentTime: Tuesday at 3 PM; cancellationNote: your appointment has been cancelled as requested; rebookOption: we can offer Thursday morning; policyNote: no fee applies", "output": "Hi,\n\nYour appointment for Tuesday at 3 PM is confirmed as cancelled. your appointment has been cancelled as requested.\n\nwe can offer Thursday morning. No fee applies.\n\nBest,"},
+        {"label": "Property tour cancellation", "input": "appointmentTime: Friday at 1 PM; cancellationNote: the tour has been removed from the schedule; rebookOption: I can suggest two new viewing times; policyNote: no issue on your account", "output": "Hi,\n\nYour appointment for Friday at 1 PM is confirmed as cancelled. the tour has been removed from the schedule.\n\nI can suggest two new viewing times. no issue on your account.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I ask why they cancelled?", "a": "Only if it helps you improve service or rebook properly."},
+        {"q": "Can I mention a cancellation fee here?", "a": "Yes, if the policy applies and the wording is accurate."}
+      ],
+      "relatedTags": ["cancellation", "rebooking", "appointment", "booking"]
+    },
+    {
+      "slug": "appointment-reminder-with-prep-and-location",
+      "name": "Appointment Reminder With Prep and Location",
+      "keyword": "appointment reminder email",
+      "intent": "reminder",
+      "audience": "Clinics, salons, contractors, and service teams",
+      "outcome": "Reduce no-shows by restating time, place, and what the person should bring or prepare.",
+      "metaDescription": "Create an appointment reminder email with timing, location, prep instructions, and response guidance. Free private email tool by ReplyMind.",
+      "h1": "Remind them without making the email feel long.",
+      "intro": "The best reminder is specific enough to be useful and short enough to read fast. This tool helps you confirm the appointment details, add prep instructions, and include a simple response path if plans have changed.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Priya", "required": false},
+        {"key": "appointmentTime", "label": "Appointment time", "type": "text", "placeholder": "Tomorrow at 10 AM", "required": true},
+        {"key": "location", "label": "Location or link", "type": "textarea", "placeholder": "Suite 204 on the second floor", "required": true},
+        {"key": "prep", "label": "Prep instruction", "type": "textarea", "placeholder": "Please arrive 10 minutes early", "required": true},
+        {"key": "responsePath", "label": "Response path", "type": "text", "placeholder": "Reply here if you need to reschedule", "required": true}
+      ],
+      "subjectTemplate": "Reminder for {{appointmentTime}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nThis is a reminder for {{appointmentTime}}. Please use {{location}}.\n\n{{prep}}. {{responsePath}} if your plans change.\n\nBest,",
+      "guidance": [
+        "Keep location instructions unambiguous.",
+        "Use one prep line that directly affects the appointment outcome.",
+        "Leave the recipient a simple way to respond."
+      ],
+      "pitfalls": [
+        "Do not send a reminder that hides the location details.",
+        "Do not stack multiple prep instructions unless they are essential."
+      ],
+      "examples": [
+        {"label": "Dental reminder", "input": "appointmentTime: tomorrow at 10 AM; location: suite 204 on the second floor; prep: please arrive 10 minutes early; responsePath: reply here if you need to reschedule", "output": "Hi,\n\nThis is a reminder for tomorrow at 10 AM. Please use suite 204 on the second floor.\n\nplease arrive 10 minutes early. reply here if you need to reschedule if your plans change.\n\nBest,"},
+        {"label": "Contractor estimate visit", "input": "appointmentTime: Wednesday at 2 PM; location: meet at the side entrance; prep: please have the gate unlocked; responsePath: text us if the time no longer works", "output": "Hi,\n\nThis is a reminder for Wednesday at 2 PM. Please use meet at the side entrance.\n\nplease have the gate unlocked. text us if the time no longer works if your plans change.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should reminders include maps?", "a": "Only if they genuinely reduce confusion. The core details should already be in the email."},
+        {"q": "Is this suitable for virtual appointments?", "a": "Yes. Use the meeting link in the location field."}
+      ],
+      "relatedTags": ["reminder", "appointment", "prep", "location"]
+    },
+    {
+      "slug": "late-arrival-notice-with-new-eta",
+      "name": "Late Arrival Notice With New ETA",
+      "keyword": "late arrival update email",
+      "intent": "delay",
+      "audience": "Contractors, technicians, and guest services teams",
+      "outcome": "Tell the recipient you are running late and provide a new ETA and reason.",
+      "metaDescription": "Write a late arrival notice with a realistic ETA, reason, and brief apology. Free private email tool by ReplyMind.",
+      "h1": "Let them know you are late before they have to ask.",
+      "intro": "If you are running behind, the best message is direct and brief. This tool helps you give the new ETA, explain the delay, and keep the recipient from guessing whether you are still coming.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Maria", "required": false},
+        {"key": "originalTime", "label": "Original time", "type": "text", "placeholder": "3:00 PM", "required": true},
+        {"key": "newEta", "label": "New ETA", "type": "text", "placeholder": "3:35 PM", "required": true},
+        {"key": "delayReason", "label": "Delay reason", "type": "textarea", "placeholder": "Traffic and a prior job ran over", "required": true},
+        {"key": "arrivalAction", "label": "Arrival action", "type": "text", "placeholder": "I will text when I am five minutes away", "required": true}
+      ],
+      "subjectTemplate": "Running late for {{originalTime}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m sorry, but I am running late for {{originalTime}} because {{delayReason}}. My new ETA is {{newEta}}.\n\n{{arrivalAction}}.\n\nBest,",
+      "guidance": [
+        "Lead with the new ETA so the recipient can adjust quickly.",
+        "Keep the reason short and non-defensive.",
+        "Add one arrival action if it helps them plan."
+      ],
+      "pitfalls": [
+        "Do not give an ETA you are not confident about.",
+        "Do not over-explain the reason for being late."
+      ],
+      "examples": [
+        {"label": "Technician delay", "input": "originalTime: 3:00 PM; newEta: 3:35 PM; delayReason: traffic and a prior job ran over; arrivalAction: I will text when I am five minutes away", "output": "Hi,\n\nI’m sorry, but I am running late for 3:00 PM because traffic and a prior job ran over. My new ETA is 3:35 PM.\n\nI will text when I am five minutes away.\n\nBest,"},
+        {"label": "Guest services delay", "input": "originalTime: noon; newEta: 12:20 PM; delayReason: the previous meeting went long; arrivalAction: I will call from the lobby", "output": "Hi,\n\nI’m sorry, but I am running late for noon because the previous meeting went long. My new ETA is 12:20 PM.\n\nI will call from the lobby.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I apologize twice?", "a": "No. One clear apology and one clear ETA are usually enough."},
+        {"q": "What if the delay keeps changing?", "a": "Send another short update instead of leaving the recipient in the dark."}
+      ],
+      "relatedTags": ["late", "eta", "delay", "appointment"]
+    },
+    {
+      "slug": "service-recovery-apology-with-fix-and-follow-up",
+      "name": "Service Recovery Apology With Fix and Follow-Up",
+      "keyword": "service recovery apology email",
+      "intent": "apology",
+      "audience": "Hospitality, clinics, and local service teams",
+      "outcome": "Own the issue, explain the fix, and restore confidence with a clear follow-up.",
+      "metaDescription": "Build a service recovery apology email that acknowledges the issue, confirms the fix, and sets the follow-up. Free private email tool by ReplyMind.",
+      "h1": "Repair the relationship with a clear service recovery note.",
+      "intro": "A strong apology does three things: names the issue, explains what was done, and gives the recipient a reason to trust the next step. This tool helps you keep the message human and specific.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "issue", "label": "What went wrong", "type": "textarea", "placeholder": "The room was not ready at check-in", "required": true},
+        {"key": "fix", "label": "Immediate fix", "type": "textarea", "placeholder": "We moved the guest to a ready room", "required": true},
+        {"key": "compensation", "label": "Any compensation or courtesy", "type": "text", "placeholder": "We waived the parking fee", "required": true},
+        {"key": "followUp", "label": "Follow-up step", "type": "text", "placeholder": "I will check back later today", "required": true}
+      ],
+      "subjectTemplate": "We are sorry about {{issue}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m sorry that {{issue}}. We have already taken the step to {{fix}}.\n\nTo make up for it, {{compensation}}. {{followUp}} so you know we are staying on top of it.\n\nBest,",
+      "guidance": [
+        "Name the failure plainly before you explain the fix.",
+        "Use the compensation line only for actual remedies or courtesies.",
+        "Keep the follow-up specific so the person knows you will stay engaged."
+      ],
+      "pitfalls": [
+        "Do not hide the problem behind vague phrasing.",
+        "Do not offer a courtesy you cannot actually provide."
+      ],
+      "examples": [
+        {"label": "Hotel room issue", "input": "issue: the room was not ready at check-in; fix: we moved the guest to a ready room; compensation: we waived the parking fee; followUp: I will check back later today", "output": "Hi,\n\nI’m sorry that the room was not ready at check-in. We have already taken the step to we moved the guest to a ready room.\n\nTo make up for it, we waived the parking fee. I will check back later today so you know we are staying on top of it.\n\nBest,"},
+        {"label": "Lawn service miss", "input": "issue: the lawn was missed on the scheduled day; fix: we sent a crew back the same afternoon; compensation: we credited this visit; followUp: I will confirm the next visit time", "output": "Hi,\n\nI’m sorry that the lawn was missed on the scheduled day. We have already taken the step to we sent a crew back the same afternoon.\n\nTo make up for it, we credited this visit. I will confirm the next visit time so you know we are staying on top of it.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I explain why it happened?", "a": "Only if it helps prevent repeat confusion. The fix matters more than the backstory."},
+        {"q": "Is compensation always needed?", "a": "No. Use it when there is a real remedy or courtesy to offer."}
+      ],
+      "relatedTags": ["service-recovery", "apology", "fix", "follow-up"]
+    },
+    {
+      "slug": "review-request-after-successful-service",
+      "name": "Review Request After Successful Service",
+      "keyword": "ask for review email",
+      "intent": "reviews",
+      "audience": "Local businesses, contractors, and hospitality teams",
+      "outcome": "Ask for a review while the good experience is still fresh and specific.",
+      "metaDescription": "Create a review request email that references the service delivered and makes the review step easy. Free private email tool by ReplyMind.",
+      "h1": "Ask for the review while the experience is still fresh.",
+      "intro": "A review request works best when it refers to the actual service and gives a simple next action. This tool helps you ask politely, name the result, and reduce the chance of an awkward, generic request.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Chris", "required": false},
+        {"key": "serviceCompleted", "label": "Service completed", "type": "textarea", "placeholder": "We finished the kitchen repair", "required": true},
+        {"key": "positiveOutcome", "label": "Positive outcome", "type": "textarea", "placeholder": "The sink is working again and the area is clean", "required": true},
+        {"key": "reviewAsk", "label": "Review ask", "type": "textarea", "placeholder": "Would you mind leaving a short review?", "required": true},
+        {"key": "reviewLinkNote", "label": "Review link note", "type": "text", "placeholder": "I have included the link below", "required": true}
+      ],
+      "subjectTemplate": "Thank you for choosing us",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks again for letting us handle {{serviceCompleted}}. I’m glad {{positiveOutcome}}.\n\n{{reviewAsk}} {{reviewLinkNote}}.\n\nBest,",
+      "guidance": [
+        "Reference the finished work so the request feels earned.",
+        "Keep the ask short and easy to answer.",
+        "Avoid sounding like you are asking for a favor out of nowhere."
+      ],
+      "pitfalls": [
+        "Do not ask for a review before the job is complete.",
+        "Do not pressure the recipient to write a certain kind of review."
+      ],
+      "examples": [
+        {"label": "Handyman job", "input": "serviceCompleted: the kitchen repair; positiveOutcome: the sink is working again and the area is clean; reviewAsk: would you mind leaving a short review?; reviewLinkNote: I have included the link below", "output": "Hi,\n\nThanks again for letting us handle the kitchen repair. I’m glad the sink is working again and the area is clean.\n\nwould you mind leaving a short review? I have included the link below.\n\nBest,"},
+        {"label": "Hotel stay", "input": "serviceCompleted: your recent stay; positiveOutcome: the stay went smoothly; reviewAsk: if you have a moment, would you share a review?; reviewLinkNote: the link is included here", "output": "Hi,\n\nThanks again for letting us handle your recent stay. I’m glad the stay went smoothly.\n\nif you have a moment, would you share a review? the link is included here.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "When should I send this?", "a": "Right after the service is complete and the experience is still fresh."},
+        {"q": "Should I mention ratings?", "a": "Only if you are linking to a review platform that naturally includes them."}
+      ],
+      "relatedTags": ["reviews", "feedback", "referral", "post-service"]
+    },
+    {
+      "slug": "estimate-follow-up-with-scope-and-next-step",
+      "name": "Estimate Follow-Up With Scope and Next Step",
+      "keyword": "estimate follow up email",
+      "intent": "estimate",
+      "audience": "Contractors, cleaners, and local service businesses",
+      "outcome": "Follow up on an estimate request with clear scope and a simple decision path.",
+      "metaDescription": "Write an estimate follow-up email that summarizes the scope, timing, and next step. Free private email tool by ReplyMind.",
+      "h1": "Turn an estimate into a clear decision.",
+      "intro": "After a quote or estimate, customers often need a short reminder of what was included and what happens next. This tool helps you summarize the scope, restate the estimate context, and make the decision easy to move forward.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Dana", "required": false},
+        {"key": "scope", "label": "Scope summarized", "type": "textarea", "placeholder": "Full carpet cleaning for three rooms", "required": true},
+        {"key": "estimateNote", "label": "Estimate note", "type": "text", "placeholder": "The estimate is unchanged", "required": true},
+        {"key": "decisionPoint", "label": "Decision point", "type": "textarea", "placeholder": "Let me know if you want to approve it", "required": true},
+        {"key": "followUpTiming", "label": "Follow-up timing", "type": "text", "placeholder": "Later today", "required": true}
+      ],
+      "subjectTemplate": "Following up on your estimate",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to follow up on the estimate for {{scope}}. {{estimateNote}}.\n\nIf you would like to move ahead, {{decisionPoint}}. I can follow up {{followUpTiming}} if that helps.\n\nBest,",
+      "guidance": [
+        "Summarize the scope so the recipient remembers what was quoted.",
+        "Keep the decision ask soft but specific.",
+        "Use the follow-up timing to create gentle momentum."
+      ],
+      "pitfalls": [
+        "Do not re-argue the price in a follow-up email.",
+        "Do not make the ask so vague that the reader has to guess the action."
+      ],
+      "examples": [
+        {"label": "Painting estimate", "input": "scope: interior repaint for two bedrooms; estimateNote: the estimate is unchanged; decisionPoint: let me know if you want to approve it; followUpTiming: later today", "output": "Hi,\n\nI wanted to follow up on the estimate for interior repaint for two bedrooms. The estimate is unchanged.\n\nIf you would like to move ahead, let me know if you want to approve it. I can follow up later today if that helps.\n\nBest,"},
+        {"label": "Cleaning estimate", "input": "scope: weekly office cleaning; estimateNote: the price reflects evening coverage; decisionPoint: reply if you want me to reserve the start date; followUpTiming: tomorrow morning", "output": "Hi,\n\nI wanted to follow up on the estimate for weekly office cleaning. The price reflects evening coverage.\n\nIf you would like to move ahead, reply if you want me to reserve the start date. I can follow up tomorrow morning if that helps.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I resend the whole quote?", "a": "No. Keep the follow-up focused on scope and decision."},
+        {"q": "What if the customer is comparing options?", "a": "Acknowledge that and make the next step easy when they are ready."}
+      ],
+      "relatedTags": ["estimate", "quote", "follow-up", "decision"]
+    },
+    {
+      "slug": "booking-request-response-with-availability",
+      "name": "Booking Request Response With Availability",
+      "keyword": "booking request response email",
+      "intent": "booking",
+      "audience": "Hotels, salons, clinics, and appointment businesses",
+      "outcome": "Confirm the request and give available options without creating extra back-and-forth.",
+      "metaDescription": "Create a booking request response that confirms the request, shares availability, and moves toward confirmation. Free private email tool by ReplyMind.",
+      "h1": "Reply to the booking request with usable options.",
+      "intro": "A fast booking reply should answer availability, confirm the right details, and tell the person what to do next. This tool helps you send options that are easy to compare and simple to confirm.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Sam", "required": false},
+        {"key": "requestType", "label": "Request type", "type": "textarea", "placeholder": "A haircut on Saturday afternoon", "required": true},
+        {"key": "availability", "label": "Availability options", "type": "textarea", "placeholder": "Saturday at 2 PM or 4 PM", "required": true},
+        {"key": "bookingInstruction", "label": "Booking instruction", "type": "text", "placeholder": "Reply with your preferred time", "required": true},
+        {"key": "holdWindow", "label": "Hold window", "type": "text", "placeholder": "I can hold this briefly", "required": true}
+      ],
+      "subjectTemplate": "Re: your booking request",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for your request for {{requestType}}. I can offer {{availability}}.\n\n{{bookingInstruction}}. {{holdWindow}} while you decide.\n\nBest,",
+      "guidance": [
+        "Offer a small number of real options rather than a long list.",
+        "State the action needed to confirm the booking.",
+        "If you can hold a slot, say how long."
+      ],
+      "pitfalls": [
+        "Do not make the reply sound like a waitlist if you have open times.",
+        "Do not send options you cannot actually honor."
+      ],
+      "examples": [
+        {"label": "Salon booking", "input": "requestType: a haircut on Saturday afternoon; availability: Saturday at 2 PM or 4 PM; bookingInstruction: reply with your preferred time; holdWindow: I can hold this briefly", "output": "Hi,\n\nThanks for your request for a haircut on Saturday afternoon. I can offer Saturday at 2 PM or 4 PM.\n\nreply with your preferred time. I can hold this briefly while you decide.\n\nBest,"},
+        {"label": "Clinic booking", "input": "requestType: a consultation next week; availability: Tuesday morning or Wednesday at 1 PM; bookingInstruction: let me know which slot you want; holdWindow: I can keep one slot open today", "output": "Hi,\n\nThanks for your request for a consultation next week. I can offer Tuesday morning or Wednesday at 1 PM.\n\nlet me know which slot you want. I can keep one slot open today while you decide.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I ask for full details before offering times?", "a": "Only if the service requires qualification. Otherwise, availability first is often better."},
+        {"q": "Can I use this for waitlists?", "a": "Yes, if the availability field reflects that accurately."}
+      ],
+      "relatedTags": ["booking", "availability", "appointment", "confirmation"]
+    },
+    {
+      "slug": "no-show-follow-up-with-reschedule-path",
+      "name": "No-Show Follow-Up With Reschedule Path",
+      "keyword": "no show follow up email",
+      "intent": "follow-up",
+      "audience": "Clinics, salons, and appointment-based operators",
+      "outcome": "Follow up after a missed appointment without sounding shaming or passive-aggressive.",
+      "metaDescription": "Build a no-show follow-up email that stays calm, offers a reschedule path, and protects the relationship. Free private email tool by ReplyMind.",
+      "h1": "Follow up on a missed appointment with a reset.",
+      "intro": "No-shows happen. The right message is calm, factual, and open to rescheduling if the person still wants the service. This tool helps you do that without sounding resentful.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Taylor", "required": false},
+        {"key": "missedTime", "label": "Missed appointment time", "type": "text", "placeholder": "Yesterday at 2 PM", "required": true},
+        {"key": "checkInNote", "label": "Check-in note", "type": "textarea", "placeholder": "I wanted to check whether everything is okay", "required": true},
+        {"key": "rescheduleOption", "label": "Reschedule option", "type": "textarea", "placeholder": "We can offer next Tuesday or Thursday", "required": true},
+        {"key": "policyNote", "label": "Policy note", "type": "text", "placeholder": "Please let us know if you need to cancel again", "required": true}
+      ],
+      "subjectTemplate": "Checking in about your missed appointment",
+      "bodyTemplate": "Hi {{recipient}},\n\nI noticed you missed {{missedTime}}. {{checkInNote}}.\n\nIf you still want to come in, {{rescheduleOption}}. {{policyNote}}.\n\nBest,",
+      "guidance": [
+        "Lead with a check-in tone rather than a complaint.",
+        "Offer a clear reschedule path if the relationship should continue.",
+        "Keep the policy line brief and neutral."
+      ],
+      "pitfalls": [
+        "Do not guilt the person for missing the appointment.",
+        "Do not make the next step sound optional if the service requires action."
+      ],
+      "examples": [
+        {"label": "Dental no-show", "input": "missedTime: yesterday at 2 PM; checkInNote: I wanted to check whether everything is okay; rescheduleOption: we can offer next Tuesday or Thursday; policyNote: please let us know if you need to cancel again", "output": "Hi,\n\nI noticed you missed yesterday at 2 PM. I wanted to check whether everything is okay.\n\nIf you still want to come in, we can offer next Tuesday or Thursday. please let us know if you need to cancel again.\n\nBest,"},
+        {"label": "Property tour no-show", "input": "missedTime: this morning at 11 AM; checkInNote: I wanted to check whether you still want to tour; rescheduleOption: I can send two new viewing times; policyNote: just reply when you are ready", "output": "Hi,\n\nI noticed you missed this morning at 11 AM. I wanted to check whether you still want to tour.\n\nIf you still want to come in, I can send two new viewing times. just reply when you are ready.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I mention a no-show fee?", "a": "Only if your policy requires it and you need to address it now."},
+        {"q": "What if they are a first-time customer?", "a": "Be even more neutral so the relationship starts cleanly."}
+      ],
+      "relatedTags": ["no-show", "reschedule", "appointment", "follow-up"]
+    },
+    {
+      "slug": "guest-pre-arrival-message-with-check-in-details",
+      "name": "Guest Pre-Arrival Message With Check-In Details",
+      "keyword": "guest pre arrival email",
+      "intent": "booking",
+      "audience": "Hospitality teams and vacation rentals",
+      "outcome": "Set check-in expectations and answer the practical questions before arrival.",
+      "metaDescription": "Write a guest pre-arrival email with check-in details, access steps, and a clear support contact. Free private email tool by ReplyMind.",
+      "h1": "Give guests the details they need before they arrive.",
+      "intro": "A good pre-arrival message prevents avoidable questions and sets a calm tone for the stay. This tool helps you confirm the check-in process, share access instructions, and point guests to support if plans shift.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "checkInTime", "label": "Check-in time", "type": "text", "placeholder": "After 3 PM", "required": true},
+        {"key": "accessDetails", "label": "Access details", "type": "textarea", "placeholder": "The code will be shared on arrival day", "required": true},
+        {"key": "houseTip", "label": "House tip", "type": "textarea", "placeholder": "Parking is easiest on Maple Street", "required": true},
+        {"key": "supportContact", "label": "Support contact", "type": "text", "placeholder": "Text the guest line for help", "required": true}
+      ],
+      "subjectTemplate": "Your stay details for {{checkInTime}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe are looking forward to your arrival. Check-in begins {{checkInTime}}. {{accessDetails}}.\n\nOne helpful note: {{houseTip}}. If anything comes up, {{supportContact}}.\n\nBest,",
+      "guidance": [
+        "Put the access instructions in the body, not hidden in an attachment.",
+        "Add one local tip that makes arrival easier.",
+        "Make the support contact feel reachable."
+      ],
+      "pitfalls": [
+        "Do not include every house rule here.",
+        "Do not make the access instructions sound optional."
+      ],
+      "examples": [
+        {"label": "Vacation rental arrival", "input": "checkInTime: after 3 PM; accessDetails: the code will be shared on arrival day; houseTip: parking is easiest on Maple Street; supportContact: text the guest line for help", "output": "Hi,\n\nWe are looking forward to your arrival. Check-in begins after 3 PM. the code will be shared on arrival day.\n\nOne helpful note: parking is easiest on Maple Street. If anything comes up, text the guest line for help.\n\nBest,"},
+        {"label": "Boutique hotel stay", "input": "checkInTime: 4 PM; accessDetails: the front desk will have your key packet ready; houseTip: the lobby entrance is on the side street; supportContact: call the front desk any time", "output": "Hi,\n\nWe are looking forward to your arrival. Check-in begins 4 PM. the front desk will have your key packet ready.\n\nOne helpful note: the lobby entrance is on the side street. If anything comes up, call the front desk any time.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I send this the day before or the same day?", "a": "The day before is often best unless access details are only available on arrival day."},
+        {"q": "Can I include Wi-Fi details?", "a": "Yes, if they are useful before arrival and already confirmed."}
+      ],
+      "relatedTags": ["guest", "check-in", "arrival", "hospitality"]
+    },
+    {
+      "slug": "housekeeping-or-turnover-status-update",
+      "name": "Housekeeping or Turnover Status Update",
+      "keyword": "turnover status update email",
+      "intent": "update",
+      "audience": "Hospitality operations and property managers",
+      "outcome": "Report the cleaning or turnover status so other teams know what is ready and what is not.",
+      "metaDescription": "Create a housekeeping or turnover update email with current status, blockers, and the next handoff. Free private email tool by ReplyMind.",
+      "h1": "Keep the turnover status clear and current.",
+      "intro": "In hospitality and property operations, the next team needs a clean status update. This tool helps you say what is finished, what is still in progress, and when the handoff can happen.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Front desk", "required": false},
+        {"key": "status", "label": "Current status", "type": "textarea", "placeholder": "Two rooms are ready and one is still being cleaned", "required": true},
+        {"key": "blocker", "label": "Any blocker", "type": "textarea", "placeholder": "Waiting on fresh linens", "required": true},
+        {"key": "handoffTime", "label": "Handoff time", "type": "text", "placeholder": "Within 20 minutes", "required": true},
+        {"key": "priorityNote", "label": "Priority note", "type": "text", "placeholder": "Please prioritize the late check-in room", "required": true}
+      ],
+      "subjectTemplate": "Turnover status update",
+      "bodyTemplate": "Hi {{recipient}},\n\nQuick update: {{status}}. The current blocker is {{blocker}}.\n\nThe handoff should happen {{handoffTime}}. {{priorityNote}}.\n\nBest,",
+      "guidance": [
+        "Use a status line that is easy to scan.",
+        "Name the blocker if one exists so the next team can react.",
+        "Keep the handoff time realistic."
+      ],
+      "pitfalls": [
+        "Do not send a status update that leaves out the incomplete items.",
+        "Do not make the handoff time vague."
+      ],
+      "examples": [
+        {"label": "Hotel housekeeping", "input": "status: two rooms are ready and one is still being cleaned; blocker: waiting on fresh linens; handoffTime: within 20 minutes; priorityNote: please prioritize the late check-in room", "output": "Hi,\n\nQuick update: two rooms are ready and one is still being cleaned. The current blocker is waiting on fresh linens.\n\nThe handoff should happen within 20 minutes. Please prioritize the late check-in room.\n\nBest,"},
+        {"label": "Property turnover", "input": "status: the apartment is vacuumed and the kitchen is finished; blocker: the inspection is still pending; handoffTime: by 6 PM; priorityNote: notify the leasing team once it is cleared", "output": "Hi,\n\nQuick update: the apartment is vacuumed and the kitchen is finished. The current blocker is the inspection is still pending.\n\nThe handoff should happen by 6 PM. notify the leasing team once it is cleared.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include a full checklist?", "a": "No. This is a status update, not the entire turnover record."},
+        {"q": "What if there is no blocker?", "a": "Say that clearly so the other team knows it is on track."}
+      ],
+      "relatedTags": ["turnover", "housekeeping", "status", "handoff"]
+    },
+    {
+      "slug": "vendor-follow-up-for-site-access-or-scheduling",
+      "name": "Vendor Follow-Up for Site Access or Scheduling",
+      "keyword": "vendor follow up email",
+      "intent": "coordination",
+      "audience": "Property teams and local service coordinators",
+      "outcome": "Confirm access, timing, and the next step with outside vendors or contractors.",
+      "metaDescription": "Build a vendor follow-up email that confirms access, schedule, and the one thing the vendor still needs. Free private email tool by ReplyMind.",
+      "h1": "Keep the vendor schedule and access details aligned.",
+      "intro": "Outside vendors need practical coordination, not a long message. This tool helps you restate access, confirm timing, and identify the last missing item so the work can proceed.",
+      "fields": [
+        {"key": "recipient", "label": "Vendor or contact name", "type": "text", "placeholder": "Ruben", "required": false},
+        {"key": "siteDetails", "label": "Site or access details", "type": "textarea", "placeholder": "Use the side gate and check in at the office", "required": true},
+        {"key": "scheduledTime", "label": "Scheduled time", "type": "text", "placeholder": "Thursday at 9 AM", "required": true},
+        {"key": "missingItem", "label": "Anything still needed", "type": "textarea", "placeholder": "We still need the insurance certificate", "required": true},
+        {"key": "confirmationAsk", "label": "Confirmation ask", "type": "text", "placeholder": "Please confirm once you are on the way", "required": true}
+      ],
+      "subjectTemplate": "Site access and schedule check",
+      "bodyTemplate": "Hi {{recipient}},\n\nJust confirming the plan for {{scheduledTime}}. Please use {{siteDetails}}.\n\nThe only thing still needed is {{missingItem}}. {{confirmationAsk}}.\n\nBest,",
+      "guidance": [
+        "Repeat access details so there is no onsite confusion.",
+        "Make the missing item easy to spot.",
+        "Ask for one confirmation action only."
+      ],
+      "pitfalls": [
+        "Do not assume the vendor has all prior context.",
+        "Do not mix scheduling and scope changes in the same note."
+      ],
+      "examples": [
+        {"label": "HVAC vendor", "input": "siteDetails: use the side gate and check in at the office; scheduledTime: Thursday at 9 AM; missingItem: we still need the insurance certificate; confirmationAsk: please confirm once you are on the way", "output": "Hi,\n\nJust confirming the plan for Thursday at 9 AM. Please use use the side gate and check in at the office.\n\nThe only thing still needed is we still need the insurance certificate. please confirm once you are on the way.\n\nBest,"},
+        {"label": "Pool service", "input": "siteDetails: enter through the back lot and text the manager; scheduledTime: Friday morning; missingItem: we need the updated service window; confirmationAsk: reply when the truck is dispatched", "output": "Hi,\n\nJust confirming the plan for Friday morning. Please use enter through the back lot and text the manager.\n\nThe only thing still needed is we need the updated service window. reply when the truck is dispatched.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I restate the contract terms?", "a": "Only if they affect access or timing."},
+        {"q": "What if the vendor has not confirmed yet?", "a": "Ask for the confirmation directly and give the specific missing item."}
+      ],
+      "relatedTags": ["vendor", "access", "schedule", "coordination"]
+    },
+    {
+      "slug": "local-partnership-introduction-request",
+      "name": "Local Partnership Introduction Request",
+      "keyword": "local partnership email",
+      "intent": "partnership",
+      "audience": "Local service businesses and hospitality operators",
+      "outcome": "Ask a nearby business for a practical cross-referral or partnership conversation.",
+      "metaDescription": "Write a local partnership introduction request that explains the value, fit, and next step. Free private email tool by ReplyMind.",
+      "h1": "Start the local partnership conversation with a real reason.",
+      "intro": "Good local partnerships are specific and useful. This tool helps you explain why the connection makes sense, what you can offer, and how to begin without sounding like a mass outreach email.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Elena", "required": false},
+        {"key": "connectionReason", "label": "Why this partnership makes sense", "type": "textarea", "placeholder": "We serve the same neighborhood and similar customers", "required": true},
+        {"key": "valueOffer", "label": "What you can offer", "type": "textarea", "placeholder": "We can refer overflow bookings", "required": true},
+        {"key": "ask", "label": "What you are asking for", "type": "textarea", "placeholder": "A short intro call next week", "required": true},
+        {"key": "followUpTiming", "label": "Follow-up timing", "type": "text", "placeholder": "Early next week", "required": true}
+      ],
+      "subjectTemplate": "Possible local partnership",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m reaching out because {{connectionReason}}. I think there may be a practical way we can help each other, and we can offer {{valueOffer}}.\n\nWould you be open to {{ask}}? If this is not a fit, I understand, and I can follow up {{followUpTiming}}.\n\nBest,",
+      "guidance": [
+        "Explain the local fit in one sentence.",
+        "Offer a real exchange rather than just asking for support.",
+        "Keep the first ask small."
+      ],
+      "pitfalls": [
+        "Do not make the partnership sound like a generic referral blast.",
+        "Do not ask for a big commitment in the first email."
+      ],
+      "examples": [
+        {"label": "Salon and spa partnership", "input": "connectionReason: we serve the same neighborhood and similar customers; valueOffer: we can refer overflow bookings; ask: a short intro call next week; followUpTiming: early next week", "output": "Hi,\n\nI’m reaching out because we serve the same neighborhood and similar customers. I think there may be a practical way we can help each other, and we can offer we can refer overflow bookings.\n\nWould you be open to a short intro call next week? If this is not a fit, I understand, and I can follow up early next week.\n\nBest,"},
+        {"label": "Hotel and tour operator partnership", "input": "connectionReason: our guests often ask for local activities; valueOffer: we can point guests your way; ask: a quick partnership conversation; followUpTiming: later this week", "output": "Hi,\n\nI’m reaching out because our guests often ask for local activities. I think there may be a practical way we can help each other, and we can offer we can point guests your way.\n\nWould you be open to a quick partnership conversation? If this is not a fit, I understand, and I can follow up later this week.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I pitch revenue right away?", "a": "No. Start with the practical local fit and one small next step."},
+        {"q": "Is this only for formal partnerships?", "a": "No. It also works for informal referral relationships."}
+      ],
+      "relatedTags": ["partnership", "local", "referral", "intro"]
+    },
+    {
+      "slug": "referral-request-after-successful-stay-or-job",
+      "name": "Referral Request After a Successful Stay or Job",
+      "keyword": "referral request email",
+      "intent": "referral",
+      "audience": "Hospitality teams and local service businesses",
+      "outcome": "Ask a satisfied customer to refer friends or neighbors without sounding pushy.",
+      "metaDescription": "Create a referral request email that references the completed stay or job and makes the ask feel natural. Free private email tool by ReplyMind.",
+      "h1": "Ask for the referral when the outcome is still fresh.",
+      "intro": "A referral ask should feel like a natural extension of good service. This tool helps you name the completed job or stay, explain who would benefit, and give the recipient a simple way to share your name.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Riley", "required": false},
+        {"key": "completedService", "label": "Completed service or stay", "type": "textarea", "placeholder": "Your recent cleaning service", "required": true},
+        {"key": "idealReferral", "label": "Ideal referral", "type": "textarea", "placeholder": "A neighbor who needs weekly cleaning", "required": true},
+        {"key": "referralAsk", "label": "Referral ask", "type": "textarea", "placeholder": "Would you be open to sharing our name?", "required": true},
+        {"key": "easyShareOption", "label": "Easy share option", "type": "text", "placeholder": "I can send a short message you can forward", "required": true}
+      ],
+      "subjectTemplate": "Thank you again",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks again for {{completedService}}. If you know anyone who could use {{idealReferral}}, would you be open to {{referralAsk}}?\n\n{{easyShareOption}} if that is easier.\n\nBest,",
+      "guidance": [
+        "Ask only after the service has clearly gone well.",
+        "Describe the ideal referral so the request is easy to recognize.",
+        "Make it simple to forward or share your info."
+      ],
+      "pitfalls": [
+        "Do not ask for referrals before the relationship is established.",
+        "Do not make the request sound like a demand."
+      ],
+      "examples": [
+        {"label": "Cleaning service referral", "input": "completedService: your recent cleaning service; idealReferral: a neighbor who needs weekly cleaning; referralAsk: sharing our name; easyShareOption: I can send a short message you can forward", "output": "Hi,\n\nThanks again for your recent cleaning service. If you know anyone who could use a neighbor who needs weekly cleaning, would you be open to sharing our name?\n\nI can send a short message you can forward if that is easier.\n\nBest,"},
+        {"label": "Hotel guest referral", "input": "completedService: your recent stay; idealReferral: a friend planning a weekend trip; referralAsk: telling them about us; easyShareOption: I can send a link you can pass along", "output": "Hi,\n\nThanks again for your recent stay. If you know anyone who could use a friend planning a weekend trip, would you be open to telling them about us?\n\nI can send a link you can pass along if that is easier.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I offer a discount for referrals?", "a": "Only if your business already has a clear referral offer and process."},
+        {"q": "How soon after service should I ask?", "a": "Soon enough that the good experience is still fresh, but only after the job is complete."}
+      ],
+      "relatedTags": ["referral", "recommendation", "post-service", "word-of-mouth"]
+    },
+    {
+      "slug": "neighbor-partnership-overflow-booking-note",
+      "name": "Neighbor Partnership Overflow Booking Note",
+      "keyword": "overflow booking email",
+      "intent": "partnership",
+      "audience": "Local service businesses, salons, and clinics",
+      "outcome": "Coordinate overflow work with a nearby business in a simple, respectful way.",
+      "metaDescription": "Build an overflow booking note for a nearby partner with the work type, timing, and return path. Free private email tool by ReplyMind.",
+      "h1": "Handle overflow bookings without confusion.",
+      "intro": "When another local business sends work your way, coordination should be simple. This tool helps you confirm the type of customer, the timing, and what you need to keep the handoff clean.",
+      "fields": [
+        {"key": "recipient", "label": "Partner name", "type": "text", "placeholder": "Nora", "required": false},
+        {"key": "workType", "label": "Type of work", "type": "textarea", "placeholder": "Same-week hair appointments", "required": true},
+        {"key": "capacity", "label": "Available capacity", "type": "text", "placeholder": "Two openings next Wednesday", "required": true},
+        {"key": "handoffNeed", "label": "What you need in the handoff", "type": "textarea", "placeholder": "Client name and preferred time", "required": true},
+        {"key": "returnNote", "label": "Return note", "type": "text", "placeholder": "We can return the favor when we are full", "required": true}
+      ],
+      "subjectTemplate": "Overflow support for {{workType}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe can help with {{workType}} and currently have {{capacity}}.\n\nTo keep the handoff smooth, please send {{handoffNeed}}. {{returnNote}}.\n\nBest,",
+      "guidance": [
+        "Be specific about capacity so the partner can route the right people.",
+        "Say what information you need to avoid back-and-forth.",
+        "Keep the reciprocity note light and natural."
+      ],
+      "pitfalls": [
+        "Do not imply unlimited capacity if there are only a few openings.",
+        "Do not make the handoff process too complex."
+      ],
+      "examples": [
+        {"label": "Salon overflow", "input": "workType: same-week hair appointments; capacity: two openings next Wednesday; handoffNeed: client name and preferred time; returnNote: we can return the favor when we are full", "output": "Hi,\n\nWe can help with same-week hair appointments and currently have two openings next Wednesday.\n\nTo keep the handoff smooth, please send client name and preferred time. We can return the favor when we are full.\n\nBest,"},
+        {"label": "Clinic overflow", "input": "workType: routine consultations; capacity: one opening tomorrow afternoon; handoffNeed: the reason for the referral and any timing limits; returnNote: happy to share overflow work back as needed", "output": "Hi,\n\nWe can help with routine consultations and currently have one opening tomorrow afternoon.\n\nTo keep the handoff smooth, please send the reason for the referral and any timing limits. happy to share overflow work back as needed.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I mention prices in an overflow note?", "a": "Only if the partner needs them to make the referral useful."},
+        {"q": "Can this work both ways?", "a": "Yes, if you want an ongoing referral relationship."}
+      ],
+      "relatedTags": ["overflow", "referral", "partner", "booking"]
+    },
+    {
+      "slug": "calendar-shift-notice-for-team-or-client",
+      "name": "Calendar Shift Notice for Team or Client",
+      "keyword": "schedule change email",
+      "intent": "schedule-change",
+      "audience": "Service teams, hospitality, and property operators",
+      "outcome": "Tell people when a schedule has changed and give the replacement time clearly.",
+      "metaDescription": "Write a schedule change email with the original time, new time, reason, and next step. Free private email tool by ReplyMind.",
+      "h1": "Announce the schedule change without confusion.",
+      "intro": "When a time slot moves, people want the new time, the reason if needed, and a clear next step. This tool helps you communicate the shift without sounding scattered or apologetic beyond the facts.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "oldTime", "label": "Original time", "type": "text", "placeholder": "Friday at 9 AM", "required": true},
+        {"key": "newTime", "label": "New time", "type": "text", "placeholder": "Friday at 11 AM", "required": true},
+        {"key": "reason", "label": "Reason for change", "type": "textarea", "placeholder": "The first appointment ran long", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "text", "placeholder": "Please confirm the new slot", "required": true}
+      ],
+      "subjectTemplate": "Schedule change for {{oldTime}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nThere is a schedule change for {{oldTime}}. The new time is {{newTime}} because {{reason}}.\n\n{{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Put both the old and new times in the email so the change is obvious.",
+        "Keep the reason short and factual.",
+        "Close with one clear next step."
+      ],
+      "pitfalls": [
+        "Do not make the recipient hunt for the replacement time.",
+        "Do not over-explain a simple scheduling issue."
+      ],
+      "examples": [
+        {"label": "Client meeting shift", "input": "oldTime: Friday at 9 AM; newTime: Friday at 11 AM; reason: the first appointment ran long; nextStep: please confirm the new slot", "output": "Hi,\n\nThere is a schedule change for Friday at 9 AM. The new time is Friday at 11 AM because the first appointment ran long.\n\nplease confirm the new slot.\n\nBest,"},
+        {"label": "Tour shift", "input": "oldTime: Saturday at 1 PM; newTime: Saturday at 2 PM; reason: the previous showing needs more time; nextStep: reply if the new time works", "output": "Hi,\n\nThere is a schedule change for Saturday at 1 PM. The new time is Saturday at 2 PM because the previous showing needs more time.\n\nreply if the new time works.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I apologize for every schedule change?", "a": "A brief apology is fine, but clarity matters more than wording."},
+        {"q": "What if the new time is tentative?", "a": "Say it is tentative so the recipient knows to wait for confirmation."}
+      ],
+      "relatedTags": ["schedule", "change", "time", "update"]
+    },
+    {
+      "slug": "overbooked-apology-with-alternative-options",
+      "name": "Overbooked Apology With Alternative Options",
+      "keyword": "overbooked apology email",
+      "intent": "apology",
+      "audience": "Hospitality and appointment businesses",
+      "outcome": "Apologize for overbooking and offer real alternatives immediately.",
+      "metaDescription": "Create an overbooked apology email with the issue, the alternatives, and the next step. Free private email tool by ReplyMind.",
+      "h1": "Address an overbooking problem without delay.",
+      "intro": "When a schedule mistake happens, the fastest path to trust is a direct apology plus real alternatives. This tool helps you say what happened, what you can offer now, and how the recipient can choose.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "issue", "label": "What happened", "type": "textarea", "placeholder": "We overbooked the evening slot", "required": true},
+        {"key": "alternativeOne", "label": "First alternative", "type": "text", "placeholder": "Tomorrow at 10 AM", "required": true},
+        {"key": "alternativeTwo", "label": "Second alternative", "type": "text", "placeholder": "Friday at 1 PM", "required": true},
+        {"key": "makeGood", "label": "Make-good or courtesy", "type": "text", "placeholder": "We will waive the booking fee", "required": true}
+      ],
+      "subjectTemplate": "I’m sorry about the scheduling issue",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m sorry, but {{issue}}. I know that is not the experience you expected.\n\nThe best alternatives I can offer are {{alternativeOne}} and {{alternativeTwo}}. {{makeGood}}.\n\nBest,",
+      "guidance": [
+        "Lead with the problem instead of the alternative.",
+        "Offer only real replacement options.",
+        "Use a make-good only if it is accurate and available."
+      ],
+      "pitfalls": [
+        "Do not ask the customer to solve the problem for you.",
+        "Do not imply the mistake was unavoidable."
+      ],
+      "examples": [
+        {"label": "Spa overbooking", "input": "issue: we overbooked the evening slot; alternativeOne: tomorrow at 10 AM; alternativeTwo: Friday at 1 PM; makeGood: we will waive the booking fee", "output": "Hi,\n\nI’m sorry, but we overbooked the evening slot. I know that is not the experience you expected.\n\nThe best alternatives I can offer are tomorrow at 10 AM and Friday at 1 PM. we will waive the booking fee.\n\nBest,"},
+        {"label": "Tour overbooking", "input": "issue: we overbooked the property tour; alternativeOne: Saturday morning; alternativeTwo: Monday afternoon; makeGood: we can prioritize a private slot", "output": "Hi,\n\nI’m sorry, but we overbooked the property tour. I know that is not the experience you expected.\n\nThe best alternatives I can offer are Saturday morning and Monday afternoon. we can prioritize a private slot.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I explain why the overbooking happened?", "a": "Only briefly if it helps, but the alternatives matter more."},
+        {"q": "Can I ask the customer to wait?", "a": "Only if the wait is short and you have confirmed timing."}
+      ],
+      "relatedTags": ["overbooked", "apology", "alternatives", "booking"]
+    },
+    {
+      "slug": "move-out-or-checkout-instructions-note",
+      "name": "Move-Out or Checkout Instructions Note",
+      "keyword": "checkout instructions email",
+      "intent": "instructions",
+      "audience": "Property managers and hospitality teams",
+      "outcome": "Give clear departure instructions so the handoff or checkout stays smooth.",
+      "metaDescription": "Build a move-out or checkout instructions email with timing, keys, and what to leave behind. Free private email tool by ReplyMind.",
+      "h1": "Make departure instructions easy to follow.",
+      "intro": "Departure emails prevent confusion when it is time to hand back the keys or leave the room. This tool helps you state the checkout time, explain what to do with keys or access items, and note anything that should be left behind.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Taylor", "required": false},
+        {"key": "departureTime", "label": "Departure time", "type": "text", "placeholder": "11 AM", "required": true},
+        {"key": "keyReturn", "label": "Key or access return", "type": "textarea", "placeholder": "Leave keys on the kitchen counter", "required": true},
+        {"key": "cleanupNote", "label": "Cleanup note", "type": "textarea", "placeholder": "Please take trash to the bin outside", "required": true},
+        {"key": "finalContact", "label": "Final contact note", "type": "text", "placeholder": "Reply if you have any departure questions", "required": true}
+      ],
+      "subjectTemplate": "Checkout details for {{departureTime}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nAs a reminder, checkout is {{departureTime}}. Please follow {{keyReturn}}.\n\nBefore you leave, {{cleanupNote}}. {{finalContact}} if anything is unclear.\n\nBest,",
+      "guidance": [
+        "Keep the departure time obvious.",
+        "List the key return step in a way that cannot be missed.",
+        "Use one cleanup note that is practical and realistic."
+      ],
+      "pitfalls": [
+        "Do not hide the checkout time in the middle of the message.",
+        "Do not add last-minute requirements that were not already communicated."
+      ],
+      "examples": [
+        {"label": "Tenant move-out", "input": "departureTime: 11 AM; keyReturn: leave keys on the kitchen counter; cleanupNote: please take trash to the bin outside; finalContact: reply if you have any departure questions", "output": "Hi,\n\nAs a reminder, checkout is 11 AM. Please follow leave keys on the kitchen counter.\n\nBefore you leave, please take trash to the bin outside. reply if you have any departure questions if anything is unclear.\n\nBest,"},
+        {"label": "Hotel checkout", "input": "departureTime: noon; keyReturn: leave the key card at the front desk; cleanupNote: confirm that all personal items are removed; finalContact: call the front desk if needed", "output": "Hi,\n\nAs a reminder, checkout is noon. Please follow leave the key card at the front desk.\n\nBefore you leave, confirm that all personal items are removed. call the front desk if needed if anything is unclear.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should this include late checkout policy?", "a": "Only if you need to clarify timing or fees."},
+        {"q": "Can I use this for furnished apartments and hotels?", "a": "Yes, the same structure works for both."}
+      ],
+      "relatedTags": ["checkout", "move-out", "instructions", "departure"]
+    },
+    {
+      "slug": "vendor-delay-warning-with-impact-note",
+      "name": "Vendor Delay Warning With Impact Note",
+      "keyword": "vendor delay email",
+      "intent": "delay",
+      "audience": "Property managers, contractors, and hospitality operations",
+      "outcome": "Warn the team or client that an outside vendor is delayed and explain the impact.",
+      "metaDescription": "Write a vendor delay warning email with the cause, impact, and adjusted plan. Free private email tool by ReplyMind.",
+      "h1": "Tell people about a vendor delay before it creates a surprise.",
+      "intro": "If a vendor runs late, the downstream team needs to know what changed and what it affects. This tool helps you give the practical update without turning it into a blame message.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Front desk", "required": false},
+        {"key": "vendorName", "label": "Vendor name", "type": "text", "placeholder": "Plumbing crew", "required": true},
+        {"key": "delayCause", "label": "Delay cause", "type": "textarea", "placeholder": "Their previous job ran longer than expected", "required": true},
+        {"key": "impact", "label": "Impact", "type": "textarea", "placeholder": "The repair window will shift by an hour", "required": true},
+        {"key": "adjustedPlan", "label": "Adjusted plan", "type": "text", "placeholder": "We will reopen the room after the work is done", "required": true}
+      ],
+      "subjectTemplate": "Update on the {{vendorName}} schedule",
+      "bodyTemplate": "Hi {{recipient}},\n\nQuick update: {{vendorName}} is delayed because {{delayCause}}. The impact is {{impact}}.\n\n{{adjustedPlan}}.\n\nBest,",
+      "guidance": [
+        "Name the vendor or trade so the update is actionable.",
+        "Be explicit about the operational impact.",
+        "Close with the adjusted plan rather than the delay itself."
+      ],
+      "pitfalls": [
+        "Do not exaggerate the delay impact.",
+        "Do not omit the operational consequence if it changes someone else’s schedule."
+      ],
+      "examples": [
+        {"label": "Roofing vendor", "input": "vendorName: roofing crew; delayCause: their previous job ran longer than expected; impact: the inspection will shift by an hour; adjustedPlan: we will call once they are en route", "output": "Hi,\n\nQuick update: roofing crew is delayed because their previous job ran longer than expected. The impact is the inspection will shift by an hour.\n\nwe will call once they are en route.\n\nBest,"},
+        {"label": "Laundry service", "input": "vendorName: laundry pickup; delayCause: the truck is arriving late; impact: guest linen restock will move to later this morning; adjustedPlan: housekeeping will hold the rooms until delivery arrives", "output": "Hi,\n\nQuick update: laundry pickup is delayed because the truck is arriving late. The impact is guest linen restock will move to later this morning.\n\nhousekeeping will hold the rooms until delivery arrives.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I name the vendor publicly?", "a": "Only if that is normal in your operations. Otherwise keep it generic."},
+        {"q": "What if the impact is minor?", "a": "Still mention it if it changes the next team’s timing."}
+      ],
+      "relatedTags": ["vendor", "delay", "impact", "operations"]
+    },
+    {
+      "slug": "visit-feedback-request-after-showing",
+      "name": "Visit Feedback Request After Showing",
+      "keyword": "showing feedback email",
+      "intent": "feedback",
+      "audience": "Real estate agents and hospitality hosts",
+      "outcome": "Ask what they thought of the property or space so you can respond intelligently.",
+      "metaDescription": "Create a visit feedback email that asks for useful reactions after a showing or tour. Free private email tool by ReplyMind.",
+      "h1": "Ask for feedback while the showing is still fresh.",
+      "intro": "After a showing or tour, feedback helps you learn what mattered and whether the next step is likely. This tool helps you ask one focused question and invite honest reaction without pressure.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Ava", "required": false},
+        {"key": "visitType", "label": "Visit type", "type": "text", "placeholder": "The apartment showing", "required": true},
+        {"key": "highlight", "label": "What stood out", "type": "textarea", "placeholder": "The layout and natural light", "required": true},
+        {"key": "feedbackQuestion", "label": "Feedback question", "type": "textarea", "placeholder": "What did you think overall?", "required": true},
+        {"key": "followUpOption", "label": "Follow-up option", "type": "text", "placeholder": "I can answer any remaining questions", "required": true}
+      ],
+      "subjectTemplate": "Thanks for visiting",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for coming by {{visitType}}. I was glad to show you {{highlight}}.\n\n{{feedbackQuestion}} {{followUpOption}} if it would help.\n\nBest,",
+      "guidance": [
+        "Reference a specific detail from the visit so the note feels real.",
+        "Ask one direct feedback question.",
+        "Leave a low-pressure path for follow-up."
+      ],
+      "pitfalls": [
+        "Do not ask five different questions at once.",
+        "Do not make the recipient feel they must commit immediately."
+      ],
+      "examples": [
+        {"label": "Apartment showing feedback", "input": "visitType: the apartment showing; highlight: the layout and natural light; feedbackQuestion: what did you think overall?; followUpOption: I can answer any remaining questions", "output": "Hi,\n\nThanks for coming by the apartment showing. I was glad to show you the layout and natural light.\n\nwhat did you think overall? I can answer any remaining questions if it would help.\n\nBest,"},
+        {"label": "Hotel site visit", "input": "visitType: the hotel tour; highlight: the event space and lobby; feedbackQuestion: which part felt most useful for your plans?; followUpOption: I can send more details on anything you want to compare", "output": "Hi,\n\nThanks for coming by the hotel tour. I was glad to show you the event space and lobby.\n\nwhich part felt most useful for your plans? I can send more details on anything you want to compare if it would help.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should feedback requests be sent right away?", "a": "Yes, while the visit is still fresh."},
+        {"q": "Can I use this after an in-person estimate?", "a": "Yes, if you want to understand what mattered most to the customer."}
+      ],
+      "relatedTags": ["feedback", "showing", "tour", "follow-up"]
+    },
+    {
+      "slug": "lease-renewal-check-in-with-options",
+      "name": "Lease Renewal Check-In With Options",
+      "keyword": "lease renewal email",
+      "intent": "renewal",
+      "audience": "Property managers and landlords",
+      "outcome": "Start the renewal conversation early and keep the decision path simple.",
+      "metaDescription": "Build a lease renewal check-in email with timing, options, and a clear next step. Free private email tool by ReplyMind.",
+      "h1": "Start the renewal conversation before it gets rushed.",
+      "intro": "Renewals go better when the message is calm, early, and easy to answer. This tool helps you say that the renewal is approaching, share the main options, and ask what the tenant needs to decide.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "leaseEnd", "label": "Lease end date", "type": "text", "placeholder": "October 31", "required": true},
+        {"key": "renewalOptions", "label": "Renewal options", "type": "textarea", "placeholder": "We can offer a 12-month renewal", "required": true},
+        {"key": "decisionQuestion", "label": "Decision question", "type": "textarea", "placeholder": "Do you want to continue living here?", "required": true},
+        {"key": "responseDate", "label": "Response date", "type": "text", "placeholder": "By next Friday", "required": true}
+      ],
+      "subjectTemplate": "Checking in about your lease renewal",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to check in ahead of your lease ending on {{leaseEnd}}. We can offer {{renewalOptions}}.\n\n{{decisionQuestion}} Please let us know {{responseDate}} so we can plan ahead.\n\nBest,",
+      "guidance": [
+        "Start early enough to give both sides room to plan.",
+        "Offer the real renewal path rather than a vague promise.",
+        "Ask the deciding question directly."
+      ],
+      "pitfalls": [
+        "Do not wait until the last minute to start renewal outreach.",
+        "Do not bury the response date in the middle of the note."
+      ],
+      "examples": [
+        {"label": "Apartment renewal", "input": "leaseEnd: October 31; renewalOptions: we can offer a 12-month renewal; decisionQuestion: do you want to continue living here?; responseDate: by next Friday", "output": "Hi,\n\nI wanted to check in ahead of your lease ending on October 31. We can offer we can offer a 12-month renewal.\n\ndo you want to continue living here? Please let us know by next Friday so we can plan ahead.\n\nBest,"},
+        {"label": "Vacation rental extended stay", "input": "leaseEnd: the end of the month; renewalOptions: we can hold the same unit for another month; decisionQuestion: would you like to extend your stay?; responseDate: by Wednesday", "output": "Hi,\n\nI wanted to check in ahead of your lease ending on the end of the month. We can offer we can hold the same unit for another month.\n\nwould you like to extend your stay? Please let us know by Wednesday so we can plan ahead.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I discuss pricing in the first renewal note?", "a": "Only if you already have the correct pricing ready to share."},
+        {"q": "What if the tenant is undecided?", "a": "Give them a clear decision date and offer to answer questions."}
+      ],
+      "relatedTags": ["renewal", "lease", "timing", "decision"]
+    },
+    {
+      "slug": "access-code-or-key-handoff-message",
+      "name": "Access Code or Key Handoff Message",
+      "keyword": "key handoff email",
+      "intent": "access",
+      "audience": "Hospitality and property operations",
+      "outcome": "Share access details in a way that is clear, timely, and easy to verify.",
+      "metaDescription": "Create an access code or key handoff message with timing, location, and a reply path. Free private email tool by ReplyMind.",
+      "h1": "Hand off access details with less back-and-forth.",
+      "intro": "Access information needs to be precise and secure. This tool helps you share the code or key plan, note when it becomes active, and give the person a quick response path if something goes wrong.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Mia", "required": false},
+        {"key": "accessMethod", "label": "Access method", "type": "text", "placeholder": "Door code", "required": true},
+        {"key": "availabilityTime", "label": "When access is active", "type": "text", "placeholder": "After 3 PM", "required": true},
+        {"key": "whereToFindIt", "label": "Where to find it", "type": "textarea", "placeholder": "The code will be in your arrival message", "required": true},
+        {"key": "helpContact", "label": "Help contact", "type": "text", "placeholder": "Reply here if there is any issue", "required": true}
+      ],
+      "subjectTemplate": "Your {{accessMethod}} details",
+      "bodyTemplate": "Hi {{recipient}},\n\nHere are your {{accessMethod}} details. The access becomes active {{availabilityTime}}.\n\n{{whereToFindIt}}. {{helpContact}} if anything does not work as expected.\n\nBest,",
+      "guidance": [
+        "Be precise about when the access becomes active.",
+        "Keep security details in the right channel for your process.",
+        "Include a fallback contact in case something fails."
+      ],
+      "pitfalls": [
+        "Do not make the recipient search through multiple messages for access.",
+        "Do not expose sensitive details in a way that breaks your own process."
+      ],
+      "examples": [
+        {"label": "Door code handoff", "input": "accessMethod: door code; availabilityTime: after 3 PM; whereToFindIt: the code will be in your arrival message; helpContact: reply here if there is any issue", "output": "Hi,\n\nHere are your door code details. The access becomes active after 3 PM.\n\nthe code will be in your arrival message. reply here if there is any issue if anything does not work as expected.\n\nBest,"},
+        {"label": "Lockbox handoff", "input": "accessMethod: lockbox key; availabilityTime: once cleaning is complete; whereToFindIt: the lockbox is beside the side door; helpContact: text the host line if needed", "output": "Hi,\n\nHere are your lockbox key details. The access becomes active once cleaning is complete.\n\nthe lockbox is beside the side door. text the host line if needed if anything does not work as expected.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I send access details early?", "a": "Only if your process allows it and the timing is safe."},
+        {"q": "What if the code changes?", "a": "Send a new message immediately and make the active version obvious."}
+      ],
+      "relatedTags": ["access", "key", "check-in", "handoff"]
+    },
+    {
+      "slug": "local-collaboration-outreach-for-cross-referrals",
+      "name": "Local Collaboration Outreach for Cross-Referrals",
+      "keyword": "cross referral email",
+      "intent": "partnership",
+      "audience": "Local service businesses and hospitality operators",
+      "outcome": "Open a partnership conversation around shared customers and mutual referrals.",
+      "metaDescription": "Write a local collaboration outreach email that explains the shared customer fit and a mutual referral idea. Free private email tool by ReplyMind.",
+      "h1": "Reach out for a local collaboration with purpose.",
+      "intro": "Local collaboration works when both sides can see the fit quickly. This tool helps you explain the shared customer base, the practical benefit, and the easiest first step toward working together.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Noah", "required": false},
+        {"key": "sharedAudience", "label": "Shared audience", "type": "textarea", "placeholder": "Families in the same neighborhood", "required": true},
+        {"key": "mutualBenefit", "label": "Mutual benefit", "type": "textarea", "placeholder": "We can send clients who need the other service", "required": true},
+        {"key": "starterAsk", "label": "Starter ask", "type": "text", "placeholder": "A short coffee chat", "required": true},
+        {"key": "nextTouch", "label": "Next touchpoint", "type": "text", "placeholder": "I can follow up next week", "required": true}
+      ],
+      "subjectTemplate": "Possible collaboration between our teams",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m reaching out because we serve {{sharedAudience}}. I think there may be a practical opportunity here, especially if we can share {{mutualBenefit}}.\n\nWould you be open to {{starterAsk}}? If now is not the right time, I can follow up {{nextTouch}}.\n\nBest,",
+      "guidance": [
+        "State the shared audience clearly so the fit is obvious.",
+        "Keep the initial ask lightweight.",
+        "Offer a follow-up window instead of pressure."
+      ],
+      "pitfalls": [
+        "Do not make the collaboration pitch sound generic.",
+        "Do not lead with your own needs without explaining the mutual value."
+      ],
+      "examples": [
+        {"label": "Real estate and staging", "input": "sharedAudience: families in the same neighborhood; mutualBenefit: we can send clients who need the other service; starterAsk: a short coffee chat; nextTouch: I can follow up next week", "output": "Hi,\n\nI’m reaching out because we serve families in the same neighborhood. I think there may be a practical opportunity here, especially if we can share we can send clients who need the other service.\n\nWould you be open to a short coffee chat? If now is not the right time, I can follow up next week.\n\nBest,"},
+        {"label": "Restaurant and hotel", "input": "sharedAudience: travelers looking for easy local dining; mutualBenefit: we can recommend each other to guests; starterAsk: a quick intro call; nextTouch: I can reach back out next week", "output": "Hi,\n\nI’m reaching out because we serve travelers looking for easy local dining. I think there may be a practical opportunity here, especially if we can share we can recommend each other to guests.\n\nWould you be open to a quick intro call? If now is not the right time, I can follow up next week.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include a brochure or deck?", "a": "Not in the first note unless the recipient asks for more detail."},
+        {"q": "Is this only for formal partnerships?", "a": "No. It also works for informal referral relationships."}
+      ],
+      "relatedTags": ["collaboration", "cross-referral", "local", "partnership"]
+    },
+    {
+      "slug": "appointment-follow-up-with-aftercare-note",
+      "name": "Appointment Follow-Up With Aftercare Note",
+      "keyword": "appointment follow up email",
+      "intent": "follow-up",
+      "audience": "Clinics, salons, and service providers",
+      "outcome": "Check in after the appointment and share aftercare or next-step guidance.",
+      "metaDescription": "Build an appointment follow-up email that reinforces aftercare, answers common questions, and sets the next contact point. Free private email tool by ReplyMind.",
+      "h1": "Follow up after the appointment with useful guidance.",
+      "intro": "A follow-up note can reduce confusion and improve results if it includes the right aftercare or next-step information. This tool helps you keep that message clear, concise, and practical.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Lena", "required": false},
+        {"key": "appointmentType", "label": "Appointment type", "type": "text", "placeholder": "Consultation", "required": true},
+        {"key": "aftercare", "label": "Aftercare or next step", "type": "textarea", "placeholder": "Use the recommended product once daily", "required": true},
+        {"key": "questionInvite", "label": "Question invite", "type": "text", "placeholder": "Reply if anything feels unclear", "required": true},
+        {"key": "followUpTime", "label": "Follow-up timing", "type": "text", "placeholder": "In two days", "required": true}
+      ],
+      "subjectTemplate": "Following up on your {{appointmentType}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks again for coming in for your {{appointmentType}}. Here is the main next step: {{aftercare}}.\n\n{{questionInvite}}. I will check back {{followUpTime}}.\n\nBest,",
+      "guidance": [
+        "Focus on the single most useful next step.",
+        "Make the invite for questions easy to act on.",
+        "Set a specific follow-up time if another touch is expected."
+      ],
+      "pitfalls": [
+        "Do not overload the follow-up with too much education.",
+        "Do not make aftercare sound optional if it is important."
+      ],
+      "examples": [
+        {"label": "Clinic follow-up", "input": "appointmentType: consultation; aftercare: use the recommended product once daily; questionInvite: reply if anything feels unclear; followUpTime: in two days", "output": "Hi,\n\nThanks again for coming in for your consultation. Here is the main next step: use the recommended product once daily.\n\nreply if anything feels unclear. I will check back in two days.\n\nBest,"},
+        {"label": "Salon follow-up", "input": "appointmentType: color appointment; aftercare: avoid washing for 24 hours; questionInvite: let me know if you have any concerns; followUpTime: later this week", "output": "Hi,\n\nThanks again for coming in for your color appointment. Here is the main next step: avoid washing for 24 hours.\n\nlet me know if you have any concerns. I will check back later this week.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include multiple instructions?", "a": "Only if they are essential. Keep the aftercare focused."},
+        {"q": "Can this be sent by text instead of email?", "a": "Yes, if your workflow uses text for post-appointment follow-up."}
+      ],
+      "relatedTags": ["follow-up", "aftercare", "appointment", "next-step"]
+    },
+    {
+      "slug": "front-desk-or-office-handoff-note",
+      "name": "Front Desk or Office Handoff Note",
+      "keyword": "office handoff email",
+      "intent": "handoff",
+      "audience": "Hospitality, clinics, and property offices",
+      "outcome": "Pass the next person the information they need to take over without gaps.",
+      "metaDescription": "Create a handoff note with the current status, important context, and what still needs attention. Free private email tool by ReplyMind.",
+      "h1": "Hand off the conversation cleanly.",
+      "intro": "Shift changes and front-desk handoffs work better when the next person has the essential context. This tool helps you share status, key facts, and the pending action so nothing gets missed.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Evening desk", "required": false},
+        {"key": "currentStatus", "label": "Current status", "type": "textarea", "placeholder": "The guest is checked in but needs a late towel delivery", "required": true},
+        {"key": "importantContext", "label": "Important context", "type": "textarea", "placeholder": "They are in room 214 and called twice", "required": true},
+        {"key": "pendingAction", "label": "Pending action", "type": "textarea", "placeholder": "Please send housekeeping after 7 PM", "required": true},
+        {"key": "ownerNote", "label": "Owner note", "type": "text", "placeholder": "I will follow up tomorrow morning", "required": true}
+      ],
+      "subjectTemplate": "Handoff note",
+      "bodyTemplate": "Hi {{recipient}},\n\nCurrent status: {{currentStatus}}. Important context: {{importantContext}}.\n\nPending action: {{pendingAction}}. {{ownerNote}}.\n\nBest,",
+      "guidance": [
+        "Use a status line first so the next person knows the situation immediately.",
+        "Include context that changes how the next person should respond.",
+        "Make the pending action unmistakable."
+      ],
+      "pitfalls": [
+        "Do not assume the next person knows the backstory.",
+        "Do not bury the action item in a paragraph."
+      ],
+      "examples": [
+        {"label": "Hotel front desk handoff", "input": "currentStatus: the guest is checked in but needs a late towel delivery; importantContext: they are in room 214 and called twice; pendingAction: please send housekeeping after 7 PM; ownerNote: I will follow up tomorrow morning", "output": "Hi,\n\nCurrent status: the guest is checked in but needs a late towel delivery. Important context: they are in room 214 and called twice.\n\nPending action: please send housekeeping after 7 PM. I will follow up tomorrow morning.\n\nBest,"},
+        {"label": "Office handoff", "input": "currentStatus: the caller asked for a return call about a quote; importantContext: they prefer afternoon contact; pendingAction: please call after 2 PM; ownerNote: I will finish the estimate later today", "output": "Hi,\n\nCurrent status: the caller asked for a return call about a quote. Important context: they prefer afternoon contact.\n\nPending action: please call after 2 PM. I will finish the estimate later today.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should this be formal?", "a": "No. It should be concise and operational."},
+        {"q": "Can I use bullet points instead?", "a": "If your team prefers them, but this tool keeps the structure in email form."}
+      ],
+      "relatedTags": ["handoff", "shift-change", "office", "front-desk"]
+    },
+    {
+      "slug": "booking-error-apology-and-correction",
+      "name": "Booking Error Apology and Correction",
+      "keyword": "booking error email",
+      "intent": "apology",
+      "audience": "Hospitality and appointment-based operators",
+      "outcome": "Correct a booking mistake, apologize, and show the corrected information.",
+      "metaDescription": "Write a booking error apology with the corrected details, the impact, and the next step. Free private email tool by ReplyMind.",
+      "h1": "Correct the booking error without making it worse.",
+      "intro": "Booking mistakes happen, but the correction needs to be immediate and clear. This tool helps you state the error, show the corrected booking, and tell the person what you changed to fix it.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "errorSummary", "label": "Error summary", "type": "textarea", "placeholder": "We booked the wrong date", "required": true},
+        {"key": "correctedDetails", "label": "Corrected details", "type": "textarea", "placeholder": "Your new date is Saturday at 5 PM", "required": true},
+        {"key": "impactNote", "label": "Impact note", "type": "text", "placeholder": "No extra charge applies", "required": true},
+        {"key": "preventionStep", "label": "Prevention or next step", "type": "text", "placeholder": "I have updated the record and calendar", "required": true}
+      ],
+      "subjectTemplate": "Correction to your booking",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m sorry, but we made a booking error: {{errorSummary}}. The corrected details are {{correctedDetails}}.\n\n{{impactNote}}. {{preventionStep}} so the same issue does not repeat.\n\nBest,",
+      "guidance": [
+        "State the correction in the same email as the apology.",
+        "Include the corrected details in plain language.",
+        "Avoid sounding defensive."
+      ],
+      "pitfalls": [
+        "Do not make the recipient guess which detail is the corrected one.",
+        "Do not over-explain the mistake before fixing it."
+      ],
+      "examples": [
+        {"label": "Reservation correction", "input": "errorSummary: we booked the wrong date; correctedDetails: your new date is Saturday at 5 PM; impactNote: no extra charge applies; preventionStep: I have updated the record and calendar", "output": "Hi,\n\nI’m sorry, but we made a booking error: we booked the wrong date. The corrected details are your new date is Saturday at 5 PM.\n\nNo extra charge applies. I have updated the record and calendar so the same issue does not repeat.\n\nBest,"},
+        {"label": "Tour correction", "input": "errorSummary: the tour was entered under the wrong name; correctedDetails: you are confirmed for Monday at 10 AM; impactNote: your slot stays reserved; preventionStep: I have fixed the schedule entry", "output": "Hi,\n\nI’m sorry, but we made a booking error: the tour was entered under the wrong name. The corrected details are you are confirmed for Monday at 10 AM.\n\nYour slot stays reserved. I have fixed the schedule entry so the same issue does not repeat.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I blame the system or staff?", "a": "No. Focus on the correction and what changes now."},
+        {"q": "What if the correction creates a conflict?", "a": "Say that immediately and offer the closest real alternative."}
+      ],
+      "relatedTags": ["booking-error", "correction", "apology", "schedule"]
+    },
+    {
+      "slug": "local-event-or-community-partnership-invite",
+      "name": "Local Event or Community Partnership Invite",
+      "keyword": "community partnership invite email",
+      "intent": "partnership",
+      "audience": "Local businesses, hospitality, and community-facing teams",
+      "outcome": "Invite a nearby partner to collaborate on an event or community effort.",
+      "metaDescription": "Create a local partnership invite that explains the event, value, and easy next step. Free private email tool by ReplyMind.",
+      "h1": "Invite a local partner with a concrete idea.",
+      "intro": "Community and event partnerships work best when the ask is specific and the benefit is obvious. This tool helps you explain the event, the audience, and the simple role you are asking the other business to play.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Ana", "required": false},
+        {"key": "eventIdea", "label": "Event or community idea", "type": "textarea", "placeholder": "A neighborhood open house", "required": true},
+        {"key": "audience", "label": "Audience or attendees", "type": "textarea", "placeholder": "Local residents and small businesses", "required": true},
+        {"key": "partnerRole", "label": "Partner role", "type": "textarea", "placeholder": "Bring a table and share materials", "required": true},
+        {"key": "followUpWindow", "label": "Follow-up window", "type": "text", "placeholder": "This week", "required": true}
+      ],
+      "subjectTemplate": "Invitation to collaborate locally",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to share an idea for {{eventIdea}}. We think it could be useful for {{audience}} and may be a good fit for your team too.\n\nWould you be open to {{partnerRole}}? If it helps, I can follow up {{followUpWindow}} with a few practical details.\n\nBest,",
+      "guidance": [
+        "Describe the event in one line so the idea lands quickly.",
+        "Make the partner role concrete and limited.",
+        "Keep the follow-up path open but not pushy."
+      ],
+      "pitfalls": [
+        "Do not pitch a vague community partnership with no actual role.",
+        "Do not force urgency if the event is still exploratory."
+      ],
+      "examples": [
+        {"label": "Neighborhood open house", "input": "eventIdea: a neighborhood open house; audience: local residents and small businesses; partnerRole: bring a table and share materials; followUpWindow: this week", "output": "Hi,\n\nI wanted to share an idea for a neighborhood open house. We think it could be useful for local residents and small businesses and may be a good fit for your team too.\n\nWould you be open to bring a table and share materials? If it helps, I can follow up this week with a few practical details.\n\nBest,"},
+        {"label": "Charity cleanup day", "input": "eventIdea: a Saturday cleanup day; audience: nearby property owners and volunteers; partnerRole: help sponsor snacks for volunteers; followUpWindow: early next week", "output": "Hi,\n\nI wanted to share an idea for a Saturday cleanup day. We think it could be useful for nearby property owners and volunteers and may be a good fit for your team too.\n\nWould you be open to help sponsor snacks for volunteers? If it helps, I can follow up early next week with a few practical details.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include a sponsor deck?", "a": "Not in the first email unless they ask for more detail."},
+        {"q": "Can this work for recurring community events?", "a": "Yes, if the role and audience are still clear."}
+      ],
+      "relatedTags": ["community", "partnership", "event", "local"]
+    },
+    {
+      "slug": "service-area-availability-check",
+      "name": "Service Area Availability Check",
+      "keyword": "service area availability email",
+      "intent": "availability",
+      "audience": "Contractors and local service businesses",
+      "outcome": "Confirm whether you serve a location and what the customer should send next.",
+      "metaDescription": "Write a service area availability email that confirms coverage and asks for the one detail needed next. Free private email tool by ReplyMind.",
+      "h1": "Tell them quickly whether you cover their area.",
+      "intro": "Before you quote or book, people need to know if they are in range. This tool helps you confirm the service area, mention the kind of work you cover, and ask for the one detail that determines the next step.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Casey", "required": false},
+        {"key": "serviceArea", "label": "Service area", "type": "textarea", "placeholder": "We serve the north side and nearby suburbs", "required": true},
+        {"key": "coveredWork", "label": "What you cover", "type": "textarea", "placeholder": "Residential and small office work", "required": true},
+        {"key": "neededDetail", "label": "Needed detail", "type": "textarea", "placeholder": "Please send the address", "required": true},
+        {"key": "followUpPlan", "label": "Follow-up plan", "type": "text", "placeholder": "I will confirm if you are in range", "required": true}
+      ],
+      "subjectTemplate": "Checking service availability",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for asking. We currently serve {{serviceArea}} and handle {{coveredWork}}.\n\n{{neededDetail}} and I will confirm if you are in range. {{followUpPlan}}.\n\nBest,",
+      "guidance": [
+        "Answer coverage first so the person knows whether to continue.",
+        "Ask for the next detail only if it is needed for routing or quoting.",
+        "Do not overpromise outside your real service area."
+      ],
+      "pitfalls": [
+        "Do not imply you cover every location if you do not.",
+        "Do not ask for unnecessary intake details before confirming coverage."
+      ],
+      "examples": [
+        {"label": "Cleaning service area", "input": "serviceArea: we serve the north side and nearby suburbs; coveredWork: residential and small office work; neededDetail: please send the address; followUpPlan: I will confirm if you are in range", "output": "Hi,\n\nThanks for asking. We currently serve we serve the north side and nearby suburbs and handle residential and small office work.\n\nplease send the address and I will confirm if you are in range. I will confirm if you are in range.\n\nBest,"},
+        {"label": "Handyman service area", "input": "serviceArea: the downtown corridor and adjacent neighborhoods; coveredWork: repairs and small installs; neededDetail: reply with the zip code; followUpPlan: I will let you know the earliest opening", "output": "Hi,\n\nThanks for asking. We currently serve the downtown corridor and adjacent neighborhoods and handle repairs and small installs.\n\nreply with the zip code and I will confirm if you are in range. I will let you know the earliest opening.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I mention travel fees here?", "a": "Only if they are relevant after the service area is confirmed."},
+        {"q": "Can I use this for remote consultations?", "a": "Yes, if you define the covered work clearly."}
+      ],
+      "relatedTags": ["service-area", "availability", "quote", "coverage"]
+    },
+    {
+      "slug": "move-in-issue-escalation-note",
+      "name": "Move-In Issue Escalation Note",
+      "keyword": "move in issue email",
+      "intent": "escalation",
+      "audience": "Property managers and landlords",
+      "outcome": "Escalate a move-in problem with enough detail for quick action.",
+      "metaDescription": "Build a move-in issue escalation email that explains the problem, urgency, and desired fix. Free private email tool by ReplyMind.",
+      "h1": "Escalate the move-in issue with the facts in place.",
+      "intro": "When move-in goes wrong, the message should be short, factual, and easy to act on. This tool helps you explain the issue, why it matters, and what you need resolved next.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Property manager", "required": false},
+        {"key": "issue", "label": "Move-in issue", "type": "textarea", "placeholder": "The unit was not cleaned before arrival", "required": true},
+        {"key": "impact", "label": "Impact", "type": "textarea", "placeholder": "The tenant could not move in on time", "required": true},
+        {"key": "ask", "label": "What you need done", "type": "textarea", "placeholder": "Please send cleaning back today", "required": true},
+        {"key": "urgency", "label": "Urgency note", "type": "text", "placeholder": "Urgent", "required": true}
+      ],
+      "subjectTemplate": "Move-in issue needs attention",
+      "bodyTemplate": "Hi {{recipient}},\n\nI need to escalate a move-in issue: {{issue}}. This caused {{impact}}.\n\nPriority is {{urgency}}. {{ask}}.\n\nBest,",
+      "guidance": [
+        "State the issue and impact before asking for action.",
+        "Use urgency language only when it matches the situation.",
+        "Keep the request direct."
+      ],
+      "pitfalls": [
+        "Do not soften the message so much that the problem is unclear.",
+        "Do not add unrelated complaints."
+      ],
+      "examples": [
+        {"label": "Apartment move-in problem", "input": "issue: the unit was not cleaned before arrival; impact: the tenant could not move in on time; ask: please send cleaning back today; urgency: urgent", "output": "Hi,\n\nI need to escalate a move-in issue: the unit was not cleaned before arrival. This caused the tenant could not move in on time.\n\nPriority is urgent. please send cleaning back today.\n\nBest,"},
+        {"label": "Vacation rental issue", "input": "issue: the lockbox code did not work; impact: the guest was stuck outside; ask: please verify the code immediately; urgency: high", "output": "Hi,\n\nI need to escalate a move-in issue: the lockbox code did not work. This caused the guest was stuck outside.\n\nPriority is high. please verify the code immediately.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include photos or attachments?", "a": "Only if they help the recipient fix the issue faster."},
+        {"q": "Can this be sent to an owner?", "a": "Yes, if ownership review is required for the fix."}
+      ],
+      "relatedTags": ["move-in", "escalation", "issue", "urgency"]
+    },
+    {
+      "slug": "service-follow-up-to-confirm-satisfaction",
+      "name": "Service Follow-Up to Confirm Satisfaction",
+      "keyword": "service follow up email",
+      "intent": "follow-up",
+      "audience": "Contractors, clinics, and local service businesses",
+      "outcome": "Check whether the customer is satisfied and invite a reply before small issues grow.",
+      "metaDescription": "Create a service follow-up email that checks satisfaction, asks about any issues, and keeps the relationship open. Free private email tool by ReplyMind.",
+      "h1": "Check in after the job before problems linger.",
+      "intro": "A short post-service check-in can catch small issues early and show that the work still matters after payment. This tool helps you ask whether everything is working as expected and invite feedback without pressure.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "serviceDone", "label": "Service completed", "type": "textarea", "placeholder": "We completed the water heater install", "required": true},
+        {"key": "checkQuestion", "label": "Check-in question", "type": "textarea", "placeholder": "Is everything working as expected?", "required": true},
+        {"key": "supportOffer", "label": "Support offer", "type": "text", "placeholder": "Reply if you want us to look at anything", "required": true},
+        {"key": "followUpTiming", "label": "Follow-up timing", "type": "text", "placeholder": "Later this week", "required": true}
+      ],
+      "subjectTemplate": "Checking in after your service",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to check in after {{serviceDone}}. {{checkQuestion}}\n\n{{supportOffer}}. I will follow up again {{followUpTiming}} if I do not hear back.\n\nBest,",
+      "guidance": [
+        "Ask one clear satisfaction question.",
+        "Offer support without making the recipient chase you.",
+        "Use a follow-up timing only if another touch is expected."
+      ],
+      "pitfalls": [
+        "Do not make this sound like a sales pitch.",
+        "Do not leave the support path unclear."
+      ],
+      "examples": [
+        {"label": "Install follow-up", "input": "serviceDone: we completed the water heater install; checkQuestion: is everything working as expected?; supportOffer: reply if you want us to look at anything; followUpTiming: later this week", "output": "Hi,\n\nI wanted to check in after we completed the water heater install. is everything working as expected?\n\nreply if you want us to look at anything. I will follow up again later this week if I do not hear back.\n\nBest,"},
+        {"label": "Hotel stay follow-up", "input": "serviceDone: your recent stay; checkQuestion: did everything meet your expectations?; supportOffer: let us know if anything needs attention; followUpTiming: next week", "output": "Hi,\n\nI wanted to check in after your recent stay. did everything meet your expectations?\n\nlet us know if anything needs attention. I will follow up again next week if I do not hear back.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I send this the same day?", "a": "Often the next day or later is better unless you need immediate feedback."},
+        {"q": "What if they already gave feedback verbally?", "a": "Still useful if you want a written response or to close the loop."}
+      ],
+      "relatedTags": ["follow-up", "satisfaction", "service", "feedback"]
+    },
+    {
+      "slug": "priority-room-or-appointment-escalation",
+      "name": "Priority Room or Appointment Escalation",
+      "keyword": "priority appointment email",
+      "intent": "escalation",
+      "audience": "Hospitality, clinics, and service operations",
+      "outcome": "Escalate a high-priority room or appointment issue with the right urgency.",
+      "metaDescription": "Write a priority escalation email for a room, visit, or appointment that needs immediate attention. Free private email tool by ReplyMind.",
+      "h1": "Escalate the priority case so it gets handled now.",
+      "intro": "Some issues need immediate attention because they affect check-in, treatment, or a paying appointment. This tool helps you state the priority, the consequence, and the action needed right away.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Operations", "required": false},
+        {"key": "priorityIssue", "label": "Priority issue", "type": "textarea", "placeholder": "The guest room is still not ready", "required": true},
+        {"key": "consequence", "label": "Consequence", "type": "textarea", "placeholder": "The arriving guest cannot check in", "required": true},
+        {"key": "actionNeeded", "label": "Action needed", "type": "textarea", "placeholder": "Please assign a team immediately", "required": true},
+        {"key": "urgencyLevel", "label": "Urgency level", "type": "text", "placeholder": "Immediate", "required": true}
+      ],
+      "subjectTemplate": "Immediate attention needed",
+      "bodyTemplate": "Hi {{recipient}},\n\nThis is an urgent update: {{priorityIssue}}. The consequence is {{consequence}}.\n\nPriority is {{urgencyLevel}}. {{actionNeeded}}.\n\nBest,",
+      "guidance": [
+        "Make the consequence explicit so the urgency is justified.",
+        "Use the urgency level consistently with the actual problem.",
+        "Ask for one immediate action."
+      ],
+      "pitfalls": [
+        "Do not overstate urgency for routine issues.",
+        "Do not bury the problem inside general context."
+      ],
+      "examples": [
+        {"label": "Room escalation", "input": "priorityIssue: the guest room is still not ready; consequence: the arriving guest cannot check in; actionNeeded: please assign a team immediately; urgencyLevel: immediate", "output": "Hi,\n\nThis is an urgent update: the guest room is still not ready. The consequence is the arriving guest cannot check in.\n\nPriority is immediate. please assign a team immediately.\n\nBest,"},
+        {"label": "Appointment escalation", "input": "priorityIssue: the patient has been waiting past their slot; consequence: the schedule is backing up; actionNeeded: please alert the front desk now; urgencyLevel: high", "output": "Hi,\n\nThis is an urgent update: the patient has been waiting past their slot. The consequence is the schedule is backing up.\n\nPriority is high. please alert the front desk now.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include more background?", "a": "Only if it helps the recipient act faster."},
+        {"q": "Can I use this for internal teams only?", "a": "Yes. It is best for internal escalation and coordination."}
+      ],
+      "relatedTags": ["priority", "escalation", "urgent", "operations"]
+    },
+    {
+      "slug": "quote-expiration-reminder-with-option-to-revisit",
+      "name": "Quote Expiration Reminder With Option to Revisit",
+      "keyword": "quote expiration email",
+      "intent": "follow-up",
+      "audience": "Contractors and local service businesses",
+      "outcome": "Remind the customer the quote is expiring and give a path to move ahead.",
+      "metaDescription": "Build a quote expiration reminder email that notes the deadline and next step. Free private email tool by ReplyMind.",
+      "h1": "Remind them the quote is still open, but not forever.",
+      "intro": "When a quote has a deadline, the reminder should be polite and clear. This tool helps you reference the expiring quote, restate the decision point, and give one easy way to move ahead or revisit later.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Maya", "required": false},
+        {"key": "quoteScope", "label": "Quote scope", "type": "textarea", "placeholder": "The bathroom remodel estimate", "required": true},
+        {"key": "expiryDate", "label": "Expiry date", "type": "text", "placeholder": "Friday", "required": true},
+        {"key": "decisionAsk", "label": "Decision ask", "type": "textarea", "placeholder": "Please let me know if you want to move forward", "required": true},
+        {"key": "revisitOption", "label": "Revisit option", "type": "text", "placeholder": "We can revisit if timing changes", "required": true}
+      ],
+      "subjectTemplate": "Reminder: your quote expires {{expiryDate}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to remind you that the quote for {{quoteScope}} expires {{expiryDate}}.\n\n{{decisionAsk}}. {{revisitOption}} if you need to compare timing.\n\nBest,",
+      "guidance": [
+        "Put the expiration date where it can be seen quickly.",
+        "Keep the ask low-pressure and specific.",
+        "Offer a realistic revisit path."
+      ],
+      "pitfalls": [
+        "Do not sound like you are trying to force a decision.",
+        "Do not omit the expiry date if it matters."
+      ],
+      "examples": [
+        {"label": "Remodel quote", "input": "quoteScope: the bathroom remodel estimate; expiryDate: Friday; decisionAsk: please let me know if you want to move forward; revisitOption: we can revisit if timing changes", "output": "Hi,\n\nI wanted to remind you that the quote for the bathroom remodel estimate expires Friday.\n\nplease let me know if you want to move forward. We can revisit if timing changes if you need to compare timing.\n\nBest,"},
+        {"label": "Cleaning quote", "input": "quoteScope: the deep cleaning proposal; expiryDate: next Wednesday; decisionAsk: reply if you want me to reserve the date; revisitOption: I can update it later if needed", "output": "Hi,\n\nI wanted to remind you that the quote for the deep cleaning proposal expires next Wednesday.\n\nreply if you want me to reserve the date. I can update it later if needed if you need to compare timing.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I remind before the expiration date?", "a": "Yes, if you want to give the customer room to act."},
+        {"q": "Can I use this after a verbal estimate too?", "a": "Yes, if you want to anchor the conversation with a written deadline."}
+      ],
+      "relatedTags": ["quote", "expiration", "follow-up", "decision"]
+    },
+    {
+      "slug": "room-upgrade-or-substitution-explanation",
+      "name": "Room Upgrade or Substitution Explanation",
+      "keyword": "room substitution email",
+      "intent": "change",
+      "audience": "Hospitality teams and property managers",
+      "outcome": "Explain a room change or substitution clearly and preserve the guest experience.",
+      "metaDescription": "Create a room upgrade or substitution email that explains the change, the reason, and the benefit. Free private email tool by ReplyMind.",
+      "h1": "Explain the room change before the guest arrives.",
+      "intro": "If a room or unit changes, the message should explain the new assignment and why it is the better option. This tool helps you make the substitution clear and reassuring.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "originalRoom", "label": "Original room or unit", "type": "text", "placeholder": "Room 208", "required": true},
+        {"key": "newRoom", "label": "New room or unit", "type": "text", "placeholder": "Room 312", "required": true},
+        {"key": "reason", "label": "Reason for change", "type": "textarea", "placeholder": "The original room needs maintenance", "required": true},
+        {"key": "benefit", "label": "Benefit or reassurance", "type": "text", "placeholder": "The new room is quieter and ready now", "required": true}
+      ],
+      "subjectTemplate": "Update on your room assignment",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe wanted to let you know that your assignment has changed from {{originalRoom}} to {{newRoom}} because {{reason}}.\n\nThe good news is {{benefit}}.\n\nBest,",
+      "guidance": [
+        "State both the original and new room so the change is unmistakable.",
+        "Keep the reason short and factual.",
+        "End with the practical benefit to reduce concern."
+      ],
+      "pitfalls": [
+        "Do not make the guest discover the change on arrival.",
+        "Do not sound as if you are hiding a problem."
+      ],
+      "examples": [
+        {"label": "Hotel room change", "input": "originalRoom: Room 208; newRoom: Room 312; reason: the original room needs maintenance; benefit: the new room is quieter and ready now", "output": "Hi,\n\nWe wanted to let you know that your assignment has changed from Room 208 to Room 312 because the original room needs maintenance.\n\nThe good news is the new room is quieter and ready now.\n\nBest,"},
+        {"label": "Apartment substitution", "input": "originalRoom: Unit B; newRoom: Unit D; reason: the original unit had a repair issue; benefit: the new unit has the same layout and better light", "output": "Hi,\n\nWe wanted to let you know that your assignment has changed from Unit B to Unit D because the original unit had a repair issue.\n\nThe good news is the new unit has the same layout and better light.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I call this an upgrade if it is not better?", "a": "No. Use accurate language only."},
+        {"q": "What if the guest has already seen the original room?", "a": "Acknowledge the change directly and explain the benefit."}
+      ],
+      "relatedTags": ["room-change", "substitution", "hospitality", "update"]
+    },
+    {
+      "slug": "appointment-intake-request-before-confirmation",
+      "name": "Appointment Intake Request Before Confirmation",
+      "keyword": "appointment intake email",
+      "intent": "intake",
+      "audience": "Clinics, salons, and service businesses",
+      "outcome": "Collect only the needed details before confirming the appointment.",
+      "metaDescription": "Build an appointment intake request that asks for the missing details needed to confirm. Free private email tool by ReplyMind.",
+      "h1": "Ask for the missing detail without making intake feel heavy.",
+      "intro": "Sometimes the best next step is one short intake question. This tool helps you ask for the exact detail you need to confirm the appointment and explains why it matters.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Alex", "required": false},
+        {"key": "appointmentType", "label": "Appointment type", "type": "text", "placeholder": "Initial consultation", "required": true},
+        {"key": "missingDetail", "label": "Missing detail", "type": "textarea", "placeholder": "Please send your preferred date of birth", "required": true},
+        {"key": "whyNeeded", "label": "Why it is needed", "type": "textarea", "placeholder": "So we can confirm the booking properly", "required": true},
+        {"key": "confirmationTiming", "label": "Confirmation timing", "type": "text", "placeholder": "As soon as we have it", "required": true}
+      ],
+      "subjectTemplate": "One detail needed to confirm your {{appointmentType}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe are almost ready to confirm your {{appointmentType}}, but we still need {{missingDetail}}.\n\n{{whyNeeded}}. Once we have it, we can confirm {{confirmationTiming}}.\n\nBest,",
+      "guidance": [
+        "Ask for one detail only if that is enough to move forward.",
+        "Explain why the detail matters in one short phrase.",
+        "Set the confirmation timing clearly."
+      ],
+      "pitfalls": [
+        "Do not turn a simple intake message into a long questionnaire.",
+        "Do not leave the recipient guessing whether the appointment is still pending."
+      ],
+      "examples": [
+        {"label": "Clinic intake", "input": "appointmentType: initial consultation; missingDetail: please send your preferred date of birth; whyNeeded: so we can confirm the booking properly; confirmationTiming: as soon as we have it", "output": "Hi,\n\nWe are almost ready to confirm your initial consultation, but we still need please send your preferred date of birth.\n\nso we can confirm the booking properly. Once we have it, we can confirm as soon as we have it.\n\nBest,"},
+        {"label": "Salon intake", "input": "appointmentType: color appointment; missingDetail: please share a current hair photo; whyNeeded: so we can choose the right service length; confirmationTiming: right after you send it", "output": "Hi,\n\nWe are almost ready to confirm your color appointment, but we still need please share a current hair photo.\n\nso we can choose the right service length. Once we have it, we can confirm right after you send it.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I explain privacy here?", "a": "Only if the missing detail is sensitive and your process requires it."},
+        {"q": "What if I need multiple details?", "a": "Request the minimum set that is actually required to confirm."}
+      ],
+      "relatedTags": ["intake", "confirmation", "appointment", "details"]
+    },
+    {
+      "slug": "guest-thank-you-with-return-invite",
+      "name": "Guest Thank You With Return Invite",
+      "keyword": "guest thank you email",
+      "intent": "follow-up",
+      "audience": "Hospitality teams and local operators",
+      "outcome": "Thank the guest or customer and leave the door open for another visit or booking.",
+      "metaDescription": "Create a guest thank-you email that acknowledges the stay or visit and invites a future return. Free private email tool by ReplyMind.",
+      "h1": "Thank them in a way that invites a return.",
+      "intro": "A thank-you note can strengthen the relationship if it feels specific to the stay or visit. This tool helps you mention what they enjoyed, thank them sincerely, and offer a reason to come back.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Mila", "required": false},
+        {"key": "visitOrStay", "label": "Visit or stay reference", "type": "textarea", "placeholder": "Your weekend stay", "required": true},
+        {"key": "highlight", "label": "Highlight from the experience", "type": "textarea", "placeholder": "The view and the easy check-in", "required": true},
+        {"key": "returnInvite", "label": "Return invite", "type": "text", "placeholder": "We would love to host you again", "required": true},
+        {"key": "futureHelp", "label": "Future help note", "type": "text", "placeholder": "Reply if we can help with a future booking", "required": true}
+      ],
+      "subjectTemplate": "Thank you for staying with us",
+      "bodyTemplate": "Hi {{recipient}},\n\nThank you again for {{visitOrStay}}. I’m glad you enjoyed {{highlight}}.\n\n{{returnInvite}}. {{futureHelp}} if we can help with anything else.\n\nBest,",
+      "guidance": [
+        "Mention a real part of the experience to keep the note personal.",
+        "Keep the return invite warm and simple.",
+        "Avoid making the thank-you feel transactional."
+      ],
+      "pitfalls": [
+        "Do not sound like you are asking for another booking immediately.",
+        "Do not use generic praise that could apply to anyone."
+      ],
+      "examples": [
+        {"label": "Hotel thank-you", "input": "visitOrStay: your weekend stay; highlight: the view and the easy check-in; returnInvite: we would love to host you again; futureHelp: reply if we can help with a future booking", "output": "Hi,\n\nThank you again for your weekend stay. I’m glad you enjoyed the view and the easy check-in.\n\nwe would love to host you again. reply if we can help with a future booking if we can help with anything else.\n\nBest,"},
+        {"label": "Salon thank-you", "input": "visitOrStay: your appointment yesterday; highlight: the color refresh and the calm pace; returnInvite: we hope to see you again soon; futureHelp: let us know if you want a next visit reserved", "output": "Hi,\n\nThank you again for your appointment yesterday. I’m glad you enjoyed the color refresh and the calm pace.\n\nwe hope to see you again soon. let us know if you want a next visit reserved if we can help with anything else.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include a discount?", "a": "Only if you already have a defined return offer."},
+        {"q": "Can this be used after a site visit?", "a": "Yes, any positive customer visit works."}
+      ],
+      "relatedTags": ["thank-you", "guest", "return", "follow-up"]
+    }
+  ]
+}

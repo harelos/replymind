@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — ReplyMind</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/shared.css" />
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="wordmark" href="/">Reply<em>Mind</em></a>
+    <nav class="nav-links">
+      <a href="/#pricing">Pricing</a>
+      <a class="button" href="https://chromewebstore.google.com/detail/pjoibapolglmhhkgfilpgailpjmiekai">Install free</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-container">
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-updated">Last updated: August 8, 2026</p>
+
+  <div class="limited-use">
+    <p><strong>Chrome Web Store Limited Use Statement:</strong> The use of information received from Google APIs will adhere to the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use/" target="_blank">Chrome Web Store User Data Policy</a>, including the Limited Use requirements. Specifically: (1) ReplyMind only uses data to provide, maintain, secure, measure, and improve its disclosed user-facing reply features; (2) ReplyMind does not transfer data except as necessary to provide those features (OpenAI for reply generation), as required by law, for security purposes, or as otherwise permitted by the policy; (3) ReplyMind does not use data for advertising or marketing; and (4) no human reads user data except with explicit consent for specific data, for security investigation, to comply with law, or when data is aggregated and anonymized for internal operations.</p>
+  </div>
+
+  <h2>1. User Data Collection</h2>
+  <p>ReplyMind collects minimal data strictly necessary to provide its service:</p>
+  <ul>
+    <li><strong>Account email address</strong> — collected during registration for authentication, account management, and to send you transactional notifications or promotional offers (which you can opt out of at any time).</li>
+    <li><strong>Email message text (Gmail)</strong> — the text of the specific email you are actively replying to, read only when you click "Generate Reply". This is transmitted to our server for AI processing and immediately discarded. It is never stored, logged, or cached on our servers.</li>
+    <li><strong>LinkedIn message text (paid-plan users)</strong> — the text of the LinkedIn message you are actively replying to, read only when you click "Generate Reply". Transmitted to our server for AI processing and immediately discarded. It is never stored, logged, or cached on our servers.</li>
+    <li><strong>Intent selection</strong> — when you generate a reply, you choose a reply intent (e.g. "Agree", "Follow Up", "Decline"). This intent label is sent to our server along with the message text to guide the AI response. The intent label itself is not stored.</li>
+    <li><strong>Reply choices</strong> — when you select a generated reply, the intent category you chose and a timestamp are saved to your account on our server. This is used to learn your communication style over time and auto-detect your preferred tone after 15 choices. No message content or reply text is stored — only the intent label.</li>
+    <li><strong>Feedback</strong> — when you give thumbs-up or thumbs-down feedback on a generated reply, the rating and associated intent are sent to our server. No message content or reply text is included.</li>
+    <li><strong>Industry</strong> — during registration you may provide your industry (e.g. "Real Estate", "Marketing"). This is stored on our server to help tailor reply suggestions.</li>
+    <li><strong>Voice profile</strong> — if you use voice setup, ReplyMind analyses the samples in your browser and saves only the resulting voice profile and traits in Chrome extension storage. The source email samples are not saved.</li>
+    <li><strong>Usage statistics</strong> — your reply count, streak (consecutive active days), and last active date are tracked on our server to enforce plan limits and display your usage stats.</li>
+    <li><strong>Contact notes</strong> — notes you voluntarily save about email contacts (e.g. relationship context or tone preferences). They are stored locally in your browser via <code>chrome.storage.local</code>. When you request a Gmail reply for that contact, the relevant note is transmitted securely with that single generation request so the reply can use the context. Contact notes are not stored, logged, or cached on our servers.</li>
+    <li><strong>Follow-up reminders</strong> — reminder details (contact name, email, due date, and your custom message) that you set. Stored locally in your browser via <code>chrome.storage.local</code> only; never sent to our servers.</li>
+    <li><strong>Session token and account data</strong> — when you sign in, your authentication token and account plan information are stored locally via <code>chrome.storage.sync</code> to keep you logged in across sessions.</li>
+    <li><strong>Error telemetry</strong> — we use Sentry to capture crash reports and unhandled errors in order to improve reliability. This may include basic device information, anonymized IP addresses, and stack traces. It does not include email or LinkedIn message content.</li>
+  </ul>
+
+  <h2>What we do NOT collect</h2>
+  <ul>
+    <li>We do not scan, read, or store your inbox or any emails other than the one you are actively replying to</li>
+    <li>We do not read or store any LinkedIn messages other than the one you are actively replying to</li>
+    <li>We do not collect browsing history or activity on any website</li>
+    <li>We do not collect financial information</li>
+    <li>We do not use cookies for tracking</li>
+    <li>We do not sell, rent, or transfer your personal data to any third party for advertising or marketing purposes</li>
+  </ul>
+
+  <h2>2. User Data Handling</h2>
+  <p><strong>How we use your data:</strong> Email and LinkedIn message text is used solely to generate reply suggestions. When you click "Generate Reply", the active message, your selected intent, your derived writing-style instructions, and—on Gmail when available—the relevant locally saved contact note are transmitted securely via HTTPS to our backend server (hosted on Railway), which then forwards them to an AI language model API to produce a reply suggestion. This request data is used for that single purpose only and is never stored, logged, or used for advertising or marketing.</p>
+  <p>Reply choices and feedback are used to improve your experience over time. After 15 reply choices, ReplyMind can auto-detect your preferred communication tone based on your intent patterns. Feedback helps us understand which reply styles work best. Only intent labels, ratings, and timestamps are stored — never message content.</p>
+  <p>Your industry is used to provide more relevant reply suggestions tailored to your professional context.</p>
+  <p>Usage statistics (reply count, streak, last active date) are used to enforce plan-based limits and provide you with productivity insights within the extension.</p>
+  <p>Contact notes and follow-up reminders remain stored on your local device. A relevant contact note leaves the device only when you deliberately generate a Gmail reply for that contact, and is discarded after that request. Reminder details remain local and are used only to schedule the browser notification you requested.</p>
+  <p>Your session token authenticates your account and enforces plan limits. If you affirmatively opt in inside ReplyMind, it also associates privacy-safe product events with your account. These optional events may include onboarding completion, reply generation or insertion, a memory limit being shown, checkout clicks, and reliability errors. They never contain message text, generated replies, recipient addresses, contact names, contact notes, or browsing history. You can change this choice at any time from <strong>Analytics settings</strong> in the extension popup.</p>
+
+  <p><strong>Background activity:</strong> ReplyMind's background service worker schedules follow-up reminder alarms you have set and displays browser notifications when those reminders are due. It does not scan message content, your inbox, or browsing activity. Privacy-safe product events are sent only after you opt in and only when the disclosed actions occur.</p>
+
+  <p><strong>No human access:</strong> No ReplyMind employee, contractor, or affiliate reads your email content, LinkedIn messages, or generated replies. User data is processed exclusively by automated systems. The only exceptions are: (1) if you explicitly contact support and share message content for troubleshooting, (2) if required by applicable law, or (3) for investigating security abuse, in which case only aggregated and anonymized data is used.</p>
+
+  <h2>3. User Data Storage</h2>
+  <p><strong>Stored on our server (PostgreSQL database):</strong> your account credentials (email, hashed password), tone profile, industry, plan and activation status, reply choice history (intent labels and timestamps only), feedback ratings, usage statistics, and privacy-safe product events such as onboarding completion, reply insertion, memory-limit views, and checkout clicks. Product events contain no email or LinkedIn message content, generated replies, recipient addresses, contact names, or contact notes.</p>
+  <p><strong>Stored in Chrome extension storage:</strong> your derived voice profile and voice traits, contact notes, follow-up reminders, activation progress, dismissed tips, session tokens, your analytics consent choice, and—only after opt-in—a short pending queue of the privacy-safe product events described above are stored using Chrome's built-in storage APIs (<code>chrome.storage.local</code> and <code>chrome.storage.sync</code>). The email samples used to derive your voice profile are analysed on-device and are not saved. Contact notes remain local at rest; a relevant note is temporarily included only in a Gmail reply-generation request for that contact. Reminder details are not sent to ReplyMind. Queued product events contain no message or contact content.</p>
+  <p><strong>Never stored anywhere:</strong> email message text, LinkedIn message text, and generated reply text are never stored, logged, or cached on our servers or in local storage. They exist only in memory during the generation request and are discarded immediately after.</p>
+  <p>All data transmission between the extension and our backend server, and between our backend and OpenAI, is encrypted via HTTPS.</p>
+
+  <h2>4. User Data Sharing</h2>
+  <p>We share the active email or LinkedIn message, derived writing-style instructions, and—when applicable—the relevant contact-note context with the following third party solely to generate the reply you requested. Payment information is handled separately by our payment provider:</p>
+  <ul>
+    <li><strong>OpenAI</strong> — our backend sends the generation-request data described above to OpenAI's API to generate reply suggestions. OpenAI processes this data under its own privacy policy at <a href="https://openai.com/policies/privacy-policy" target="_blank">openai.com/policies/privacy-policy</a>. OpenAI does not use API-submitted data to train its models by default.</li>
+    <li><strong>Paddle</strong> — if you subscribe to a paid plan, payment is processed by Paddle as our Merchant of Record. We never see, collect, or store your full payment-card information. Paddle's privacy policy applies at <a href="https://www.paddle.com/legal/privacy" target="_blank">paddle.com/legal/privacy</a>.</li>
+    <li><strong>Sentry</strong> — we use Sentry to monitor errors and crashes to improve reliability. Sentry processes error telemetry under its own privacy policy at <a href="https://sentry.io/privacy/" target="_blank">sentry.io/privacy/</a>.</li>
+    <li><strong>Resend</strong> — we use Resend to deliver transactional and promotional emails (such as account updates, support responses, or special offers). Your account email address is shared with Resend solely for this purpose. Resend's privacy policy applies at <a href="https://resend.com/legal/privacy-policy" target="_blank">resend.com/legal/privacy-policy</a>.</li>
+  </ul>
+  <p>We do not sell your data or use third-party advertising or analytics providers. Optional product analytics are first-party, limited to the non-content events described above, and used to understand reliability, activation, and paid conversion.</p>
+
+  <h2>Your rights and data deletion</h2>
+  <p>You can remove all locally stored data (contact notes, reminders, dismissed tips) at any time by uninstalling the ReplyMind extension from Chrome. Uninstalling clears all local storage associated with the extension.</p>
+  <p>To delete your account and all associated server-side data — including your email address, hashed password, tone profile, industry, reply choice history, feedback, usage statistics, and any privacy-safe product events associated with your account — email us at <a href="mailto:hello@replymind.xyz">hello@replymind.xyz</a>. We will permanently remove all your data within 7 days and confirm by email.</p>
+
+  <h2>Children</h2>
+  <p>ReplyMind is not directed at children under 13 and we do not knowingly collect data from children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy from time to time. We will notify users of material changes via the Chrome Web Store listing or by email. The "Last updated" date at the top of this page reflects the most recent revision. Continued use of ReplyMind after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>Contact</h2>
+  <p><strong>TIGERBESTBRANDS LLC</strong><br>5830 EAST 2ND ST. PMB 90171<br>CASPER, WY 82609</p>
+  <p>Privacy questions: <a href="mailto:hello@replymind.xyz">hello@replymind.xyz</a></p>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 ReplyMind by TIGERBESTBRANDS LLC</span>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/refund.html">Refund</a>
+      <a href="/support.html">Support</a>
+      <a href="mailto:hello@replymind.xyz">Contact</a>
+    </div>
+  </div>
+  <div class="footer-inner">
+    <span class="footer-address">5830 EAST 2ND ST. PMB 90171, CASPER, WY 82609</span>
+  </div>
+</footer>
+</body>
+</html>

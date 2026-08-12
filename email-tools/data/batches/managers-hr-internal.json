@@ -1,0 +1,1760 @@
+{
+  "batch": "managers-hr-internal",
+  "avatar": "Managers, HR, team leads, and internal operations",
+  "tools": [
+    {
+      "slug": "performance-check-in-summmary-builder",
+      "name": "Performance Check-In Summary Builder",
+      "keyword": "performance check in email",
+      "intent": "performance conversation",
+      "audience": "People managers",
+      "outcome": "Summarize a performance check-in with clear wins, gaps, and next steps without sounding vague.",
+      "metaDescription": "Build a performance check-in email that names what is going well, what needs attention, and what happens next. Free private email tool by ReplyMind.",
+      "h1": "Write a check-in that leads to action.",
+      "intro": "Performance conversations are easier when the message is specific and calm. This tool helps you share what you observed, what should change, and the next checkpoint so the employee knows how to move forward.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "strengths", "label": "What is going well", "type": "textarea", "placeholder": "You have been strong on follow-through and communication", "required": true},
+        {"key": "concerns", "label": "What needs attention", "type": "textarea", "placeholder": "Project updates are arriving too late for alignment", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "Send a short weekly update every Friday", "required": true},
+        {"key": "followUpTiming", "label": "Follow-up timing", "type": "text", "placeholder": "In two weeks", "required": false}
+      ],
+      "subjectTemplate": "Performance check-in and next steps",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to share a quick check-in. What is going well is {{strengths}}. The area I want us to address is {{concerns}}.\n\nThe next step is {{nextStep}}. We will revisit this {{followUpTiming}}.\n\nBest,",
+      "guidance": [
+        "State both the positive and the concern so the note feels balanced and grounded in real examples.",
+        "Make the next step observable and specific enough that you can actually follow up on it.",
+        "Keep the tone direct and respectful; the goal is alignment, not a formal warning."
+      ],
+      "pitfalls": [
+        "Do not write in abstract terms like 'be more strategic' without naming the behavior.",
+        "Do not stack too many concerns into one note if one pattern is the real issue."
+      ],
+      "examples": [
+        {
+          "label": "Mid-quarter performance check",
+          "input": "recipientName: Alex; strengths: you have been strong on follow-through and communication; concerns: project updates are arriving too late for alignment; nextStep: send a short weekly update every Friday; followUpTiming: in two weeks",
+          "output": "Hi Alex,\n\nI wanted to share a quick check-in. What is going well is you have been strong on follow-through and communication. The area I want us to address is project updates are arriving too late for alignment.\n\nThe next step is send a short weekly update every Friday. We will revisit this in two weeks.\n\nBest,"
+        },
+        {
+          "label": "New manager coaching note",
+          "input": "recipientName: Priya; strengths: you are building trust quickly with the team; concerns: decisions are sometimes explained after they are made; nextStep: share the decision context before rollout; followUpTiming: next month",
+          "output": "Hi Priya,\n\nI wanted to share a quick check-in. What is going well is you are building trust quickly with the team. The area I want us to address is decisions are sometimes explained after they are made.\n\nThe next step is share the decision context before rollout. We will revisit this next month.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I send this before or after the conversation?", "a": "After the conversation is usually better, because the email can capture the agreed next step."},
+        {"q": "Can this replace a formal review?", "a": "No. It is for a check-in summary, not a full performance evaluation."}
+      ],
+      "relatedTags": ["performance", "1:1", "manager", "feedback"]
+    },
+    {
+      "slug": "constructive-feedback-followup-builder",
+      "name": "Constructive Feedback Follow-Up Builder",
+      "keyword": "constructive feedback follow up",
+      "intent": "feedback conversation",
+      "audience": "Managers and team leads",
+      "outcome": "Turn verbal feedback into a written follow-up that is clear, fair, and easy to act on.",
+      "metaDescription": "Create a follow-up email after a feedback conversation with examples, expected change, and a simple checkpoint. Free private email tool by ReplyMind.",
+      "h1": "Put the feedback in writing without making it heavier than it needs to be.",
+      "intro": "A written follow-up helps the other person remember the exact behavior you discussed and what to do next. This tool keeps the message focused on one issue, one change, and one follow-up.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Sam", "required": false},
+        {"key": "behavior", "label": "Behavior discussed", "type": "textarea", "placeholder": "Interrupting in team meetings", "required": true},
+        {"key": "example", "label": "Specific example", "type": "textarea", "placeholder": "The planning meeting on Tuesday ran off track after several interruptions", "required": true},
+        {"key": "changeRequested", "label": "Change requested", "type": "textarea", "placeholder": "Let each person finish before responding", "required": true},
+        {"key": "checkIn", "label": "Check-in timing", "type": "text", "placeholder": "Next Friday", "required": false}
+      ],
+      "subjectTemplate": "Follow-up on our feedback conversation",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to follow up on our conversation about {{behavior}}. A recent example was {{example}}.\n\nThe change we need is {{changeRequested}}. I will check back with you {{checkIn}}.\n\nBest,",
+      "guidance": [
+        "Use one concrete example so the person understands exactly what behavior you mean.",
+        "Avoid sounding like a performance memo if this was meant to stay a coaching conversation.",
+        "Close with a review point so the other person knows the conversation is not open-ended."
+      ],
+      "pitfalls": [
+        "Do not combine multiple unrelated behaviors in one follow-up.",
+        "Do not use vague language like 'be more professional' without describing the change."
+      ],
+      "examples": [
+        {
+          "label": "Meeting interruptions",
+          "input": "recipientName: Sam; behavior: interrupting in team meetings; example: the planning meeting on Tuesday ran off track after several interruptions; changeRequested: let each person finish before responding; checkIn: next Friday",
+          "output": "Hi Sam,\n\nI wanted to follow up on our conversation about interrupting in team meetings. A recent example was the planning meeting on Tuesday ran off track after several interruptions.\n\nThe change we need is let each person finish before responding. I will check back with you next Friday.\n\nBest,"
+        },
+        {
+          "label": "Late handoff issue",
+          "input": "recipientName: Jordan; behavior: handing work over without enough context; example: the support note only included a link and no summary; changeRequested: include the issue, what was tried, and what is still open; checkIn: in one week",
+          "output": "Hi Jordan,\n\nI wanted to follow up on our conversation about handing work over without enough context. A recent example was the support note only included a link and no summary.\n\nThe change we need is include the issue, what was tried, and what is still open. I will check back with you in one week.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I mention the exact date of the example?", "a": "Only if it helps anchor the discussion. The key is to keep the example specific."},
+        {"q": "Do I need a long explanation?", "a": "No. Clear behavior, example, and expected change are enough."}
+      ],
+      "relatedTags": ["feedback", "coaching", "manager", "performance"]
+    },
+    {
+      "slug": "performance-improvement-plan-intro-builder",
+      "name": "Performance Improvement Plan Intro Builder",
+      "keyword": "performance improvement plan email",
+      "intent": "performance management",
+      "audience": "HR and managers",
+      "outcome": "Introduce a formal improvement plan with care, clarity, and the right level of seriousness.",
+      "metaDescription": "Draft a PIP introduction email that explains the purpose, focus areas, support available, and review timing. Free private email tool by ReplyMind.",
+      "h1": "Introduce the plan without adding unnecessary heat.",
+      "intro": "When a formal improvement plan is needed, the email should be direct and measured. This tool helps you explain why the plan exists, what it covers, how support will work, and when progress will be reviewed.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "performanceGap", "label": "Performance gap", "type": "textarea", "placeholder": "Repeated missed deadlines on the same project", "required": true},
+        {"key": "planFocus", "label": "Plan focus areas", "type": "textarea", "placeholder": "Planning, update cadence, and deadline ownership", "required": true},
+        {"key": "supportProvided", "label": "Support provided", "type": "textarea", "placeholder": "Weekly coaching and clearer task checkpoints", "required": true},
+        {"key": "reviewDate", "label": "Review date", "type": "text", "placeholder": "March 15", "required": true}
+      ],
+      "subjectTemplate": "Next steps for performance improvement",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to be direct about the current concern. We have seen {{performanceGap}}, and we need to focus on {{planFocus}}.\n\nTo support you, we will provide {{supportProvided}}. We will review progress again on {{reviewDate}}.\n\nBest,",
+      "guidance": [
+        "State the gap plainly so the person understands the seriousness of the message.",
+        "Include support as part of the plan, not as a vague reassurance.",
+        "Keep the language factual and avoid argumentative phrasing."
+      ],
+      "pitfalls": [
+        "Do not make the note sound like a decision has already been made if the plan is meant to create a chance to improve.",
+        "Do not overload the email with policy language that belongs in the formal document."
+      ],
+      "examples": [
+        {
+          "label": "Deadline misses",
+          "input": "recipientName: Jordan; performanceGap: repeated missed deadlines on the same project; planFocus: planning, update cadence, and deadline ownership; supportProvided: weekly coaching and clearer task checkpoints; reviewDate: March 15",
+          "output": "Hi Jordan,\n\nI want to be direct about the current concern. We have seen repeated missed deadlines on the same project, and we need to focus on planning, update cadence, and deadline ownership.\n\nTo support you, we will provide weekly coaching and clearer task checkpoints. We will review progress again on March 15.\n\nBest,"
+        },
+        {
+          "label": "Quality issues",
+          "input": "recipientName: Maya; performanceGap: recurring quality issues in client deliverables; planFocus: review discipline and final checks; supportProvided: a weekly review session with your lead; reviewDate: April 1",
+          "output": "Hi Maya,\n\nI want to be direct about the current concern. We have seen recurring quality issues in client deliverables, and we need to focus on review discipline and final checks.\n\nTo support you, we will provide a weekly review session with your lead. We will review progress again on April 1.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should this email announce the PIP or summarize it?", "a": "It should introduce the plan and point to the key parts that matter most."},
+        {"q": "Is it okay to mention support in the same note?", "a": "Yes. Support is important because it shows the plan is actionable, not just corrective."}
+      ],
+      "relatedTags": ["pip", "performance", "hr", "manager"]
+    },
+    {
+      "slug": "promotion-readiness-note-builder",
+      "name": "Promotion Readiness Note Builder",
+      "keyword": "promotion readiness email",
+      "intent": "career development",
+      "audience": "Managers",
+      "outcome": "Explain what would make someone ready for promotion and what still needs to be demonstrated.",
+      "metaDescription": "Draft a promotion readiness note with strengths, gaps to close, and the evidence needed for the next level. Free private email tool by ReplyMind.",
+      "h1": "Make readiness concrete instead of generic.",
+      "intro": "Promotion conversations go better when the person knows exactly what they are already doing well and what evidence still needs to show up. This tool helps you write that note clearly and fairly.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Taylor", "required": false},
+        {"key": "currentLevel", "label": "Current level", "type": "text", "placeholder": "Senior Analyst", "required": true},
+        {"key": "targetLevel", "label": "Target level", "type": "text", "placeholder": "Staff Analyst", "required": true},
+        {"key": "readySignals", "label": "Signs of readiness", "type": "textarea", "placeholder": "You lead work independently and influence teammates", "required": true},
+        {"key": "missingEvidence", "label": "Missing evidence", "type": "textarea", "placeholder": "Show that you can drive cross-team decisions", "required": true}
+      ],
+      "subjectTemplate": "What promotion readiness looks like for {{targetLevel}}",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to share a clear view of readiness for the move from {{currentLevel}} to {{targetLevel}}. The signs I am already seeing are {{readySignals}}.\n\nWhat we still need to see is {{missingEvidence}}.\n\nBest,",
+      "guidance": [
+        "Use evidence-based language so the person understands the standard being applied.",
+        "Separate readiness from the actual decision if the process is still in progress.",
+        "Keep the message encouraging without implying a promise."
+      ],
+      "pitfalls": [
+        "Do not use personal or personality-based wording as a substitute for performance evidence.",
+        "Do not leave the person guessing about the final expectation."
+      ],
+      "examples": [
+        {
+          "label": "Ready soon",
+          "input": "recipientName: Taylor; currentLevel: Senior Analyst; targetLevel: Staff Analyst; readySignals: you lead work independently and influence teammates; missingEvidence: show that you can drive cross-team decisions",
+          "output": "Hi Taylor,\n\nI wanted to share a clear view of readiness for the move from Senior Analyst to Staff Analyst. The signs I am already seeing are you lead work independently and influence teammates.\n\nWhat we still need to see is show that you can drive cross-team decisions.\n\nBest,"
+        },
+        {
+          "label": "Future path",
+          "input": "recipientName: Nina; currentLevel: Team Lead; targetLevel: Manager; readySignals: you already run strong one-on-ones and unblock others; missingEvidence: build a stronger pattern of planning across a larger scope",
+          "output": "Hi Nina,\n\nI wanted to share a clear view of readiness for the move from Team Lead to Manager. The signs I am already seeing are you already run strong one-on-ones and unblock others.\n\nWhat we still need to see is build a stronger pattern of planning across a larger scope.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I tell someone they are promoted in this email?", "a": "Only if the decision is already final. Otherwise keep it focused on readiness criteria."},
+        {"q": "Is it too direct to name missing evidence?", "a": "No. Clear evidence criteria are usually more helpful than vague encouragement."}
+      ],
+      "relatedTags": ["promotion", "career-growth", "manager", "development"]
+    },
+    {
+      "slug": "recognition-note-for-team-member-builder",
+      "name": "Recognition Note for Team Member Builder",
+      "keyword": "employee recognition email",
+      "intent": "recognition",
+      "audience": "Managers and peers",
+      "outcome": "Write a recognition note that names the contribution and why it mattered to the team.",
+      "metaDescription": "Create a recognition email that praises a specific contribution and explains its impact. Free private email tool by ReplyMind.",
+      "h1": "Make the recognition specific enough to remember.",
+      "intro": "Good recognition does more than say thanks. It points to the exact contribution, the impact on the team, and what behavior you want to reinforce next time.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Mina", "required": false},
+        {"key": "contribution", "label": "Specific contribution", "type": "textarea", "placeholder": "You rescued the launch plan after the timeline shifted", "required": true},
+        {"key": "impact", "label": "Impact", "type": "textarea", "placeholder": "The team stayed aligned and the launch moved forward", "required": true},
+        {"key": "whyItMattered", "label": "Why it mattered", "type": "textarea", "placeholder": "It prevented last-minute confusion for three teams", "required": true},
+        {"key": "futureSignal", "label": "Behavior to reinforce", "type": "textarea", "placeholder": "Your calm communication under pressure was especially useful", "required": false}
+      ],
+      "subjectTemplate": "Thank you for the way you handled this",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to recognize {{contribution}}. The impact was {{impact}}, and that mattered because {{whyItMattered}}.\n\n{{futureSignal}}\n\nBest,",
+      "guidance": [
+        "Name the action rather than giving generic praise.",
+        "Explain the impact so the recognition feels earned and useful.",
+        "If you include a reinforcement line, keep it tied to a real behavior."
+      ],
+      "pitfalls": [
+        "Do not make the note so broad that it could apply to anyone.",
+        "Do not overdo praise to the point where it sounds inflated."
+      ],
+      "examples": [
+        {
+          "label": "Launch rescue",
+          "input": "recipientName: Mina; contribution: you rescued the launch plan after the timeline shifted; impact: the team stayed aligned and the launch moved forward; whyItMattered: it prevented last-minute confusion for three teams; futureSignal: your calm communication under pressure was especially useful",
+          "output": "Hi Mina,\n\nI wanted to recognize you rescued the launch plan after the timeline shifted. The impact was the team stayed aligned and the launch moved forward, and that mattered because it prevented last-minute confusion for three teams.\n\nYour calm communication under pressure was especially useful\n\nBest,"
+        },
+        {
+          "label": "Process improvement",
+          "input": "recipientName: Leo; contribution: you rebuilt the internal tracker and cleaned up the handoff notes; impact: the team can now find updates faster; whyItMattered: it reduced avoidable follow-up for everyone; futureSignal: the attention to detail stood out",
+          "output": "Hi Leo,\n\nI wanted to recognize you rebuilt the internal tracker and cleaned up the handoff notes. The impact was the team can now find updates faster, and that mattered because it reduced avoidable follow-up for everyone.\n\nthe attention to detail stood out\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should recognition be public or private?", "a": "Either can work. Use private email when the message is more personal or sensitive."},
+        {"q": "Do I need to mention impact every time?", "a": "Yes, if you can. Impact is what turns praise into useful recognition."}
+      ],
+      "relatedTags": ["recognition", "thanks", "manager", "culture"]
+    },
+    {
+      "slug": "team-goal-reset-announcement-builder",
+      "name": "Team Goal Reset Announcement Builder",
+      "keyword": "team goal reset email",
+      "intent": "change management",
+      "audience": "Managers and team leads",
+      "outcome": "Announce a goal reset so the team understands what changed and what stays the same.",
+      "metaDescription": "Draft a team goal reset email that explains the change, the reason, and the new focus. Free private email tool by ReplyMind.",
+      "h1": "Reset the goal without making the team guess what happened.",
+      "intro": "When priorities shift, people need to know which goal changed, why the adjustment matters, and how their work should refocus. This tool keeps that message plain and practical.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "oldGoal", "label": "Old goal", "type": "textarea", "placeholder": "Ship the redesign by month end", "required": true},
+        {"key": "newGoal", "label": "New goal", "type": "textarea", "placeholder": "Prioritize the billing fix and delay the redesign", "required": true},
+        {"key": "reason", "label": "Reason for the shift", "type": "textarea", "placeholder": "Customer issues now have the higher priority", "required": true},
+        {"key": "impact", "label": "Impact on the team", "type": "textarea", "placeholder": "We will replan the next sprint today", "required": true}
+      ],
+      "subjectTemplate": "A quick update on team priorities",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to reset expectations around our goals. We are moving from {{oldGoal}} to {{newGoal}} because {{reason}}.\n\nThe immediate impact is {{impact}}.\n\nBest,",
+      "guidance": [
+        "State the old and new goal so the team can see the change clearly.",
+        "Explain the reason in operational terms, not as a vague leadership decision.",
+        "Tell people what this means for their near-term work so they can adjust quickly."
+      ],
+      "pitfalls": [
+        "Do not announce a reset without saying what the new focus is.",
+        "Do not treat the shift like a surprise if the team will need time to replan."
+      ],
+      "examples": [
+        {
+          "label": "Priority shift",
+          "input": "recipientName: Team; oldGoal: ship the redesign by month end; newGoal: prioritize the billing fix and delay the redesign; reason: customer issues now have the higher priority; impact: we will replan the next sprint today",
+          "output": "Hi Team,\n\nI want to reset expectations around our goals. We are moving from ship the redesign by month end to prioritize the billing fix and delay the redesign because customer issues now have the higher priority.\n\nThe immediate impact is we will replan the next sprint today.\n\nBest,"
+        },
+        {
+          "label": "Scope adjustment",
+          "input": "recipientName: Team; oldGoal: launch three regional campaigns; newGoal: launch one campaign and finish the ops cleanup; reason: the campaign support work is taking longer than planned; impact: we will revisit the second and third launches next month",
+          "output": "Hi Team,\n\nI want to reset expectations around our goals. We are moving from launch three regional campaigns to launch one campaign and finish the ops cleanup because the campaign support work is taking longer than planned.\n\nThe immediate impact is we will revisit the second and third launches next month.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I explain every reason for the change?", "a": "No. Give enough context for people to understand the priority shift."},
+        {"q": "Does this need to sound optimistic?", "a": "It should sound clear and steady more than optimistic."}
+      ],
+      "relatedTags": ["change-management", "priorities", "team", "announcement"]
+    },
+    {
+      "slug": "policy-change-announcement-builder",
+      "name": "Policy Change Announcement Builder",
+      "keyword": "policy change announcement email",
+      "intent": "policy communication",
+      "audience": "HR and operations",
+      "outcome": "Announce a policy change with the reason, effective date, and what people need to do differently.",
+      "metaDescription": "Write a policy change announcement that explains what is changing, when it takes effect, and what employees should do. Free private email tool by ReplyMind.",
+      "h1": "Announce the change in a way people can actually use.",
+      "intro": "Policy updates are easiest to absorb when the message is short and concrete. This tool helps you explain what changed, when it starts, who it affects, and where to go with questions.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "policyChange", "label": "What changed", "type": "textarea", "placeholder": "We are updating the remote work request process", "required": true},
+        {"key": "effectiveDate", "label": "Effective date", "type": "text", "placeholder": "September 1", "required": true},
+        {"key": "employeeAction", "label": "What employees need to do", "type": "textarea", "placeholder": "Submit requests through the new form", "required": true},
+        {"key": "questionsContact", "label": "Questions contact", "type": "text", "placeholder": "HR team", "required": true}
+      ],
+      "subjectTemplate": "Update to our policy process",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe are updating our policy process. {{policyChange}} This takes effect on {{effectiveDate}}.\n\nWhat you need to do: {{employeeAction}}. If you have questions, contact {{questionsContact}}.\n\nBest,",
+      "guidance": [
+        "Name the change in plain language before you explain the process details.",
+        "Include the effective date so people know when the new rule applies.",
+        "Point to a real contact channel so questions do not scatter across the organization."
+      ],
+      "pitfalls": [
+        "Do not bury the actual change inside a long policy explanation.",
+        "Do not omit the effective date, especially if there is a transition period."
+      ],
+      "examples": [
+        {
+          "label": "Remote work process",
+          "input": "recipientName: Team; policyChange: we are updating the remote work request process; effectiveDate: September 1; employeeAction: submit requests through the new form; questionsContact: HR team",
+          "output": "Hi Team,\n\nWe are updating our policy process. We are updating the remote work request process. This takes effect on September 1.\n\nWhat you need to do: submit requests through the new form. If you have questions, contact HR team.\n\nBest,"
+        },
+        {
+          "label": "Expense policy update",
+          "input": "recipientName: Team; policyChange: we are changing the meal reimbursement limit; effectiveDate: next Monday; employeeAction: use the new limit listed in the handbook; questionsContact: finance operations",
+          "output": "Hi Team,\n\nWe are updating our policy process. we are changing the meal reimbursement limit. This takes effect on next Monday.\n\nWhat you need to do: use the new limit listed in the handbook. If you have questions, contact finance operations.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should this include the full policy text?", "a": "No. The email should announce the change and point to the full policy if needed."},
+        {"q": "What if the policy affects only one team?", "a": "Still keep it clear and specific, but address only the affected audience."}
+      ],
+      "relatedTags": ["policy", "hr", "announcement", "operations"]
+    },
+    {
+      "slug": "org-change-announcement-email-builder",
+      "name": "Org Change Announcement Email Builder",
+      "keyword": "org change announcement email",
+      "intent": "organizational communication",
+      "audience": "Managers and HR leaders",
+      "outcome": "Announce an org change with the reporting line, timing, and practical implications.",
+      "metaDescription": "Create an org change announcement email that explains the reporting update, timing, and next steps. Free private email tool by ReplyMind.",
+      "h1": "Say what changed and what it means for the team.",
+      "intro": "People read org changes for one question first: what does this mean for me? This tool helps you explain the reporting shift, why it is happening, and how work will continue.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "changeSummary", "label": "Org change summary", "type": "textarea", "placeholder": "Support now reports into operations", "required": true},
+        {"key": "effectiveDate", "label": "Effective date", "type": "text", "placeholder": "Immediately", "required": true},
+        {"key": "reason", "label": "Reason for change", "type": "textarea", "placeholder": "To align support with process improvements", "required": true},
+        {"key": "practicalImpact", "label": "Practical impact", "type": "textarea", "placeholder": "Escalation paths stay the same for now", "required": true}
+      ],
+      "subjectTemplate": "A change to our team structure",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to share an update on our organization. {{changeSummary}} This takes effect {{effectiveDate}}.\n\nWe are making this change because {{reason}}. For now, the practical impact is {{practicalImpact}}.\n\nBest,",
+      "guidance": [
+        "Lead with the actual structure change instead of the rationale.",
+        "Tell people what remains stable so the change feels manageable.",
+        "Use plain language and avoid jargon like 'optimization' unless it truly helps."
+      ],
+      "pitfalls": [
+        "Do not announce an org change without saying when it applies.",
+        "Do not make people guess whether their day-to-day work changes right away."
+      ],
+      "examples": [
+        {
+          "label": "Reporting shift",
+          "input": "recipientName: Team; changeSummary: support now reports into operations; effectiveDate: immediately; reason: to align support with process improvements; practicalImpact: escalation paths stay the same for now",
+          "output": "Hi Team,\n\nI want to share an update on our organization. support now reports into operations. This takes effect immediately.\n\nWe are making this change because to align support with process improvements. For now, the practical impact is escalation paths stay the same for now.\n\nBest,"
+        },
+        {
+          "label": "Cross-functional grouping",
+          "input": "recipientName: Team; changeSummary: product operations and analytics will work as one group; effectiveDate: next month; reason: to improve planning and reporting; practicalImpact: current project owners remain in place during the transition",
+          "output": "Hi Team,\n\nI want to share an update on our organization. product operations and analytics will work as one group. This takes effect next month.\n\nWe are making this change because to improve planning and reporting. For now, the practical impact is current project owners remain in place during the transition.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I explain the full org chart change?", "a": "Only if it helps people understand their role. Keep the first message focused on the meaningful shift."},
+        {"q": "Is it okay to say some details are still being finalized?", "a": "Yes, as long as you say which parts are stable today."}
+      ],
+      "relatedTags": ["org-change", "management", "hr", "communication"]
+    },
+    {
+      "slug": "redundancy-notice-support-note-builder",
+      "name": "Redundancy Notice Support Note Builder",
+      "keyword": "redundancy support email",
+      "intent": "sensitive communication",
+      "audience": "HR and managers",
+      "outcome": "Deliver a careful support note that explains the situation, support available, and next steps.",
+      "metaDescription": "Write a redundancy support email that is clear, respectful, and focused on next steps and available help. Free private email tool by ReplyMind.",
+      "h1": "Handle a difficult message with as much clarity as possible.",
+      "intro": "Some messages need to be direct and compassionate at the same time. This tool helps you explain the decision, the practical next steps, and the support that is available without overloading the person.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "decisionSummary", "label": "Decision summary", "type": "textarea", "placeholder": "Your role is being eliminated as part of a restructure", "required": true},
+        {"key": "effectiveDate", "label": "Effective date", "type": "text", "placeholder": "August 30", "required": true},
+        {"key": "supportAvailable", "label": "Support available", "type": "textarea", "placeholder": "Career transition help and benefits guidance", "required": true},
+        {"key": "nextContact", "label": "Next contact step", "type": "textarea", "placeholder": "HR will follow up with a written packet today", "required": true}
+      ],
+      "subjectTemplate": "Important update about your role",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI need to share a difficult update. {{decisionSummary}} The effective date is {{effectiveDate}}.\n\nWe will support you with {{supportAvailable}}. {{nextContact}}\n\nBest,",
+      "guidance": [
+        "Keep the wording clear and respectful; do not wrap the decision in unnecessary detail.",
+        "Tell the person what support is available immediately after the decision summary.",
+        "Include the next contact step so they know what happens next."
+      ],
+      "pitfalls": [
+        "Do not soften the decision so much that the message becomes unclear.",
+        "Do not promise specific outcomes that are outside the team's control."
+      ],
+      "examples": [
+        {
+          "label": "Restructure notice",
+          "input": "recipientName: Jordan; decisionSummary: your role is being eliminated as part of a restructure; effectiveDate: August 30; supportAvailable: career transition help and benefits guidance; nextContact: HR will follow up with a written packet today",
+          "output": "Hi Jordan,\n\nI need to share a difficult update. your role is being eliminated as part of a restructure. The effective date is August 30.\n\nWe will support you with career transition help and benefits guidance. HR will follow up with a written packet today\n\nBest,"
+        },
+        {
+          "label": "Team reduction note",
+          "input": "recipientName: Priya; decisionSummary: the project team will be dissolved at the end of the quarter; effectiveDate: September 30; supportAvailable: placement support and manager references; nextContact: your manager will schedule a conversation this afternoon",
+          "output": "Hi Priya,\n\nI need to share a difficult update. the project team will be dissolved at the end of the quarter. The effective date is September 30.\n\nWe will support you with placement support and manager references. your manager will schedule a conversation this afternoon\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include every detail in one email?", "a": "No. Keep the note focused and follow with any required documents or meetings."},
+        {"q": "Is it appropriate to offer support in the same message?", "a": "Yes. It helps the person see the next steps and available help."}
+      ],
+      "relatedTags": ["redundancy", "hr", "support", "sensitive"]
+    },
+    {
+      "slug": "leave-approval-confirmation-builder",
+      "name": "Leave Approval Confirmation Builder",
+      "keyword": "leave approval email",
+      "intent": "leave coordination",
+      "audience": "Managers and HR",
+      "outcome": "Confirm approved leave with dates, coverage, and any final reminders in one note.",
+      "metaDescription": "Write a leave approval email that confirms dates, coverage, and what the employee should do before time away. Free private email tool by ReplyMind.",
+      "h1": "Confirm the leave so coverage is not a guess.",
+      "intro": "Approved leave should be simple to understand and easy to action. This tool helps you confirm the dates, who is covering work, and any final admin steps before time away begins.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Taylor", "required": false},
+        {"key": "leaveType", "label": "Leave type", "type": "text", "placeholder": "Vacation", "required": true},
+        {"key": "leaveDates", "label": "Leave dates", "type": "text", "placeholder": "October 7 through October 11", "required": true},
+        {"key": "coveragePlan", "label": "Coverage plan", "type": "textarea", "placeholder": "Mina will cover urgent requests", "required": true},
+        {"key": "beforeLeaveTask", "label": "Before-leave task", "type": "textarea", "placeholder": "Please update your out-of-office message", "required": false}
+      ],
+      "subjectTemplate": "Your {{leaveType}} is approved",
+      "bodyTemplate": "Hi {{recipientName}},\n\nYour {{leaveType}} for {{leaveDates}} is approved. The coverage plan is {{coveragePlan}}.\n\n{{beforeLeaveTask}}\n\nBest,",
+      "guidance": [
+        "Confirm the dates clearly so both sides can plan around them.",
+        "Include coverage details if the team needs to know who handles urgent items.",
+        "Add one practical reminder only if it helps the handoff."
+      ],
+      "pitfalls": [
+        "Do not hide the exact dates in a long paragraph.",
+        "Do not overload the note with policy language that belongs elsewhere."
+      ],
+      "examples": [
+        {
+          "label": "Vacation approval",
+          "input": "recipientName: Taylor; leaveType: Vacation; leaveDates: October 7 through October 11; coveragePlan: Mina will cover urgent requests; beforeLeaveTask: please update your out-of-office message",
+          "output": "Hi Taylor,\n\nYour Vacation for October 7 through October 11 is approved. The coverage plan is Mina will cover urgent requests.\n\nplease update your out-of-office message\n\nBest,"
+        },
+        {
+          "label": "Medical leave admin",
+          "input": "recipientName: Jordan; leaveType: Medical leave; leaveDates: next Monday through Wednesday; coveragePlan: I will loop in the team lead for urgent items; beforeLeaveTask: send any remaining handoffs before Friday",
+          "output": "Hi Jordan,\n\nYour Medical leave for next Monday through Wednesday is approved. The coverage plan is I will loop in the team lead for urgent items.\n\nsend any remaining handoffs before Friday\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I repeat the leave policy in the email?", "a": "No. The approval note should confirm the request and any practical coverage details."},
+        {"q": "Do I need to mention backup coverage every time?", "a": "If the leave could affect the team, yes. If not, keep the note lighter."}
+      ],
+      "relatedTags": ["leave", "approval", "manager", "hr"]
+    },
+    {
+      "slug": "leave-request-response-builder",
+      "name": "Leave Request Response Builder",
+      "keyword": "leave request response email",
+      "intent": "leave coordination",
+      "audience": "Managers and HR",
+      "outcome": "Respond to a leave request with approval, a question, or a clear next step.",
+      "metaDescription": "Create a leave request response that confirms the decision, asks for missing details, or explains the next step. Free private email tool by ReplyMind.",
+      "h1": "Reply to the request without creating extra back-and-forth.",
+      "intro": "Leave requests often need a quick decision or one missing detail before approval. This tool helps you answer clearly and keep the process moving.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "requestType", "label": "Request type", "type": "text", "placeholder": "Sick leave", "required": true},
+        {"key": "decision", "label": "Decision", "type": "text", "placeholder": "Approved", "required": true},
+        {"key": "missingDetail", "label": "Missing detail or note", "type": "textarea", "placeholder": "Please share the exact dates before I confirm", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "Once I have that, I can update the team calendar", "required": true}
+      ],
+      "subjectTemplate": "Update on your {{requestType}} request",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI reviewed your {{requestType}} request. The current decision is {{decision}}.\n\n{{missingDetail}}\n\n{{nextStep}}\n\nBest,",
+      "guidance": [
+        "Put the decision in the first paragraph so the person does not have to search for it.",
+        "If something is missing, ask for it directly and explain the next move.",
+        "Keep the tone calm and operational."
+      ],
+      "pitfalls": [
+        "Do not bury the decision under a long explanation.",
+        "Do not ask for vague follow-up if you already know the exact detail needed."
+      ],
+      "examples": [
+        {
+          "label": "Need dates",
+          "input": "recipientName: Jordan; requestType: sick leave; decision: approved pending exact dates; missingDetail: please share the exact dates before I confirm; nextStep: once I have that, I can update the team calendar",
+          "output": "Hi Jordan,\n\nI reviewed your sick leave request. The current decision is approved pending exact dates.\n\nplease share the exact dates before I confirm\n\nonce I have that, I can update the team calendar\n\nBest,"
+        },
+        {
+          "label": "Approved quickly",
+          "input": "recipientName: Priya; requestType: vacation; decision: approved; missingDetail: no further details needed; nextStep: you are all set to plan your handoff",
+          "output": "Hi Priya,\n\nI reviewed your vacation request. The current decision is approved.\n\nno further details needed\n\nyou are all set to plan your handoff\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Can this be used for partial approval?", "a": "Yes. State exactly what is approved and what still needs to be resolved."},
+        {"q": "Should I include policy citations?", "a": "Only if they are necessary. Most requests need a plain answer first."}
+      ],
+      "relatedTags": ["leave", "response", "hr", "operations"]
+    },
+    {
+      "slug": "return-to-work-welcome-back-builder",
+      "name": "Return to Work Welcome Back Builder",
+      "keyword": "return to work email",
+      "intent": "return-to-work",
+      "audience": "Managers and HR",
+      "outcome": "Welcome someone back with clarity on schedule, priorities, and any transition support.",
+      "metaDescription": "Draft a return-to-work email that sets a warm tone and clarifies the first priorities, schedule, and support. Free private email tool by ReplyMind.",
+      "h1": "Set the tone for a smooth return.",
+      "intro": "A return-to-work note should help the person re-enter without guessing what changed while they were away. This tool lets you confirm the first priorities, the schedule, and where to ask for help.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "returnDate", "label": "Return date", "type": "text", "placeholder": "Monday, September 8", "required": true},
+        {"key": "welcomeTone", "label": "Welcome line", "type": "textarea", "placeholder": "We are glad to have you back", "required": true},
+        {"key": "firstPriorities", "label": "First priorities", "type": "textarea", "placeholder": "Review the open projects and team updates", "required": true},
+        {"key": "supportContact", "label": "Support contact", "type": "text", "placeholder": "Me or HR", "required": false}
+      ],
+      "subjectTemplate": "Welcome back on {{returnDate}}",
+      "bodyTemplate": "Hi {{recipientName}},\n\n{{welcomeTone}}. Your return date is {{returnDate}}.\n\nFor the first few days, please focus on {{firstPriorities}}. If anything needs clarification, reach out to {{supportContact}}.\n\nBest,",
+      "guidance": [
+        "Keep the first priorities realistic so the person can ramp back in smoothly.",
+        "If the return follows a long absence, make the tone welcoming rather than rushed.",
+        "Point to a real support contact so questions have a clear home."
+      ],
+      "pitfalls": [
+        "Do not overload the person with a full backlog on day one.",
+        "Do not make the message sound like they should already know all recent changes."
+      ],
+      "examples": [
+        {
+          "label": "After leave",
+          "input": "recipientName: Jordan; returnDate: Monday, September 8; welcomeTone: we are glad to have you back; firstPriorities: review the open projects and team updates; supportContact: me or HR",
+          "output": "Hi Jordan,\n\nwe are glad to have you back. Your return date is Monday, September 8.\n\nFor the first few days, please focus on review the open projects and team updates. If anything needs clarification, reach out to me or HR.\n\nBest,"
+        },
+        {
+          "label": "Phased return",
+          "input": "recipientName: Priya; returnDate: next Wednesday; welcomeTone: welcome back and take the first week at a manageable pace; firstPriorities: catch up on the team notes and rejoin the planning rhythm; supportContact: your manager",
+          "output": "Hi Priya,\n\nwelcome back and take the first week at a manageable pace. Your return date is next Wednesday.\n\nFor the first few days, please focus on catch up on the team notes and rejoin the planning rhythm. If anything needs clarification, reach out to your manager.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I mention every change that happened while they were away?", "a": "No. Share only the most important priorities and where to find more context."},
+        {"q": "Can this be warm without being too informal?", "a": "Yes. Warmth comes from clarity and support, not from casual language."}
+      ],
+      "relatedTags": ["return-to-work", "welcome-back", "manager", "hr"]
+    },
+    {
+      "slug": "returning-parent-reentry-note-builder",
+      "name": "Returning Parent Reentry Note Builder",
+      "keyword": "returning from parental leave email",
+      "intent": "return-to-work",
+      "audience": "Managers and HR",
+      "outcome": "Welcome someone back from parental leave with a thoughtful reentry plan and a gentle pace.",
+      "metaDescription": "Write a parental leave return email that confirms the first week, priorities, and support available. Free private email tool by ReplyMind.",
+      "h1": "Make the return feel considered, not rushed.",
+      "intro": "A reentry note should help the returning parent feel informed and supported while work ramps back up. This tool keeps the message practical, respectful, and easy to act on.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Taylor", "required": false},
+        {"key": "returnDate", "label": "Return date", "type": "text", "placeholder": "October 14", "required": true},
+        {"key": "reentryPlan", "label": "Reentry plan", "type": "textarea", "placeholder": "We will use a lighter first week", "required": true},
+        {"key": "priorityFocus", "label": "Priority focus", "type": "textarea", "placeholder": "Catch up on changes and reconnect with the team", "required": true},
+        {"key": "supportOffer", "label": "Support offer", "type": "textarea", "placeholder": "Let me know if you want to adjust the pace", "required": false}
+      ],
+      "subjectTemplate": "Your return plan for {{returnDate}}",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe are preparing for your return on {{returnDate}}. Our reentry plan is {{reentryPlan}}.\n\nFor the first stretch, the priority is {{priorityFocus}}. {{supportOffer}}\n\nBest,",
+      "guidance": [
+        "Keep the first week lighter if that is consistent with the plan.",
+        "Use supportive language without making assumptions about the person's needs.",
+        "Avoid overloading the note with operational details that can wait."
+      ],
+      "pitfalls": [
+        "Do not treat the return like a normal restart if it needs a softer ramp.",
+        "Do not imply the person must catch up on everything immediately."
+      ],
+      "examples": [
+        {
+          "label": "Lighter first week",
+          "input": "recipientName: Taylor; returnDate: October 14; reentryPlan: we will use a lighter first week; priorityFocus: catch up on changes and reconnect with the team; supportOffer: let me know if you want to adjust the pace",
+          "output": "Hi Taylor,\n\nWe are preparing for your return on October 14. Our reentry plan is we will use a lighter first week.\n\nFor the first stretch, the priority is catch up on changes and reconnect with the team. let me know if you want to adjust the pace\n\nBest,"
+        },
+        {
+          "label": "Gradual restart",
+          "input": "recipientName: Dana; returnDate: next Monday; reentryPlan: start with a short catch-up and a few key meetings; priorityFocus: review what changed while you were out; supportOffer: we can shift the pace if needed",
+          "output": "Hi Dana,\n\nWe are preparing for your return on next Monday. Our reentry plan is start with a short catch-up and a few key meetings.\n\nFor the first stretch, the priority is review what changed while you were out. we can shift the pace if needed\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I mention the leave reason?", "a": "No, not unless the person wants it referenced. Focus on the reentry plan."},
+        {"q": "Is it okay to keep the first week light?", "a": "Yes, when the role and workload allow it. The note should reflect the actual plan."}
+      ],
+      "relatedTags": ["parental-leave", "return-to-work", "manager", "hr"]
+    },
+    {
+      "slug": "absence-cover-plan-update-builder",
+      "name": "Absence Cover Plan Update Builder",
+      "keyword": "absence coverage email",
+      "intent": "leave coordination",
+      "audience": "Managers and coordinators",
+      "outcome": "Tell the team who is covering urgent work while someone is away.",
+      "metaDescription": "Draft an internal absence coverage update that clarifies who owns urgent items and where requests should go. Free private email tool by ReplyMind.",
+      "h1": "Keep the handoff simple when someone is out.",
+      "intro": "Coverage updates prevent dropped requests and help the team know where to send urgent questions. This tool makes the assignment clear without creating noise.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "personOut", "label": "Person who is out", "type": "text", "placeholder": "Jordan", "required": true},
+        {"key": "coverageOwner", "label": "Coverage owner", "type": "text", "placeholder": "Mina", "required": true},
+        {"key": "coveredWork", "label": "What is covered", "type": "textarea", "placeholder": "Urgent approvals and client escalations", "required": true},
+        {"key": "whereToRoute", "label": "Where to route requests", "type": "textarea", "placeholder": "Send urgent items to Mina and copy the shared inbox", "required": true}
+      ],
+      "subjectTemplate": "Coverage while {{personOut}} is out",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWhile {{personOut}} is out, {{coverageOwner}} will handle {{coveredWork}}.\n\nPlease {{whereToRoute}}.\n\nBest,",
+      "guidance": [
+        "Name both the person out and the coverage owner so there is no ambiguity.",
+        "Spell out the type of work being covered instead of saying 'everything urgent.'",
+        "Give a routing instruction that people can follow immediately."
+      ],
+      "pitfalls": [
+        "Do not make the note too broad, or the team will still not know where to go.",
+        "Do not leave the coverage owner unnamed."
+      ],
+      "examples": [
+        {
+          "label": "Short PTO",
+          "input": "recipientName: Team; personOut: Jordan; coverageOwner: Mina; coveredWork: urgent approvals and client escalations; whereToRoute: send urgent items to Mina and copy the shared inbox",
+          "output": "Hi Team,\n\nWhile Jordan is out, Mina will handle urgent approvals and client escalations.\n\nPlease send urgent items to Mina and copy the shared inbox.\n\nBest,"
+        },
+        {
+          "label": "Unplanned absence",
+          "input": "recipientName: Team; personOut: Leo; coverageOwner: Priya; coveredWork: daily status checks and partner replies; whereToRoute: route anything time-sensitive through Priya",
+          "output": "Hi Team,\n\nWhile Leo is out, Priya will handle daily status checks and partner replies.\n\nPlease route anything time-sensitive through Priya.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I list every task the person owns?", "a": "No. List the urgent or time-sensitive work that really needs routing."},
+        {"q": "Can this be used for an unexpected absence?", "a": "Yes. The structure is useful anytime coverage needs to be clarified quickly."}
+      ],
+      "relatedTags": ["absence", "coverage", "operations", "manager"]
+    },
+    {
+      "slug": "team-conflict-private-mediation-note",
+      "name": "Team Conflict Private Mediation Note",
+      "keyword": "workplace conflict email",
+      "intent": "conflict resolution",
+      "audience": "Managers and HR",
+      "outcome": "Invite the people involved into a calm mediation process focused on behavior and next steps.",
+      "metaDescription": "Create a private conflict mediation note that sets the purpose, ground rules, and desired outcome. Free private email tool by ReplyMind.",
+      "h1": "Start the mediation with clarity, not blame.",
+      "intro": "Conflict messages work best when they define the issue, the goal of the meeting, and the ground rules in plain language. This tool keeps the note neutral and action-oriented.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "issueSummary", "label": "Issue summary", "type": "textarea", "placeholder": "There have been repeated misunderstandings in handoffs", "required": true},
+        {"key": "meetingGoal", "label": "Meeting goal", "type": "textarea", "placeholder": "Agree on a better handoff process", "required": true},
+        {"key": "groundRule", "label": "Ground rule", "type": "textarea", "placeholder": "Focus on behavior and impact, not personal criticism", "required": true},
+        {"key": "meetingTime", "label": "Meeting time", "type": "text", "placeholder": "Wednesday at 2 PM", "required": true}
+      ],
+      "subjectTemplate": "A private conversation to reset the working relationship",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to set up a conversation about {{issueSummary}}. The goal of the meeting is {{meetingGoal}}.\n\nPlease keep in mind this ground rule: {{groundRule}}. We will meet {{meetingTime}}.\n\nBest,",
+      "guidance": [
+        "Stay neutral in the wording so the invitation does not escalate the conflict.",
+        "Tell participants what the conversation is for before you mention the time.",
+        "Include one ground rule to shape the tone of the meeting."
+      ],
+      "pitfalls": [
+        "Do not assign blame in the invitation.",
+        "Do not make the meeting sound punitive unless it truly is."
+      ],
+      "examples": [
+        {
+          "label": "Handoff conflict",
+          "input": "recipientName: Jordan; issueSummary: there have been repeated misunderstandings in handoffs; meetingGoal: agree on a better handoff process; groundRule: focus on behavior and impact, not personal criticism; meetingTime: Wednesday at 2 PM",
+          "output": "Hi Jordan,\n\nI want to set up a conversation about there have been repeated misunderstandings in handoffs. The goal of the meeting is agree on a better handoff process.\n\nPlease keep in mind this ground rule: focus on behavior and impact, not personal criticism. We will meet Wednesday at 2 PM.\n\nBest,"
+        },
+        {
+          "label": "Communication tension",
+          "input": "recipientName: Priya; issueSummary: direct messages have become tense; meetingGoal: reset how we communicate under pressure; groundRule: speak from your own experience and avoid assumptions; meetingTime: Friday morning",
+          "output": "Hi Priya,\n\nI want to set up a conversation about direct messages have become tense. The goal of the meeting is reset how we communicate under pressure.\n\nPlease keep in mind this ground rule: speak from your own experience and avoid assumptions. We will meet Friday morning.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I invite both people separately or together?", "a": "Usually together, if the goal is shared understanding and a joint next step."},
+        {"q": "Can I mention the specific complaint in the invite?", "a": "Only at a high level. The invite should not become a debate before the meeting starts."}
+      ],
+      "relatedTags": ["conflict", "mediation", "manager", "hr"]
+    },
+    {
+      "slug": "manager-to-manager-alignment-note-builder",
+      "name": "Manager to Manager Alignment Note Builder",
+      "keyword": "cross functional alignment email",
+      "intent": "cross-functional alignment",
+      "audience": "Managers and team leads",
+      "outcome": "Align two managers on scope, ownership, and decision rights before work gets messy.",
+      "metaDescription": "Draft a manager alignment email that clarifies scope, ownership, and decision rights across teams. Free private email tool by ReplyMind.",
+      "h1": "Align early so your teams do not collide later.",
+      "intro": "Cross-functional work slows down when ownership is fuzzy. This tool helps you name the shared goal, clarify who owns what, and point to the decision that still needs agreement.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Morgan", "required": false},
+        {"key": "sharedGoal", "label": "Shared goal", "type": "textarea", "placeholder": "Launch the new workflow with minimal disruption", "required": true},
+        {"key": "yourOwnership", "label": "Your ownership", "type": "textarea", "placeholder": "My team will handle comms and training", "required": true},
+        {"key": "theirOwnership", "label": "Their ownership", "type": "textarea", "placeholder": "Your team will own system changes", "required": true},
+        {"key": "openDecision", "label": "Open decision", "type": "textarea", "placeholder": "We still need to confirm the rollout date", "required": true}
+      ],
+      "subjectTemplate": "Alignment on the {{sharedGoal}} work",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to align on {{sharedGoal}}. From my side, {{yourOwnership}}. From yours, {{theirOwnership}}.\n\nThe open decision is {{openDecision}}.\n\nBest,",
+      "guidance": [
+        "Make ownership explicit so both managers can see the split immediately.",
+        "Call out one open decision instead of trying to solve every detail in the first email.",
+        "Use a neutral tone that makes collaboration easier."
+      ],
+      "pitfalls": [
+        "Do not write a vague 'circling back' note that leaves ownership unclear.",
+        "Do not assume the other manager shares your interpretation of the work."
+      ],
+      "examples": [
+        {
+          "label": "Rollout coordination",
+          "input": "recipientName: Morgan; sharedGoal: launch the new workflow with minimal disruption; yourOwnership: my team will handle comms and training; theirOwnership: your team will own system changes; openDecision: we still need to confirm the rollout date",
+          "output": "Hi Morgan,\n\nI want to align on launch the new workflow with minimal disruption. From my side, my team will handle comms and training. From yours, your team will own system changes.\n\nThe open decision is we still need to confirm the rollout date.\n\nBest,"
+        },
+        {
+          "label": "Shared process update",
+          "input": "recipientName: Dana; sharedGoal: reduce duplicated reporting; yourOwnership: I will update the template and notify my team; theirOwnership: you will confirm the source of truth; openDecision: we need to settle the weekly cutoff time",
+          "output": "Hi Dana,\n\nI want to align on reduce duplicated reporting. From my side, I will update the template and notify my team. From yours, you will confirm the source of truth.\n\nThe open decision is we need to settle the weekly cutoff time.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should this email be long?", "a": "No. For manager alignment, shorter is better if ownership is clear."},
+        {"q": "What if we still disagree on the open decision?", "a": "Use the email to narrow the issue and set a specific follow-up discussion."}
+      ],
+      "relatedTags": ["alignment", "cross-functional", "manager", "operations"]
+    },
+    {
+      "slug": "internal-announcement-template-builder",
+      "name": "Internal Announcement Template Builder",
+      "keyword": "internal announcement email",
+      "intent": "internal announcement",
+      "audience": "Managers and internal communications",
+      "outcome": "Share an internal update that is useful, concise, and easy for employees to understand.",
+      "metaDescription": "Write an internal announcement email with the key update, why it matters, and what people should do next. Free private email tool by ReplyMind.",
+      "h1": "Announce the change with enough context to be useful.",
+      "intro": "Internal announcements work best when they answer the obvious questions right away: what is happening, why now, and what do people need to do. This tool keeps the note clear and scan-friendly.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "announcement", "label": "Announcement", "type": "textarea", "placeholder": "We are launching a new knowledge base", "required": true},
+        {"key": "whyItMatters", "label": "Why it matters", "type": "textarea", "placeholder": "It should make it easier to find answers", "required": true},
+        {"key": "actionNeeded", "label": "Action needed", "type": "textarea", "placeholder": "Start using the new link for help articles", "required": true},
+        {"key": "goLiveTime", "label": "Go-live time", "type": "text", "placeholder": "Today at noon", "required": false}
+      ],
+      "subjectTemplate": "A new internal update for the team",
+      "bodyTemplate": "Hi {{recipientName}},\n\n{{announcement}}. This matters because {{whyItMatters}}.\n\nWhat you need to do: {{actionNeeded}}. {{goLiveTime}}\n\nBest,",
+      "guidance": [
+        "Start with the news, not the background.",
+        "Include the practical action people need to take, if any.",
+        "Use one timing detail if the rollout moment matters."
+      ],
+      "pitfalls": [
+        "Do not write an announcement that sounds like a press release.",
+        "Do not skip the action needed if employees must do something different."
+      ],
+      "examples": [
+        {
+          "label": "Knowledge base launch",
+          "input": "recipientName: Team; announcement: we are launching a new knowledge base; whyItMatters: it should make it easier to find answers; actionNeeded: start using the new link for help articles; goLiveTime: today at noon",
+          "output": "Hi Team,\n\nwe are launching a new knowledge base. This matters because it should make it easier to find answers.\n\nWhat you need to do: start using the new link for help articles. today at noon\n\nBest,"
+        },
+        {
+          "label": "Tool rollout",
+          "input": "recipientName: Team; announcement: we are moving expense approvals into one workflow; whyItMatters: it will remove duplicate steps; actionNeeded: submit future approvals through the new workflow; goLiveTime: next Monday",
+          "output": "Hi Team,\n\nwe are moving expense approvals into one workflow. This matters because it will remove duplicate steps.\n\nWhat you need to do: submit future approvals through the new workflow. next Monday\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I explain every implementation detail?", "a": "No. Give enough context to make the change understandable and actionable."},
+        {"q": "Can this be sent company-wide?", "a": "Yes, as long as the message is relevant to the full audience."}
+      ],
+      "relatedTags": ["announcement", "internal-comms", "operations", "team"]
+    },
+    {
+      "slug": "change-management-launch-note-builder",
+      "name": "Change Management Launch Note Builder",
+      "keyword": "change management email",
+      "intent": "change management",
+      "audience": "Managers and project leads",
+      "outcome": "Introduce a change initiative with the reason, timeline, and how the team will be supported.",
+      "metaDescription": "Create a change management launch email that explains the shift, the timeline, and the support plan. Free private email tool by ReplyMind.",
+      "h1": "Give people the shape of the change before it lands.",
+      "intro": "Change is easier to absorb when people know what is changing, when it starts, and how support will work. This tool helps you launch the message in a calm and practical way.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "changeSummary", "label": "Change summary", "type": "textarea", "placeholder": "We are moving to a new planning process", "required": true},
+        {"key": "reason", "label": "Reason for the change", "type": "textarea", "placeholder": "The current process is too slow for our volume", "required": true},
+        {"key": "timeline", "label": "Timeline", "type": "textarea", "placeholder": "Pilot starts next week and full rollout follows later", "required": true},
+        {"key": "supportPlan", "label": "Support plan", "type": "textarea", "placeholder": "We will hold two training sessions and share office hours", "required": true}
+      ],
+      "subjectTemplate": "Launching a change to how we work",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe are introducing a change: {{changeSummary}}. We are doing this because {{reason}}.\n\nTimeline: {{timeline}}. Support plan: {{supportPlan}}.\n\nBest,",
+      "guidance": [
+        "Tell people the reason and the timeline in the same message so the change feels coherent.",
+        "Support should be concrete, not just a promise to 'help where needed.'",
+        "Keep the first announcement focused on orientation, not every implementation detail."
+      ],
+      "pitfalls": [
+        "Do not launch a change without a timeline.",
+        "Do not leave support vague if the change affects daily work."
+      ],
+      "examples": [
+        {
+          "label": "Process change",
+          "input": "recipientName: Team; changeSummary: we are moving to a new planning process; reason: the current process is too slow for our volume; timeline: pilot starts next week and full rollout follows later; supportPlan: we will hold two training sessions and share office hours",
+          "output": "Hi Team,\n\nWe are introducing a change: we are moving to a new planning process. We are doing this because the current process is too slow for our volume.\n\nTimeline: pilot starts next week and full rollout follows later. Support plan: we will hold two training sessions and share office hours.\n\nBest,"
+        },
+        {
+          "label": "Tools change",
+          "input": "recipientName: Team; changeSummary: we are switching to one shared status board; reason: we need better visibility across projects; timeline: training on Thursday and go-live on Monday; supportPlan: I will share a quick guide and be available for questions",
+          "output": "Hi Team,\n\nWe are introducing a change: we are switching to one shared status board. We are doing this because we need better visibility across projects.\n\nTimeline: training on Thursday and go-live on Monday. Support plan: I will share a quick guide and be available for questions.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should this message be optimistic or neutral?", "a": "Steady and useful is better than overly optimistic."},
+        {"q": "Can I include a pilot phase?", "a": "Yes, if that is part of the real rollout plan."}
+      ],
+      "relatedTags": ["change-management", "rollout", "team", "internal-comms"]
+    },
+    {
+      "slug": "cross-functional-decision-request-builder",
+      "name": "Cross-Functional Decision Request Builder",
+      "keyword": "cross functional decision request",
+      "intent": "alignment",
+      "audience": "Managers and project owners",
+      "outcome": "Ask other teams for a decision in a way that clarifies context, deadline, and tradeoffs.",
+      "metaDescription": "Write a cross-functional decision request that gives context, options, and the deadline for a clear answer. Free private email tool by ReplyMind.",
+      "h1": "Ask for the decision you need, not just another discussion.",
+      "intro": "Decision requests get better answers when they clearly state the question, the options, and when the answer is needed. This tool helps you avoid vague alignment emails that stall work.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Ops team", "required": false},
+        {"key": "decisionNeeded", "label": "Decision needed", "type": "textarea", "placeholder": "Approve the rollout timing", "required": true},
+        {"key": "context", "label": "Context", "type": "textarea", "placeholder": "The launch date affects two dependent teams", "required": true},
+        {"key": "options", "label": "Options", "type": "textarea", "placeholder": "Option A moves fast, option B reduces risk", "required": true},
+        {"key": "deadline", "label": "Decision deadline", "type": "text", "placeholder": "By Thursday at 3 PM", "required": true}
+      ],
+      "subjectTemplate": "Decision needed on {{decisionNeeded}}",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe need a decision on {{decisionNeeded}}. The context is {{context}}.\n\nThe current options are {{options}}. Please let me know by {{deadline}}.\n\nBest,",
+      "guidance": [
+        "Make the decision question the first thing the reader understands.",
+        "Offer real options so the recipient can choose, not just react.",
+        "Use a deadline that reflects the actual dependency."
+      ],
+      "pitfalls": [
+        "Do not hide the question inside a long project update.",
+        "Do not ask for a decision without showing the tradeoff."
+      ],
+      "examples": [
+        {
+          "label": "Launch timing",
+          "input": "recipientName: Ops team; decisionNeeded: approve the rollout timing; context: the launch date affects two dependent teams; options: option A moves fast, option B reduces risk; deadline: by Thursday at 3 PM",
+          "output": "Hi Ops team,\n\nWe need a decision on approve the rollout timing. The context is the launch date affects two dependent teams.\n\nThe current options are option A moves fast, option B reduces risk. Please let me know by by Thursday at 3 PM.\n\nBest,"
+        },
+        {
+          "label": "Process owner choice",
+          "input": "recipientName: Finance and HR; decisionNeeded: choose the owner for the new approval flow; context: both teams touch the process and we need one clear owner; options: finance owns the workflow or HR owns the workflow; deadline: Friday morning",
+          "output": "Hi Finance and HR,\n\nWe need a decision on choose the owner for the new approval flow. The context is both teams touch the process and we need one clear owner.\n\nThe current options are finance owns the workflow or HR owns the workflow. Please let me know by Friday morning.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include background context?", "a": "Yes, but only the background needed to make the decision well informed."},
+        {"q": "What if the team cannot decide by the deadline?", "a": "Then the email should set up the next checkpoint or identify the blocker."}
+      ],
+      "relatedTags": ["decision", "cross-functional", "alignment", "project"]
+    },
+    {
+      "slug": "policy-exception-request-review-builder",
+      "name": "Policy Exception Request Review Builder",
+      "keyword": "policy exception email",
+      "intent": "policy exception",
+      "audience": "Managers and HR",
+      "outcome": "Request a policy exception review with the reason, impact, and requested accommodation.",
+      "metaDescription": "Draft a policy exception request that explains the situation and the specific accommodation being asked for. Free private email tool by ReplyMind.",
+      "h1": "Ask for an exception with enough context to review it fairly.",
+      "intro": "Exception requests are easier to evaluate when they are specific. This tool helps you explain the situation, why the standard policy does not fit, and what you are asking to change.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "HR", "required": false},
+        {"key": "policyName", "label": "Policy name", "type": "text", "placeholder": "Travel booking policy", "required": true},
+        {"key": "situation", "label": "Situation", "type": "textarea", "placeholder": "A client meeting was moved to tomorrow", "required": true},
+        {"key": "requestedException", "label": "Requested exception", "type": "textarea", "placeholder": "Approve a same-day booking", "required": true},
+        {"key": "businessImpact", "label": "Business impact", "type": "textarea", "placeholder": "We would avoid missing the client meeting", "required": true}
+      ],
+      "subjectTemplate": "Request for a {{policyName}} exception",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI would like to request a review of the {{policyName}} for this situation: {{situation}}.\n\nThe exception I am asking for is {{requestedException}}. The business impact is {{businessImpact}}.\n\nBest,",
+      "guidance": [
+        "Be specific about the policy and the exception so the reviewer can answer the actual request.",
+        "Explain the practical impact, not just why it is inconvenient.",
+        "Keep the tone respectful and factual."
+      ],
+      "pitfalls": [
+        "Do not frame the request as a complaint about the policy.",
+        "Do not leave the requested exception ambiguous."
+      ],
+      "examples": [
+        {
+          "label": "Travel exception",
+          "input": "recipientName: HR; policyName: travel booking policy; situation: a client meeting was moved to tomorrow; requestedException: approve a same-day booking; businessImpact: we would avoid missing the client meeting",
+          "output": "Hi HR,\n\nI would like to request a review of the travel booking policy for this situation: a client meeting was moved to tomorrow.\n\nThe exception I am asking for is approve a same-day booking. The business impact is we would avoid missing the client meeting.\n\nBest,"
+        },
+        {
+          "label": "Equipment exception",
+          "input": "recipientName: Operations; policyName: equipment purchase policy; situation: the team needs a replacement monitor today to keep work moving; requestedException: approve the purchase outside the usual cycle; businessImpact: it avoids a day of lost productivity",
+          "output": "Hi Operations,\n\nI would like to request a review of the equipment purchase policy for this situation: the team needs a replacement monitor today to keep work moving.\n\nThe exception I am asking for is approve the purchase outside the usual cycle. The business impact is it avoids a day of lost productivity.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I explain why the policy exists?", "a": "Only if it helps the reviewer understand the exception context."},
+        {"q": "Can I ask for multiple exceptions in one note?", "a": "Only if they are tightly related. Otherwise separate them."}
+      ],
+      "relatedTags": ["policy", "exception", "hr", "operations"]
+    },
+    {
+      "slug": "org-chart-update-followup-builder",
+      "name": "Org Chart Update Follow-Up Builder",
+      "keyword": "org chart update email",
+      "intent": "organizational communication",
+      "audience": "HR and managers",
+      "outcome": "Follow up after an org chart change with the few details people still need.",
+      "metaDescription": "Create a follow-up email for an org chart update that clarifies reporting lines and where to ask questions. Free private email tool by ReplyMind.",
+      "h1": "Clarify the details people still need after the org update.",
+      "intro": "After an org chart change, people often need one more note to answer the remaining practical questions. This tool helps you close that gap without reopening the whole announcement.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "orgUpdate", "label": "Org update reference", "type": "textarea", "placeholder": "The new reporting lines announced yesterday", "required": true},
+        {"key": "clarification", "label": "Clarification needed", "type": "textarea", "placeholder": "Who approves time off during the transition", "required": true},
+        {"key": "answer", "label": "Answer or interim answer", "type": "textarea", "placeholder": "Please continue using your current manager for approvals", "required": true},
+        {"key": "followUp", "label": "Follow-up contact", "type": "text", "placeholder": "HR or your manager", "required": false}
+      ],
+      "subjectTemplate": "One clarification on the org update",
+      "bodyTemplate": "Hi {{recipientName}},\n\nFollowing {{orgUpdate}}, I wanted to clarify {{clarification}}.\n\nFor now, {{answer}}. If you need anything else, contact {{followUp}}.\n\nBest,",
+      "guidance": [
+        "Use this for the remaining practical question, not a new announcement.",
+        "Keep the answer simple and interim if the final process is still being finalized.",
+        "Point to one contact path so questions do not spread."
+      ],
+      "pitfalls": [
+        "Do not repeat the full org update again.",
+        "Do not provide an answer that conflicts with the transition plan."
+      ],
+      "examples": [
+        {
+          "label": "Approval question",
+          "input": "recipientName: Team; orgUpdate: the new reporting lines announced yesterday; clarification: who approves time off during the transition; answer: please continue using your current manager for approvals; followUp: HR or your manager",
+          "output": "Hi Team,\n\nFollowing the new reporting lines announced yesterday, I wanted to clarify who approves time off during the transition.\n\nFor now, please continue using your current manager for approvals. If you need anything else, contact HR or your manager.\n\nBest,"
+        },
+        {
+          "label": "Meeting ownership question",
+          "input": "recipientName: Team; orgUpdate: the reorganization shared this morning; clarification: who owns the weekly planning meeting; answer: the current owner should keep running it until we confirm the new lead; followUp: your manager",
+          "output": "Hi Team,\n\nFollowing the reorganization shared this morning, I wanted to clarify who owns the weekly planning meeting.\n\nFor now, the current owner should keep running it until we confirm the new lead. If you need anything else, contact your manager.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should this replace the main org announcement?", "a": "No. It is only for the follow-up clarification."},
+        {"q": "Can I say the answer is temporary?", "a": "Yes, if that is the honest state of the process."}
+      ],
+      "relatedTags": ["org-chart", "follow-up", "hr", "manager"]
+    },
+    {
+      "slug": "policy-training-reminder-builder",
+      "name": "Policy Training Reminder Builder",
+      "keyword": "policy training reminder email",
+      "intent": "internal training",
+      "audience": "HR and operations",
+      "outcome": "Remind employees about required policy training with the date and what they need to do.",
+      "metaDescription": "Draft a policy training reminder email that names the training, the deadline, and the action required. Free private email tool by ReplyMind.",
+      "h1": "Remind people before the deadline becomes a problem.",
+      "intro": "Training reminders work best when they are short, specific, and easy to act on. This tool helps you say what training is required, when it is due, and how to complete it.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "trainingName", "label": "Training name", "type": "text", "placeholder": "Security policy training", "required": true},
+        {"key": "dueDate", "label": "Due date", "type": "text", "placeholder": "Friday", "required": true},
+        {"key": "actionNeeded", "label": "Action needed", "type": "textarea", "placeholder": "Complete the module in the portal", "required": true},
+        {"key": "helpPath", "label": "Help path", "type": "textarea", "placeholder": "Reply to HR if you cannot access it", "required": false}
+      ],
+      "subjectTemplate": "Reminder: {{trainingName}} is due soon",
+      "bodyTemplate": "Hi {{recipientName}},\n\nThis is a reminder that {{trainingName}} is due on {{dueDate}}.\n\nPlease {{actionNeeded}}. {{helpPath}}\n\nBest,",
+      "guidance": [
+        "Lead with the due date so the reminder feels actionable.",
+        "Keep the action line specific enough that people know exactly what to do.",
+        "Offer a help path only if access problems are common."
+      ],
+      "pitfalls": [
+        "Do not make the reminder sound like a warning unless it truly is one.",
+        "Do not say 'complete training' without naming which training."
+      ],
+      "examples": [
+        {
+          "label": "Security training",
+          "input": "recipientName: Team; trainingName: Security policy training; dueDate: Friday; actionNeeded: complete the module in the portal; helpPath: reply to HR if you cannot access it",
+          "output": "Hi Team,\n\nThis is a reminder that Security policy training is due on Friday.\n\nPlease complete the module in the portal. reply to HR if you cannot access it\n\nBest,"
+        },
+        {
+          "label": "Benefits training",
+          "input": "recipientName: Employees; trainingName: Benefits enrollment overview; dueDate: next Tuesday; actionNeeded: watch the recording and confirm completion; helpPath: contact the people ops inbox if you have questions",
+          "output": "Hi Employees,\n\nThis is a reminder that Benefits enrollment overview is due on next Tuesday.\n\nPlease watch the recording and confirm completion. contact the people ops inbox if you have questions\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I repeat the deadline in the subject?", "a": "Yes, if the timing matters. It helps the message stand out in inboxes."},
+        {"q": "What if people have already seen the training once?", "a": "The reminder can still be useful if it points to the exact action and due date."}
+      ],
+      "relatedTags": ["training", "policy", "reminder", "hr"]
+    },
+    {
+      "slug": "manager-cascade-message-builder",
+      "name": "Manager Cascade Message Builder",
+      "keyword": "manager cascade email",
+      "intent": "cascading communication",
+      "audience": "Managers",
+      "outcome": "Give managers a message they can cascade to their teams with the right context and tone.",
+      "metaDescription": "Create a manager cascade email that gives talking points, timing, and the one action managers should repeat. Free private email tool by ReplyMind.",
+      "h1": "Equip managers with a message they can pass on cleanly.",
+      "intro": "Cascade notes need to be easy for managers to repeat accurately. This tool helps you give the core message, the talking point, and the one thing that should not be missed.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Managers", "required": false},
+        {"key": "coreMessage", "label": "Core message", "type": "textarea", "placeholder": "We are changing the meeting schedule next month", "required": true},
+        {"key": "talkingPoint", "label": "Talking point", "type": "textarea", "placeholder": "The goal is to create more focus time", "required": true},
+        {"key": "mustRepeat", "label": "What managers must repeat", "type": "textarea", "placeholder": "The change starts on the first Monday of next month", "required": true},
+        {"key": "managerAction", "label": "Manager action", "type": "textarea", "placeholder": "Please share this with your teams by Friday", "required": true}
+      ],
+      "subjectTemplate": "Message for you to share with your team",
+      "bodyTemplate": "Hi {{recipientName}},\n\nHere is the message to cascade: {{coreMessage}}.\n\nThe main talking point is {{talkingPoint}}. Please be sure to repeat this: {{mustRepeat}}.\n\n{{managerAction}}\n\nBest,",
+      "guidance": [
+        "Make the message repeatable, not just informative.",
+        "Give managers one clear action so they know what to do after reading.",
+        "Highlight the line that must stay consistent across teams."
+      ],
+      "pitfalls": [
+        "Do not send a cascade note without a repeatable core message.",
+        "Do not make managers rewrite the announcement from scratch."
+      ],
+      "examples": [
+        {
+          "label": "Schedule change",
+          "input": "recipientName: Managers; coreMessage: we are changing the meeting schedule next month; talkingPoint: the goal is to create more focus time; mustRepeat: the change starts on the first Monday of next month; managerAction: please share this with your teams by Friday",
+          "output": "Hi Managers,\n\nHere is the message to cascade: we are changing the meeting schedule next month.\n\nThe main talking point is the goal is to create more focus time. Please be sure to repeat this: the change starts on the first Monday of next month.\n\nplease share this with your teams by Friday\n\nBest,"
+        },
+        {
+          "label": "Tool rollout",
+          "input": "recipientName: Managers; coreMessage: we are rolling out one shared planning template; talkingPoint: it should reduce confusion between teams; mustRepeat: everyone starts using it on Monday; managerAction: ask your team leads to review it this week",
+          "output": "Hi Managers,\n\nHere is the message to cascade: we are rolling out one shared planning template.\n\nThe main talking point is it should reduce confusion between teams. Please be sure to repeat this: everyone starts using it on Monday.\n\nask your team leads to review it this week\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Why give managers a separate message?", "a": "It helps them communicate the same change clearly without inventing their own version."},
+        {"q": "Should I include the full policy background?", "a": "Only if managers need it. The cascade note should be ready to forward in summary form."}
+      ],
+      "relatedTags": ["cascade", "managers", "communication", "change-management"]
+    },
+    {
+      "slug": "one-on-one-agenda-builder",
+      "name": "One-on-One Agenda Builder",
+      "keyword": "1:1 agenda email",
+      "intent": "manager communication",
+      "audience": "Managers and team leads",
+      "outcome": "Share a focused one-on-one agenda that makes the meeting useful and efficient.",
+      "metaDescription": "Build a one-on-one agenda email that names the topics, priorities, and any preparation needed. Free private email tool by ReplyMind.",
+      "h1": "Set a useful agenda before the meeting starts.",
+      "intro": "One-on-ones are more productive when both people know what they will cover. This tool helps you set a short agenda, prioritize the discussion, and invite preparation if needed.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "meetingDate", "label": "Meeting date", "type": "text", "placeholder": "Thursday", "required": true},
+        {"key": "topics", "label": "Topics to cover", "type": "textarea", "placeholder": "Current projects, blockers, and growth goals", "required": true},
+        {"key": "priorityTopic", "label": "Priority topic", "type": "textarea", "placeholder": "The project deadline issue", "required": true},
+        {"key": "prepNeeded", "label": "Preparation needed", "type": "textarea", "placeholder": "Bring any questions about next quarter", "required": false}
+      ],
+      "subjectTemplate": "Agenda for our {{meetingDate}} one-on-one",
+      "bodyTemplate": "Hi {{recipientName}},\n\nFor our {{meetingDate}} one-on-one, I want to cover {{topics}}.\n\nThe priority topic is {{priorityTopic}}. {{prepNeeded}}\n\nBest,",
+      "guidance": [
+        "Put the most important topic in its own line so it gets attention.",
+        "Keep the agenda short enough to read quickly before the meeting.",
+        "Use preparation notes only when they help the meeting be more productive."
+      ],
+      "pitfalls": [
+        "Do not list so many topics that none of them receive attention.",
+        "Do not use the email as a substitute for the conversation itself."
+      ],
+      "examples": [
+        {
+          "label": "Weekly 1:1",
+          "input": "recipientName: Jordan; meetingDate: Thursday; topics: current projects, blockers, and growth goals; priorityTopic: the project deadline issue; prepNeeded: bring any questions about next quarter",
+          "output": "Hi Jordan,\n\nFor our Thursday one-on-one, I want to cover current projects, blockers, and growth goals.\n\nThe priority topic is the project deadline issue. bring any questions about next quarter\n\nBest,"
+        },
+        {
+          "label": "Career discussion",
+          "input": "recipientName: Priya; meetingDate: Monday; topics: work load, team dynamics, and development plans; priorityTopic: your path to leading a larger project; prepNeeded: think about one area you want to stretch into",
+          "output": "Hi Priya,\n\nFor our Monday one-on-one, I want to cover work load, team dynamics, and development plans.\n\nThe priority topic is your path to leading a larger project. think about one area you want to stretch into\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I send an agenda before every one-on-one?", "a": "If the meeting is recurring, a short agenda helps keep it useful."},
+        {"q": "Can the employee add topics?", "a": "Yes. The message should invite that if you want the meeting to be collaborative."}
+      ],
+      "relatedTags": ["1:1", "agenda", "manager", "feedback"]
+    },
+    {
+      "slug": "manager-prep-for-difficult-conversation-builder",
+      "name": "Manager Prep for Difficult Conversation Builder",
+      "keyword": "difficult conversation email",
+      "intent": "performance conversation",
+      "audience": "Managers",
+      "outcome": "Set up a difficult conversation with the purpose, scope, and tone stated clearly.",
+      "metaDescription": "Write a preparation email for a difficult conversation that explains the reason, what will be discussed, and how to approach it. Free private email tool by ReplyMind.",
+      "h1": "Prepare the conversation so it does not start cold.",
+      "intro": "If a discussion may be tense, it helps to state the purpose in advance and reduce surprises. This tool lets you explain the topic, the goal, and the tone you want to maintain.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "topic", "label": "Conversation topic", "type": "textarea", "placeholder": "Repeated missed handoffs", "required": true},
+        {"key": "purpose", "label": "Purpose", "type": "textarea", "placeholder": "To understand the issue and agree on a path forward", "required": true},
+        {"key": "toneLine", "label": "Tone line", "type": "textarea", "placeholder": "I want this to stay direct and respectful", "required": true},
+        {"key": "meetingTime", "label": "Meeting time", "type": "text", "placeholder": "Tomorrow at 10 AM", "required": true}
+      ],
+      "subjectTemplate": "A conversation I would like to have",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI would like to talk about {{topic}}. The purpose of the conversation is {{purpose}}.\n\n{{toneLine}}. We can meet {{meetingTime}}.\n\nBest,",
+      "guidance": [
+        "State the topic directly so there are no surprises.",
+        "Give the purpose so the other person knows the conversation is meant to be constructive.",
+        "Add one line about tone to lower the temperature without softening the issue."
+      ],
+      "pitfalls": [
+        "Do not frame the note like an ambush.",
+        "Do not make the purpose so vague that the person still does not know why you are meeting."
+      ],
+      "examples": [
+        {
+          "label": "Handoff issue",
+          "input": "recipientName: Jordan; topic: repeated missed handoffs; purpose: to understand the issue and agree on a path forward; toneLine: I want this to stay direct and respectful; meetingTime: tomorrow at 10 AM",
+          "output": "Hi Jordan,\n\nI would like to talk about repeated missed handoffs. The purpose of the conversation is to understand the issue and agree on a path forward.\n\nI want this to stay direct and respectful. We can meet tomorrow at 10 AM.\n\nBest,"
+        },
+        {
+          "label": "Communication concern",
+          "input": "recipientName: Priya; topic: communication in the project channel; purpose: to reset expectations for updates and response time; toneLine: I want us to keep it constructive; meetingTime: this afternoon",
+          "output": "Hi Priya,\n\nI would like to talk about communication in the project channel. The purpose of the conversation is to reset expectations for updates and response time.\n\nI want us to keep it constructive. We can meet this afternoon.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I explain every detail in the invite?", "a": "No. Give enough context to avoid surprise, then cover details in the conversation."},
+        {"q": "Can this be used for informal coaching?", "a": "Yes, if the topic is sensitive enough that a little framing will help."}
+      ],
+      "relatedTags": ["difficult-conversation", "manager", "coaching", "feedback"]
+    },
+    {
+      "slug": "internal-escalation-summary-builder",
+      "name": "Internal Escalation Summary Builder",
+      "keyword": "internal escalation summary",
+      "intent": "escalation",
+      "audience": "Managers and operations",
+      "outcome": "Summarize an internal issue for escalation with context, urgency, and the specific ask.",
+      "metaDescription": "Create an internal escalation summary that gives the next team enough context to act quickly. Free private email tool by ReplyMind.",
+      "h1": "Escalate it cleanly so the next team can move.",
+      "intro": "Internal escalations are easier to handle when the summary is structured and short. This tool helps you identify the issue, the impact, the urgency, and what you want the next owner to do.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Operations", "required": false},
+        {"key": "issueSummary", "label": "Issue summary", "type": "textarea", "placeholder": "The approval queue has stalled", "required": true},
+        {"key": "impact", "label": "Impact", "type": "textarea", "placeholder": "Several requests are blocked", "required": true},
+        {"key": "urgency", "label": "Urgency", "type": "text", "placeholder": "High", "required": true},
+        {"key": "ask", "label": "Specific ask", "type": "textarea", "placeholder": "Please review and clear the queue today", "required": true}
+      ],
+      "subjectTemplate": "Escalation: {{urgency}} priority internal issue",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI need to escalate an internal issue. {{issueSummary}} This is causing {{impact}}.\n\nPriority is {{urgency}}. {{ask}}\n\nBest,",
+      "guidance": [
+        "Write the issue in one sentence so the receiver can triage quickly.",
+        "State the impact in practical terms, not just emotion or frustration.",
+        "Make the ask specific enough that the next team can act without guessing."
+      ],
+      "pitfalls": [
+        "Do not send a raw thread when a short escalation summary would help more.",
+        "Do not label everything high urgency unless it truly is."
+      ],
+      "examples": [
+        {
+          "label": "Stalled approvals",
+          "input": "recipientName: Operations; issueSummary: the approval queue has stalled; impact: several requests are blocked; urgency: high; ask: please review and clear the queue today",
+          "output": "Hi Operations,\n\nI need to escalate an internal issue. the approval queue has stalled. This is causing several requests are blocked.\n\nPriority is high. please review and clear the queue today\n\nBest,"
+        },
+        {
+          "label": "Access delay",
+          "input": "recipientName: IT; issueSummary: new hires do not have system access yet; impact: onboarding is delayed; urgency: medium; ask: please confirm the blocker and timing",
+          "output": "Hi IT,\n\nI need to escalate an internal issue. new hires do not have system access yet. This is causing onboarding is delayed.\n\nPriority is medium. please confirm the blocker and timing\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include every attempt I already made?", "a": "Only the key steps. The receiving team needs the short version first."},
+        {"q": "Can this be used outside of support?", "a": "Yes, for any internal escalation that needs a clean handoff."}
+      ],
+      "relatedTags": ["escalation", "internal", "operations", "manager"]
+    },
+    {
+      "slug": "team-vision-reset-email-builder",
+      "name": "Team Vision Reset Email Builder",
+      "keyword": "team vision reset email",
+      "intent": "change management",
+      "audience": "Managers and team leads",
+      "outcome": "Explain a reset in team direction with the new focus and what will stop or start.",
+      "metaDescription": "Draft a team vision reset email that explains the new focus, what changes, and the first practical step. Free private email tool by ReplyMind.",
+      "h1": "Reset the direction before the team drifts further.",
+      "intro": "When direction changes, people need a crisp explanation of what the new focus is and what will no longer be a priority. This tool keeps the note concrete and usable.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "oldDirection", "label": "Old direction", "type": "textarea", "placeholder": "We were trying to do too many launches at once", "required": true},
+        {"key": "newDirection", "label": "New direction", "type": "textarea", "placeholder": "We are focusing on reliability first", "required": true},
+        {"key": "stopDoing", "label": "What should stop", "type": "textarea", "placeholder": "Stop adding new work that does not support the reset", "required": true},
+        {"key": "firstStep", "label": "First step", "type": "textarea", "placeholder": "Rework the sprint plan by end of day", "required": true}
+      ],
+      "subjectTemplate": "A reset in our team direction",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe need to reset our direction. We are moving away from {{oldDirection}} and toward {{newDirection}}.\n\nThat means we should {{stopDoing}}. Our first step is {{firstStep}}.\n\nBest,",
+      "guidance": ["Say both what is ending and what is replacing it so the reset feels real.", "Give one first step the team can act on immediately.", "Keep the message firm enough to create focus, but not dramatic."],
+      "pitfalls": ["Do not describe the reset in aspirational language only.", "Do not leave the team guessing what work should stop."],
+      "examples": [
+        {"label": "Reliability reset", "input": "recipientName: Team; oldDirection: we were trying to do too many launches at once; newDirection: we are focusing on reliability first; stopDoing: stop adding new work that does not support the reset; firstStep: rework the sprint plan by end of day", "output": "Hi Team,\n\nWe need to reset our direction. We are moving away from we were trying to do too many launches at once and toward we are focusing on reliability first.\n\nThat means we should stop adding new work that does not support the reset. Our first step is rework the sprint plan by end of day.\n\nBest,"},
+        {"label": "Capacity reset", "input": "recipientName: Team; oldDirection: trying to support every request immediately; newDirection: using a clearer intake and priority model; stopDoing: stop taking on ad hoc work without review; firstStep: use the new intake list this week", "output": "Hi Team,\n\nWe need to reset our direction. We are moving away from trying to support every request immediately and toward using a clearer intake and priority model.\n\nThat means we should stop taking on ad hoc work without review. Our first step is use the new intake list this week.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I explain why the old direction failed?", "a": "Only briefly. The note should move the team toward the new focus."},
+        {"q": "Can this be used for a small team reset?", "a": "Yes. The same structure works for a team of any size."}
+      ],
+      "relatedTags": ["change-management", "direction", "manager", "team"]
+    },
+    {
+      "slug": "decision-delay-explanation-builder",
+      "name": "Decision Delay Explanation Builder",
+      "keyword": "decision delay email",
+      "intent": "internal coordination",
+      "audience": "Managers and operations",
+      "outcome": "Explain why a decision is delayed and when people can expect the next update.",
+      "metaDescription": "Draft a decision delay email that explains the blocker, the next update window, and the current owner. Free private email tool by ReplyMind.",
+      "h1": "Say why the answer is late without sounding evasive.",
+      "intro": "When a decision slips, a short update is better than silence. This tool helps you explain the blocker, the current owner, and when the next update will land.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "decisionTopic", "label": "Decision topic", "type": "textarea", "placeholder": "The vendor selection", "required": true},
+        {"key": "blocker", "label": "What is blocking it", "type": "textarea", "placeholder": "We are waiting on one more legal review", "required": true},
+        {"key": "owner", "label": "Current owner", "type": "text", "placeholder": "Legal team", "required": true},
+        {"key": "nextUpdate", "label": "Next update", "type": "text", "placeholder": "Tomorrow afternoon", "required": true}
+      ],
+      "subjectTemplate": "Update on the {{decisionTopic}} decision",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to update you on {{decisionTopic}}. The decision is delayed because {{blocker}}.\n\nThe current owner is {{owner}} and we will share the next update {{nextUpdate}}.\n\nBest,",
+      "guidance": ["State the blocker plainly so the delay does not sound unexplained.", "Name the owner so people know where the issue sits today.", "Always include the next update window."],
+      "pitfalls": ["Do not leave the message open-ended if a timeline is available.", "Do not imply a decision is final if it is still pending."],
+      "examples": [
+        {"label": "Vendor review", "input": "recipientName: Team; decisionTopic: the vendor selection; blocker: we are waiting on one more legal review; owner: legal team; nextUpdate: tomorrow afternoon", "output": "Hi Team,\n\nI want to update you on the vendor selection. The decision is delayed because we are waiting on one more legal review.\n\nThe current owner is legal team and we will share the next update tomorrow afternoon.\n\nBest,"},
+        {"label": "Budget signoff", "input": "recipientName: Managers; decisionTopic: the budget signoff; blocker: finance needs to confirm one line item; owner: finance team; nextUpdate: by Friday", "output": "Hi Managers,\n\nI want to update you on the budget signoff. The decision is delayed because finance needs to confirm one line item.\n\nThe current owner is finance team and we will share the next update by Friday.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I apologize for the delay?", "a": "A brief acknowledgement is enough if you also explain the blocker and next update."},
+        {"q": "Do I need to list every dependency?", "a": "No. Just the one or two that actually control the decision."}
+      ],
+      "relatedTags": ["decision", "delay", "operations", "manager"]
+    },
+    {
+      "slug": "meeting-attendance-issue-note-builder",
+      "name": "Meeting Attendance Issue Note Builder",
+      "keyword": "meeting attendance email",
+      "intent": "performance conversation",
+      "audience": "Managers",
+      "outcome": "Address repeated meeting attendance problems without turning it into a broad critique.",
+      "metaDescription": "Write a meeting attendance note that names the pattern, why it matters, and the change needed. Free private email tool by ReplyMind.",
+      "h1": "Fix the meeting habit before it becomes the norm.",
+      "intro": "Repeated lateness or no-shows can make a team meeting less useful for everyone. This tool helps you point to the pattern, explain the impact, and ask for a specific change.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "pattern", "label": "Attendance pattern", "type": "textarea", "placeholder": "You have missed the last two project meetings", "required": true},
+        {"key": "impact", "label": "Impact", "type": "textarea", "placeholder": "The team had to make decisions without your input", "required": true},
+        {"key": "changeNeeded", "label": "Change needed", "type": "textarea", "placeholder": "Please confirm attendance or decline ahead of time", "required": true},
+        {"key": "checkIn", "label": "Check-in timing", "type": "text", "placeholder": "After next week's meeting", "required": false}
+      ],
+      "subjectTemplate": "A note about meeting attendance",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI want to address a pattern we need to fix. {{pattern}}.\n\nThis has had an impact because {{impact}}. Going forward, I need {{changeNeeded}}.\n\nWe can check in {{checkIn}}.\n\nBest,",
+      "guidance": ["Focus on the attendance pattern rather than the personality behind it.", "Explain the meeting impact so the issue feels concrete.", "Close with a measurable change and a follow-up point."],
+      "pitfalls": ["Do not make the complaint too general.", "Do not turn one missed meeting into a larger accusation than the facts support."],
+      "examples": [
+        {"label": "No-shows", "input": "recipientName: Jordan; pattern: you have missed the last two project meetings; impact: the team had to make decisions without your input; changeNeeded: please confirm attendance or decline ahead of time; checkIn: after next week's meeting", "output": "Hi Jordan,\n\nI want to address a pattern we need to fix. you have missed the last two project meetings.\n\nThis has had an impact because the team had to make decisions without your input. Going forward, I need please confirm attendance or decline ahead of time.\n\nWe can check in after next week's meeting.\n\nBest,"},
+        {"label": "Late joins", "input": "recipientName: Priya; pattern: you have been joining the weekly planning meeting 15 minutes late; impact: the group starts without key context; changeNeeded: please join on time or send your update in advance; checkIn: next Thursday", "output": "Hi Priya,\n\nI want to address a pattern we need to fix. you have been joining the weekly planning meeting 15 minutes late.\n\nThis has had an impact because the group starts without key context. Going forward, I need please join on time or send your update in advance.\n\nWe can check in next Thursday.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I mention every missed meeting?", "a": "Only the ones that show the pattern clearly."},
+        {"q": "Is this too formal for a quick note?", "a": "No. Attendance issues benefit from clear written follow-up."}
+      ],
+      "relatedTags": ["attendance", "meeting", "performance", "manager"]
+    },
+    {
+      "slug": "performance-context-note-builder",
+      "name": "Performance Context Note Builder",
+      "keyword": "performance context email",
+      "intent": "performance conversation",
+      "audience": "Managers and HR",
+      "outcome": "Document context around a performance issue so the conversation stays fair and specific.",
+      "metaDescription": "Create a performance context note that records the situation, contributing factors, and what will be discussed next. Free private email tool by ReplyMind.",
+      "h1": "Capture the context without turning it into an excuse.",
+      "intro": "Sometimes a performance issue needs context before the right next step is clear. This tool helps you record the situation, the contributing factors, and the action to take next.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "situation", "label": "Situation", "type": "textarea", "placeholder": "The report was late after a week of shifting priorities", "required": true},
+        {"key": "factors", "label": "Contributing factors", "type": "textarea", "placeholder": "Scope changed and one dependency slipped", "required": true},
+        {"key": "nextDiscussion", "label": "Next discussion", "type": "textarea", "placeholder": "Review how to avoid the same issue next cycle", "required": true},
+        {"key": "date", "label": "Date of note", "type": "text", "placeholder": "Today", "required": false}
+      ],
+      "subjectTemplate": "Context for our performance discussion",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to capture context around {{situation}}. The contributing factors were {{factors}}.\n\nWe should use this as context for {{nextDiscussion}}. I am noting this on {{date}}.\n\nBest,",
+      "guidance": ["Use context to inform the discussion, not to dismiss the issue.", "Write the note as a factual record, not a blame summary.", "Link the context to the next discussion so the note has a purpose."],
+      "pitfalls": ["Do not let the context become a substitute for accountability.", "Do not turn the note into a defensive explanation."],
+      "examples": [
+        {"label": "Shifting priorities", "input": "recipientName: Jordan; situation: the report was late after a week of shifting priorities; factors: scope changed and one dependency slipped; nextDiscussion: review how to avoid the same issue next cycle; date: today", "output": "Hi Jordan,\n\nI wanted to capture context around the report was late after a week of shifting priorities. The contributing factors were scope changed and one dependency slipped.\n\nWe should use this as context for review how to avoid the same issue next cycle. I am noting this on today.\n\nBest,"},
+        {"label": "Unexpected support load", "input": "recipientName: Priya; situation: onboarding work slowed for two weeks; factors: support coverage pulled attention away; nextDiscussion: decide what should be deprioritized during busy periods; date: this week", "output": "Hi Priya,\n\nI wanted to capture context around onboarding work slowed for two weeks. The contributing factors were support coverage pulled attention away.\n\nWe should use this as context for decide what should be deprioritized during busy periods. I am noting this on this week.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Is this a performance warning?", "a": "No. It is a factual context note that supports a later discussion."},
+        {"q": "Should I include the full history?", "a": "Only the facts needed to understand the current situation."}
+      ],
+      "relatedTags": ["performance", "context", "hr", "manager"]
+    },
+    {
+      "slug": "manager-employee-acknowledgment-builder",
+      "name": "Manager Employee Acknowledgment Builder",
+      "keyword": "employee acknowledgment email",
+      "intent": "recognition",
+      "audience": "Managers",
+      "outcome": "Acknowledge a team member for a concrete action that kept work moving.",
+      "metaDescription": "Draft a quick acknowledgment email for a helpful action, milestone, or extra effort. Free private email tool by ReplyMind.",
+      "h1": "Acknowledge the action so it lands the right way.",
+      "intro": "A short acknowledgment can have real value when it names exactly what someone did and why it mattered. This tool helps you write that note without overdoing it.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Mina", "required": false},
+        {"key": "action", "label": "Action acknowledged", "type": "textarea", "placeholder": "You covered the client call at the last minute", "required": true},
+        {"key": "result", "label": "Result", "type": "textarea", "placeholder": "The client got answers and the project stayed on track", "required": true},
+        {"key": "reason", "label": "Why it mattered", "type": "textarea", "placeholder": "It prevented a delay for the rest of the team", "required": true},
+        {"key": "nextSignal", "label": "Optional next signal", "type": "textarea", "placeholder": "I appreciate how quickly you stepped in", "required": false}
+      ],
+      "subjectTemplate": "Thanks for stepping in",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to acknowledge {{action}}. The result was {{result}}, and that mattered because {{reason}}.\n\n{{nextSignal}}\n\nBest,",
+      "guidance": ["Keep the acknowledgment tied to one concrete action.", "Mention the result so the note is not just praise but recognition of impact.", "Use a short closing line if you want to reinforce the behavior."],
+      "pitfalls": ["Do not make the note so general that it could apply to any employee.", "Do not stretch the praise into a formal award-style message."],
+      "examples": [
+        {"label": "Covering a call", "input": "recipientName: Mina; action: you covered the client call at the last minute; result: the client got answers and the project stayed on track; reason: it prevented a delay for the rest of the team; nextSignal: I appreciate how quickly you stepped in", "output": "Hi Mina,\n\nI wanted to acknowledge you covered the client call at the last minute. The result was the client got answers and the project stayed on track, and that mattered because it prevented a delay for the rest of the team.\n\nI appreciate how quickly you stepped in\n\nBest,"},
+        {"label": "Sharing context", "input": "recipientName: Leo; action: you documented the process change before the rollout; result: the whole team had one clear reference; reason: it reduced confusion; nextSignal: that level of preparation is helpful", "output": "Hi Leo,\n\nI wanted to acknowledge you documented the process change before the rollout. The result was the whole team had one clear reference, and that mattered because it reduced confusion.\n\nthat level of preparation is helpful\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Is a short acknowledgment worth sending?", "a": "Yes. Brief, specific recognition is often the most believable."},
+        {"q": "Should I always include impact?", "a": "If you can. Impact is what makes the recognition meaningful."}
+      ],
+      "relatedTags": ["recognition", "thanks", "manager", "culture"]
+    },
+    {
+      "slug": "manager-feedback-request-to-peer-builder",
+      "name": "Manager Feedback Request to Peer Builder",
+      "keyword": "request peer feedback email",
+      "intent": "feedback request",
+      "audience": "Managers and team leads",
+      "outcome": "Ask another leader for useful feedback on a working relationship or shared project.",
+      "metaDescription": "Write a peer feedback request that is specific, respectful, and easy to answer. Free private email tool by ReplyMind.",
+      "h1": "Ask for the feedback that will actually help.",
+      "intro": "When you need feedback from a peer, the request should be specific enough to answer quickly. This tool helps you ask about one working habit, one project, or one relationship pattern.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Morgan", "required": false},
+        {"key": "context", "label": "Context", "type": "textarea", "placeholder": "We just finished the planning cycle", "required": true},
+        {"key": "feedbackArea", "label": "Feedback area", "type": "textarea", "placeholder": "How I handled the cross-team handoff", "required": true},
+        {"key": "useCase", "label": "Why I am asking", "type": "textarea", "placeholder": "I want to improve how I work with your team", "required": true},
+        {"key": "responseAsk", "label": "Response ask", "type": "textarea", "placeholder": "A few sentences is enough", "required": false}
+      ],
+      "subjectTemplate": "Could I get your feedback on {{feedbackArea}}?",
+      "bodyTemplate": "Hi {{recipientName}},\n\nAfter {{context}}, I wanted to ask for feedback on {{feedbackArea}}.\n\nI am asking because {{useCase}}. {{responseAsk}}\n\nBest,",
+      "guidance": ["Keep the question focused so the peer knows what to comment on.", "Explain why you want the feedback so the request feels grounded.", "Make the reply format easy so answering does not take much effort."],
+      "pitfalls": ["Do not ask for broad career advice when you really want feedback on one interaction.", "Do not make the note defensive or pre-justify your behavior."],
+      "examples": [
+        {"label": "Cross-team handoff", "input": "recipientName: Morgan; context: we just finished the planning cycle; feedbackArea: how I handled the cross-team handoff; useCase: I want to improve how I work with your team; responseAsk: a few sentences is enough", "output": "Hi Morgan,\n\nAfter we just finished the planning cycle, I wanted to ask for feedback on how I handled the cross-team handoff.\n\nI am asking because I want to improve how I work with your team. A few sentences is enough\n\nBest,"},
+        {"label": "Leadership style", "input": "recipientName: Dana; context: after the Q3 review; feedbackArea: how I ran the discussion; useCase: I want to make future reviews more useful; responseAsk: a quick reply works", "output": "Hi Dana,\n\nAfter after the Q3 review, I wanted to ask for feedback on how I ran the discussion.\n\nI am asking because I want to make future reviews more useful. a quick reply works\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I ask for feedback from peers often?", "a": "Only when there is a real reason to learn from the response."},
+        {"q": "Can I ask by email instead of in person?", "a": "Yes, if email is the easiest way to make the request specific and low pressure."}
+      ],
+      "relatedTags": ["feedback", "peer", "manager", "development"]
+    },
+    {
+      "slug": "promotion-calibration-note-builder",
+      "name": "Promotion Calibration Note Builder",
+      "keyword": "promotion calibration email",
+      "intent": "promotion review",
+      "audience": "Managers and HR",
+      "outcome": "Prepare a promotion calibration note with evidence and the decision point under review.",
+      "metaDescription": "Create a promotion calibration note that summarizes evidence, open questions, and the recommendation. Free private email tool by ReplyMind.",
+      "h1": "Bring the evidence into the promotion conversation.",
+      "intro": "Promotion calibration works best when the note is clear about the evidence, the remaining question, and the recommendation being discussed. This tool keeps the message grounded and concise.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Calibrators", "required": false},
+        {"key": "candidateName", "label": "Candidate name", "type": "text", "placeholder": "Jordan", "required": true},
+        {"key": "evidence", "label": "Promotion evidence", "type": "textarea", "placeholder": "Led the rollout and influenced two adjacent teams", "required": true},
+        {"key": "openQuestion", "label": "Open question", "type": "textarea", "placeholder": "Whether the scope is broad enough for the next level", "required": true},
+        {"key": "recommendation", "label": "Recommendation", "type": "textarea", "placeholder": "I recommend moving forward this cycle", "required": true}
+      ],
+      "subjectTemplate": "Promotion calibration for {{candidateName}}",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to share calibration input for {{candidateName}}. The evidence I am using is {{evidence}}.\n\nThe open question is {{openQuestion}}. My recommendation is {{recommendation}}.\n\nBest,",
+      "guidance": ["Keep the evidence specific and tied to the promotion criteria.", "Separate the open question from the recommendation so reviewers can debate the right part.", "Avoid emotional language and keep the note reviewable."],
+      "pitfalls": ["Do not make the note too broad to support a decision.", "Do not hide the actual recommendation."],
+      "examples": [
+        {"label": "Cycle review", "input": "recipientName: Calibrators; candidateName: Jordan; evidence: led the rollout and influenced two adjacent teams; openQuestion: whether the scope is broad enough for the next level; recommendation: I recommend moving forward this cycle", "output": "Hi Calibrators,\n\nI wanted to share calibration input for Jordan. The evidence I am using is led the rollout and influenced two adjacent teams.\n\nThe open question is whether the scope is broad enough for the next level. My recommendation is I recommend moving forward this cycle.\n\nBest,"},
+        {"label": "Hold for now", "input": "recipientName: Calibrators; candidateName: Priya; evidence: strong delivery and solid team trust; openQuestion: whether she has shown enough cross-functional ownership; recommendation: I recommend waiting for one more cycle", "output": "Hi Calibrators,\n\nI wanted to share calibration input for Priya. The evidence I am using is strong delivery and solid team trust.\n\nThe open question is whether she has shown enough cross-functional ownership. My recommendation is I recommend waiting for one more cycle.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include the candidate's full history?", "a": "Only the evidence that matters for the current review."},
+        {"q": "Is this a decision email?", "a": "It is a calibration note, so it should support discussion rather than announce a final result."}
+      ],
+      "relatedTags": ["promotion", "calibration", "hr", "manager"]
+    },
+    {
+      "slug": "compensation-change-explanation-builder",
+      "name": "Compensation Change Explanation Builder",
+      "keyword": "compensation change email",
+      "intent": "compensation communication",
+      "audience": "HR and managers",
+      "outcome": "Explain a compensation change with the reason, effective date, and any next steps.",
+      "metaDescription": "Draft a compensation change email that clearly explains the update, timing, and what the employee should expect. Free private email tool by ReplyMind.",
+      "h1": "Say what changed in compensation without ambiguity.",
+      "intro": "Compensation changes should be communicated carefully and plainly. This tool helps you state the change, the reason, the date it starts, and any next step the employee needs to take.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "changeSummary", "label": "Change summary", "type": "textarea", "placeholder": "Your base salary is being adjusted", "required": true},
+        {"key": "reason", "label": "Reason", "type": "textarea", "placeholder": "To reflect the updated scope of your role", "required": true},
+        {"key": "effectiveDate", "label": "Effective date", "type": "text", "placeholder": "September 1", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "Please review the attached letter", "required": true}
+      ],
+      "subjectTemplate": "Update to your compensation",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI wanted to share an update to your compensation. {{changeSummary}} This is being done because {{reason}}.\n\nThe change takes effect on {{effectiveDate}}. {{nextStep}}\n\nBest,",
+      "guidance": ["State the change directly and avoid hedging language.", "Include the reason only at the level needed to make the update understandable.", "Make the next step easy to identify if the employee must review something."],
+      "pitfalls": ["Do not bury the effective date in a long explanation.", "Do not add unnecessary detail that could confuse the core message."],
+      "examples": [
+        {"label": "Salary adjustment", "input": "recipientName: Jordan; changeSummary: your base salary is being adjusted; reason: to reflect the updated scope of your role; effectiveDate: September 1; nextStep: please review the attached letter", "output": "Hi Jordan,\n\nI wanted to share an update to your compensation. Your base salary is being adjusted. This is being done because to reflect the updated scope of your role.\n\nThe change takes effect on September 1. Please review the attached letter\n\nBest,"},
+        {"label": "Role expansion", "input": "recipientName: Priya; changeSummary: your compensation package will be updated; reason: your responsibilities expanded this quarter; effectiveDate: next payroll cycle; nextStep: HR will send the details separately", "output": "Hi Priya,\n\nI wanted to share an update to your compensation. your compensation package will be updated. This is being done because your responsibilities expanded this quarter.\n\nThe change takes effect on next payroll cycle. HR will send the details separately\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include the full numbers here?", "a": "Only if this is the approved communication channel for the details."},
+        {"q": "Can I explain the reasoning briefly?", "a": "Yes. A short reason helps the message feel clear and not arbitrary."}
+      ],
+      "relatedTags": ["compensation", "hr", "update", "manager"]
+    },
+    {
+      "slug": "policy-compliance-nudge-builder",
+      "name": "Policy Compliance Nudge Builder",
+      "keyword": "policy compliance reminder",
+      "intent": "policy compliance",
+      "audience": "HR and operations",
+      "outcome": "Nudge employees to complete a policy-related task before it becomes overdue.",
+      "metaDescription": "Write a policy compliance nudge that names the requirement, the deadline, and the exact action. Free private email tool by ReplyMind.",
+      "h1": "Give the reminder before the deadline passes.",
+      "intro": "Compliance reminders are most effective when they are short and practical. This tool helps you state the requirement, the deadline, and the action in plain language.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "requirement", "label": "Requirement", "type": "textarea", "placeholder": "Complete the annual policy attestation", "required": true},
+        {"key": "deadline", "label": "Deadline", "type": "text", "placeholder": "Friday at 5 PM", "required": true},
+        {"key": "actionNeeded", "label": "Action needed", "type": "textarea", "placeholder": "Log into the portal and submit the attestation", "required": true},
+        {"key": "helpLine", "label": "Help line", "type": "textarea", "placeholder": "Reach out if the portal is not working", "required": false}
+      ],
+      "subjectTemplate": "Reminder about {{requirement}}",
+      "bodyTemplate": "Hi {{recipientName}},\n\nA quick reminder that {{requirement}} is due by {{deadline}}.\n\nPlease {{actionNeeded}}. {{helpLine}}\n\nBest,",
+      "guidance": ["Keep the reminder short so it is easy to act on quickly.", "State the action exactly as you want the employee to complete it.", "Offer help only if there is a realistic support path."],
+      "pitfalls": ["Do not turn a reminder into a scolding note.", "Do not imply a deadline that is not real."],
+      "examples": [
+        {"label": "Attestation reminder", "input": "recipientName: Team; requirement: complete the annual policy attestation; deadline: Friday at 5 PM; actionNeeded: log into the portal and submit the attestation; helpLine: reach out if the portal is not working", "output": "Hi Team,\n\nA quick reminder that complete the annual policy attestation is due by Friday at 5 PM.\n\nPlease log into the portal and submit the attestation. reach out if the portal is not working\n\nBest,"},
+        {"label": "Training deadline", "input": "recipientName: Employees; requirement: finish the harassment prevention module; deadline: next Wednesday; actionNeeded: complete the course and mark it done; helpLine: HR can resend the link if needed", "output": "Hi Employees,\n\nA quick reminder that finish the harassment prevention module is due by next Wednesday.\n\nPlease complete the course and mark it done. HR can resend the link if needed\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I say the task is overdue?", "a": "Only if it already is. Otherwise keep it as a reminder."},
+        {"q": "Can I include a support contact?", "a": "Yes, if people may need help completing the task."}
+      ],
+      "relatedTags": ["policy", "compliance", "reminder", "hr"]
+    },
+    {
+      "slug": "new-manager-introduction-email-builder",
+      "name": "New Manager Introduction Email Builder",
+      "keyword": "new manager introduction email",
+      "intent": "internal introduction",
+      "audience": "Managers and HR",
+      "outcome": "Introduce a new manager to the team with role, focus, and first touchpoints.",
+      "metaDescription": "Draft a new manager introduction email that explains the role, focus, and first steps for the team. Free private email tool by ReplyMind.",
+      "h1": "Introduce the new manager without making it feel ceremonial.",
+      "intro": "When a manager joins a team, people want to know who they are, what they will own, and what to expect first. This tool helps you make that introduction clear and practical.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "managerName", "label": "Manager name", "type": "text", "placeholder": "Jordan", "required": true},
+        {"key": "roleTitle", "label": "Role title", "type": "text", "placeholder": "Operations Manager", "required": true},
+        {"key": "focusArea", "label": "Focus area", "type": "textarea", "placeholder": "Improving the team process and support", "required": true},
+        {"key": "firstTouchpoint", "label": "First touchpoint", "type": "textarea", "placeholder": "A short team intro next week", "required": true}
+      ],
+      "subjectTemplate": "Introducing {{managerName}}, our new {{roleTitle}}",
+      "bodyTemplate": "Hi {{recipientName}},\n\nPlease welcome {{managerName}}, who is joining as our {{roleTitle}}. Their focus will be {{focusArea}}.\n\nThe first touchpoint will be {{firstTouchpoint}}.\n\nBest,",
+      "guidance": ["Keep the introduction short and useful rather than overly formal.", "Explain the focus area so the team understands why the person is joining.", "State the first touchpoint so the team knows what happens next."],
+      "pitfalls": ["Do not make the message sound like a press release.", "Do not leave the new manager's focus vague."],
+      "examples": [
+        {"label": "Operations hire", "input": "recipientName: Team; managerName: Jordan; roleTitle: Operations Manager; focusArea: improving the team process and support; firstTouchpoint: a short team intro next week", "output": "Hi Team,\n\nPlease welcome Jordan, who is joining as our Operations Manager. Their focus will be improving the team process and support.\n\nThe first touchpoint will be a short team intro next week.\n\nBest,"},
+        {"label": "People manager", "input": "recipientName: Team; managerName: Priya; roleTitle: People Manager; focusArea: supporting growth and clearer team rhythms; firstTouchpoint: a meet-and-greet on Thursday", "output": "Hi Team,\n\nPlease welcome Priya, who is joining as our People Manager. Their focus will be supporting growth and clearer team rhythms.\n\nThe first touchpoint will be a meet-and-greet on Thursday.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include the person's full biography?", "a": "No. The email should help the team understand the role and the next step."},
+        {"q": "Is it okay to mention the first meeting?", "a": "Yes, if it helps the team know how to connect with the new manager."}
+      ],
+      "relatedTags": ["introduction", "manager", "hr", "onboarding"]
+    },
+    {
+      "slug": "team-building-invitation-builder",
+      "name": "Team Building Invitation Builder",
+      "keyword": "team building invitation email",
+      "intent": "internal event",
+      "audience": "Managers and team leads",
+      "outcome": "Invite the team to an internal event with purpose, timing, and attendance expectations.",
+      "metaDescription": "Write a team building invitation email that explains the purpose, date, and what people should expect. Free private email tool by ReplyMind.",
+      "h1": "Invite people in a way that sounds worth their time.",
+      "intro": "Internal events work when employees know why the event matters and what the format is. This tool helps you explain the purpose, time, and what to bring or expect.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "eventPurpose", "label": "Event purpose", "type": "textarea", "placeholder": "To reconnect after a busy quarter", "required": true},
+        {"key": "eventDate", "label": "Event date", "type": "text", "placeholder": "Friday, September 12", "required": true},
+        {"key": "format", "label": "Format", "type": "text", "placeholder": "In person lunch", "required": true},
+        {"key": "expectation", "label": "Expectation", "type": "textarea", "placeholder": "Come as you are and bring one team win", "required": false}
+      ],
+      "subjectTemplate": "Team event on {{eventDate}}",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe are setting up a team event to {{eventPurpose}}. It will be {{format}} on {{eventDate}}.\n\n{{expectation}}\n\nBest,",
+      "guidance": ["Make the purpose sound real so the invite has a reason behind it.", "State the format clearly so people know what kind of event it is.", "Include one expectation if it helps people show up prepared."],
+      "pitfalls": ["Do not make the invite feel like an obligation with no context.", "Do not hide the format, especially if it affects attendance."],
+      "examples": [
+        {"label": "Quarter reset lunch", "input": "recipientName: Team; eventPurpose: to reconnect after a busy quarter; eventDate: Friday, September 12; format: in person lunch; expectation: come as you are and bring one team win", "output": "Hi Team,\n\nWe are setting up a team event to to reconnect after a busy quarter. It will be in person lunch on Friday, September 12.\n\ncome as you are and bring one team win\n\nBest,"},
+        {"label": "Remote social", "input": "recipientName: Team; eventPurpose: to give us time to relax together; eventDate: next Thursday; format: virtual trivia; expectation: no prep needed", "output": "Hi Team,\n\nWe are setting up a team event to to give us time to relax together. It will be virtual trivia on next Thursday.\n\nno prep needed\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should the invite be optional or required?", "a": "Say that plainly if attendance is optional. Otherwise people may assume it is mandatory."},
+        {"q": "Do I need a long explanation for the event?", "a": "No. A simple purpose and format are enough."}
+      ],
+      "relatedTags": ["team-building", "event", "manager", "culture"]
+    },
+    {
+      "slug": "internal-survey-launch-email-builder",
+      "name": "Internal Survey Launch Email Builder",
+      "keyword": "internal survey email",
+      "intent": "internal communication",
+      "audience": "HR and operations",
+      "outcome": "Launch an internal survey with the reason, deadline, and how the results will be used.",
+      "metaDescription": "Create an internal survey launch email that explains the purpose, deadline, and why participation matters. Free private email tool by ReplyMind.",
+      "h1": "Ask for feedback with enough context to earn a response.",
+      "intro": "People are more likely to complete a survey when they know why it matters and how the results will be used. This tool helps you frame the ask clearly and respectfully.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "surveyPurpose", "label": "Survey purpose", "type": "textarea", "placeholder": "We want to improve the onboarding process", "required": true},
+        {"key": "deadline", "label": "Deadline", "type": "text", "placeholder": "By next Friday", "required": true},
+        {"key": "resultUse", "label": "How results will be used", "type": "textarea", "placeholder": "We will use them to shape next quarter's plan", "required": true},
+        {"key": "timeAsk", "label": "Time ask", "type": "text", "placeholder": "It should take about five minutes", "required": false}
+      ],
+      "subjectTemplate": "Please take a few minutes for our survey",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe are launching a short survey because {{surveyPurpose}}.\n\nPlease complete it {{deadline}}. {{timeAsk}} We will use the results to {{resultUse}}.\n\nBest,",
+      "guidance": ["Tell people why you are asking before you ask them to spend time on it.", "Keep the time estimate realistic if you include one.", "Explain how the results will matter so the survey feels worthwhile."],
+      "pitfalls": ["Do not send a survey invite without a purpose.", "Do not overstate the time required if the survey is longer than a few minutes."],
+      "examples": [
+        {"label": "Onboarding survey", "input": "recipientName: Team; surveyPurpose: we want to improve the onboarding process; deadline: by next Friday; resultUse: shape next quarter's plan; timeAsk: it should take about five minutes", "output": "Hi Team,\n\nWe are launching a short survey because we want to improve the onboarding process.\n\nPlease complete it by next Friday. it should take about five minutes We will use the results to shape next quarter's plan.\n\nBest,"},
+        {"label": "Manager pulse survey", "input": "recipientName: Managers; surveyPurpose: we want to understand where you need more support; deadline: by Wednesday; resultUse: adjust manager resources and training; timeAsk: it should take less than ten minutes", "output": "Hi Managers,\n\nWe are launching a short survey because we want to understand where you need more support.\n\nPlease complete it by Wednesday. it should take less than ten minutes We will use the results to adjust manager resources and training.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I explain why the survey is anonymous?", "a": "Yes, if anonymity is part of the design and will affect participation."},
+        {"q": "Can this be used for small internal polls?", "a": "Yes, the structure still works if the ask is brief and useful."}
+      ],
+      "relatedTags": ["survey", "feedback", "internal", "hr"]
+    },
+    {
+      "slug": "manager-update-on-policy-enforcement-builder",
+      "name": "Manager Update on Policy Enforcement Builder",
+      "keyword": "policy enforcement email",
+      "intent": "policy communication",
+      "audience": "Managers and HR",
+      "outcome": "Tell managers how a policy will now be enforced and what to do differently.",
+      "metaDescription": "Write a policy enforcement update that explains the rule, the change in enforcement, and the manager action. Free private email tool by ReplyMind.",
+      "h1": "Make the enforcement change explicit and practical.",
+      "intro": "If a policy is now being enforced more consistently, managers need to know what is changing and how to apply it. This tool keeps the update precise and actionable.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Managers", "required": false},
+        {"key": "policyName", "label": "Policy name", "type": "text", "placeholder": "Expense approval policy", "required": true},
+        {"key": "enforcementChange", "label": "Enforcement change", "type": "textarea", "placeholder": "Late submissions will no longer be accepted", "required": true},
+        {"key": "managerAction", "label": "Manager action", "type": "textarea", "placeholder": "Please review requests before they are submitted", "required": true},
+        {"key": "startDate", "label": "Start date", "type": "text", "placeholder": "Next Monday", "required": true}
+      ],
+      "subjectTemplate": "Update on {{policyName}} enforcement",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe are updating how we enforce {{policyName}}. {{enforcementChange}}.\n\n{{managerAction}} This starts {{startDate}}.\n\nBest,",
+      "guidance": ["Say what is changing in enforcement, not just that a policy is being updated.", "Give managers a concrete action so they can apply the rule consistently.", "Include the start date so there is no ambiguity."],
+      "pitfalls": ["Do not make the message sound like a warning if it is meant to be operational.", "Do not leave managers to infer the new standard."],
+      "examples": [
+        {"label": "Expense policy", "input": "recipientName: Managers; policyName: expense approval policy; enforcementChange: late submissions will no longer be accepted; managerAction: please review requests before they are submitted; startDate: next Monday", "output": "Hi Managers,\n\nWe are updating how we enforce expense approval policy. Late submissions will no longer be accepted.\n\nplease review requests before they are submitted This starts next Monday.\n\nBest,"},
+        {"label": "Attendance policy", "input": "recipientName: Managers; policyName: attendance policy; enforcementChange: absences now need to be reported on the same day; managerAction: remind your teams of the new process; startDate: immediately", "output": "Hi Managers,\n\nWe are updating how we enforce attendance policy. absences now need to be reported on the same day.\n\nremind your teams of the new process This starts immediately.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I explain why enforcement is changing?", "a": "Only briefly if it helps managers understand the practical reason."},
+        {"q": "Does this replace the policy document?", "a": "No. It tells managers how enforcement is changing and what to do."}
+      ],
+      "relatedTags": ["policy", "enforcement", "manager", "operations"]
+    },
+    {
+      "slug": "internal-initiative-kickoff-builder",
+      "name": "Internal Initiative Kickoff Builder",
+      "keyword": "internal initiative kickoff email",
+      "intent": "project kickoff",
+      "audience": "Managers and project leads",
+      "outcome": "Kick off an internal initiative with purpose, ownership, and the first checkpoint.",
+      "metaDescription": "Draft an internal initiative kickoff email that states the goal, ownership, and first checkpoint. Free private email tool by ReplyMind.",
+      "h1": "Kick off the work with the essentials in place.",
+      "intro": "A kickoff note should tell the team why the initiative exists, who owns what, and when the first checkpoint happens. This tool makes that straightforward.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "initiative", "label": "Initiative", "type": "textarea", "placeholder": "The new support workflow", "required": true},
+        {"key": "goal", "label": "Goal", "type": "textarea", "placeholder": "Reduce response time and improve clarity", "required": true},
+        {"key": "owner", "label": "Owner", "type": "text", "placeholder": "Mina", "required": true},
+        {"key": "firstCheckin", "label": "First check-in", "type": "text", "placeholder": "Next Wednesday", "required": true}
+      ],
+      "subjectTemplate": "Kickoff: {{initiative}}",
+      "bodyTemplate": "Hi {{recipientName}},\n\nWe are kicking off {{initiative}}. The goal is {{goal}}, and the main owner is {{owner}}.\n\nOur first check-in is {{firstCheckin}}.\n\nBest,",
+      "guidance": ["Name the initiative and the goal up front so people know why they are receiving the email.", "Identify the owner clearly to reduce confusion later.", "Put the first check-in in the note so the team knows the cadence."],
+      "pitfalls": ["Do not start the initiative with no ownership or cadence.", "Do not overexplain the background before stating the goal."],
+      "examples": [
+        {"label": "Workflow rollout", "input": "recipientName: Team; initiative: the new support workflow; goal: reduce response time and improve clarity; owner: Mina; firstCheckin: next Wednesday", "output": "Hi Team,\n\nWe are kicking off the new support workflow. The goal is reduce response time and improve clarity, and the main owner is Mina.\n\nOur first check-in is next Wednesday.\n\nBest,"},
+        {"label": "Process cleanup", "input": "recipientName: Team; initiative: the document cleanup project; goal: make the handoff process easier; owner: Jordan; firstCheckin: Friday afternoon", "output": "Hi Team,\n\nWe are kicking off the document cleanup project. The goal is make the handoff process easier, and the main owner is Jordan.\n\nOur first check-in is Friday afternoon.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include the full project plan?", "a": "No. The kickoff note should point people to the plan, not repeat it."},
+        {"q": "Is this useful for small internal projects?", "a": "Yes, especially when several people need the same context."}
+      ],
+      "relatedTags": ["kickoff", "initiative", "project", "manager"]
+    },
+    {
+      "slug": "status-report-request-builder",
+      "name": "Status Report Request Builder",
+      "keyword": "status report request email",
+      "intent": "manager communication",
+      "audience": "Managers and operations",
+      "outcome": "Ask for a status report with the exact scope and due time.",
+      "metaDescription": "Create a status report request email that tells the team what to include and when it is due. Free private email tool by ReplyMind.",
+      "h1": "Ask for the status update you actually need.",
+      "intro": "A status request is more useful when it says what should be included, why it matters, and when the update is due. This tool keeps the request simple.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "scope", "label": "Update scope", "type": "textarea", "placeholder": "Open tasks, blockers, and next steps", "required": true},
+        {"key": "dueTime", "label": "Due time", "type": "text", "placeholder": "By 4 PM today", "required": true},
+        {"key": "whyNeeded", "label": "Why it is needed", "type": "textarea", "placeholder": "We need to prepare the leadership update", "required": true},
+        {"key": "format", "label": "Preferred format", "type": "textarea", "placeholder": "A short bulleted reply is fine", "required": false}
+      ],
+      "subjectTemplate": "Request for a quick status update",
+      "bodyTemplate": "Hi {{recipientName}},\n\nPlease send a status update covering {{scope}}.\n\nWe need this because {{whyNeeded}}. Please send it {{dueTime}}. {{format}}\n\nBest,",
+      "guidance": ["Tell the team exactly what to include so the update is useful.", "Set a real deadline that matches the downstream need.", "Use the format line to reduce the effort required to respond."],
+      "pitfalls": ["Do not request a status update without specifying the scope.", "Do not set a deadline that is later than the update is actually needed."],
+      "examples": [
+        {"label": "Leadership prep", "input": "recipientName: Team; scope: open tasks, blockers, and next steps; dueTime: by 4 PM today; whyNeeded: we need to prepare the leadership update; format: a short bulleted reply is fine", "output": "Hi Team,\n\nPlease send a status update covering open tasks, blockers, and next steps.\n\nWe need this because we need to prepare the leadership update. Please send it by 4 PM today. a short bulleted reply is fine\n\nBest,"},
+        {"label": "Project review", "input": "recipientName: Leads; scope: current progress and any risks; dueTime: tomorrow morning; whyNeeded: we need a clean view before the review; format: one paragraph is enough", "output": "Hi Leads,\n\nPlease send a status update covering current progress and any risks.\n\nWe need this because we need a clean view before the review. Please send it tomorrow morning. one paragraph is enough\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I ask for a specific format?", "a": "Yes, if it helps you review the update faster."},
+        {"q": "Can I use this for a recurring report?", "a": "Yes, if the scope and due time are clear each time."}
+      ],
+      "relatedTags": ["status-report", "manager", "operations", "update"]
+    },
+    {
+      "slug": "handoff-between-teams-note-builder",
+      "name": "Handoff Between Teams Note Builder",
+      "keyword": "team handoff email",
+      "intent": "cross-functional alignment",
+      "audience": "Managers and project leads",
+      "outcome": "Transfer work between teams with context, ownership, and next action.",
+      "metaDescription": "Write a handoff email between teams that explains the current state, what is needed, and who owns the next step. Free private email tool by ReplyMind.",
+      "h1": "Hand the work off without leaving gaps.",
+      "intro": "Team handoffs fail when the next owner does not have enough context. This tool helps you give the current state, the request, and the new owner in one note.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Support team", "required": false},
+        {"key": "currentState", "label": "Current state", "type": "textarea", "placeholder": "The issue has been triaged but not resolved", "required": true},
+        {"key": "needs", "label": "What is needed", "type": "textarea", "placeholder": "Please finish the investigation", "required": true},
+        {"key": "newOwner", "label": "New owner", "type": "text", "placeholder": "Jordan", "required": true},
+        {"key": "handoffTiming", "label": "Handoff timing", "type": "text", "placeholder": "Today before 2 PM", "required": true}
+      ],
+      "subjectTemplate": "Handoff for {{currentState}}",
+      "bodyTemplate": "Hi {{recipientName}},\n\nI am handing this off because {{currentState}}. What is needed now is {{needs}}.\n\nThe new owner is {{newOwner}}, and the handoff should happen {{handoffTiming}}.\n\nBest,",
+      "guidance": ["Write the current state as a factual summary, not a narrative.", "Be explicit about the next action and the new owner.", "Include the timing so the handoff happens when it should."],
+      "pitfalls": ["Do not send a handoff that still requires the receiver to dig through the thread.", "Do not leave ownership implied."],
+      "examples": [
+        {"label": "Support handoff", "input": "recipientName: Support team; currentState: the issue has been triaged but not resolved; needs: please finish the investigation; newOwner: Jordan; handoffTiming: today before 2 PM", "output": "Hi Support team,\n\nI am handing this off because the issue has been triaged but not resolved. What is needed now is please finish the investigation.\n\nThe new owner is Jordan, and the handoff should happen today before 2 PM.\n\nBest,"},
+        {"label": "Finance handoff", "input": "recipientName: Finance; currentState: the reimbursement question is still open; needs: confirm whether the receipt is enough; newOwner: Priya; handoffTiming: this afternoon", "output": "Hi Finance,\n\nI am handing this off because the reimbursement question is still open. What is needed now is confirm whether the receipt is enough.\n\nThe new owner is Priya, and the handoff should happen this afternoon.\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include prior troubleshooting steps?", "a": "Only the steps the next team needs to avoid repeating."},
+        {"q": "Can this work for a cross-functional transfer?", "a": "Yes, that is exactly what it is for."}
+      ],
+      "relatedTags": ["handoff", "cross-functional", "operations", "manager"]
+    },
+    {
+      "slug": "meeting-summary-for-absent-stakeholder-builder",
+      "name": "Meeting Summary for Absent Stakeholder Builder",
+      "keyword": "meeting summary email",
+      "intent": "internal summary",
+      "audience": "Managers and coordinators",
+      "outcome": "Send a clean summary to someone who missed the meeting so they can catch up fast.",
+      "metaDescription": "Create a meeting summary email that captures the decision, actions, and open question for an absent stakeholder. Free private email tool by ReplyMind.",
+      "h1": "Catch people up without rewriting the entire meeting.",
+      "intro": "People who missed a meeting usually need the decision, the actions, and any unresolved question. This tool helps you give that recap quickly and clearly.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "meetingTopic", "label": "Meeting topic", "type": "textarea", "placeholder": "The rollout planning meeting", "required": true},
+        {"key": "decision", "label": "Decision made", "type": "textarea", "placeholder": "We will delay launch by one week", "required": true},
+        {"key": "actionItems", "label": "Action items", "type": "textarea", "placeholder": "Mina updates the timeline and Leo sends the notice", "required": true},
+        {"key": "openQuestion", "label": "Open question", "type": "textarea", "placeholder": "We still need to confirm the final owner", "required": false}
+      ],
+      "subjectTemplate": "Summary of the {{meetingTopic}}",
+      "bodyTemplate": "Hi {{recipientName}},\n\nYou missed the discussion about {{meetingTopic}}, so here is the recap. The decision was {{decision}}.\n\nAction items: {{actionItems}}. {{openQuestion}}\n\nBest,",
+      "guidance": ["Lead with the decision so the person gets the important part immediately.", "List action items in a way that shows who is doing what.", "Mention any open question so the person knows what is still unresolved."],
+      "pitfalls": ["Do not send a full transcript instead of a summary.", "Do not omit the decision if one was reached."],
+      "examples": [
+        {"label": "Rollout meeting", "input": "recipientName: Jordan; meetingTopic: the rollout planning meeting; decision: we will delay launch by one week; actionItems: Mina updates the timeline and Leo sends the notice; openQuestion: we still need to confirm the final owner", "output": "Hi Jordan,\n\nYou missed the discussion about the rollout planning meeting, so here is the recap. The decision was we will delay launch by one week.\n\nAction items: Mina updates the timeline and Leo sends the notice. we still need to confirm the final owner\n\nBest,"},
+        {"label": "Policy meeting", "input": "recipientName: Priya; meetingTopic: the policy review meeting; decision: the draft was approved for the next step; actionItems: HR will send the final copy and managers will review; openQuestion: the training date is still being picked", "output": "Hi Priya,\n\nYou missed the discussion about the policy review meeting, so here is the recap. The decision was the draft was approved for the next step.\n\nAction items: HR will send the final copy and managers will review. the training date is still being picked\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I summarize every discussion point?", "a": "No. Focus on the decision, action items, and any unresolved issue."},
+        {"q": "Is this useful for someone who was only briefly absent?", "a": "Yes, when the meeting produced an important decision or assignment."}
+      ],
+      "relatedTags": ["summary", "meeting", "internal", "follow-up"]
+    },
+    {
+      "slug": "manager-absence-notice-builder",
+      "name": "Manager Absence Notice Builder",
+      "keyword": "manager absence notice email",
+      "intent": "absence coordination",
+      "audience": "Managers and operations",
+      "outcome": "Tell the team about a manager absence and who to contact instead.",
+      "metaDescription": "Write a manager absence notice that gives the dates, backup contact, and any immediate note for the team. Free private email tool by ReplyMind.",
+      "h1": "Tell people who to contact while the manager is away.",
+      "intro": "A manager absence notice should be simple: when the manager is away, who is covering, and whether anything urgent needs attention. This tool keeps that message clear.",
+      "fields": [
+        {"key": "recipientName", "label": "Recipient name", "type": "text", "placeholder": "Team", "required": false},
+        {"key": "managerName", "label": "Manager name", "type": "text", "placeholder": "Jordan", "required": true},
+        {"key": "absenceDates", "label": "Absence dates", "type": "text", "placeholder": "Tuesday through Thursday", "required": true},
+        {"key": "backupContact", "label": "Backup contact", "type": "text", "placeholder": "Mina", "required": true},
+        {"key": "urgentNote", "label": "Urgent note", "type": "textarea", "placeholder": "Please route urgent approvals to the backup", "required": false}
+      ],
+      "subjectTemplate": "Update on {{managerName}}'s availability",
+      "bodyTemplate": "Hi {{recipientName}},\n\n{{managerName}} will be away {{absenceDates}}. During that time, please contact {{backupContact}}.\n\n{{urgentNote}}\n\nBest,",
+      "guidance": ["Put the dates and backup contact in the first paragraph.", "Use the urgent note only if there is something the team must know immediately.", "Keep the message short enough that people can find the contact details quickly."],
+      "pitfalls": ["Do not make the note sound like a status update if it is really just an absence notice.", "Do not omit the backup contact."],
+      "examples": [
+        {"label": "Short vacation", "input": "recipientName: Team; managerName: Jordan; absenceDates: Tuesday through Thursday; backupContact: Mina; urgentNote: please route urgent approvals to the backup", "output": "Hi Team,\n\nJordan will be away Tuesday through Thursday. During that time, please contact Mina.\n\nplease route urgent approvals to the backup\n\nBest,"},
+        {"label": "Conference travel", "input": "recipientName: Team; managerName: Priya; absenceDates: next Monday and Tuesday; backupContact: Leo; urgentNote: no change to the weekly update schedule", "output": "Hi Team,\n\nPriya will be away next Monday and Tuesday. During that time, please contact Leo.\n\nno change to the weekly update schedule\n\nBest,"}
+      ],
+      "faqs": [
+        {"q": "Should I include the reason for the absence?", "a": "Only if it is relevant and appropriate to share."},
+        {"q": "Can I use this for a temporary out-of-office notice?", "a": "Yes, that is a common use."}
+      ],
+      "relatedTags": ["absence", "coverage", "manager", "operations"]
+    }
+  ]
+}

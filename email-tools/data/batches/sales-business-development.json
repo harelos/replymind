@@ -1,0 +1,2256 @@
+{
+  "batch": "sales-business-development",
+  "avatar": "Sales and business development professionals",
+  "tools": [
+    {
+      "slug": "post-demo-follow-up-email-builder",
+      "name": "Post-Demo Follow-Up Email Builder",
+      "keyword": "post demo follow up email",
+      "intent": "follow-up",
+      "audience": "Account executives",
+      "outcome": "Turn a completed demo into a clear next step without sounding pushy.",
+      "metaDescription": "Build a concise post-demo follow-up with decisions, open questions, owners, and a next step. Free private email tool by ReplyMind.",
+      "h1": "Write the follow-up that moves a good demo forward.",
+      "intro": "Use this when the meeting went well but the deal still needs a crisp bridge to action. It helps you summarize what was agreed, surface the remaining questions, and ask for one specific next step.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "decision", "label": "What was agreed", "type": "textarea", "placeholder": "The team wants a security review", "required": true},
+        {"key": "openQuestion", "label": "Remaining open question", "type": "textarea", "placeholder": "Who needs to approve the pilot?", "required": false},
+        {"key": "nextStep", "label": "Requested next step", "type": "textarea", "placeholder": "Choose a review time", "required": true}
+      ],
+      "subjectTemplate": "Next steps after our demo",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks again for the conversation today. We agreed that {{decision}}. The only remaining question is {{openQuestion}}. The clearest next step is {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Lead with the one outcome you want the reader to remember, not a replay of the whole meeting.",
+        "Name the one unresolved issue so the thread feels organized, not vague.",
+        "Make the ask specific enough that the recipient can reply in one sentence."
+      ],
+      "pitfalls": [
+        "Do not paste a full meeting transcript into the email.",
+        "Do not end with a vague 'let me know your thoughts' message."
+      ],
+      "examples": [
+        {
+          "label": "Security review after demo",
+          "input": "Jordan, the team wants to review security before piloting and needs a time for the technical reviewer.",
+          "output": "Hi Jordan,\n\nThanks again for the conversation today. We agreed that the team wants a security review before piloting. The only remaining question is who should join the technical review. The clearest next step is to pick a review time this week.\n\nBest,"
+        },
+        {
+          "label": "Budget approval after demo",
+          "input": "Maya, the demo was promising and the buyer wants an internal budget conversation before moving ahead.",
+          "output": "Hi Maya,\n\nThanks again for the conversation today. We agreed that the team wants an internal budget conversation before moving ahead. The only remaining question is who should own that approval. The clearest next step is to schedule a short follow-up once that is confirmed.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I send this the same day as the demo?", "a": "Yes. Sending it while the meeting is still fresh usually makes the next step easier to confirm."},
+        {"q": "How detailed should the recap be?", "a": "Keep it to the agreement, the open question, and the next step. Anything more should stay in your notes."}
+      ],
+      "relatedTags": ["sales", "follow-up", "demo", "next steps"]
+    },
+    {
+      "slug": "discovery-recap-email-builder",
+      "name": "Discovery Recap Email Builder",
+      "keyword": "discovery recap email",
+      "intent": "follow-up",
+      "audience": "Sales development representatives",
+      "outcome": "Summarize a discovery call in language the buyer can quickly confirm or correct.",
+      "metaDescription": "Create a sharp discovery recap with pain points, current process, priorities, and agreed actions. Free private email tool by ReplyMind.",
+      "h1": "Turn discovery notes into a useful recap.",
+      "intro": "This tool is for the messy middle after a first call. It helps you convert scattered notes into a clear summary that the prospect can validate, so your opportunity advances with fewer misunderstandings.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Taylor", "required": false},
+        {"key": "painPoint", "label": "Main pain point", "type": "textarea", "placeholder": "Leads are delayed because follow-up is manual", "required": true},
+        {"key": "currentProcess", "label": "Current process", "type": "textarea", "placeholder": "The team tracks this in spreadsheets", "required": false},
+        {"key": "agreedAction", "label": "Agreed action", "type": "textarea", "placeholder": "Send a sample workflow and pricing", "required": true}
+      ],
+      "subjectTemplate": "Recap from our discovery call",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for sharing context today. My understanding is that {{painPoint}}. Right now, {{currentProcess}}. To keep things moving, we agreed that {{agreedAction}}.\n\nBest,",
+      "guidance": [
+        "Use the buyer's words for the problem whenever possible.",
+        "Show the current process without judging it, so the recap feels neutral.",
+        "End with the action that proves the call had a purpose."
+      ],
+      "pitfalls": [
+        "Do not frame the recap as a hard sell.",
+        "Do not leave the agreed action implicit."
+      ],
+      "examples": [
+        {
+          "label": "Lead routing pain",
+          "input": "Taylor says qualified leads sit too long because routing is manual and the team wants an example flow.",
+          "output": "Hi Taylor,\n\nThanks for sharing context today. My understanding is that qualified leads sit too long because routing is manual. Right now, the team is handling this in spreadsheets. To keep things moving, we agreed that I’ll send an example flow and pricing.\n\nBest,"
+        },
+        {
+          "label": "Pipeline visibility pain",
+          "input": "Priya says managers cannot see pipeline changes quickly and wants a follow-up with stakeholders.",
+          "output": "Hi Priya,\n\nThanks for sharing context today. My understanding is that managers cannot see pipeline changes quickly. Right now, updates are being tracked across several tools. To keep things moving, we agreed that I’ll send a short recap for the stakeholders and propose a second call.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include objections in the recap?", "a": "Only if they were central to the next step. Keep the recap focused on what matters for progress."},
+        {"q": "What if the prospect corrects my summary?", "a": "That is a good outcome. A correction early is better than a wrong assumption later."}
+      ],
+      "relatedTags": ["sales", "discovery", "recap", "qualification"]
+    },
+    {
+      "slug": "multi-thread-introduction-email-builder",
+      "name": "Multi-Thread Introduction Email Builder",
+      "keyword": "multi thread intro email",
+      "intent": "prospecting",
+      "audience": "Account executives",
+      "outcome": "Introduce a second stakeholder without making the message feel copied and pasted.",
+      "metaDescription": "Write a thoughtful multi-thread intro that connects the right people to the right part of the buying process. Free private email tool by ReplyMind.",
+      "h1": "Bring another stakeholder into the deal cleanly.",
+      "intro": "Use this when one contact is engaged but the deal now needs another person. It helps you explain why the additional thread matters, what each person should focus on, and how to avoid a confusing group email.",
+      "fields": [
+        {"key": "primaryContact", "label": "Current contact", "type": "text", "placeholder": "Alicia", "required": false},
+        {"key": "newStakeholder", "label": "New stakeholder", "type": "text", "placeholder": "Ben", "required": true},
+        {"key": "reason", "label": "Why they should join", "type": "textarea", "placeholder": "Ben owns operations approval", "required": true},
+        {"key": "questionForStakeholder", "label": "Question for the new stakeholder", "type": "textarea", "placeholder": "What would you need to see to approve this?", "required": true}
+      ],
+      "subjectTemplate": "Looping in {{newStakeholder}} for the next step",
+      "bodyTemplate": "Hi {{primaryContact}},\n\nIt seems useful to bring {{newStakeholder}} in because {{reason}}. I’d like to keep this simple and focus their attention on one question: {{questionForStakeholder}}.\n\nBest,",
+      "guidance": [
+        "Explain why the new person is relevant before asking them for anything.",
+        "Make the thread specific enough that the original contact can forward it with confidence.",
+        "Use one focused question to avoid turning the email into a committee memo."
+      ],
+      "pitfalls": [
+        "Do not include every stakeholder just because you can.",
+        "Do not ask a broad 'thoughts?' question."
+      ],
+      "examples": [
+        {
+          "label": "Operations stakeholder",
+          "input": "Alicia is championing the deal and Ben owns operations approval.",
+          "output": "Hi Alicia,\n\nIt seems useful to bring Ben in because he owns operations approval. I’d like to keep this simple and focus their attention on one question: What would you need to see to approve this?\n\nBest,"
+        },
+        {
+          "label": "Finance stakeholder",
+          "input": "Emma is engaged and Priya needs to review cost and payment timing.",
+          "output": "Hi Emma,\n\nIt seems useful to bring Priya in because she owns the finance review. I’d like to keep this simple and focus their attention on one question: What payment structure would make this easiest to approve?\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I send this to both people or just ask for an intro?", "a": "If the relationship is warm, ask for the intro first. If the thread already exists, you can include both."},
+        {"q": "How do I avoid sounding like I am selling over the champion's head?", "a": "Acknowledge the champion's context and make the new stakeholder's role narrow and relevant."}
+      ],
+      "relatedTags": ["sales", "stakeholders", "multi-threading", "intro"]
+    },
+    {
+      "slug": "cold-outbound-personalized-email-builder",
+      "name": "Cold Outbound Personalized Email Builder",
+      "keyword": "cold outbound email",
+      "intent": "prospecting",
+      "audience": "Sales development representatives",
+      "outcome": "Write a short cold email that earns a reply because it feels relevant, not noisy.",
+      "metaDescription": "Create a concise cold outbound email with a credible reason, a real pain point, and a low-friction ask. Free private email tool by ReplyMind.",
+      "h1": "Make the first email feel worth reading.",
+      "intro": "This is for first-touch outreach when you need clarity more than cleverness. It helps you state why you picked the prospect, what problem you think they may care about, and what tiny action you want next.",
+      "fields": [
+        {"key": "prospect", "label": "Prospect name", "type": "text", "placeholder": "Sam", "required": false},
+        {"key": "reason", "label": "Why this person", "type": "textarea", "placeholder": "You are hiring a new sales team", "required": true},
+        {"key": "pain", "label": "Likely pain point", "type": "textarea", "placeholder": "Reps are spending too much time on admin", "required": true},
+        {"key": "ask", "label": "Low-friction ask", "type": "textarea", "placeholder": "Open to a 15-minute chat next week?", "required": true}
+      ],
+      "subjectTemplate": "A quick note for {{prospect}}",
+      "bodyTemplate": "Hi {{prospect}},\n\nI reached out because {{reason}}. Teams in that situation often run into {{pain}}. If that is relevant, would you be open to {{ask}}?\n\nBest,",
+      "guidance": [
+        "Use one reason to reach out, not a list of half-reasons.",
+        "Keep the pain point plausible and concrete rather than dramatic.",
+        "End with a permission-based ask that is easy to answer."
+      ],
+      "pitfalls": [
+        "Do not sound like a mass mailing with a single inserted name.",
+        "Do not over-explain your product in the first message."
+      ],
+      "examples": [
+        {
+          "label": "Hiring signal",
+          "input": "Sam is hiring reps and likely needs better onboarding and pipeline control.",
+          "output": "Hi Sam,\n\nI reached out because you are hiring a new sales team. Teams in that situation often run into reps spending too much time on admin. If that is relevant, would you be open to a short chat next week?\n\nBest,"
+        },
+        {
+          "label": "New market signal",
+          "input": "Dana is expanding into a new market and may need a faster way to coordinate outreach.",
+          "output": "Hi Dana,\n\nI reached out because you are expanding into a new market. Teams in that situation often run into outreach becoming hard to coordinate. If that is relevant, would you be open to a brief conversation next week?\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "How personal should the opening be?", "a": "Personal enough to show why the email is relevant, but not so detailed that it feels invasive."},
+        {"q": "Should I mention my company immediately?", "a": "Only if it supports the relevance of the message. The first job is to earn attention."}
+      ],
+      "relatedTags": ["sales", "outbound", "prospecting", "cold email"]
+    },
+    {
+      "slug": "referral-request-email-builder",
+      "name": "Referral Request Email Builder",
+      "keyword": "sales referral request email",
+      "intent": "prospecting",
+      "audience": "Business development representatives",
+      "outcome": "Ask a satisfied contact for a warm introduction without making the request awkward.",
+      "metaDescription": "Draft a referral request that names the value delivered, the ideal referral, and an easy forwarding prompt. Free private email tool by ReplyMind.",
+      "h1": "Ask for the introduction in a way people can actually send.",
+      "intro": "Use this after you have delivered value and want the relationship to create another conversation. It helps you restate the context, describe the ideal referral, and make the forwarding step simple.",
+      "fields": [
+        {"key": "contact", "label": "Current contact", "type": "text", "placeholder": "Nina", "required": false},
+        {"key": "valueDelivered", "label": "Value you delivered", "type": "textarea", "placeholder": "Helped streamline lead follow-up", "required": true},
+        {"key": "idealReferral", "label": "Ideal referral", "type": "textarea", "placeholder": "VP of revenue operations at a similar team", "required": true},
+        {"key": "forwardingNote", "label": "Forwarding note", "type": "textarea", "placeholder": "If anyone comes to mind, feel free to share this note", "required": true}
+      ],
+      "subjectTemplate": "A quick favor, if someone comes to mind",
+      "bodyTemplate": "Hi {{contact}},\n\nI appreciated the chance to help with {{valueDelivered}}. I’m looking for a conversation with {{idealReferral}}. If someone comes to mind, {{forwardingNote}}.\n\nBest,",
+      "guidance": [
+        "Anchor the request in a real relationship or delivered outcome.",
+        "Describe the referral by role and context, not by a long company wish list.",
+        "Make the contact's job as small as possible."
+      ],
+      "pitfalls": [
+        "Do not ask for a referral before you have earned trust.",
+        "Do not make the contact do the prospecting work for you."
+      ],
+      "examples": [
+        {
+          "label": "Post-implementation referral",
+          "input": "Nina was happy with the process improvement and knows another ops leader.",
+          "output": "Hi Nina,\n\nI appreciated the chance to help with streamlining lead follow-up. I’m looking for a conversation with a VP of revenue operations at a similar team. If someone comes to mind, feel free to share this note.\n\nBest,"
+        },
+        {
+          "label": "Partner referral",
+          "input": "Chris liked the partner workflow and may know a similar agency owner.",
+          "output": "Hi Chris,\n\nI appreciated the chance to help with a better partner workflow. I’m looking for a conversation with an agency owner who manages a small sales team. If someone comes to mind, please forward this note.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Is it better to ask for one referral or several?", "a": "One clear ideal referral is easier to act on and less likely to feel demanding."},
+        {"q": "What if they do not know anyone?", "a": "The message still works because it leaves the door open without pressure."}
+      ],
+      "relatedTags": ["sales", "referrals", "warm intro", "networking"]
+    },
+    {
+      "slug": "mutual-connection-introduction-email-builder",
+      "name": "Mutual Connection Introduction Email Builder",
+      "keyword": "mutual connection introduction email",
+      "intent": "prospecting",
+      "audience": "Account executives",
+      "outcome": "Use a shared connection to create a believable, respectful bridge to a new conversation.",
+      "metaDescription": "Write an introduction email that names the shared connection, explains the context, and asks for a natural handoff. Free private email tool by ReplyMind.",
+      "h1": "Turn a shared connection into a real opening.",
+      "intro": "This tool helps when you are not cold, but you are not yet in the room either. It keeps the message grounded in the relationship you share, the reason for the outreach, and the minimal ask.",
+      "fields": [
+        {"key": "connection", "label": "Shared connection", "type": "text", "placeholder": "Morgan", "required": false},
+        {"key": "prospect", "label": "Prospect name", "type": "text", "placeholder": "Alex", "required": true},
+        {"key": "context", "label": "Shared context", "type": "textarea", "placeholder": "Morgan suggested we should connect", "required": true},
+        {"key": "ask", "label": "Simple ask", "type": "textarea", "placeholder": "Open to a short introduction call?", "required": true}
+      ],
+      "subjectTemplate": "Morgan suggested I reach out",
+      "bodyTemplate": "Hi {{prospect}},\n\n{{connection}} suggested I reach out because {{context}}. I’d love to keep this simple and ask whether you’d be open to {{ask}}.\n\nBest,",
+      "guidance": [
+        "State the shared connection early so the reader understands why the note exists.",
+        "Keep the context short and relevant to the prospect's world.",
+        "Use one respectful ask rather than trying to move straight to a full pitch."
+      ],
+      "pitfalls": [
+        "Do not overuse the shared connection's name as if it guarantees access.",
+        "Do not imply endorsement unless you actually have it."
+      ],
+      "examples": [
+        {
+          "label": "Former colleague bridge",
+          "input": "Morgan knows Alex and suggested an intro because Alex is hiring sales managers.",
+          "output": "Hi Alex,\n\nMorgan suggested I reach out because you are hiring sales managers and may want a simpler way to keep outreach consistent. I’d love to keep this simple and ask whether you’d be open to a short introduction call?\n\nBest,"
+        },
+        {
+          "label": "Industry peer bridge",
+          "input": "Morgan knows Priya and suggested a conversation about improving outbound follow-up.",
+          "output": "Hi Priya,\n\nMorgan suggested I reach out because you are looking at ways to improve outbound follow-up. I’d love to keep this simple and ask whether you’d be open to a brief introduction call?\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I ask the connection for permission first?", "a": "Yes, if they have not already offered to introduce you."},
+        {"q": "What if the shared connection is weak?", "a": "Keep the message even shorter and rely on the prospect's relevance, not the relationship alone."}
+      ],
+      "relatedTags": ["sales", "warm intro", "network", "prospecting"]
+    },
+    {
+      "slug": "objection-response-email-builder",
+      "name": "Objection Response Email Builder",
+      "keyword": "sales objection response email",
+      "intent": "objection-handling",
+      "audience": "Sales representatives",
+      "outcome": "Reply to a common objection with calm context and a question that keeps the conversation alive.",
+      "metaDescription": "Draft an objection response that acknowledges the concern, clarifies the impact, and invites a useful next step. Free private email tool by ReplyMind.",
+      "h1": "Respond without sounding defensive.",
+      "intro": "Use this after a prospect raises a concern about timing, fit, complexity, or priority. It helps you acknowledge the objection, reframe it with context, and invite a focused follow-up question.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Chris", "required": false},
+        {"key": "objection", "label": "Main objection", "type": "textarea", "placeholder": "We are not ready to switch tools", "required": true},
+        {"key": "context", "label": "Helpful context", "type": "textarea", "placeholder": "Teams usually start with a small workflow", "required": true},
+        {"key": "question", "label": "Conversation question", "type": "textarea", "placeholder": "What would need to be true for this to matter later?", "required": true}
+      ],
+      "subjectTemplate": "Re: your concern about {{objection}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nThat makes sense. On {{objection}}, the context that may help is {{context}}. If it is useful, could I ask {{question}}?\n\nBest,",
+      "guidance": [
+        "Acknowledge the objection plainly before you respond to it.",
+        "Use context, not pressure, to reopen the conversation.",
+        "End with a question that invites the buyer to describe their criteria."
+      ],
+      "pitfalls": [
+        "Do not argue with the objection.",
+        "Do not send a long product defense disguised as a reply."
+      ],
+      "examples": [
+        {
+          "label": "Timing objection",
+          "input": "Chris says now is not the right time, but is open to future discussion.",
+          "output": "Hi Chris,\n\nThat makes sense. On not being ready to switch tools, the context that may help is teams usually start with a small workflow before any broader change. If it is useful, could I ask what would need to be true for this to matter later?\n\nBest,"
+        },
+        {
+          "label": "Budget objection",
+          "input": "Dana says budget is tight and wants to revisit later in the year.",
+          "output": "Hi Dana,\n\nThat makes sense. On budget being tight, the context that may help is some teams start with a narrow use case to keep the initial spend contained. If it is useful, could I ask what would need to be true for this to fit a later budget cycle?\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I answer every objection by email?", "a": "No. Use email when the response is concise and the next step is clear."},
+        {"q": "How direct should I be?", "a": "Direct enough to show you heard them, but not so direct that the note feels argumentative."}
+      ],
+      "relatedTags": ["sales", "objections", "follow-up", "negotiation"]
+    },
+    {
+      "slug": "pricing-explanation-email-builder",
+      "name": "Pricing Explanation Email Builder",
+      "keyword": "sales pricing explanation email",
+      "intent": "pricing",
+      "audience": "Account executives",
+      "outcome": "Explain price in terms of scope and value without getting trapped in a defensive discount conversation.",
+      "metaDescription": "Build a pricing explanation email that ties the number to scope, usage, and next-step options. Free private email tool by ReplyMind.",
+      "h1": "Explain the price in a way that makes sense.",
+      "intro": "Use this when a buyer wants to understand the number before they are ready to commit. It helps you connect pricing to scope, the reason for the package, and a practical next step.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Mia", "required": false},
+        {"key": "scope", "label": "Included scope", "type": "textarea", "placeholder": "Implementation support and three user seats", "required": true},
+        {"key": "pricingLogic", "label": "Pricing logic", "type": "textarea", "placeholder": "Price reflects support and rollout time", "required": true},
+        {"key": "nextStep", "label": "Decision next step", "type": "textarea", "placeholder": "Confirm the package that fits your team", "required": true}
+      ],
+      "subjectTemplate": "A quick note on pricing",
+      "bodyTemplate": "Hi {{recipient}},\n\nThe current pricing reflects {{scope}}. In practical terms, {{pricingLogic}}. If the structure looks close, the next step is {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Tie the number back to what is included before discussing concessions.",
+        "Make the pricing logic easy to repeat internally.",
+        "Use the email to clarify, not to negotiate against yourself."
+      ],
+      "pitfalls": [
+        "Do not apologize for the price before explaining it.",
+        "Do not list discounts in the first reply unless they are actually on the table."
+      ],
+      "examples": [
+        {
+          "label": "Support-heavy package",
+          "input": "Mia needs implementation support and wants to understand why the package is priced higher.",
+          "output": "Hi Mia,\n\nThe current pricing reflects implementation support and three user seats. In practical terms, the price reflects support and rollout time. If the structure looks close, the next step is to confirm the package that fits your team.\n\nBest,"
+        },
+        {
+          "label": "Usage-based package",
+          "input": "Noah wants to compare a smaller package against a larger rollout option.",
+          "output": "Hi Noah,\n\nThe current pricing reflects a broader rollout package and multiple teams using the product. In practical terms, the price reflects usage, onboarding, and support. If the structure looks close, the next step is to confirm the package that fits your team.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I attach a pricing sheet?", "a": "Only if the buyer asked for it. Otherwise, keep the explanation in the thread."},
+        {"q": "What if the prospect is only price shopping?", "a": "Use this to clarify scope first. If price remains the only topic, you can decide whether the deal is worth pursuing."}
+      ],
+      "relatedTags": ["sales", "pricing", "proposal", "negotiation"]
+    },
+    {
+      "slug": "procurement-clarification-email-builder",
+      "name": "Procurement Clarification Email Builder",
+      "keyword": "procurement clarification email",
+      "intent": "procurement",
+      "audience": "Sales operations and account executives",
+      "outcome": "Answer procurement questions cleanly so the deal keeps moving through the approval process.",
+      "metaDescription": "Draft a procurement clarification email that separates policy questions, requested documents, and decision timing. Free private email tool by ReplyMind.",
+      "h1": "Keep procurement moving with clear answers.",
+      "intro": "Use this when procurement has sent questions or asked for documents. It helps you acknowledge the process, answer the practical parts, and identify what remains to close.",
+      "fields": [
+        {"key": "recipient", "label": "Procurement contact", "type": "text", "placeholder": "Avery", "required": false},
+        {"key": "questions", "label": "Questions to answer", "type": "textarea", "placeholder": "Need tax form and vendor onboarding details", "required": true},
+        {"key": "documents", "label": "Documents to provide", "type": "textarea", "placeholder": "W-9, security summary, order form", "required": true},
+        {"key": "timeline", "label": "Approval timeline", "type": "textarea", "placeholder": "Aim to finalize by Friday", "required": true}
+      ],
+      "subjectTemplate": "Requested procurement details",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for the detailed note. On the items you listed, here is what we can provide: {{questions}}. We will send {{documents}}. Our goal is to stay aligned with {{timeline}}.\n\nBest,",
+      "guidance": [
+        "Separate answers from documents so nothing gets buried.",
+        "Use a calm, process-aware tone that respects the buyer's internal steps.",
+        "State the timeline clearly so urgency is visible without pressure."
+      ],
+      "pitfalls": [
+        "Do not make procurement chase the same information twice.",
+        "Do not treat procurement like an obstacle instead of a stakeholder."
+      ],
+      "examples": [
+        {
+          "label": "Standard vendor review",
+          "input": "Avery asks for tax forms, insurance proof, and an order form before Friday.",
+          "output": "Hi Avery,\n\nThanks for the detailed note. On the items you listed, here is what we can provide: vendor onboarding details and security summary. We will send the W-9, insurance proof, and order form. Our goal is to stay aligned with Friday's approval timeline.\n\nBest,"
+        },
+        {
+          "label": "Security questionnaire request",
+          "input": "Jordan needs the security summary and DPA answers to continue the review.",
+          "output": "Hi Jordan,\n\nThanks for the detailed note. On the items you listed, here is what we can provide: answers to the security questionnaire and the DPA notes. We will send the security summary and signed order form. Our goal is to stay aligned with this week's review timeline.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I loop in legal on the same email?", "a": "Only if procurement asked for it or if legal has a direct action item."},
+        {"q": "How much detail belongs in the thread?", "a": "Enough to answer the questions fully, but not so much that the process becomes harder to track."}
+      ],
+      "relatedTags": ["sales", "procurement", "approvals", "deal desk"]
+    },
+    {
+      "slug": "legal-redline-response-email-builder",
+      "name": "Legal Redline Response Email Builder",
+      "keyword": "legal redline response email",
+      "intent": "legal",
+      "audience": "Account executives",
+      "outcome": "Respond to contract redlines with clarity and the right escalation path.",
+      "metaDescription": "Create a legal redline response that identifies the clause, explains the position, and routes the next decision. Free private email tool by ReplyMind.",
+      "h1": "Answer redlines without losing momentum.",
+      "intro": "Use this when legal comments arrive and the deal needs a clear response path. It helps you state the clause in question, the position you can support, and the next person who should review it.",
+      "fields": [
+        {"key": "recipient", "label": "Legal contact", "type": "text", "placeholder": "Riley", "required": false},
+        {"key": "clause", "label": "Clause in question", "type": "textarea", "placeholder": "Limitation of liability", "required": true},
+        {"key": "position", "label": "Your position", "type": "textarea", "placeholder": "We can adjust the cap but not remove it", "required": true},
+        {"key": "escalation", "label": "Escalation path", "type": "textarea", "placeholder": "Please confirm if this should go to outside counsel", "required": true}
+      ],
+      "subjectTemplate": "Re: contract comments",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for the redline. On {{clause}}, our position is {{position}}. If you think this needs a broader review, {{escalation}}.\n\nBest,",
+      "guidance": [
+        "Keep the reply clause-specific so the legal team can move quickly.",
+        "Use the escalation path only when needed, not as a default deflection.",
+        "Stay precise and avoid informal language that weakens the response."
+      ],
+      "pitfalls": [
+        "Do not mix multiple unrelated clause issues into one sentence.",
+        "Do not promise legal exceptions you cannot authorize."
+      ],
+      "examples": [
+        {
+          "label": "Liability cap",
+          "input": "Riley redlined the liability cap and wants your position.",
+          "output": "Hi Riley,\n\nThanks for the redline. On limitation of liability, our position is we can adjust the cap but not remove it. If you think this needs a broader review, please confirm whether it should go to outside counsel.\n\nBest,"
+        },
+        {
+          "label": "Payment term change",
+          "input": "Riley asks for a longer payment term and a revised invoice schedule.",
+          "output": "Hi Riley,\n\nThanks for the redline. On payment terms, our position is we can review a modest extension but not a full restructure. If you think this needs a broader review, please confirm whether it should go to finance and legal together.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I negotiate legal terms by email?", "a": "Only for straightforward items. Anything complex should move to the right internal experts."},
+        {"q": "What tone works best?", "a": "Polite, concise, and exact. Avoid sounding casual when the issue is contractual."}
+      ],
+      "relatedTags": ["sales", "legal", "redlines", "contract"]
+    },
+    {
+      "slug": "security-review-follow-up-email-builder",
+      "name": "Security Review Follow-Up Email Builder",
+      "keyword": "security review follow up email",
+      "intent": "security",
+      "audience": "Sales engineers",
+      "outcome": "Keep a security review moving by answering the right question and confirming the next checkpoint.",
+      "metaDescription": "Build a security review follow-up that names the requested artifacts, the answered concern, and the next review step. Free private email tool by ReplyMind.",
+      "h1": "Move the security review without adding noise.",
+      "intro": "Use this when the buyer's security team has asked for evidence or follow-up answers. It helps you note what was reviewed, what was delivered, and what still needs confirmation.",
+      "fields": [
+        {"key": "recipient", "label": "Security reviewer", "type": "text", "placeholder": "Casey", "required": false},
+        {"key": "artifact", "label": "Artifact shared", "type": "textarea", "placeholder": "SOC 2 summary and access controls overview", "required": true},
+        {"key": "concern", "label": "Concern addressed", "type": "textarea", "placeholder": "Data retention and role-based access", "required": true},
+        {"key": "nextReview", "label": "Next review step", "type": "textarea", "placeholder": "Confirm whether any follow-up questions remain", "required": true}
+      ],
+      "subjectTemplate": "Security follow-up",
+      "bodyTemplate": "Hi {{recipient}},\n\nFollowing up on the review, we shared {{artifact}} and addressed {{concern}}. The next step is {{nextReview}}.\n\nBest,",
+      "guidance": [
+        "Reference the specific artifact so the thread is easy to audit.",
+        "Keep the concern narrow and clearly answered.",
+        "Use the next step to reduce back-and-forth."
+      ],
+      "pitfalls": [
+        "Do not treat security reviewers as if they are only gatekeepers.",
+        "Do not bury the artifact reference in a long paragraph."
+      ],
+      "examples": [
+        {
+          "label": "SOC 2 follow-up",
+          "input": "Casey reviewed the SOC 2 summary and asked about retention and access controls.",
+          "output": "Hi Casey,\n\nFollowing up on the review, we shared SOC 2 summary and access controls overview and addressed data retention and role-based access. The next step is to confirm whether any follow-up questions remain.\n\nBest,"
+        },
+        {
+          "label": "DPA review",
+          "input": "Casey needs the DPA summary and wants confirmation on subprocessors.",
+          "output": "Hi Casey,\n\nFollowing up on the review, we shared the DPA summary and subprocessors list and addressed data handling responsibilities. The next step is to confirm whether any follow-up questions remain.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I over-explain the controls?", "a": "No. Answer the specific concern and point to the artifact that backs it up."},
+        {"q": "What if the security team has more questions?", "a": "That is normal. Your job is to keep the thread structured and responsive."}
+      ],
+      "relatedTags": ["sales", "security", "review", "technical"]
+    },
+    {
+      "slug": "pilot-proposal-email-builder",
+      "name": "Pilot Proposal Email Builder",
+      "keyword": "pilot proposal email",
+      "intent": "proposal",
+      "audience": "Account executives",
+      "outcome": "Summarize a pilot in a way that makes the scope, success criteria, and timing easy to approve.",
+      "metaDescription": "Draft a pilot proposal email with scope, success criteria, timeline, and decision point. Free private email tool by ReplyMind.",
+      "h1": "Make the pilot feel easy to approve.",
+      "intro": "Use this when the buyer is ready for a lower-risk start. It helps you define the narrow scope, the success criteria, and the date when both sides will review the result.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Leah", "required": false},
+        {"key": "scope", "label": "Pilot scope", "type": "textarea", "placeholder": "One team, one workflow, 30 days", "required": true},
+        {"key": "successCriteria", "label": "Success criteria", "type": "textarea", "placeholder": "Reduce manual follow-up time", "required": true},
+        {"key": "decisionDate", "label": "Decision date", "type": "text", "placeholder": "June 14", "required": true}
+      ],
+      "subjectTemplate": "Pilot proposal",
+      "bodyTemplate": "Hi {{recipient}},\n\nBased on our conversation, a practical starting point would be {{scope}}. We can treat success as {{successCriteria}} and review the result on {{decisionDate}}.\n\nBest,",
+      "guidance": [
+        "Keep the pilot narrow enough that the buyer can say yes without overthinking it.",
+        "Define success in terms of an outcome the buyer already cares about.",
+        "Use a specific review date so the pilot has a natural end."
+      ],
+      "pitfalls": [
+        "Do not make the pilot bigger than the buyer needs.",
+        "Do not leave success criteria vague."
+      ],
+      "examples": [
+        {
+          "label": "One-team pilot",
+          "input": "Leah wants to test with one team for 30 days and review on June 14.",
+          "output": "Hi Leah,\n\nBased on our conversation, a practical starting point would be one team, one workflow, 30 days. We can treat success as reducing manual follow-up time and review the result on June 14.\n\nBest,"
+        },
+        {
+          "label": "Channel pilot",
+          "input": "Leah wants to pilot with inbound leads and define whether it saves SDR time.",
+          "output": "Hi Leah,\n\nBased on our conversation, a practical starting point would be inbound leads only for one month. We can treat success as less SDR time spent on manual follow-up and review the result on July 2.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should a pilot email include pricing?", "a": "Only if the buyer asked for it. Often the scope and success criteria are the more important parts."},
+        {"q": "Is this for a formal proposal?", "a": "It can support one, but this email is meant to make the pilot easy to understand and approve."}
+      ],
+      "relatedTags": ["sales", "pilot", "proposal", "trial"]
+    },
+    {
+      "slug": "pilot-checkin-email-builder",
+      "name": "Pilot Check-In Email Builder",
+      "keyword": "pilot check in email",
+      "intent": "follow-up",
+      "audience": "Customer-facing account executives",
+      "outcome": "Check in on a live pilot with enough structure to surface problems before they stall the deal.",
+      "metaDescription": "Create a pilot check-in email that reviews progress, blockers, and the next checkpoint. Free private email tool by ReplyMind.",
+      "h1": "Check the pilot before it drifts.",
+      "intro": "Use this while a pilot is in progress and you need to show attention without hovering. It helps you ask about progress, blockers, and the next measurement point.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Owen", "required": false},
+        {"key": "progress", "label": "Current progress", "type": "textarea", "placeholder": "The first workflow is live", "required": true},
+        {"key": "blocker", "label": "Any blocker", "type": "textarea", "placeholder": "Waiting on admin access", "required": false},
+        {"key": "nextCheckpoint", "label": "Next checkpoint", "type": "textarea", "placeholder": "Review adoption next Thursday", "required": true}
+      ],
+      "subjectTemplate": "Quick pilot check-in",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to check in on the pilot. So far, {{progress}}. If there is anything getting in the way, such as {{blocker}}, I can help. Our next checkpoint is {{nextCheckpoint}}.\n\nBest,",
+      "guidance": [
+        "Acknowledge progress first so the email feels supportive.",
+        "Ask about blockers in a way that makes it safe to be honest.",
+        "Restate the next checkpoint so both sides stay aligned."
+      ],
+      "pitfalls": [
+        "Do not sound like you are policing the pilot.",
+        "Do not ask for a generic status update without a purpose."
+      ],
+      "examples": [
+        {
+          "label": "Access blocker",
+          "input": "Owen says the workflow is live but admin access is delayed.",
+          "output": "Hi Owen,\n\nI wanted to check in on the pilot. So far, the first workflow is live. If there is anything getting in the way, such as waiting on admin access, I can help. Our next checkpoint is to review adoption next Thursday.\n\nBest,"
+        },
+        {
+          "label": "Adoption check",
+          "input": "Owen says the team has started testing and wants to confirm the next review date.",
+          "output": "Hi Owen,\n\nI wanted to check in on the pilot. So far, the team has started testing. If there is anything getting in the way, such as unclear ownership, I can help. Our next checkpoint is to review adoption next Monday.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "How often should I send a pilot check-in?", "a": "Enough to stay useful, but not so often that the buyer feels monitored."},
+        {"q": "Should I ask for metrics here?", "a": "Only if the pilot already has agreed metrics. Otherwise, focus on blockers and next steps."}
+      ],
+      "relatedTags": ["sales", "pilot", "check-in", "adoption"]
+    },
+    {
+      "slug": "competitive-displacement-email-builder",
+      "name": "Competitive Displacement Email Builder",
+      "keyword": "competitive displacement email",
+      "intent": "competitive",
+      "audience": "Account executives",
+      "outcome": "Respond to a competitor already in the deal with a calm, comparative message.",
+      "metaDescription": "Write a competitive displacement email focused on buyer criteria, the key gap, and the decision still needed. Free private email tool by ReplyMind.",
+      "h1": "Compete on criteria, not hype.",
+      "intro": "Use this when a prospect is comparing you with another option. It helps you anchor the conversation in the buyer's criteria, the difference that matters, and the next evaluation step.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Grace", "required": false},
+        {"key": "criteria", "label": "Buyer criteria", "type": "textarea", "placeholder": "Ease of rollout and support quality", "required": true},
+        {"key": "gap", "label": "Meaningful gap", "type": "textarea", "placeholder": "They need more hands-on guidance", "required": true},
+        {"key": "nextStep", "label": "Decision next step", "type": "textarea", "placeholder": "Compare support models this week", "required": true}
+      ],
+      "subjectTemplate": "A quick comparison point",
+      "bodyTemplate": "Hi {{recipient}},\n\nIf the team is comparing options, the key criteria seem to be {{criteria}}. One difference that may matter is {{gap}}. The most useful next step would be to {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Stay anchored in the buyer's criteria instead of attacking the competitor.",
+        "Highlight a difference that affects implementation or adoption, not just feature count.",
+        "Use a comparison step that helps the buyer make a decision."
+      ],
+      "pitfalls": [
+        "Do not make unsupported claims about the competitor.",
+        "Do not turn the email into a feature dump."
+      ],
+      "examples": [
+        {
+          "label": "Support comparison",
+          "input": "Grace is comparing vendors on rollout support and hands-on guidance.",
+          "output": "Hi Grace,\n\nIf the team is comparing options, the key criteria seem to be ease of rollout and support quality. One difference that may matter is they need more hands-on guidance. The most useful next step would be to compare support models this week.\n\nBest,"
+        },
+        {
+          "label": "Workflow comparison",
+          "input": "Grace is comparing vendors on workflow flexibility and internal adoption.",
+          "output": "Hi Grace,\n\nIf the team is comparing options, the key criteria seem to be workflow flexibility and internal adoption. One difference that may matter is our team can guide the rollout more closely. The most useful next step would be to compare onboarding plans this week.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I name the competitor?", "a": "Only if the buyer already did and the comparison is explicit."},
+        {"q": "How do I stay credible?", "a": "Focus on the buyer's criteria and the practical impact of the difference you are raising."}
+      ],
+      "relatedTags": ["sales", "competitive", "comparison", "displacement"]
+    },
+    {
+      "slug": "renewal-outreach-email-builder",
+      "name": "Renewal Outreach Email Builder",
+      "keyword": "renewal outreach email",
+      "intent": "renewal",
+      "audience": "Customer success and account executives",
+      "outcome": "Start the renewal conversation early with value, usage, and next-step clarity.",
+      "metaDescription": "Draft a renewal outreach email that summarizes value delivered, current usage, and the path to renewal. Free private email tool by ReplyMind.",
+      "h1": "Start the renewal with the right frame.",
+      "intro": "Use this before the renewal deadline becomes stressful. It helps you remind the customer what has been achieved, how the product is being used, and what needs to happen next.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Hannah", "required": false},
+        {"key": "value", "label": "Value delivered", "type": "textarea", "placeholder": "Faster lead follow-up and cleaner handoffs", "required": true},
+        {"key": "usage", "label": "Current usage", "type": "textarea", "placeholder": "The team is active in three workflows", "required": true},
+        {"key": "nextStep", "label": "Renewal next step", "type": "textarea", "placeholder": "Review renewal options this month", "required": true}
+      ],
+      "subjectTemplate": "Looking ahead to renewal",
+      "bodyTemplate": "Hi {{recipient}},\n\nAs we look ahead, the team has seen {{value}}. Current usage shows {{usage}}. The next step is {{nextStep}} so we can keep the timeline straightforward.\n\nBest,",
+      "guidance": [
+        "Lead with realized value, not the contract date.",
+        "Mention actual usage so the renewal feels grounded.",
+        "Invite the next step early so the process does not stall later."
+      ],
+      "pitfalls": [
+        "Do not wait until the last week to start the renewal thread.",
+        "Do not assume the customer already knows the renewal process."
+      ],
+      "examples": [
+        {
+          "label": "Mid-term renewal start",
+          "input": "Hannah has seen faster lead follow-up and the team is active in three workflows.",
+          "output": "Hi Hannah,\n\nAs we look ahead, the team has seen faster lead follow-up and cleaner handoffs. Current usage shows the team is active in three workflows. The next step is to review renewal options this month so we can keep the timeline straightforward.\n\nBest,"
+        },
+        {
+          "label": "Adoption-based renewal",
+          "input": "Hannah's team is using the product daily and wants a simple renewal path.",
+          "output": "Hi Hannah,\n\nAs we look ahead, the team has seen faster reporting and fewer manual updates. Current usage shows daily activity across core workflows. The next step is to review renewal options this month so we can keep the timeline straightforward.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "When should I begin renewal outreach?", "a": "Early enough to leave room for questions and approvals, not after the deadline is looming."},
+        {"q": "Should I mention expansion in the first renewal note?", "a": "Only if renewal is already stable. The first goal is to secure continuity."}
+      ],
+      "relatedTags": ["sales", "renewal", "retention", "customer success"]
+    },
+    {
+      "slug": "expansion-opportunity-email-builder",
+      "name": "Expansion Opportunity Email Builder",
+      "keyword": "expansion opportunity email",
+      "intent": "expansion",
+      "audience": "Account managers",
+      "outcome": "Open an expansion conversation by linking new use cases to a real customer outcome.",
+      "metaDescription": "Create an expansion email that ties a new use case to current value, adoption, and a safe next step. Free private email tool by ReplyMind.",
+      "h1": "Open expansion with relevance, not pressure.",
+      "intro": "Use this once the customer is getting value and a larger use case starts to make sense. It helps you connect the new opportunity to the outcome they already care about and ask for one exploratory step.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Iris", "required": false},
+        {"key": "currentValue", "label": "Current value", "type": "textarea", "placeholder": "The team saved time on follow-up", "required": true},
+        {"key": "newUseCase", "label": "New use case", "type": "textarea", "placeholder": "Support another team with the same workflow", "required": true},
+        {"key": "nextStep", "label": "Expansion next step", "type": "textarea", "placeholder": "Explore whether this fits your broader team", "required": true}
+      ],
+      "subjectTemplate": "A possible next step for the team",
+      "bodyTemplate": "Hi {{recipient}},\n\nThe current rollout has already delivered {{currentValue}}. That is why the next logical use case may be {{newUseCase}}. If it is worth exploring, the next step is {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Build the expansion on realized value, not speculative excitement.",
+        "Keep the new use case adjacent to what is already working.",
+        "Make the first ask exploratory rather than commitment-heavy."
+      ],
+      "pitfalls": [
+        "Do not jump from one team's success to a company-wide pitch.",
+        "Do not make the email feel like an upsell script."
+      ],
+      "examples": [
+        {
+          "label": "Adjacent team expansion",
+          "input": "Iris has seen time savings and may want the same workflow for another team.",
+          "output": "Hi Iris,\n\nThe current rollout has already delivered time saved on follow-up. That is why the next logical use case may be supporting another team with the same workflow. If it is worth exploring, the next step is to see whether this fits your broader team.\n\nBest,"
+        },
+        {
+          "label": "Broader rollout expansion",
+          "input": "Iris is happy with adoption and wants to discuss another department.",
+          "output": "Hi Iris,\n\nThe current rollout has already delivered fewer manual updates. That is why the next logical use case may be extending the workflow to another department. If it is worth exploring, the next step is to see whether this fits your broader team.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "When is the right time to ask about expansion?", "a": "After the customer has seen a concrete win and before the original use case feels stale."},
+        {"q": "Should I mention pricing here?", "a": "Only if the customer asks. This email is for opening the conversation, not closing it."}
+      ],
+      "relatedTags": ["sales", "expansion", "upsell", "customer success"]
+    },
+    {
+      "slug": "champion-enablement-email-builder",
+      "name": "Champion Enablement Email Builder",
+      "keyword": "sales champion enablement email",
+      "intent": "enablement",
+      "audience": "Account executives",
+      "outcome": "Arm your internal champion with a short message they can reuse with their stakeholders.",
+      "metaDescription": "Write a champion enablement email with internal framing, benefits, objections, and a simple forwarding note. Free private email tool by ReplyMind.",
+      "h1": "Give the champion something easy to forward.",
+      "intro": "Use this when the buyer likes the idea but needs help selling it internally. It helps you package the logic, the benefit, and the one thing the champion can ask for next.",
+      "fields": [
+        {"key": "champion", "label": "Champion name", "type": "text", "placeholder": "Zoe", "required": false},
+        {"key": "benefit", "label": "Primary benefit", "type": "textarea", "placeholder": "Less manual follow-up work", "required": true},
+        {"key": "objection", "label": "Likely objection", "type": "textarea", "placeholder": "We already have enough tools", "required": true},
+        {"key": "forwardingAsk", "label": "Forwarding ask", "type": "textarea", "placeholder": "Would you share this with your manager?", "required": true}
+      ],
+      "subjectTemplate": "A note you can share internally",
+      "bodyTemplate": "Hi {{champion}},\n\nI put together a short note you can reuse. The main point is {{benefit}}. If the common concern is {{objection}}, the simplest response is to focus on the workflow change rather than the tool count. {{forwardingAsk}}\n\nBest,",
+      "guidance": [
+        "Write for the champion's internal audience, not for your own pitch.",
+        "Anticipate the objection and make it easy to answer in one sentence.",
+        "Keep the reusable note short enough to forward without editing."
+      ],
+      "pitfalls": [
+        "Do not hand the champion a long deck when a paragraph will do.",
+        "Do not overload the note with product jargon."
+      ],
+      "examples": [
+        {
+          "label": "Manager approval note",
+          "input": "Zoe needs to explain why less manual follow-up work matters to her manager.",
+          "output": "Hi Zoe,\n\nI put together a short note you can reuse. The main point is less manual follow-up work for the team. If the common concern is that we already have enough tools, the simplest response is to focus on the workflow change rather than the tool count. Would you share this with your manager?\n\nBest,"
+        },
+        {
+          "label": "Finance approval note",
+          "input": "Zoe wants help explaining why a new workflow is worth the spend.",
+          "output": "Hi Zoe,\n\nI put together a short note you can reuse. The main point is fewer manual handoffs and cleaner visibility. If the common concern is cost, the simplest response is to focus on the time saved and process clarity. Would you share this with your finance partner?\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should this be polished or plain?", "a": "Plain usually works better. The goal is to make internal forwarding easy."},
+        {"q": "Can I include ROI language?", "a": "Yes, if it is based on a real customer conversation. Keep it grounded and specific."}
+      ],
+      "relatedTags": ["sales", "champion", "internal selling", "enablement"]
+    },
+    {
+      "slug": "executive-summary-email-builder",
+      "name": "Executive Summary Email Builder",
+      "keyword": "sales executive summary email",
+      "intent": "internal-brief",
+      "audience": "Account executives",
+      "outcome": "Condense a deal into a crisp summary that an executive can scan quickly.",
+      "metaDescription": "Create an executive summary email with the business problem, the business impact, the status, and the decision needed. Free private email tool by ReplyMind.",
+      "h1": "Write the summary an executive can scan in seconds.",
+      "intro": "Use this when a deal needs leadership attention or internal alignment. It helps you reduce the opportunity to the business issue, impact, current status, and one decision or support request.",
+      "fields": [
+        {"key": "recipient", "label": "Executive recipient", "type": "text", "placeholder": "Pat", "required": false},
+        {"key": "problem", "label": "Business problem", "type": "textarea", "placeholder": "Leads are falling through the cracks", "required": true},
+        {"key": "impact", "label": "Business impact", "type": "textarea", "placeholder": "Revenue is delayed and reps waste time", "required": true},
+        {"key": "decision", "label": "Decision or support needed", "type": "textarea", "placeholder": "Approve the pilot package", "required": true}
+      ],
+      "subjectTemplate": "Deal summary for your review",
+      "bodyTemplate": "Hi {{recipient}},\n\nThe core issue is {{problem}}. That creates {{impact}}. The only decision or support we need right now is {{decision}}.\n\nBest,",
+      "guidance": [
+        "Use plain business language, not sales jargon.",
+        "Keep the summary short enough for executive scanning.",
+        "Ask for one decision, not a bundle of hidden asks."
+      ],
+      "pitfalls": [
+        "Do not send a long narrative with the most important point buried in the middle.",
+        "Do not assume the executive knows the deal history."
+      ],
+      "examples": [
+        {
+          "label": "Revenue operations summary",
+          "input": "Pat needs a concise summary of lead leakage and the pilot approval ask.",
+          "output": "Hi Pat,\n\nThe core issue is leads are falling through the cracks. That creates delayed revenue and wasted rep time. The only decision or support we need right now is approval of the pilot package.\n\nBest,"
+        },
+        {
+          "label": "Process efficiency summary",
+          "input": "Pat wants a short note on manual work and the request for internal support.",
+          "output": "Hi Pat,\n\nThe core issue is the team is spending too much time on manual handoffs. That creates slower response times and lower visibility. The only decision or support we need right now is approval to move forward with the workflow pilot.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I attach a deck?", "a": "Only if leadership asked for it. The email itself should stand on its own."},
+        {"q": "How formal should the tone be?", "a": "Professional and direct. Avoid casual phrasing when the message is meant for leadership."}
+      ],
+      "relatedTags": ["sales", "executive", "summary", "internal alignment"]
+    },
+    {
+      "slug": "meeting-reschedule-email-builder",
+      "name": "Meeting Reschedule Email Builder",
+      "keyword": "meeting reschedule email",
+      "intent": "scheduling",
+      "audience": "Sales development representatives",
+      "outcome": "Reschedule a meeting without sounding careless or losing momentum.",
+      "metaDescription": "Write a meeting reschedule email that offers the reason, the new timing, and a polite alternative. Free private email tool by ReplyMind.",
+      "h1": "Reschedule cleanly and keep trust intact.",
+      "intro": "Use this when a meeting needs to move because of a conflict or a shift in priority. It helps you acknowledge the change, propose a replacement window, and keep the thread respectful.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Sam", "required": false},
+        {"key": "reason", "label": "Reason for change", "type": "textarea", "placeholder": "A conflict came up on my side", "required": true},
+        {"key": "newTime", "label": "New time option", "type": "textarea", "placeholder": "Tuesday at 2 PM", "required": true},
+        {"key": "alternative", "label": "Backup alternative", "type": "textarea", "placeholder": "If not, I can send times for later in the week", "required": true}
+      ],
+      "subjectTemplate": "Can we move our meeting?",
+      "bodyTemplate": "Hi {{recipient}},\n\nI need to move our meeting because {{reason}}. Would {{newTime}} work instead? If not, {{alternative}}.\n\nBest,",
+      "guidance": [
+        "Be direct about the change and propose a new option right away.",
+        "Use one clear backup so the recipient does not have to do all the work.",
+        "Keep the message short and respectful."
+      ],
+      "pitfalls": [
+        "Do not send a long explanation for a simple reschedule.",
+        "Do not leave the recipient to suggest every alternative."
+      ],
+      "examples": [
+        {
+          "label": "Calendar conflict",
+          "input": "Sam has a conflict and wants to move the call to Tuesday at 2 PM.",
+          "output": "Hi Sam,\n\nI need to move our meeting because a conflict came up on my side. Would Tuesday at 2 PM work instead? If not, I can send times for later in the week.\n\nBest,"
+        },
+        {
+          "label": "Travel change",
+          "input": "Sam is traveling and needs to reschedule to later this week.",
+          "output": "Hi Sam,\n\nI need to move our meeting because my travel schedule changed. Would Thursday at 11 AM work instead? If not, I can send times for later in the week.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I apologize heavily?", "a": "A brief apology is enough. The key is to propose a practical new time quickly."},
+        {"q": "What if I need to reschedule more than once?", "a": "Keep the message extra short and focused on making the new option easy to accept."}
+      ],
+      "relatedTags": ["sales", "scheduling", "reschedule", "meetings"]
+    },
+    {
+      "slug": "no-show-reengagement-email-builder",
+      "name": "No-Show Reengagement Email Builder",
+      "keyword": "no show follow up email",
+      "intent": "follow-up",
+      "audience": "Sales representatives",
+      "outcome": "Restart a missed meeting without making the prospect feel blamed.",
+      "metaDescription": "Draft a no-show follow-up email that assumes good intent, offers a new time, and preserves the relationship. Free private email tool by ReplyMind.",
+      "h1": "Recover the meeting without awkwardness.",
+      "intro": "Use this after the other person missed a call. It helps you keep the tone calm, give them an easy way back in, and avoid guilt-driven language that can shut the door.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "meeting", "label": "Missed meeting context", "type": "textarea", "placeholder": "Our demo earlier today", "required": true},
+        {"key": "newTime", "label": "New time suggestion", "type": "textarea", "placeholder": "Tomorrow afternoon", "required": true},
+        {"key": "assumption", "label": "Assumed reason", "type": "textarea", "placeholder": "I know schedules get busy", "required": true}
+      ],
+      "subjectTemplate": "Checking in after our missed call",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to follow up on {{meeting}}. {{assumption}}. If it is still useful to connect, I can offer {{newTime}}.\n\nBest,",
+      "guidance": [
+        "Assume a neutral reason rather than calling out the no-show.",
+        "Offer one clear next slot to reduce friction.",
+        "Keep the message warm and brief, and offer one easy path back without making the missed call feel awkward."
+      ],
+      "pitfalls": [
+        "Do not shame the recipient for missing the meeting.",
+        "Do not write a message that sounds passive-aggressive."
+      ],
+      "examples": [
+        {
+          "label": "Busy calendar",
+          "input": "Jordan missed the demo and probably had a packed day.",
+          "output": "Hi Jordan,\n\nI wanted to follow up on our demo earlier today. I know schedules get busy. If it is still useful to connect, I can offer tomorrow afternoon.\n\nBest,"
+        },
+        {
+          "label": "Time zone miss",
+          "input": "Jordan missed the call because of a time zone mix-up.",
+          "output": "Hi Jordan,\n\nI wanted to follow up on our call this morning. I know time zones can be easy to miss. If it is still useful to connect, I can offer Friday morning.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I mention the missed meeting directly?", "a": "Yes, but neutrally. Keep it factual and move on quickly."},
+        {"q": "How soon should I send this?", "a": "Soon after the missed meeting while the context is still current."}
+      ],
+      "relatedTags": ["sales", "no-show", "follow-up", "meeting"]
+    },
+    {
+      "slug": "voicemail-to-email-builder",
+      "name": "Voicemail to Email Builder",
+      "keyword": "voicemail follow up email",
+      "intent": "follow-up",
+      "audience": "Sales development representatives",
+      "outcome": "Mirror a voicemail in email so the prospect can respond at their pace.",
+      "metaDescription": "Create a voicemail follow-up email that restates the reason for calling, the value, and the callback ask. Free private email tool by ReplyMind.",
+      "h1": "Turn a voicemail into a reply-ready email.",
+      "intro": "Use this after leaving a voicemail so the recipient has the same context in writing. It helps you restate the reason for calling, the likely benefit, and the simplest next action.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Alex", "required": false},
+        {"key": "reason", "label": "Reason for calling", "type": "textarea", "placeholder": "I wanted to share a quick idea for lead routing", "required": true},
+        {"key": "value", "label": "Likely value", "type": "textarea", "placeholder": "It may save your team time on manual follow-up", "required": true},
+        {"key": "callback", "label": "Callback ask", "type": "textarea", "placeholder": "Reply with a time that works", "required": true}
+      ],
+      "subjectTemplate": "A quick follow-up to my voicemail",
+      "bodyTemplate": "Hi {{recipient}},\n\nI left you a voicemail about {{reason}}. I thought it might matter because {{value}}. If it is worth a conversation, please {{callback}}.\n\nBest,",
+      "guidance": [
+        "Keep the email consistent with the voicemail rather than adding new topics.",
+        "Use one benefit the recipient can recognize quickly.",
+        "Make the callback request easy to complete."
+      ],
+      "pitfalls": [
+        "Do not write a longer email than the voicemail deserved.",
+        "Do not introduce unrelated product features."
+      ],
+      "examples": [
+        {
+          "label": "Lead routing voicemail",
+          "input": "Alex was called about a lead routing idea that could save time.",
+          "output": "Hi Alex,\n\nI left you a voicemail about a quick idea for lead routing. I thought it might matter because it may save your team time on manual follow-up. If it is worth a conversation, please reply with a time that works.\n\nBest,"
+        },
+        {
+          "label": "Renewal reminder voicemail",
+          "input": "Alex was called about an upcoming renewal review.",
+          "output": "Hi Alex,\n\nI left you a voicemail about the upcoming renewal review. I thought it might matter because it could help keep the process simple. If it is worth a conversation, please reply with a time that works.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should the email repeat the voicemail exactly?", "a": "It should reinforce it, not duplicate every word."},
+        {"q": "What is the goal of the follow-up?", "a": "To let the recipient respond when they are available without losing the original context."}
+      ],
+      "relatedTags": ["sales", "voicemail", "follow-up", "outreach"]
+    },
+    {
+      "slug": "partner-introduction-email-builder",
+      "name": "Partner Introduction Email Builder",
+      "keyword": "partner introduction email",
+      "intent": "partnerships",
+      "audience": "Partnerships managers",
+      "outcome": "Introduce a partner in a way that makes the relationship and next step easy to understand.",
+      "metaDescription": "Write a partner introduction email that explains fit, mutual value, and the reason to connect now. Free private email tool by ReplyMind.",
+      "h1": "Make the partner intro feel intentional.",
+      "intro": "Use this when you want two businesses to meet and the reason matters. It helps you explain the fit, the mutual value, and the purpose of the introduction in one short note.",
+      "fields": [
+        {"key": "partner", "label": "Partner name", "type": "text", "placeholder": "Northstar", "required": false},
+        {"key": "prospect", "label": "Prospect name", "type": "text", "placeholder": "Lena", "required": true},
+        {"key": "fit", "label": "Why the fit works", "type": "textarea", "placeholder": "Both teams serve growing sales organizations", "required": true},
+        {"key": "purpose", "label": "Purpose of intro", "type": "textarea", "placeholder": "Explore a joint workflow conversation", "required": true}
+      ],
+      "subjectTemplate": "Introduction for a possible partner conversation",
+      "bodyTemplate": "Hi {{prospect}},\n\nI wanted to introduce you to {{partner}} because {{fit}}. The reason for the intro is to {{purpose}}. If that seems useful, I’m happy to make the connection.\n\nBest,",
+      "guidance": [
+        "Explain the fit in business terms, not just relationship terms.",
+        "Keep the purpose narrow enough that both sides know why they are speaking.",
+        "Offer to make the connection only after establishing relevance."
+      ],
+      "pitfalls": [
+        "Do not send a vague 'you should meet' message.",
+        "Do not force a partnership where the use case is thin."
+      ],
+      "examples": [
+        {
+          "label": "Workflow partner",
+          "input": "Northstar and Lena's team both serve growing sales organizations and could discuss a joint workflow.",
+          "output": "Hi Lena,\n\nI wanted to introduce you to Northstar because both teams serve growing sales organizations. The reason for the intro is to explore a joint workflow conversation. If that seems useful, I’m happy to make the connection.\n\nBest,"
+        },
+        {
+          "label": "Agency partner",
+          "input": "Northstar and Lena work with agencies and may have a shared client need.",
+          "output": "Hi Lena,\n\nI wanted to introduce you to Northstar because both teams work with agencies that need better follow-up. The reason for the intro is to explore a joint client conversation. If that seems useful, I’m happy to make the connection.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include both sides on the first note?", "a": "Only if the introduction is already agreed. Otherwise, ask first and then connect them."},
+        {"q": "How specific should the purpose be?", "a": "Specific enough to be credible, but not so detailed that it becomes a sales pitch."}
+      ],
+      "relatedTags": ["partnerships", "intro", "ecosystem", "business development"]
+    },
+    {
+      "slug": "co-sell-outreach-email-builder",
+      "name": "Co-Sell Outreach Email Builder",
+      "keyword": "co sell outreach email",
+      "intent": "partnerships",
+      "audience": "Business development managers",
+      "outcome": "Open a co-sell conversation with a partner around shared accounts and a simple path to collaboration.",
+      "metaDescription": "Create a co-sell outreach email with shared accounts, joint value, and a practical next step. Free private email tool by ReplyMind.",
+      "h1": "Start the co-sell without making it heavy.",
+      "intro": "Use this when you already see a partner overlap and want to test whether collaboration is worth time. It helps you name the shared account, the mutual value, and the smallest next step.",
+      "fields": [
+        {"key": "partner", "label": "Partner contact", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "sharedAccount", "label": "Shared account", "type": "text", "placeholder": "Acme", "required": true},
+        {"key": "mutualValue", "label": "Mutual value", "type": "textarea", "placeholder": "Combine workflows to make the rollout easier", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "Set up a 20-minute alignment call", "required": true}
+      ],
+      "subjectTemplate": "Possible co-sell around {{sharedAccount}}",
+      "bodyTemplate": "Hi {{partner}},\n\nWe both have a potential path with {{sharedAccount}}. The reason I think this could be useful is {{mutualValue}}. If you are open to it, the next step could be {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Lead with the shared account so the relevance is obvious.",
+        "Keep the mutual value practical and collaborative.",
+        "Use a small alignment step before suggesting broader teamwork."
+      ],
+      "pitfalls": [
+        "Do not overcommit to a joint plan before the partner is interested.",
+        "Do not assume the partner wants the same deal motion you do."
+      ],
+      "examples": [
+        {
+          "label": "Shared enterprise account",
+          "input": "Jordan and you both have a path with Acme and can combine workflows.",
+          "output": "Hi Jordan,\n\nWe both have a potential path with Acme. The reason I think this could be useful is combining our workflows could make the rollout easier. If you are open to it, the next step could be setting up a 20-minute alignment call.\n\nBest,"
+        },
+        {
+          "label": "Shared agency account",
+          "input": "Jordan and you both work with an agency account and can support implementation together.",
+          "output": "Hi Jordan,\n\nWe both have a potential path with Acme. The reason I think this could be useful is we can reduce implementation friction for their team. If you are open to it, the next step could be a short alignment call.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I send this to the partner or the shared account first?", "a": "Usually the partner first, unless the shared account has already asked for a coordinated motion."},
+        {"q": "How do I avoid sounding opportunistic?", "a": "Lead with the customer outcome, not your internal pipeline goal."}
+      ],
+      "relatedTags": ["partnerships", "co-sell", "alliances", "shared accounts"]
+    },
+    {
+      "slug": "event-follow-up-email-builder",
+      "name": "Event Follow-Up Email Builder",
+      "keyword": "event follow up email",
+      "intent": "follow-up",
+      "audience": "Business development representatives",
+      "outcome": "Turn a conference or event conversation into a concrete follow-up.",
+      "metaDescription": "Build an event follow-up email with the event context, the shared topic, and the next step. Free private email tool by ReplyMind.",
+      "h1": "Keep the event conversation alive after the room clears.",
+      "intro": "Use this after a conference, meetup, or trade show conversation. It helps you remind the contact where you met, what you discussed, and what next step makes sense now that the event is over.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Kim", "required": false},
+        {"key": "event", "label": "Event name", "type": "text", "placeholder": "Sales Summit", "required": true},
+        {"key": "topic", "label": "Shared topic", "type": "textarea", "placeholder": "Manual follow-up and pipeline hygiene", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "Schedule a short call next week", "required": true}
+      ],
+      "subjectTemplate": "Good meeting you at {{event}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nIt was good to meet you at {{event}} and talk about {{topic}}. I’d like to keep the conversation moving and suggest {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Reference the event immediately so the context is easy to place.",
+        "Use the topic you actually discussed, not a generic follow-up line.",
+        "Keep the next step simple enough for a post-event reply."
+      ],
+      "pitfalls": [
+        "Do not send a generic thank-you that could apply to anyone.",
+        "Do not wait too long after the event when the context fades."
+      ],
+      "examples": [
+        {
+          "label": "Conference booth chat",
+          "input": "Kim met you at Sales Summit and discussed manual follow-up and pipeline hygiene.",
+          "output": "Hi Kim,\n\nIt was good to meet you at Sales Summit and talk about manual follow-up and pipeline hygiene. I’d like to keep the conversation moving and suggest scheduling a short call next week.\n\nBest,"
+        },
+        {
+          "label": "Roundtable intro",
+          "input": "Kim met you at a roundtable and talked about better handoffs.",
+          "output": "Hi Kim,\n\nIt was good to meet you at the roundtable and talk about better handoffs. I’d like to keep the conversation moving and suggest a short call next week.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I mention every topic from the event?", "a": "No. Use one topic that gives the follow-up direction."},
+        {"q": "What if the contact was busy?", "a": "That is fine. Keep the note short so it is easy to revisit later."}
+      ],
+      "relatedTags": ["sales", "events", "follow-up", "networking"]
+    },
+    {
+      "slug": "webinar-attendee-follow-up-email-builder",
+      "name": "Webinar Attendee Follow-Up Email Builder",
+      "keyword": "webinar attendee follow up email",
+      "intent": "follow-up",
+      "audience": "Sales development representatives",
+      "outcome": "Follow up with webinar attendees based on the topic they actually showed interest in.",
+      "metaDescription": "Write a webinar attendee follow-up that references the session, the attendee's interest, and a relevant next step. Free private email tool by ReplyMind.",
+      "h1": "Follow up like the webinar mattered.",
+      "intro": "Use this after a live or recorded session when someone engaged with a specific topic. It helps you tie the follow-up to the part of the webinar that likely mattered and give them one next step.",
+      "fields": [
+        {"key": "recipient", "label": "Attendee name", "type": "text", "placeholder": "Renee", "required": false},
+        {"key": "webinarTopic", "label": "Webinar topic", "type": "text", "placeholder": "Improving outbound efficiency", "required": true},
+        {"key": "interest", "label": "Observed interest", "type": "textarea", "placeholder": "They asked about routing and automation", "required": true},
+        {"key": "nextStep", "label": "Relevant next step", "type": "textarea", "placeholder": "Share a short example or book a call", "required": true}
+      ],
+      "subjectTemplate": "Thanks for joining our {{webinarTopic}} session",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for joining our {{webinarTopic}} session. I noticed {{interest}}, which makes me think {{nextStep}} could be useful.\n\nBest,",
+      "guidance": [
+        "Anchor the note in the specific topic, not just attendance.",
+        "Use the observed interest to make the message feel relevant.",
+        "Offer one next step that fits the level of engagement."
+      ],
+      "pitfalls": [
+        "Do not send the same note to every attendee.",
+        "Do not overstate interest if the attendee only registered and did not engage."
+      ],
+      "examples": [
+        {
+          "label": "Q&A interest",
+          "input": "Renee attended a webinar on outbound efficiency and asked about routing automation.",
+          "output": "Hi Renee,\n\nThanks for joining our Improving outbound efficiency session. I noticed you asked about routing automation, which makes me think a short example could be useful.\n\nBest,"
+        },
+        {
+          "label": "Product-fit interest",
+          "input": "Renee attended and seemed interested in the practical workflow example.",
+          "output": "Hi Renee,\n\nThanks for joining our Improving outbound efficiency session. I noticed you stayed engaged during the workflow example, which makes me think a short call could be useful.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include the webinar recording link?", "a": "Only if it helps the recipient act on the topic. The email should still feel personal."},
+        {"q": "How soon should I send it?", "a": "Soon after the session so the topic is still fresh."}
+      ],
+      "relatedTags": ["sales", "webinar", "follow-up", "content"]
+    },
+    {
+      "slug": "proposal-cover-email-builder",
+      "name": "Proposal Cover Email Builder",
+      "keyword": "proposal cover email",
+      "intent": "proposal",
+      "audience": "Account executives",
+      "outcome": "Send a proposal with enough framing that the buyer knows what matters first.",
+      "metaDescription": "Draft a proposal cover email that highlights the fit, the main value, and the decision point. Free private email tool by ReplyMind.",
+      "h1": "Frame the proposal before they open it.",
+      "intro": "Use this when you are sending a proposal and want the reader to focus on the right things first. It helps you name the fit, the main value, and the decision the buyer needs to make.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Evan", "required": false},
+        {"key": "fit", "label": "Why this proposal fits", "type": "textarea", "placeholder": "It matches the pilot scope we discussed", "required": true},
+        {"key": "value", "label": "Primary value", "type": "textarea", "placeholder": "Cuts manual work for the team", "required": true},
+        {"key": "decision", "label": "Decision needed", "type": "textarea", "placeholder": "Confirm if this is the right package", "required": true}
+      ],
+      "subjectTemplate": "Proposal for your review",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m sending the proposal because {{fit}}. The main value to keep in mind is {{value}}. The only decision we need now is {{decision}}.\n\nBest,",
+      "guidance": [
+        "Tell the buyer what to focus on before they read the attachment.",
+        "Keep the value statement tied to the agreed business problem.",
+        "Use one clear decision point to avoid a scattered review."
+      ],
+      "pitfalls": [
+        "Do not bury the main point under generic thanks.",
+        "Do not treat the proposal as self-explanatory."
+      ],
+      "examples": [
+        {
+          "label": "Pilot proposal cover",
+          "input": "Evan wants to review a proposal aligned to the pilot scope and the time savings value.",
+          "output": "Hi Evan,\n\nI’m sending the proposal because it matches the pilot scope we discussed. The main value to keep in mind is it cuts manual work for the team. The only decision we need now is to confirm if this is the right package.\n\nBest,"
+        },
+        {
+          "label": "Expansion proposal cover",
+          "input": "Evan is reviewing a proposal for a broader team and wants the key decision highlighted.",
+          "output": "Hi Evan,\n\nI’m sending the proposal because it matches the broader rollout we discussed. The main value to keep in mind is the team gets a more consistent workflow. The only decision we need now is to confirm if this is the right package.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should the cover email repeat the whole proposal?", "a": "No. It should point the buyer to the most important lens for review."},
+        {"q": "Do I need to mention price?", "a": "Only if price is the decision point. Otherwise focus on fit and value."}
+      ],
+      "relatedTags": ["sales", "proposal", "cover note", "decision"]
+    },
+    {
+      "slug": "verbal-yes-next-step-email-builder",
+      "name": "Verbal Yes Next Step Email Builder",
+      "keyword": "verbal yes follow up email",
+      "intent": "follow-up",
+      "audience": "Account executives",
+      "outcome": "Translate a verbal yes into a written next step so the deal does not lose momentum.",
+      "metaDescription": "Write a next-step email after a verbal yes with the agreement, outstanding detail, and action item. Free private email tool by ReplyMind.",
+      "h1": "Turn the verbal yes into a written path.",
+      "intro": "Use this after the buyer says yes in conversation but the paperwork, owner, or start date still needs to be locked in. It helps you preserve the momentum and define the next action cleanly.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Morgan", "required": false},
+        {"key": "agreement", "label": "What was agreed", "type": "textarea", "placeholder": "We will move forward with the pilot", "required": true},
+        {"key": "detail", "label": "Remaining detail", "type": "textarea", "placeholder": "Need final approval on start date", "required": true},
+        {"key": "action", "label": "Action needed", "type": "textarea", "placeholder": "Confirm the start date", "required": true}
+      ],
+      "subjectTemplate": "Following up on our yes",
+      "bodyTemplate": "Hi {{recipient}},\n\nGreat speaking today. We agreed that {{agreement}}. The remaining detail is {{detail}}. The next action is {{action}}.\n\nBest,",
+      "guidance": [
+        "Reflect the agreed outcome clearly so the buyer sees their own commitment in writing.",
+        "Separate the remaining detail from the actual action.",
+        "Keep the note short so it feels like confirmation, not renegotiation."
+      ],
+      "pitfalls": [
+        "Do not reopen closed decisions unless something truly changed.",
+        "Do not turn a simple confirmation into a long recap."
+      ],
+      "examples": [
+        {
+          "label": "Pilot agreement",
+          "input": "Morgan said yes to the pilot but needs to confirm the start date.",
+          "output": "Hi Morgan,\n\nGreat speaking today. We agreed that we will move forward with the pilot. The remaining detail is final approval on the start date. The next action is to confirm the start date.\n\nBest,"
+        },
+        {
+          "label": "Renewal agreement",
+          "input": "Morgan verbally agreed to renew and needs the final order form.",
+          "output": "Hi Morgan,\n\nGreat speaking today. We agreed that we will renew for the next term. The remaining detail is the signed order form. The next action is to confirm the order form path.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Why send this if the buyer already said yes?", "a": "Because written confirmation reduces misunderstandings and keeps the deal moving."},
+        {"q": "Should I include the whole pricing discussion?", "a": "No. Only the outcome and the remaining detail need to be captured."}
+      ],
+      "relatedTags": ["sales", "confirmation", "next steps", "closing"]
+    },
+    {
+      "slug": "stakeholder-alignment-email-builder",
+      "name": "Stakeholder Alignment Email Builder",
+      "keyword": "stakeholder alignment email",
+      "intent": "internal-brief",
+      "audience": "Account executives",
+      "outcome": "Get multiple stakeholders aligned on the same deal motion without creating confusion.",
+      "metaDescription": "Build a stakeholder alignment email that clarifies the shared goal, the open issue, and the next action. Free private email tool by ReplyMind.",
+      "h1": "Align the stakeholders around one path.",
+      "intro": "Use this when a deal has enough people involved that the risk is confusion, not interest. It helps you frame the shared goal, the main open issue, and the action everyone needs to take.",
+      "fields": [
+        {"key": "group", "label": "Stakeholder group", "type": "text", "placeholder": "Sales, ops, and finance", "required": false},
+        {"key": "goal", "label": "Shared goal", "type": "textarea", "placeholder": "Agree on a rollout plan", "required": true},
+        {"key": "issue", "label": "Open issue", "type": "textarea", "placeholder": "Confirm the budget owner", "required": true},
+        {"key": "action", "label": "Next action", "type": "textarea", "placeholder": "Reply with your preferred timing", "required": true}
+      ],
+      "subjectTemplate": "Aligning on next steps",
+      "bodyTemplate": "Hi everyone,\n\nThe shared goal for {{group}} is {{goal}}. The main open issue is {{issue}}. To keep this moving, the next action is {{action}}.\n\nBest,",
+      "guidance": [
+        "Use one shared goal to keep the thread coherent.",
+        "Name the open issue plainly so the right person can respond.",
+        "Keep the action easy to answer in a group thread."
+      ],
+      "pitfalls": [
+        "Do not create a long reply-all chain with unclear ownership.",
+        "Do not mix too many separate issues in one message."
+      ],
+      "examples": [
+        {
+          "label": "Rollout alignment",
+          "input": "Sales, ops, and finance need to agree on the rollout plan and budget owner.",
+          "output": "Hi everyone,\n\nThe shared goal for sales, ops, and finance is to agree on a rollout plan. The main open issue is confirming the budget owner. To keep this moving, the next action is to reply with your preferred timing.\n\nBest,"
+        },
+        {
+          "label": "Security alignment",
+          "input": "Product, security, and procurement need to confirm the approval sequence.",
+          "output": "Hi everyone,\n\nThe shared goal for product, security, and procurement is to agree on the approval sequence. The main open issue is who owns the final sign-off. To keep this moving, the next action is to reply with your preferred timing.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I always use a group email for alignment?", "a": "Only when all stakeholders need the same context. Otherwise, direct messages are cleaner."},
+        {"q": "How do I reduce confusion?", "a": "Name the goal, the issue, and the action in that order."}
+      ],
+      "relatedTags": ["sales", "alignment", "stakeholders", "coordination"]
+    },
+    {
+      "slug": "deadline-reminder-email-builder",
+      "name": "Deadline Reminder Email Builder",
+      "keyword": "sales deadline reminder email",
+      "intent": "follow-up",
+      "audience": "Account executives",
+      "outcome": "Remind the buyer about an approaching decision date without sounding pushy.",
+      "metaDescription": "Write a deadline reminder email that references the timeline, the pending decision, and the support available. Free private email tool by ReplyMind.",
+      "h1": "Remind them of the deadline, not pressure them.",
+      "intro": "Use this when a buyer agreed to a timeline but the decision is still pending. It helps you reference the deadline, the remaining decision, and the support you can offer to help them close.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Nora", "required": false},
+        {"key": "deadline", "label": "Deadline", "type": "text", "placeholder": "Friday", "required": true},
+        {"key": "decision", "label": "Pending decision", "type": "textarea", "placeholder": "Approve the final scope", "required": true},
+        {"key": "support", "label": "Support offered", "type": "textarea", "placeholder": "Happy to answer anything before then", "required": true}
+      ],
+      "subjectTemplate": "Quick reminder on timing",
+      "bodyTemplate": "Hi {{recipient}},\n\nJust a quick reminder that {{deadline}} is the date we were aiming for. The remaining step is {{decision}}. If I can help before then, {{support}}.\n\nBest,",
+      "guidance": [
+        "Keep the reminder factual and tied to the timeline already agreed.",
+        "Use the support line to show availability, not pressure.",
+        "Avoid making the deadline sound like a threat."
+      ],
+      "pitfalls": [
+        "Do not send repeated reminders without adding new value.",
+        "Do not sound as if you are rushing the buyer for your own sake."
+      ],
+      "examples": [
+        {
+          "label": "Budget deadline",
+          "input": "Nora said Friday was the target to approve the final scope.",
+          "output": "Hi Nora,\n\nJust a quick reminder that Friday is the date we were aiming for. The remaining step is approving the final scope. If I can help before then, happy to answer anything before then.\n\nBest,"
+        },
+        {
+          "label": "Renewal deadline",
+          "input": "Nora wants to keep the renewal on track by the end of the month.",
+          "output": "Hi Nora,\n\nJust a quick reminder that the end of the month is the date we were aiming for. The remaining step is confirming the renewal. If I can help before then, happy to answer anything before then.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "How early should I send a deadline reminder?", "a": "Early enough to be useful, but not so early that it becomes background noise."},
+        {"q": "Should I include consequences?", "a": "Only if the buyer already understands them. The email should stay respectful and clear."}
+      ],
+      "relatedTags": ["sales", "deadline", "follow-up", "closing"]
+    },
+    {
+      "slug": "ghosting-reengagement-email-builder",
+      "name": "Ghosting Reengagement Email Builder",
+      "keyword": "reengagement email after ghosting",
+      "intent": "re-engagement",
+      "audience": "Sales representatives",
+      "outcome": "Re-open a quiet thread with a low-friction message that does not guilt the recipient.",
+      "metaDescription": "Draft a reengagement email for a quiet deal with a simple check-in, a relevant reminder, and a graceful exit. Free private email tool by ReplyMind.",
+      "h1": "Re-open the thread without pressure.",
+      "intro": "Use this when a prospect has gone quiet and you want one last useful touch. It helps you reference the last topic, offer a light reason to reply, and keep the tone respectful.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Diego", "required": false},
+        {"key": "lastTopic", "label": "Last topic discussed", "type": "textarea", "placeholder": "Pilot timing and security review", "required": true},
+        {"key": "reason", "label": "Reason to reply", "type": "textarea", "placeholder": "I can send the shortest version if helpful", "required": true},
+        {"key": "exitLine", "label": "Graceful exit line", "type": "textarea", "placeholder": "If it is not a priority now, I understand", "required": true}
+      ],
+      "subjectTemplate": "Checking back on our last conversation",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to check back on {{lastTopic}}. If it helps, {{reason}}. {{exitLine}}.\n\nBest,",
+      "guidance": [
+        "Use one calm follow-up rather than a series of increasingly loud messages.",
+        "Give the recipient an easy path to respond or step away.",
+        "Treat silence as uncertainty, not rejection."
+      ],
+      "pitfalls": [
+        "Do not guilt the recipient for not replying.",
+        "Do not write a dramatic breakup note too early."
+      ],
+      "examples": [
+        {
+          "label": "Pilot quiet thread",
+          "input": "Diego stopped replying after pilot timing and security review were discussed.",
+          "output": "Hi Diego,\n\nI wanted to check back on pilot timing and security review. If it helps, I can send the shortest version if helpful. If it is not a priority now, I understand.\n\nBest,"
+        },
+        {
+          "label": "Pricing quiet thread",
+          "input": "Diego went quiet after asking about pricing and package options.",
+          "output": "Hi Diego,\n\nI wanted to check back on pricing and package options. If it helps, I can send the shortest version if helpful. If it is not a priority now, I understand.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "How many times should I reengage?", "a": "Usually one thoughtful reengagement is enough before you move the contact to nurture."},
+        {"q": "Should I mention that they stopped replying?", "a": "No. Keep the note neutral and easy to answer."}
+      ],
+      "relatedTags": ["sales", "reengagement", "ghosting", "nurture"]
+    },
+    {
+      "slug": "lost-deal-nurture-email-builder",
+      "name": "Lost Deal Nurture Email Builder",
+      "keyword": "lost deal nurture email",
+      "intent": "nurture",
+      "audience": "Account executives",
+      "outcome": "Stay on good terms after a lost deal so the contact can re-enter the pipeline later.",
+      "metaDescription": "Write a lost deal nurture email that acknowledges the outcome, offers a helpful resource, and keeps the relationship warm. Free private email tool by ReplyMind.",
+      "h1": "Leave the door open after the loss.",
+      "intro": "Use this after a deal closes out or is not moving forward. It helps you acknowledge the decision gracefully, offer something useful, and keep the relationship worth revisiting later.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jules", "required": false},
+        {"key": "outcome", "label": "Deal outcome", "type": "textarea", "placeholder": "The team chose another path", "required": true},
+        {"key": "resource", "label": "Helpful resource", "type": "textarea", "placeholder": "A short guide or checklist", "required": true},
+        {"key": "futureHook", "label": "Future reason to reconnect", "type": "textarea", "placeholder": "If priorities shift, I’d be glad to reconnect", "required": true}
+      ],
+      "subjectTemplate": "Thanks for the conversation",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks again for the time we spent together. I understand that {{outcome}}. I thought {{resource}} might still be useful. If priorities shift later, {{futureHook}}.\n\nBest,",
+      "guidance": [
+        "Acknowledge the outcome without sounding disappointed or transactional.",
+        "Offer one genuinely useful resource, not a sales deck.",
+        "Leave a clean path to future contact."
+      ],
+      "pitfalls": [
+        "Do not argue with the decision after the deal is lost.",
+        "Do not disappear without a respectful close."
+      ],
+      "examples": [
+        {
+          "label": "Competitor loss",
+          "input": "Jules says the team chose another vendor but may revisit later.",
+          "output": "Hi Jules,\n\nThanks again for the time we spent together. I understand that the team chose another path. I thought a short checklist for rollout planning might still be useful. If priorities shift later, I’d be glad to reconnect.\n\nBest,"
+        },
+        {
+          "label": "Timing loss",
+          "input": "Jules says the timing is not right but there is future interest.",
+          "output": "Hi Jules,\n\nThanks again for the time we spent together. I understand that the timing is not right right now. I thought a short guide on workflow adoption might still be useful. If priorities shift later, I’d be glad to reconnect.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I ask for a future meeting right away?", "a": "No. Start by acknowledging the loss, sharing a useful resource, and leaving the door open."},
+        {"q": "Is this worth sending after every loss?", "a": "Use it when the relationship is worth preserving and the tone can stay positive."}
+      ],
+      "relatedTags": ["sales", "nurture", "lost deal", "relationship"]
+    },
+    {
+      "slug": "case-study-share-email-builder",
+      "name": "Case Study Share Email Builder",
+      "keyword": "case study share email",
+      "intent": "enablement",
+      "audience": "Business development representatives",
+      "outcome": "Share a relevant case study that helps the buyer picture the outcome in their own environment.",
+      "metaDescription": "Create a case study share email with the relevant result, the comparable context, and the next question. Free private email tool by ReplyMind.",
+      "h1": "Share proof that actually fits the conversation.",
+      "intro": "Use this when the buyer needs evidence, but only evidence that matches their situation. It helps you identify the result, the comparable context, and the question that moves the conversation forward.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Anya", "required": false},
+        {"key": "result", "label": "Relevant result", "type": "textarea", "placeholder": "Reduced manual follow-up work", "required": true},
+        {"key": "context", "label": "Comparable context", "type": "textarea", "placeholder": "A similar team size and workflow", "required": true},
+        {"key": "question", "label": "Next question", "type": "textarea", "placeholder": "Would it help to discuss how this might map to your team?", "required": true}
+      ],
+      "subjectTemplate": "A similar example you may find useful",
+      "bodyTemplate": "Hi {{recipient}},\n\nI thought this might be relevant because the case study shows {{result}} in a setting with {{context}}. If useful, {{question}}.\n\nBest,",
+      "guidance": [
+        "Use a case study that is comparable, not just impressive.",
+        "Translate the result into the buyer's context.",
+        "Ask one question that makes the next step easy."
+      ],
+      "pitfalls": [
+        "Do not send an irrelevant logo parade.",
+        "Do not claim the example is identical if it is not."
+      ],
+      "examples": [
+        {
+          "label": "Team-size match",
+          "input": "Anya runs a similar-sized team and wants proof of reduced manual follow-up work.",
+          "output": "Hi Anya,\n\nI thought this might be relevant because the case study shows reduced manual follow-up work in a setting with a similar team size and workflow. If useful, would it help to discuss how this might map to your team?\n\nBest,"
+        },
+        {
+          "label": "Process match",
+          "input": "Anya wants to see how another team improved routing and visibility.",
+          "output": "Hi Anya,\n\nI thought this might be relevant because the case study shows better routing and visibility in a setting with a similar workflow. If useful, would it help to discuss how this might map to your team?\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I attach the case study PDF?", "a": "Only if it adds value. Sometimes a short summary in the email is enough."},
+        {"q": "How do I avoid sounding generic?", "a": "Tie the result to a context that resembles the buyer's situation."}
+      ],
+      "relatedTags": ["sales", "case study", "proof", "enablement"]
+    },
+    {
+      "slug": "roi-summary-email-builder",
+      "name": "ROI Summary Email Builder",
+      "keyword": "sales roi summary email",
+      "intent": "business-case",
+      "audience": "Account executives",
+      "outcome": "Summarize a business case in plain language that the buyer can share internally.",
+      "metaDescription": "Build an ROI summary email with the cost, the benefit, the assumption, and the ask. Free private email tool by ReplyMind.",
+      "h1": "Summarize the business case without clutter.",
+      "intro": "Use this when the buyer needs a simple internal business case rather than a full analysis. It helps you state the cost, the benefit, the assumption behind the estimate, and the decision needed.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Leo", "required": false},
+        {"key": "cost", "label": "Cost point", "type": "textarea", "placeholder": "Monthly fee or package cost", "required": true},
+        {"key": "benefit", "label": "Expected benefit", "type": "textarea", "placeholder": "Reduce manual work and speed follow-up", "required": true},
+        {"key": "assumption", "label": "Assumption behind estimate", "type": "textarea", "placeholder": "Based on current team workload", "required": true}
+      ],
+      "subjectTemplate": "A simple summary you can share",
+      "bodyTemplate": "Hi {{recipient}},\n\nHere is the simple version: the cost is {{cost}} and the expected benefit is {{benefit}}. The estimate is based on {{assumption}}.\n\nBest,",
+      "guidance": [
+        "Use plain language that a buyer can forward internally.",
+        "State the assumption so the estimate does not look like a promise.",
+        "Keep the summary short enough to stand alone in an internal thread."
+      ],
+      "pitfalls": [
+        "Do not present a rough estimate as hard fact.",
+        "Do not overload the note with formulas."
+      ],
+      "examples": [
+        {
+          "label": "Light business case",
+          "input": "Leo wants a simple cost and benefit summary for an internal thread.",
+          "output": "Hi Leo,\n\nHere is the simple version: the cost is the monthly package fee and the expected benefit is less manual work and faster follow-up. The estimate is based on current team workload.\n\nBest,"
+        },
+        {
+          "label": "Broader rollout case",
+          "input": "Leo wants a summary he can forward to finance and operations.",
+          "output": "Hi Leo,\n\nHere is the simple version: the cost is the broader rollout package and the expected benefit is better visibility plus less manual follow-up. The estimate is based on current team workload.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Is this a real ROI calculator?", "a": "No. It is a communication tool for summarizing a business case clearly."},
+        {"q": "Should I include exact numbers?", "a": "Only if you have them. Otherwise, use the simplest accurate summary."}
+      ],
+      "relatedTags": ["sales", "roi", "business case", "internal selling"]
+    },
+    {
+      "slug": "trial-follow-up-email-builder",
+      "name": "Trial Follow-Up Email Builder",
+      "keyword": "trial follow up email",
+      "intent": "follow-up",
+      "audience": "Account executives",
+      "outcome": "Check in on a free trial or sandbox without turning the message into pressure.",
+      "metaDescription": "Create a trial follow-up email that asks what the user has seen, what is still unclear, and what the next step should be. Free private email tool by ReplyMind.",
+      "h1": "Check the trial before it goes stale.",
+      "intro": "Use this during or after a trial when you want to learn what the user is seeing. It helps you ask about adoption, confusion, and the next action that keeps evaluation moving.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Noah", "required": false},
+        {"key": "trialStatus", "label": "Trial status", "type": "textarea", "placeholder": "The team has started testing", "required": true},
+        {"key": "confusion", "label": "What is unclear", "type": "textarea", "placeholder": "How to set up the workflow", "required": false},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "Share the setup guide or book a check-in", "required": true}
+      ],
+      "subjectTemplate": "Checking in on the trial",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to check in on the trial. So far, {{trialStatus}}. If anything is unclear, such as {{confusion}}, I can help. The next step is {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Treat the trial like a working session, not a countdown.",
+        "Ask about confusion directly so you can remove friction.",
+        "Offer a clear next step that fits how the buyer is evaluating."
+      ],
+      "pitfalls": [
+        "Do not pretend trial usage is stronger than it is.",
+        "Do not ask for a close before the user has had a fair chance to test."
+      ],
+      "examples": [
+        {
+          "label": "Active trial",
+          "input": "Noah says the team has started testing and needs the setup guide.",
+          "output": "Hi Noah,\n\nI wanted to check in on the trial. So far, the team has started testing. If anything is unclear, such as how to set up the workflow, I can help. The next step is to share the setup guide or book a check-in.\n\nBest,"
+        },
+        {
+          "label": "Light trial",
+          "input": "Noah has not used much yet and wants a simple next step.",
+          "output": "Hi Noah,\n\nI wanted to check in on the trial. So far, the account is live and ready for testing. If anything is unclear, such as where to start, I can help. The next step is to book a short setup check-in.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I ask for feedback or a decision?", "a": "Feedback first, decision second. The buyer needs a chance to evaluate honestly."},
+        {"q": "How do I keep this from sounding pushy?", "a": "Ask what is unclear and offer help before you ask for commitment."}
+      ],
+      "relatedTags": ["sales", "trial", "follow-up", "evaluation"]
+    },
+    {
+      "slug": "mutual-action-plan-email-builder",
+      "name": "Mutual Action Plan Email Builder",
+      "keyword": "mutual action plan email",
+      "intent": "project-management",
+      "audience": "Account executives",
+      "outcome": "Send a mutual action plan that makes responsibilities and timing visible to both sides.",
+      "metaDescription": "Build a mutual action plan email with owner, deadline, and the exact action needed for each step. Free private email tool by ReplyMind.",
+      "h1": "Make the plan visible to both sides.",
+      "intro": "Use this when the deal needs structure. It helps you assign ownership, attach a due date, and make the next action obvious so the process does not drift.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Sara", "required": false},
+        {"key": "owner", "label": "Owner", "type": "text", "placeholder": "Your team or their team", "required": true},
+        {"key": "deadline", "label": "Deadline", "type": "text", "placeholder": "Next Wednesday", "required": true},
+        {"key": "action", "label": "Action item", "type": "textarea", "placeholder": "Send security answers and review proposal", "required": true}
+      ],
+      "subjectTemplate": "Proposed plan for next steps",
+      "bodyTemplate": "Hi {{recipient}},\n\nTo keep everything clear, the owner for this step is {{owner}}. The timing we discussed is {{deadline}}. The action item is {{action}}.\n\nBest,",
+      "guidance": [
+        "Make ownership explicit so accountability is clear.",
+        "Use real deadlines that both sides already recognize.",
+        "Keep each step small enough that the plan is easy to follow."
+      ],
+      "pitfalls": [
+        "Do not create a giant plan that nobody will use.",
+        "Do not hide responsibility in vague phrases like 'we'll handle it.'"
+      ],
+      "examples": [
+        {
+          "label": "Security step",
+          "input": "Sara needs a clear owner, deadline, and action for security review.",
+          "output": "Hi Sara,\n\nTo keep everything clear, the owner for this step is your team. The timing we discussed is next Wednesday. The action item is to send security answers and review the proposal.\n\nBest,"
+        },
+        {
+          "label": "Procurement step",
+          "input": "Sara needs a mutual action plan for procurement and final approval.",
+          "output": "Hi Sara,\n\nTo keep everything clear, the owner for this step is your team. The timing we discussed is Friday. The action item is to complete procurement review and confirm the final approval path.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Is a mutual action plan only for complex deals?", "a": "No. Even simple deals benefit from explicit ownership and timing."},
+        {"q": "Should I attach a separate document?", "a": "Only if the buyer wants a formal plan. The email can be the plan when the sequence is short."}
+      ],
+      "relatedTags": ["sales", "project management", "mutual plan", "deal process"]
+    },
+    {
+      "slug": "business-case-request-email-builder",
+      "name": "Business Case Request Email Builder",
+      "keyword": "business case request email",
+      "intent": "business-case",
+      "audience": "Account executives",
+      "outcome": "Ask a buyer for the internal information you need to shape a credible business case.",
+      "metaDescription": "Create a business case request email that asks for the right inputs, the decision context, and the approval timeline. Free private email tool by ReplyMind.",
+      "h1": "Ask for the inputs that make the business case real.",
+      "intro": "Use this when the buyer wants help proving the case internally. It helps you request the minimum useful information, explain why it matters, and align the timing for approval.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Elena", "required": false},
+        {"key": "inputs", "label": "Inputs needed", "type": "textarea", "placeholder": "Team size, current process, and target outcome", "required": true},
+        {"key": "whyNeeded", "label": "Why the inputs matter", "type": "textarea", "placeholder": "So we can make the estimate credible", "required": true},
+        {"key": "timeline", "label": "Approval timeline", "type": "textarea", "placeholder": "Before the end of the month", "required": true}
+      ],
+      "subjectTemplate": "A few inputs for the business case",
+      "bodyTemplate": "Hi {{recipient}},\n\nTo make the business case usable, I need {{inputs}}. That matters because {{whyNeeded}}. If possible, I’d like to have everything before {{timeline}}.\n\nBest,",
+      "guidance": [
+        "Ask only for inputs that change the business case materially.",
+        "Explain why each input matters so the request feels worth the effort.",
+        "Tie the timing to the decision window."
+      ],
+      "pitfalls": [
+        "Do not ask for a long spreadsheet of nice-to-have details.",
+        "Do not make the recipient guess how the information will be used."
+      ],
+      "examples": [
+        {
+          "label": "Simple case inputs",
+          "input": "Elena needs team size, current process, and target outcome before month-end.",
+          "output": "Hi Elena,\n\nTo make the business case usable, I need team size, current process, and target outcome. That matters because it will make the estimate credible. If possible, I’d like to have everything before the end of the month.\n\nBest,"
+        },
+        {
+          "label": "Approval inputs",
+          "input": "Elena wants inputs for a finance review and an approval timeline.",
+          "output": "Hi Elena,\n\nTo make the business case usable, I need current workflow volume, who approves spend, and the target rollout date. That matters because it will make the estimate credible. If possible, I’d like to have everything before Friday.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "How much should I ask for?", "a": "Only the inputs needed to make the case accurate enough to be useful."},
+        {"q": "Should I offer to do the business case myself?", "a": "Yes, if you can. This email is for gathering what you need to produce it."}
+      ],
+      "relatedTags": ["sales", "business case", "internal selling", "approval"]
+    },
+    {
+      "slug": "executive-introduction-email-builder",
+      "name": "Executive Introduction Email Builder",
+      "keyword": "executive intro email",
+      "intent": "internal-brief",
+      "audience": "Account executives",
+      "outcome": "Introduce the deal to an executive in a way that respects their time and decision style.",
+      "metaDescription": "Write an executive introduction email with the context, the business impact, and the ask. Free private email tool by ReplyMind.",
+      "h1": "Introduce the opportunity at executive altitude.",
+      "intro": "Use this when a senior leader needs a quick view of the deal. It helps you explain the context, the business impact, and the decision or support you want from them.",
+      "fields": [
+        {"key": "recipient", "label": "Executive recipient", "type": "text", "placeholder": "Dana", "required": false},
+        {"key": "context", "label": "Deal context", "type": "textarea", "placeholder": "A pilot is ready but needs sponsorship", "required": true},
+        {"key": "impact", "label": "Business impact", "type": "textarea", "placeholder": "Faster rollout and cleaner process ownership", "required": true},
+        {"key": "ask", "label": "Executive ask", "type": "textarea", "placeholder": "Approve the pilot sponsor", "required": true}
+      ],
+      "subjectTemplate": "Brief context on the opportunity",
+      "bodyTemplate": "Hi {{recipient}},\n\nThe current context is {{context}}. The business impact is {{impact}}. The only thing I need from you right now is {{ask}}.\n\nBest,",
+      "guidance": [
+        "Lead with the situation, not the history.",
+        "Keep the business impact high-level and concrete.",
+        "Ask for one thing that matches the executive's role."
+      ],
+      "pitfalls": [
+        "Do not overload the executive with implementation detail.",
+        "Do not ask them to solve multiple unrelated issues at once."
+      ],
+      "examples": [
+        {
+          "label": "Pilot sponsorship",
+          "input": "Dana needs to understand a pilot that is ready but requires sponsorship.",
+          "output": "Hi Dana,\n\nThe current context is a pilot is ready but needs sponsorship. The business impact is faster rollout and cleaner process ownership. The only thing I need from you right now is approval of the pilot sponsor.\n\nBest,"
+        },
+        {
+          "label": "Renewal support",
+          "input": "Dana wants a short intro for a renewal that needs leadership visibility.",
+          "output": "Hi Dana,\n\nThe current context is the renewal is on track but needs leadership visibility. The business impact is continuity and a smoother approval process. The only thing I need from you right now is support for the renewal path.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "How long should an executive intro be?", "a": "Short enough that the executive can scan it quickly and know exactly what is needed."},
+        {"q": "Should I attach a deck?", "a": "Only if the executive asked for more detail. The email should work without one."}
+      ],
+      "relatedTags": ["sales", "executive", "intro", "briefing"]
+    },
+    {
+      "slug": "renewal-save-email-builder",
+      "name": "Renewal Save Email Builder",
+      "keyword": "renewal save email",
+      "intent": "renewal",
+      "audience": "Customer success managers",
+      "outcome": "Handle a renewal risk with empathy, a clear concern, and a concrete path forward.",
+      "metaDescription": "Draft a renewal save email that acknowledges risk, the concern, and the path to resolve it. Free private email tool by ReplyMind.",
+      "h1": "Address the risk before the renewal slips.",
+      "intro": "Use this when the renewal is at risk and you want to respond thoughtfully rather than defensively. It helps you acknowledge the concern, name the path forward, and keep the customer engaged.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Mila", "required": false},
+        {"key": "risk", "label": "Renewal risk", "type": "textarea", "placeholder": "The team is unsure about adoption", "required": true},
+        {"key": "concern", "label": "Main concern", "type": "textarea", "placeholder": "They do not see enough value yet", "required": true},
+        {"key": "path", "label": "Path forward", "type": "textarea", "placeholder": "Review usage and reset the plan", "required": true}
+      ],
+      "subjectTemplate": "A quick note on the renewal",
+      "bodyTemplate": "Hi {{recipient}},\n\nI understand the renewal is at risk because {{risk}}. The main concern seems to be {{concern}}. I think the best path forward is {{path}}.\n\nBest,",
+      "guidance": [
+        "Acknowledge the risk directly so the customer feels heard.",
+        "Describe the concern in their terms, not yours.",
+        "Offer a path forward that is concrete and manageable."
+      ],
+      "pitfalls": [
+        "Do not minimize the customer's concern.",
+        "Do not make the save attempt feel like a last-minute sales push."
+      ],
+      "examples": [
+        {
+          "label": "Adoption risk",
+          "input": "Mila is unsure about adoption and wants a reset before renewing.",
+          "output": "Hi Mila,\n\nI understand the renewal is at risk because the team is unsure about adoption. The main concern seems to be they do not see enough value yet. I think the best path forward is to review usage and reset the plan.\n\nBest,"
+        },
+        {
+          "label": "Value risk",
+          "input": "Mila wants to revisit the renewal because the value is not obvious yet.",
+          "output": "Hi Mila,\n\nI understand the renewal is at risk because the team has not seen enough value. The main concern seems to be the current workflow is not strong enough. I think the best path forward is to review usage and adjust the plan.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I offer a discount here?", "a": "Only if it is a real option. First address the cause of the risk."},
+        {"q": "What tone works best?", "a": "Calm, accountable, and useful. Avoid sounding alarmed or manipulative."}
+      ],
+      "relatedTags": ["sales", "renewal", "retention", "save"]
+    },
+    {
+      "slug": "upsell-timing-email-builder",
+      "name": "Upsell Timing Email Builder",
+      "keyword": "upsell timing email",
+      "intent": "expansion",
+      "audience": "Account managers",
+      "outcome": "Raise an upsell only when the customer is ready and the timing makes sense.",
+      "metaDescription": "Create an upsell timing email that uses customer signals, current value, and a low-pressure next step. Free private email tool by ReplyMind.",
+      "h1": "Ask about expansion at the right moment.",
+      "intro": "Use this when the customer has started to show stronger usage or interest and you want to test the timing of a bigger offer. It helps you anchor the ask in observed signals rather than internal quota pressure.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Paula", "required": false},
+        {"key": "signal", "label": "Timing signal", "type": "textarea", "placeholder": "The team is using the product weekly", "required": true},
+        {"key": "value", "label": "Current value", "type": "textarea", "placeholder": "The workflow is saving time", "required": true},
+        {"key": "ask", "label": "Low-pressure ask", "type": "textarea", "placeholder": "Would it make sense to explore a larger package?", "required": true}
+      ],
+      "subjectTemplate": "A thought on timing",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to reach out because {{signal}}. That tells me the team is already seeing {{value}}. If the timing feels right, {{ask}}.\n\nBest,",
+      "guidance": [
+        "Use a real signal rather than an arbitrary upsell trigger.",
+        "Connect the new offer to current value already being realized.",
+        "Keep the ask exploratory so the customer can answer honestly."
+      ],
+      "pitfalls": [
+        "Do not upsell before the customer has seen value.",
+        "Do not make the ask sound like a quota-driven pitch."
+      ],
+      "examples": [
+        {
+          "label": "Usage signal",
+          "input": "Paula's team is using the product weekly and the workflow is saving time.",
+          "output": "Hi Paula,\n\nI wanted to reach out because the team is using the product weekly. That tells me the team is already seeing the workflow is saving time. If the timing feels right, would it make sense to explore a larger package?\n\nBest,"
+        },
+        {
+          "label": "Expansion signal",
+          "input": "Paula mentioned a second team may want the same workflow.",
+          "output": "Hi Paula,\n\nI wanted to reach out because a second team may want the same workflow. That tells me the team is already seeing value. If the timing feels right, would it make sense to explore a larger package?\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Is this too early for many customers?", "a": "If there is no visible value yet, yes. Timing should follow usage and outcomes."},
+        {"q": "Should I make the upsell specific?", "a": "Only as specific as the customer signal supports. Start with the conversation, not the package."}
+      ],
+      "relatedTags": ["sales", "upsell", "timing", "expansion"]
+    },
+    {
+      "slug": "signature-reminder-email-builder",
+      "name": "Signature Reminder Email Builder",
+      "keyword": "signature reminder email",
+      "intent": "closing",
+      "audience": "Account executives",
+      "outcome": "Nudge a final signature forward without sounding impatient.",
+      "metaDescription": "Draft a signature reminder email that references the outstanding document, the agreed timing, and the path to finish. Free private email tool by ReplyMind.",
+      "h1": "Make the signature step simple.",
+      "intro": "Use this when the deal is ready but the final signature is still pending. It helps you identify the missing document, the agreed timing, and the easiest way for the buyer to finish.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Omar", "required": false},
+        {"key": "document", "label": "Outstanding document", "type": "textarea", "placeholder": "Signed order form", "required": true},
+        {"key": "timing", "label": "Agreed timing", "type": "text", "placeholder": "By end of day", "required": true},
+        {"key": "finishPath", "label": "Easy finish path", "type": "textarea", "placeholder": "Reply here and I will send the final version", "required": true}
+      ],
+      "subjectTemplate": "One last step to finish",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe are down to {{document}}. We were aiming to wrap this up {{timing}}. If that makes sense, {{finishPath}}.\n\nBest,",
+      "guidance": [
+        "Keep the reminder about one last step, not the whole deal.",
+        "Use the agreed timing to anchor the ask.",
+        "Make it very easy for the recipient to complete the action."
+      ],
+      "pitfalls": [
+        "Do not pile on extra issues at the signature stage.",
+        "Do not write a reminder that sounds like a complaint."
+      ],
+      "examples": [
+        {
+          "label": "Order form signature",
+          "input": "Omar just needs to sign the order form by end of day.",
+          "output": "Hi Omar,\n\nWe are down to the signed order form. We were aiming to wrap this up by end of day. If that makes sense, reply here and I will send the final version.\n\nBest,"
+        },
+        {
+          "label": "Procurement signature",
+          "input": "Omar needs to approve the final document after procurement sign-off.",
+          "output": "Hi Omar,\n\nWe are down to the final approval document. We were aiming to wrap this up this week. If that makes sense, reply here and I will send the final version.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I mention urgency?", "a": "Only as part of the agreed timing. Avoid pressure language."},
+        {"q": "What if I need an internal signature too?", "a": "Keep the ask focused on the next signer and make the path to finish obvious."}
+      ],
+      "relatedTags": ["sales", "signature", "closing", "paperwork"]
+    },
+    {
+      "slug": "renewal-timeline-email-builder",
+      "name": "Renewal Timeline Email Builder",
+      "keyword": "renewal timeline email",
+      "intent": "renewal",
+      "audience": "Customer success managers",
+      "outcome": "Set a simple renewal timeline so internal approvals do not stall the process.",
+      "metaDescription": "Build a renewal timeline email with the decision date, approver, and next checkpoint. Free private email tool by ReplyMind.",
+      "h1": "Make the renewal timeline visible.",
+      "intro": "Use this when renewal is approaching and you need the customer to see the sequence clearly. It helps you call out the decision date, the approver, and the next checkpoint.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Tara", "required": false},
+        {"key": "decisionDate", "label": "Decision date", "type": "text", "placeholder": "August 22", "required": true},
+        {"key": "approver", "label": "Approver", "type": "text", "placeholder": "Finance lead", "required": true},
+        {"key": "nextCheckpoint", "label": "Next checkpoint", "type": "textarea", "placeholder": "Review the renewal draft next week", "required": true}
+      ],
+      "subjectTemplate": "Renewal timeline",
+      "bodyTemplate": "Hi {{recipient}},\n\nTo keep the renewal simple, the decision date we are working toward is {{decisionDate}}. The key approver is {{approver}}. The next checkpoint is {{nextCheckpoint}}.\n\nBest,",
+      "guidance": [
+        "State the timeline in one place so nobody has to reconstruct it from prior messages.",
+        "Name the approver if that changes the workflow.",
+        "Use the checkpoint to keep both sides accountable."
+      ],
+      "pitfalls": [
+        "Do not assume everyone remembers the renewal schedule.",
+        "Do not scatter the timeline across multiple emails."
+      ],
+      "examples": [
+        {
+          "label": "Annual renewal",
+          "input": "Tara needs a clear date, approver, and review step for a standard renewal.",
+          "output": "Hi Tara,\n\nTo keep the renewal simple, the decision date we are working toward is August 22. The key approver is finance lead. The next checkpoint is review the renewal draft next week.\n\nBest,"
+        },
+        {
+          "label": "Multi-step renewal",
+          "input": "Tara wants a reminder of the approval order and the review milestone.",
+          "output": "Hi Tara,\n\nTo keep the renewal simple, the decision date we are working toward is September 1. The key approver is the operations director. The next checkpoint is review the renewal draft on Thursday.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I use this if the customer already knows the date?", "a": "Yes, if the timeline still needs written clarity for internal coordination."},
+        {"q": "Is this only for large renewals?", "a": "No. Any renewal with more than one approval step benefits from clear timing."}
+      ],
+      "relatedTags": ["renewal", "timeline", "customer success", "approvals"]
+    },
+    {
+      "slug": "account-review-email-builder",
+      "name": "Account Review Email Builder",
+      "keyword": "account review email",
+      "intent": "account-management",
+      "audience": "Account managers",
+      "outcome": "Prepare a structured account review that highlights wins, risks, and the next commercial step.",
+      "metaDescription": "Create an account review email with wins, risks, usage, and the next decision. Free private email tool by ReplyMind.",
+      "h1": "Run the account review with a clear agenda.",
+      "intro": "Use this before a monthly or quarterly account review. It helps you focus the conversation on what changed, what is at risk, and what should happen next.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Owen", "required": false},
+        {"key": "wins", "label": "Recent wins", "type": "textarea", "placeholder": "Faster handoffs and better visibility", "required": true},
+        {"key": "risk", "label": "Current risk", "type": "textarea", "placeholder": "Some users are inactive", "required": false},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "Review usage and discuss expansion", "required": true}
+      ],
+      "subjectTemplate": "Account review agenda",
+      "bodyTemplate": "Hi {{recipient}},\n\nFor our account review, I wanted to focus on {{wins}}. One area to watch is {{risk}}. The next step is {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Use the email to frame the review before the meeting starts.",
+        "Balance positive outcomes with any real risk so the review feels honest.",
+        "End on the next step so the meeting has direction."
+      ],
+      "pitfalls": [
+        "Do not make the review sound like a surprise audit.",
+        "Do not omit risks that matter to renewal or expansion."
+      ],
+      "examples": [
+        {
+          "label": "Quarterly review",
+          "input": "Owen wants to review wins, note inactive users, and plan an expansion talk.",
+          "output": "Hi Owen,\n\nFor our account review, I wanted to focus on faster handoffs and better visibility. One area to watch is some users are inactive. The next step is review usage and discuss expansion.\n\nBest,"
+        },
+        {
+          "label": "Renewal review",
+          "input": "Owen needs to cover value and a small adoption risk before renewal.",
+          "output": "Hi Owen,\n\nFor our account review, I wanted to focus on cleaner workflow and fewer manual updates. One area to watch is some users are still not active. The next step is review usage and discuss renewal.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should the account review be formal?", "a": "Formal enough to be useful, but still readable in email form."},
+        {"q": "What if there is no risk?", "a": "Then use the note to spotlight wins and the next opportunity."}
+      ],
+      "relatedTags": ["account management", "review", "renewal", "expansion"]
+    },
+    {
+      "slug": "implementation-kickoff-email-builder",
+      "name": "Implementation Kickoff Email Builder",
+      "keyword": "implementation kickoff email",
+      "intent": "onboarding",
+      "audience": "Customer success managers",
+      "outcome": "Kick off implementation with the owners, scope, and first milestone in one message.",
+      "metaDescription": "Write an implementation kickoff email that sets owners, scope, and first milestone. Free private email tool by ReplyMind.",
+      "h1": "Start implementation with clear ownership.",
+      "intro": "Use this when the deal has closed and the work now needs structure. It helps you introduce the implementation owner, the first milestone, and the scope for the kickoff.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Nadia", "required": false},
+        {"key": "owner", "label": "Implementation owner", "type": "text", "placeholder": "Project lead", "required": true},
+        {"key": "scope", "label": "Kickoff scope", "type": "textarea", "placeholder": "Setup, training, and first workflow", "required": true},
+        {"key": "milestone", "label": "First milestone", "type": "textarea", "placeholder": "Complete setup by next Friday", "required": true}
+      ],
+      "subjectTemplate": "Kickoff details for implementation",
+      "bodyTemplate": "Hi {{recipient}},\n\nTo start implementation, the owner will be {{owner}}. The kickoff scope is {{scope}}. The first milestone we are aiming for is {{milestone}}.\n\nBest,",
+      "guidance": [
+        "Be explicit about who owns the rollout.",
+        "Keep scope narrow enough to make the kickoff manageable.",
+        "Use the first milestone to create momentum."
+      ],
+      "pitfalls": [
+        "Do not let kickoff logistics sprawl across multiple threads.",
+        "Do not leave ownership ambiguous."
+      ],
+      "examples": [
+        {
+          "label": "Standard kickoff",
+          "input": "Nadia needs a kickoff email with setup, training, and a Friday milestone.",
+          "output": "Hi Nadia,\n\nTo start implementation, the owner will be project lead. The kickoff scope is setup, training, and first workflow. The first milestone we are aiming for is complete setup by next Friday.\n\nBest,"
+        },
+        {
+          "label": "Light kickoff",
+          "input": "Nadia wants a simple note to begin onboarding the team.",
+          "output": "Hi Nadia,\n\nTo start implementation, the owner will be customer success lead. The kickoff scope is setup and training. The first milestone we are aiming for is confirm access and schedule training this week.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should kickoff emails include a long checklist?", "a": "Only if the checklist is necessary. Otherwise, keep the first email focused."},
+        {"q": "Can this be sent before contract signature?", "a": "Use it after the deal is effectively committed and the implementation path is real."}
+      ],
+      "relatedTags": ["onboarding", "implementation", "customer success", "handoff"]
+    },
+    {
+      "slug": "handoff-to-support-email-builder",
+      "name": "Handoff to Support Email Builder",
+      "keyword": "support handoff email",
+      "intent": "handoff",
+      "audience": "Customer success and support teams",
+      "outcome": "Transfer a customer issue to support with enough context to avoid repetition.",
+      "metaDescription": "Create a support handoff email with the issue, context, and expected response. Free private email tool by ReplyMind.",
+      "h1": "Hand off the issue without losing context.",
+      "intro": "Use this when a customer issue needs support ownership. It helps you summarize the problem, note what has already happened, and set the expectation for next response.",
+      "fields": [
+        {"key": "recipient", "label": "Support contact", "type": "text", "placeholder": "Support team", "required": false},
+        {"key": "issue", "label": "Customer issue", "type": "textarea", "placeholder": "Login permissions are failing", "required": true},
+        {"key": "context", "label": "Relevant context", "type": "textarea", "placeholder": "The customer tried the standard reset flow", "required": true},
+        {"key": "response", "label": "Expected response", "type": "textarea", "placeholder": "Please confirm the next troubleshooting step", "required": true}
+      ],
+      "subjectTemplate": "Support handoff: {{issue}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m handing off {{issue}}. The relevant context is {{context}}. The customer is expecting {{response}}.\n\nBest,",
+      "guidance": [
+        "Document what the customer already tried so support does not repeat work.",
+        "Use the handoff to preserve momentum and trust.",
+        "State what the customer is expecting from the next reply."
+      ],
+      "pitfalls": [
+        "Do not pass along a bare complaint without context.",
+        "Do not leave the customer wondering who owns the next move."
+      ],
+      "examples": [
+        {
+          "label": "Login issue",
+          "input": "The customer cannot log in and already tried the reset flow.",
+          "output": "Hi Support team,\n\nI’m handing off login permissions are failing. The relevant context is the customer tried the standard reset flow. The customer is expecting the next troubleshooting step.\n\nBest,"
+        },
+        {
+          "label": "Workflow issue",
+          "input": "The customer sees an error when saving a workflow and needs support review.",
+          "output": "Hi Support team,\n\nI’m handing off the workflow save error. The relevant context is the customer already retried the action and confirmed the issue persists. The customer is expecting confirmation of the next troubleshooting step.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I copy the customer on the handoff?", "a": "Not always. If the customer already has the support contact, you can keep the internal handoff separate."},
+        {"q": "What makes a good handoff?", "a": "A concise summary of what happened, what matters, and what comes next."}
+      ],
+      "relatedTags": ["support", "handoff", "customer success", "issue resolution"]
+    },
+    {
+      "slug": "proposal-delay-update-email-builder",
+      "name": "Proposal Delay Update Email Builder",
+      "keyword": "proposal delay update email",
+      "intent": "follow-up",
+      "audience": "Account executives",
+      "outcome": "Explain a proposal delay honestly while preserving confidence in the deal.",
+      "metaDescription": "Draft a proposal delay update email that explains the cause, the new timing, and the next action. Free private email tool by ReplyMind.",
+      "h1": "Update the buyer before silence creates uncertainty.",
+      "intro": "Use this when a proposal or quote will be late. It helps you explain the reason, the revised timing, and what you are doing to keep the deal moving.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Liam", "required": false},
+        {"key": "reason", "label": "Cause of delay", "type": "textarea", "placeholder": "Waiting on final internal approval", "required": true},
+        {"key": "newTiming", "label": "New timing", "type": "text", "placeholder": "Tomorrow morning", "required": true},
+        {"key": "nextAction", "label": "Next action", "type": "textarea", "placeholder": "Send the revised version as soon as it is ready", "required": true}
+      ],
+      "subjectTemplate": "Quick update on the proposal",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to update you that the proposal is delayed because {{reason}}. The new timing is {{newTiming}}. The next action is {{nextAction}}.\n\nBest,",
+      "guidance": [
+        "Tell the buyer about the delay before they have to ask.",
+        "Offer a revised timing that is realistic and specific.",
+        "Make the next action clear so the delay feels managed."
+      ],
+      "pitfalls": [
+        "Do not wait until the buyer notices the delay first.",
+        "Do not over-apologize without giving a concrete update."
+      ],
+      "examples": [
+        {
+          "label": "Internal approval delay",
+          "input": "Liam's proposal is delayed because of internal approval and will be ready tomorrow morning.",
+          "output": "Hi Liam,\n\nI wanted to update you that the proposal is delayed because we are waiting on final internal approval. The new timing is tomorrow morning. The next action is to send the revised version as soon as it is ready.\n\nBest,"
+        },
+        {
+          "label": "Pricing review delay",
+          "input": "Liam's quote needs one more pricing review and should be ready later today.",
+          "output": "Hi Liam,\n\nI wanted to update you that the proposal is delayed because we are finishing one more pricing review. The new timing is later today. The next action is to send the revised version as soon as it is ready.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I mention every internal cause of the delay?", "a": "No. Give enough context to be honest, but keep the explanation brief."},
+        {"q": "Will this hurt momentum?", "a": "It usually helps more than silence, because it preserves trust."}
+      ],
+      "relatedTags": ["sales", "proposal", "delay", "status update"]
+    },
+    {
+      "slug": "pricing-concession-email-builder",
+      "name": "Pricing Concession Email Builder",
+      "keyword": "pricing concession email",
+      "intent": "negotiation",
+      "audience": "Account executives",
+      "outcome": "Offer a concession in exchange for something meaningful and documented.",
+      "metaDescription": "Build a pricing concession email that names the condition, the concession, and the tradeoff. Free private email tool by ReplyMind.",
+      "h1": "Make any concession intentional.",
+      "intro": "Use this when the buyer is asking for a better price and you need to protect deal value. It helps you state what you can offer, what you need in return, and why the tradeoff matters.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Harper", "required": false},
+        {"key": "concession", "label": "Concession offered", "type": "textarea", "placeholder": "A smaller package or longer term", "required": true},
+        {"key": "condition", "label": "Condition for concession", "type": "textarea", "placeholder": "A signed annual agreement", "required": true},
+        {"key": "tradeoff", "label": "Tradeoff explanation", "type": "textarea", "placeholder": "We can only do this if the term is longer", "required": true}
+      ],
+      "subjectTemplate": "A possible path on pricing",
+      "bodyTemplate": "Hi {{recipient}},\n\nOne path forward is {{concession}}. That would require {{condition}}. The reason for the tradeoff is {{tradeoff}}.\n\nBest,",
+      "guidance": [
+        "Tie concessions to something concrete so value is preserved.",
+        "Make the tradeoff explicit to avoid misunderstandings later.",
+        "Use a calm tone that shows flexibility without giving away leverage."
+      ],
+      "pitfalls": [
+        "Do not offer discounts without conditions.",
+        "Do not frame the concession as a favor."
+      ],
+      "examples": [
+        {
+          "label": "Term-based concession",
+          "input": "Harper wants a lower price if the team signs annually.",
+          "output": "Hi Harper,\n\nOne path forward is a smaller package. That would require a signed annual agreement. The reason for the tradeoff is we can only do this if the term is longer.\n\nBest,"
+        },
+        {
+          "label": "Scope-based concession",
+          "input": "Harper wants a smaller price with a narrower rollout.",
+          "output": "Hi Harper,\n\nOne path forward is a narrower rollout scope. That would require limiting the initial team size. The reason for the tradeoff is we can only do this if the rollout stays focused.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I lead with the concession or the condition?", "a": "Lead with the path forward, then clearly state the condition."},
+        {"q": "Can this email replace a call?", "a": "For simple tradeoffs, yes. For complex negotiation, it should support a call."}
+      ],
+      "relatedTags": ["sales", "pricing", "negotiation", "concession"]
+    },
+    {
+      "slug": "renewal-risk-escalation-email-builder",
+      "name": "Renewal Risk Escalation Email Builder",
+      "keyword": "renewal risk escalation email",
+      "intent": "renewal",
+      "audience": "Customer success leaders",
+      "outcome": "Escalate a renewal risk to the right internal people with a clear ask and no drama.",
+      "metaDescription": "Create a renewal risk escalation email with the risk, impact, and the support needed from leadership. Free private email tool by ReplyMind.",
+      "h1": "Escalate the risk with clarity.",
+      "intro": "Use this when a renewal is at real risk and internal support is needed. It helps you explain the issue, the impact, and what leadership can do to help.",
+      "fields": [
+        {"key": "recipient", "label": "Internal recipient", "type": "text", "placeholder": "VP of Customer Success", "required": false},
+        {"key": "risk", "label": "Renewal risk", "type": "textarea", "placeholder": "The sponsor is concerned about adoption", "required": true},
+        {"key": "impact", "label": "Business impact", "type": "textarea", "placeholder": "The renewal could slip or shrink", "required": true},
+        {"key": "helpNeeded", "label": "Help needed", "type": "textarea", "placeholder": "Join the customer call to reset expectations", "required": true}
+      ],
+      "subjectTemplate": "Renewal risk needs support",
+      "bodyTemplate": "Hi {{recipient}},\n\nI want to flag that the renewal is at risk because {{risk}}. The business impact is {{impact}}. What I need from you is {{helpNeeded}}.\n\nBest,",
+      "guidance": [
+        "Use internal escalation only when it changes the outcome.",
+        "State the risk and impact plainly so the priority is obvious.",
+        "Ask for a specific kind of help from leadership."
+      ],
+      "pitfalls": [
+        "Do not escalate every concern as if it is an emergency.",
+        "Do not use vague language that hides the actual problem."
+      ],
+      "examples": [
+        {
+          "label": "Adoption risk escalation",
+          "input": "The sponsor is concerned about adoption and needs leadership support.",
+          "output": "Hi VP of Customer Success,\n\nI want to flag that the renewal is at risk because the sponsor is concerned about adoption. The business impact is the renewal could slip or shrink. What I need from you is join the customer call to reset expectations.\n\nBest,"
+        },
+        {
+          "label": "Budget risk escalation",
+          "input": "The customer may reduce scope unless leadership gets involved.",
+          "output": "Hi VP of Customer Success,\n\nI want to flag that the renewal is at risk because the customer may reduce scope. The business impact is the renewal could shrink. What I need from you is join the customer call to reinforce the value story.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "When should renewal risk be escalated?", "a": "When internal help can realistically change the result, not just when the issue is uncomfortable."},
+        {"q": "Should the customer see this message?", "a": "Usually no. This is for internal alignment unless you are bringing leadership into the customer thread."}
+      ],
+      "relatedTags": ["renewal", "escalation", "customer success", "risk"]
+    },
+    {
+      "slug": "partner-follow-up-email-builder",
+      "name": "Partner Follow-Up Email Builder",
+      "keyword": "partner follow up email",
+      "intent": "partnerships",
+      "audience": "Partnerships managers",
+      "outcome": "Follow up with a partner after an intro or meeting so the relationship keeps moving.",
+      "metaDescription": "Write a partner follow-up email with the meeting outcome, open question, and next step. Free private email tool by ReplyMind.",
+      "h1": "Keep the partner thread active.",
+      "intro": "Use this after a partner meeting, intro, or collaborative conversation. It helps you restate the outcome, note what remains open, and make the next step easy to accept.",
+      "fields": [
+        {"key": "recipient", "label": "Partner name", "type": "text", "placeholder": "Jesse", "required": false},
+        {"key": "outcome", "label": "Meeting outcome", "type": "textarea", "placeholder": "There is interest in a joint pilot", "required": true},
+        {"key": "openQuestion", "label": "Open question", "type": "textarea", "placeholder": "Who should own the next intro?", "required": true},
+        {"key": "nextStep", "label": "Next step", "type": "textarea", "placeholder": "Set a joint follow-up next week", "required": true}
+      ],
+      "subjectTemplate": "Following up on our partner conversation",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks again for the conversation. My takeaway is {{outcome}}. The remaining question is {{openQuestion}}. The next step is {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Use the follow-up to keep the shared motion alive, not to restart the pitch.",
+        "Call out the open question clearly so ownership is obvious.",
+        "Propose the next step while the conversation is still warm."
+      ],
+      "pitfalls": [
+        "Do not let partner conversations go stale after one good meeting.",
+        "Do not assume the partner remembers every action item."
+      ],
+      "examples": [
+        {
+          "label": "Joint pilot interest",
+          "input": "Jesse said there is interest in a joint pilot and wants to know who owns the intro.",
+          "output": "Hi Jesse,\n\nThanks again for the conversation. My takeaway is there is interest in a joint pilot. The remaining question is who should own the next intro. The next step is to set a joint follow-up next week.\n\nBest,"
+        },
+        {
+          "label": "Referral motion",
+          "input": "Jesse wants to continue a referral discussion and confirm timing.",
+          "output": "Hi Jesse,\n\nThanks again for the conversation. My takeaway is there is interest in a referral motion. The remaining question is who should own the next intro. The next step is to set a follow-up next week.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should partner follow-ups be formal?", "a": "Formal enough to be clear, but still collaborative and easy to scan."},
+        {"q": "What if the partner is slow to respond?", "a": "Use one concise follow-up like this before deciding whether to pause the thread."}
+      ],
+      "relatedTags": ["partnerships", "follow-up", "alliances", "coordination"]
+    },
+    {
+      "slug": "deal-approval-summary-email-builder",
+      "name": "Deal Approval Summary Email Builder",
+      "keyword": "deal approval summary email",
+      "intent": "internal-brief",
+      "audience": "Sales leadership",
+      "outcome": "Package the reason a deal needs approval so leaders can decide quickly.",
+      "metaDescription": "Draft a deal approval summary email with the rationale, the risk, and the requested approval. Free private email tool by ReplyMind.",
+      "h1": "Make the approval decision easy.",
+      "intro": "Use this when a deal needs a manager or finance approval. It helps you summarize the rationale, the risk, and the approval you are asking for in a tight internal note.",
+      "fields": [
+        {"key": "recipient", "label": "Approver name", "type": "text", "placeholder": "Sales director", "required": false},
+        {"key": "rationale", "label": "Deal rationale", "type": "textarea", "placeholder": "The account is strategically important", "required": true},
+        {"key": "risk", "label": "Risk if delayed", "type": "textarea", "placeholder": "We may lose momentum", "required": true},
+        {"key": "approval", "label": "Requested approval", "type": "textarea", "placeholder": "Approve the proposed terms", "required": true}
+      ],
+      "subjectTemplate": "Approval needed for the deal",
+      "bodyTemplate": "Hi {{recipient}},\n\nThe deal rationale is {{rationale}}. If we delay, the main risk is {{risk}}. The approval I’m requesting is {{approval}}.\n\nBest,",
+      "guidance": [
+        "Write for the approver's decision, not the full account history.",
+        "State the risk of delay clearly so the request has urgency.",
+        "Use the approval ask to make the decision unambiguous."
+      ],
+      "pitfalls": [
+        "Do not make approvers dig through thread history to understand the request.",
+        "Do not present approval as a formality when it is not."
+      ],
+      "examples": [
+        {
+          "label": "Strategic account approval",
+          "input": "Sales director needs to approve a strategically important deal before momentum slips.",
+          "output": "Hi Sales director,\n\nThe deal rationale is the account is strategically important. If we delay, the main risk is we may lose momentum. The approval I’m requesting is approve the proposed terms.\n\nBest,"
+        },
+        {
+          "label": "Pricing approval",
+          "input": "Sales director needs to review a pricing exception quickly.",
+          "output": "Hi Sales director,\n\nThe deal rationale is the customer is ready to move. If we delay, the main risk is the buyer will lose urgency. The approval I’m requesting is approve the pricing exception.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "How detailed should the summary be?", "a": "Detailed enough for a decision, but not so long that it becomes a report."},
+        {"q": "Should I include the full discount history?", "a": "Only if it matters to the approval. Otherwise keep it simple."}
+      ],
+      "relatedTags": ["sales", "approval", "leadership", "internal"]
+    },
+    {
+      "slug": "intro-to-pricing-email-builder",
+      "name": "Intro to Pricing Email Builder",
+      "keyword": "intro to pricing email",
+      "intent": "pricing",
+      "audience": "Sales representatives",
+      "outcome": "Introduce pricing in a way that fits the conversation rather than shocking the buyer.",
+      "metaDescription": "Create an intro-to-pricing email with context, the package direction, and the next comparison step. Free private email tool by ReplyMind.",
+      "h1": "Introduce pricing in context.",
+      "intro": "Use this when it is time to talk about price, but you want to keep the message tied to the buyer's needs. It helps you connect the package direction to the problem being solved and the next step for review.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Olivia", "required": false},
+        {"key": "context", "label": "Pricing context", "type": "textarea", "placeholder": "The team wants a small pilot first", "required": true},
+        {"key": "package", "label": "Package direction", "type": "textarea", "placeholder": "A starter package with support", "required": true},
+        {"key": "comparison", "label": "Next comparison step", "type": "textarea", "placeholder": "Compare the options side by side", "required": true}
+      ],
+      "subjectTemplate": "A few pricing options to review",
+      "bodyTemplate": "Hi {{recipient}},\n\nBased on {{context}}, the package direction that seems most relevant is {{package}}. The next helpful step would be to {{comparison}}.\n\nBest,",
+      "guidance": [
+        "Use pricing as a continuation of the conversation, not a surprise reveal.",
+        "Tie the package to the buyer's stated context.",
+        "Offer a comparison step to make the review easier."
+      ],
+      "pitfalls": [
+        "Do not introduce price without any context.",
+        "Do not overwhelm the buyer with every package you have."
+      ],
+      "examples": [
+        {
+          "label": "Starter package",
+          "input": "Olivia wants a small pilot first and a simple way to compare options.",
+          "output": "Hi Olivia,\n\nBased on the team wants a small pilot first, the package direction that seems most relevant is a starter package with support. The next helpful step would be to compare the options side by side.\n\nBest,"
+        },
+        {
+          "label": "Rollout package",
+          "input": "Olivia is considering a broader rollout and wants to compare package tiers.",
+          "output": "Hi Olivia,\n\nBased on the broader rollout is the goal, the package direction that seems most relevant is a rollout package with onboarding. The next helpful step would be to compare the options side by side.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I send pricing in a separate thread?", "a": "If the conversation is already active, keeping it in one thread is often easier."},
+        {"q": "How can I make pricing less awkward?", "a": "Frame it as a useful next step based on the buyer's context."}
+      ],
+      "relatedTags": ["pricing", "sales", "packages", "comparison"]
+    }
+  ]
+}

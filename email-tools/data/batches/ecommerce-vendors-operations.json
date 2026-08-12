@@ -1,0 +1,951 @@
+{
+  "batch": "ecommerce-vendors-operations",
+  "avatar": "Ecommerce operators and business operations teams",
+  "tools": [
+    {
+      "slug": "supplier-price-renewal-email-builder",
+      "name": "Supplier Price Renewal Email Builder",
+      "keyword": "supplier price renewal email",
+      "intent": "negotiation",
+      "audience": "Ecommerce operators",
+      "outcome": "Ask a supplier to revisit pricing with a clear reason, current volume, and a practical next step.",
+      "metaDescription": "Build a supplier price renewal email that explains the current arrangement, the volume context, and the price change request. Free private email tool by ReplyMind.",
+      "h1": "Ask for a better price without sounding vague.",
+      "intro": "Use this when a supplier contract is up for review or a cost increase needs a response. It helps you state the current arrangement, the business reason for the ask, and the next step you want them to take.",
+      "fields": [
+        {"key": "recipient", "label": "Supplier contact name", "type": "text", "placeholder": "Maya", "required": false},
+        {"key": "currentDeal", "label": "Current deal context", "type": "textarea", "placeholder": "We have been ordering weekly for six months", "required": true},
+        {"key": "priceRequest", "label": "Price request", "type": "textarea", "placeholder": "Please revisit the unit price for the next term", "required": true},
+        {"key": "volumeContext", "label": "Volume or commitment context", "type": "textarea", "placeholder": "We can commit to steady monthly volume", "required": true}
+      ],
+      "subjectTemplate": "A quick pricing review",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for the current relationship. Given {{currentDeal}}, I wanted to ask whether you could revisit {{priceRequest}}. The part that may help on your side is {{volumeContext}}.\n\nBest,",
+      "guidance": [
+        "State the business context first so the request feels grounded.",
+        "Use volume, commitment, or timing to support the ask instead of pressure.",
+        "Keep the price request specific enough that the supplier can answer it directly."
+      ],
+      "pitfalls": [
+        "Do not open with a discount demand before explaining the relationship.",
+        "Do not make the supplier guess what number or term you want reviewed."
+      ],
+      "examples": [
+        {
+          "label": "Term renewal review",
+          "input": "Maya, we have ordered weekly for six months and want the next term reviewed with steady monthly volume.",
+          "output": "Hi Maya,\n\nThanks for the current relationship. Given we have been ordering weekly for six months, I wanted to ask whether you could revisit the unit price for the next term. The part that may help on your side is we can commit to steady monthly volume.\n\nBest,"
+        },
+        {
+          "label": "Expanded assortment review",
+          "input": "Maya, we are adding more SKUs and want a better rate tied to that growth.",
+          "output": "Hi Maya,\n\nThanks for the current relationship. Given we are adding more SKUs, I wanted to ask whether you could revisit the unit price for the next term. The part that may help on your side is we can commit to a wider assortment and predictable monthly volume.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I mention competing suppliers?", "a": "Only if you are prepared to use that comparison honestly. A clearer internal commitment or volume promise is usually better."},
+        {"q": "What if the supplier already raised prices?", "a": "Ask for a review of the new term and explain what volume or commitment you can still offer."}
+      ],
+      "relatedTags": ["ecommerce", "supplier", "pricing", "negotiation"]
+    },
+    {
+      "slug": "purchase-order-follow-up-email-builder",
+      "name": "Purchase Order Follow-Up Email Builder",
+      "keyword": "purchase order follow up email",
+      "intent": "operations",
+      "audience": "Business operations teams",
+      "outcome": "Move a purchase order forward by clarifying what is missing, who owns it, and the timing.",
+      "metaDescription": "Create a purchase order follow-up email that states the missing details, the owner, and the deadline. Free private email tool by ReplyMind.",
+      "h1": "Keep the PO process moving cleanly.",
+      "intro": "Use this when a purchase order is waiting on internal approval, missing details, or a sign-off chain. It keeps the request specific so the person on the other end can act without another clarification loop.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "missingDetail", "label": "Missing detail", "type": "textarea", "placeholder": "The billing address is still needed", "required": true},
+        {"key": "owner", "label": "Internal owner", "type": "text", "placeholder": "Procurement lead", "required": true},
+        {"key": "deadline", "label": "Needed by", "type": "text", "placeholder": "Friday afternoon", "required": true}
+      ],
+      "subjectTemplate": "Quick follow-up on the purchase order",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to follow up because {{missingDetail}}. I understand {{owner}} is the person coordinating it. If possible, could we have this wrapped up by {{deadline}}?\n\nBest,",
+      "guidance": [
+        "Name the exact missing item so the recipient does not have to search the thread.",
+        "Acknowledge the owner without shifting responsibility away from the buyer side.",
+        "Use a deadline that reflects the actual operational need."
+      ],
+      "pitfalls": [
+        "Do not send a generic 'just checking in' note for a PO.",
+        "Do not assume the recipient knows what is blocking the document."
+      ],
+      "examples": [
+        {
+          "label": "Billing address missing",
+          "input": "Jordan still needs the billing address and the procurement lead is coordinating it.",
+          "output": "Hi Jordan,\n\nI wanted to follow up because the billing address is still needed. I understand procurement lead is the person coordinating it. If possible, could we have this wrapped up by Friday afternoon?\n\nBest,"
+        },
+        {
+          "label": "Approval chain pending",
+          "input": "Jordan says the PO is waiting on one more internal approval and needs to close by Wednesday.",
+          "output": "Hi Jordan,\n\nI wanted to follow up because one more internal approval is still needed. I understand procurement lead is the person coordinating it. If possible, could we have this wrapped up by Wednesday?\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I attach the PO again?", "a": "Only if the recipient asked for it. The email should make the missing item and deadline clear on its own."},
+        {"q": "What if the delay is on my side?", "a": "Say what you are providing, who owns it, and when it will be sent."}
+      ],
+      "relatedTags": ["operations", "purchase orders", "procurement", "follow-up"]
+    },
+    {
+      "slug": "inventory-shortage-alert-email-builder",
+      "name": "Inventory Shortage Alert Email Builder",
+      "keyword": "inventory shortage alert email",
+      "intent": "operations",
+      "audience": "Inventory and fulfillment teams",
+      "outcome": "Alert the right people early when stock is low so they can protect sales and service.",
+      "metaDescription": "Draft an inventory shortage alert email with the SKU, risk, current stock signal, and action needed. Free private email tool by ReplyMind.",
+      "h1": "Warn early when stock is getting tight.",
+      "intro": "Use this when inventory is slipping below a safe buffer or a hot SKU is at risk. The goal is to help the team react before customer orders, ads, or marketplace listings get disrupted.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Ops team", "required": false},
+        {"key": "sku", "label": "SKU or item", "type": "textarea", "placeholder": "Blue insulated bottle", "required": true},
+        {"key": "risk", "label": "Business risk", "type": "textarea", "placeholder": "Orders may be delayed if this sells through", "required": true},
+        {"key": "action", "label": "Action needed", "type": "textarea", "placeholder": "Review replenishment and reserve safety stock", "required": true}
+      ],
+      "subjectTemplate": "Inventory alert for {{sku}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to flag {{sku}} because {{risk}}. The next step I need is {{action}}.\n\nBest,",
+      "guidance": [
+        "Use the item name or SKU so the alert can be routed correctly.",
+        "Describe the business risk in operational terms, not just stock terms.",
+        "Make the action specific enough that someone can own it immediately."
+      ],
+      "pitfalls": [
+        "Do not bury a shortage alert in a long status message.",
+        "Do not leave the team guessing which item is at risk."
+      ],
+      "examples": [
+        {
+          "label": "Fast-moving SKU",
+          "input": "Ops team, Blue insulated bottle is selling through and needs replenishment reviewed.",
+          "output": "Hi Ops team,\n\nI wanted to flag Blue insulated bottle because orders may be delayed if this sells through. The next step I need is review replenishment and reserve safety stock.\n\nBest,"
+        },
+        {
+          "label": "Campaign-driven stock risk",
+          "input": "Ops team, the launch campaign may outpace stock on a featured SKU.",
+          "output": "Hi Ops team,\n\nI wanted to flag the featured launch SKU because the campaign may outpace available stock. The next step I need is check inbound inventory and reserve safety stock.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I send this to sales too?", "a": "If sales has customers depending on the item, yes. But the operational owner should get the primary alert."},
+        {"q": "How urgent should this sound?", "a": "Urgent enough to trigger action, but still factual and useful."}
+      ],
+      "relatedTags": ["inventory", "operations", "alert", "fulfillment"]
+    },
+    {
+      "slug": "shipping-delay-customer-email-builder",
+      "name": "Shipping Delay Customer Email Builder",
+      "keyword": "shipping delay customer email",
+      "intent": "customer-communication",
+      "audience": "Ecommerce support teams",
+      "outcome": "Notify a customer about a shipping delay with a clear update and a workable next step.",
+      "metaDescription": "Create a shipping delay customer email that explains the delay, the new timing, and the support option. Free private email tool by ReplyMind.",
+      "h1": "Tell the customer before the delay creates a complaint.",
+      "intro": "Use this when a parcel, pallet, or shipment is behind schedule. It gives the customer the facts, the revised timing, and an option if the order is time-sensitive.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Sam", "required": false},
+        {"key": "orderRef", "label": "Order or shipment reference", "type": "textarea", "placeholder": "Order #10482", "required": true},
+        {"key": "delayReason", "label": "Delay reason", "type": "textarea", "placeholder": "Carrier scan missed the departure cutoff", "required": true},
+        {"key": "newEta", "label": "New ETA", "type": "text", "placeholder": "Tomorrow by 5 PM", "required": true}
+      ],
+      "subjectTemplate": "Update on your shipment {{orderRef}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to update you on {{orderRef}}. The shipment is delayed because {{delayReason}}. The new ETA is {{newEta}}.\n\nBest,",
+      "guidance": [
+        "Send the update as soon as the delay is confirmed.",
+        "Use the order reference so the customer can match the note to the right shipment.",
+        "Keep the explanation short and avoid operational jargon."
+      ],
+      "pitfalls": [
+        "Do not wait for the customer to ask where the package is.",
+        "Do not promise a date you cannot support."
+      ],
+      "examples": [
+        {
+          "label": "Carrier cutoff miss",
+          "input": "Sam's order #10482 missed the carrier cutoff and will arrive tomorrow by 5 PM.",
+          "output": "Hi Sam,\n\nI wanted to update you on Order #10482. The shipment is delayed because the carrier scan missed the departure cutoff. The new ETA is tomorrow by 5 PM.\n\nBest,"
+        },
+        {
+          "label": "Weather delay",
+          "input": "Sam's shipment was delayed by weather and now needs a revised ETA.",
+          "output": "Hi Sam,\n\nI wanted to update you on Order #10482. The shipment is delayed because weather impacted the route. The new ETA is Thursday afternoon.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include an apology?", "a": "A brief apology is fine, but the customer mainly needs the update and the revised ETA."},
+        {"q": "Should I offer a refund immediately?", "a": "Only if policy or severity warrants it. The first job is to keep the customer informed."}
+      ],
+      "relatedTags": ["shipping", "customer communication", "delay", "support"]
+    },
+    {
+      "slug": "return-authorization-email-builder",
+      "name": "Return Authorization Email Builder",
+      "keyword": "return authorization email",
+      "intent": "returns",
+      "audience": "Retail operations and support teams",
+      "outcome": "Approve or explain a return in a way that keeps the exchange organized and the customer informed.",
+      "metaDescription": "Draft a return authorization email with the item, reason, and next return step. Free private email tool by ReplyMind.",
+      "h1": "Make the return process easy to follow.",
+      "intro": "Use this when a customer needs a return label, approval, or instructions. It helps you confirm the item, explain the path back, and set expectations for the next step.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Taylor", "required": false},
+        {"key": "item", "label": "Item being returned", "type": "textarea", "placeholder": "Size medium jacket", "required": true},
+        {"key": "reason", "label": "Return reason", "type": "textarea", "placeholder": "Wrong size selected", "required": true},
+        {"key": "nextStep", "label": "Next return step", "type": "textarea", "placeholder": "Send the label and packing instructions", "required": true}
+      ],
+      "subjectTemplate": "Return authorization for {{item}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for the note about {{item}}. I understand the return reason is {{reason}}. The next step is {{nextStep}}.\n\nBest,",
+      "guidance": [
+        "Confirm the exact item so the return can be matched correctly.",
+        "State the next step clearly to reduce back-and-forth.",
+        "Use a calm tone that makes the process feel manageable."
+      ],
+      "pitfalls": [
+        "Do not make the customer restate the item and reason multiple times.",
+        "Do not leave the next action ambiguous."
+      ],
+      "examples": [
+        {
+          "label": "Size issue",
+          "input": "Taylor is returning a medium jacket because the size was wrong.",
+          "output": "Hi Taylor,\n\nThanks for the note about size medium jacket. I understand the return reason is wrong size selected. The next step is send the label and packing instructions.\n\nBest,"
+        },
+        {
+          "label": "Defect return",
+          "input": "Taylor says the item arrived damaged and needs a return.",
+          "output": "Hi Taylor,\n\nThanks for the note about the damaged item. I understand the return reason is the product arrived with a defect. The next step is send the label and packing instructions.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I mention refund timing here?", "a": "Only if the customer asked. The authorization and instructions come first."},
+        {"q": "Can this be used for exchanges?", "a": "Yes, if the next step includes the exchange path instead of a plain return."}
+      ],
+      "relatedTags": ["returns", "support", "reverse logistics", "customer service"]
+    },
+    {
+      "slug": "refund-explanation-email-builder",
+      "name": "Refund Explanation Email Builder",
+      "keyword": "refund explanation email",
+      "intent": "returns",
+      "audience": "Ecommerce support teams",
+      "outcome": "Explain a refund decision clearly so the customer understands the amount and timing.",
+      "metaDescription": "Create a refund explanation email that names the reason, the refund amount or method, and the timing. Free private email tool by ReplyMind.",
+      "h1": "Explain the refund in plain language.",
+      "intro": "Use this when a refund has been approved or needs to be explained. It keeps the message factual, the timing visible, and the customer's next expectation clear.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Riley", "required": false},
+        {"key": "reason", "label": "Refund reason", "type": "textarea", "placeholder": "The item was damaged on arrival", "required": true},
+        {"key": "amount", "label": "Refund amount or method", "type": "textarea", "placeholder": "Full refund to the original card", "required": true},
+        {"key": "timing", "label": "Refund timing", "type": "text", "placeholder": "Within 5 business days", "required": true}
+      ],
+      "subjectTemplate": "Update on your refund",
+      "bodyTemplate": "Hi {{recipient}},\n\nThanks for your patience. The refund decision is based on {{reason}}. The refund will be processed as {{amount}} and should appear within {{timing}}.\n\nBest,",
+      "guidance": [
+        "State the reason and the refund method together so the customer does not need to guess.",
+        "Use a concrete timing window instead of a vague promise.",
+        "Keep the tone calm and service-oriented."
+      ],
+      "pitfalls": [
+        "Do not bury the refund amount or method in a long explanation.",
+        "Do not promise instant processing if the systems cannot support it."
+      ],
+      "examples": [
+        {
+          "label": "Damaged item refund",
+          "input": "Riley needs a full refund to the original card within 5 business days.",
+          "output": "Hi Riley,\n\nThanks for your patience. The refund decision is based on the item was damaged on arrival. The refund will be processed as full refund to the original card and should appear within 5 business days.\n\nBest,"
+        },
+        {
+          "label": "Partial goodwill refund",
+          "input": "Riley is receiving a partial refund as a goodwill gesture.",
+          "output": "Hi Riley,\n\nThanks for your patience. The refund decision is based on the order arrived later than expected. The refund will be processed as partial refund to the original card and should appear within 7 business days.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I explain the policy?", "a": "Only enough to clarify the decision. The customer mainly needs the amount and timing."},
+        {"q": "What if the refund is still pending?", "a": "Say what has been approved and when the customer should expect it."}
+      ],
+      "relatedTags": ["refunds", "support", "returns", "customer communication"]
+    },
+    {
+      "slug": "wholesale-reorder-email-builder",
+      "name": "Wholesale Reorder Email Builder",
+      "keyword": "wholesale reorder email",
+      "intent": "wholesale",
+      "audience": "Wholesale account managers",
+      "outcome": "Ask a wholesale partner for the next reorder in a way that fits their stock cycle.",
+      "metaDescription": "Write a wholesale reorder email with current sell-through, stock needs, and reorder timing. Free private email tool by ReplyMind.",
+      "h1": "Prompt the next wholesale reorder naturally.",
+      "intro": "Use this when a retail partner or distributor is approaching a new order window. It helps you refer to what is already moving, the stock level, and the timing that would keep shelves healthy.",
+      "fields": [
+        {"key": "recipient", "label": "Wholesale contact", "type": "text", "placeholder": "Casey", "required": false},
+        {"key": "sellThrough", "label": "Sell-through or movement", "type": "textarea", "placeholder": "This line is moving steadily", "required": true},
+        {"key": "stockNeed", "label": "Stock need", "type": "textarea", "placeholder": "We should plan the next replenishment", "required": true},
+        {"key": "reorderTiming", "label": "Reorder timing", "type": "text", "placeholder": "Before month-end", "required": true}
+      ],
+      "subjectTemplate": "Planning the next reorder",
+      "bodyTemplate": "Hi {{recipient}},\n\nIt looks like {{sellThrough}}. To keep things covered, {{stockNeed}}. If possible, I’d like to line that up by {{reorderTiming}}.\n\nBest,",
+      "guidance": [
+        "Use sell-through language that matches the partner's buying reality.",
+        "Make the stock need specific so the reorder is easy to assess.",
+        "Tie the ask to a realistic timing window."
+      ],
+      "pitfalls": [
+        "Do not ask for a reorder without showing why it matters.",
+        "Do not make the timing too vague for operations to act on."
+      ],
+      "examples": [
+        {
+          "label": "Steady seller",
+          "input": "Casey, this line is moving steadily and needs the next replenishment before month-end.",
+          "output": "Hi Casey,\n\nIt looks like this line is moving steadily. To keep things covered, we should plan the next replenishment. If possible, I’d like to line that up by before month-end.\n\nBest,"
+        },
+        {
+          "label": "Seasonal restock",
+          "input": "Casey, the seasonal items are selling through and need a reorder soon.",
+          "output": "Hi Casey,\n\nIt looks like the seasonal items are selling through. To keep things covered, we should plan the next replenishment. If possible, I’d like to line that up by next Tuesday.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include a full forecast?", "a": "Only if it helps the partner decide. This email is for prompting the next order, not replacing a planning meeting."},
+        {"q": "What if the partner wants to wait?", "a": "Use the thread to confirm the risk of waiting and whether a smaller reorder makes sense."}
+      ],
+      "relatedTags": ["wholesale", "reorder", "inventory", "partners"]
+    },
+    {
+      "slug": "wholesale-terms-update-email-builder",
+      "name": "Wholesale Terms Update Email Builder",
+      "keyword": "wholesale terms update email",
+      "intent": "wholesale",
+      "audience": "Wholesale account managers",
+      "outcome": "Communicate a change in wholesale terms without breaking trust or clarity.",
+      "metaDescription": "Create a wholesale terms update email that states the new term, the reason, and the next decision point. Free private email tool by ReplyMind.",
+      "h1": "Update wholesale terms with care.",
+      "intro": "Use this when pricing, minimums, or order cadence need to change. It helps you explain the change, the reason behind it, and the decision or acknowledgement you need from the partner.",
+      "fields": [
+        {"key": "recipient", "label": "Wholesale partner", "type": "text", "placeholder": "Morgan", "required": false},
+        {"key": "newTerm", "label": "New term", "type": "textarea", "placeholder": "Higher minimum order quantity", "required": true},
+        {"key": "reason", "label": "Reason for change", "type": "textarea", "placeholder": "Carrier and production costs changed", "required": true},
+        {"key": "decision", "label": "Decision needed", "type": "textarea", "placeholder": "Confirm whether the new terms work", "required": true}
+      ],
+      "subjectTemplate": "Update on wholesale terms",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to share an update on the wholesale terms. The new term is {{newTerm}}. The reason for the change is {{reason}}. The next decision is {{decision}}.\n\nBest,",
+      "guidance": [
+        "State the change directly so the partner can react to the right issue.",
+        "Explain the reason without overloading the message with internal detail.",
+        "Ask for a clear decision or acknowledgement."
+      ],
+      "pitfalls": [
+        "Do not hide a terms change inside a longer operational update.",
+        "Do not make the partner piece together the actual ask."
+      ],
+      "examples": [
+        {
+          "label": "Minimum order change",
+          "input": "Morgan needs to know about a higher minimum order quantity because costs changed.",
+          "output": "Hi Morgan,\n\nI wanted to share an update on the wholesale terms. The new term is a higher minimum order quantity. The reason for the change is carrier and production costs changed. The next decision is confirm whether the new terms work.\n\nBest,"
+        },
+        {
+          "label": "Cadence change",
+          "input": "Morgan needs to adjust the order cadence and get confirmation.",
+          "output": "Hi Morgan,\n\nI wanted to share an update on the wholesale terms. The new term is a monthly order cadence. The reason for the change is production planning has shifted. The next decision is confirm whether the new terms work.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I soften the change?", "a": "Be respectful, but do not obscure the change itself."},
+        {"q": "What if the partner pushes back?", "a": "The note should give them enough context to begin a constructive discussion."}
+      ],
+      "relatedTags": ["wholesale", "terms", "partners", "pricing"]
+    },
+    {
+      "slug": "vendor-quality-issue-email-builder",
+      "name": "Vendor Quality Issue Email Builder",
+      "keyword": "vendor quality issue email",
+      "intent": "quality-control",
+      "audience": "Operations and procurement teams",
+      "outcome": "Raise a quality issue with a vendor in a way that is factual, specific, and actionable.",
+      "metaDescription": "Write a vendor quality issue email with the defect, the impact, and the corrective action needed. Free private email tool by ReplyMind.",
+      "h1": "Flag the quality issue with enough detail to act on it.",
+      "intro": "Use this when a vendor shipment, batch, or component does not meet standard. It helps you identify the defect, explain the impact, and request the corrective action you need.",
+      "fields": [
+        {"key": "recipient", "label": "Vendor contact", "type": "text", "placeholder": "Priya", "required": false},
+        {"key": "defect", "label": "Defect or issue", "type": "textarea", "placeholder": "Several units arrived scratched", "required": true},
+        {"key": "impact", "label": "Operational impact", "type": "textarea", "placeholder": "We cannot ship these to customers", "required": true},
+        {"key": "correctiveAction", "label": "Corrective action", "type": "textarea", "placeholder": "Please replace the affected units and confirm the root cause", "required": true}
+      ],
+      "subjectTemplate": "Quality issue on the latest delivery",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe found an issue with {{defect}}. The impact is {{impact}}. Please take {{correctiveAction}}.\n\nBest,",
+      "guidance": [
+        "Describe the defect in concrete terms the vendor can verify.",
+        "Explain the operational impact so priority is clear.",
+        "Ask for one corrective action that moves the issue toward resolution."
+      ],
+      "pitfalls": [
+        "Do not make a quality complaint sound like a general frustration note.",
+        "Do not skip the impact, or the vendor may treat it as cosmetic."
+      ],
+      "examples": [
+        {
+          "label": "Surface damage",
+          "input": "Priya, several units arrived scratched and cannot ship to customers.",
+          "output": "Hi Priya,\n\nWe found an issue with several units arriving scratched. The impact is we cannot ship these to customers. Please take replace the affected units and confirm the root cause.\n\nBest,"
+        },
+        {
+          "label": "Sizing defect",
+          "input": "Priya, the latest batch has sizing inconsistency and the team needs corrective action.",
+          "output": "Hi Priya,\n\nWe found an issue with sizing inconsistency in the latest batch. The impact is the order cannot go live as planned. Please take replace the affected units and confirm the root cause.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include photos?", "a": "Yes, if they help the vendor verify the defect faster."},
+        {"q": "Should I ask for a replacement or a credit?", "a": "Ask for the corrective action that best fits the business impact and your vendor policy."}
+      ],
+      "relatedTags": ["quality control", "vendors", "operations", "defects"]
+    },
+    {
+      "slug": "backorder-notice-email-builder",
+      "name": "Backorder Notice Email Builder",
+      "keyword": "backorder notice email",
+      "intent": "customer-communication",
+      "audience": "Ecommerce support and ops",
+      "outcome": "Notify customers about a backorder and set a realistic expectation for fulfillment.",
+      "metaDescription": "Build a backorder notice email with the item, revised timing, and customer option. Free private email tool by ReplyMind.",
+      "h1": "Handle backorders before they turn into confusion.",
+      "intro": "Use this when an item cannot ship on the normal schedule because stock is unavailable. It helps you explain the item, the timing, and whether the customer can change or cancel the order.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Alex", "required": false},
+        {"key": "item", "label": "Item on backorder", "type": "textarea", "placeholder": "Black travel mug", "required": true},
+        {"key": "newTiming", "label": "Revised timing", "type": "text", "placeholder": "Ships in 10 to 12 days", "required": true},
+        {"key": "customerOption", "label": "Customer option", "type": "textarea", "placeholder": "We can hold, split, or cancel the order", "required": true}
+      ],
+      "subjectTemplate": "Update on your backordered item",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to update you on {{item}}. It is currently on backorder and should be available in {{newTiming}}. If that does not work, {{customerOption}}.\n\nBest,",
+      "guidance": [
+        "Tell the customer quickly so expectations do not drift.",
+        "Make the timing concrete enough to support a decision.",
+        "Offer a clear option if the new date does not fit."
+      ],
+      "pitfalls": [
+        "Do not hide a backorder behind vague language.",
+        "Do not forget to give the customer a choice."
+      ],
+      "examples": [
+        {
+          "label": "Popular item backorder",
+          "input": "Alex's black travel mug is on backorder and will ship in 10 to 12 days.",
+          "output": "Hi Alex,\n\nI wanted to update you on black travel mug. It is currently on backorder and should be available in ships in 10 to 12 days. If that does not work, we can hold, split, or cancel the order.\n\nBest,"
+        },
+        {
+          "label": "Bundle backorder",
+          "input": "Alex's bundle is delayed and the customer wants options.",
+          "output": "Hi Alex,\n\nI wanted to update you on the bundle item. It is currently on backorder and should be available in next week. If that does not work, we can hold, split, or cancel the order.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I apologize?", "a": "A short apology is fine. The customer mainly needs the revised timing and options."},
+        {"q": "Should I offer compensation immediately?", "a": "Only if your policy or the situation calls for it."}
+      ],
+      "relatedTags": ["backorder", "customer communication", "fulfillment", "operations"]
+    },
+    {
+      "slug": "fulfillment-escalation-email-builder",
+      "name": "Fulfillment Escalation Email Builder",
+      "keyword": "fulfillment escalation email",
+      "intent": "operations",
+      "audience": "Fulfillment managers",
+      "outcome": "Escalate a fulfillment problem internally with enough detail for immediate action.",
+      "metaDescription": "Create a fulfillment escalation email that identifies the issue, the customer impact, and the action required. Free private email tool by ReplyMind.",
+      "h1": "Escalate the fulfillment issue with the right detail.",
+      "intro": "Use this when a fulfillment problem needs a faster internal response. It helps you specify the issue, the customer impact, and the action that needs to happen now.",
+      "fields": [
+        {"key": "recipient", "label": "Internal recipient", "type": "text", "placeholder": "Fulfillment lead", "required": false},
+        {"key": "issue", "label": "Fulfillment issue", "type": "textarea", "placeholder": "Orders are stuck awaiting pick and pack", "required": true},
+        {"key": "customerImpact", "label": "Customer impact", "type": "textarea", "placeholder": "Same-day shipping promises are at risk", "required": true},
+        {"key": "action", "label": "Action required", "type": "textarea", "placeholder": "Reassign labor and clear the queue", "required": true}
+      ],
+      "subjectTemplate": "Fulfillment escalation needed",
+      "bodyTemplate": "Hi {{recipient}},\n\nI need to escalate because {{issue}}. The customer impact is {{customerImpact}}. The action required is {{action}}.\n\nBest,",
+      "guidance": [
+        "Use the issue and impact to make the priority obvious.",
+        "Ask for the exact operational action you need from the team.",
+        "Keep the note short enough to act on immediately."
+      ],
+      "pitfalls": [
+        "Do not bury the escalation in a long status thread.",
+        "Do not make the team guess what action you want."
+      ],
+      "examples": [
+        {
+          "label": "Pick and pack queue",
+          "input": "Fulfillment lead, orders are stuck awaiting pick and pack and same-day shipping is at risk.",
+          "output": "Hi Fulfillment lead,\n\nI need to escalate because orders are stuck awaiting pick and pack. The customer impact is same-day shipping promises are at risk. The action required is reassign labor and clear the queue.\n\nBest,"
+        },
+        {
+          "label": "Late carrier handoff",
+          "input": "Fulfillment lead, the carrier handoff is delayed and several orders are affected.",
+          "output": "Hi Fulfillment lead,\n\nI need to escalate because the carrier handoff is delayed. The customer impact is several orders may miss the promised ship window. The action required is reassign labor and clear the queue.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include metrics?", "a": "Only if they help the recipient understand the size of the problem quickly."},
+        {"q": "Who should get this email?", "a": "The person who can move labor, capacity, or priority right away."}
+      ],
+      "relatedTags": ["fulfillment", "escalation", "operations", "shipping"]
+    },
+    {
+      "slug": "carrier-delay-update-email-builder",
+      "name": "Carrier Delay Update Email Builder",
+      "keyword": "carrier delay update email",
+      "intent": "customer-communication",
+      "audience": "Ecommerce support teams",
+      "outcome": "Update customers when a carrier delay changes delivery timing.",
+      "metaDescription": "Draft a carrier delay update email that explains the carrier issue, the revised delivery window, and the next option. Free private email tool by ReplyMind.",
+      "h1": "Explain a carrier delay before the customer asks.",
+      "intro": "Use this when a shipping partner has delayed a package or route. It helps you explain the carrier issue, the new delivery window, and what the customer can do if timing matters.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Jamie", "required": false},
+        {"key": "tracking", "label": "Tracking or order reference", "type": "textarea", "placeholder": "Tracking #77421", "required": true},
+        {"key": "carrierIssue", "label": "Carrier issue", "type": "textarea", "placeholder": "The carrier missed the hub transfer", "required": true},
+        {"key": "deliveryWindow", "label": "Delivery window", "type": "text", "placeholder": "Next business day", "required": true}
+      ],
+      "subjectTemplate": "Update on your delivery {{tracking}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI wanted to update you on {{tracking}}. The delay is due to {{carrierIssue}}. The new delivery window is {{deliveryWindow}}.\n\nBest,",
+      "guidance": [
+        "Use the tracking reference so the customer can identify the shipment instantly.",
+        "Keep the carrier explanation short and factual.",
+        "State the revised delivery window plainly."
+      ],
+      "pitfalls": [
+        "Do not make the customer track down the package status themselves.",
+        "Do not over-explain carrier operations in the customer email."
+      ],
+      "examples": [
+        {
+          "label": "Hub transfer miss",
+          "input": "Jamie's tracking #77421 missed the hub transfer and should arrive next business day.",
+          "output": "Hi Jamie,\n\nI wanted to update you on Tracking #77421. The delay is due to the carrier missed the hub transfer. The new delivery window is next business day.\n\nBest,"
+        },
+        {
+          "label": "Weather delay",
+          "input": "Jamie needs a customer-facing carrier delay update with a revised delivery window.",
+          "output": "Hi Jamie,\n\nI wanted to update you on Tracking #77421. The delay is due to weather affected the route. The new delivery window is Thursday afternoon.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I mention the carrier by name?", "a": "Only if it adds useful clarity. The customer mostly needs the revised window."},
+        {"q": "What if the carrier has no ETA yet?", "a": "Say that you are monitoring it and provide the best current estimate."}
+      ],
+      "relatedTags": ["shipping", "carrier", "customer communication", "delivery"]
+    },
+    {
+      "slug": "marketplace-listing-update-email-builder",
+      "name": "Marketplace Listing Update Email Builder",
+      "keyword": "marketplace listing update email",
+      "intent": "marketplaces",
+      "audience": "Marketplace managers",
+      "outcome": "Coordinate changes to a marketplace listing so the product, price, and content stay accurate.",
+      "metaDescription": "Create a marketplace listing update email with the listing change, reason, and timing. Free private email tool by ReplyMind.",
+      "h1": "Keep the marketplace listing accurate.",
+      "intro": "Use this when product details, pricing, images, or compliance text on a marketplace listing need to change. It helps you specify the change, the reason, and when it should go live.",
+      "fields": [
+        {"key": "recipient", "label": "Marketplace contact", "type": "text", "placeholder": "Lena", "required": false},
+        {"key": "listingChange", "label": "Listing change", "type": "textarea", "placeholder": "Update the main image and title", "required": true},
+        {"key": "reason", "label": "Reason for change", "type": "textarea", "placeholder": "The new packaging is now live", "required": true},
+        {"key": "goLive", "label": "Go-live timing", "type": "text", "placeholder": "Tomorrow morning", "required": true}
+      ],
+      "subjectTemplate": "Update request for the listing",
+      "bodyTemplate": "Hi {{recipient}},\n\nI need to request a listing update. The change is {{listingChange}}. The reason for the change is {{reason}}. If possible, I’d like this live by {{goLive}}.\n\nBest,",
+      "guidance": [
+        "Specify the exact listing elements that need to change.",
+        "Explain why the change matters so it can be prioritized correctly.",
+        "Include a go-live time so launch coordination stays aligned."
+      ],
+      "pitfalls": [
+        "Do not ask for a vague refresh without listing the actual edits.",
+        "Do not omit the reason if the update affects sales or compliance."
+      ],
+      "examples": [
+        {
+          "label": "Packaging update",
+          "input": "Lena needs to update the main image and title because the new packaging is live.",
+          "output": "Hi Lena,\n\nI need to request a listing update. The change is update the main image and title. The reason for the change is the new packaging is now live. If possible, I’d like this live by tomorrow morning.\n\nBest,"
+        },
+        {
+          "label": "Pricing update",
+          "input": "Lena needs a marketplace pricing update and a timing target.",
+          "output": "Hi Lena,\n\nI need to request a listing update. The change is update the price and promotional copy. The reason for the change is the campaign pricing has changed. If possible, I’d like this live by this afternoon.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include the full listing URL?", "a": "If it helps the marketplace manager find the right page faster, yes."},
+        {"q": "How much detail belongs here?", "a": "Enough to make the update precise without making the email hard to scan."}
+      ],
+      "relatedTags": ["marketplaces", "listing", "operations", "content"]
+    },
+    {
+      "slug": "product-recall-notice-email-builder",
+      "name": "Product Recall Notice Email Builder",
+      "keyword": "product recall notice email",
+      "intent": "operations",
+      "audience": "Operations and customer support teams",
+      "outcome": "Communicate a recall or safety issue clearly so the right action happens quickly.",
+      "metaDescription": "Draft a product recall notice email with the affected item, the safety concern, and the customer action. Free private email tool by ReplyMind.",
+      "h1": "Handle a recall with clarity and care.",
+      "intro": "Use this when an item or batch must be removed from circulation because of a quality or safety concern. It helps you explain the affected product, the reason for the recall, and what the customer should do next.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Customer", "required": false},
+        {"key": "affectedItem", "label": "Affected item", "type": "textarea", "placeholder": "Batch 24A of the blender", "required": true},
+        {"key": "safetyConcern", "label": "Safety or quality concern", "type": "textarea", "placeholder": "The lid seal does not close properly", "required": true},
+        {"key": "customerAction", "label": "Customer action", "type": "textarea", "placeholder": "Stop using the item and follow the return instructions", "required": true}
+      ],
+      "subjectTemplate": "Important notice about {{affectedItem}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe need to share an important update about {{affectedItem}}. The issue is {{safetyConcern}}. Please {{customerAction}}.\n\nBest,",
+      "guidance": [
+        "Lead with the affected item so the customer can identify it quickly.",
+        "State the safety or quality concern plainly and without ambiguity.",
+        "Give the customer one clear action to take right away."
+      ],
+      "pitfalls": [
+        "Do not soften the issue to the point that the action is unclear.",
+        "Do not overload the notice with internal investigation details."
+      ],
+      "examples": [
+        {
+          "label": "Safety recall",
+          "input": "Batch 24A of the blender has a lid seal issue and customers should stop using it.",
+          "output": "Hi Customer,\n\nWe need to share an important update about Batch 24A of the blender. The issue is the lid seal does not close properly. Please stop using the item and follow the return instructions.\n\nBest,"
+        },
+        {
+          "label": "Quality recall",
+          "input": "The recalled item is a defective charger batch and customers need a clear next step.",
+          "output": "Hi Customer,\n\nWe need to share an important update about the defective charger batch. The issue is the cable can overheat during use. Please stop using the item and follow the return instructions.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I send this to every customer?", "a": "Only to the affected customers and internal teams that need to act."},
+        {"q": "Can this replace a support article?", "a": "No. It is the direct notice that points people to the correct next action."}
+      ],
+      "relatedTags": ["quality control", "recall", "customer communication", "operations"]
+    },
+    {
+      "slug": "invoice-discrepancy-email-builder",
+      "name": "Invoice Discrepancy Email Builder",
+      "keyword": "invoice discrepancy email",
+      "intent": "operations",
+      "audience": "Finance and operations teams",
+      "outcome": "Resolve an invoice mismatch by stating the issue, the expected amount, and the correction needed.",
+      "metaDescription": "Create an invoice discrepancy email with the mismatch, the expected amount, and the correction request. Free private email tool by ReplyMind.",
+      "h1": "Clarify the invoice mismatch fast.",
+      "intro": "Use this when an invoice does not match the agreed price, quantity, tax, or service period. It helps you identify the mismatch and ask for the corrected bill or explanation.",
+      "fields": [
+        {"key": "recipient", "label": "Billing contact", "type": "text", "placeholder": "Finance team", "required": false},
+        {"key": "invoiceRef", "label": "Invoice reference", "type": "textarea", "placeholder": "Invoice #8821", "required": true},
+        {"key": "mismatch", "label": "Mismatch found", "type": "textarea", "placeholder": "The quantity billed is higher than the order", "required": true},
+        {"key": "correction", "label": "Correction needed", "type": "textarea", "placeholder": "Please issue a revised invoice", "required": true}
+      ],
+      "subjectTemplate": "Invoice discrepancy on {{invoiceRef}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m reaching out about {{invoiceRef}}. We found a discrepancy because {{mismatch}}. Could you please {{correction}}?\n\nBest,",
+      "guidance": [
+        "Reference the invoice number so the billing team can locate it quickly.",
+        "Explain the mismatch in one sentence and keep it factual.",
+        "Ask for one correction so the response is unambiguous."
+      ],
+      "pitfalls": [
+        "Do not make a billing mismatch sound like a vague complaint.",
+        "Do not ask for a correction without identifying the specific discrepancy."
+      ],
+      "examples": [
+        {
+          "label": "Quantity mismatch",
+          "input": "Finance team, invoice #8821 bills a higher quantity than was ordered.",
+          "output": "Hi Finance team,\n\nI’m reaching out about Invoice #8821. We found a discrepancy because the quantity billed is higher than the order. Could you please issue a revised invoice?\n\nBest,"
+        },
+        {
+          "label": "Tax mismatch",
+          "input": "Finance team, invoice #8821 has the wrong tax rate and needs a correction.",
+          "output": "Hi Finance team,\n\nI’m reaching out about Invoice #8821. We found a discrepancy because the tax rate does not match the agreement. Could you please issue a revised invoice?\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include screenshots?", "a": "Yes, if they help the billing team verify the mismatch faster."},
+        {"q": "Should I copy the vendor rep?", "a": "Only if that helps the correction move faster. The billing owner should see the main issue."}
+      ],
+      "relatedTags": ["finance", "billing", "operations", "invoices"]
+    },
+    {
+      "slug": "damaged-goods-claim-email-builder",
+      "name": "Damaged Goods Claim Email Builder",
+      "keyword": "damaged goods claim email",
+      "intent": "returns",
+      "audience": "Warehouse and customer service teams",
+      "outcome": "Submit a damaged goods claim with enough detail to get a replacement or resolution.",
+      "metaDescription": "Write a damaged goods claim email with the damage description, proof, and requested remedy. Free private email tool by ReplyMind.",
+      "h1": "Document the damage so the claim can move.",
+      "intro": "Use this when goods arrive damaged and you need to start a vendor, carrier, or internal claim. It helps you describe the damage, note the evidence, and ask for the remedy you want.",
+      "fields": [
+        {"key": "recipient", "label": "Claim contact", "type": "text", "placeholder": "Claims team", "required": false},
+        {"key": "damage", "label": "Damage description", "type": "textarea", "placeholder": "The outer box was crushed and two items broke", "required": true},
+        {"key": "proof", "label": "Proof available", "type": "textarea", "placeholder": "Photos and delivery notes are attached", "required": true},
+        {"key": "remedy", "label": "Requested remedy", "type": "textarea", "placeholder": "Please replace the damaged units", "required": true}
+      ],
+      "subjectTemplate": "Damaged goods claim",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe need to file a claim because {{damage}}. We have {{proof}}. Please {{remedy}}.\n\nBest,",
+      "guidance": [
+        "Describe the damage clearly and keep the language observable.",
+        "Mention the proof you already have so the claim can be reviewed faster.",
+        "State the remedy request directly instead of making the reader infer it."
+      ],
+      "pitfalls": [
+        "Do not file a claim without enough detail to verify it.",
+        "Do not omit the proof if it is already available."
+      ],
+      "examples": [
+        {
+          "label": "Transit damage",
+          "input": "Claims team, the outer box was crushed and two items broke, with photos attached.",
+          "output": "Hi Claims team,\n\nWe need to file a claim because the outer box was crushed and two items broke. We have photos and delivery notes are attached. Please replace the damaged units.\n\nBest,"
+        },
+        {
+          "label": "Warehouse damage",
+          "input": "Claims team, units were damaged before outbound and need replacement.",
+          "output": "Hi Claims team,\n\nWe need to file a claim because units were damaged before outbound. We have inspection photos and receiving notes are attached. Please replace the damaged units.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I send this to the carrier or the supplier?", "a": "Send it to whoever owns the claim path. Sometimes both need a copy."},
+        {"q": "Do I need photos?", "a": "Photos are often the fastest way to support the claim."}
+      ],
+      "relatedTags": ["claims", "damage", "returns", "operations"]
+    },
+    {
+      "slug": "supplier-late-shipment-email-builder",
+      "name": "Supplier Late Shipment Email Builder",
+      "keyword": "supplier late shipment email",
+      "intent": "operations",
+      "audience": "Procurement and operations teams",
+      "outcome": "Pressure a late supplier shipment into a new commitment with a clear ask and consequence.",
+      "metaDescription": "Create a supplier late shipment email with the late order, the impact, and the recovery timing. Free private email tool by ReplyMind.",
+      "h1": "Get a late supplier shipment back on track.",
+      "intro": "Use this when a supplier misses a promised ship date and you need a direct response. It helps you explain the order, the operational impact, and the new timing you need from them.",
+      "fields": [
+        {"key": "recipient", "label": "Supplier contact", "type": "text", "placeholder": "Jordan", "required": false},
+        {"key": "orderInfo", "label": "Order information", "type": "textarea", "placeholder": "PO 5521 for packaging inserts", "required": true},
+        {"key": "impact", "label": "Operational impact", "type": "textarea", "placeholder": "Outbound packing is waiting on this delivery", "required": true},
+        {"key": "recoveryTiming", "label": "Recovery timing", "type": "text", "placeholder": "By Tuesday morning", "required": true}
+      ],
+      "subjectTemplate": "Late shipment for {{orderInfo}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nI’m following up on {{orderInfo}}. The delay is now impacting us because {{impact}}. Please confirm when we can expect recovery by {{recoveryTiming}}.\n\nBest,",
+      "guidance": [
+        "Reference the specific order so the supplier can find it immediately.",
+        "State the operational impact to show why speed matters.",
+        "Ask for a recovery timing instead of a vague apology."
+      ],
+      "pitfalls": [
+        "Do not treat a late shipment as just a status check.",
+        "Do not skip the impact, or the supplier may deprioritize it."
+      ],
+      "examples": [
+        {
+          "label": "Packaging delay",
+          "input": "Jordan, PO 5521 for packaging inserts is late and outbound packing is waiting.",
+          "output": "Hi Jordan,\n\nI’m following up on PO 5521 for packaging inserts. The delay is now impacting us because outbound packing is waiting on this delivery. Please confirm when we can expect recovery by Tuesday morning.\n\nBest,"
+        },
+        {
+          "label": "Component delay",
+          "input": "Jordan, the component shipment is late and production needs a recovery date.",
+          "output": "Hi Jordan,\n\nI’m following up on the component shipment. The delay is now impacting us because production is waiting on this delivery. Please confirm when we can expect recovery by Thursday afternoon.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I escalate immediately?", "a": "Escalate if the recovery timing is not credible or if the delay risks customer commitments."},
+        {"q": "Can this work with a vendor and a carrier?", "a": "Yes. Use the recipient and order fields to make the ownership clear."}
+      ],
+      "relatedTags": ["supplier", "shipping", "operations", "late orders"]
+    },
+    {
+      "slug": "quality-inspection-failure-email-builder",
+      "name": "Quality Inspection Failure Email Builder",
+      "keyword": "quality inspection failure email",
+      "intent": "quality-control",
+      "audience": "Operations and QA teams",
+      "outcome": "Report an inspection failure with enough clarity to stop release and request a fix.",
+      "metaDescription": "Draft a quality inspection failure email with the failure, the batch, and the required corrective action. Free private email tool by ReplyMind.",
+      "h1": "Stop release when inspection fails.",
+      "intro": "Use this when an inspection fails and product should not move forward. It helps you specify the failure, the batch or lot, and the corrective action needed from the vendor or internal team.",
+      "fields": [
+        {"key": "recipient", "label": "Quality contact", "type": "text", "placeholder": "QA lead", "required": false},
+        {"key": "batch", "label": "Batch or lot", "type": "textarea", "placeholder": "Batch 18C", "required": true},
+        {"key": "failure", "label": "Inspection failure", "type": "textarea", "placeholder": "The stitching test did not pass", "required": true},
+        {"key": "correctiveAction", "label": "Corrective action", "type": "textarea", "placeholder": "Hold the batch and provide a rework plan", "required": true}
+      ],
+      "subjectTemplate": "Inspection failure on {{batch}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nThe inspection failed on {{batch}} because {{failure}}. Please {{correctiveAction}}.\n\nBest,",
+      "guidance": [
+        "Name the batch or lot so the failure is traceable.",
+        "Keep the failure description specific and observable.",
+        "Ask for a corrective action that clearly blocks release until resolved."
+      ],
+      "pitfalls": [
+        "Do not blur inspection failure into general dissatisfaction.",
+        "Do not forget to say the batch should be held."
+      ],
+      "examples": [
+        {
+          "label": "Stitching failure",
+          "input": "QA lead, Batch 18C failed the stitching test and needs to be held.",
+          "output": "Hi QA lead,\n\nThe inspection failed on Batch 18C because the stitching test did not pass. Please hold the batch and provide a rework plan.\n\nBest,"
+        },
+        {
+          "label": "Labeling failure",
+          "input": "QA lead, the lot failed because the labeling is incorrect.",
+          "output": "Hi QA lead,\n\nThe inspection failed on Lot 42B because the labeling is incorrect. Please hold the batch and provide a rework plan.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include the inspection checklist?", "a": "If it supports the failure, yes. The key is to identify the failed point and the block on release."},
+        {"q": "Who should receive the email?", "a": "The person who can hold the batch and manage the corrective action."}
+      ],
+      "relatedTags": ["quality control", "inspection", "operations", "vendor"]
+    },
+    {
+      "slug": "replacement-unit-request-email-builder",
+      "name": "Replacement Unit Request Email Builder",
+      "keyword": "replacement unit request email",
+      "intent": "returns",
+      "audience": "Customer support and operations teams",
+      "outcome": "Ask for replacement units in a way that tracks the issue and the remedy clearly.",
+      "metaDescription": "Create a replacement unit request email with the affected items, the issue, and the replacement plan. Free private email tool by ReplyMind.",
+      "h1": "Ask for replacement units with clear context.",
+      "intro": "Use this when defective or wrong items need to be replaced. It helps you identify the affected units, explain the problem, and request the replacement path.",
+      "fields": [
+        {"key": "recipient", "label": "Vendor or support contact", "type": "text", "placeholder": "Support team", "required": false},
+        {"key": "affectedUnits", "label": "Affected units", "type": "textarea", "placeholder": "Three damaged mugs", "required": true},
+        {"key": "problem", "label": "Problem found", "type": "textarea", "placeholder": "The lids do not seal correctly", "required": true},
+        {"key": "replacementPlan", "label": "Replacement plan", "type": "textarea", "placeholder": "Please send replacement units with the next shipment", "required": true}
+      ],
+      "subjectTemplate": "Replacement request for {{affectedUnits}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nWe need replacement units for {{affectedUnits}} because {{problem}}. Please {{replacementPlan}}.\n\nBest,",
+      "guidance": [
+        "Count the affected units so the replacement request can be fulfilled correctly.",
+        "Describe the defect in practical terms the receiver can verify.",
+        "State the replacement plan directly so there is no ambiguity."
+      ],
+      "pitfalls": [
+        "Do not request replacements without naming the affected items.",
+        "Do not make the remedy sound optional if it is the expected fix."
+      ],
+      "examples": [
+        {
+          "label": "Defective lids",
+          "input": "Support team, three damaged mugs need replacement because the lids do not seal.",
+          "output": "Hi Support team,\n\nWe need replacement units for three damaged mugs because the lids do not seal correctly. Please send replacement units with the next shipment.\n\nBest,"
+        },
+        {
+          "label": "Wrong color units",
+          "input": "Support team, the wrong color units were shipped and need replacement.",
+          "output": "Hi Support team,\n\nWe need replacement units for the wrong color units because the shipment does not match the order. Please send replacement units with the next shipment.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I ask for a refund instead?", "a": "Only if replacement is not practical or the customer prefers it."},
+        {"q": "How quickly should I send this?", "a": "As soon as the issue is confirmed and the replacement path is clear."}
+      ],
+      "relatedTags": ["returns", "replacement", "customer support", "operations"]
+    },
+    {
+      "slug": "order-status-update-email-builder",
+      "name": "Order Status Update Email Builder",
+      "keyword": "order status update email",
+      "intent": "customer-communication",
+      "audience": "Ecommerce support teams",
+      "outcome": "Give a customer a concise status update so they know where the order stands.",
+      "metaDescription": "Write an order status update email with the current stage, any blocker, and the next milestone. Free private email tool by ReplyMind.",
+      "h1": "Keep the customer informed on order progress.",
+      "intro": "Use this when a customer asks for an update or when you want to be proactive. It helps you explain the current order stage, any blocker, and what happens next.",
+      "fields": [
+        {"key": "recipient", "label": "Recipient name", "type": "text", "placeholder": "Nora", "required": false},
+        {"key": "orderRef", "label": "Order reference", "type": "textarea", "placeholder": "Order #2210", "required": true},
+        {"key": "currentStage", "label": "Current stage", "type": "textarea", "placeholder": "Packed and awaiting carrier pickup", "required": true},
+        {"key": "nextMilestone", "label": "Next milestone", "type": "textarea", "placeholder": "Carrier pickup later today", "required": true}
+      ],
+      "subjectTemplate": "Update on your order {{orderRef}}",
+      "bodyTemplate": "Hi {{recipient}},\n\nHere is the latest on {{orderRef}}: {{currentStage}}. The next milestone is {{nextMilestone}}.\n\nBest,",
+      "guidance": [
+        "Keep the update short and easy to scan.",
+        "Include the order reference so the customer can match the right order.",
+        "State the next milestone, not just the current status."
+      ],
+      "pitfalls": [
+        "Do not leave the customer with only a partial status.",
+        "Do not make them chase the next update themselves."
+      ],
+      "examples": [
+        {
+          "label": "Packed order",
+          "input": "Nora needs an update on Order #2210 that is packed and awaiting pickup.",
+          "output": "Hi Nora,\n\nHere is the latest on Order #2210: packed and awaiting carrier pickup. The next milestone is carrier pickup later today.\n\nBest,"
+        },
+        {
+          "label": "In transit order",
+          "input": "Nora wants to know where the in-transit order is now.",
+          "output": "Hi Nora,\n\nHere is the latest on Order #2210: the package is in transit and moving through the carrier network. The next milestone is the final delivery scan.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I use this proactively?", "a": "Yes, especially when shipping timing or order value makes customers more likely to check in."},
+        {"q": "What if there is a blocker?", "a": "State the blocker briefly and focus on the next milestone you can still control."}
+      ],
+      "relatedTags": ["orders", "customer communication", "shipping", "operations"]
+    },
+    {
+      "slug": "partner-coordination-email-builder",
+      "name": "Partner Coordination Email Builder",
+      "keyword": "partner coordination email",
+      "intent": "coordination",
+      "audience": "Operations and partnership teams",
+      "outcome": "Coordinate a partner task with clarity about ownership, timing, and what each side owes.",
+      "metaDescription": "Build a partner coordination email that assigns ownership, timing, and the next shared action. Free private email tool by ReplyMind.",
+      "h1": "Coordinate the partner work without confusion.",
+      "intro": "Use this when a partner and your team both have responsibilities on a live issue or project. It keeps the ownership, timing, and next action visible to everyone involved.",
+      "fields": [
+        {"key": "recipient", "label": "Partner contact", "type": "text", "placeholder": "Daniel", "required": false},
+        {"key": "owner", "label": "Ownership split", "type": "textarea", "placeholder": "We will handle the customer update", "required": true},
+        {"key": "timing", "label": "Timing", "type": "textarea", "placeholder": "By end of day", "required": true},
+        {"key": "sharedAction", "label": "Shared action", "type": "textarea", "placeholder": "Please send the final asset version", "required": true}
+      ],
+      "subjectTemplate": "Coordinating the next step",
+      "bodyTemplate": "Hi {{recipient}},\n\nTo keep this coordinated, {{owner}}. The timing we should follow is {{timing}}. The shared action we still need is {{sharedAction}}.\n\nBest,",
+      "guidance": [
+        "Spell out which side owns which part of the work.",
+        "Use a timing window that both sides can work toward.",
+        "Make the shared action explicit so no step gets missed."
+      ],
+      "pitfalls": [
+        "Do not assume a partner knows your internal ownership split.",
+        "Do not leave the shared action vague."
+      ],
+      "examples": [
+        {
+          "label": "Creative partner coordination",
+          "input": "Daniel, we will handle the customer update and need the final asset version by end of day.",
+          "output": "Hi Daniel,\n\nTo keep this coordinated, we will handle the customer update. The timing we should follow is by end of day. The shared action we still need is please send the final asset version.\n\nBest,"
+        },
+        {
+          "label": "Launch coordination",
+          "input": "Daniel, the partner needs to send the final file while we handle the customer note.",
+          "output": "Hi Daniel,\n\nTo keep this coordinated, we will handle the customer note. The timing we should follow is tomorrow morning. The shared action we still need is please send the final file.\n\nBest,"
+        }
+      ],
+      "faqs": [
+        {"q": "Should I include everyone in one thread?", "a": "Only if the same message and timing applies to both sides."},
+        {"q": "How do I avoid confusion?", "a": "Name the ownership split and the shared action in the same email."}
+      ],
+      "relatedTags": ["partners", "coordination", "operations", "communication"]
+    }
+  ]
+}

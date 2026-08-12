@@ -1,0 +1,12 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE properties(id TEXT PRIMARY KEY,name TEXT NOT NULL,domains_json TEXT NOT NULL,created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE funnels(id TEXT PRIMARY KEY,property_id TEXT NOT NULL,name TEXT NOT NULL,status TEXT NOT NULL CHECK(status IN('draft','published','archived')),version INTEGER NOT NULL DEFAULT 1,published_at TEXT,created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,FOREIGN KEY(property_id) REFERENCES properties(id));
+CREATE TABLE funnel_steps(id TEXT PRIMARY KEY,funnel_id TEXT NOT NULL,name TEXT NOT NULL,position INTEGER NOT NULL,kind TEXT NOT NULL,path TEXT NOT NULL,FOREIGN KEY(funnel_id) REFERENCES funnels(id) ON DELETE CASCADE,UNIQUE(funnel_id,position));
+CREATE TABLE experiments(id TEXT PRIMARY KEY,funnel_id TEXT NOT NULL,name TEXT NOT NULL,status TEXT NOT NULL,created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,FOREIGN KEY(funnel_id) REFERENCES funnels(id) ON DELETE CASCADE);
+CREATE TABLE variants(id TEXT PRIMARY KEY,experiment_id TEXT NOT NULL,name TEXT NOT NULL,weight INTEGER NOT NULL CHECK(weight>0),FOREIGN KEY(experiment_id) REFERENCES experiments(id) ON DELETE CASCADE);
+CREATE TABLE events(event_id TEXT PRIMARY KEY,event_type TEXT NOT NULL,occurred_at TEXT NOT NULL,received_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,property_id TEXT NOT NULL,funnel_id TEXT NOT NULL,experiment_id TEXT,variant_id TEXT,step_id TEXT,previous_step_id TEXT,visitor_id TEXT NOT NULL,session_id TEXT NOT NULL,campaign TEXT,source TEXT,medium TEXT,consent TEXT NOT NULL,amount_minor INTEGER,currency TEXT,external_id TEXT,metadata_json TEXT,provider TEXT);
+CREATE UNIQUE INDEX idx_events_provider_external ON events(provider,external_id) WHERE external_id IS NOT NULL;
+CREATE INDEX idx_events_query ON events(property_id,funnel_id,occurred_at,event_type);
+CREATE INDEX idx_events_variant ON events(experiment_id,variant_id,occurred_at);
+CREATE TABLE ad_costs(id TEXT PRIMARY KEY,property_id TEXT NOT NULL,day TEXT NOT NULL,source TEXT NOT NULL,campaign TEXT,cost_minor INTEGER NOT NULL,currency TEXT NOT NULL,fetched_at TEXT NOT NULL,attribution_model TEXT NOT NULL,UNIQUE(property_id,day,source,campaign));
+INSERT INTO properties(id,name,domains_json) VALUES('replymind','ReplyMind','["replymind.xyz","www.replymind.xyz"]'),('dopamodoro','Dopamodoro','[]');

@@ -1,0 +1,17 @@
+name = "replymind-funnel-analytics"
+main = "src/worker.ts"
+compatibility_date = "2026-08-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "replymind-funnel-analytics"
+database_id = "REPLACE_AFTER_D1_CREATE"
+
+[vars]
+ALLOWED_ORIGINS = "https://replymind.xyz,https://www.replymind.xyz"
+DATA_RETENTION_DAYS = "400"
+ATTRIBUTION_WINDOW_DAYS = "30"
+ENVIRONMENT = "development"
+
+# Secrets are configured with `wrangler secret put`; never place values here:
+# ADMIN_TOKEN, STRIPE_WEBHOOK_SECRET, PADDLE_WEBHOOK_SECRET, META_ACCESS_TOKEN
